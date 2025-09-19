@@ -4,18 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Actions\Table;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Session;
 use Modules\UI\Enums\TableLayoutEnum;
-=======
-use Modules\UI\Enums\TableLayoutEnum;
-use Illuminate\Support\Facades\Session;
->>>>>>> 727968c (.)
-=======
-use Illuminate\Support\Facades\Session;
-use Modules\UI\Enums\TableLayoutEnum;
->>>>>>> ef3c5fa (.)
 
 /**
  * Trait TableLayoutTrait
@@ -31,15 +21,7 @@ trait TableLayoutTrait
         $sessionKey = "table_layout_{$identifier}";
         $layout = Session::get($sessionKey);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($layout && in_array($layout, TableLayoutEnum::values(), strict: true)) {
-=======
-        if ($layout && in_array($layout, TableLayoutEnum::values())) {
->>>>>>> 727968c (.)
-=======
-        if ($layout && in_array($layout, TableLayoutEnum::values(), strict: true)) {
->>>>>>> ef3c5fa (.)
             return TableLayoutEnum::from($layout);
         }
 

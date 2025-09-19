@@ -6,23 +6,10 @@ use Tests\TestCase;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Collection;
 use Carbon\Exceptions\InvalidFormatException;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 use Carbon\Carbon;
 use Filament\Forms\Components\Field;
 use Illuminate\Support\Facades\App;
 use Modules\UI\Filament\Forms\Components\InlineDatePicker;
-<<<<<<< HEAD
-=======
-use Filament\Forms\Components\Field;
-use Modules\UI\Filament\Forms\Components\InlineDatePicker;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\App;
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 
 uses(TestCase::class);
 
@@ -42,31 +29,14 @@ test('it can set and get enabled dates', function (): void {
 test('it accepts closure for enabled dates', function (): void {
     $dates = ['2025-06-01', '2025-06-15', '2025-06-30'];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     $component = InlineDatePicker::make('test')->enabledDates(fn() => $dates);
-=======
-    $component = InlineDatePicker::make('test')->enabledDates(fn () => $dates);
->>>>>>> 727968c (.)
-=======
-    $component = InlineDatePicker::make('test')->enabledDates(fn() => $dates);
->>>>>>> ef3c5fa (.)
     expect($component->getEnabledDates()->toArray())->toBe($dates);
 });
 
 test('it checks if date is enabled', function (): void {
     $dates = ['2025-06-15'];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     $component = InlineDatePicker::make('test')->enabledDates($dates);
-=======
-    $component = InlineDatePicker::make('test')
-        ->enabledDates($dates);
->>>>>>> 727968c (.)
-=======
-    $component = InlineDatePicker::make('test')->enabledDates($dates);
->>>>>>> ef3c5fa (.)
 
     expect($component->isDateEnabled('2025-06-15'))->toBeTrue();
     expect($component->isDateEnabled('2025-06-16'))->toBeFalse();
@@ -77,15 +47,7 @@ test('it generates calendar data and marks enabled dates', function (): void {
     $component->currentViewMonth('2025-06');
     $data = $component->generateCalendarData();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     expect($data)->toHaveKeys(['year', 'month', 'weeks', 'monthName', 'weekdays']);
-=======
-    expect($data)->toHaveKeys(['year','month','weeks','monthName','weekdays']);
->>>>>>> 727968c (.)
-=======
-    expect($data)->toHaveKeys(['year', 'month', 'weeks', 'monthName', 'weekdays']);
->>>>>>> ef3c5fa (.)
     $found = false;
     foreach ($data['weeks'] as $week) {
         foreach ($week as $day) {
@@ -106,39 +68,16 @@ test('it respects locale in calendar data', function (): void {
 });
 
 test('it can be used in a form', function (): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
     $form = Schema::make()->components([
         InlineDatePicker::make('appointment_date')->enabledDates(['2025-06-15']),
     ]);
-=======
-    $form = Schema::make()
-        ->components([
-            InlineDatePicker::make('appointment_date')
-                ->enabledDates(['2025-06-15'])
-        ]);
->>>>>>> 727968c (.)
-=======
-    $form = Schema::make()->components([
-        InlineDatePicker::make('appointment_date')->enabledDates(['2025-06-15']),
-    ]);
->>>>>>> ef3c5fa (.)
 
     expect($form->getComponents())->toHaveCount(1);
     expect($form->getComponent('appointment_date'))->toBeInstanceOf(InlineDatePicker::class);
 });
 
 test('it handles empty enabled dates', function (): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
     $component = InlineDatePicker::make('test')->enabledDates([]);
-=======
-    $component = InlineDatePicker::make('test')
-        ->enabledDates([]);
->>>>>>> 727968c (.)
-=======
-    $component = InlineDatePicker::make('test')->enabledDates([]);
->>>>>>> ef3c5fa (.)
 
     expect($component->getEnabledDates())->toBeInstanceOf(Collection::class);
     expect($component->getEnabledDates()->isEmpty())->toBeTrue();
@@ -147,43 +86,18 @@ test('it handles empty enabled dates', function (): void {
 
 test('it throws on invalid enabled dates input', function (): void {
     $component = InlineDatePicker::make('test')->enabledDates(['invalid-date']);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
     expect($component->getEnabledDates()->toArray(...))->toThrow(InvalidFormatException::class);
 });
 
 test('it handles different date formats', function (): void {
     $component = InlineDatePicker::make('test')->enabledDates(['2025-06-15']);
-<<<<<<< HEAD
-=======
-    expect(fn () => $component->getEnabledDates()->toArray())
-        ->toThrow(InvalidFormatException::class);
-});
-
-test('it handles different date formats', function (): void {
-    $component = InlineDatePicker::make('test')
-        ->enabledDates(['2025-06-15']);
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 
     expect($component->isDateEnabled('2025-06-15'))->toBeTrue();
     expect($component->isDateEnabled('15-06-2025'))->toBeFalse();
 });
 
 test('it handles time portion gracefully', function (): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
     $component = InlineDatePicker::make('test')->enabledDates(['2025-06-15']);
-=======
-    $component = InlineDatePicker::make('test')
-        ->enabledDates(['2025-06-15']);
->>>>>>> 727968c (.)
-=======
-    $component = InlineDatePicker::make('test')->enabledDates(['2025-06-15']);
->>>>>>> ef3c5fa (.)
 
     expect($component->isDateEnabled('2025-06-15 14:30:00'))->toBeTrue();
 });
@@ -230,21 +144,9 @@ test('it handles enabled dates correctly', function (): void {
 
 test('it is dry no code duplication', function (): void {
     // Verifica che non ci sia duplicazione di logica tra PHP e JavaScript
-<<<<<<< HEAD
-<<<<<<< HEAD
     $viewContent = file_get_contents(base_path(
         'laravel/Modules/UI/resources/views/filament/forms/components/inline-date-picker.blade.php',
     ));
-=======
-    $viewContent = file_get_contents(
-        base_path('laravel/Modules/UI/resources/views/filament/forms/components/inline-date-picker.blade.php')
-    );
->>>>>>> 727968c (.)
-=======
-    $viewContent = file_get_contents(base_path(
-        'laravel/Modules/UI/resources/views/filament/forms/components/inline-date-picker.blade.php',
-    ));
->>>>>>> ef3c5fa (.)
 
     // Assert: Nessun JavaScript complesso per navigazione
     expect($viewContent)->not->toContain('navigateToMonth');
@@ -266,10 +168,6 @@ test('it is kiss simple and clear', function (): void {
     $publicMethods = array_filter($reflection->getMethods(), fn($m) => $m->isPublic() && !$m->isStatic());
 
     // Dovrebbe esporre metodi essenziali utilizzabili
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
     foreach ([
         'enabledDates',
         'isDateEnabled',
@@ -279,13 +177,6 @@ test('it is kiss simple and clear', function (): void {
         'nextMonth',
     ] as $method) {
         expect(method_exists($picker, $method))->toBeTrue("Metodo essenziale mancante: {$method}");
-<<<<<<< HEAD
-=======
-    foreach (['enabledDates','isDateEnabled','generateCalendarData','getViewData','previousMonth','nextMonth'] as $method) {
-        expect(method_exists($picker, $method))->toBeTrue("Metodo essenziale mancante: $method");
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     }
 });
 

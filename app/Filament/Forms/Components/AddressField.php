@@ -25,15 +25,7 @@ class AddressField extends Field
     {
         parent::setUp();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->afterStateHydrated(function (AddressField $_component, null|Model $record) {
-=======
-        $this->afterStateHydrated(function (AddressField $component, ?Model $record) {
->>>>>>> 727968c (.)
-=======
-        $this->afterStateHydrated(function (AddressField $_component, null|Model $record) {
->>>>>>> ef3c5fa (.)
             $data = [
                 'country' => null,
                 'street' => null,
@@ -43,10 +35,6 @@ class AddressField extends Field
             ];
 
             //if ($record && method_exists($record, 'getRelationValue')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
             $relationship = $this->getRelationship();
             if ($relationship && $record?->relationLoaded($relationship)) {
                 $address = $record->getRelationValue($relationship);
@@ -55,18 +43,6 @@ class AddressField extends Field
                 }
             }
 
-<<<<<<< HEAD
-=======
-                $relationship = $this->getRelationship();
-                if ($relationship && $record?->relationLoaded($relationship)) {
-                    $address = $record->getRelationValue($relationship);
-                    if (null !== $address && is_object($address) && method_exists($address, 'toArray')) {
-                        $data = $address->toArray();
-                    }
-                }
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
             //}
         });
 
@@ -95,10 +71,6 @@ class AddressField extends Field
             $relationship->updateOrCreate($state);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
         if ($record instanceof Model) {
             $record->touch();
         }
@@ -118,38 +90,6 @@ class AddressField extends Field
                 TextInput::make('state')->maxLength(255),
                 TextInput::make('zip')->maxLength(255),
             ]),
-<<<<<<< HEAD
-=======
-        $record?->touch();
-    }
-
-    public function getChildComponents(): array
-    {
-        return [
-            Grid::make()
-                ->schema([
-                    Select::make('country')
-                        ->searchable(),
-                    // ->getSearchResultsUsing(fn (string $query) => Country::where('name', 'like', "%{$query}%")->pluck('name', 'id'))
-                    // ->getOptionLabelUsing(fn ($value): ?string => Country::firstWhere('id', $value)->getAttribute('name')),
-                ]),
-            TextInput::make('street')
-
-                ->maxLength(255),
-            Grid::make(3)
-                ->schema([
-                    TextInput::make('city')
-                        ->maxLength(255),
-                    TextInput::make('state')
-
-                        ->maxLength(255),
-                    TextInput::make('zip')
-
-                        ->maxLength(255),
-                ]),
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
         ];
     }
 

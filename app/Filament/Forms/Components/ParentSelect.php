@@ -22,15 +22,7 @@ class ParentSelect extends Select
         parent::setUp();
 
         // dddx($this->getModel());
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->options(static fn(ParentSelect $_component): array => ['a' => 'a', 'b' => 'b']);
-=======
-        $this->options(static fn (ParentSelect $component): array => ['a' => 'a', 'b' => 'b']);
->>>>>>> 727968c (.)
-=======
-        $this->options(static fn(ParentSelect $_component): array => ['a' => 'a', 'b' => 'b']);
->>>>>>> ef3c5fa (.)
     }
 
     public function getOptionValueProperty(): string

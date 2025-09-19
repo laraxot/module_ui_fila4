@@ -11,10 +11,6 @@ use Filament\Forms\Components\TextInput;
 
 class Image
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
     public static function make(string $name = 'image', string $context = 'form'): Block
     {
         return Block::make($name)
@@ -27,33 +23,6 @@ class Image
                 TextInput::make('alt')->columnSpanFull(),
                 TextInput::make('caption')->columnSpanFull(),
             ])
-<<<<<<< HEAD
-=======
-    public static function make(
-        string $name = 'image',
-        string $context = 'form',
-    ): Block {
-        return Block::make($name)
-            ->schema(
-                [
-                    FileUpload::make('image'),
-
-                    TextInput::make('url'),
-
-                    Select::make('ratio')
-                        ->options(static::getRatios())
-                        ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
-
-                    TextInput::make('alt')
-                        ->columnSpanFull(),
-
-                    TextInput::make('caption')
-                        ->columnSpanFull(),
-                ]
-            )
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
             ->columns('form' === $context ? 2 : 1);
     }
 
@@ -82,17 +51,7 @@ class Image
                 ->required()
                 ->image()
                 ->maxSize(5120),
-<<<<<<< HEAD
-<<<<<<< HEAD
             TextInput::make('url')->url()->maxLength(255),
-=======
-            TextInput::make('url')
-                ->url()
-                ->maxLength(255),
->>>>>>> 727968c (.)
-=======
-            TextInput::make('url')->url()->maxLength(255),
->>>>>>> ef3c5fa (.)
         ];
     }
 }
