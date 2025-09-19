@@ -16,6 +16,9 @@ use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 class Hero
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     public static function make(string $name = 'hero', string $_context = 'form'): Block
     {
         $options = app(GetViewBlocksOptionsByTypeAction::class)->execute('hero', true);
@@ -45,6 +48,7 @@ class Hero
                 ])
                 ->columns(3),
         ]);
+<<<<<<< HEAD
 =======
     public static function make(
         string $name = 'hero',
@@ -82,5 +86,7 @@ class Hero
                 ]
             );
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     }
 }

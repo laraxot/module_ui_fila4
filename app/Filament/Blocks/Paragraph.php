@@ -15,6 +15,9 @@ use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 class Paragraph
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     public static function make(string $name = 'paragraph', string $_context = 'form'): Block
     {
         // $view = 'ui::components.blocks.paragraph.v1';
@@ -29,6 +32,7 @@ class Paragraph
             // RadioImage::make('view')
             //    ->options($options),
         ]);
+<<<<<<< HEAD
 =======
     public static function make(
         string $name = 'paragraph',
@@ -52,5 +56,7 @@ class Paragraph
                 ]
             );
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     }
 }

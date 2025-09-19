@@ -5,10 +5,15 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Widgets;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
 use Override;
 =======
 >>>>>>> 727968c (.)
+=======
+use Filament\Schemas\Components\Component;
+use Override;
+>>>>>>> ef3c5fa (.)
 use Filament\Forms\Form;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;
@@ -17,10 +22,14 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 class DarkModeSwitcherWidget extends XotBaseWidget
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public null|array $data = [];
 =======
     public ?array $data = [];
 >>>>>>> 727968c (.)
+=======
+    public null|array $data = [];
+>>>>>>> ef3c5fa (.)
 
     protected string $view = 'ui::filament.widgets.dark-mode-switcher';
 
@@ -34,10 +43,14 @@ class DarkModeSwitcherWidget extends XotBaseWidget
     public function toggleDarkMode(): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->darkMode = !$this->darkMode;
 =======
         $this->darkMode = ! $this->darkMode;
 >>>>>>> 727968c (.)
+=======
+        $this->darkMode = !$this->darkMode;
+>>>>>>> ef3c5fa (.)
 
         // Set cookie for persistence
         Cookie::queue('dark_mode', $this->darkMode ? 'true' : 'false', 60 * 24 * 30);
@@ -50,6 +63,7 @@ class DarkModeSwitcherWidget extends XotBaseWidget
      * Schema del form per la configurazione del widget.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array<int, Component>
      */
     #[Override]
@@ -57,6 +71,11 @@ class DarkModeSwitcherWidget extends XotBaseWidget
      * @return array<int, \Filament\Schemas\Components\Component>
      */
 >>>>>>> 727968c (.)
+=======
+     * @return array<int, Component>
+     */
+    #[Override]
+>>>>>>> ef3c5fa (.)
     public function getFormSchema(): array
     {
         return [];
@@ -65,10 +84,14 @@ class DarkModeSwitcherWidget extends XotBaseWidget
     public function render(): View
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return view($this->view, [
 =======
         return view(static::$view, [
 >>>>>>> 727968c (.)
+=======
+        return view($this->view, [
+>>>>>>> ef3c5fa (.)
             'darkMode' => $this->darkMode,
         ]);
     }

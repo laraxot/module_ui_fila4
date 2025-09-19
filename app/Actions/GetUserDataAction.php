@@ -1,11 +1,17 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
 =======
 >>>>>>> 727968c (.)
+=======
+declare(strict_types=1);
+
+
+>>>>>>> ef3c5fa (.)
 namespace Modules\UI\Actions;
 
 use Illuminate\Support\Facades\Auth;
@@ -17,6 +23,9 @@ class GetUserDataAction
     use QueueableAction;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     public function execute(): null|UserData
     {
         $user = Auth::user();
@@ -36,6 +45,7 @@ class GetUserDataAction
         );
     }
 }
+<<<<<<< HEAD
 =======
     public function execute(): UserData
     {
@@ -53,3 +63,5 @@ class GetUserDataAction
     }
 } 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)

@@ -18,6 +18,9 @@ use Webmozart\Assert\Assert;
 class Block extends Component
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     public null|string $view = null;
 
     public function __construct(
@@ -30,6 +33,7 @@ class Block extends Component
             $view = 'ui::empty';
         }
         Assert::string($view, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
+<<<<<<< HEAD
 =======
     public ?string $view = null;
 
@@ -44,20 +48,27 @@ class Block extends Component
         }
         Assert::string($view);
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
         $this->view = $view;
     }
 
     public function render(): ViewFactory|View
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!isset($this->block['type'])) {
 =======
         if (! isset($this->block['type'])) {
 >>>>>>> 727968c (.)
+=======
+        if (!isset($this->block['type'])) {
+>>>>>>> ef3c5fa (.)
             return view('ui::empty');
         }
 
         $view = $this->view;
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (!view()->exists(is_string($view) ? $view : ((string) $view))) {
             $message = 'view not exists [' . $view . '] ! <pre>' . print_r($this->block, true) . '</pre>';
@@ -65,6 +76,10 @@ class Block extends Component
         if (! view()->exists(is_string($view) ? $view : (string) $view)) {
             $message = 'view not exists ['.$view.'] ! <pre>'.print_r($this->block, true).'</pre>';
 >>>>>>> 727968c (.)
+=======
+        if (!view()->exists(is_string($view) ? $view : ((string) $view))) {
+            $message = 'view not exists [' . $view . '] ! <pre>' . print_r($this->block, true) . '</pre>';
+>>>>>>> ef3c5fa (.)
             $view_params = [
                 'title' => 'deprecated',
                 'message' => $message,
@@ -74,6 +89,7 @@ class Block extends Component
         }
         $view_params = $this->block['data'] ?? [];
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert::string($view, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
         if (!view()->exists($view)) {
             throw new Exception('view not found [' . $view . ']');
@@ -82,6 +98,11 @@ class Block extends Component
         if (! view()->exists($view)) {
             throw new Exception('view not found ['.$view.']');
 >>>>>>> 727968c (.)
+=======
+        Assert::string($view, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
+        if (!view()->exists($view)) {
+            throw new Exception('view not found [' . $view . ']');
+>>>>>>> ef3c5fa (.)
         }
 
         return view($view, $view_params);

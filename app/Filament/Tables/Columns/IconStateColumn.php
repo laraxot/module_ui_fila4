@@ -8,6 +8,9 @@ use Filament\Actions\Action;
 use Filament\Schemas\Components\Utilities\Get;
 use Exception;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -23,6 +26,7 @@ use Webmozart\Assert\Assert;
 
 class IconStateColumn extends IconColumn
 {
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -40,11 +44,16 @@ class IconStateColumn extends IconColumn
 {
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     protected function setUp(): void
     {
         parent::setUp();
         //$this->getStateUsing(fn() => true); // the column requires a state to be passed to it
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
         $this->icon(fn($state): null|string => $state?->icon());
         $this->color(fn($state): null|string => $state?->color());
         $this->tooltip(fn($state): null|string => $state?->label());
@@ -112,6 +121,7 @@ class IconStateColumn extends IconColumn
                 }),
         );
     }
+<<<<<<< HEAD
 =======
         $this->icon(fn($state): ?string => $state?->icon());
         $this->color(fn($state): ?string => $state?->color());
@@ -186,4 +196,6 @@ class IconStateColumn extends IconColumn
 
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 }

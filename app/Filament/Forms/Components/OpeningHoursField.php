@@ -10,10 +10,14 @@ use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TimePicker;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\UI\Actions\Datetime\GetDaysMappingAction;
 =======
 
 >>>>>>> 727968c (.)
+=======
+use Modules\UI\Actions\Datetime\GetDaysMappingAction;
+>>>>>>> ef3c5fa (.)
 
 /**
  * --
@@ -29,6 +33,9 @@ class OpeningHoursField extends Field
     {
         parent::setUp();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
         $days = app(GetDaysMappingAction::class)->execute();
 
         $schema = [];
@@ -82,6 +89,7 @@ class OpeningHoursField extends Field
                 ->minutesStep(15)
                 ->nullable()
                 ->live($live);
+<<<<<<< HEAD
 =======
 
         $days = collect([
@@ -144,33 +152,45 @@ class OpeningHoursField extends Field
                             ->nullable()
                             ->live();
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
         }
 
         $this->schema($schema)->columns(5);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
         $this->afterStateUpdated(function ($_state) {
             //dddx($state);
         });
         $this->afterStateHydrated(function (OpeningHoursField $_component, $_state) {
+<<<<<<< HEAD
 =======
         $this->afterStateUpdated(function ($state) {
             //dddx($state);
         });
         $this->afterStateHydrated(function (OpeningHoursField $component, $state) {
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
             // Qui puoi normalizzare lo stato iniziale se serve
             //dddx($state);
         });
         $this->rules([
             /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
              * function(){
              * $data = $this->getState();
              * $this->addError(null, 'test');
              * return false;
              * }*/
             new OpeningHoursRule(),
+<<<<<<< HEAD
 =======
             function(){
                 $data = $this->getState();
@@ -180,6 +200,8 @@ class OpeningHoursField extends Field
             new OpeningHoursRule(),
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
         ]);
     }
 }

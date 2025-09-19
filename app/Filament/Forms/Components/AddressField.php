@@ -26,10 +26,14 @@ class AddressField extends Field
         parent::setUp();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->afterStateHydrated(function (AddressField $_component, null|Model $record) {
 =======
         $this->afterStateHydrated(function (AddressField $component, ?Model $record) {
 >>>>>>> 727968c (.)
+=======
+        $this->afterStateHydrated(function (AddressField $_component, null|Model $record) {
+>>>>>>> ef3c5fa (.)
             $data = [
                 'country' => null,
                 'street' => null,
@@ -40,6 +44,9 @@ class AddressField extends Field
 
             //if ($record && method_exists($record, 'getRelationValue')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
             $relationship = $this->getRelationship();
             if ($relationship && $record?->relationLoaded($relationship)) {
                 $address = $record->getRelationValue($relationship);
@@ -48,6 +55,7 @@ class AddressField extends Field
                 }
             }
 
+<<<<<<< HEAD
 =======
                 $relationship = $this->getRelationship();
                 if ($relationship && $record?->relationLoaded($relationship)) {
@@ -57,6 +65,8 @@ class AddressField extends Field
                     }
                 }
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
             //}
         });
 
@@ -86,6 +96,9 @@ class AddressField extends Field
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
         if ($record instanceof Model) {
             $record->touch();
         }
@@ -105,6 +118,7 @@ class AddressField extends Field
                 TextInput::make('state')->maxLength(255),
                 TextInput::make('zip')->maxLength(255),
             ]),
+<<<<<<< HEAD
 =======
         $record?->touch();
     }
@@ -134,6 +148,8 @@ class AddressField extends Field
                         ->maxLength(255),
                 ]),
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
         ];
     }
 

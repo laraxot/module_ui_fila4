@@ -6,6 +6,9 @@ namespace Modules\UI\Filament\Forms\Components;
 
 use Exception;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\SelectColumn;
 use Illuminate\Database\Eloquent\Model;
@@ -34,6 +37,7 @@ class SelectState extends Select
 
             $states = $record->getStatesFor($name)->toArray();
 
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Arr;
 use Spatie\ModelStates\State;
@@ -66,6 +70,8 @@ class SelectState extends Select
             $states=$record->getStatesFor($name)->toArray();
             
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
             /**
              * @var array<int|string>
              * @phpstan-ignore argument.type
@@ -74,6 +80,7 @@ class SelectState extends Select
         });
         $this->required();
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
        
@@ -81,4 +88,7 @@ class SelectState extends Select
 
    
 >>>>>>> 727968c (.)
+=======
+    }
+>>>>>>> ef3c5fa (.)
 }

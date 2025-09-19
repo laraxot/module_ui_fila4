@@ -6,22 +6,31 @@ namespace Modules\UI\Filament\Forms\Components;
 
 use BackedEnum;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 use Filament\Forms\Components\Radio;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 use Webmozart\Assert\Assert;
+<<<<<<< HEAD
 =======
 use Webmozart\Assert\Assert;
 use Filament\Forms\Components\Radio;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 
 class RadioBadge extends Radio
 {
     protected string $view = 'ui::filament.forms.components.radio-badge';
     protected string $defaultColor = 'gray-200'; // gray-200
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     protected string $selectedColor = 'blue-500'; //'#3b82f6'; // blue-500
 
     /**
@@ -56,6 +65,7 @@ class RadioBadge extends Radio
     {
         $icon = $this->getEnumValue($value)?->getIcon();
         return $icon instanceof BackedEnum ? (string) $icon->value : $icon;
+<<<<<<< HEAD
 =======
     protected string $selectedColor = 'blue-500';//'#3b82f6'; // blue-500
 
@@ -93,6 +103,8 @@ class RadioBadge extends Radio
     {
         return $this->getEnumValue($value)?->getIcon();
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     }
 
     public function defaultColor(string $color): static
@@ -107,7 +119,11 @@ class RadioBadge extends Radio
         return $this;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 727968c (.)
+=======
+}
+>>>>>>> ef3c5fa (.)

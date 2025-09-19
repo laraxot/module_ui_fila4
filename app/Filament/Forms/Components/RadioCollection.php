@@ -6,18 +6,26 @@ namespace Modules\UI\Filament\Forms\Components;
 
 use Closure;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Components\Field;
 use Illuminate\Support\Collection;
 =======
 use Illuminate\Support\Collection;
 use Filament\Forms\Components\Field;
 >>>>>>> 727968c (.)
+=======
+use Filament\Forms\Components\Field;
+use Illuminate\Support\Collection;
+>>>>>>> ef3c5fa (.)
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 
 class RadioCollection extends Field
 {
     protected string $view = 'ui::filament.forms.components.radio-collection';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 
     /**
      * Callback per ottenere gli studi.
@@ -36,6 +44,7 @@ class RadioCollection extends Field
         return $this;
     }
 
+<<<<<<< HEAD
 =======
     
      /**
@@ -56,6 +65,8 @@ class RadioCollection extends Field
     }
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     /**
      * Set the custom item view template.
      */
@@ -63,16 +74,22 @@ class RadioCollection extends Field
     {
         $this->itemView = $view;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 
         return $this;
     }
 
+<<<<<<< HEAD
 =======
         
         return $this;
     }
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     /**
      * Set the key to use as the value for each option.
      */
@@ -80,16 +97,22 @@ class RadioCollection extends Field
     {
         $this->valueKey = $key;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 
         return $this;
     }
 
+<<<<<<< HEAD
 =======
         
         return $this;
     }
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     /**
      * Get the options collection.
      */
@@ -99,10 +122,14 @@ class RadioCollection extends Field
         return $options;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     /**
      * Get the item view template path.
      */
@@ -111,10 +138,14 @@ class RadioCollection extends Field
         return $this->itemView ?? 'ui::filament.forms.components.radio-collection-item';
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     /**
      * Get the value key for options.
      */
@@ -123,16 +154,22 @@ class RadioCollection extends Field
         return $this->valueKey;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 
     /**
      * Comparazione type-safe per determinare se un'opzione è selezionata.
      *
+<<<<<<< HEAD
 =======
     
     /**
      * Comparazione type-safe per determinare se un'opzione è selezionata.
      * 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
      * @param mixed $option
      * @return bool
      */
@@ -144,13 +181,19 @@ class RadioCollection extends Field
         /** @phpstan-ignore-next-line */
         $optionValue = SafeStringCastAction::cast($optionData);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 
         return $currentValue === $optionValue;
     }
 }
+<<<<<<< HEAD
 =======
         
         return $currentValue === $optionValue;
     }
 }
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
