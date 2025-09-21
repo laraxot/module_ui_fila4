@@ -491,10 +491,17 @@ public function downloadDocument(Media $media): Response
 ## 🔗 Collegamenti e Riferimenti
 
 ### **Documentazione Correlata**
+<<<<<<< HEAD
 - [Spatie Media Library Official Docs](https://spatie.be/docs/laravel-medialibrary)
 - [Filament Plugin Documentation](https://filamentphp.com/plugins/filament-spatie-media-library)
 - [UI Components Docs](./filament-components-rules.md)
 - [SaluteOra Models Architecture](../SaluteOra/docs/models-architecture.md)
+=======
+- [Spatie Media Library Official Docs](https://spatie.be/project_docs/laravel-medialibrary)
+- [Filament Plugin Documentation](https://filamentphp.com/plugins/filament-spatie-media-library)
+- [UI Components Docs](./filament-components-rules.md)
+- [SaluteOra Models Architecture](../SaluteOra/project_docs/models-architecture.md)
+>>>>>>> 1899c5f (.)
 
 ### **Repository e Risorse**
 - [GitHub Filament Plugin](https://github.com/filamentphp/spatie-laravel-media-library-plugin)
@@ -526,4 +533,8 @@ public function downloadDocument(Media $media): Response
 
 *Ultimo aggiornamento: Dicembre 2024*  
 *Versione: 1.0*  
+<<<<<<< HEAD
 *Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 4.x* 
+=======
+*Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 3.x* 
+>>>>>>> 1899c5f (.)

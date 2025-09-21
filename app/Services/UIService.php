@@ -4,12 +4,37 @@ declare(strict_types=1);
 
 namespace Modules\UI\Services;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1899c5f (.)
 use Modules\Xot\Actions\File\AssetAction;
 
 class UIService
 {
+<<<<<<< HEAD
     public static function asset(string $asset): null|string
     {
         return app(AssetAction::class)->execute($asset);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public static function asset(string $asset): null|string
+=======
+    public static function asset(string $asset): ?string
+>>>>>>> a12f125f4a (.)
+=======
+    public static function asset(string $asset): null|string
+>>>>>>> b93ef594b4 (.)
+    {
+        return app(AssetAction::class)->execute($asset);
+=======
+class UIService
+{
+    public static function asset(string $asset): ?string
+    {
+        return app(\Modules\Xot\Actions\File\AssetAction::class)->execute($asset);
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     }
 }

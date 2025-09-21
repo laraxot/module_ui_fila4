@@ -4,9 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Schemas\Components\Utilities\Get;
 use Exception;
+=======
+<<<<<<< HEAD
+use Filament\Actions\Action;
+use Filament\Schemas\Components\Utilities\Get;
+use Exception;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 1899c5f (.)
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -22,10 +31,66 @@ use Webmozart\Assert\Assert;
 
 class IconStateColumn extends IconColumn
 {
+<<<<<<< HEAD
+=======
+=======
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use Webmozart\Assert\Assert;
+use Spatie\ModelStates\State;
+=======
+>>>>>>> b93ef594b4 (.)
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Notifications\Notification;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\SelectColumn;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use Spatie\ModelStates\HasStatesContract;
+use Spatie\ModelStates\State;
+use Webmozart\Assert\Assert;
+
+class IconStateColumn extends IconColumn
+{
+<<<<<<< HEAD
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+use Exception;
+use Filament\Forms\Get;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use Webmozart\Assert\Assert;
+use Spatie\ModelStates\State;
+use Filament\Tables\Actions\Action;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Tables\Columns\IconColumn;
+use Illuminate\Database\Eloquent\Model;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\SelectColumn;
+use Spatie\ModelStates\HasStatesContract;
+
+class IconStateColumn extends IconColumn
+{
+
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     protected function setUp(): void
     {
         parent::setUp();
         //$this->getStateUsing(fn() => true); // the column requires a state to be passed to it
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 1899c5f (.)
         $this->icon(fn($state): null|string => $state?->icon());
         $this->color(fn($state): null|string => $state?->color());
         $this->tooltip(fn($state): null|string => $state?->label());
@@ -93,4 +158,161 @@ class IconStateColumn extends IconColumn
                 }),
         );
     }
+<<<<<<< HEAD
+=======
+=======
+        $this->icon(fn($state): ?string => $state?->icon());
+        $this->color(fn($state): ?string => $state?->color());
+        $this->tooltip(fn($state): ?string => $state?->label());
+=======
+        $this->icon(fn($state): null|string => $state?->icon());
+        $this->color(fn($state): null|string => $state?->color());
+        $this->tooltip(fn($state): null|string => $state?->label());
+>>>>>>> b93ef594b4 (.)
+        //$this->label('aaa');
+
+        $this->action(
+            Action::make('change-state')
+                ->schema([
+                    Select::make('state')
+                        ->options(function (Model&HasStatesContract $record, string $_state): array {
+                            $name = $this->getName();
+                            $state = $record->getAttribute($name);
+                            if ($state === null) {
+                                $states = Arr::wrap($record->getDefaultStateFor($name));
+                                return array_combine($states, $states);
+                            }
+                            Assert::isInstanceOf($state, State::class);
+
+                            try {
+                                $states = $state->transitionableStates();
+                            } catch (Exception $e) {
+                                $states = $record->getStatesFor($name)->toArray();
+
+
+                            }
+                            /** @phpstan-ignore-next-line */
+                            $states = Arr::mapWithKeys($states, function ($state) use ($record) {
+                                $model = Str::of(class_basename($record))->slug()->toString();
+                                /** @phpstan-ignore binaryOp.invalid */
+                                Assert::string($label = __('pub_theme::' . $model . '_states.' . $state . '.label'));
+                                return [$state => $label];
+                            });
+                            return $states;
+                        })
+                        ->required()
+                        ->reactive(),
+                    Textarea::make('message')->required(function (Get $get, $record) {
+                        $newState = $get('state');
+                        $name = $this->getName();
+                        $state = $record->getAttribute($name);
+                        $states = $state::getStateMapping();
+                        /** @var class-string<State> $newStateClass */
+                        $newStateClass = Arr::get($states, (string) $newState);
+                        if (!is_string($newStateClass) || !class_exists($newStateClass)) {
+                            return false;
+                        }
+                        $newStateInstance = new $newStateClass($record);
+                        return method_exists($newStateInstance, 'isMessageRequired')
+                            ? $newStateInstance->isMessageRequired()
+                            : false;
+                    }),
+                ])
+                ->fillForm(fn($record) => [
+                    'state' => $record->state::$name,
+                ])
+                ->action(function ($record, $data) {
+                    $state = $data['state'];
+                    $model = Str::of(class_basename($record))->slug()->toString();
+                    Assert::string($label = __('pub_theme::' . $model . '_states.' . $state . '.label'));
+                    $record->state->transitionTo($data['state'], $data['message']);
+                    Notification::make()
+                        ->title('Stato aggiornato a ' . $label)
+                        ->success()
+                        ->send();
+                }),
+        );
+    }
+<<<<<<< HEAD
+=======
+        $this->icon(fn($state): ?string => $state?->icon());
+        $this->color(fn($state): ?string => $state?->color());
+        $this->tooltip(fn($state): ?string => $state?->label());
+        //$this->label('aaa');
+
+        $this->action(Action::make('change-state')
+            ->form([
+                Select::make('state')
+                    ->options(
+                        function (Model&HasStatesContract $record ,string $state): array {
+
+                            $name=$this->getName();
+                            $state=$record->getAttribute($name);
+                            if($state==null){
+                                $states=Arr::wrap($record->getDefaultStateFor($name));
+                                return array_combine($states, $states);
+                            }
+                            Assert::isInstanceOf($state, State::class);
+                            
+                            try{
+                                $states=$state->transitionableStates();
+                            }catch(Exception $e){
+                                $states=$record->getStatesFor($name)->toArray();;
+                            }
+                            /** @phpstan-ignore-next-line */
+                            $states=Arr::mapWithKeys($states,function($state) use ($record){
+                                $model=Str::of(class_basename($record))->slug()->toString();
+                                /** @phpstan-ignore binaryOp.invalid */
+                                Assert::string($label=__('pub_theme::'.$model.'_states.'.$state.'.label'));
+                                return [$state=>$label];
+                            });
+                            return $states;
+                        }
+                    )
+                    ->required()
+                    ->reactive(),
+                Textarea::make('message')
+                ->required(function(Get $get,$record){
+                    $newState=$get('state');
+                    $name=$this->getName();
+                    $state=$record->getAttribute($name);
+                    $states=$state::getStateMapping();
+                    /** @var class-string<\Spatie\ModelStates\State> $newStateClass */
+                    $newStateClass=Arr::get($states, (string) $newState);
+                    if (!is_string($newStateClass) || !class_exists($newStateClass)) {
+                        return false;
+                    }
+                    $newStateInstance=new $newStateClass($record);
+                    return method_exists($newStateInstance, 'isMessageRequired') 
+                        ? $newStateInstance->isMessageRequired() 
+                        : false;
+                }),
+            ])
+            ->fillForm(function($record){
+                // Generic state handling - project-specific state classes should be injected
+                return [
+                    'state' => $record->state::$name,
+                ];
+            })
+            ->action(function($record, $data) {
+                //dddx(['record'=>$record, 'data'=>$data]);
+                $record->state->transitionTo($data['state'],$data['message']);
+
+            })
+        );
+
+
+    }
+>>>>>>> origin/develop
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 }

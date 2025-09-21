@@ -2,6 +2,7 @@
 namespace Modules\UI\Filament\Widgets;
 
 
+<<<<<<< HEAD
 // use Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
 use Filament\Schemas\Components\Grid;
 use Illuminate\Support\Str;
@@ -15,6 +16,19 @@ use Filament\Forms\Components\DateTimePicker;
 class UserCalendarWidget extends Widget
 {
     // use InteractsWithEvents;
+=======
+use Illuminate\Support\Str;
+use Modules\Xot\Datas\XotData;
+use App\Filament\Resources\EventResource;
+use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\DateTimePicker;
+
+class UserCalendarWidget extends FullCalendarWidget
+{
+    use \Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
+>>>>>>> 1899c5f (.)
     public string $type;
 
     
@@ -23,7 +37,11 @@ class UserCalendarWidget extends Widget
         $action_suffix=Str::of($function)->studly()->append('Action')->toString();
         $resource=XotData::make()->getUserResourceClassByType($this->type);
         $model = $resource::getModel();
+<<<<<<< HEAD
         $action=Str::of($model)
+=======
+        $action=\Illuminate\Support\Str::of($model)
+>>>>>>> 1899c5f (.)
             ->replace('\Models\\', '\Actions\\')
             ->append('\Calendar\\'.$action_suffix)
             ->toString();
