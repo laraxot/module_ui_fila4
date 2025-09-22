@@ -43,12 +43,12 @@ class VideoSpatie
                     ->previewable()
                     ->downloadable()
                     // ->rules(Rule::dimensions()->maxWidth(600)->maxHeight(800))
-                    ->collection(fn(Get $get) => $get('img_uuid'))
+                    ->collection(fn(\Filament\Schemas\Components\Utilities\Get $get) => $get('img_uuid'))
                     ->afterStateUpdated(function (
                         HasForms $_livewire,
                         SpatieMediaLibraryFileUpload $_component,
                         TemporaryUploadedFile $state,
-                        Get $get,
+                        \Filament\Schemas\Components\Utilities\Get $get,
                         HasMedia $record,
                     ) {
                         // Call to an undefined method Filament\Forms\Contracts\HasForms::validateOnly().
@@ -70,8 +70,8 @@ class VideoSpatie
                 TextInput::make('caption'),
                 // ->columnSpanFull()
                 // Filament\Forms\Components\SpatieMediaLibraryFileUpload::whereCustomProperties does not exist.
-                // ->whereCustomProperties(fn(Forms\Get $get) => ['gallery_id' => $get('gallery_id')])
-                // ->customProperties(fn(Forms\Get $get) => ['gallery_id' => $get('gallery_id')]),
+                // ->whereCustomProperties(fn(Forms\\Filament\Schemas\Components\Utilities\Get $get) => ['gallery_id' => $get('gallery_id')])
+                // ->customProperties(fn(Forms\\Filament\Schemas\Components\Utilities\Get $get) => ['gallery_id' => $get('gallery_id')]),
                 // Forms\Components\SpatieMediaLibraryFileUpload::make('media_id')
             ])
             ->columns('form' === $context ? 2 : 1);

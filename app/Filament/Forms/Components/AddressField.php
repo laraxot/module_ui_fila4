@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Modules\UI\Filament\Forms\Components;
+namespace Modules\Notify\Filament\Forms\Components;
 
-use Filament\Forms\Components\Field;
 use Filament\Schemas\Components\Grid;
+use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms;

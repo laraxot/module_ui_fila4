@@ -2,7 +2,6 @@
 namespace Modules\UI\Filament\Widgets;
 
 
-// use Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
 use Filament\Schemas\Components\Grid;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\XotData;

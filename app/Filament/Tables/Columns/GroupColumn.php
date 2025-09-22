@@ -8,7 +8,7 @@ use Filament\Tables\Columns\Column;
 
 class GroupColumn extends Column
 {
-    public array $schema = [];
+    public array $form = [];
 
     protected string $view = 'ui::filament.tables.columns.group';
 
@@ -17,9 +17,9 @@ class GroupColumn extends Column
         return $this->schema;
     }
 
-    public function schema(array $schema): self
+    public function schema(array $form): self
     {
-        $this->schema = $schema;
+        $this->schema = $form;
 
         return $this;
     }

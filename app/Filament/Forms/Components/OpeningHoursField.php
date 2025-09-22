@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\UI\Filament\Forms\Components;
+namespace Modules\Notify\Filament\Forms\Components;
 
 use Modules\UI\Rules\OpeningHoursRule;
 use Carbon\Carbon;
@@ -26,18 +26,18 @@ class OpeningHoursField extends Field
         parent::setUp();
         $days = app(GetDaysMappingAction::class)->execute();
 
-        $schema = [];
+        $form = [];
         $native = false;
         $live = false;
 
         foreach ($days as $dayKey => $dayLabel) {
-            $schema[] = Placeholder::make($dayKey . '_label')
+            $form[] = Placeholder::make($dayKey . '_label')
                 ->label('')
                 ->content($dayLabel)
                 ->extraAttributes(['class' => 'font-medium text-gray-900 dark:text-gray-100 text-center py-2'])
                 ->columnSpan(1);
 
-            $schema[] = TimePicker::make("{$dayKey}.morning_from")
+            $form[] = TimePicker::make("{$dayKey}.morning_from")
                 ->native($native)
                 //->placeholder('08:00')
                 //->placeholder('09:30')
@@ -48,7 +48,7 @@ class OpeningHoursField extends Field
                 ->nullable()
                 ->live($live);
 
-            $schema[] = TimePicker::make("{$dayKey}.morning_to")
+            $form[] = TimePicker::make("{$dayKey}.morning_to")
                 ->native($native)
                 //->placeholder('13:30')
                 ->placeholder('--:--')
@@ -58,7 +58,7 @@ class OpeningHoursField extends Field
                 ->nullable()
                 ->live($live);
 
-            $schema[] = TimePicker::make("{$dayKey}.afternoon_from")
+            $form[] = TimePicker::make("{$dayKey}.afternoon_from")
                 ->native($native)
                 //->placeholder('15:00')
                 ->placeholder('--:--')
@@ -68,7 +68,7 @@ class OpeningHoursField extends Field
                 ->nullable()
                 ->live($live);
 
-            $schema[] = TimePicker::make("{$dayKey}.afternoon_to")
+            $form[] = TimePicker::make("{$dayKey}.afternoon_to")
                 ->native($native)
                 //->placeholder('19:00')
                 ->placeholder('--:--')
@@ -79,7 +79,7 @@ class OpeningHoursField extends Field
                 ->live($live);
         }
 
-        $this->schema($schema)->columns(5);
+        $this->schema($form)->columns(5);
 
         $this->afterStateUpdated(function ($_state) {
             //dddx($state);
