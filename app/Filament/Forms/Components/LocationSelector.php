@@ -4,13 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Forms\Components;
 
+<<<<<<< HEAD
 use Filament\Schemas\Components\Group;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Components\Utilities\Get;
+=======
+>>>>>>> 2dcb12a (.)
 use Exception;
 use Filament\Forms\Components\Select;
-use Illuminate\Contracts\Support\Htmlable;
+use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Group;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Models\Comune;
 
@@ -21,8 +25,11 @@ use Modules\Geo\Models\Comune;
  * - Regione
  * - Provincia (dipendente da regione)
  * - CAP (dipendente da regione e provincia)
+<<<<<<< HEAD
  *
  * @package \Filament\Forms\Forms\Components
+=======
+>>>>>>> 2dcb12a (.)
  */
 class LocationSelector extends Group
 {
@@ -92,6 +99,7 @@ class LocationSelector extends Group
     public function regionField(string $fieldName): static
     {
         $this->regionFieldName = $fieldName;
+
         return $this;
     }
 
@@ -101,6 +109,7 @@ class LocationSelector extends Group
     public function provinceField(string $fieldName): static
     {
         $this->provinceFieldName = $fieldName;
+
         return $this;
     }
 
@@ -110,6 +119,7 @@ class LocationSelector extends Group
     public function capField(string $fieldName): static
     {
         $this->capFieldName = $fieldName;
+
         return $this;
     }
 
@@ -119,6 +129,7 @@ class LocationSelector extends Group
     public function required(bool $condition = true): static
     {
         $this->required = $condition;
+
         return $this;
     }
 
@@ -128,28 +139,31 @@ class LocationSelector extends Group
     public function searchable(bool $condition = true): static
     {
         $this->searchable = $condition;
+
         return $this;
     }
 
     /**
      * Imposta label personalizzate.
      *
-     * @param array<string, string> $labels
+     * @param  array<string, string>  $labels
      */
     public function labels(array $labels): static
     {
         $this->labels = array_merge($this->labels, $labels);
+
         return $this;
     }
 
     /**
      * Imposta placeholder personalizzati.
      *
-     * @param array<string, string> $placeholders
+     * @param  array<string, string>  $placeholders
      */
     public function placeholders(array $placeholders): static
     {
         $this->placeholders = array_merge($this->placeholders, $placeholders);
+
         return $this;
     }
 
@@ -181,12 +195,17 @@ class LocationSelector extends Group
                 ->placeholder($this->placeholders['province'])
                 ->options(function (\Filament\Schemas\Components\Utilities\Get $get): array {
                     $region = $get($this->regionFieldName);
+
                     return is_string($region) ? $this->getProvinceOptions($region) : [];
                 })
                 ->searchable($this->searchable)
                 ->required($this->required)
                 ->live()
+<<<<<<< HEAD
                 ->disabled(fn(\Filament\Schemas\Components\Utilities\Get $get): bool => !$get($this->regionFieldName))
+=======
+                ->disabled(fn (\Filament\Schemas\Components\Utilities\Get $get): bool => ! $get($this->regionFieldName))
+>>>>>>> 2dcb12a (.)
                 ->afterStateUpdated(function (\Filament\Schemas\Components\Utilities\Set $set) {
                     // Reset cap quando cambia la provincia
                     $set($this->capFieldName, null);
@@ -199,11 +218,16 @@ class LocationSelector extends Group
                 ->options(function (\Filament\Schemas\Components\Utilities\Get $get): array {
                     $region = $get($this->regionFieldName);
                     $province = $get($this->provinceFieldName);
+
                     return is_string($region) && is_string($province) ? $this->getCapOptions($region, $province) : [];
                 })
                 ->searchable($this->searchable)
                 ->required($this->required)
+<<<<<<< HEAD
                 ->disabled(fn(\Filament\Schemas\Components\Utilities\Get $get): bool => !$get($this->regionFieldName) || !$get($this->provinceFieldName))
+=======
+                ->disabled(fn (\Filament\Schemas\Components\Utilities\Get $get): bool => ! $get($this->regionFieldName) || ! $get($this->provinceFieldName))
+>>>>>>> 2dcb12a (.)
                 ->helperText(__('ui::location_selector.cap.help')),
         ];
     }
@@ -216,7 +240,11 @@ class LocationSelector extends Group
     protected function getRegionOptions(): array
     {
         try {
+<<<<<<< HEAD
             /** @phpstan-ignore return.type */
+=======
+            /** @phpstan-ignore class.notFound */
+>>>>>>> 2dcb12a (.)
             return Comune::select('regione')
                 ->distinct()
                 ->orderBy('regione->nome')
@@ -236,13 +264,17 @@ class LocationSelector extends Group
     /**
      * Ottiene le opzioni per il campo provincia basate sulla regione.
      *
-     * @param string $region Codice regione
+     * @param  string  $region  Codice regione
      * @return array<string, string>
      */
     protected function getProvinceOptions(string $region): array
     {
         try {
+<<<<<<< HEAD
             /** @phpstan-ignore return.type */
+=======
+            /** @phpstan-ignore class.notFound */
+>>>>>>> 2dcb12a (.)
             return Comune::query()
                 ->where('regione->codice', $region)
                 ->select('provincia')
@@ -264,14 +296,18 @@ class LocationSelector extends Group
     /**
      * Ottiene le opzioni per il campo CAP basate su regione e provincia.
      *
-     * @param string $region Codice regione
-     * @param string $province Codice provincia
+     * @param  string  $region  Codice regione
+     * @param  string  $province  Codice provincia
      * @return array<string, string>
      */
     protected function getCapOptions(string $region, string $province): array
     {
         try {
+<<<<<<< HEAD
             /** @phpstan-ignore return.type */
+=======
+            /** @phpstan-ignore class.notFound */
+>>>>>>> 2dcb12a (.)
             return Comune::query()
                 ->where('regione->codice', $region)
                 ->where('provincia->codice', $province)
@@ -302,7 +338,7 @@ class LocationSelector extends Group
 
         // Verifica che se è selezionata una provincia, sia selezionata anche la regione
         /** @phpstan-ignore offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible */
-        if (!empty($state[$this->provinceFieldName]) && empty($state[$this->regionFieldName])) {
+        if (! empty($state[$this->provinceFieldName]) && empty($state[$this->regionFieldName])) {
             $errors[] = __('ui::location_selector.validation.region_required_for_province');
         }
 
@@ -311,8 +347,8 @@ class LocationSelector extends Group
             $capValue = $state[$this->capFieldName] ?? null;
             $regionValue = $state[$this->regionFieldName] ?? null;
             $provinceValue = $state[$this->provinceFieldName] ?? null;
-            
-            if (!empty($capValue) && (empty($regionValue) || empty($provinceValue))) {
+
+            if (! empty($capValue) && (empty($regionValue) || empty($provinceValue))) {
                 $errors[] = __('ui::location_selector.validation.region_province_required_for_cap');
             }
         }
@@ -325,7 +361,7 @@ class LocationSelector extends Group
      *
      * @return array<string, mixed>|null
      */
-    public function getGeographicData(): null|array
+    public function getGeographicData(): ?array
     {
         $state = $this->getState();
         /** @phpstan-ignore offsetAccess.nonOffsetAccessible */
@@ -334,21 +370,25 @@ class LocationSelector extends Group
         }
 
         try {
+<<<<<<< HEAD
+=======
+            /** @phpstan-ignore class.notFound */
+>>>>>>> 2dcb12a (.)
             $query = Comune::query()->where('regione->codice', $state[$this->regionFieldName]);
 
             /** @phpstan-ignore offsetAccess.nonOffsetAccessible */
-            if (!empty($state[$this->provinceFieldName])) {
+            if (! empty($state[$this->provinceFieldName])) {
                 $query->where('provincia->codice', $state[$this->provinceFieldName]);
             }
 
             /** @phpstan-ignore offsetAccess.nonOffsetAccessible */
-            if (!empty($state[$this->capFieldName])) {
+            if (! empty($state[$this->capFieldName])) {
                 $query->where('cap->0', $state[$this->capFieldName]);
             }
 
             $comune = $query->first();
 
-            if (!$comune) {
+            if (! $comune) {
                 return null;
             }
 
