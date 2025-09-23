@@ -3,7 +3,11 @@
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <x-filament-forms::field-wrapper
+=======
+<div
+>>>>>>> d6dc04d (.)
 
     :label="$getLabel()"
 
@@ -33,4 +37,8 @@ declare(strict_types=1);
             {{ __('ui::filament-navigation.items.add-item') }}
         </x-filament::button>
     </div>
+<<<<<<< HEAD
 </x-filament-forms::field-wrapper>
+=======
+</div>
+>>>>>>> d6dc04d (.)
