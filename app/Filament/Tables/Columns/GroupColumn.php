@@ -5,26 +5,16 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Tables\Columns;
 
 use Filament\Tables\Columns\Column;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Filament\Tables\Table;
->>>>>>> 19f3650 (.)
-=======
-use Filament\Tables\Table;
->>>>>>> 2dcb12a (.)
 
 class GroupColumn extends Column
 {
     public array $form = [];
-<<<<<<< HEAD
-=======
 
     /**
      * @var array<Column>
      */
     protected array $schema = [];
->>>>>>> 2dcb12a (.)
 
     protected string $view = 'ui::filament.tables.columns.group';
 
@@ -36,8 +26,6 @@ class GroupColumn extends Column
     public function schema(array $form): self
     {
         $this->schema = $form;
-<<<<<<< HEAD
-=======
 
         return $this;
     }
@@ -67,26 +55,7 @@ class GroupColumn extends Column
                 }
             }
         }
->>>>>>> 2dcb12a (.)
 
         return $this;
     }
-<<<<<<< HEAD
-=======
-
-    /**
-     * Ensure child columns are mounted to the same table to avoid
-     * "The column [x] is not mounted to a table".
-     */
-    public function mount(Table $table): void
-    {
-        parent::mount($table);
-
-        foreach ($this->schema as $child) {
-            if ($child instanceof Column && null === $child->getTable()) {
-                $child->mount($table);
-            }
-        }
-    }
->>>>>>> 19f3650 (.)
 }
