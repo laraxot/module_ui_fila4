@@ -2,11 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Notify\Filament\Forms\Components;
-=======
-namespace Modules\UI\Filament\Forms\Components;
->>>>>>> e3274ea (.)
 
 use Exception;
 use Throwable;
