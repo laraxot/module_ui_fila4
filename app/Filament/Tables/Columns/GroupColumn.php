@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Tables\Columns;
 
 use Filament\Tables\Columns\Column;
+<<<<<<< HEAD
 use Filament\Tables\Table;
 
 class GroupColumn extends Column
@@ -15,6 +16,12 @@ class GroupColumn extends Column
      * @var array<Column>
      */
     protected array $schema = [];
+=======
+
+class GroupColumn extends Column
+{
+    public array $schema = [];
+>>>>>>> e3274ea (.)
 
     protected string $view = 'ui::filament.tables.columns.group';
 
@@ -23,6 +30,7 @@ class GroupColumn extends Column
         return $this->schema;
     }
 
+<<<<<<< HEAD
     public function schema(array $form): self
     {
         $this->schema = $form;
@@ -55,6 +63,11 @@ class GroupColumn extends Column
                 }
             }
         }
+=======
+    public function schema(array $schema): self
+    {
+        $this->schema = $schema;
+>>>>>>> e3274ea (.)
 
         return $this;
     }

@@ -2,10 +2,17 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Filament\Forms\Components;
 
 use Filament\Schemas\Components\Grid;
 use Filament\Forms\Components\Field;
+=======
+namespace Modules\UI\Filament\Forms\Components;
+
+use Filament\Forms\Components\Field;
+use Filament\Schemas\Components\Grid;
+>>>>>>> e3274ea (.)
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms;
