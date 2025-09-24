@@ -4,30 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Components\Utilities\Get;
->>>>>>> 02e46f9 (.)
-=======
->>>>>>> 86ad755 (.)
 use Exception;
 use Filament\Forms\Components\Select;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Group;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Schemas\Components\Utilities\Get;
-use Filament\Schemas\Components\Utilities\Set;
-=======
->>>>>>> 02e46f9 (.)
-=======
-use Filament\Schemas\Components\Utilities\Get;
-use Filament\Schemas\Components\Utilities\Set;
->>>>>>> 86ad755 (.)
+ 
 use Illuminate\Support\Facades\Log;
-use Modules\Geo\Models\Comune;
+ 
 
 /**
  * LocationSelector Component - Selezione geografica gerarchica
@@ -238,16 +223,12 @@ class LocationSelector extends Group
     protected function getRegionOptions(): array
     {
         try {
-            /** @phpstan-ignore class.notFound */
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $regions = Comune::select('regione')
-=======
-            return Comune::select('regione')
->>>>>>> 02e46f9 (.)
-=======
-            $regions = Comune::select('regione')
->>>>>>> 86ad755 (.)
+            $model = '\\Modules\\Geo\\Models\\Comune';
+            if (! class_exists($model)) {
+                return [];
+            }
+            /** @phpstan-ignore-next-line */
+            $regions = $model::select('regione')
                 ->distinct()
                 ->orderBy('regione->nome')
                 ->get()
@@ -277,16 +258,12 @@ class LocationSelector extends Group
     protected function getProvinceOptions(string $region): array
     {
         try {
-            /** @phpstan-ignore class.notFound */
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $provinces = Comune::query()
-=======
-            return Comune::query()
->>>>>>> 02e46f9 (.)
-=======
-            $provinces = Comune::query()
->>>>>>> 86ad755 (.)
+            $model = '\\Modules\\Geo\\Models\\Comune';
+            if (! class_exists($model)) {
+                return [];
+            }
+            /** @phpstan-ignore-next-line */
+            $provinces = $model::query()
                 ->where('regione->codice', $region)
                 ->select('provincia')
                 ->distinct()
@@ -319,16 +296,12 @@ class LocationSelector extends Group
     protected function getCapOptions(string $region, string $province): array
     {
         try {
-            /** @phpstan-ignore class.notFound */
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $caps = Comune::query()
-=======
-            return Comune::query()
->>>>>>> 02e46f9 (.)
-=======
-            $caps = Comune::query()
->>>>>>> 86ad755 (.)
+            $model = '\\Modules\\Geo\\Models\\Comune';
+            if (! class_exists($model)) {
+                return [];
+            }
+            /** @phpstan-ignore-next-line */
+            $caps = $model::query()
                 ->where('regione->codice', $region)
                 ->where('provincia->codice', $province)
                 ->select('cap')
@@ -395,8 +368,12 @@ class LocationSelector extends Group
         }
 
         try {
-            /** @phpstan-ignore class.notFound */
-            $query = Comune::query()->where('regione->codice', $state[$this->regionFieldName]);
+            $model = '\\Modules\\Geo\\Models\\Comune';
+            if (! class_exists($model)) {
+                return null;
+            }
+            /** @phpstan-ignore-next-line */
+            $query = $model::query()->where('regione->codice', $state[$this->regionFieldName]);
 
             /** @phpstan-ignore offsetAccess.nonOffsetAccessible */
             if (! empty($state[$this->provinceFieldName])) {
