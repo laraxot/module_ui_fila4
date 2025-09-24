@@ -7,11 +7,7 @@ declare(strict_types=1);
  * @see https://github.com/ryangjchandler/filament-navigation
  */
 
-<<<<<<< HEAD
 namespace Modules\UI\Filament\Forms\Components;
-=======
-namespace Modules\Notify\Filament\Forms\Components;
->>>>>>> 1ee7e4a (.)
 
 use Filament\Forms\Components\Select;
 
@@ -26,7 +22,7 @@ class ParentSelect extends Select
         parent::setUp();
 
         // dddx($this->getModel());
-        $this->options(static fn(ParentSelect $_component): array => ['a' => 'a', 'b' => 'b']);
+        $this->options(static fn (ParentSelect $_component): array => ['a' => 'a', 'b' => 'b']);
     }
 
     public function getOptionValueProperty(): string

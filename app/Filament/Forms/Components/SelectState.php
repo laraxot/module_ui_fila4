@@ -2,19 +2,12 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\UI\Filament\Forms\Components;
-=======
-namespace Modules\Notify\Filament\Forms\Components;
->>>>>>> 1ee7e4a (.)
 
-use Exception;
 use Filament\Forms\Components\Select;
-use Filament\Tables\Columns\SelectColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Spatie\ModelStates\HasStatesContract;
-use Spatie\ModelStates\State;
 
 class SelectState extends Select
 {
@@ -28,8 +21,10 @@ class SelectState extends Select
             if (is_null($record)) {
                 $model = $this->getModel();
                 $states = Arr::wrap(app($model)->getDefaultStateFor($name));
+
                 /**
                  * @var array<int|string>
+                 *
                  * @phpstan-ignore argument.type
                  */
                 return array_combine($states, $states);
@@ -39,6 +34,7 @@ class SelectState extends Select
 
             /**
              * @var array<int|string>
+             *
              * @phpstan-ignore argument.type
              */
             return array_combine($states, $states);

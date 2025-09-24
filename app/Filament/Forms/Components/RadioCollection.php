@@ -2,11 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\UI\Filament\Forms\Components;
-=======
-namespace Modules\Notify\Filament\Forms\Components;
->>>>>>> 1ee7e4a (.)
 
 use Closure;
 use Filament\Forms\Components\Field;
@@ -21,7 +17,9 @@ class RadioCollection extends Field
      * Callback per ottenere gli studi.
      */
     protected Closure|Collection|null $options = null;
+
     protected string $itemView;
+
     protected string $valueKey = 'id';
 
     /**
@@ -60,6 +58,7 @@ class RadioCollection extends Field
     public function getOptions(): Collection
     {
         $options = $this->evaluate($this->options);
+
         return $options;
     }
 
@@ -82,8 +81,7 @@ class RadioCollection extends Field
     /**
      * Comparazione type-safe per determinare se un'opzione è selezionata.
      *
-     * @param mixed $option
-     * @return bool
+     * @param  mixed  $option
      */
     public function isOptionSelected($option): bool
     {

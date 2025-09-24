@@ -2,17 +2,13 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\UI\Filament\Forms\Components;
-=======
-namespace Modules\Notify\Filament\Forms\Components;
->>>>>>> 1ee7e4a (.)
 
 use Filament\Actions\Action;
-use Filament\Schemas\Components\Utilities\Get;
-use Filament\Schemas\Components\Utilities\Set;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Utilities\Get;
+use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Modules\UI\Actions\Icon\GetAllIconsAction;
 use Webmozart\Assert\Assert;
@@ -32,7 +28,7 @@ class IconPicker extends TextInput
 
         $this->suffixAction(
             Action::make('icon')
-                ->icon(fn(null|string $state) => $state)
+                ->icon(fn (?string $state) => $state)
                 // ->modalContent(fn ($record) => view('ui::filament.forms.components.icon-picker', ['record' => $record]))
                 ->schema([
                     Select::make('pack')
@@ -42,13 +38,13 @@ class IconPicker extends TextInput
                     RadioIcon::make('newstate')
                         ->options(function (Get $get) use ($icons): array {
                             $pack = $get('pack');
-                            if (!is_string($pack)) {
+                            if (! is_string($pack)) {
                                 return [];
                             }
-                            $key = $pack . '.icons';
+                            $key = $pack.'.icons';
                             Assert::isArray(
                                 $opts = Arr::get($icons, $key, []),
-                                '[' . __LINE__ . '][' . class_basename($this) . ']',
+                                '['.__LINE__.']['.class_basename($this).']',
                             );
                             $opts = array_combine($opts, $opts);
 

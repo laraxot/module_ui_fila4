@@ -2,17 +2,12 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\UI\Filament\Forms\Components;
-=======
-namespace Modules\Notify\Filament\Forms\Components;
->>>>>>> 1ee7e4a (.)
 
-use Filament\Schemas\Components\Grid;
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms;
+use Filament\Schemas\Components\Grid;
 use Illuminate\Database\Eloquent\Model;
 use Webmozart\Assert\Assert;
 
@@ -29,7 +24,7 @@ class AddressField extends Field
     {
         parent::setUp();
 
-        $this->afterStateHydrated(function (AddressField $_component, null|Model $record) {
+        $this->afterStateHydrated(function (AddressField $_component, ?Model $record) {
             $data = [
                 'country' => null,
                 'street' => null,
@@ -38,16 +33,16 @@ class AddressField extends Field
                 'zip' => null,
             ];
 
-            //if ($record && method_exists($record, 'getRelationValue')) {
+            // if ($record && method_exists($record, 'getRelationValue')) {
             $relationship = $this->getRelationship();
             if ($relationship && $record?->relationLoaded($relationship)) {
                 $address = $record->getRelationValue($relationship);
-                if (null !== $address && is_object($address) && method_exists($address, 'toArray')) {
+                if ($address !== null && is_object($address) && method_exists($address, 'toArray')) {
                     $data = $address->toArray();
                 }
             }
 
-            //}
+            // }
         });
 
         $this->dehydrated(false);
@@ -66,7 +61,7 @@ class AddressField extends Field
         $record = $this->getRecord();
         $relationship = $record->{$this->getRelationship()}();
 
-        if (null === $relationship) {
+        if ($relationship === null) {
             return;
         }
         if ($address = $relationship->first()) {

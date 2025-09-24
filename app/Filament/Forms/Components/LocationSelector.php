@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use Filament\Schemas\Components\Utilities\Set;
-use Filament\Schemas\Components\Utilities\Get;
 use Exception;
 use Filament\Forms\Components\Select;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Group;
+use Filament\Schemas\Components\Utilities\Get;
+use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Models\Comune;
 
@@ -223,24 +223,17 @@ class LocationSelector extends Group
     {
         try {
             /** @phpstan-ignore class.notFound */
-<<<<<<< HEAD
             $regions = Comune::select('regione')
-=======
-            return Comune::select('regione')
->>>>>>> 1ee7e4a (.)
                 ->distinct()
                 ->orderBy('regione->nome')
                 ->get()
                 ->pluck('regione.nome', 'regione.codice')
                 ->toArray();
-<<<<<<< HEAD
 
-            return array_map(static fn($value): string => (string) $value, array_combine(
-                array_map(static fn($value): string => (string) $value, array_keys($regions)),
-                array_map(static fn($value): string => (string) $value, array_values($regions))
+            return array_map(static fn ($value): string => (string) $value, array_combine(
+                array_map(static fn ($value): string => (string) $value, array_keys($regions)),
+                array_map(static fn ($value): string => (string) $value, array_values($regions))
             )) ?: [];
-=======
->>>>>>> 1ee7e4a (.)
         } catch (Exception $e) {
             // Log dell'errore per debug
             Log::error('LocationSelector: Errore nel caricamento regioni', [
@@ -261,11 +254,7 @@ class LocationSelector extends Group
     {
         try {
             /** @phpstan-ignore class.notFound */
-<<<<<<< HEAD
             $provinces = Comune::query()
-=======
-            return Comune::query()
->>>>>>> 1ee7e4a (.)
                 ->where('regione->codice', $region)
                 ->select('provincia')
                 ->distinct()
@@ -273,14 +262,11 @@ class LocationSelector extends Group
                 ->get()
                 ->pluck('provincia.nome', 'provincia.codice')
                 ->toArray();
-<<<<<<< HEAD
 
-            return array_map(static fn($value): string => (string) $value, array_combine(
-                array_map(static fn($value): string => (string) $value, array_keys($provinces)),
-                array_map(static fn($value): string => (string) $value, array_values($provinces))
+            return array_map(static fn ($value): string => (string) $value, array_combine(
+                array_map(static fn ($value): string => (string) $value, array_keys($provinces)),
+                array_map(static fn ($value): string => (string) $value, array_values($provinces))
             )) ?: [];
-=======
->>>>>>> 1ee7e4a (.)
         } catch (Exception $e) {
             Log::error('LocationSelector: Errore nel caricamento province', [
                 'region' => $region,
@@ -302,11 +288,7 @@ class LocationSelector extends Group
     {
         try {
             /** @phpstan-ignore class.notFound */
-<<<<<<< HEAD
             $caps = Comune::query()
-=======
-            return Comune::query()
->>>>>>> 1ee7e4a (.)
                 ->where('regione->codice', $region)
                 ->where('provincia->codice', $province)
                 ->select('cap')
@@ -315,14 +297,11 @@ class LocationSelector extends Group
                 ->get()
                 ->pluck('cap.0', 'cap.0')
                 ->toArray();
-<<<<<<< HEAD
 
-            return array_map(static fn($value): string => (string) $value, array_combine(
-                array_map(static fn($value): string => (string) $value, array_keys($caps)),
-                array_map(static fn($value): string => (string) $value, array_values($caps))
+            return array_map(static fn ($value): string => (string) $value, array_combine(
+                array_map(static fn ($value): string => (string) $value, array_keys($caps)),
+                array_map(static fn ($value): string => (string) $value, array_values($caps))
             )) ?: [];
-=======
->>>>>>> 1ee7e4a (.)
         } catch (Exception $e) {
             Log::error('LocationSelector: Errore nel caricamento CAP', [
                 'region' => $region,
