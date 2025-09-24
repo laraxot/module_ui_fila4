@@ -40,22 +40,5 @@ class GroupColumn extends Column
         // Component initialization logic
     }
 
-    /**
-     * Ensure child columns are set to the same table to avoid
-     * "The column [x] is not mounted to a table".
-     */
-    public function table(?Table $table): static
-    {
-        parent::table($table);
-
-        if ($table !== null) {
-            foreach ($this->schema as $child) {
-                if ($child instanceof Column && $child->getTable() !== $table) {
-                    $child->table($table);
-                }
-            }
-        }
-
-        return $this;
-    }
+   
 }
