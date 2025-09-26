@@ -1,8 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
-
 return [
     'fields' => [
         'link' => [
@@ -51,6 +48,11 @@ return [
         ],
         'view' => [
             'label' => 'view',
+        ],
+    ],
+    'sections' => [
+        'empty' => [
+            'heading' => 'empty',
         ],
     ],
 ];

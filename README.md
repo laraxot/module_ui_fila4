@@ -19,17 +19,55 @@ The Fila3 UI Module provides a wide array of features, including:
 ## 🌟 Key Features
 
 - **Component-Based Architecture**: Easily manage and reuse UI components across your application.
-- **State Management Integration**: Effortlessly connect UI components to your application’s state management.
+- **State Management Integration**: Effortlessly connect UI components to your application's state management.
 - **Dynamic Layouts**: Create flexible layouts that adapt to different screen sizes and orientations.
 - **Animations & Transitions**: Enhance user experience with smooth animations and transitions.
 - **Form Validation**: Simplify user input handling with built-in form validation features.
 - **Localization Support**: Easily implement multiple languages and regional settings.
+- **🎨 Icon System**: Complete SVG icon system with automatic registration and Filament integration.
 
 ## 🚀 Why Choose Fila3 UI?
 
 - **Fast & Efficient**: Built for performance, ensuring quick load times and smooth interactions.
 - **Developer-Friendly**: Intuitive APIs and documentation make integration a breeze.
 - **Community Driven**: Join a thriving community of developers for support and collaboration.
+
+## 🎨 Icon System
+
+The UI Module includes a comprehensive SVG icon system that integrates seamlessly with Blade Icons and Filament:
+
+### Quick Start
+```blade
+{{-- Use any icon with the ui- prefix --}}
+@svg('ui-login')
+@svg('ui-user')
+@svg('ui-settings')
+```
+
+### In Filament Components
+```php
+// Form components
+Forms\Components\TextInput::make('email')
+    ->prefixIcon('ui-login')
+
+// Table columns
+Tables\Columns\TextColumn::make('name')
+    ->icon('ui-user')
+
+// Actions
+Actions\Action::make('delete')
+    ->icon('ui-trash')
+```
+
+### Available Icons
+- `ui-login` - Login/authentication icon
+- `ui-user` - User profile icon
+- `ui-settings` - Settings icon
+- `ui-trash` - Delete/trash icon
+- `ui-edit` - Edit icon
+- And many more...
+
+📚 **Full Documentation**: [Icon System Guide](docs/icon-system.md)
 
 ## 🔧 Installation
 

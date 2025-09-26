@@ -45,4 +45,22 @@ trait TableLayoutTrait
         $sessionKey = "table_layout_{$identifier}";
         Session::forget($sessionKey);
     }
+
+    /**
+     * Ottiene il layout della tabella dalla sessione o restituisce il default.
+     * Metodo di compatibilità con l'interfaccia HasTableLayout.
+     */
+    public function getTableLayout(): TableLayoutEnum
+    {
+        return $this->getCurrentLayout();
+    }
+
+    /**
+     * Imposta il layout della tabella.
+     * Metodo di compatibilità con l'interfaccia HasTableLayout.
+     */
+    public function setTableLayout(TableLayoutEnum $layout): void
+    {
+        $this->saveLayout($layout);
+    }
 }

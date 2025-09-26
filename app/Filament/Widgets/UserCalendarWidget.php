@@ -1,52 +1,54 @@
 <?php
+
 namespace Modules\UI\Filament\Widgets;
 
-
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
-use Illuminate\Support\Str;
-use Modules\Xot\Datas\XotData;
-use App\Filament\Resources\EventResource;
 // use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
 use Filament\Widgets\Widget;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\DateTimePicker;
+use Illuminate\Support\Str;
+use Modules\Xot\Datas\XotData;
 
 class UserCalendarWidget extends Widget
 {
     // use InteractsWithEvents;
+    protected string $view = 'ui::filament.widgets.user-calendar';
+
     public string $type;
 
-    
     public function getActionName(string $function): string
     {
-        $action_suffix=Str::of($function)->studly()->append('Action')->toString();
-        $resource=XotData::make()->getUserResourceClassByType($this->type);
+        $action_suffix = Str::of($function)->studly()->append('Action')->toString();
+        $resource = XotData::make()->getUserResourceClassByType($this->type);
         $model = $resource::getModel();
-        $action=Str::of($model)
+        $action = Str::of($model)
             ->replace('\Models\\', '\Actions\\')
             ->append('\Calendar\\'.$action_suffix)
             ->toString();
+
         return $action;
     }
-    
+
     public function fetchEvents(array $fetchInfo): array
     {
-        $action=$this->getActionName(__FUNCTION__);
+        $action = $this->getActionName(__FUNCTION__);
+
         return app($action)->execute($fetchInfo);
     }
 
     public function getFormSchema(): array
     {
         $action = $this->getActionName(__FUNCTION__);
-        
+
         if (class_exists($action)) {
             return app($action)->execute();
         }
-        
+
         // Fallback schema
         return [
             TextInput::make('title'),
- 
+
             Grid::make()
                 ->schema([
                     DateTimePicker::make('starts_at'),
@@ -55,7 +57,6 @@ class UserCalendarWidget extends Widget
         ];
     }
 
-   
     /*
     protected function modalActions(): array
     {
@@ -71,6 +72,4 @@ class UserCalendarWidget extends Widget
         // TODO: Implementare la logica per la selezione della data
         // dd('test');
     }
-
-    
 }

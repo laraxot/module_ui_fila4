@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Tables\Columns;
 
 use Filament\Tables\Columns\Column;
-use Filament\Tables\Table;
 
 class GroupColumn extends Column
 {
@@ -39,6 +38,4 @@ class GroupColumn extends Column
 
         // Component initialization logic
     }
-
-   
 }

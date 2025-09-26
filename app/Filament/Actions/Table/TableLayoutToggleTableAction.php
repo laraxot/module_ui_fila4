@@ -6,11 +6,11 @@ namespace Modules\UI\Filament\Actions\Table;
 
 use Filament\Actions\Action;
 use Filament\Resources\Pages\ListRecords;
-use Illuminate\Support\Facades\Session;
-use Modules\UI\Enums\TableLayout;
-use Modules\UI\Traits\TableLayoutTrait;
+use Modules\UI\Enums\TableLayoutEnum;
+use Modules\UI\Filament\Actions\Table\TableLayoutTrait;
+use Modules\UI\Filament\Actions\Table\HasTableLayout;
 
-class TableLayoutToggleTableAction extends Action
+class TableLayoutToggleTableAction extends Action implements HasTableLayout
 {
     use TableLayoutTrait;
 
@@ -42,10 +42,6 @@ class TableLayoutToggleTableAction extends Action
         }
     }
 
-    protected function getCurrentLayout(): TableLayout
-    {
-        return $this->getTableLayout();
-    }
 
     public static function getDefaultName(): string
     {
