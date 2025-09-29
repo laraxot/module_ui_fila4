@@ -8,7 +8,7 @@ use Modules\UI\Enums\TableLayoutEnum;
 
 /**
  * Interface HasTableLayout
- * 
+ *
  * Definisce i metodi che devono essere implementati dalle classi
  * che gestiscono il layout delle tabelle.
  */
