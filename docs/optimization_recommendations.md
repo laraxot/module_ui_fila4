@@ -25,14 +25,24 @@
 ### ⚠️ AREE DI MIGLIORAMENTO
 
 #### 1. Riusabilità Path (IMPORTANTE)
+<<<<<<< HEAD
 - **115+ occorrenze hardcoded** di "saluteora" in documentazione
+=======
+- **115+ occorrenze hardcoded** di "<nome progetto>" in documentazione
+- **115+ occorrenze hardcoded** di "<nome progetto>" in documentazione
+>>>>>>> b55470f (.)
 - **Path assoluti** in esempi e guide
 - **Link interni** con riferimenti specifici al progetto
 
 #### 2. Documentazione Eccessiva
 - **README.md**: 407 righe (troppo denso)
 - **Informazioni duplicate** tra sezioni
+<<<<<<< HEAD
 - **Esempi troppo specifici** per SaluteOra
+=======
+- **Esempi troppo specifici** per <nome progetto>
+- **Esempi troppo specifici** per <nome progetto>
+>>>>>>> b55470f (.)
 
 ## 🔧 RACCOMANDAZIONI SPECIFICHE
 
@@ -41,8 +51,15 @@
 #### Pattern di Correzione
 ```php
 // ❌ PROBLEMI ATTUALI (in documentazione)
+<<<<<<< HEAD
 /var/www/html/saluteora/laravel/Modules/UI/
 https://api.saluteora.com/
+=======
+/var/www/html/<nome progetto>/laravel/Modules/UI/
+https://api.<nome progetto>.com/
+/var/www/html/<nome progetto>/laravel/Modules/UI/
+https://api.<nome progetto>.com/
+>>>>>>> b55470f (.)
 
 // ✅ SOLUZIONI
 {{project_path}}/laravel/Modules/UI/
@@ -180,7 +197,12 @@ class ComponentPerformanceMiddleware
 ### Pre-Implementazione
 ```bash
 # Verifica path hardcoded
+<<<<<<< HEAD
 grep -r "saluteora" Modules/UI/docs/ --include="*.md" | wc -l
+=======
+grep -r "<nome progetto>" Modules/UI/docs/ --include="*.md" | wc -l
+grep -r "<nome progetto>" Modules/UI/docs/ --include="*.md" | wc -l
+>>>>>>> b55470f (.)
 
 # Verifica lunghezza README
 wc -l Modules/UI/docs/README.md
