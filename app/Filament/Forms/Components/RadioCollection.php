@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\UI\Filament\Forms\Components;
+namespace Modules\Notify\Filament\Forms\Components;
 
 use Closure;
 use Filament\Forms\Components\Field;
