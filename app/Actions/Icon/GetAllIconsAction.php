@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\UI\Actions\Icon;
 
-use ReflectionClass;
-use Exception;
 use BladeUI\Icons\Factory as IconFactory;
+use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
+use ReflectionClass;
 use Spatie\QueueableAction\QueueableAction;
 
 class GetAllIconsAction
@@ -35,7 +35,7 @@ class GetAllIconsAction
         }
 
         // Verifica che $icons sia un array prima di usare Arr::map()
-        if (!is_array($icons)) {
+        if (! is_array($icons)) {
             return [];
         }
 
@@ -46,18 +46,18 @@ class GetAllIconsAction
             foreach ($set['paths'] as $path) {
                 foreach (File::allFiles($path) as $file) {
                     // Simply ignore files that aren't SVGs
-                    if ('svg' !== $file->getExtension()) {
+                    if ($file->getExtension() !== 'svg') {
                         continue;
                     }
 
                     // $iconName = $this->getIconName($file, parentPath: $path, prefix: $prefix);
                     $iconName = str($file->getPathname())
-                        ->after($path . DIRECTORY_SEPARATOR)
+                        ->after($path.DIRECTORY_SEPARATOR)
                         ->replace(DIRECTORY_SEPARATOR, '.')
                         ->basename('.svg')
                         ->toString();
 
-                    $icons[] = $set['prefix'] . '-' . $iconName;
+                    $icons[] = $set['prefix'].'-'.$iconName;
                 }
             }
             $set['icons'] = $icons;

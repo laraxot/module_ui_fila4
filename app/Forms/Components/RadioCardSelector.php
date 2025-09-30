@@ -22,36 +22,20 @@ class RadioCardSelector extends Field
      */
     protected array|Closure $cards = [];
 
-    /**
-     * @var string|null
-     */
-    protected null|string $sectionTitle = null;
+    protected ?string $sectionTitle = null;
 
-    /**
-     * @var string|null
-     */
-    protected null|string $sectionSubtitle = null;
+    protected ?string $sectionSubtitle = null;
 
-    /**
-     * @var string|null
-     */
-    protected null|string $targetFieldName = null;
+    protected ?string $targetFieldName = null;
 
-    /**
-     * @var string|null
-     */
-    protected null|string $emptyStateTitle = null;
+    protected ?string $emptyStateTitle = null;
 
-    /**
-     * @var string|null
-     */
-    protected null|string $emptyStateDescription = null;
+    protected ?string $emptyStateDescription = null;
 
     /**
      * Imposta le card disponibili per la selezione.
      *
-     * @param array<int, array<string, mixed>>|Closure $cards
-     * @return static
+     * @param  array<int, array<string, mixed>>|Closure  $cards
      */
     public function cards(array|Closure $cards): static
     {
@@ -62,11 +46,8 @@ class RadioCardSelector extends Field
 
     /**
      * Imposta il titolo della sezione.
-     *
-     * @param string|null $title
-     * @return static
      */
-    public function sectionTitle(null|string $title): static
+    public function sectionTitle(?string $title): static
     {
         $this->sectionTitle = $title;
 
@@ -75,11 +56,8 @@ class RadioCardSelector extends Field
 
     /**
      * Imposta il sottotitolo della sezione.
-     *
-     * @param string|null $subtitle
-     * @return static
      */
-    public function sectionSubtitle(null|string $subtitle): static
+    public function sectionSubtitle(?string $subtitle): static
     {
         $this->sectionSubtitle = $subtitle;
 
@@ -88,9 +66,6 @@ class RadioCardSelector extends Field
 
     /**
      * Campo da popolare quando si seleziona una card.
-     *
-     * @param string $fieldName
-     * @return static
      */
     public function populatesField(string $fieldName): static
     {
@@ -101,11 +76,8 @@ class RadioCardSelector extends Field
 
     /**
      * Imposta il titolo dello stato vuoto.
-     *
-     * @param string|null $title
-     * @return static
      */
-    public function emptyStateTitle(null|string $title): static
+    public function emptyStateTitle(?string $title): static
     {
         $this->emptyStateTitle = $title;
 
@@ -114,11 +86,8 @@ class RadioCardSelector extends Field
 
     /**
      * Imposta la descrizione dello stato vuoto.
-     *
-     * @param string|null $description
-     * @return static
      */
-    public function emptyStateDescription(null|string $description): static
+    public function emptyStateDescription(?string $description): static
     {
         $this->emptyStateDescription = $description;
 
@@ -127,8 +96,6 @@ class RadioCardSelector extends Field
 
     /**
      * Ottiene le card per la visualizzazione.
-     *
-     *
      */
     public function getCards(): array
     {
@@ -139,50 +106,40 @@ class RadioCardSelector extends Field
 
     /**
      * Ottiene il titolo della sezione.
-     *
-     * @return string|null
      */
-    public function getSectionTitle(): null|string
+    public function getSectionTitle(): ?string
     {
         return $this->sectionTitle;
     }
 
     /**
      * Ottiene il sottotitolo della sezione.
-     *
-     * @return string|null
      */
-    public function getSectionSubtitle(): null|string
+    public function getSectionSubtitle(): ?string
     {
         return $this->sectionSubtitle;
     }
 
     /**
      * Ottiene il nome del campo target.
-     *
-     * @return string|null
      */
-    public function getTargetFieldName(): null|string
+    public function getTargetFieldName(): ?string
     {
         return $this->targetFieldName;
     }
 
     /**
      * Ottiene il titolo dello stato vuoto.
-     *
-     * @return string|null
      */
-    public function getEmptyStateTitle(): null|string
+    public function getEmptyStateTitle(): ?string
     {
         return $this->emptyStateTitle;
     }
 
     /**
      * Ottiene la descrizione dello stato vuoto.
-     *
-     * @return string|null
      */
-    public function getEmptyStateDescription(): null|string
+    public function getEmptyStateDescription(): ?string
     {
         return $this->emptyStateDescription;
     }

@@ -3,12 +3,11 @@
 declare(strict_types=1);
 
 // app/Rules/OpeningHoursRule.php
+
 namespace Modules\UI\Rules;
 
-use Carbon\Carbon;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Translation\PotentiallyTranslatedString;
 use Modules\UI\Actions\Datetime\GetDaysMappingAction;
 use Modules\Xot\Filament\Traits\TransTrait;
 
@@ -37,7 +36,7 @@ class OpeningHoursRule implements ValidationRule
             /**@phpstan-ignore-next-line */
             $dayHours = $value[$dayKey] ?? [];
 
-            if (!is_array($dayHours)) {
+            if (! is_array($dayHours)) {
                 continue;
             }
 
@@ -97,6 +96,7 @@ class OpeningHoursRule implements ValidationRule
                 'session' => $sessionLabel,
                 'day' => $dayLabel,
             ]));
+
             return;
         }
 
@@ -105,6 +105,7 @@ class OpeningHoursRule implements ValidationRule
                 'session' => $sessionLabel,
                 'day' => $dayLabel,
             ]));
+
             return;
         }
 
@@ -115,6 +116,7 @@ class OpeningHoursRule implements ValidationRule
                     'session' => $sessionLabel,
                     'day' => $dayLabel,
                 ]));
+
                 return;
             }
         }
@@ -123,7 +125,7 @@ class OpeningHoursRule implements ValidationRule
     /**
      * Pulisce il valore dell'orario (rimuove stringhe vuote, spazi, etc.)
      */
-    private function cleanTimeValue(mixed $value): null|string
+    private function cleanTimeValue(mixed $value): ?string
     {
         if ($value === null || $value === '' || $value === '--:--') {
             return null;
@@ -131,6 +133,7 @@ class OpeningHoursRule implements ValidationRule
 
         if (is_string($value)) {
             $cleaned = trim($value);
+
             return $cleaned === '' ? null : $cleaned;
         }
 

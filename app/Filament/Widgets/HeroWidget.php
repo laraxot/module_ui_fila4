@@ -18,7 +18,7 @@ class HeroWidget extends BaseWidget
 
     public string $icon = '';
 
-    protected null|string $pollingInterval = null;
+    protected ?string $pollingInterval = null;
 
     public function getColumns(): int
     {

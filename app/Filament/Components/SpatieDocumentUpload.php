@@ -18,9 +18,8 @@ class SpatieDocumentUpload
     /**
      * Configurazione base per upload documenti con collection specifica.
      *
-     * @param string $name Nome del campo
-     * @param string $collection Nome della media collection
-     * @return SpatieMediaLibraryFileUpload
+     * @param  string  $name  Nome del campo
+     * @param  string  $collection  Nome della media collection
      */
     public static function make(string $name, string $collection): SpatieMediaLibraryFileUpload
     {
@@ -41,8 +40,6 @@ class SpatieDocumentUpload
      *
      * Collection: 'documenti_identita'
      * Security: Private disk, audit trail
-     *
-     * @return SpatieMediaLibraryFileUpload
      */
     public static function forIdentityDocument(): SpatieMediaLibraryFileUpload
     {
@@ -57,8 +54,6 @@ class SpatieDocumentUpload
      *
      * Collection: 'certificazioni_isee'
      * Formats: Solo PDF per documenti ufficiali
-     *
-     * @return SpatieMediaLibraryFileUpload
      */
     public static function forIseeDocument(): SpatieMediaLibraryFileUpload
     {
@@ -72,8 +67,6 @@ class SpatieDocumentUpload
      *
      * Collection: 'certificati_gravidanza'
      * GDPR: Retention policy automatica
-     *
-     * @return SpatieMediaLibraryFileUpload
      */
     public static function forPregnancyDocument(): SpatieMediaLibraryFileUpload
     {
@@ -87,8 +80,6 @@ class SpatieDocumentUpload
      *
      * Collection: 'certificazioni_professionali'
      * Multiple: Supporta caricamento multiplo con riordinamento
-     *
-     * @return SpatieMediaLibraryFileUpload
      */
     public static function forCertifications(): SpatieMediaLibraryFileUpload
     {
@@ -103,11 +94,10 @@ class SpatieDocumentUpload
     /**
      * Upload documento generico con collection personalizzata.
      *
-     * @param string $name Nome del campo
-     * @param string $collection Nome della collection
-     * @param array<string> $mimeTypes Tipi MIME accettati
-     * @param int $maxSize Dimensione massima in KB
-     * @return SpatieMediaLibraryFileUpload
+     * @param  string  $name  Nome del campo
+     * @param  string  $collection  Nome della collection
+     * @param  array<string>  $mimeTypes  Tipi MIME accettati
+     * @param  int  $maxSize  Dimensione massima in KB
      */
     public static function custom(
         string $name,

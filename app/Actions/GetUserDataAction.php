@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 namespace Modules\UI\Actions;
 
 use Illuminate\Support\Facades\Auth;
@@ -13,11 +12,11 @@ class GetUserDataAction
 {
     use QueueableAction;
 
-    public function execute(): null|UserData
+    public function execute(): ?UserData
     {
         $user = Auth::user();
 
-        if (!$user) {
+        if (! $user) {
             return null;
         }
 

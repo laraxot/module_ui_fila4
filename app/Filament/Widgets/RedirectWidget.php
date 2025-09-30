@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
-use Override;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Override;
 
 /**
  * RedirectWidget - Widget per gestire redirect verso URL specifici.

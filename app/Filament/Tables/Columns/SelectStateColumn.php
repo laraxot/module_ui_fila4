@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Tables\Columns;
 
 use Exception;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\SelectColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -23,19 +21,19 @@ class SelectStateColumn extends SelectColumn
             $name = $this->getName();
             if ($state === null) {
                 $states = Arr::wrap($record->getDefaultStateFor($name));
+
                 return array_combine($states, $states);
             }
             try {
-                //$states=$record->getAttribute($name)->transitionableStates();
+                // $states=$record->getAttribute($name)->transitionableStates();
                 $states = $state->transitionableStates();
             } catch (Exception $e) {
                 $states = $record->getStatesFor($name)->toArray();
 
-
             }
             $states = [$state::$name, ...$states];
             $states = array_combine($states, $states);
-            //dddx(['state'=>$state, 'state1'=>$record->getAttribute($name),'record'=>$record]);
+            // dddx(['state'=>$state, 'state1'=>$record->getAttribute($name),'record'=>$record]);
 
             return $states;
         });

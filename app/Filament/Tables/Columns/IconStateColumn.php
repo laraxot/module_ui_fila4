@@ -4,15 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
-use Filament\Actions\Action;
-use Filament\Schemas\Components\Utilities\Get;
 use Exception;
+use Filament\Actions\Action;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
+use Filament\Schemas\Components\Utilities\Get;
 use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\SelectColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -25,11 +23,11 @@ class IconStateColumn extends IconColumn
     protected function setUp(): void
     {
         parent::setUp();
-        //$this->getStateUsing(fn() => true); // the column requires a state to be passed to it
-        $this->icon(fn($state): null|string => $state?->icon());
-        $this->color(fn($state): null|string => $state?->color());
-        $this->tooltip(fn($state): null|string => $state?->label());
-        //$this->label('aaa');
+        // $this->getStateUsing(fn() => true); // the column requires a state to be passed to it
+        $this->icon(fn ($state): ?string => $state?->icon());
+        $this->color(fn ($state): ?string => $state?->color());
+        $this->tooltip(fn ($state): ?string => $state?->label());
+        // $this->label('aaa');
 
         $this->action(
             Action::make('change-state')
@@ -40,6 +38,7 @@ class IconStateColumn extends IconColumn
                             $state = $record->getAttribute($name);
                             if ($state === null) {
                                 $states = Arr::wrap($record->getDefaultStateFor($name));
+
                                 return array_combine($states, $states);
                             }
                             Assert::isInstanceOf($state, State::class);
@@ -49,15 +48,16 @@ class IconStateColumn extends IconColumn
                             } catch (Exception $e) {
                                 $states = $record->getStatesFor($name)->toArray();
 
-
                             }
                             /** @phpstan-ignore-next-line */
                             $states = Arr::mapWithKeys($states, function ($state) use ($record) {
                                 $model = Str::of(class_basename($record))->slug()->toString();
                                 /** @phpstan-ignore binaryOp.invalid */
-                                Assert::string($label = __('pub_theme::' . $model . '_states.' . $state . '.label'));
+                                Assert::string($label = __('pub_theme::'.$model.'_states.'.$state.'.label'));
+
                                 return [$state => $label];
                             });
+
                             return $states;
                         })
                         ->required()
@@ -69,25 +69,26 @@ class IconStateColumn extends IconColumn
                         $states = $state::getStateMapping();
                         /** @var class-string<State> $newStateClass */
                         $newStateClass = Arr::get($states, (string) $newState);
-                        if (!is_string($newStateClass) || !class_exists($newStateClass)) {
+                        if (! is_string($newStateClass) || ! class_exists($newStateClass)) {
                             return false;
                         }
                         $newStateInstance = new $newStateClass($record);
+
                         return method_exists($newStateInstance, 'isMessageRequired')
                             ? $newStateInstance->isMessageRequired()
                             : false;
                     }),
                 ])
-                ->fillForm(fn($record) => [
+                ->fillForm(fn ($record) => [
                     'state' => $record->state::$name,
                 ])
                 ->action(function ($record, $data) {
                     $state = $data['state'];
                     $model = Str::of(class_basename($record))->slug()->toString();
-                    Assert::string($label = __('pub_theme::' . $model . '_states.' . $state . '.label'));
+                    Assert::string($label = __('pub_theme::'.$model.'_states.'.$state.'.label'));
                     $record->state->transitionTo($data['state'], $data['message']);
                     Notification::make()
-                        ->title('Stato aggiornato a ' . $label)
+                        ->title('Stato aggiornato a '.$label)
                         ->success()
                         ->send();
                 }),

@@ -6,14 +6,8 @@ namespace Modules\UI\Filament\Tables\Columns;
 
 use Exception;
 use Filament\Actions\Action;
-use Closure;
 use Filament\Notifications\Notification;
-use Filament\Support\Enums\ActionSize;
-use Filament\Support\Enums\FontWeight;
 use Filament\Tables\Columns\Column;
-use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\Layout\Split;
-use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Model;
 use Livewire\Attributes\On;
 use Modules\Xot\Contracts\StateContract;
@@ -28,21 +22,20 @@ use Webmozart\Assert\Assert;
  * - Smooth animations and hover effects
  * - Proper error handling and notifications
  * - Mobile-friendly design
- *
- * @package Modules\UI\Filament\Tables\Columns
  */
 class IconStateSplitColumn extends Column
 {
     protected string $view = 'ui::filament.tables.columns.icon-state-split';
+
     protected string $stateClass = '';
+
     protected string $modelClass = '';
 
     /**
      * Configure the state class and model class for this column
      *
-     * @param string $stateClass The state machine class (e.g., AppointmentState::class)
-     * @param string $modelClass The model class (e.g., Appointment::class)
-     * @return static
+     * @param  string  $stateClass  The state machine class (e.g., AppointmentState::class)
+     * @param  string  $modelClass  The model class (e.g., Appointment::class)
      */
     public function stateClass(string $stateClass, string $modelClass): static
     {
@@ -82,11 +75,11 @@ class IconStateSplitColumn extends Column
     {
         $record = $this->modelClass::find($recordId);
 
-        if (!$record) {
+        if (! $record) {
             return false;
         }
 
-        if (!$record->state) {
+        if (! $record->state) {
             return false;
         }
 
@@ -127,7 +120,7 @@ class IconStateSplitColumn extends Column
                 $recordId = $record && isset($record->id) ? ((string) $record->id) : 'N/A';
                 Notification::make()
                     ->title('Prova funziona!')
-                    ->body('Record ID: ' . $recordId)
+                    ->body('Record ID: '.$recordId)
                     ->success()
                     ->send();
             });
@@ -142,7 +135,7 @@ class IconStateSplitColumn extends Column
                     ->icon($state['icon'])
                     ->color($state['color'])
                     ->label($state['label'])
-                    ->action(fn() => $this->transitionState($recordId, $state['class']::class));
+                    ->action(fn () => $this->transitionState($recordId, $state['class']::class));
             }
         }
 
@@ -168,7 +161,7 @@ class IconStateSplitColumn extends Column
         try {
             $record = $this->modelClass::find($recordId);
 
-            if (!$record) {
+            if (! $record) {
                 throw new Exception('Record non trovato');
             }
 
@@ -183,7 +176,7 @@ class IconStateSplitColumn extends Column
         } catch (Exception $e) {
             Notification::make()
                 ->title('Errore Transizione')
-                ->body('Si è verificato un errore: ' . $e->getMessage())
+                ->body('Si è verificato un errore: '.$e->getMessage())
                 ->danger()
                 ->send();
         }

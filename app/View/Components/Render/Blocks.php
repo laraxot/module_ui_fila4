@@ -24,8 +24,8 @@ class Blocks extends Component
     public array $blocks = [];
 
     public function __construct(
-        null|array $blocks = [],
-        public null|Model $model = null,
+        ?array $blocks = [],
+        public ?Model $model = null,
         public string $tpl = 'v1',
     ) {
         if (is_array($blocks)) {

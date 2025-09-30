@@ -26,7 +26,7 @@ class GetAllBlocksAction
     {
         Assert::string($relativePath = config('modules.paths.generator.model.path'));
 
-        $files = File::glob(base_path('Modules') . '/*/' . $relativePath . '/../Filament/Blocks/*.php');
+        $files = File::glob(base_path('Modules').'/*/'.$relativePath.'/../Filament/Blocks/*.php');
 
         $blocks = Arr::map($files, function (string $path) {
             $path = realpath($path);

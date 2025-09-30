@@ -4,13 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Blocks;
 
-use Override;
-use Filament\Forms\Components\Builder\Block;
-use Filament\Forms\Components\Forms;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
-use Modules\Xot\Filament\Traits\TransTrait;
+use Override;
 
 class Navigation extends XotBaseBlock
 {
