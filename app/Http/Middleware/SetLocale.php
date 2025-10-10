@@ -20,7 +20,11 @@ class SetLocale
     {
         // Recupera la lingua dalla sessione o usa quella predefinita
         $locale = Session::get('locale', config('app.locale'));
+<<<<<<< HEAD
         if (!is_string($locale)) {
+=======
+        if(!is_string($locale)){
+>>>>>>> 727968c (.)
             $locale = Config::string('app.locale');
         }
         // Imposta la lingua
