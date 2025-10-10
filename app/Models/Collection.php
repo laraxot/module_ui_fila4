@@ -10,6 +10,7 @@ use Modules\Xot\Models\BaseModel;
  * Collection model for UI module.
  * FormBuilder module not available - extending from XotBaseModel instead.
  */
+/** */
 class Collection extends BaseModel
 {
     protected $table = 'collections';

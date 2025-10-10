@@ -19,13 +19,20 @@ class Image
                 TextInput::make('url'),
                 Select::make('ratio')
                     ->options(static::getRatios())
-                    ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
+                    ->afterStateHydrated(static function ($state, $set): void {
+                        if (is_callable($set) && ! $state) {
+                            $set('ratio', '4-3');
+                        }
+                    }),
                 TextInput::make('alt')->columnSpanFull(),
                 TextInput::make('caption')->columnSpanFull(),
             ])
             ->columns($context === 'form' ? 2 : 1);
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getRatios(): array
     {
         return [
@@ -44,6 +51,9 @@ class Image
         };
     }
 
+    /**
+     * @return array<int, \Filament\Forms\Components\FileUpload|\Filament\Forms\Components\TextInput>
+     */
     public static function getFormSchema(): array
     {
         return [

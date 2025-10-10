@@ -24,7 +24,7 @@ class AddressField extends Field
     {
         parent::setUp();
 
-        $this->afterStateHydrated(function (AddressField $_component, ?Model $record) {
+        $this->afterStateHydrated(function (AddressField $_component, ?Model $record): void {
             $data = [
                 'country' => null,
                 'street' => null,
@@ -64,10 +64,15 @@ class AddressField extends Field
         if ($relationship === null) {
             return;
         }
-        if ($address = $relationship->first()) {
-            $address->update($state);
+        if (is_object($relationship) && method_exists($relationship, 'first')) {
+            $address = $relationship->first();
+            if (is_object($address) && method_exists($address, 'update')) {
+                $address->update($state);
+            }
         } else {
-            $relationship->updateOrCreate($state);
+            if (is_object($relationship) && method_exists($relationship, 'updateOrCreate')) {
+                $relationship->updateOrCreate($state);
+            }
         }
 
         if ($record instanceof Model) {
@@ -75,6 +80,9 @@ class AddressField extends Field
         }
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getDefaultChildComponents(?string $key = null): array
     {
         return [

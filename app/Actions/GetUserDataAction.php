@@ -20,14 +20,24 @@ class GetUserDataAction
             return null;
         }
 
+        $role = $user->role ?? null;
+        if ($role !== null && ! is_string($role)) {
+            $role = null;
+        }
+
+        $settings = $user->settings ?? [];
+        if (! is_array($settings)) {
+            $settings = [];
+        }
+
         return new UserData(
             id: (int) $user->id,
             name: $user->name ?? '',
             email: $user->email ?? '',
             avatar: $user->avatar ?? null,
-            role: $user->role ?? null,
+            role: $role,
             permissions: $user->permissions->toArray() ?? [],
-            settings: $user->settings ?? [],
+            settings: $settings,
         );
     }
 }

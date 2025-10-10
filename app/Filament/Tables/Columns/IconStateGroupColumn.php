@@ -28,15 +28,24 @@ class IconStateGroupColumn extends ColumnGroup
     {
         $this->stateClass = $stateClass;
         $this->modelClass = $modelClass;
-        $states = $this->stateClass::getStateMapping()->toArray();
+        if (is_object($this->stateClass) && method_exists($this->stateClass, 'getStateMapping')) {
+            $stateMapping = $this->stateClass::getStateMapping();
+            if (is_object($stateMapping) && method_exists($stateMapping, 'toArray')) {
+                $states = $stateMapping->toArray();
+            } else {
+                $states = [];
+            }
+        } else {
+            $states = [];
+        }
         $columns = [];
 
-        foreach ($states as $state => $stateClass) {
+        foreach ((array) $states as $state => $stateClass) {
             $stateInstance = new $stateClass($this->modelClass);
             Assert::isInstanceOf($stateInstance, StateContract::class);
-            $this->data[$state.'-visible'] = true;
+            $this->data[(string) $state.'-visible'] = true;
 
-            $column = IconColumn::make($state.'-icon')
+            $column = IconColumn::make((string) $state.'-icon')
                 ->icon($stateInstance->icon(...))
                 ->color($stateInstance->color(...))
                 ->tooltip($stateInstance->label(...))
@@ -47,22 +56,31 @@ class IconStateGroupColumn extends ColumnGroup
                 ->extraCellAttributes(['class' => 'px-1 py-1'])
                 ->label('')
                 ->default(function ($record, Set $_set) use ($stateClass, $state) {
-                    $res = $record->state->canTransitionTo($stateClass);
-                    $this->data[$state.'-visible'] = $res;
+                    if (is_object($record) && property_exists($record, 'state') && is_object($record->state) && method_exists($record->state, 'canTransitionTo')) {
+                        $res = $record->state->canTransitionTo($stateClass);
+                        $this->data[(string) $state.'-visible'] = $res;
+                    } else {
+                        $res = false;
+                        $this->data[(string) $state.'-visible'] = false;
+                    }
                     if (! $res) {
                         return;
                     }
 
                     return true;
                 });
-            $column->action(Action::make($state.'-action')
+            $column->action(Action::make((string) $state.'-action')
                 ->requiresConfirmation()
                 ->modalHeading(fn ($_record) => $stateInstance->modalHeading())
                 ->modalDescription(fn ($_record) => $stateInstance->modalDescription())
                 ->schema(fn ($_record) => $stateInstance->modalFormSchema())
                 ->fillForm($stateInstance->modalFillFormByRecord(...))
-                ->action(function ($record, $data) use ($stateInstance) {
-                    $stateInstance->modalActionByRecord($record, $data);
+                ->action(function ($record, $data) use ($stateInstance): void {
+                    if (is_array($data) && $record instanceof \Illuminate\Database\Eloquent\Model) {
+                        /** @var array<string, mixed> $typedData */
+                        $typedData = $data;
+                        $stateInstance->modalActionByRecord($record, $typedData);
+                    }
 
                     // $this->invalidateCache();
                     // $this->loadAppointments();
@@ -71,7 +89,7 @@ class IconStateGroupColumn extends ColumnGroup
                     //    'message' => __('ui::messages.action_completed'),
                     // ]);
                 }));
-            $column->visible($this->data[$state.'-visible']);
+            $column->visible((bool) ($this->data[(string) $state.'-visible'] ?? false));
             $columns[] = $column;
         }
 

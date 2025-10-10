@@ -29,7 +29,11 @@ class Title // extends XotBaseBlock
                         'h3' => 'h3',
                         'h4' => 'h4',
                     ])
-                    ->afterStateHydrated(static fn ($state, $set) => $state || $set('level', 'h2')),
+                    ->afterStateHydrated(static function ($state, $set): void {
+                        if (is_callable($set) && ! $state) {
+                            $set('level', 'h2');
+                        }
+                    }),
                 Select::make('view')->options($options),
             ])
             ->columns($context === 'form' ? 2 : 1);

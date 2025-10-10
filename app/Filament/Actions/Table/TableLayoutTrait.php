@@ -21,7 +21,11 @@ trait TableLayoutTrait
         $sessionKey = "table_layout_{$identifier}";
         $layout = Session::get($sessionKey);
 
-        if ($layout && in_array($layout, TableLayoutEnum::cases(), strict: true)) {
+        if ($layout instanceof TableLayoutEnum) {
+            return $layout;
+        }
+
+        if (is_string($layout) || is_int($layout)) {
             return TableLayoutEnum::from($layout);
         }
 

@@ -20,7 +20,12 @@ class SelectState extends Select
             $name = $this->getName();
             if (is_null($record)) {
                 $model = $this->getModel();
-                $states = Arr::wrap(app($model)->getDefaultStateFor($name));
+                $modelInstance = app($model);
+                if (is_object($modelInstance) && method_exists($modelInstance, 'getDefaultStateFor')) {
+                    $states = Arr::wrap($modelInstance->getDefaultStateFor($name));
+                } else {
+                    $states = [];
+                }
 
                 /**
                  * @var array<int|string>

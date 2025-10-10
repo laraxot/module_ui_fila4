@@ -10,6 +10,7 @@ use Modules\Xot\Models\BaseModel;
  * FieldOption model for UI module.
  * FormBuilder module not available - extending from XotBaseModel instead.
  */
+/** */
 class FieldOption extends BaseModel
 {
     protected $table = 'field_options';

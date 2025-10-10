@@ -10,6 +10,7 @@ use Modules\Xot\Models\BaseModel;
  * Category model for UI module.
  * FormBuilder module not available - extending from XotBaseModel instead.
  */
+/** */
 class Category extends BaseModel
 {
     protected $table = 'categories';

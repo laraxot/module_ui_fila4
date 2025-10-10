@@ -35,6 +35,7 @@ class RadioBadge extends Radio
         Assert::isInstanceOf($enumClass, BackedEnum::class);
         Assert::implementsInterface($enumClass, HasColor::class);
         Assert::implementsInterface($enumClass, HasIcon::class);
+        /** @var (BackedEnum&HasColor&HasIcon)|null $res */
         $res = $enumClass::tryFrom($value);
 
         return $res;

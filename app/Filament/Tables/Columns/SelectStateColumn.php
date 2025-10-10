@@ -22,26 +22,40 @@ class SelectStateColumn extends SelectColumn
             if ($state === null) {
                 $states = Arr::wrap($record->getDefaultStateFor($name));
 
-                return array_combine($states, $states);
+                /** @var array<int|string, mixed> $statesArray */
+                $statesArray = (array) $states;
+                return array_combine(array_keys($statesArray), array_values($statesArray));
             }
             try {
                 // $states=$record->getAttribute($name)->transitionableStates();
-                $states = $state->transitionableStates();
+                if (is_object($state) && method_exists($state, 'transitionableStates')) {
+                    $states = $state->transitionableStates();
+                } else {
+                    $states = $record->getStatesFor($name)->toArray();
+                }
             } catch (Exception $e) {
                 $states = $record->getStatesFor($name)->toArray();
 
             }
-            $states = [$state::$name, ...$states];
-            $states = array_combine($states, $states);
+            if (is_object($state) && property_exists($state, 'name') && is_string($state::$name)) {
+                $states = [$state::$name, ...(array) $states];
+            }
+            /** @var array<int|string, mixed> $statesArray */
+            $statesArray = (array) $states;
+            $states = array_combine(array_keys($statesArray), array_values($statesArray));
             // dddx(['state'=>$state, 'state1'=>$record->getAttribute($name),'record'=>$record]);
 
             return $states;
         });
 
-        $this->beforeStateUpdated(function (Model&HasStatesContract $record, $state) {
+        $this->beforeStateUpdated(function ($record, $state): void {
             $message = '';
-            /** @phpstan-ignore property.notFound */
-            $record->state->transitionTo($state, $message);
+            if (is_object($record) && method_exists($record, 'getState')) {
+                $recordState = $record->getState();
+                if (is_object($recordState) && method_exists($recordState, 'transitionTo')) {
+                    $recordState->transitionTo($state, $message);
+                }
+            }
         });
     }
 }

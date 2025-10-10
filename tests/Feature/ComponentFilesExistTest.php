@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-describe('Component Files Existence Tests', function () {
-    test('reorganized component files exist in correct locations', function () {
+describe('Component Files Existence Tests', function (): void {
+    test('reorganized component files exist in correct locations', function (): void {
         $themeBasePath = '/var/www/html/_bases/base_fixcity_fila3_mono/laravel/Themes/Sixteen/resources/views/components';
 
         // Test forms components exist
@@ -70,7 +70,7 @@ describe('Component Files Existence Tests', function () {
         expect(file_exists($themeBasePath.'/utilities/ui/tabs.blade.php'))->toBeTrue();
     });
 
-    test('no old component files remain in root components directory', function () {
+    test('no old component files remain in root components directory', function (): void {
         $themeBasePath = '/var/www/html/_bases/base_fixcity_fila3_mono/laravel/Themes/Sixteen/resources/views/components';
 
         // These should NOT exist in the root anymore (they should be in subdirectories)
@@ -81,7 +81,7 @@ describe('Component Files Existence Tests', function () {
         expect(file_exists($themeBasePath.'/dropdown.blade.php'))->toBeFalse();
     });
 
-    test('component files contain proper blade syntax', function () {
+    test('component files contain proper blade syntax', function (): void {
         $themeBasePath = '/var/www/html/_bases/base_fixcity_fila3_mono/laravel/Themes/Sixteen/resources/views/components';
 
         // Test a few key components have proper Blade syntax
@@ -95,7 +95,7 @@ describe('Component Files Existence Tests', function () {
         expect($cardContent)->toContain('@props');
     });
 
-    test('directory structure is properly organized', function () {
+    test('directory structure is properly organized', function (): void {
         $themeBasePath = '/var/www/html/_bases/base_fixcity_fila3_mono/laravel/Themes/Sixteen/resources/views/components';
 
         // Test that directories exist
