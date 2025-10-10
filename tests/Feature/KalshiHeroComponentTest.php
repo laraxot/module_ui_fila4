@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\View;
 use Tests\TestCase;
 =======
@@ -12,6 +13,10 @@ namespace Modules\UI\Tests\Feature;
 
 use Illuminate\Support\Facades\View;
 >>>>>>> 727968c (.)
+=======
+use Illuminate\Support\Facades\View;
+use Tests\TestCase;
+>>>>>>> ef3c5fa (.)
 
 uses(TestCase::class);
 
@@ -50,9 +55,13 @@ test('kalshi hero shows statistics when enabled', function () {
         'show_stats' => true,
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     $html = $view->render();
     expect($html)->toContain('250+');
     expect($html)->toContain('Active Markets');
@@ -69,9 +78,13 @@ test('kalshi hero hides statistics when disabled', function () {
         'show_stats' => false,
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     $html = $view->render();
     expect($html)->not()->toContain('Active Markets');
     expect($html)->not()->toContain('Total Predictions');
@@ -82,9 +95,13 @@ test('kalshi hero shows categories when enabled', function () {
         'show_categories' => true,
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     $html = $view->render();
     expect($html)->toContain('Popular Categories');
     expect($html)->toContain('Politics');
@@ -100,9 +117,13 @@ test('kalshi hero hides categories when disabled', function () {
         'show_categories' => false,
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     $html = $view->render();
     expect($html)->not()->toContain('Popular Categories');
 });
@@ -117,9 +138,13 @@ test('kalshi hero supports custom props', function () {
         'secondary_cta_link' => '/about',
     ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     $html = $view->render();
     expect($html)->toContain('Custom Market Title');
     expect($html)->toContain('Custom trading platform description');
@@ -132,9 +157,13 @@ test('kalshi hero supports custom props', function () {
 test('kalshi hero has proper css classes and styling', function () {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     $html = $view->render();
     expect($html)->toContain('bg-gradient-to-br from-slate-900');
     expect($html)->toContain('animate-gradient-x');
@@ -145,9 +174,13 @@ test('kalshi hero has proper css classes and styling', function () {
 test('kalshi hero includes required css animations', function () {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     $html = $view->render();
     expect($html)->toContain('@keyframes gradient-x');
     expect($html)->toContain('.animate-gradient-x');
@@ -157,9 +190,13 @@ test('kalshi hero includes required css animations', function () {
 test('kalshi hero has responsive design classes', function () {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     $html = $view->render();
     expect($html)->toContain('md:text-7xl lg:text-8xl');
     expect($html)->toContain('grid-cols-2 md:grid-cols-4');

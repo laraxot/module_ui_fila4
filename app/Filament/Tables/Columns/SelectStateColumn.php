@@ -6,6 +6,9 @@ namespace Modules\UI\Filament\Tables\Columns;
 
 use Exception;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\SelectColumn;
@@ -36,6 +39,7 @@ class SelectStateColumn extends SelectColumn
             }
             $states = [$state::$name, ...$states];
             $states = array_combine($states, $states);
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Arr;
 use Spatie\ModelStates\State;
@@ -68,18 +72,24 @@ class SelectStateColumn extends SelectColumn
             $states=[$state::$name, ...$states];
             $states=array_combine($states, $states);
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
             //dddx(['state'=>$state, 'state1'=>$record->getAttribute($name),'record'=>$record]);
 
             return $states;
         });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
         $this->beforeStateUpdated(function (Model&HasStatesContract $record, $state) {
             $message = '';
             /** @phpstan-ignore property.notFound */
             $record->state->transitionTo($state, $message);
         });
     }
+<<<<<<< HEAD
 =======
 
         $this->beforeStateUpdated(function (Model&HasStatesContract $record, $state) {
@@ -95,4 +105,6 @@ class SelectStateColumn extends SelectColumn
 
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 }
