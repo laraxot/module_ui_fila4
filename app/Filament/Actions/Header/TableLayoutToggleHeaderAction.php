@@ -25,45 +25,12 @@ class TableLayoutToggleHeaderAction extends Action
             // ->tooltip(trans('setting::database_connection.actions.database-backup.tooltip'))
             // ->icon(trans('setting::database_connection.actions.database-backup.icon'))
             // ->icon($this->list_icon)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
             ->icon(fn($livewire) => 'list' === $livewire->layoutView ? $this->list_icon : $this->grid_icon)
             ->action(function ($livewire) {
                 if ($livewire !== null) {
                     $livewire->layoutView = 'grid' === $livewire->layoutView ? 'list' : 'grid';
-<<<<<<< HEAD
                 }
             });
-=======
-<<<<<<< HEAD
-                }
-            });
-=======
-=======
->>>>>>> origin/develop
-            ->icon(fn ($livewire) => 'list' === $livewire->layoutView ? $this->list_icon : $this->grid_icon)
-            ->action(
-                function ($livewire) {
-                    if ($livewire !== null) {
-                        $livewire->layoutView = ('grid' === $livewire->layoutView ? 'list' : 'grid');
-                    }
-                }
-            );
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-                }
-            });
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
     }
 
     public static function getDefaultName(): string
