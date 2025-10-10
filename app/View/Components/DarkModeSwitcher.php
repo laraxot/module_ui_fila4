@@ -25,15 +25,7 @@ class DarkModeSwitcher extends Component
      */
     public function __construct()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->widget = new DarkModeSwitcherWidget();
-=======
-        $this->widget = new DarkModeSwitcherWidget;
->>>>>>> 727968c (.)
-=======
-        $this->widget = new DarkModeSwitcherWidget();
->>>>>>> ef3c5fa (.)
     }
 
     /**
@@ -42,28 +34,12 @@ class DarkModeSwitcher extends Component
     public function render(): View
     {
         // Verifica se il widget può essere visualizzato
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!DarkModeSwitcherWidget::canView()) {
-=======
-        if (! DarkModeSwitcherWidget::canView()) {
->>>>>>> 727968c (.)
-=======
-        if (!DarkModeSwitcherWidget::canView()) {
->>>>>>> ef3c5fa (.)
             return view('ui::components.empty');
         }
 
         // Ottiene i dati dal widget
-<<<<<<< HEAD
-<<<<<<< HEAD
         $viewData = ['darkMode' => $this->widget->darkMode];
-=======
-        $viewData = $this->widget->getViewData();
->>>>>>> 727968c (.)
-=======
-        $viewData = ['darkMode' => $this->widget->darkMode];
->>>>>>> ef3c5fa (.)
 
         return view('ui::filament.widgets.dark-mode-switcher', $viewData);
     }

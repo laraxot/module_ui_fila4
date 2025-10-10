@@ -10,10 +10,6 @@ use Modules\UI\Models\Theme;
 use Modules\UI\Models\Asset;
 
 /*
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
  * |--------------------------------------------------------------------------
  * | Test Case
  * |--------------------------------------------------------------------------
@@ -51,56 +47,6 @@ expect()->extend('toBeAsset', fn() => $this->toBeInstanceOf(Asset::class));
  * | Queste funzioni saranno disponibili in tutti i test.
  * |
  */
-<<<<<<< HEAD
-=======
-|--------------------------------------------------------------------------
-| Test Case
-|--------------------------------------------------------------------------
-|
-| Il TestCase di default per tutti i test del modulo UI.
-| Estende il TestCase specifico del modulo che fornisce il setup necessario.
-|
-*/
-
-uses(TestCase::class)
-    ->uses(DatabaseTransactions::class)
-    ->in('Feature', 'Unit');
-
-/*
-|--------------------------------------------------------------------------
-| Expectations
-|--------------------------------------------------------------------------
-|
-| Aspettative globali per il modulo UI.
-| Quando definisci expectation globali, saranno disponibili
-| in tutti i test del modulo.
-|
-*/
-
-expect()->extend('toBeComponent', function () {
-    return $this->toBeInstanceOf(Component::class);
-});
-
-expect()->extend('toBeTheme', function () {
-    return $this->toBeInstanceOf(Theme::class);
-});
-
-expect()->extend('toBeAsset', function () {
-    return $this->toBeInstanceOf(Asset::class);
-});
-
-/*
-|--------------------------------------------------------------------------
-| Functions
-|--------------------------------------------------------------------------
-|
-| Funzioni helper globali per i test del modulo UI.
-| Queste funzioni saranno disponibili in tutti i test.
-|
-*/
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 
 function createTheme(array $attributes = []): Theme
 {
