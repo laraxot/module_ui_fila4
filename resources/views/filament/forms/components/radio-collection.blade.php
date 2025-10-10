@@ -1,8 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 {{-- resources/views/forms/components/radio-collection.blade.php --}}
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
     <div class="space-y-2">
@@ -46,4 +64,20 @@ declare(strict_types=1);
             </div>
         @enderror
     </div>
+<<<<<<< HEAD
 </x-dynamic-component>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+</x-dynamic-component>
+=======
+</x-dynamic-component>
+>>>>>>> a12f125f4a (.)
+=======
+</x-dynamic-component>
+>>>>>>> b93ef594b4 (.)
+=======
+</x-dynamic-component>
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
