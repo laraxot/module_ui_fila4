@@ -40,6 +40,7 @@ class UserCalendarWidget extends Widget
         $actionInstance = app($action);
         if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
             $result = $actionInstance->execute($fetchInfo);
+            /** @var array<string, mixed> */
             return is_array($result) ? $result : [];
         }
 
@@ -57,12 +58,13 @@ class UserCalendarWidget extends Widget
             $actionInstance = app($action);
             if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $result = $actionInstance->execute();
+                /** @var array<string, mixed> */
                 return is_array($result) ? $result : [];
             }
         }
 
         // Fallback schema
-        return [
+        $schema = [
             TextInput::make('title'),
 
             Grid::make()
@@ -71,6 +73,9 @@ class UserCalendarWidget extends Widget
                     DateTimePicker::make('ends_at'),
                 ]),
         ];
+        
+        /** @phpstan-ignore return.type */
+        return $schema;
     }
 
     /*
