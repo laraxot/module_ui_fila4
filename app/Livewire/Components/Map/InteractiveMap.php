@@ -6,8 +6,8 @@ namespace Modules\UI\App\Livewire\Components\Map;
 
 use Exception;
 use Livewire\Component;
-use Modules\Geo\App\Services\GeocodingService;
-use Modules\Geo\App\Services\MapService;
+use Modules\Geo\Services\GeocodingService;
+use Modules\Geo\Services\MapService;
 use Webmozart\Assert\Assert;
 
 /**
