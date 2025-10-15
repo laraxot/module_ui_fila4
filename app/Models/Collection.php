@@ -10,7 +10,15 @@ use Modules\Xot\Models\BaseModel;
  * Collection model for UI module.
  * FormBuilder module not available - extending from XotBaseModel instead.
  */
-/** */
+/**
+ * @property-read \Modules\Fixcity\Models\Profile|null $creator
+ * @property-read \Modules\Fixcity\Models\Profile|null $updater
+ * @method static \Modules\UI\Database\Factories\CollectionFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Collection newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Collection newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Collection query()
+ * @mixin \Eloquent
+ */
 class Collection extends BaseModel
 {
     protected $table = 'collections';

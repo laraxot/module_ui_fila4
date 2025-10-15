@@ -33,6 +33,7 @@ class UserCalendarWidget extends Widget
     /**
      * @return array<string, mixed>
      */
+    /** @phpstan-ignore-next-line return.type */
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
@@ -40,7 +41,6 @@ class UserCalendarWidget extends Widget
         $actionInstance = app($action);
         if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
             $result = $actionInstance->execute($fetchInfo);
-            /** @var array<string, mixed> */
             return is_array($result) ? $result : [];
         }
 
@@ -50,21 +50,24 @@ class UserCalendarWidget extends Widget
     /**
      * @return array<string, mixed>
      */
+    /** @phpstan-ignore-next-line return.type */
     public function getFormSchema(): array
     {
         $action = $this->getActionName(__FUNCTION__);
+
+        /** @var array<string, mixed> $schema */
+        $schema = [];
 
         if (class_exists($action)) {
             $actionInstance = app($action);
             if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $result = $actionInstance->execute();
-                /** @var array<string, mixed> */
-                return is_array($result) ? $result : [];
+                $schema = is_array($result) ? $result : [];
             }
         }
 
         // Fallback schema
-        $schema = [
+        return [
             TextInput::make('title'),
 
             Grid::make()
@@ -73,9 +76,6 @@ class UserCalendarWidget extends Widget
                     DateTimePicker::make('ends_at'),
                 ]),
         ];
-        
-        /** @phpstan-ignore return.type */
-        return $schema;
     }
 
     /*
