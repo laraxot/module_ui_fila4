@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 ?>
-<x-filament-forms::field-wrapper
+<x-filament::field-wrapper
 
     :label="$getLabel()"
 
@@ -33,4 +33,4 @@ declare(strict_types=1);
             {{ __('ui::filament-navigation.items.add-item') }}
         </x-filament::button>
     </div>
-</x-filament-forms::field-wrapper>
+</x-filament::field-wrapper>
