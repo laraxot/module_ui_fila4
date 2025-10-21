@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 <meta charset="utf-8">
 <meta name="application-name" content="{{ $_theme->metatag('sitename') }}">
 <meta name="csrf-token" content="{{ csrf_token() }}">
