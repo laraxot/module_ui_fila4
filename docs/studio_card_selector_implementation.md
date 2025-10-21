@@ -179,14 +179,9 @@ return [
 - [Form Components Guide](./form-components.md)
 
 ### Modulo SaluteOra
-<<<<<<< HEAD
 - [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
-=======
-- [Widget Analysis](../SaluteOra/project_docs/widgets/find-doctor-widget-studio-step-analysis.md)
->>>>>>> 1899c5f (.)
 
 ---
 
 **Component Status**: 📋 Documented - Ready for Implementation  
 **Reusability**: 🔄 High - Cross-module compatible  
-**Last Updated**: January 2025 
