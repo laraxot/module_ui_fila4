@@ -126,11 +126,7 @@ private function getStudiosForLocation(Get $get): Collection
         return collect();
     }
     
-<<<<<<< HEAD
     return \Modules\SaluteOra\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
-=======
-    return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
->>>>>>> b55470f (.)
         $q->where('postal_code', $cap)
           ->where('administrative_area_level_3', $province)
           ->where('administrative_area_level_2', $region);
@@ -182,19 +178,10 @@ return [
 - [Components Overview](./components.md)
 - [Form Components Guide](./form-components.md)
 
-<<<<<<< HEAD
 ### Modulo SaluteOra
 - [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
-=======
-### Modulo Generico
-- [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
->>>>>>> b55470f (.)
 
 ---
 
 **Component Status**: 📋 Documented - Ready for Implementation  
 **Reusability**: 🔄 High - Cross-module compatible  
-<<<<<<< HEAD
-=======
-**Last Updated**: January 2025 
->>>>>>> b55470f (.)
