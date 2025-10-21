@@ -37,6 +37,7 @@ class UserCalendarWidget extends FullCalendarWidget
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
+<<<<<<< HEAD
 
 use Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
 use Filament\Schemas\Components\Grid;
@@ -68,6 +69,8 @@ class UserCalendarWidget extends FullCalendarWidget
     public function fetchEvents(array $fetchInfo): array
     {
         $action=$this->getActionName(__FUNCTION__);
+=======
+>>>>>>> e6782b2 (.)
         return app($action)->execute($fetchInfo);
     }
 
@@ -109,6 +112,7 @@ class UserCalendarWidget extends FullCalendarWidget
         // TODO: Implementare la logica per la selezione della data
         // dd('test');
     }
+<<<<<<< HEAD
         
         if (class_exists($action)) {
             return app($action)->execute();
@@ -144,4 +148,6 @@ class UserCalendarWidget extends FullCalendarWidget
     }
 
     
+=======
+>>>>>>> e6782b2 (.)
 }
