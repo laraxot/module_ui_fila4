@@ -112,17 +112,37 @@ TextColumn::make('status')
 
 ## Checklist Pre-Implementazione
 
+<<<<<<< HEAD
 ### Prima di usare qualsiasi componente Filament:
+=======
+>>>>>>> 8727c5b (.)
+### Prima di usare un componente Filament:
+- [ ] Implementare traduzioni in `lang/it/fields.php`
+- [ ] Implementare traduzioni in `lang/en/fields.php`
+- [ ] Implementare traduzioni in `lang/de/fields.php`
+- [ ] Verificare che le chiavi siano corrette
+- [ ] Testare che le traduzioni funzionino
+
+### Prima di committare:
+- [ ] Verificare che non ci siano `->label()` nel codice
+- [ ] Controllare che tutte le traduzioni siano implementate
+- [ ] Testare che le traduzioni funzionino correttamente
+Prima di usare qualsiasi componente Filament:
+
+>>>>>>> 1899c5f (.)
 - [ ] Implementare traduzioni in `lang/it/fields.php`
 - [ ] Implementare traduzioni in `lang/en/fields.php`
 - [ ] Implementare traduzioni in `lang/de/fields.php`
 - [ ] Verificare struttura espansa (label, placeholder, tooltip, helper_text)
 - [ ] Non usare mai `->label()` nel codice
 
+<<<<<<< HEAD
 ### Prima di committare:
 - [ ] Verificare che non ci siano `->label()` nel codice
 - [ ] Controllare che tutte le traduzioni siano implementate
 - [ ] Testare che le traduzioni funzionino correttamente
+=======
+>>>>>>> 1899c5f (.)
 ## Verifica Automatica
 
 ### PHPStan Rule (Ideale)
@@ -164,8 +184,17 @@ rules:
 **RICORDA SEMPRE**: 
 - MAI usare `->label()` in componenti Filament
 - SEMPRE implementare traduzioni nei file `lang/`
+<<<<<<< HEAD
 - SEMPRE struttura espansa (label, placeholder, tooltip, helper_text)
 - SEMPRE sincronizzare IT/EN/DE
 - SEMPRE testare le traduzioni prima del commit
+=======
+- SEMPRE sincronizzare IT/EN/DE
+- SEMPRE testare le traduzioni prima del commit
+- MAI `->label()` 
+- SEMPRE traduzioni nei file lang/
+- SEMPRE struttura espansa
+- SEMPRE sincronizzazione IT/EN/DE
+>>>>>>> 1899c5f (.)
 
 *Ultimo aggiornamento: 2025-01-06*
