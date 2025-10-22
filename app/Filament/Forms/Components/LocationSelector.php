@@ -389,10 +389,8 @@ class LocationSelector extends Group
                 return null;
             }
 
-            $regioneData = $comune->attributes['regione'] ?? null;
-            $provinciaData = $comune->attributes['provincia'] ?? null;
-            $regione = is_array($regioneData) ? $regioneData : [];
-            $provincia = is_array($provinciaData) ? $provinciaData : [];
+            $regione = is_array($comune->regione) ? $comune->regione : [];
+            $provincia = is_array($comune->provincia) ? $comune->provincia : [];
             
             return [
                 'region' => [
