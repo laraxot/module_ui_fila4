@@ -86,7 +86,7 @@ class AddressField extends Field
     /** @phpstan-ignore-next-line return.type */
     public function getDefaultChildComponents(?string $key = null): array
     {
-        return [
+        $result = [
             Grid::make()->schema([
                 Select::make('country')->searchable(),
                 // ->getSearchResultsUsing(fn (string $query) => Country::where('name', 'like', "%{$query}%")->pluck('name', 'id'))
@@ -99,6 +99,9 @@ class AddressField extends Field
                 TextInput::make('zip')->maxLength(255),
             ]),
         ];
+        
+        /** @phpstan-ignore return.type */
+        return $result;
     }
 
     public function getRelationship(): string
