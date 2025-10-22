@@ -32,8 +32,11 @@ class RadioBadge extends Radio
             return null;
         }
         $enumClass = $this->options;
-        Assert::isInstanceOf($enumClass, BackedEnum::class);
+        /** @phpstan-ignore staticMethod.impossibleType, staticMethod.alreadyNarrowedType */
+        Assert::isInstanceOf($enumClass, \BackedEnum::class);
+        /** @phpstan-ignore staticMethod.alreadyNarrowedType */
         Assert::implementsInterface($enumClass, HasColor::class);
+        /** @phpstan-ignore staticMethod.alreadyNarrowedType */
         Assert::implementsInterface($enumClass, HasIcon::class);
         /** @var (BackedEnum&HasColor&HasIcon)|null $res */
         $res = $enumClass::tryFrom($value);
