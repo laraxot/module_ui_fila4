@@ -11,6 +11,9 @@ use Modules\UI\Models\Theme;
 
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
  * |--------------------------------------------------------------------------
  * | Test Case
  * |--------------------------------------------------------------------------
@@ -57,6 +60,7 @@ expect()->extend('toBe' + 'UI' + '', function () {
  * | Queste funzioni saranno disponibili in tutti i test.
  * |
  */
+<<<<<<< HEAD
 =======
 |--------------------------------------------------------------------------
 | Test Case
@@ -104,6 +108,8 @@ expect()->extend('toBeAsset', function () {
 |
 */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 
 /**
  * @param array<string, mixed> $attributes
