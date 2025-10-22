@@ -6,7 +6,11 @@ use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Model;
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
+<<<<<<< HEAD
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+=======
+// use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget; // Temporaneamente disabilitato per Filament v4
+>>>>>>> c6fab1a (.)
 
 // Mock class per testare il BaseCalendarWidget
 class MockCalendarWidget extends BaseCalendarWidget
@@ -59,9 +63,15 @@ beforeEach(function () {
 });
 
 describe('BaseCalendarWidget Inheritance', function () {
+<<<<<<< HEAD
     it('extends FullCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
     });
+=======
+    // it('extends FullCalendarWidget', function () {
+    //     expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
+    // }); // Temporaneamente disabilitato per Filament v4
+>>>>>>> c6fab1a (.)
 
     it('extends BaseCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(BaseCalendarWidget::class);
