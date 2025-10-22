@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 @props(['title' => 'Materiale Educativo'])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -81,4 +84,8 @@ declare(strict_types=1);
             {{ $materials->links() }}
         </div>
     @endif
+<<<<<<< HEAD
 </div>
+=======
+</div> 
+>>>>>>> 727968c (.)
