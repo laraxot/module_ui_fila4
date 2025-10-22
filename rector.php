@@ -10,6 +10,12 @@ use Rector\TypeDeclaration\Rector\ClassMethod\ReturnTypeFromStrictScalarReturnEx
 use RectorLaravel\Set\LaravelSetList;
 
 return static function (RectorConfig $rectorConfig): void {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 1899c5f (.)
     $rectorConfig->paths([
         __DIR__,
     ]);
@@ -19,14 +25,60 @@ return static function (RectorConfig $rectorConfig): void {
         '*/vendor',
         './vendor/',
     ]);
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/develop
+    $rectorConfig->paths(
+        [
+            __DIR__,
+        ]
+    );
+
+    $rectorConfig->skip(
+        [
+            '*/docs',
+            '*/vendor',
+            './vendor/',
+        ]
+    );
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+    $rectorConfig->paths([
+        __DIR__,
+    ]);
+
+    $rectorConfig->skip([
+        '*/docs',
+        '*/vendor',
+        './vendor/',
+    ]);
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 
     // register a single rule
     // $rectorConfig->rule(InlineConstructorDefaultToPropertyRector::class);
     // $rectorConfig->rule(RedirectRouteToToRouteHelperRector::class);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
     $rectorConfig->rules([
         ReturnTypeFromStrictNativeCallRector::class,
         ReturnTypeFromStrictScalarReturnExprRector::class,
     ]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1899c5f (.)
 
     // define sets of rules
     $rectorConfig->sets([
@@ -42,6 +94,57 @@ return static function (RectorConfig $rectorConfig): void {
         // SetList::EARLY_RETURN,
         // SetList::INSTANCEOF,
     ]);
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/develop
+    $rectorConfig->rules(
+        [
+            ReturnTypeFromStrictNativeCallRector::class,
+            ReturnTypeFromStrictScalarReturnExprRector::class,
+        ]
+    );
+
+    // define sets of rules
+    $rectorConfig->sets(
+        [
+            PHPUnitLevelSetList::UP_TO_PHPUNIT_100,
+            // SetList::DEAD_CODE,
+            // SetList::CODE_QUALITY,
+            LevelSetList::UP_TO_PHP_81,
+            LaravelSetList::LARAVEL_100,
+
+            // SetList::NAMING, //problemi con injuction
+            // SetList::TYPE_DECLARATION,
+            // SetList::CODING_STYLE,
+            // SetList::PRIVATIZATION,//problemi con final
+            // SetList::EARLY_RETURN,
+            // SetList::INSTANCEOF,
+        ]
+    );
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+
+    // define sets of rules
+    $rectorConfig->sets([
+        PHPUnitLevelSetList::UP_TO_PHPUNIT_100,
+        // SetList::DEAD_CODE,
+        // SetList::CODE_QUALITY,
+        LevelSetList::UP_TO_PHP_81,
+        LaravelSetList::LARAVEL_100,
+        // SetList::NAMING, //problemi con injuction
+        // SetList::TYPE_DECLARATION,
+        // SetList::CODING_STYLE,
+        // SetList::PRIVATIZATION,//problemi con final
+        // SetList::EARLY_RETURN,
+        // SetList::INSTANCEOF,
+    ]);
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 
     $rectorConfig->importNames();
 };
