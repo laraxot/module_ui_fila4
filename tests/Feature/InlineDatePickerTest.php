@@ -79,10 +79,14 @@ test('it respects locale in calendar data', function (): void {
 
 test('it can be used in a form', function (): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $form = Schema::make()->components([
 =======
     $form = Schema::make()->schema([
 >>>>>>> 19f3650 (.)
+=======
+    $form = Schema::make()->schema([
+>>>>>>> 2dcb12a (.)
         InlineDatePicker::make('appointment_date')->enabledDates(['2025-06-15']),
     ]);
 
