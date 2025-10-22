@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,9 @@
 =======
 # Correzioni PHPStan - Modulo UI
 >>>>>>> f89ff0a (.)
+=======
+# Correzioni PHPStan - Modulo UI
+>>>>>>> 1899c5f (.)
 
 Questo documento traccia gli errori PHPStan identificati nel modulo UI e le relative soluzioni implementate.
 
@@ -37,6 +41,7 @@ Cannot access property $id on Illuminate\Database\Eloquent\Model|null.
 ->body('Record ID: ' . ($record?->id ?? 'N/A'))
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 2. Aggiunti controlli `method_exists` e `isset` prima di chiamare metodi o accedere a proprietà sull'oggetto `$livewire`:
 
@@ -70,6 +75,8 @@ Questo approccio è più robusto e previene errori a runtime quando l'oggetto `$
 >>>>>>> 41f976e (.)
 # UI Module - PHPStan Level 7 Fixes - Gennaio 2025
 =======
+=======
+>>>>>>> 1899c5f (.)
 ### 2. Mixed Type Casting - RadioCollection
 
 **Problema**: Errori di casting da `mixed` a `string` nel componente RadioCollection.
@@ -91,7 +98,10 @@ $stringValue = is_string($value) ? $value : (string) $value;
 ```
 
 ## Componenti Filament Personalizzati
+<<<<<<< HEAD
 >>>>>>> f89ff0a (.)
+=======
+>>>>>>> 1899c5f (.)
 
 ### RadioCollection Component
 
@@ -151,6 +161,7 @@ if ($record !== null && property_exists($record, 'id')) {
 ## Note per Sviluppatori
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 *Ultimo aggiornamento: Gennaio 2025*
 *Stato: 🔄 In Corso - ~2 errori PHPStan rimanenti*
@@ -165,6 +176,8 @@ if ($record !== null && property_exists($record, 'id')) {
 >>>>>>> 64e34f5 (.)
 >>>>>>> 41f976e (.)
 =======
+=======
+>>>>>>> 1899c5f (.)
 ### Componenti Filament Personalizzati
 
 1. **Null Safety**: Sempre utilizzare null-safe operators quando si accede a proprietà di modelli
@@ -202,4 +215,7 @@ if ($record !== null && property_exists($record, 'id')) {
 1. **Error States**: Gestire gracefully gli stati di errore
 2. **Loading States**: Implementare stati di caricamento appropriati
 3. **Accessibility**: Assicurare accessibilità per tutti i componenti
+<<<<<<< HEAD
 >>>>>>> f89ff0a (.)
+=======
+>>>>>>> 1899c5f (.)
