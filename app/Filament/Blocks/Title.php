@@ -13,6 +13,9 @@ use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
 class Title // extends XotBaseBlock
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 {
     public static function make(string $name = 'title', string $context = 'form'): Block
     {
@@ -39,6 +42,7 @@ class Title // extends XotBaseBlock
             ])
             ->columns($context === 'form' ? 2 : 1);
     }
+<<<<<<< HEAD
 =======
 {public static function make(
     string $name = 'title',
@@ -73,4 +77,6 @@ class Title // extends XotBaseBlock
         ->columns('form' === $context ? 2 : 1);
 }
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 }
