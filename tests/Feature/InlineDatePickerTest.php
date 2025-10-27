@@ -175,7 +175,10 @@ test('it is kiss simple and clear', function (): void {
 
     // Assert: Metodi pubblici minimi e chiari
     $reflection = new ReflectionClass($picker);
+<<<<<<< HEAD
     /** @phpstan-ignore-next-line method.nonObject */
+=======
+>>>>>>> 3b732b6 (.)
     $publicMethods = array_filter($reflection->getMethods(), fn ($m) => $m->isPublic() && ! $m->isStatic());
 
     // Dovrebbe esporre metodi essenziali utilizzabili

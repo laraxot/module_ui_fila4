@@ -22,6 +22,7 @@ class SelectStateColumn extends SelectColumn
             if ($state === null) {
                 $states = Arr::wrap($record->getDefaultStateFor($name));
 
+<<<<<<< HEAD
                 /** @var array<int|string, mixed> $statesArray */
                 $statesArray = (array) $states;
 
@@ -44,6 +45,18 @@ class SelectStateColumn extends SelectColumn
             /** @var array<int|string, mixed> $statesArray */
             $statesArray = (array) $states;
             $states = array_combine(array_keys($statesArray), array_values($statesArray));
+=======
+                return array_combine($states, $states);
+            }
+            try {
+                // $states=$record->getAttribute($name)->transitionableStates();
+                $states = $state->transitionableStates();
+            } catch (Exception $e) {
+                $states = $record->getStatesFor($name)->toArray();
+            }
+            $states = [$state::$name, ...$states];
+            $states = array_combine($states, $states);
+>>>>>>> 3b732b6 (.)
             // dddx(['state'=>$state, 'state1'=>$record->getAttribute($name),'record'=>$record]);
 
             return $states;

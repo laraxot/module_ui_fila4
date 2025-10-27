@@ -43,9 +43,15 @@ class IconStateGroupColumn extends ColumnGroup
         foreach ((array) $states as $state => $stateClass) {
             $stateInstance = new $stateClass($this->modelClass);
             Assert::isInstanceOf($stateInstance, StateContract::class);
+<<<<<<< HEAD
             $this->data[(string) $state.'-visible'] = true;
 
             $column = IconColumn::make((string) $state.'-icon')
+=======
+            $this->data[$state.'-visible'] = true;
+
+            $column = IconColumn::make($state.'-icon')
+>>>>>>> 3b732b6 (.)
                 ->icon($stateInstance->icon(...))
                 ->color($stateInstance->color(...))
                 ->tooltip($stateInstance->label(...))
@@ -56,6 +62,7 @@ class IconStateGroupColumn extends ColumnGroup
                 ->extraCellAttributes(['class' => 'px-1 py-1'])
                 ->label('')
                 ->default(function ($record, Set $_set) use ($stateClass, $state) {
+<<<<<<< HEAD
                     if (is_object($record) && property_exists($record, 'state') && is_object($record->state) && method_exists($record->state, 'canTransitionTo')) {
                         $res = $record->state->canTransitionTo($stateClass);
                         $this->data[(string) $state.'-visible'] = $res;
@@ -70,6 +77,17 @@ class IconStateGroupColumn extends ColumnGroup
                     return true;
                 });
             $column->action(Action::make((string) $state.'-action')
+=======
+                    $res = $record->state->canTransitionTo($stateClass);
+                    $this->data[$state.'-visible'] = $res;
+                    if (! $res) {
+                        return null;
+                    }
+
+                    return true;
+                });
+            $column->action(Action::make($state.'-action')
+>>>>>>> 3b732b6 (.)
                 ->requiresConfirmation()
                 ->modalHeading(fn ($_record) => $stateInstance->modalHeading())
                 ->modalDescription(fn ($_record) => $stateInstance->modalDescription())
@@ -89,7 +107,11 @@ class IconStateGroupColumn extends ColumnGroup
                     //    'message' => __('ui::messages.action_completed'),
                     // ]);
                 }));
+<<<<<<< HEAD
             $column->visible((bool) ($this->data[(string) $state.'-visible'] ?? false));
+=======
+            $column->visible($this->data[$state.'-visible']);
+>>>>>>> 3b732b6 (.)
             $columns[] = $column;
         }
 

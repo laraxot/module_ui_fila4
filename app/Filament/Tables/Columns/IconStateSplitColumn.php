@@ -91,7 +91,11 @@ class IconStateSplitColumn extends Column
             return false;
         }
 
+<<<<<<< HEAD
         if (! is_object($record) || ! method_exists($record, 'getState')) {
+=======
+        if (! $record->state) {
+>>>>>>> 3b732b6 (.)
             return false;
         }
 
@@ -156,10 +160,17 @@ class IconStateSplitColumn extends Column
                 $actions["transition_to_{$stateKey}"] = Action::make(
                     "transition_to_{$stateKey}",
                 )
+<<<<<<< HEAD
                     ->icon((string) $state['icon'])
                     ->color((string) $state['color'])
                     ->label((string) $state['label'])
                     ->action(fn () => $this->transitionState($recordId, (string) $state['class']::class));
+=======
+                    ->icon($state['icon'])
+                    ->color($state['color'])
+                    ->label($state['label'])
+                    ->action(fn () => $this->transitionState($recordId, $state['class']::class));
+>>>>>>> 3b732b6 (.)
             }
         }
 

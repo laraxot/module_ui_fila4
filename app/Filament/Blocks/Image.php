@@ -19,11 +19,15 @@ class Image
                 TextInput::make('url'),
                 Select::make('ratio')
                     ->options(static::getRatios())
+<<<<<<< HEAD
                     ->afterStateHydrated(static function ($state, $set): void {
                         if (is_callable($set) && ! $state) {
                             $set('ratio', '4-3');
                         }
                     }),
+=======
+                    ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
+>>>>>>> 3b732b6 (.)
                 TextInput::make('alt')->columnSpanFull(),
                 TextInput::make('caption')->columnSpanFull(),
             ])
