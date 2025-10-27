@@ -41,6 +41,7 @@ class IconStateColumn extends IconColumn
 
                                 /** @var array<int|string, mixed> $statesArray */
                                 $statesArray = (array) $states;
+
                                 return array_combine(array_keys($statesArray), array_values($statesArray));
                             }
                             Assert::isInstanceOf($state, State::class);
@@ -94,7 +95,7 @@ class IconStateColumn extends IconColumn
                     'state' => is_object($record) && property_exists($record, 'state') && is_object($record->state) && property_exists($record->state, $this->getName()) ? $record->state->{$this->getName()} : null,
                 ])
                 ->action(function ($record, $data): void {
-                    if (!is_array($data) || !isset($data['state']) || !isset($data['message'])) {
+                    if (! is_array($data) || ! isset($data['state']) || ! isset($data['message'])) {
                         return;
                     }
                     $state = (string) $data['state'];

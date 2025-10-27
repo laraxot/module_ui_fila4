@@ -148,7 +148,7 @@ class IconStateSplitColumn extends Column
 
         // Aggiungi azioni per gli stati
         foreach ($states as $stateKey => $state) {
-            if (!is_array($state) || !isset($state['class']) || !isset($state['icon']) || !isset($state['color']) || !isset($state['label'])) {
+            if (! is_array($state) || ! isset($state['class']) || ! isset($state['icon']) || ! isset($state['color']) || ! isset($state['label'])) {
                 continue;
             }
             $recordId = is_object($record) && property_exists($record, 'id') ? (string) $record->id : null;

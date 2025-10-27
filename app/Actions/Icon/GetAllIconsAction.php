@@ -61,7 +61,7 @@ class GetAllIconsAction
                                 ->toString();
 
                             $prefix = is_string($set['prefix'] ?? '') ? $set['prefix'] : '';
-                            $icons[] = (string) $prefix . '-' . (string) $iconName;
+                            $icons[] = (string) $prefix.'-'.(string) $iconName;
                         }
                     }
                 }

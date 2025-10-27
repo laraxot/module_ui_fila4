@@ -19,4 +19,3 @@ class FieldOptionFactory extends Factory
         return [];
     }
 }
-

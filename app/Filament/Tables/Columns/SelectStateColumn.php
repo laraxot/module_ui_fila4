@@ -24,6 +24,7 @@ class SelectStateColumn extends SelectColumn
 
                 /** @var array<int|string, mixed> $statesArray */
                 $statesArray = (array) $states;
+
                 return array_combine(array_keys($statesArray), array_values($statesArray));
             }
             try {

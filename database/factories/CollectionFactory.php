@@ -19,4 +19,3 @@ class CollectionFactory extends Factory
         return [];
     }
 }
-

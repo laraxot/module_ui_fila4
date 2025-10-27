@@ -41,6 +41,7 @@ class UserCalendarWidget extends Widget
         $actionInstance = app($action);
         if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
             $result = $actionInstance->execute($fetchInfo);
+
             return is_array($result) ? $result : [];
         }
 
