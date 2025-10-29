@@ -32,28 +32,11 @@ uses(TestCase::class)->uses(DatabaseTransactions::class)->in('Feature', 'Unit');
  * |
  */
 
-<<<<<<< HEAD
-expect()->extend('toBe' + 'UI' + '', function () {
-    /** @var \Pest\Expectation<mixed> $this */
-    return $this->toBeInstanceOf(...);
-});
-
-expect()->extend('toBe' + 'UI' + '', function () {
-    /** @var \Pest\Expectation<mixed> $this */
-    return $this->toBeInstanceOf(...);
-});
-
-expect()->extend('toBe' + 'UI' + '', function () {
-    /** @var \Pest\Expectation<mixed> $this */
-    return $this->toBeInstanceOf(...);
-});
-=======
 expect()->extend('toBeComponent', fn () => $this->toBeInstanceOf(Component::class));
 
 expect()->extend('toBeTheme', fn () => $this->toBeInstanceOf(Theme::class));
 
 expect()->extend('toBeAsset', fn () => $this->toBeInstanceOf(Asset::class));
->>>>>>> 3b732b6 (.)
 
 /*
  * |--------------------------------------------------------------------------
@@ -65,68 +48,32 @@ expect()->extend('toBeAsset', fn () => $this->toBeInstanceOf(Asset::class));
  * |
  */
 
-/**
- * @param  array<string, mixed>  $attributes
- */
 function createTheme(array $attributes = []): Theme
 {
-    $Theme = Theme::factory()->create($attributes);
-    assert($Theme instanceof Theme);
-
-    return $Theme;
+    return Theme::factory()->create($attributes);
 }
 
-/**
- * @param  array<string, mixed>  $attributes
- */
 function makeTheme(array $attributes = []): Theme
 {
-    $Theme = Theme::factory()->make($attributes);
-    assert($Theme instanceof Theme);
-
-    return $Theme;
+    return Theme::factory()->make($attributes);
 }
 
-/**
- * @param  array<string, mixed>  $attributes
- */
 function createComponent(array $attributes = []): Component
 {
-    $Component = Component::factory()->create($attributes);
-    assert($Component instanceof Component);
-
-    return $Component;
+    return Component::factory()->create($attributes);
 }
 
-/**
- * @param  array<string, mixed>  $attributes
- */
 function makeComponent(array $attributes = []): Component
 {
-    $Component = Component::factory()->make($attributes);
-    assert($Component instanceof Component);
-
-    return $Component;
+    return Component::factory()->make($attributes);
 }
 
-/**
- * @param  array<string, mixed>  $attributes
- */
 function createAsset(array $attributes = []): Asset
 {
-    $Asset = Asset::factory()->create($attributes);
-    assert($Asset instanceof Asset);
-
-    return $Asset;
+    return Asset::factory()->create($attributes);
 }
 
-/**
- * @param  array<string, mixed>  $attributes
- */
 function makeAsset(array $attributes = []): Asset
 {
-    $Asset = Asset::factory()->make($attributes);
-    assert($Asset instanceof Asset);
-
-    return $Asset;
+    return Asset::factory()->make($attributes);
 }

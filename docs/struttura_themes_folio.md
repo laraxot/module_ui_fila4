@@ -1,4 +1,4 @@
-# Struttura Themes e Folio in <main module>
+# Struttura Themes e Folio in SaluteOra
 
 ## ⚠️ ATTENZIONE CRITICA
 
@@ -8,7 +8,7 @@
 
 ## Struttura del Progetto
 
-Il progetto <main module> utilizza un sistema di **Themes** che modifica la struttura standard di Laravel Folio:
+Il progetto SaluteOra utilizza un sistema di **Themes** che modifica la struttura standard di Laravel Folio:
 
 ```
 /laravel/

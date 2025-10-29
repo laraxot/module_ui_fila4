@@ -55,13 +55,13 @@ class InlineDatePicker extends DatePicker
 
         // Hydration/Dehydration del valore
         $this->afterStateHydrated(static function (self $component, $state): void {
-            if ($state && is_string($state)) {
+            if ($state) {
                 $date = Carbon::parse($state);
                 $component->currentViewMonth = $date->format('Y-m');
             }
         });
 
-        $this->dehydrateStateUsing(static fn (self $_component, $state) => $state && is_string($state)
+        $this->dehydrateStateUsing(static fn (self $_component, $state) => $state
             ? Carbon::parse($state)->format('Y-m-d')
             : null);
     }
@@ -135,7 +135,7 @@ class InlineDatePicker extends DatePicker
         $dates = $this->evaluate($this->enabledDates) ?? [];
 
         /** @phpstan-ignore return.type, argument.templateType, argument.templateType */
-        return collect((array) $dates)->map(fn ($date): string => Carbon::parse((string) $date)->format('Y-m-d'));
+        return collect($dates)->map(fn ($date): string => Carbon::parse($date)->format('Y-m-d'));
     }
 
     /**

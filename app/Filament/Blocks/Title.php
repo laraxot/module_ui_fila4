@@ -19,26 +19,6 @@ class Title // extends XotBaseBlock
 
     $options = app(GetViewBlocksOptionsByTypeAction::class)->execute('title', false);
 
-<<<<<<< HEAD
-        return Block::make($name)
-            ->schema([
-                TextInput::make('text')->required(),
-                Select::make('level')
-                    ->options([
-                        'h2' => 'h2',
-                        'h3' => 'h3',
-                        'h4' => 'h4',
-                    ])
-                    ->afterStateHydrated(static function ($state, $set): void {
-                        if (is_callable($set) && ! $state) {
-                            $set('level', 'h2');
-                        }
-                    }),
-                Select::make('view')->options($options),
-            ])
-            ->columns($context === 'form' ? 2 : 1);
-    }
-=======
     return Block::make($name)
         ->schema([
             TextInput::make('text')->required(),
@@ -53,5 +33,4 @@ class Title // extends XotBaseBlock
         ])
         ->columns($context === 'form' ? 2 : 1);
 }
->>>>>>> 3b732b6 (.)
 }

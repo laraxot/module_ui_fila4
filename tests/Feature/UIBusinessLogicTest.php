@@ -10,25 +10,23 @@ use Modules\UI\Models\Theme;
 use Modules\UI\Services\ComponentService;
 use Modules\UI\Services\ThemeService;
 
-describe('UI Business Logic Integration', function (): void {
-    beforeEach(function (): void {
-        $this->theme = Theme/** @phpstan-ignore-line */ ::factory()->create([
+describe('UI Business Logic Integration', function () {
+    beforeEach(function () {
+        $this->theme = Theme::factory()->create([
             'name' => 'Default Theme',
             'is_active' => true,
         ]);
 
-        $this->component = Component/** @phpstan-ignore-line */ ::factory()->create([
+        $this->component = Component::factory()->create([
             'name' => 'test-component',
-            /** @phpstan-ignore-next-line property.notFound */
             'theme_id' => $this->theme->id,
             'is_active' => true,
         ]);
     });
 
-    describe('Theme Management Business Rules', function (): void {
-        it('enforces theme activation rules', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $theme = Theme/** @phpstan-ignore-line */ ::factory()->create([
+    describe('Theme Management Business Rules', function () {
+        it('enforces theme activation rules', function () {
+            $theme = Theme::factory()->create([
                 'name' => 'Test Theme',
                 'is_active' => false,
             ]);
@@ -37,7 +35,6 @@ describe('UI Business Logic Integration', function (): void {
             expect($theme->is_active)->toBeFalse();
 
             // Attivazione tema
-            /** @phpstan-ignore-next-line method.nonObject */
             $theme->update(['is_active' => true]);
             expect($theme->is_active)->toBeTrue();
 
@@ -46,15 +43,13 @@ describe('UI Business Logic Integration', function (): void {
             expect($activeThemes)->toHaveCount(2); // Default + Test
 
             // Disattivazione tema precedente
-            /** @phpstan-ignore-next-line property.notFound */
             $this->theme->update(['is_active' => false]);
             $activeThemes = Theme::where('is_active', true)->get();
             expect($activeThemes)->toHaveCount(1);
         });
 
-        it('enforces theme configuration validation', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $theme = Theme/** @phpstan-ignore-line */ ::factory()->create([
+        it('enforces theme configuration validation', function () {
+            $theme = Theme::factory()->create([
                 'name' => 'Configurable Theme',
                 'config' => [
                     'primary_color' => '#007bff',
@@ -70,15 +65,13 @@ describe('UI Business Logic Integration', function (): void {
             expect($theme->config['font_family'])->toContain('Arial');
         });
 
-        it('enforces theme inheritance rules', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $parentTheme = Theme/** @phpstan-ignore-line */ ::factory()->create([
+        it('enforces theme inheritance rules', function () {
+            $parentTheme = Theme::factory()->create([
                 'name' => 'Parent Theme',
                 'is_active' => false,
             ]);
 
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $childTheme = Theme/** @phpstan-ignore-line */ ::factory()->create([
+            $childTheme = Theme::factory()->create([
                 'name' => 'Child Theme',
                 'parent_id' => $parentTheme->id,
                 'is_active' => false,
@@ -98,8 +91,8 @@ describe('UI Business Logic Integration', function (): void {
         });
     });
 
-    describe('Component Management Business Rules', function (): void {
-        it('enforces component naming conventions', function (): void {
+    describe('Component Management Business Rules', function () {
+        it('enforces component naming conventions', function () {
             $validNames = [
                 'button',
                 'card',
@@ -109,10 +102,8 @@ describe('UI Business Logic Integration', function (): void {
             ];
 
             foreach ($validNames as $name) {
-                /** @var \Illuminate\Database\Eloquent\Collection */
-                $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+                $component = Component::factory()->create([
                     'name' => $name,
-                    /** @phpstan-ignore-next-line property.notFound */
                     'theme_id' => $this->theme->id,
                 ]);
 
@@ -123,11 +114,9 @@ describe('UI Business Logic Integration', function (): void {
             }
         });
 
-        it('enforces component versioning rules', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+        it('enforces component versioning rules', function () {
+            $component = Component::factory()->create([
                 'name' => 'versioned-component',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'version' => '1.0.0',
             ]);
@@ -136,7 +125,6 @@ describe('UI Business Logic Integration', function (): void {
             expect($component->version)->toMatch('/^\d+\.\d+\.\d+$/');
 
             // Aggiornamento versione
-            /** @phpstan-ignore-next-line method.nonObject */
             $component->update(['version' => '1.1.0']);
             expect($component->version)->toBe('1.1.0');
 
@@ -150,11 +138,9 @@ describe('UI Business Logic Integration', function (): void {
             expect($patch)->toBeGreaterThanOrEqual(0);
         });
 
-        it('enforces component dependency rules', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+        it('enforces component dependency rules', function () {
+            $component = Component::factory()->create([
                 'name' => 'dependent-component',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'dependencies' => ['jquery', 'bootstrap'],
             ]);
@@ -172,14 +158,12 @@ describe('UI Business Logic Integration', function (): void {
         });
     });
 
-    describe('Asset Management Business Rules', function (): void {
-        it('enforces asset file validation', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $asset = Asset/** @phpstan-ignore-line */ ::factory()->create([
+    describe('Asset Management Business Rules', function () {
+        it('enforces asset file validation', function () {
+            $asset = Asset::factory()->create([
                 'name' => 'main.css',
                 'type' => 'css',
                 'path' => '/assets/css/main.css',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
             ]);
 
@@ -195,13 +179,11 @@ describe('UI Business Logic Integration', function (): void {
             expect($asset->name)->toBe($fileName);
         });
 
-        it('enforces asset optimization rules', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $asset = Asset/** @phpstan-ignore-line */ ::factory()->create([
+        it('enforces asset optimization rules', function () {
+            $asset = Asset::factory()->create([
                 'name' => 'optimized.js',
                 'type' => 'js',
                 'path' => '/assets/js/optimized.js',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'is_minified' => true,
                 'is_compressed' => true,
@@ -217,60 +199,47 @@ describe('UI Business Logic Integration', function (): void {
             }
         });
 
-        it('enforces asset loading order', function (): void {
+        it('enforces asset loading order', function () {
             $assets = collect([
-                Asset/** @phpstan-ignore-line */ ::factory()->create([
+                Asset::factory()->create([
                     'name' => 'jquery.js',
                     'type' => 'js',
                     'order' => 1,
-                    /** @phpstan-ignore-next-line property.notFound */
                     'theme_id' => $this->theme->id,
                 ]),
-                Asset/** @phpstan-ignore-line */ ::factory()->create([
+                Asset::factory()->create([
                     'name' => 'bootstrap.js',
                     'type' => 'js',
                     'order' => 2,
-                    /** @phpstan-ignore-next-line property.notFound */
                     'theme_id' => $this->theme->id,
                 ]),
-                Asset/** @phpstan-ignore-line */ ::factory()->create([
+                Asset::factory()->create([
                     'name' => 'app.js',
                     'type' => 'js',
                     'order' => 3,
-                    /** @phpstan-ignore-next-line property.notFound */
                     'theme_id' => $this->theme->id,
                 ]),
             ]);
 
             // Verifica che l'ordine di caricamento sia rispettato
-            /** @phpstan-ignore-next-line method.nonObject */
             $orderedAssets = $assets->sortBy('order');
             expect($orderedAssets->first()->order)->toBe(1);
             expect($orderedAssets->last()->order)->toBe(3);
 
             // Verifica che jQuery sia caricato prima di Bootstrap
-            /** @phpstan-ignore-next-line method.nonObject */
             $jquery = $assets->where('name', 'jquery.js')->first();
-            /** @phpstan-ignore-next-line method.nonObject */
             $bootstrap = $assets->where('name', 'bootstrap.js')->first();
 
             expect($jquery->order)->toBeLessThan($bootstrap->order);
         });
     });
 
-<<<<<<< HEAD
-    describe('Component Service Business Rules', function (): void {
-        it('enforces component rendering rules', function (): void {
-=======
     describe('Component Service Business Rules', function () {
         it('enforces component rendering rules', function () {
->>>>>>> 3b732b6 (.)
             $service = new ComponentService;
 
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+            $component = Component::factory()->create([
                 'name' => 'renderable-component',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'template' => '<div class="test-component">{{ $content }}</div>',
                 'is_active' => true,
@@ -286,17 +255,11 @@ describe('UI Business Logic Integration', function (): void {
             expect($component->template)->toContain('</div>');
         });
 
-<<<<<<< HEAD
-        it('enforces component caching rules', function (): void {
-=======
         it('enforces component caching rules', function () {
->>>>>>> 3b732b6 (.)
             $service = new ComponentService;
 
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+            $component = Component::factory()->create([
                 'name' => 'cacheable-component',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'is_cacheable' => true,
                 'cache_ttl' => 3600,
@@ -313,17 +276,11 @@ describe('UI Business Logic Integration', function (): void {
             expect($component->cache_ttl)->toBeLessThan(86400); // 24 ore
         });
 
-<<<<<<< HEAD
-        it('enforces component validation rules', function (): void {
-=======
         it('enforces component validation rules', function () {
->>>>>>> 3b732b6 (.)
             $service = new ComponentService;
 
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+            $component = Component::factory()->create([
                 'name' => 'validated-component',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'validation_rules' => [
                     'required' => true,
@@ -341,17 +298,11 @@ describe('UI Business Logic Integration', function (): void {
         });
     });
 
-<<<<<<< HEAD
-    describe('Theme Service Business Rules', function (): void {
-        it('enforces theme compilation rules', function (): void {
-=======
     describe('Theme Service Business Rules', function () {
         it('enforces theme compilation rules', function () {
->>>>>>> 3b732b6 (.)
             $service = new ThemeService;
 
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $theme = Theme/** @phpstan-ignore-line */ ::factory()->create([
+            $theme = Theme::factory()->create([
                 'name' => 'Compilable Theme',
                 'source_path' => '/themes/compilable',
                 'compiled_path' => '/public/themes/compilable',
@@ -367,16 +318,10 @@ describe('UI Business Logic Integration', function (): void {
             expect($theme->source_path)->not->toBe($theme->compiled_path);
         });
 
-<<<<<<< HEAD
-        it('enforces theme asset compilation', function (): void {
-=======
         it('enforces theme asset compilation', function () {
->>>>>>> 3b732b6 (.)
             $service = new ThemeService;
 
-            /** @phpstan-ignore-next-line property.notFound */
             $theme = $this->theme;
-            /** @var \Illuminate\Database\Eloquent\Collection */
             $assets = Asset::factory()
                 ->count(3)
                 ->create([
@@ -398,15 +343,10 @@ describe('UI Business Logic Integration', function (): void {
             }
         });
 
-<<<<<<< HEAD
-        it('enforces theme configuration inheritance', function (): void {
-=======
         it('enforces theme configuration inheritance', function () {
->>>>>>> 3b732b6 (.)
             $service = new ThemeService;
 
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $parentTheme = Theme/** @phpstan-ignore-line */ ::factory()->create([
+            $parentTheme = Theme::factory()->create([
                 'name' => 'Parent Theme',
                 'config' => [
                     'colors' => ['primary' => '#007bff'],
@@ -414,8 +354,7 @@ describe('UI Business Logic Integration', function (): void {
                 ],
             ]);
 
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $childTheme = Theme/** @phpstan-ignore-line */ ::factory()->create([
+            $childTheme = Theme::factory()->create([
                 'name' => 'Child Theme',
                 'parent_id' => $parentTheme->id,
                 'config' => [
@@ -427,23 +366,17 @@ describe('UI Business Logic Integration', function (): void {
             // Verifica che il tema figlio erediti le configurazioni del padre
             $mergedConfig = array_merge_recursive($parentTheme->config ?? [], $childTheme->config ?? []);
 
-            /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
             expect($mergedConfig['colors']['primary'])->toBe('#007bff');
-            /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
             expect($mergedConfig['colors']['secondary'])->toBe('#6c757d');
-            /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
             expect($mergedConfig['fonts']['main'])->toBe('Arial');
-            /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
             expect($mergedConfig['fonts']['heading'])->toBe('Georgia');
         });
     });
 
-    describe('UI Rendering Business Rules', function (): void {
-        it('enforces view compilation rules', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+    describe('UI Rendering Business Rules', function () {
+        it('enforces view compilation rules', function () {
+            $component = Component::factory()->create([
                 'name' => 'view-component',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'view_path' => 'components.test-component',
                 'is_active' => true,
@@ -457,11 +390,9 @@ describe('UI Business Logic Integration', function (): void {
             expect($component->is_active)->toBeTrue();
         });
 
-        it('enforces component data binding', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+        it('enforces component data binding', function () {
+            $component = Component::factory()->create([
                 'name' => 'data-component',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'data_schema' => [
                     'title' => 'string',
@@ -478,16 +409,14 @@ describe('UI Business Logic Integration', function (): void {
 
             // Verifica che i tipi di dati siano validi
             $validTypes = ['string', 'text', 'array', 'object', 'number', 'boolean'];
-            foreach ($component->data_schema as $type) {
+            foreach ($component->data_schema as $field => $type) {
                 expect($validTypes)->toContain($type);
             }
         });
 
-        it('enforces responsive design rules', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+        it('enforces responsive design rules', function () {
+            $component = Component::factory()->create([
                 'name' => 'responsive-component',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'responsive_breakpoints' => [
                     'mobile' => 'max-width: 768px',
@@ -513,11 +442,9 @@ describe('UI Business Logic Integration', function (): void {
         });
     });
 
-    describe('Performance and Optimization Business Rules', function (): void {
-        it('enforces asset bundling rules', function (): void {
-            /** @phpstan-ignore-next-line property.notFound */
+    describe('Performance and Optimization Business Rules', function () {
+        it('enforces asset bundling rules', function () {
             $theme = $this->theme;
-            /** @var \Illuminate\Database\Eloquent\Collection */
             $cssAssets = Asset::factory()
                 ->count(3)
                 ->create([
@@ -526,7 +453,6 @@ describe('UI Business Logic Integration', function (): void {
                     'should_bundle' => true,
                 ]);
 
-            /** @var \Illuminate\Database\Eloquent\Collection */
             $jsAssets = Asset::factory()
                 ->count(2)
                 ->create([
@@ -552,11 +478,9 @@ describe('UI Business Logic Integration', function (): void {
             expect($bundledJsCount)->toBeLessThan($jsAssets->count());
         });
 
-        it('enforces lazy loading rules', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+        it('enforces lazy loading rules', function () {
+            $component = Component::factory()->create([
                 'name' => 'lazy-component',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'supports_lazy_loading' => true,
                 'lazy_loading_threshold' => 0.5,
@@ -571,11 +495,9 @@ describe('UI Business Logic Integration', function (): void {
             expect($component->lazy_loading_threshold)->toBe(0.5);
         });
 
-        it('enforces caching strategies', function (): void {
-            /** @var \Illuminate\Database\Eloquent\Collection */
-            $component = Component/** @phpstan-ignore-line */ ::factory()->create([
+        it('enforces caching strategies', function () {
+            $component = Component::factory()->create([
                 'name' => 'cacheable-ui-component',
-                /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
                 'cache_strategy' => 'aggressive',
                 'cache_duration' => 7200,

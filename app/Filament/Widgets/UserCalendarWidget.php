@@ -19,10 +19,10 @@ class UserCalendarWidget extends Widget
 
     public function getActionName(string $function): string
     {
-        $action_suffix = Str::of((string) $function)->studly()->append('Action')->toString();
+        $action_suffix = Str::of($function)->studly()->append('Action')->toString();
         $resource = XotData::make()->getUserResourceClassByType($this->type);
         $model = $resource::getModel();
-        $action = Str::of((string) $model)
+        $action = Str::of($model)
             ->replace('\Models\\', '\Actions\\')
             ->append('\Calendar\\'.$action_suffix)
             ->toString();
@@ -30,41 +30,19 @@ class UserCalendarWidget extends Widget
         return $action;
     }
 
-    /**
-     * @return array<string, mixed>
-     */
-    /** @phpstan-ignore-next-line return.type */
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
-        $actionInstance = app($action);
-        if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
-            $result = $actionInstance->execute($fetchInfo);
-
-            return is_array($result) ? $result : [];
-        }
-
-        return [];
+        return app($action)->execute($fetchInfo);
     }
 
-    /**
-     * @return array<string, mixed>
-     */
-    /** @phpstan-ignore-next-line return.type */
     public function getFormSchema(): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
-        /** @var array<string, mixed> $schema */
-        $schema = [];
-
         if (class_exists($action)) {
-            $actionInstance = app($action);
-            if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
-                $result = $actionInstance->execute();
-                $schema = is_array($result) ? $result : [];
-            }
+            return app($action)->execute();
         }
 
         // Fallback schema
