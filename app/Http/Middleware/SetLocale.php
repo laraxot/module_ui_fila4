@@ -27,6 +27,7 @@ class SetLocale
         App::setLocale($locale);
 
         $response = $next($request);
+
         return $response instanceof Response ? $response : response((string) $response);
     }
 }
