@@ -17,11 +17,18 @@ class GroupColumn extends Column
 
     protected string $view = 'ui::filament.tables.columns.group';
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getFields(): array
     {
+        /** @var array<string, mixed> */
         return $this->schema;
     }
 
+    /**
+     * @param array<int, Column> $form
+     */
     public function schema(array $form): self
     {
         $this->schema = $form;

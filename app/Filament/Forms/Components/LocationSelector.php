@@ -166,13 +166,13 @@ class LocationSelector extends Group
         return [
             // Campo Regione
             Select::make($this->regionFieldName)
-                ->label($this->labels['region'])
-                ->placeholder($this->placeholders['region'])
+                ->label((string) $this->labels['region'])
+                ->placeholder((string) $this->placeholders['region'])
                 ->options($this->getRegionOptions())
                 ->searchable($this->searchable)
                 ->required($this->required)
                 ->live()
-                ->afterStateUpdated(function (Set $set) {
+                ->afterStateUpdated(function (Set $set): void {
                     // Reset province e cap quando cambia la regione
                     $set($this->provinceFieldName, null);
                     $set($this->capFieldName, null);
@@ -180,8 +180,8 @@ class LocationSelector extends Group
                 ->helperText(__('ui::location_selector.region.help')),
             // Campo Provincia
             Select::make($this->provinceFieldName)
-                ->label($this->labels['province'])
-                ->placeholder($this->placeholders['province'])
+                ->label((string) $this->labels['province'])
+                ->placeholder((string) $this->placeholders['province'])
                 ->options(function (Get $get): array {
                     $region = $get($this->regionFieldName);
 
@@ -191,15 +191,15 @@ class LocationSelector extends Group
                 ->required($this->required)
                 ->live()
                 ->disabled(fn (Get $get): bool => ! $get($this->regionFieldName))
-                ->afterStateUpdated(function (Set $set) {
+                ->afterStateUpdated(function (Set $set): void {
                     // Reset cap quando cambia la provincia
                     $set($this->capFieldName, null);
                 })
                 ->helperText(__('ui::location_selector.province.help')),
             // Campo CAP
             Select::make($this->capFieldName)
-                ->label($this->labels['cap'])
-                ->placeholder($this->placeholders['cap'])
+                ->label((string) $this->labels['cap'])
+                ->placeholder((string) $this->placeholders['cap'])
                 ->options(function (Get $get): array {
                     $region = $get($this->regionFieldName);
                     $province = $get($this->provinceFieldName);
@@ -389,14 +389,21 @@ class LocationSelector extends Group
                 return null;
             }
 
+            $regione = is_array($comune->regione) ? $comune->regione : [];
+            $provincia = is_array($comune->provincia) ? $comune->provincia : [];
+            
             return [
                 'region' => [
-                    'code' => $comune->regione['codice'] ?? null,
-                    'name' => $comune->regione['nome'] ?? null,
+                    /* @phpstan-ignore-next-line nullCoalesce.offset */
+                    'code' => $regione['codice'] ?? null,
+                    /* @phpstan-ignore-next-line nullCoalesce.offset */
+                    'name' => $regione['nome'] ?? null,
                 ],
                 'province' => [
-                    'code' => $comune->provincia['codice'] ?? null,
-                    'name' => $comune->provincia['nome'] ?? null,
+                    /* @phpstan-ignore-next-line nullCoalesce.offset */
+                    'code' => $provincia['codice'] ?? null,
+                    /* @phpstan-ignore-next-line nullCoalesce.offset */
+                    'name' => $provincia['nome'] ?? null,
                 ],
                 /** @phpstan-ignore offsetAccess.nonOffsetAccessible */
                 'cap' => $state[$this->capFieldName] ?? null,

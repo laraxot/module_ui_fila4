@@ -26,6 +26,7 @@ class SetLocale
         // Imposta la lingua
         App::setLocale($locale);
 
-        return $next($request);
+        $response = $next($request);
+        return $response instanceof Response ? $response : response((string) $response);
     }
 }
