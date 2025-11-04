@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\UI\App\Livewire\Components\Map;
+namespace Modules\UI\Livewire\Components\Map;
 
 use Exception;
 use Livewire\Component;
