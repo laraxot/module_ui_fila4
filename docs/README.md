@@ -65,6 +65,37 @@ class UserCalendarWidget extends XotBaseWidget
 ### 📱 **TableLayoutEnum System**
 ```php
 // Sistema layout tabelle responsive
+enum TableLayoutEnum: string
+{
+    case LIST = 'list';
+    case GRID = 'grid';
+}
+```
+
+## 🔧 Correzioni Recenti (2025-11-04)
+
+### PSR-4 Namespace Fix
+- ✅ **InteractiveMap.php**: Corretto namespace da `Modules\UI\App\Livewire` a `Modules\UI\Livewire`
+
+**Regola Laraxot:** I namespace NON includono il segmento `app/`!
+
+```php
+// ❌ SBAGLIATO
+namespace Modules\UI\App\Livewire\Components\Map;
+
+// ✅ CORRETTO
+namespace Modules\UI\Livewire\Components\Map;
+```
+
+### File Corretti
+- `app/Livewire/Components/Map/InteractiveMap.php` - PSR-4 compliance
+
+**Riferimenti:**
+- [PSR-4 Autoloading Rules](../../Xot/docs/namespace-conventions.md)
+- [Merge Conflict Resolution](../../Xot/docs/merge-conflict-resolution-2025-11-04.md)
+
+---
+
 # Modulo UI - Documentazione
 
 ## Panoramica
@@ -74,7 +105,7 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 - Componenti Blade riutilizzabili
 - Widget Filament personalizzati
 - Gestione orari di apertura
-- Componenti calendario
+- Componenti calendario (InteractiveMap)
 - Utility di interfaccia
 - **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
 
