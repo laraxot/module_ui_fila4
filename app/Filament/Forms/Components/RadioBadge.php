@@ -32,12 +32,25 @@ class RadioBadge extends Radio
             return null;
         }
         $enumClass = $this->options;
-        Assert::isInstanceOf($enumClass, BackedEnum::class);
-        Assert::implementsInterface($enumClass, HasColor::class);
-        Assert::implementsInterface($enumClass, HasIcon::class);
+        
+        // Check if the class is a BackedEnum
+        if (! is_subclass_of($enumClass, BackedEnum::class)) {
+            return null;
+        }
+        
+        // Check if the class implements the required interfaces
+        if (! is_subclass_of($enumClass, HasColor::class) || ! is_subclass_of($enumClass, HasIcon::class)) {
+            return null;
+        }
+        
         $res = $enumClass::tryFrom($value);
-
-        return $res;
+        
+        // Ensure the result implements the required interfaces
+        if ($res instanceof BackedEnum && $res instanceof HasColor && $res instanceof HasIcon) {
+            return $res;
+        }
+        
+        return null;
     }
 
     public function getColorForOption(string $value): string

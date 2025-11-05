@@ -22,7 +22,7 @@ trait TableLayoutTrait
         $layout = Session::get($sessionKey);
 
         if ($layout && in_array($layout, TableLayoutEnum::cases(), strict: true)) {
-            return TableLayoutEnum::from($layout);
+            return TableLayoutEnum::from(is_string($layout) || is_int($layout) ? $layout : $layout->value);
         }
 
         return TableLayoutEnum::GRID;

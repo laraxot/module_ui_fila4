@@ -23,6 +23,7 @@ class IconPicker extends TextInput
 
         $packs = array_keys($icons);
         // $packs = $icons->toCollection()->keys()->toArray();
+        Assert::isArray($packs, 'Packs must be an array');
         $packs = array_combine($packs, $packs);
         // dddx($icons->toCollection()->get('heroicons')->toArray());
 

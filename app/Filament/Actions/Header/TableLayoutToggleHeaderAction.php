@@ -25,9 +25,15 @@ class TableLayoutToggleHeaderAction extends Action
             // ->tooltip(trans('setting::database_connection.actions.database-backup.tooltip'))
             // ->icon(trans('setting::database_connection.actions.database-backup.icon'))
             // ->icon($this->list_icon)
-            ->icon(fn ($livewire) => $livewire->layoutView === 'list' ? $this->list_icon : $this->grid_icon)
+            ->icon(function ($livewire) {
+                if (is_object($livewire) && property_exists($livewire, 'layoutView') && is_string($livewire->layoutView)) {
+                    return $livewire->layoutView === 'list' ? $this->list_icon : $this->grid_icon;
+                }
+
+                return $this->grid_icon;
+            })
             ->action(function ($livewire) {
-                if ($livewire !== null) {
+                if (is_object($livewire) && property_exists($livewire, 'layoutView') && is_string($livewire->layoutView)) {
                     $livewire->layoutView = $livewire->layoutView === 'grid' ? 'list' : 'grid';
                 }
             });

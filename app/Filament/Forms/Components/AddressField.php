@@ -61,13 +61,20 @@ class AddressField extends Field
         $record = $this->getRecord();
         $relationship = $record->{$this->getRelationship()}();
 
-        if ($relationship === null) {
+        if ($relationship === null || !is_object($relationship)) {
             return;
         }
-        if ($address = $relationship->first()) {
-            $address->update($state);
-        } else {
-            $relationship->updateOrCreate($state);
+
+        if (method_exists($relationship, 'first')) {
+            if ($address = $relationship->first()) {
+                if (is_object($address) && method_exists($address, 'update')) {
+                    $address->update($state);
+                }
+            } else {
+                if (method_exists($relationship, 'updateOrCreate')) {
+                    $relationship->updateOrCreate($state);
+                }
+            }
         }
 
         if ($record instanceof Model) {

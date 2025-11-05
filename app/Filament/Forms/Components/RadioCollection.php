@@ -59,7 +59,11 @@ class RadioCollection extends Field
     {
         $options = $this->evaluate($this->options);
 
-        return $options;
+        if ($options instanceof Collection) {
+            return $options;
+        }
+
+        return collect([]);
     }
 
     /**

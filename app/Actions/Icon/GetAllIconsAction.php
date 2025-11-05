@@ -39,12 +39,27 @@ class GetAllIconsAction
             return [];
         }
 
-        $icons = Arr::map($icons, function (array $set, array|string $name) {
+        $icons = Arr::map($icons, function (array $set, string $name): array {
             $set['name'] = $name;
             $icons = [];
 
-            foreach ($set['paths'] as $path) {
-                foreach (File::allFiles($path) as $file) {
+            $paths = $set['paths'] ?? [];
+            if (! is_iterable($paths)) {
+                $paths = [];
+            }
+
+            foreach ($paths as $path) {
+                // Ensure $path is a string before using File::allFiles
+                if (! is_string($path)) {
+                    continue;
+                }
+
+                $files = File::allFiles($path);
+                if (! is_iterable($files)) {
+                    continue;
+                }
+
+                foreach ($files as $file) {
                     // Simply ignore files that aren't SVGs
                     if ($file->getExtension() !== 'svg') {
                         continue;
@@ -57,7 +72,9 @@ class GetAllIconsAction
                         ->basename('.svg')
                         ->toString();
 
-                    $icons[] = $set['prefix'].'-'.$iconName;
+                    // Ensure both values are strings before concatenation
+                    $prefix = is_string($set['prefix'] ?? null) ? $set['prefix'] : '';
+                    $icons[] = $prefix.'-'.$iconName;
                 }
             }
             $set['icons'] = $icons;

@@ -21,28 +21,36 @@ class UserCalendarWidget extends Widget
     {
         $action_suffix = Str::of($function)->studly()->append('Action')->toString();
         $resource = XotData::make()->getUserResourceClassByType($this->type);
-        $model = $resource::getModel();
+        $model = is_object($resource) ? $resource::getModel() : '';
         $action = Str::of($model)
-            ->replace('\Models\\', '\Actions\\')
-            ->append('\Calendar\\'.$action_suffix)
+            ->replace('\\Models\\', '\\Actions\\')
+            ->append('\\Calendar\\'.$action_suffix)
             ->toString();
 
-        return $action;
+        return is_string($action) ? $action : '';
     }
 
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
-        return app($action)->execute($fetchInfo);
+        if (class_exists($action) && method_exists(app($action), 'execute')) {
+            $result = app($action)->execute($fetchInfo);
+
+            return is_array($result) ? $result : [];
+        }
+
+        return [];
     }
 
     public function getFormSchema(): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
-        if (class_exists($action)) {
-            return app($action)->execute();
+        if (class_exists($action) && method_exists(app($action), 'execute')) {
+            $result = app($action)->execute();
+
+            return is_array($result) ? $result : [];
         }
 
         // Fallback schema

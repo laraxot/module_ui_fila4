@@ -26,6 +26,12 @@ class SetLocale
         // Imposta la lingua
         App::setLocale($locale);
 
-        return $next($request);
+        $response = $next($request);
+
+        if ($response instanceof Response) {
+            return $response;
+        }
+
+        throw new \RuntimeException('Middleware must return a response');
     }
 }

@@ -24,7 +24,9 @@ class GroupColumn extends Column
 
     public function schema(array $form): self
     {
-        $this->schema = $form;
+        $this->schema = array_filter($form, function ($item) {
+            return $item instanceof Column;
+        });
 
         return $this;
     }

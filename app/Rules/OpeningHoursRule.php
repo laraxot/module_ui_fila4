@@ -40,6 +40,11 @@ class OpeningHoursRule implements ValidationRule
                 continue;
             }
 
+            // PHPStan L10: Type narrowing for $dayLabel
+            if (! is_string($dayLabel)) {
+                $dayLabel = (string) $dayLabel;
+            }
+
             // Valida ogni sessione (mattina e pomeriggio)
             $this->validateSession($dayHours, 'morning', $dayLabel, $fail);
             $this->validateSession($dayHours, 'afternoon', $dayLabel, $fail);

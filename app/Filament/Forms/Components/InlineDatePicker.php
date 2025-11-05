@@ -55,15 +55,18 @@ class InlineDatePicker extends DatePicker
 
         // Hydration/Dehydration del valore
         $this->afterStateHydrated(static function (self $component, $state): void {
-            if ($state) {
+            if ($state && is_string($state)) {
                 $date = Carbon::parse($state);
                 $component->currentViewMonth = $date->format('Y-m');
             }
         });
 
-        $this->dehydrateStateUsing(static fn (self $_component, $state) => $state
-            ? Carbon::parse($state)->format('Y-m-d')
-            : null);
+        $this->dehydrateStateUsing(static function (self $_component, $state) {
+            if ($state && is_string($state)) {
+                return Carbon::parse($state)->format('Y-m-d');
+            }
+            return null;
+        });
     }
 
     /**
@@ -135,7 +138,12 @@ class InlineDatePicker extends DatePicker
         $dates = $this->evaluate($this->enabledDates) ?? [];
 
         /** @phpstan-ignore return.type, argument.templateType, argument.templateType */
-        return collect($dates)->map(fn ($date): string => Carbon::parse($date)->format('Y-m-d'));
+        return collect($dates)->map(function ($date): string {
+            if (is_string($date) || is_numeric($date)) {
+                return Carbon::parse($date)->format('Y-m-d');
+            }
+            return '';
+        });
     }
 
     /**
@@ -178,8 +186,10 @@ class InlineDatePicker extends DatePicker
                 $isSelected = false;
                 try {
                     $state = $this->getState();
-                    /** @phpstan-ignore argument.type */
-                    $isSelected = $state && $currentDay->isSameDay(Carbon::parse($state));
+                    if ($state && (is_string($state) || is_numeric($state))) {
+                        /** @phpstan-ignore argument.type */
+                        $isSelected = $state && $currentDay->isSameDay(Carbon::parse($state));
+                    }
                 } catch (Throwable $e) {
                     $isSelected = false;
                 }

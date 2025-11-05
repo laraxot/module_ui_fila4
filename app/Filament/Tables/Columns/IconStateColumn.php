@@ -24,9 +24,24 @@ class IconStateColumn extends IconColumn
     {
         parent::setUp();
         // $this->getStateUsing(fn() => true); // the column requires a state to be passed to it
-        $this->icon(fn ($state): ?string => $state?->icon());
-        $this->color(fn ($state): ?string => $state?->color());
-        $this->tooltip(fn ($state): ?string => $state?->label());
+        $this->icon(function ($state): ?string {
+            if (is_object($state) && method_exists($state, 'icon')) {
+                return $state->icon();
+            }
+            return null;
+        });
+        $this->color(function ($state): ?string {
+            if (is_object($state) && method_exists($state, 'color')) {
+                return $state->color();
+            }
+            return null;
+        });
+        $this->tooltip(function ($state): ?string {
+            if (is_object($state) && method_exists($state, 'label')) {
+                return $state->label();
+            }
+            return null;
+        });
         // $this->label('aaa');
 
         $this->action(
@@ -37,9 +52,11 @@ class IconStateColumn extends IconColumn
                             $name = $this->getName();
                             $state = $record->getAttribute($name);
                             if ($state === null) {
-                                $states = Arr::wrap($record->getDefaultStateFor($name));
+                                $defaultStates = $record->getDefaultStateFor($name);
+                                $states = Arr::wrap($defaultStates);
 
-                                return array_combine($states, $states);
+                                /** @phpstan-ignore argument.type */
+                                return is_array($states) ? array_combine($states, $states) : [];
                             }
                             Assert::isInstanceOf($state, State::class);
 
@@ -65,26 +82,37 @@ class IconStateColumn extends IconColumn
                         $newState = $get('state');
                         $name = $this->getName();
                         $state = $record->getAttribute($name);
-                        $states = $state::getStateMapping();
-                        /** @var class-string<State> $newStateClass */
-                        $newStateClass = Arr::get($states, (string) $newState);
-                        if (! is_string($newStateClass) || ! class_exists($newStateClass)) {
-                            return false;
-                        }
-                        $newStateInstance = new $newStateClass($record);
+                        if (is_object($state) && method_exists($state, 'getStateMapping')) {
+                            $states = $state::getStateMapping();
+                            /** @var class-string<State> $newStateClass */
+                            $newStateClass = Arr::get($states, (string) $newState);
+                            if (! is_string($newStateClass) || ! class_exists($newStateClass)) {
+                                return false;
+                            }
+                            $newStateInstance = new $newStateClass($record);
 
-                        return method_exists($newStateInstance, 'isMessageRequired')
-                            ? $newStateInstance->isMessageRequired()
-                            : false;
+                            return method_exists($newStateInstance, 'isMessageRequired')
+                                ? $newStateInstance->isMessageRequired()
+                                : false;
+                        }
+                        return false;
                     }),
                 ])
-                ->fillForm(fn ($record) => [
-                    'state' => $record->state::$name,
-                ])
+                ->fillForm(function ($record) {
+                    $name = $this->getName();
+                    $state = $record->getAttribute($name);
+                    
+                    return [
+                        'state' => is_object($state) ? get_class($state) : null,
+                    ];
+                })
                 ->action(function ($record, $data) {
                     $state = $data['state'];
                     $model = Str::of(class_basename($record))->slug()->toString();
-                    Assert::string($label = __('pub_theme::'.$model.'_states.'.$state.'.label'));
+                    $label = __('pub_theme::'.$model.'_states.'.$state.'.label');
+                    if (!is_object($record->state) || !method_exists($record->state, 'transitionTo')) {
+                        throw new Exception('State property does not support transitions');
+                    }
                     $record->state->transitionTo($data['state'], $data['message']);
                     Notification::make()
                         ->title('Stato aggiornato a '.$label)

@@ -20,14 +20,17 @@ class SelectState extends Select
             $name = $this->getName();
             if (is_null($record)) {
                 $model = $this->getModel();
-                $states = Arr::wrap(app($model)->getDefaultStateFor($name));
+                if (is_string($model) && class_exists($model)) {
+                    $states = Arr::wrap(app($model)->getDefaultStateFor($name));
 
-                /**
-                 * @var array<int|string>
-                 *
-                 * @phpstan-ignore argument.type
-                 */
-                return array_combine($states, $states);
+                    /**
+                     * @var array<int|string>
+                     *
+                     * @phpstan-ignore argument.type
+                     */
+                    return array_combine($states, $states);
+                }
+                return [];
             }
 
             $states = $record->getStatesFor($name)->toArray();
