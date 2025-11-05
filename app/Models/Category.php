@@ -11,24 +11,24 @@ use Modules\Xot\Models\BaseModel;
  * FormBuilder module not available - extending from XotBaseModel instead.
  */
 /**
- * @property string                                      $id
- * @property string                                      $title
- * @property string                                      $slug
- * @property int|null                                    $parent_id
- * @property \Illuminate\Support\Carbon|null             $created_at
- * @property \Illuminate\Support\Carbon|null             $updated_at
- * @property string|null                                 $description
- * @property string|null                                 $icon
- * @property string|null                                 $updated_by
- * @property string|null                                 $created_by
- * @property \Illuminate\Support\Carbon|null             $deleted_at
- * @property string|null                                 $deleted_by
- * @property int                                         $is_active
- * @property int                                         $sort_order
+ * @property string $id
+ * @property string $title
+ * @property string $slug
+ * @property int|null $parent_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $description
+ * @property string|null $icon
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property string|null $deleted_by
+ * @property int $is_active
+ * @property int $sort_order
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
- * @method static \Modules\UI\Database\Factories\CategoryFactory         factory($count = null, $state = [])
+ * @method static \Modules\UI\Database\Factories\CategoryFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Category newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Category newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Category query()

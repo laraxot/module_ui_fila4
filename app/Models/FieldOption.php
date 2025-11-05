@@ -14,7 +14,7 @@ use Modules\Xot\Models\BaseModel;
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
- * @method static \Modules\UI\Database\Factories\FieldOptionFactory         factory($count = null, $state = [])
+ * @method static \Modules\UI\Database\Factories\FieldOptionFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FieldOption newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FieldOption newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FieldOption query()
