@@ -15,43 +15,19 @@ return [
                 'label' => 'Destinatario',
                 'placeholder' => 'Inserisci l\'indirizzo email del destinatario',
                 'helper_text' => 'L\'email verrà inviata a questo indirizzo',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'description' => 'Indirizzo email del destinatario',
-=======
-                'description' => 'Indirizzo email del destinatario'
->>>>>>> 727968c (.)
-=======
-                'description' => 'Indirizzo email del destinatario',
->>>>>>> ef3c5fa (.)
             ],
             'subject' => [
                 'label' => 'Oggetto',
                 'placeholder' => 'Inserisci l\'oggetto dell\'email',
                 'helper_text' => 'L\'oggetto apparirà nella casella di posta del destinatario',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'description' => 'Oggetto dell\'email',
-=======
-                'description' => 'Oggetto dell\'email'
->>>>>>> 727968c (.)
-=======
-                'description' => 'Oggetto dell\'email',
->>>>>>> ef3c5fa (.)
             ],
             'body_html' => [
                 'label' => 'Contenuto',
                 'placeholder' => 'Inserisci il contenuto dell\'email',
                 'helper_text' => 'Il contenuto può includere formattazione HTML',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'description' => 'Contenuto dell\'email',
-=======
-                'description' => 'Contenuto dell\'email'
->>>>>>> 727968c (.)
-=======
-                'description' => 'Contenuto dell\'email',
->>>>>>> ef3c5fa (.)
             ],
         ],
         'actions' => [
@@ -72,12 +48,4 @@ return [
             'email_sent_error' => 'Errore durante l\'invio dell\'email',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
-=======
-]; 
->>>>>>> 727968c (.)
-=======
-];
->>>>>>> ef3c5fa (.)

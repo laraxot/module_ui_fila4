@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Feature;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
 use Modules\UI\Filament\Widgets\GroupWidget;
@@ -20,23 +16,6 @@ use Modules\UI\Filament\Widgets\StatWithIconWidget;
 use Modules\UI\Filament\Widgets\TestChartWidget;
 use Modules\UI\Filament\Widgets\UserCalendarWidget;
 use Tests\TestCase;
-<<<<<<< HEAD
-=======
-use Modules\UI\Filament\Widgets\RowWidget;
-use Modules\UI\Filament\Widgets\StatWithIconWidget;
-use Modules\UI\Filament\Widgets\OverlookWidget;
-use Modules\UI\Filament\Widgets\HeroWidget;
-use Modules\UI\Filament\Widgets\TestChartWidget;
-use Modules\UI\Filament\Widgets\StatsOverviewWidget;
-use Modules\UI\Filament\Widgets\GroupWidget;
-use Modules\UI\Filament\Widgets\RedirectWidget;
-use Modules\UI\Filament\Widgets\UserCalendarWidget;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Livewire\Livewire;
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 
 class WidgetBusinessLogicTest extends TestCase
 {
@@ -53,15 +32,7 @@ class WidgetBusinessLogicTest extends TestCase
         $this->assertNotNull($widget);
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(RowWidget::class, $widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget abbia le proprietà necessarie
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
@@ -80,15 +51,7 @@ class WidgetBusinessLogicTest extends TestCase
         $this->assertNotNull($widget);
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(StatWithIconWidget::class, $widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget abbia le proprietà necessarie
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
@@ -109,15 +72,7 @@ class WidgetBusinessLogicTest extends TestCase
         $this->assertNotNull($widget);
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(OverlookWidget::class, $widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget abbia le proprietà necessarie
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
@@ -136,15 +91,7 @@ class WidgetBusinessLogicTest extends TestCase
         $this->assertNotNull($widget);
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(HeroWidget::class, $widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget abbia le proprietà necessarie
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
@@ -159,10 +106,6 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new TestChartWidget;
 
         // Act & Assert
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
         static::assertNotNull($widget);
         static::assertInstanceOf(TestChartWidget::class, $widget);
 
@@ -171,17 +114,6 @@ class WidgetBusinessLogicTest extends TestCase
         static::assertIsString($widget->getHeading());
         /** @phpstan-ignore-next-line method.nonObject */
         static::assertIsString($widget->getDescription());
-<<<<<<< HEAD
-=======
-        $this->assertNotNull($widget);
-        $this->assertInstanceOf(TestChartWidget::class, $widget);
-        
-        // Verifica che il widget abbia le proprietà necessarie
-        $this->assertIsString($widget->getHeading());
-        $this->assertIsString($widget->getDescription());
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     }
 
     /** @test */
@@ -195,15 +127,7 @@ class WidgetBusinessLogicTest extends TestCase
         $this->assertNotNull($widget);
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(StatsOverviewWidget::class, $widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget abbia le proprietà necessarie
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
@@ -220,15 +144,7 @@ class WidgetBusinessLogicTest extends TestCase
         $this->assertNotNull($widget);
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(GroupWidget::class, $widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget abbia le proprietà necessarie
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
@@ -245,15 +161,7 @@ class WidgetBusinessLogicTest extends TestCase
         $this->assertNotNull($widget);
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(RedirectWidget::class, $widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget abbia le proprietà necessarie
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
@@ -272,15 +180,7 @@ class WidgetBusinessLogicTest extends TestCase
         $this->assertNotNull($widget);
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(UserCalendarWidget::class, $widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget abbia le proprietà necessarie
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
@@ -315,15 +215,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget gestisca dati vuoti senza errori
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
@@ -338,15 +230,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget sia compatibile con Livewire
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -380,15 +264,7 @@ class WidgetBusinessLogicTest extends TestCase
         $this->assertNotNull($widget->getHeading());
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget->getSubheading());
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che le proprietà richieste non siano vuote
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotEmpty($widget->getHeading());
@@ -422,15 +298,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti comportamento responsive
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsArray($widget->getColumns());
@@ -445,15 +313,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti funzionalità interattive
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'getData'));
@@ -468,15 +328,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget gestisca stati di errore
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -491,15 +343,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget gestisca stati di caricamento
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -514,15 +358,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget gestisca stati vuoti
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -537,15 +373,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti azioni personalizzate
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -560,15 +388,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti aggiornamento dati
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'getData'));
@@ -583,15 +403,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti eventi personalizzati
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -606,15 +418,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti funzionalità di accessibilità
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -629,15 +433,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti internazionalizzazione
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -652,15 +448,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti personalizzazione tema
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -675,15 +463,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti ottimizzazioni performance
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -698,15 +478,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti funzionalità di sicurezza
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -721,15 +493,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti logging e monitoring
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -744,15 +508,7 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti backup e recovery
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
@@ -767,24 +523,9 @@ class WidgetBusinessLogicTest extends TestCase
         // Act & Assert
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         // Verifica che il widget supporti funzionalità di scalabilità
         /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
