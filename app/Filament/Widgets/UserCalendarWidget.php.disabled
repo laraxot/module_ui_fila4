@@ -39,6 +39,7 @@ class UserCalendarWidget extends FullCalendarWidget
     {
         $action = $this->getActionName(__FUNCTION__);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b55470f (.)
 
@@ -77,6 +78,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> e6782b2 (.)
 =======
 >>>>>>> b55470f (.)
+=======
+>>>>>>> 6be0161 (.)
         return app($action)->execute($fetchInfo);
     }
 
@@ -120,6 +123,7 @@ class UserCalendarWidget extends FullCalendarWidget
         // dd('test');
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b55470f (.)
         
@@ -160,6 +164,8 @@ class UserCalendarWidget extends FullCalendarWidget
 <<<<<<< HEAD
 =======
 >>>>>>> e6782b2 (.)
+=======
+>>>>>>> 6be0161 (.)
 }
 =======
 }
