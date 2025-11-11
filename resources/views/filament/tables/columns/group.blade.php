@@ -22,47 +22,24 @@ declare(strict_types=1);
     @foreach ($fields as $field)
      
         @php
-        /*
-        dddx([
-            'field'=>$field,
-            'state'=>$field->getStateFromRecord($record),
-            'field_methods'=>get_class_methods($field),
-            'record'=>$record,
-        ]);
-        */
-            /*
-            $state=$field->record($record)->getState();
-            if($state==null){
+            $name = $field->getName();
+            $value = $record->getAttribute($name);
+            
+            // Skip empty values to save space
+            if (empty($value) && $value !== 0 && $value !== '0') {
                 continue;
             }
-            */
-            /*
-            try{
-                $out=str_replace(', ',',<br/>',$state).'<br/>';
-            }catch(\TypeError $e){
-                $out=$field->record($record)->render();
-            }
-            */
-            //$out=$field->record($record)->render();
-            /*
-            $field_record=$field->record($record);
-             try{
-            $out = $field_record->toHtmlString();
-             }catch(\LogicException $e){
-                $out = $e->getMessage();
-             }
-             */
-             $name=$field->getName();
-             $out=$record->getAttribute($name);
-             /*
-            dddx([
-                'test'=>$field->toHtmlString(),
-                'field_record'=>$field_record,
-                'methods'=>get_class_methods($field_record),
-            ]);
-            */
+            
+            // Format the value for display
+            $formattedValue = $value;
+            
+            // Add label if the field has one (for better readability)
+            $label = $field->getLabel() ?? $name;
+            $displayText = $label . ': ' . $formattedValue;
         @endphp
-        {!! $out !!}<br/>
+        
+            {!! $displayText !!}<br/>
+        
         
     @endforeach
 </div>
