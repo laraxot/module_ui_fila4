@@ -2,42 +2,12 @@
 # LARAXOT MODULE UI - .GITIGNORE
 # ==============================================
 # Modulo UI Laraxot - Template standardizzato
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Ultimo aggiornamento: 2025-01-31
-=======
 # Ultimo aggiornamento: 2025-01-06
->>>>>>> e6782b2 (.)
-=======
-# Ultimo aggiornamento: 2025-01-06
->>>>>>> b55470f (.)
-=======
-# Ultimo aggiornamento: 2025-01-06
->>>>>>> 6be0161 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/vendor/
-/vendor
-/node_modules/
-/node_modules
-/docs/vendor/
-package-lock.json
-yarn.lock
-composer.lock
-yarn-error.log
-npm-debug.log
-=======
-=======
->>>>>>> b55470f (.)
-=======
->>>>>>> 6be0161 (.)
 vendor/
 /vendor/
 node_modules/
@@ -47,13 +17,6 @@ package-lock.json
 yarn.lock
 yarn-error.log
 composer.lock
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e6782b2 (.)
-=======
->>>>>>> b55470f (.)
-=======
->>>>>>> 6be0161 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -76,18 +39,7 @@ cache/
 *.swp
 *.swo
 *.stackdump
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 *.exe
->>>>>>> e6782b2 (.)
-=======
-*.exe
->>>>>>> b55470f (.)
-=======
-*.exe
->>>>>>> 6be0161 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -99,18 +51,7 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 npm-debug.log
->>>>>>> e6782b2 (.)
-=======
-npm-debug.log
->>>>>>> b55470f (.)
-=======
-npm-debug.log
->>>>>>> 6be0161 (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -181,27 +122,6 @@ docs/phpstan/
 docs/cache/
 
 # ==============================================
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# LANGUAGE FILES
-# ==============================================
-lang/lang/
-resources/lang/
-
-# ==============================================
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-database/Migrations_old/
-database/Seeders_old/
-database/Factories_old/
-database_old/
-=======
-=======
->>>>>>> b55470f (.)
-=======
->>>>>>> 6be0161 (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -215,13 +135,6 @@ database/Factories_old
 database/Factories_
 database_old/
 database_old
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e6782b2 (.)
-=======
->>>>>>> b55470f (.)
-=======
->>>>>>> 6be0161 (.)
 
 # ==============================================
 # MODULE SPECIFIC - UI
