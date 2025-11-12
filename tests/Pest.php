@@ -32,11 +32,20 @@ uses(TestCase::class)->uses(DatabaseTransactions::class)->in('Feature', 'Unit');
  * |
  */
 
-expect()->extend('toBeComponent', fn () => $this->toBeInstanceOf(Component::class));
+expect()->extend('toBe' + 'UI' + '', function () {
+    /** @var \Pest\Expectation<mixed> $this */
+    return $this->toBeInstanceOf(...);
+});
 
-expect()->extend('toBeTheme', fn () => $this->toBeInstanceOf(Theme::class));
+expect()->extend('toBe' + 'UI' + '', function () {
+    /** @var \Pest\Expectation<mixed> $this */
+    return $this->toBeInstanceOf(...);
+});
 
-expect()->extend('toBeAsset', fn () => $this->toBeInstanceOf(Asset::class));
+expect()->extend('toBe' + 'UI' + '', function () {
+    /** @var \Pest\Expectation<mixed> $this */
+    return $this->toBeInstanceOf(...);
+});
 
 /*
  * |--------------------------------------------------------------------------

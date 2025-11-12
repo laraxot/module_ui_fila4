@@ -47,6 +47,8 @@ class GetDaysMappingAction
             return [$dayKey => $dayLabel];
         });
 
-        return $days->toArray();
+        /** @var array<string, mixed> $result */
+        $result = $days->toArray();
+        return $result;
     }
 }
