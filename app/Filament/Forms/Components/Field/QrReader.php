@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace \Filament\Forms\Forms\Components\Field;
+=======
+namespace Modules\Xot\Exceptions\Formatters;
+>>>>>>> 19f3650 (.)
 
 use Modules\Xot\Filament\Forms\Components\XotBaseField;
 
