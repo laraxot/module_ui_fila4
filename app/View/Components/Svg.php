@@ -19,7 +19,12 @@ class Svg extends Component
         // public Post $article,
         // public bool $showAuthor = false,
         public string $tpl = 'v1',
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> 727968c (.)
 
     public function render(): Renderable
     {
