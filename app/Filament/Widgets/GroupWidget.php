@@ -7,11 +7,9 @@ namespace Modules\UI\Filament\Widgets;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Override;
 
-class GroupWidget extends XotBaseWidget
+final class GroupWidget extends XotBaseWidget
 {
-    public array $widgets = [];
-
-    protected static ?string $pollingInterval = null;
+    protected static ?string $heading = 'Group Widget';
 
     #[Override]
     public function getFormSchema(): array

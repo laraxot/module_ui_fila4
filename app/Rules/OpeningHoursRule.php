@@ -13,12 +13,17 @@ use Modules\Xot\Filament\Traits\TransTrait;
 
 use function Safe\preg_match;
 
-class OpeningHoursRule implements ValidationRule
+final class OpeningHoursRule implements ValidationRule
 {
     use TransTrait;
 
     public function validate(string $_attribute, mixed $value, Closure $fail): void
     {
+        // PHPStan L10: Type narrowing per mixed $value
+        if (! is_array($value)) {
+            return;
+        }
+
         $days = app(GetDaysMappingAction::class)->execute();
         /*
          * foreach ($days as $dayKey => $dayLabel) {
@@ -32,20 +37,20 @@ class OpeningHoursRule implements ValidationRule
          * }
          * }
          */
+        if (! is_array($days)) {
+            return;
+        }
+        // Assert::isArray rimosso - già verificato con is_array() sopra
         foreach ($days as $dayKey => $dayLabel) {
-            /**@phpstan-ignore-next-line */
+            // PHPStan L10: $value è array dopo type check sopra
             $dayHours = $value[$dayKey] ?? [];
 
             if (! is_array($dayHours)) {
                 continue;
             }
 
-            // PHPStan L10: Type narrowing for $dayLabel
-            if (! is_string($dayLabel)) {
-                $dayLabel = (string) $dayLabel;
-            }
-
             // Valida ogni sessione (mattina e pomeriggio)
+            // PHPStan L10: $dayLabel è string dal GetDaysMappingAction
             $this->validateSession($dayHours, 'morning', $dayLabel, $fail);
             $this->validateSession($dayHours, 'afternoon', $dayLabel, $fail);
 
@@ -65,7 +70,7 @@ class OpeningHoursRule implements ValidationRule
         // Se ci sono entrambe le sessioni, la chiusura mattina deve essere prima dell'apertura pomeriggio
         if ($morningTo !== null && $afternoonFrom !== null) {
             if ($morningTo >= $afternoonFrom) {
-                $fail(static::trans('validation.morning_before_afternoon', params: ['day' => $dayLabel]));
+                $fail(self::trans('validation.morning_before_afternoon', params: ['day' => $dayLabel]));
             }
         }
     }
@@ -78,8 +83,8 @@ class OpeningHoursRule implements ValidationRule
         $fromKey = "{$session}_from";
         $toKey = "{$session}_to";
         $sessionLabel = $session === 'morning'
-            ? static::trans('validation.opening_hours.morning')
-            : static::trans('validation.opening_hours.afternoon');
+            ? self::trans('validation.opening_hours.morning')
+            : self::trans('validation.opening_hours.afternoon');
 
         $fromTime = $this->cleanTimeValue($dayHours[$fromKey] ?? null);
         $toTime = $this->cleanTimeValue($dayHours[$toKey] ?? null);
@@ -97,7 +102,7 @@ class OpeningHoursRule implements ValidationRule
          */
         // Validazione completezza: se uno è specificato, anche l'altro deve esserlo
         if ($fromTime !== null && $toTime === null) {
-            $fail(static::trans('validation.opening_hours.missing_closing_time', params: [
+            $fail(self::trans('validation.opening_hours.missing_closing_time', params: [
                 'session' => $sessionLabel,
                 'day' => $dayLabel,
             ]));
@@ -106,7 +111,7 @@ class OpeningHoursRule implements ValidationRule
         }
 
         if ($toTime !== null && $fromTime === null) {
-            $fail(static::trans('validation.opening_hours.missing_opening_time', params: [
+            $fail(self::trans('validation.opening_hours.missing_opening_time', params: [
                 'session' => $sessionLabel,
                 'day' => $dayLabel,
             ]));
@@ -117,7 +122,7 @@ class OpeningHoursRule implements ValidationRule
         // Validazione logica: apertura deve essere prima della chiusura
         if ($fromTime !== null && $toTime !== null) {
             if ($fromTime >= $toTime) {
-                $fail(static::trans('validation.opening_hours.opening_before_closing', params: [
+                $fail(self::trans('validation.opening_hours.opening_before_closing', params: [
                     'session' => $sessionLabel,
                     'day' => $dayLabel,
                 ]));

@@ -10,7 +10,7 @@ use Filament\Forms\Components\Field;
 use Illuminate\Support\Collection;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 
-class RadioCollection extends Field
+final class RadioCollection extends Field
 {
     protected string $view = 'ui::filament.forms.components.radio-collection';
 
@@ -92,8 +92,9 @@ class RadioCollection extends Field
     {
         $state = SafeStringCastAction::cast($this->getState());
         $currentValue = (string) $state;
+
+        // PHPStan L10: data_get restituisce mixed, SafeStringCastAction accetta mixed
         $optionData = data_get($option, $this->getValueKey());
-        /** @phpstan-ignore-next-line */
         $optionValue = SafeStringCastAction::cast($optionData);
 
         return $currentValue === $optionValue;

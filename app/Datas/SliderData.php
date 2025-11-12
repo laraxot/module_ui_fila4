@@ -6,7 +6,7 @@ namespace Modules\UI\Datas;
 
 use Spatie\LaravelData\Data;
 
-class SliderData extends Data
+final class SliderData extends Data
 {
     public function __construct(
         public ?string $desktop_thumbnail,

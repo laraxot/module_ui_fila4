@@ -9,7 +9,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 
-class Image
+final class Image
 {
     public static function make(string $name = 'image', string $context = 'form'): Block
     {
@@ -18,9 +18,9 @@ class Image
                 FileUpload::make('image'),
                 TextInput::make('url'),
                 Select::make('ratio')
-                    ->options(static::getRatios())
-                    ->afterStateHydrated(static function ($state, $set) {
-                        if (!$state) {
+                    ->options(self::getRatios())
+                    ->afterStateHydrated(static function ($state, $set): void {
+                        if (is_callable($set) && (! $state)) {
                             $set('ratio', '4-3');
                         }
                     }),
@@ -30,6 +30,9 @@ class Image
             ->columns($context === 'form' ? 2 : 1);
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getRatios(): array
     {
         return [

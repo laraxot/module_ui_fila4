@@ -9,7 +9,7 @@ use Filament\Actions\Action;
 /**
  * @see https://filamentphp.com/plugins/tgeorgel-table-layout-toggle
  */
-class TableLayoutToggleHeaderAction extends Action
+final class TableLayoutToggleHeaderAction extends Action
 {
     // use NavigationActionLabelTrait;
     public string $list_icon = 'heroicon-o-list-bullet';
@@ -26,14 +26,14 @@ class TableLayoutToggleHeaderAction extends Action
             // ->icon(trans('setting::database_connection.actions.database-backup.icon'))
             // ->icon($this->list_icon)
             ->icon(function ($livewire) {
-                if (is_object($livewire) && property_exists($livewire, 'layoutView') && is_string($livewire->layoutView)) {
+                if (is_object($livewire) && isset($livewire->layoutView) && is_string($livewire->layoutView)) {
                     return $livewire->layoutView === 'list' ? $this->list_icon : $this->grid_icon;
                 }
 
                 return $this->grid_icon;
             })
             ->action(function ($livewire) {
-                if (is_object($livewire) && property_exists($livewire, 'layoutView') && is_string($livewire->layoutView)) {
+                if (is_object($livewire) && isset($livewire->layoutView) && is_string($livewire->layoutView)) {
                     $livewire->layoutView = $livewire->layoutView === 'grid' ? 'list' : 'grid';
                 }
             });

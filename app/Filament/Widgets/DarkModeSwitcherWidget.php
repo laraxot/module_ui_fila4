@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Cookie;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Override;
 
-class DarkModeSwitcherWidget extends XotBaseWidget
+final class DarkModeSwitcherWidget extends XotBaseWidget
 {
     public ?array $data = [];
 

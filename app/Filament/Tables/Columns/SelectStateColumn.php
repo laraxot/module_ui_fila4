@@ -5,58 +5,152 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Tables\Columns;
 
 use Exception;
-use Filament\Tables\Columns\SelectColumn;
+use Modules\Xot\Filament\Tables\Columns\XotBaseSelectColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Spatie\ModelStates\HasStatesContract;
-use Spatie\ModelStates\State;
 
-class SelectStateColumn extends SelectColumn
+final class SelectStateColumn extends XotBaseSelectColumn
 {
     protected function setUp(): void
     {
         parent::setUp();
         //  $this->selectablePlaceholder(false);
-        $this->options(function (Model&HasStatesContract $record, $state): array {
+        $this->options(function (Model&HasStatesContract $record, mixed $state): array {
             $name = $this->getName();
             if ($state === null) {
-                $defaultStates = $record->getDefaultStateFor($name);
-                $states = Arr::wrap($defaultStates);
+                return $this->getDefaultStates($record, $name);
+            }
 
-                /** @phpstan-ignore argument.type */
-                return is_array($states) ? array_combine($states, $states) : [];
-            }
-            try {
-                // $states=$record->getAttribute($name)->transitionableStates();
-                if (is_object($state) && method_exists($state, 'transitionableStates')) {
-                    $states = $state->transitionableStates();
-                } else {
-                    $states = [];
-                }
-            } catch (Exception $e) {
-                $states = $record->getStatesFor($name)->toArray();
-            }
-            
-            if (is_object($state)) {
-                // Check if $name property exists and get its value from the state object
-                // This might be a property name stored in $name variable
-                if (property_exists($state, $name ?? '')) {
-                    $states = [$state->{$name}, ...$states];
-                }
-            }
-            /** @phpstan-ignore argument.type */
-            $states = is_array($states) ? array_combine($states, $states) : [];
-            // dddx(['state'=>$state, 'state1'=>$record->getAttribute($name),'record'=>$record]);
+            $states = $this->getTransitionableStates($record, $state, $name);
+            $states = $this->mergeStateValues($state, $name, $states);
 
-            return $states;
+            return $this->normalizeStates($states);
         });
 
         $this->beforeStateUpdated(function (Model&HasStatesContract $record, $state) {
             $message = '';
-            /** @phpstan-ignore property.notFound */
-            if (property_exists($record, 'state') && is_object($record->state) && method_exists($record->state, 'transitionTo')) {
+            // PHPStan L10: isset() rispetta __get() per Eloquent magic properties
+            if (isset($record->state) && is_object($record->state) && method_exists($record->state, 'transitionTo')) {
                 $record->state->transitionTo($state, $message);
             }
         });
+    }
+
+    /**
+     * Ottiene gli stati di default per il record.
+     *
+     * @return array<string, string>
+     */
+    private function getDefaultStates(Model&HasStatesContract $record, string $name): array
+    {
+        $defaultStates = $record->getDefaultStateFor($name);
+        $states = Arr::wrap($defaultStates);
+        /** @var array<int|string> $stringStates */
+        $stringStates = array_filter($states, 'is_string');
+
+        if (empty($stringStates)) {
+            return [];
+        }
+
+        $result = array_combine($stringStates, $stringStates);
+
+        // Ensure all keys and values are strings
+        $finalResult = [];
+        foreach ($result as $key => $value) {
+            $finalResult[(string) $key] = (string) $value;
+        }
+
+        return $finalResult;
+    }
+
+    /**
+     * Ottiene gli stati transitionabili per il record.
+     *
+     * @return array<int|string>
+     */
+    private function getTransitionableStates(Model&HasStatesContract $record, mixed $state, string $name): array
+    {
+        try {
+            if (is_object($state) && method_exists($state, 'transitionableStates')) {
+                $result = $state->transitionableStates();
+                if (is_array($result)) {
+                    // Filter to ensure only int or string values
+                    return array_filter($result, fn ($item) => is_int($item) || is_string($item));
+                }
+
+                return [];
+            }
+        } catch (Exception $e) {
+            // Fallback: usa getStatesFor se transitionableStates fallisce
+        }
+
+        $result = $record->getStatesFor($name)->toArray();
+        if (is_array($result)) {
+            // Filter to ensure only int or string values
+            return array_filter($result, fn ($item) => is_int($item) || is_string($item));
+        }
+
+        return [];
+    }
+
+    /**
+     * Unisce i valori dello stato con gli stati transitionabili.
+     *
+     * @param  array<int|string>  $states
+     * @return array<int|string>
+     */
+    private function mergeStateValues(mixed $state, string $name, array $states): array
+    {
+        if (! is_object($state)) {
+            return $states;
+        }
+
+        // PHPStan L10: isset() invece di property_exists() - funziona per magic properties
+        if (! isset($state->{$name})) {
+            return $states;
+        }
+
+        $stateValue = $state->{$name};
+        if (is_array($stateValue)) {
+            $filteredStateValues = array_filter($stateValue, fn ($item) => is_int($item) || is_string($item));
+
+            return array_merge($filteredStateValues, $states);
+        }
+
+        if ($stateValue instanceof \Traversable) {
+            $stateArray = iterator_to_array($stateValue);
+            $filteredStateArray = array_filter($stateArray, fn ($item) => is_int($item) || is_string($item));
+
+            return array_merge($filteredStateArray, $states);
+        }
+
+        return $states;
+    }
+
+    /**
+     * Normalizza gli stati in un array associativo con chiavi stringa.
+     *
+     * @param  array<int|string>  $states
+     * @return array<string, string>
+     */
+    private function normalizeStates(array $states): array
+    {
+        /** @var array<int|string> $stringStates */
+        $stringStates = array_filter($states, 'is_string');
+
+        if (empty($stringStates)) {
+            return [];
+        }
+
+        $result = array_combine($stringStates, $stringStates);
+
+        // Ensure all keys and values are strings
+        $finalResult = [];
+        foreach ($result as $key => $value) {
+            $finalResult[(string) $key] = (string) $value;
+        }
+
+        return $finalResult;
     }
 }

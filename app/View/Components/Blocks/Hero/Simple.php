@@ -4,14 +4,25 @@ declare(strict_types=1);
 
 namespace Modules\UI\View\Components\Blocks\Hero;
 
-use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
+use Illuminate\View\Component as ViewComponent;
 
-class Simple extends Component
+class Simple extends ViewComponent
 {
-    public function __construct() {}
-
-    public function render()
+    /**
+     * Create a new component instance.
+     */
+    public function __construct()
     {
-        return view('ui::components.blocks.hero.simple');
+    }
+
+    public function render(): View
+    {
+        /**
+         * @phpstan-var view-string $view
+         */
+        $view = 'ui::components.blocks.hero.simple';
+
+        return view($view);
     }
 }

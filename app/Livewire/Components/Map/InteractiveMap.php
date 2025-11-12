@@ -16,7 +16,7 @@ use Webmozart\Assert\Assert;
  * Fornisce funzionalità per visualizzare marker geografici,
  * filtri dinamici e interazione con la mappa.
  */
-class InteractiveMap extends Component
+final class InteractiveMap extends Component
 {
     public array $center = [45.4642, 9.1900]; // Milano
 
@@ -248,10 +248,13 @@ class InteractiveMap extends Component
 
         if ($enabled) {
             $currentStatus[] = $status;
-        } else {
-            $currentStatus = array_diff($currentStatus, [$status]);
+            $this->filters['status'] = array_unique($currentStatus);
+            $this->loadMarkers();
+
+            return;
         }
 
+        $currentStatus = array_diff($currentStatus, [$status]);
         $this->filters['status'] = array_unique($currentStatus);
         $this->loadMarkers();
     }
@@ -266,10 +269,13 @@ class InteractiveMap extends Component
 
         if ($enabled) {
             $currentPriority[] = $priority;
-        } else {
-            $currentPriority = array_diff($currentPriority, [$priority]);
+            $this->filters['priority'] = array_unique($currentPriority);
+            $this->loadMarkers();
+
+            return;
         }
 
+        $currentPriority = array_diff($currentPriority, [$priority]);
         $this->filters['priority'] = array_unique($currentPriority);
         $this->loadMarkers();
     }

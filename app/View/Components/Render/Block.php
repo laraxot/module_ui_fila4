@@ -6,8 +6,6 @@ namespace Modules\UI\View\Components\Render;
 
 use Exception;
 use Illuminate\Contracts\View\Factory as ViewFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 use Webmozart\Assert\Assert;
@@ -15,22 +13,15 @@ use Webmozart\Assert\Assert;
 /**
  * .
  */
-class Block extends Component
+final class Block extends Component
 {
-    public ?string $view = null;
-
+    /**
+     * @param array<string, mixed> $block
+     */
     public function __construct(
-        public array $block,
-        public ?Model $model = null,
-        public string $tpl = '',
-    ) {
-        $view = Arr::get($this->block, 'data.view', null);
-        if ($view === null) {
-            $view = 'ui::empty';
-        }
-        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
-        $this->view = $view;
-    }
+        public string $view,
+        public array $block = [],
+    ) {}
 
     public function render(): ViewFactory|View
     {
@@ -39,7 +30,8 @@ class Block extends Component
         }
 
         $view = $this->view;
-        if (! view()->exists(is_string($view) ? $view : ((string) $view))) {
+        // PHPStan L10: $view è già string, no need for is_string check
+        if (! view()->exists($view)) {
             $message = 'view not exists ['.$view.'] ! <pre>'.print_r($this->block, true).'</pre>';
             $view_params = [
                 'title' => 'deprecated',
@@ -55,11 +47,6 @@ class Block extends Component
             $view_params = [];
         }
         /** @var array<string, mixed> $view_params */
-        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
-        if (! view()->exists($view)) {
-            throw new Exception('view not found ['.$view.']');
-        }
-
         return view($view, $view_params);
     }
 }

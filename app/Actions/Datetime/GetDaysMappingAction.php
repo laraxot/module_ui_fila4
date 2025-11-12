@@ -8,42 +8,72 @@ use Carbon\Carbon;
 use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
 
-class GetDaysMappingAction
+final class GetDaysMappingAction
 {
     use QueueableAction;
 
+    /**
+     * Execute action to get weekday mapping.
+     *
+     * @return array<string, string>
+     */
     public function execute(): array
     {
-        $days = collect([
+        $weekdays = $this->getWeekdays();
+        $result = [];
+
+        foreach ($weekdays as $day) {
+            $mapping = $this->mapDayToLabel($day);
+            $result = array_merge($result, $mapping);
+        }
+
+        return $result;
+    }
+
+    /**
+     * Get list of weekday constants.
+     *
+     * @return array<int>
+     */
+    private function getWeekdays(): array
+    {
+        return [
             Carbon::MONDAY,
             Carbon::TUESDAY,
             Carbon::WEDNESDAY,
             Carbon::THURSDAY,
             Carbon::FRIDAY,
             Carbon::SATURDAY,
-        ])->mapWithKeys(function ($day) {
-            $carbon = Carbon::create();
-            if ($carbon === null) {
-                throw new RuntimeException('Failed to create Carbon instance');
-            }
+        ];
+    }
 
-            $dayKey = strtolower(
-                $carbon
-                    ->startOfWeek()
-                    ->addDays($day - 1)
-                    ->format('l'),
-            );
+    /**
+     * Map day constant to key-label pair.
+     *
+     * @return array<string, string>
+     */
+    private function mapDayToLabel(int $day): array
+    {
+        $carbon = $this->createCarbonInstance();
+        $dayDate = $carbon->startOfWeek()->addDays($day - 1);
 
-            $dayLabel = ucfirst(
-                $carbon
-                    ->startOfWeek()
-                    ->addDays($day - 1)
-                    ->isoFormat('dddd'),
-            );
+        $dayKey = strtolower($dayDate->format('l'));
+        $dayLabel = ucfirst($dayDate->isoFormat('dddd'));
 
-            return [$dayKey => $dayLabel];
-        });
+        return [$dayKey => $dayLabel];
+    }
 
-        return $days->toArray();
+    /**
+     * Create Carbon instance.
+     */
+    private function createCarbonInstance(): Carbon
+    {
+        $carbon = Carbon::create();
+
+        if ($carbon === null) {
+            throw new RuntimeException('Failed to create Carbon instance');
+        }
+
+        return $carbon;
     }
 }

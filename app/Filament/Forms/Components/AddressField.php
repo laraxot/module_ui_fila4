@@ -13,7 +13,7 @@ use Webmozart\Assert\Assert;
 
 // use Squire\Models\Country;
 
-class AddressField extends Field
+final class AddressField extends Field
 {
     /** @var string|callable|null */
     public $relationship;
@@ -61,20 +61,27 @@ class AddressField extends Field
         $record = $this->getRecord();
         $relationship = $record->{$this->getRelationship()}();
 
-        if ($relationship === null || !is_object($relationship)) {
+        if ($relationship === null || ! is_object($relationship)) {
             return;
         }
 
-        if (method_exists($relationship, 'first')) {
-            if ($address = $relationship->first()) {
-                if (is_object($address) && method_exists($address, 'update')) {
-                    $address->update($state);
-                }
-            } else {
-                if (method_exists($relationship, 'updateOrCreate')) {
-                    $relationship->updateOrCreate($state);
-                }
+        if (! method_exists($relationship, 'first')) {
+            return;
+        }
+
+        $address = $relationship->first();
+        if ($address !== null && is_object($address) && method_exists($address, 'update')) {
+            $address->update($state);
+            if ($record instanceof Model) {
+                $record->touch();
             }
+
+            return;
+        }
+
+        // Se non esiste, crea nuovo
+        if (method_exists($relationship, 'updateOrCreate')) {
+            $relationship->updateOrCreate($state);
         }
 
         if ($record instanceof Model) {

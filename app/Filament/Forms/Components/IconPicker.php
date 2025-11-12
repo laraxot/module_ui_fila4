@@ -11,9 +11,8 @@ use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Modules\UI\Actions\Icon\GetAllIconsAction;
-use Webmozart\Assert\Assert;
 
-class IconPicker extends TextInput
+final class IconPicker extends TextInput
 {
     protected function setUp(): void
     {
@@ -23,7 +22,6 @@ class IconPicker extends TextInput
 
         $packs = array_keys($icons);
         // $packs = $icons->toCollection()->keys()->toArray();
-        Assert::isArray($packs, 'Packs must be an array');
         $packs = array_combine($packs, $packs);
         // dddx($icons->toCollection()->get('heroicons')->toArray());
 
@@ -43,10 +41,14 @@ class IconPicker extends TextInput
                                 return [];
                             }
                             $key = $pack.'.icons';
-                            Assert::isArray(
-                                $opts = Arr::get($icons, $key, []),
-                                '['.__LINE__.']['.class_basename($this).']',
-                            );
+                            $opts = Arr::get($icons, $key, []);
+                            if (! is_array($opts)) {
+                                $opts = [];
+                            }
+                            // Ensure keys are integers for array_combine
+                            $opts = array_values($opts);
+                            // Filter to ensure all values are strings
+                            $opts = array_filter($opts, 'is_string');
                             $opts = array_combine($opts, $opts);
 
                             return $opts;

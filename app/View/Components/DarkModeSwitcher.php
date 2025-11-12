@@ -13,7 +13,7 @@ use Modules\UI\Filament\Widgets\DarkModeSwitcherWidget;
  *
  * Wrappa il DarkModeSwitcherWidget per l'uso nei temi tramite sintassi Blade.
  */
-class DarkModeSwitcher extends Component
+final class DarkModeSwitcher extends Component
 {
     /**
      * Widget associato al componente.

@@ -1,83 +1,170 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\UI\Filament\Widgets;
 
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Grid;
-// use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
-use Filament\Widgets\Widget;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Webmozart\Assert\Assert;
 
-class UserCalendarWidget extends Widget
+final class UserCalendarWidget extends XotBaseWidget
 {
-    // use InteractsWithEvents;
     protected string $view = 'ui::filament.widgets.user-calendar';
 
     public string $type;
 
     public function getActionName(string $function): string
     {
-        $action_suffix = Str::of($function)->studly()->append('Action')->toString();
-        $resource = XotData::make()->getUserResourceClassByType($this->type);
-        $model = is_object($resource) ? $resource::getModel() : '';
-        $action = Str::of($model)
-            ->replace('\\Models\\', '\\Actions\\')
-            ->append('\\Calendar\\'.$action_suffix)
-            ->toString();
+        $actionSuffix = $this->createActionSuffix($function);
+        $model = $this->resolveModelClass();
 
-        return is_string($action) ? $action : '';
+        if ($model === '') {
+            return '';
+        }
+
+        return $this->buildActionClass($model, $actionSuffix);
     }
 
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
-        if (class_exists($action) && method_exists(app($action), 'execute')) {
-            $result = app($action)->execute($fetchInfo);
-
-            return is_array($result) ? $result : [];
+        if (! $this->isActionValid($action)) {
+            return [];
         }
 
-        return [];
+        return $this->executeAction($action, $fetchInfo);
     }
 
+    /**
+     * @return array<int|string, Component>
+     */
     public function getFormSchema(): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
-        if (class_exists($action) && method_exists(app($action), 'execute')) {
-            $result = app($action)->execute();
-
-            return is_array($result) ? $result : [];
+        if (! $this->isActionValid($action)) {
+            return $this->getFallbackFormSchema();
         }
 
-        // Fallback schema
+        $result = $this->executeAction($action);
+        
+        // PHPStan L10: Type narrowing per assicurare che tutti gli elementi siano Component
+        /** @var array<int|string, Component> $schema */
+        $schema = [];
+        foreach ($result as $key => $item) {
+            if ($item instanceof Component) {
+                $schema[$key] = $item;
+            }
+        }
+        
+        return $schema;
+    }
+
+    public function onDateSelect(string $_start, ?string $_end, bool $_allDay, ?array $_view, ?array $_resource): void
+    {
+        // Placeholder for future implementation
+    }
+
+    /**
+     * Crea il suffisso dell'action dal nome della funzione
+     */
+    private function createActionSuffix(string $function): string
+    {
+        return Str::of($function)->studly()->append('Action')->toString();
+    }
+
+    /**
+     * Risolve la classe del model dal resource
+     */
+    private function resolveModelClass(): string
+    {
+        $resource = XotData::make()->getUserResourceClassByType($this->type);
+        $model = (string) $resource;
+
+        if ($model === '' || ! class_exists($model)) {
+            return '';
+        }
+
+        return $this->extractModelFromInstance($model);
+    }
+
+    /**
+     * Estrae il model dall'istanza del resource
+     */
+    private function extractModelFromInstance(string $model): string
+    {
+        $modelInstance = app($model);
+
+        if (! is_object($modelInstance) || ! method_exists($modelInstance, 'getModel')) {
+            return $model;
+        }
+
+        $modelResult = $modelInstance->getModel();
+
+        return is_string($modelResult) ? $modelResult : $model;
+    }
+
+    /**
+     * Costruisce il nome della classe action
+     */
+    private function buildActionClass(string $model, string $actionSuffix): string
+    {
+        return Str::of($model)
+            ->replace('\\Models\\', '\\Actions\\')
+            ->append('\\Calendar\\'.$actionSuffix)
+            ->toString();
+    }
+
+    /**
+     * Verifica se l'action è valida
+     */
+    private function isActionValid(string $action): bool
+    {
+        return $action !== '' && class_exists($action);
+    }
+
+    /**
+     * Esegue l'action con i parametri forniti
+     *
+     * @return array<int|string, mixed>
+     */
+    private function executeAction(string $action, mixed $parameters = null): array
+    {
+        $instance = app($action);
+
+        if (! is_object($instance) || ! method_exists($instance, 'execute')) {
+            return $parameters === null ? $this->getFallbackFormSchema() : [];
+        }
+
+        /** @var mixed $result */
+        $result = $parameters !== null
+            ? $instance->execute($parameters)
+            : $instance->execute();
+
+        return is_array($result) ? $result : ($parameters === null ? $this->getFallbackFormSchema() : []);
+    }
+
+    /**
+     * Schema di fallback per il form
+     *
+     * @return array<int|string, Component>
+     */
+    private function getFallbackFormSchema(): array
+    {
         return [
             TextInput::make('title'),
-
             Grid::make()
                 ->schema([
                     DateTimePicker::make('starts_at'),
                     DateTimePicker::make('ends_at'),
                 ]),
         ];
-    }
-
-    /*
-    protected function modalActions(): array
-    {
-        return [
-            \Saade\FilamentFullCalendar\Actions\EditAction::make(),
-            \Saade\FilamentFullCalendar\Actions\DeleteAction::make(),
-        ];
-    }
-    */
-
-    public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void
-    {
-        // TODO: Implementare la logica per la selezione della data
-        // dd('test');
     }
 }

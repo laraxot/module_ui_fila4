@@ -10,7 +10,7 @@ use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 use Webmozart\Assert\Assert;
 
-class RadioBadge extends Radio
+final class RadioBadge extends Radio
 {
     protected string $view = 'ui::filament.forms.components.radio-badge';
 
@@ -32,24 +32,24 @@ class RadioBadge extends Radio
             return null;
         }
         $enumClass = $this->options;
-        
+
         // Check if the class is a BackedEnum
         if (! is_subclass_of($enumClass, BackedEnum::class)) {
             return null;
         }
-        
+
         // Check if the class implements the required interfaces
         if (! is_subclass_of($enumClass, HasColor::class) || ! is_subclass_of($enumClass, HasIcon::class)) {
             return null;
         }
-        
+
         $res = $enumClass::tryFrom($value);
-        
+
         // Ensure the result implements the required interfaces
         if ($res instanceof BackedEnum && $res instanceof HasColor && $res instanceof HasIcon) {
             return $res;
         }
-        
+
         return null;
     }
 

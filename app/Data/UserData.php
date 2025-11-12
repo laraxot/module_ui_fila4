@@ -6,7 +6,7 @@ namespace Modules\UI\Data;
 
 use Spatie\LaravelData\Data;
 
-class UserData extends Data
+final class UserData extends Data
 {
     public function __construct(
         public int $id,

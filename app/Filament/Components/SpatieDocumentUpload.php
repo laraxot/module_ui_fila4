@@ -13,7 +13,7 @@ use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
  * Politica: Type safety, GDPR compliance, multi-tenant isolation.
  * Zen: Semplicità attraverso la standardizzazione, non la duplicazione.
  */
-class SpatieDocumentUpload
+final class SpatieDocumentUpload
 {
     /**
      * Configurazione base per upload documenti con collection specifica.
@@ -43,7 +43,7 @@ class SpatieDocumentUpload
      */
     public static function forIdentityDocument(): SpatieMediaLibraryFileUpload
     {
-        return static::make('identity_document', 'documenti_identita')
+        return self::make('identity_document', 'documenti_identita')
             ->maxSize(5120)
             ->conversion('thumbnail')
             ->conversion('preview');
@@ -57,7 +57,7 @@ class SpatieDocumentUpload
      */
     public static function forIseeDocument(): SpatieMediaLibraryFileUpload
     {
-        return static::make('isee_certificate', 'certificazioni_isee')
+        return self::make('isee_certificate', 'certificazioni_isee')
             ->acceptedFileTypes(['application/pdf'])
             ->maxSize(5120);
     }
@@ -70,7 +70,7 @@ class SpatieDocumentUpload
      */
     public static function forPregnancyDocument(): SpatieMediaLibraryFileUpload
     {
-        return static::make('pregnancy_certificate', 'certificati_gravidanza')
+        return self::make('pregnancy_certificate', 'certificati_gravidanza')
             ->acceptedFileTypes(['application/pdf'])
             ->maxSize(5120);
     }
@@ -83,7 +83,7 @@ class SpatieDocumentUpload
      */
     public static function forCertifications(): SpatieMediaLibraryFileUpload
     {
-        return static::make('certifications', 'certificazioni_professionali')
+        return self::make('certifications', 'certificazioni_professionali')
             ->multiple()
             ->enableReordering()
             ->maxFiles(10) // Max 10 certificazioni per dottore
