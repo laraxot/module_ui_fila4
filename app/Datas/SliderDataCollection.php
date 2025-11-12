@@ -14,15 +14,5 @@ class SliderDataCollection extends Data
      */
     public DataCollection $slider_data;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct() {}
-=======
-    public function __construct()
-    {
-    }
->>>>>>> 727968c (.)
-=======
-    public function __construct() {}
->>>>>>> ef3c5fa (.)
 }
