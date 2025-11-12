@@ -46,4 +46,20 @@ return [
             'email_sent_error' => 'Error sending email',
         ],
     ],
+<<<<<<< HEAD
 ];
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+];
+=======
+]; 
+>>>>>>> a12f125f4a (.)
+=======
+];
+>>>>>>> b93ef594b4 (.)
+=======
+]; 
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
