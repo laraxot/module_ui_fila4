@@ -12,58 +12,15 @@ use Filament\Forms\Components\TextInput;
 
 class ImagesGallery
 {
-<<<<<<< HEAD
     public static function make(string $name = 'images_gallery', string $context = 'form'): Block
     {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public static function make(string $name = 'images_gallery', string $context = 'form'): Block
-    {
-=======
-=======
->>>>>>> origin/develop
-    public static function make(
-        string $name = 'images_gallery',
-        string $context = 'form',
-    ): Block {
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    public static function make(string $name = 'images_gallery', string $context = 'form'): Block
-    {
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
         return Block::make($name)
             ->schema([
                 Repeater::make('gallery')
                     ->schema([
                         SpatieMediaLibraryFileUpload::make('image')
-<<<<<<< HEAD
                             // ->image()
                             // ->maxSize(5000)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                            // ->image()
-                            // ->maxSize(5000)
-=======
-                        // ->image()
-                        // ->maxSize(5000)
->>>>>>> a12f125f4a (.)
-=======
-                            // ->image()
-                            // ->maxSize(5000)
->>>>>>> b93ef594b4 (.)
-=======
-                        // ->image()
-                        // ->maxSize(5000)
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
                             ->multiple()
                             ->enableReordering()
                             ->openable()
@@ -73,66 +30,16 @@ class ImagesGallery
                             // ->conversion('thumbnail')
                             ->disk('uploads')
                             ->directory('photos'),
-<<<<<<< HEAD
                         TextInput::make('title')->columnSpanFull(),
                         TextInput::make('subtitle')->columnSpanFull(),
                         Select::make('version')
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        TextInput::make('title')->columnSpanFull(),
-                        TextInput::make('subtitle')->columnSpanFull(),
-                        Select::make('version')
-=======
-=======
->>>>>>> origin/develop
-
-                        TextInput::make('title')
-                            ->columnSpanFull(),
-
-                        TextInput::make('subtitle')
-                            ->columnSpanFull(),
-
-                        Select::make('version')
-
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-                        TextInput::make('title')->columnSpanFull(),
-                        TextInput::make('subtitle')->columnSpanFull(),
-                        Select::make('version')
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
                             ->required()
                             ->options([
                                 'v1' => 'versione 1',
                                 'v2' => 'versione 2',
                             ]),
-<<<<<<< HEAD
                     ])
                     ->columnSpanFull(),
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    ])
-                    ->columnSpanFull(),
-=======
-                    ])->columnSpanFull(),
-
->>>>>>> a12f125f4a (.)
-=======
-                    ])
-                    ->columnSpanFull(),
->>>>>>> b93ef594b4 (.)
-=======
-                    ])->columnSpanFull(),
-
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
                 // FileUpload::make('image')
                 //     ,
                 // SpatieMediaLibraryFileUpload::make('image')
@@ -147,12 +54,6 @@ class ImagesGallery
                 //         // ->conversion('thumbnail')
                 //     ->disk('uploads')
                 //     ->directory('photos'),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1899c5f (.)
                 // TextInput::make('url')
                 //     ,
                 // Select::make('ratio')
@@ -160,38 +61,6 @@ class ImagesGallery
                 //     ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
                 // TextInput::make('alt')
                 //     ->columnSpanFull(),
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> b93ef594b4 (.)
-                // TextInput::make('url')
-                //     ,
-                // Select::make('ratio')
-                //     ->options(static::getRatios())
-                //     ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
-                // TextInput::make('alt')
-                //     ->columnSpanFull(),
-<<<<<<< HEAD
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
-                // TextInput::make('url')
-                //     ,
-
-                // Select::make('ratio')
-                //     ->options(static::getRatios())
-                //     ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
-
-                // TextInput::make('alt')
-                //     ->columnSpanFull(),
-
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
                 // TextInput::make('caption')
                 //     ->columnSpanFull(),
             ])
