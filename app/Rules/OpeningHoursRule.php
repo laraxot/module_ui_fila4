@@ -46,11 +46,11 @@ class OpeningHoursRule implements ValidationRule
             }
 
             // Valida ogni sessione (mattina e pomeriggio)
-            $this->validateSession($dayHours, 'morning', (string) $dayLabel, $fail);
-            $this->validateSession($dayHours, 'afternoon', (string) $dayLabel, $fail);
+            $this->validateSession($dayHours, 'morning', $dayLabel, $fail);
+            $this->validateSession($dayHours, 'afternoon', $dayLabel, $fail);
 
             // Valida la coerenza tra sessioni dello stesso giorno
-            $this->validateDayLogic($dayHours, (string) $dayLabel, $fail);
+            $this->validateDayLogic($dayHours, $dayLabel, $fail);
         }
     }
 

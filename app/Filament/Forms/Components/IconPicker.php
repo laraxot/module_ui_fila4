@@ -47,15 +47,14 @@ class IconPicker extends TextInput
                                 $opts = Arr::get($icons, $key, []),
                                 '['.__LINE__.']['.class_basename($this).']',
                             );
-                            /** @var array<string, mixed> $opts */
-                            $opts = array_combine(array_keys($opts), array_values($opts));
+                            $opts = array_combine($opts, $opts);
 
                             return $opts;
                         })
                         ->inline()
                         ->inlineLabel(false),
                 ])
-                ->action(function (array $data, Set $set): void {
+                ->action(function (array $data, Set $set) {
                     $set('icon', $data['newstate']);
                 }),
         );
