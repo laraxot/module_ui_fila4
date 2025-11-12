@@ -2,11 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-namespace Modules\Notify\Filament\Forms\Components;
-=======
 namespace Modules\UI\Filament\Forms\Components;
->>>>>>> e3274ea (.)
 
 use Filament\Forms\Components\Select;
 use Illuminate\Database\Eloquent\Model;
@@ -27,19 +23,20 @@ class SelectState extends Select
                 if (is_string($model) && class_exists($model)) {
                     $states = Arr::wrap(app($model)->getDefaultStateFor($name));
 
-                    /**
+                    /*
                      * @var array<int|string>
                      *
                      * @phpstan-ignore argument.type
                      */
                     return array_combine($states, $states);
                 }
+
                 return [];
             }
 
             $states = $record->getStatesFor($name)->toArray();
 
-            /**
+            /*
              * @var array<int|string>
              *
              * @phpstan-ignore argument.type

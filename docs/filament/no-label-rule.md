@@ -74,17 +74,14 @@ grep -r "->label(" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modu
 
 # Cerca in tutti i file Filament
 find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/ -name "*.php" -exec grep -l "->label(" {} \;
-<<<<<<< HEAD
-grep -r "->label(" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/
-
-# Cerca in tutti i file Filament
-find /var/www/html/_bases/base_saluteora/laravel/Modules/UI/ -name "*.php" -exec grep -l "->label(" {} \;
-=======
 grep -r "->label(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/
 
 # Cerca in tutti i file Filament
 find /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/ -name "*.php" -exec grep -l "->label(" {} \;
->>>>>>> b55470f (.)
+grep -r "->label(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/
+
+# Cerca in tutti i file Filament
+find /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/ -name "*.php" -exec grep -l "->label(" {} \;
 ```
 
 ## Processo di Correzione per il Modulo UI

@@ -105,13 +105,10 @@ return [
 # Cercare enum con metodi di traduzione hardcoded
 grep -r "return match" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
-<<<<<<< HEAD
-grep -r "return match" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
-grep -r "__(" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
-=======
 grep -r "return match" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
->>>>>>> b55470f (.)
+grep -r "return match" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
+grep -r "__(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
 ```
 
 ## Filosofia del Modulo UI

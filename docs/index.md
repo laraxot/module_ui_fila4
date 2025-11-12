@@ -19,7 +19,7 @@ Questo documento serve come indice centrale per il modulo UI, fornendo una guida
 - **Design System**: Sistema di design coerente con linee guida di sviluppo
 
 ## Collegamenti Correlati
-- [Documentazione Generale SaluteOra](../../../../docs/README.md)
+- [Documentazione Generale <nome progetto>](../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
 - [Modulo Xot](../../Xot/docs/README.md)
