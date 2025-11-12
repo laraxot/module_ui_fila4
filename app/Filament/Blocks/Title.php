@@ -12,14 +12,14 @@ use Modules\Xot\Actions\View\GetViewsSiblingsAndSelfAction;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
 class Title // extends XotBaseBlock
+{public static function make(string $name = 'title', string $context = 'form'): Block
 {
-    public static function make(string $name = 'title', string $context = 'form'): Block
-    {
-        // $view = 'ui::components.blocks.title.v1';
-        // $views = app(GetViewsSiblingsAndSelfAction::class)->execute($view);
+    // $view = 'ui::components.blocks.title.v1';
+    // $views = app(GetViewsSiblingsAndSelfAction::class)->execute($view);
 
-        $options = app(GetViewBlocksOptionsByTypeAction::class)->execute('title', false);
+    $options = app(GetViewBlocksOptionsByTypeAction::class)->execute('title', false);
 
+<<<<<<< HEAD
         return Block::make($name)
             ->schema([
                 TextInput::make('text')->required(),
@@ -38,4 +38,20 @@ class Title // extends XotBaseBlock
             ])
             ->columns($context === 'form' ? 2 : 1);
     }
+=======
+    return Block::make($name)
+        ->schema([
+            TextInput::make('text')->required(),
+            Select::make('level')
+                ->options([
+                    'h2' => 'h2',
+                    'h3' => 'h3',
+                    'h4' => 'h4',
+                ])
+                ->afterStateHydrated(static fn ($state, $set) => $state || $set('level', 'h2')),
+            Select::make('view')->options($options),
+        ])
+        ->columns($context === 'form' ? 2 : 1);
+}
+>>>>>>> 3b732b6 (.)
 }

@@ -11,7 +11,11 @@ use Tests\TestCase;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
 beforeEach(function (): void {
+=======
+beforeEach(function () {
+>>>>>>> 3b732b6 (.)
     $this->widget = new RowWidget;
 });
 
