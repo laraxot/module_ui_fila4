@@ -60,6 +60,8 @@ class Block extends Component
             throw new Exception('view not found ['.$view.']');
         }
 
-        return view($view, $view_params);
+        /** @var array<string, mixed> $viewParams */
+        $viewParams = is_array($view_params) ? $view_params : [];
+        return view($view, $viewParams);
     }
 }
