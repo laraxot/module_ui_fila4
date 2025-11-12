@@ -1,8 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 <x-filament-widgets::widget id="overlook-widget">
 
     <x-filament::section class="relative overflow-hidden overlook-card bg-gradient-to-tr group">
@@ -29,7 +47,11 @@ declare(strict_types=1);
 
         </div>
 
+<<<<<<< HEAD
         <x-filament::icon :icon="$icon"
+=======
+        <x-filament::icon :icon="$icon" :size="24"
+>>>>>>> 1899c5f (.)
             class="absolute w-auto transition left-2 text-primary-500 h-36 z-1 overlook-icon -bottom-12 opacity-10 dark:opacity-10 group-hover:scale-110 group-hover:-rotate-12 group-hover:opacity-30" />
 
     </x-filament::section>
