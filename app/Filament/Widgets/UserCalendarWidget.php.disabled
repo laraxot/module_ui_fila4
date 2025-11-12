@@ -5,6 +5,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
+<<<<<<< HEAD
 use App\Filament\Resources\EventResource;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Grid;
@@ -38,6 +39,8 @@ class UserCalendarWidget extends FullCalendarWidget
     {
         $action = $this->getActionName(__FUNCTION__);
 <<<<<<< HEAD
+=======
+>>>>>>> b55470f (.)
 
 use Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
 use Filament\Schemas\Components\Grid;
@@ -69,14 +72,18 @@ class UserCalendarWidget extends FullCalendarWidget
     public function fetchEvents(array $fetchInfo): array
     {
         $action=$this->getActionName(__FUNCTION__);
+<<<<<<< HEAD
 =======
 >>>>>>> e6782b2 (.)
+=======
+>>>>>>> b55470f (.)
         return app($action)->execute($fetchInfo);
     }
 
     public function getFormSchema(): array
     {
         $action = $this->getActionName(__FUNCTION__);
+<<<<<<< HEAD
 
         if (class_exists($action)) {
             return app($action)->execute();
@@ -113,6 +120,8 @@ class UserCalendarWidget extends FullCalendarWidget
         // dd('test');
     }
 <<<<<<< HEAD
+=======
+>>>>>>> b55470f (.)
         
         if (class_exists($action)) {
             return app($action)->execute();
@@ -148,6 +157,10 @@ class UserCalendarWidget extends FullCalendarWidget
     }
 
     
+<<<<<<< HEAD
 =======
 >>>>>>> e6782b2 (.)
 }
+=======
+}
+>>>>>>> b55470f (.)
