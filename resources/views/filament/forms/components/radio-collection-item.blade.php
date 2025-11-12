@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 {{-- resources/views/forms/components/radio-collection-item.blade.php --}}
 {{-- Template di esempio per un item - personalizzalo secondo le tue esigenze --}}
 <div class="flex items-center">
@@ -27,4 +30,8 @@ declare(strict_types=1);
             </div>
         @endif
     </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> 727968c (.)
