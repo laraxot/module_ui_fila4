@@ -25,6 +25,9 @@ class PasswordStrengthField extends TextInput
     public function evaluateStrength(): static
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
         $this->afterStateUpdated(function (string $_state) {
             // $zxcvbn = new Zxcvbn();
             // $result = $zxcvbn->passwordStrength($state);
@@ -38,6 +41,7 @@ class PasswordStrengthField extends TextInput
              * $this->info('La tua password è abbastanza forte.');
              * }
              */
+<<<<<<< HEAD
 =======
         $this->afterStateUpdated(function (string $state) {
             // $zxcvbn = new Zxcvbn();
@@ -55,6 +59,8 @@ class PasswordStrengthField extends TextInput
                 */
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
             // $this->state(['passwordStrengthScore' => $score]);
         });
 
