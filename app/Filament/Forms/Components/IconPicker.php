@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Notify\Filament\Forms\Components;
+namespace Modules\UI\Filament\Forms\Components;
 
 use Filament\Actions\Action;
 use Filament\Forms\Components\Select;
