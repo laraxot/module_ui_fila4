@@ -43,17 +43,8 @@ I nomi specifici dell'applicazione devono apparire solo:
 - [Componenti](components.md)
 
 ## Vedi Anche
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione Principale](../../../project_docs/README.md)
 - [Standard di Codice](../../../project_docs/standards/coding-standards.md)
 - [Best Practices](../../../project_docs/standards/best-practices.md) 
-=======
->>>>>>> 727968c (.)
-=======
-- [Documentazione Principale](../../../project_docs/README.md)
-- [Standard di Codice](../../../project_docs/standards/coding-standards.md)
-- [Best Practices](../../../project_docs/standards/best-practices.md) 
->>>>>>> ef3c5fa (.)
 - [Documentazione Principale](../../../docs/README.md)
 - [Standard di Codice](../../../docs/standards/coding-standards.md)
