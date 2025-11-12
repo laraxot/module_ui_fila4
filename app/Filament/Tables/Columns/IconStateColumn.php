@@ -79,7 +79,7 @@ class IconStateColumn extends IconColumn
                         })
                         ->required()
                         ->reactive(),
-                    Textarea::make('message')->required(function (Get $get, $record) {
+                    Textarea::make('message')->required(function (\Filament\Schemas\Components\Utilities\Get $get, $record) {
                         $newState = $get('state');
                         $name = $this->getName();
                         $state = $record->getAttribute($name);
