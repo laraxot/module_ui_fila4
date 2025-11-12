@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 <x-filament-panels::page>
     <form wire:submit="submit" class="space-y-6">
         {{ $this->form }}
