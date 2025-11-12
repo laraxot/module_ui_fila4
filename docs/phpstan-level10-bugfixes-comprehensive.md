@@ -1,7 +1,12 @@
 # PHPStan Level 10 Comprehensive Bugfixes
 
 ## Problema Generale
+<<<<<<< HEAD
 Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, SaluteOra, UI, Xot.
+=======
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, , UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, <nome progetto>, UI, Xot.
+>>>>>>> b55470f (.)
 
 ## Moduli Interessati e Correzioni
 
@@ -57,7 +62,12 @@ $this->debugResults['file_operations'] = $this->getFileOperationsData();
 'private_key' => self::formatPrivateKey((string) env('CLOUDFRONT_PRIVATE_KEY', '')),
 ```
 
+<<<<<<< HEAD
 ### 🟢 **SaluteOra Module** - Report Model  
+=======
+### 🟢 ** Module** - Report Model  
+### 🟢 **<nome progetto> Module** - Report Model  
+>>>>>>> b55470f (.)
 **Stato**: ✅ Corretto
 
 #### Report.php
@@ -88,14 +98,24 @@ public function getSpecifyDiseases(): array
 | UI         | S3Test.php                    | Method not found           | ✅ Fix |
 | UI         | en/s3test.php                 | Duplicate array key        | ✅ Fix |
 | Xot        | GetCloudFrontSignedUrlAction  | Parameter type mismatch    | ✅ Fix |
+<<<<<<< HEAD
 | SaluteOra  | Report.php                    | Missing return type        | ✅ Fix |
+=======
+|   | Report.php                    | Missing return type        | ✅ Fix |
+| <nome progetto>  | Report.php                    | Missing return type        | ✅ Fix |
+>>>>>>> b55470f (.)
 | SaluteMo   | ListReports.php               | Invalid return type        | ⚠️ TBD |
 
 ## Verifica Post-Correzione
 
 ### PHPStan Command
 ```bash
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_saluteora/laravel
+=======
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+cd /var/www/html/_bases/base_<nome progetto>/laravel
+>>>>>>> b55470f (.)
 ./vendor/bin/phpstan analyse --level=9 --memory-limit=2G
 ```
 
@@ -135,3 +155,7 @@ Questo documento deve essere aggiornato ogni volta che vengono rilevati e corret
 
 **Data Ultimo Aggiornamento**: 2025-01-06  
 **PHPStan Version**: 1.12.x  
+<<<<<<< HEAD
+=======
+**Laravel Version**: 12.21.0
+>>>>>>> b55470f (.)
