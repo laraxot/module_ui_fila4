@@ -62,6 +62,7 @@ class Block extends Component
 
         /** @var array<string, mixed> $viewParams */
         $viewParams = is_array($view_params) ? $view_params : [];
+
         return view($view, $viewParams);
     }
 }
