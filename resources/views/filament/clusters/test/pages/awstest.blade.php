@@ -3,7 +3,11 @@
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <x-filament::page>
+=======
+<x-fi<x-filament::page>
+>>>>>>> 19f3650 (.)
     @php
         // Ensure $results is defined with a default value
         $results = $results ?? null;
