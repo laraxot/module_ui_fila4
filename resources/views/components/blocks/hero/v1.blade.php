@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
 @props(['title', 'subtitle', 'image', 'cta_text', 'cta_link'])
 
 <section class="relative bg-white overflow-hidden">
@@ -50,20 +32,4 @@ declare(strict_types=1);
             <img class="absolute inset-0 w-full h-full object-cover" src="{{ $image }}" alt="Hero background">
         </div>
     </div>
-<<<<<<< HEAD
 </section>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-</section>
-=======
-</section> 
->>>>>>> a12f125f4a (.)
-=======
-</section>
->>>>>>> b93ef594b4 (.)
-=======
-</section> 
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
