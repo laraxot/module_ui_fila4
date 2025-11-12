@@ -11,38 +11,28 @@ use Tests\TestCase;
 
 uses(TestCase::class);
 
-<<<<<<< HEAD
-beforeEach(function (): void {
-=======
 beforeEach(function () {
->>>>>>> 3b732b6 (.)
     $this->widget = new RowWidget;
 });
 
-test('row widget extends filament widget', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
+test('row widget extends filament widget', function () {
     expect($this->widget)->toBeInstanceOf(Widget::class);
 });
 
-test('row widget can be instantiated', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
+test('row widget can be instantiated', function () {
     expect($this->widget)->toBeInstanceOf(RowWidget::class);
 });
 
-test('row widget has correct view', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
+test('row widget has correct view', function () {
     expect($this->widget->getViewName())->toBe('ui::filament.widgets.row-widget');
 });
 
-test('row widget has proper properties', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
+test('row widget has proper properties', function () {
     expect($this->widget)->toHaveProperty('heading');
-    /** @phpstan-ignore-next-line property.notFound */
     expect($this->widget)->toHaveProperty('description');
 });
 
-test('row widget can render', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
+test('row widget can render', function () {
     $view = $this->widget->render();
 
     expect($view)->toBeInstanceOf(View::class);
