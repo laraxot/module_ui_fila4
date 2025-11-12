@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 <x-dynamic-component
     :component="$getFieldWrapperView()"
     :field="$field"
@@ -58,7 +64,11 @@ declare(strict_types=1);
         </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </x-dynamic-component>
 =======
 </x-dynamic-component> 
 >>>>>>> 727968c (.)
+=======
+</x-dynamic-component>
+>>>>>>> ef3c5fa (.)
