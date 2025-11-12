@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 @props(['title', 'subtitle', 'image', 'cta_text', 'cta_link'])
 
 <section class="relative bg-white overflow-hidden">
@@ -41,12 +32,4 @@ declare(strict_types=1);
             <img class="absolute inset-0 w-full h-full object-cover" src="{{ $image }}" alt="Hero background">
         </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 </section>
-=======
-</section> 
->>>>>>> 727968c (.)
-=======
-</section>
->>>>>>> ef3c5fa (.)
