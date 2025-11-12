@@ -1,8 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 @props(['title' => 'Cambia Password'])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -125,4 +143,20 @@ document.addEventListener('DOMContentLoaded', function() {
     password.addEventListener('input', checkPassword);
 });
 </script>
+<<<<<<< HEAD
 @endpush
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+@endpush
+=======
+@endpush 
+>>>>>>> a12f125f4a (.)
+=======
+@endpush
+>>>>>>> b93ef594b4 (.)
+=======
+@endpush 
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
