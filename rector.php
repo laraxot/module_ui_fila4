@@ -11,6 +11,9 @@ use RectorLaravel\Set\LaravelSetList;
 
 return static function (RectorConfig $rectorConfig): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     $rectorConfig->paths([
         __DIR__,
     ]);
@@ -20,6 +23,7 @@ return static function (RectorConfig $rectorConfig): void {
         '*/vendor',
         './vendor/',
     ]);
+<<<<<<< HEAD
 =======
     $rectorConfig->paths(
         [
@@ -35,11 +39,16 @@ return static function (RectorConfig $rectorConfig): void {
         ]
     );
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 
     // register a single rule
     // $rectorConfig->rule(InlineConstructorDefaultToPropertyRector::class);
     // $rectorConfig->rule(RedirectRouteToToRouteHelperRector::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     $rectorConfig->rules([
         ReturnTypeFromStrictNativeCallRector::class,
         ReturnTypeFromStrictScalarReturnExprRector::class,
@@ -59,6 +68,7 @@ return static function (RectorConfig $rectorConfig): void {
         // SetList::EARLY_RETURN,
         // SetList::INSTANCEOF,
     ]);
+<<<<<<< HEAD
 =======
     $rectorConfig->rules(
         [
@@ -85,6 +95,8 @@ return static function (RectorConfig $rectorConfig): void {
         ]
     );
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 
     $rectorConfig->importNames();
 };

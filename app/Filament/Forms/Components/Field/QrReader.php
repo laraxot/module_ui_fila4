@@ -12,6 +12,9 @@ class QrReader extends Field
 
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
      * public static function make($livewire): static
      * {
      * $result = app(static::class, ['livewire' => $livewire]);
@@ -19,6 +22,7 @@ class QrReader extends Field
      * return $result;
      * }
      */
+<<<<<<< HEAD
 =======
     public static function make($livewire): static
     {
@@ -28,4 +32,6 @@ class QrReader extends Field
     }
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 }
