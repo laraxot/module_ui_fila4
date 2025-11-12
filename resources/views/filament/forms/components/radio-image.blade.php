@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
     @php
         $id = $getId();
