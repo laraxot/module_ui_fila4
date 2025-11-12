@@ -13,38 +13,10 @@ return [
         'created_at' => 'Creado',
         'updated_at' => 'Actualizado',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
     'select-options' => [
         'same-tab' => 'Misma pestaña',
         'new-tab' => 'Nueva pestaña',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
     'items' => [
         'empty' => 'No hay ítems.',
         'add-item' => 'Agregar ítem',
@@ -55,20 +27,6 @@ return [
         'dedent' => 'Desindentar',
         'remove' => 'Remover',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
     'items-modal' => [
         'title' => 'Ítem',
         'label' => 'Etiqueta',
