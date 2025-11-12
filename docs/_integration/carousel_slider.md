@@ -7,10 +7,14 @@ https://www.embla-carousel.com/examples/predefined/
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://tw-elements.com/docs/standard/components/carousel/
 =======
 https://tw-elements.com/project_docs/standard/components/carousel/
 >>>>>>> 727968c (.)
+=======
+https://tw-elements.com/docs/standard/components/carousel/
+>>>>>>> ef3c5fa (.)
 
 https://keen-slider.io/examples
 

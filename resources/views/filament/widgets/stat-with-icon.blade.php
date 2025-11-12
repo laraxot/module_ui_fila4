@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
@@ -8,12 +11,15 @@ declare(strict_types=1);
     <x-filament::section collapsible>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div class="col-span-1">
+<<<<<<< HEAD
 =======
 <x-filament-widgets::widget>
     <x-filament::section collapsible>
         <x-filament::grid lg='2'>
             <x-filament::grid.column >
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
                 <span class="overflow-hidden" >
                 <x-filament::icon
                                 icon="fas-futbol"
@@ -25,12 +31,17 @@ declare(strict_types=1);
                 BBB
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
         </div>
 =======
             </x-filament::grid.column>
         </x-filament::grid>
 >>>>>>> 727968c (.)
+=======
+            </div>
+        </div>
+>>>>>>> ef3c5fa (.)
     </x-filament::section>
 </x-filament-widgets::widget>
 {{--
@@ -70,6 +81,9 @@ declare(strict_types=1);
 
 --}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
