@@ -20,17 +20,61 @@ declare(strict_types=1);
     }}
 >
     @foreach ($fields as $field)
+<<<<<<< HEAD
         @php
+=======
+     
+        @php
+        /*
+        dddx([
+            'field'=>$field,
+            'state'=>$field->getStateFromRecord($record),
+            'field_methods'=>get_class_methods($field),
+            'record'=>$record,
+        ]);
+        */
+            /*
+>>>>>>> 19f3650 (.)
             $state=$field->record($record)->getState();
             if($state==null){
                 continue;
             }
+<<<<<<< HEAD
+=======
+            */
+            /*
+>>>>>>> 19f3650 (.)
             try{
                 $out=str_replace(', ',',<br/>',$state).'<br/>';
             }catch(\TypeError $e){
                 $out=$field->record($record)->render();
             }
+<<<<<<< HEAD
         @endphp
         {!! $out !!}
+=======
+            */
+            //$out=$field->record($record)->render();
+            /*
+            $field_record=$field->record($record);
+             try{
+            $out = $field_record->toHtmlString();
+             }catch(\LogicException $e){
+                $out = $e->getMessage();
+             }
+             */
+             $name=$field->getName();
+             $out=$record->getAttribute($name);
+             /*
+            dddx([
+                'test'=>$field->toHtmlString(),
+                'field_record'=>$field_record,
+                'methods'=>get_class_methods($field_record),
+            ]);
+            */
+        @endphp
+        {!! $out !!}<br/>
+        
+>>>>>>> 19f3650 (.)
     @endforeach
 </div>
