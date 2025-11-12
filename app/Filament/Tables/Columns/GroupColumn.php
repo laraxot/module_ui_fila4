@@ -27,7 +27,7 @@ class GroupColumn extends Column
     }
 
     /**
-     * @param array<int, Column> $form
+     * @param  array<int, Column>  $form
      */
     public function schema(array $form): self
     {
