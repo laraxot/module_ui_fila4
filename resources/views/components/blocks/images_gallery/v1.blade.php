@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 @props(['data'])
 
 <section class="text-gray-600 body-font">
@@ -48,7 +54,11 @@ declare(strict_types=1);
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   </section>
 =======
   </section>
 >>>>>>> 727968c (.)
+=======
+  </section>
+>>>>>>> ef3c5fa (.)

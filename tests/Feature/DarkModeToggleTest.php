@@ -3,12 +3,16 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Tests\TestCase;
 =======
 namespace Modules\UI\Tests\Feature\DarkModeToggleTest;
 
 namespace Modules\UI\Tests\Feature;
 >>>>>>> 727968c (.)
+=======
+use Tests\TestCase;
+>>>>>>> ef3c5fa (.)
 
 uses(TestCase::class);
 
@@ -47,9 +51,13 @@ test('kalshi hero component supports dark mode', function (): void {
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     // Hero should have dark mode variants
     if (str_contains($content, 'from-slate-900')) {
         expect($content)->toContain('dark:from-slate-950');
@@ -57,11 +65,15 @@ test('kalshi hero component supports dark mode', function (): void {
 
     if (str_contains($content, 'bg-slate-800')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect($content)->toContain('dark:bg-slate-900') or expect($content)->toContain('dark:bg-slate-950');
 =======
         expect($content)->toContain('dark:bg-slate-900') or
         expect($content)->toContain('dark:bg-slate-950');
 >>>>>>> 727968c (.)
+=======
+        expect($content)->toContain('dark:bg-slate-900') or expect($content)->toContain('dark:bg-slate-950');
+>>>>>>> ef3c5fa (.)
     }
 });
 
@@ -75,11 +87,15 @@ test('category tabs support dark mode', function (): void {
         // Should include dark navigation styling
         expect($content)->toContain('dark:bg-slate-') or
 <<<<<<< HEAD
+<<<<<<< HEAD
             (expect($content)->toContain('dark:border-slate-') or expect($content)->toContain('dark:text-slate-'));
 =======
         expect($content)->toContain('dark:border-slate-') or
         expect($content)->toContain('dark:text-slate-');
 >>>>>>> 727968c (.)
+=======
+            (expect($content)->toContain('dark:border-slate-') or expect($content)->toContain('dark:text-slate-'));
+>>>>>>> ef3c5fa (.)
     } else {
         expect(true)->toBeTrue(); // Skip if component doesn't exist
     }
@@ -95,11 +111,15 @@ test('market cards support dark mode', function (): void {
         // Market cards should have dark styling
         if (str_contains($content, 'bg-white')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             expect($content)->toContain('dark:bg-slate-') or expect($content)->toContain('dark:bg-gray-');
 =======
             expect($content)->toContain('dark:bg-slate-') or
             expect($content)->toContain('dark:bg-gray-');
 >>>>>>> 727968c (.)
+=======
+            expect($content)->toContain('dark:bg-slate-') or expect($content)->toContain('dark:bg-gray-');
+>>>>>>> ef3c5fa (.)
         } else {
             expect(true)->toBeTrue(); // Component exists but may not use white backgrounds
         }
@@ -116,11 +136,15 @@ test('consistent dark mode color scheme', function (): void {
     // Should use consistent slate color scheme for dark mode
     if (str_contains($content, 'dark:')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect($content)->toContain('slate-') or expect($content)->toContain('gray-');
 =======
         expect($content)->toContain('slate-') or
         expect($content)->toContain('gray-');
 >>>>>>> 727968c (.)
+=======
+        expect($content)->toContain('slate-') or expect($content)->toContain('gray-');
+>>>>>>> ef3c5fa (.)
     }
 });
 
@@ -142,11 +166,15 @@ test('proper contrast ratios in dark mode', function (): void {
     if (str_contains($content, 'dark:bg-slate-900')) {
         expect($content)->toContain('text-white') or
 <<<<<<< HEAD
+<<<<<<< HEAD
             (expect($content)->toContain('text-slate-100') or expect($content)->toContain('dark:text-white'));
 =======
         expect($content)->toContain('text-slate-100') or
         expect($content)->toContain('dark:text-white');
 >>>>>>> 727968c (.)
+=======
+            (expect($content)->toContain('text-slate-100') or expect($content)->toContain('dark:text-white'));
+>>>>>>> ef3c5fa (.)
     } else {
         expect(true)->toBeTrue(); // Component doesn't use this pattern
     }
@@ -157,11 +185,15 @@ test('gradient backgrounds work in dark mode', function (): void {
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 
     // Hero gradients should have dark variants
     if (str_contains($content, 'bg-gradient-to-br')) {
         expect($content)->toContain('dark:from-') or
             (expect($content)->toContain('dark:via-') or expect($content)->toContain('dark:to-'));
+<<<<<<< HEAD
 =======
     // Hero gradients should have dark variants
     if (str_contains($content, 'bg-gradient-to-br')) {
@@ -169,6 +201,8 @@ test('gradient backgrounds work in dark mode', function (): void {
         expect($content)->toContain('dark:via-') or
         expect($content)->toContain('dark:to-');
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     }
 });
 
@@ -177,9 +211,13 @@ test('interactive elements have dark mode hover states', function (): void {
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
     // Buttons and links should have hover states
     if (str_contains($content, 'hover:')) {
         expect($content)->toContain('hover:') and expect($content)->toContain('transition');
@@ -193,11 +231,15 @@ test('border colors adapt to dark mode', function (): void {
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 
     // Borders should have appropriate colors (may include white/10 for glassmorphism)
     if (str_contains($content, 'border-')) {
         expect($content)->toContain('border-white/10') or
             (expect($content)->toContain('dark:border-') or expect($content)->toContain('border-slate-'));
+<<<<<<< HEAD
 =======
     // Borders should have appropriate colors (may include white/10 for glassmorphism)
     if (str_contains($content, 'border-')) {
@@ -205,6 +247,8 @@ test('border colors adapt to dark mode', function (): void {
         expect($content)->toContain('dark:border-') or
         expect($content)->toContain('border-slate-');
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     } else {
         expect(true)->toBeTrue(); // Component may not use borders
     }
@@ -215,11 +259,15 @@ test('backdrop effects work in dark mode', function (): void {
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 
     // Should have backdrop blur and similar effects
     if (str_contains($content, 'backdrop-blur')) {
         expect($content)->toContain('bg-white/5') or
             (expect($content)->toContain('bg-black/') or expect($content)->toContain('backdrop-blur'));
+<<<<<<< HEAD
 =======
     // Should have backdrop blur and similar effects
     if (str_contains($content, 'backdrop-blur')) {
@@ -227,6 +275,8 @@ test('backdrop effects work in dark mode', function (): void {
         expect($content)->toContain('bg-black/') or
         expect($content)->toContain('backdrop-blur');
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     } else {
         expect(true)->toBeTrue(); // Component may not use backdrop effects
     }

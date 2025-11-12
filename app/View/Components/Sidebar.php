@@ -15,11 +15,15 @@ class Sidebar extends Component
         public Collection $collection,
         // public string $tpl = 'v1'
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
     }
 >>>>>>> 727968c (.)
+=======
+    ) {}
+>>>>>>> ef3c5fa (.)
 
     /**
      * Get the view / contents that represent the component.
@@ -48,9 +52,12 @@ class Sidebar extends Component
     //         ->limit(5)
     //         ->get();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     //     return view('components.sidebar', ['categories' => $categories]);
     // }
 }
