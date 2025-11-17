@@ -24,7 +24,7 @@ final class AddressField extends Field
     {
         parent::setUp();
 
-        $this->afterStateHydrated(function (AddressField $_component, ?Model $record) {
+        $this->afterStateHydrated(function (AddressField $_component, ?Model $record): void {
             $data = [
                 'country' => null,
                 'street' => null,

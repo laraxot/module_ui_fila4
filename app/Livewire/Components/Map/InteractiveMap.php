@@ -300,19 +300,6 @@ final class InteractiveMap extends Component
     }
 
     /**
-     * Ottiene il MIME type per il formato di esportazione.
-     */
-    private function getMimeType(string $format): string
-    {
-        return match ($format) {
-            'csv' => 'text/csv',
-            'geojson' => 'application/geo+json',
-            'kml' => 'application/vnd.google-earth.kml+xml',
-            default => 'application/json'
-        };
-    }
-
-    /**
      * Ottiene le proprietà computate.
      */
     public function getMarkersByTypeProperty(): array
@@ -331,5 +318,18 @@ final class InteractiveMap extends Component
     public function getFilteredMarkersCountProperty(): int
     {
         return count($this->markers);
+    }
+
+    /**
+     * Ottiene il MIME type per il formato di esportazione.
+     */
+    private function getMimeType(string $format): string
+    {
+        return match ($format) {
+            'csv' => 'text/csv',
+            'geojson' => 'application/geo+json',
+            'kml' => 'application/vnd.google-earth.kml+xml',
+            default => 'application/json'
+        };
     }
 }

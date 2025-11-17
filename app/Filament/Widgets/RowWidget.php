@@ -20,13 +20,13 @@ final class RowWidget extends XotBaseWidget
 
     protected int|string|array $columnSpan = 'full';
 
-    protected function getColumns(): int
-    {
-        return 3;
-    }
-
     public function getFormSchema(): array
     {
         return [];
+    }
+
+    protected function getColumns(): int
+    {
+        return 3;
     }
 }

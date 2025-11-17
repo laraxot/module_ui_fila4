@@ -71,6 +71,15 @@ final class RedirectWidget extends XotBaseWidget
     }
 
     /**
+     * Determina se il widget può essere visualizzato.
+     * Per il redirect widget, sempre visibile se ha una destinazione.
+     */
+    public static function canView(): bool
+    {
+        return true;
+    }
+
+    /**
      * Dati da passare alla vista.
      *
      * @return array<string, mixed>
@@ -84,14 +93,5 @@ final class RedirectWidget extends XotBaseWidget
             'class' => $this->class,
             'external' => $this->external,
         ];
-    }
-
-    /**
-     * Determina se il widget può essere visualizzato.
-     * Per il redirect widget, sempre visibile se ha una destinazione.
-     */
-    public static function canView(): bool
-    {
-        return true;
     }
 }

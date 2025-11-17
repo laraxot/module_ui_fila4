@@ -28,7 +28,7 @@ final class SelectStateColumn extends XotBaseSelectColumn
             return $this->normalizeStates($states);
         });
 
-        $this->beforeStateUpdated(function (Model&HasStatesContract $record, $state) {
+        $this->beforeStateUpdated(function (Model&HasStatesContract $record, $state): void {
             $message = '';
             // PHPStan L10: isset() rispetta __get() per Eloquent magic properties
             if (isset($record->state) && is_object($record->state) && method_exists($record->state, 'transitionTo')) {
@@ -98,6 +98,7 @@ final class SelectStateColumn extends XotBaseSelectColumn
      * Unisce i valori dello stato con gli stati transitionabili.
      *
      * @param  array<int|string>  $states
+     *
      * @return array<int|string>
      */
     private function mergeStateValues(mixed $state, string $name, array $states): array
@@ -132,6 +133,7 @@ final class SelectStateColumn extends XotBaseSelectColumn
      * Normalizza gli stati in un array associativo con chiavi stringa.
      *
      * @param  array<int|string>  $states
+     *
      * @return array<string, string>
      */
     private function normalizeStates(array $states): array

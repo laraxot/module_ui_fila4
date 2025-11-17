@@ -32,7 +32,7 @@ final class TableLayoutToggleHeaderAction extends Action
 
                 return $this->grid_icon;
             })
-            ->action(function ($livewire) {
+            ->action(function ($livewire): void {
                 if (is_object($livewire) && isset($livewire->layoutView) && is_string($livewire->layoutView)) {
                     $livewire->layoutView = $livewire->layoutView === 'grid' ? 'list' : 'grid';
                 }

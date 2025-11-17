@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Pages;
 
-use Modules\UI\Filament\Widgets;
 use Modules\UI\Filament\Widgets\StatWithIconWidget;
 use Modules\UI\Filament\Widgets\TestChartWidget;
 use Modules\UI\Filament\Widgets\TestWidget;

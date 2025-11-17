@@ -7,7 +7,6 @@ namespace Modules\UI\Filament\Tables\Columns;
 use Exception;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
-use Illuminate\Database\Eloquent\Model;
 use Livewire\Attributes\On;
 use Modules\Xot\Contracts\StateContract;
 use Modules\Xot\Filament\Tables\Columns\XotBaseColumn;
@@ -54,76 +53,6 @@ final class IconStateSplitColumn extends XotBaseColumn
         $record = $this->getRecord();
 
         return $this->buildStateArray($stateMapping, $record);
-    }
-
-    /**
-     * Ottiene la mappatura degli stati dalla classe di stato
-     */
-    private function getStateMapping(): ?array
-    {
-        if (! class_exists($this->stateClass) || ! method_exists($this->stateClass, 'getStateMapping')) {
-            return null;
-        }
-
-        $stateMapping = $this->stateClass::getStateMapping();
-        if (! is_object($stateMapping) || ! method_exists($stateMapping, 'toArray')) {
-            return null;
-        }
-
-        $states = $stateMapping->toArray();
-
-        return is_array($states) ? $states : null;
-    }
-
-    /**
-     * Costruisce array di stati dal mapping
-     *
-     * @param  array<array-key, mixed>  $stateMapping
-     * @return array<array-key, array<string, mixed>>
-     */
-    private function buildStateArray(array $stateMapping, mixed $record): array
-    {
-        $result = [];
-
-        foreach ($stateMapping as $stateKey => $stateClass) {
-            /** @var array-key $safeStateKey */
-            $safeStateKey = $stateKey;
-            $stateData = $this->createStateData($stateClass, $record);
-            if ($stateData !== null) {
-                $result[$safeStateKey] = $stateData;
-            }
-        }
-
-        return $result;
-    }
-
-    /**
-     * Crea dati per un singolo stato
-     *
-     * @return array<string, mixed>|null
-     */
-    private function createStateData(mixed $stateClass, mixed $record): ?array
-    {
-        if (! is_string($stateClass) || ! class_exists($stateClass)) {
-            return null;
-        }
-
-        try {
-            $stateInstance = new $stateClass($record);
-            if (! ($stateInstance instanceof StateContract)) {
-                return null;
-            }
-
-            return [
-                'class' => $stateInstance,
-                'icon' => $stateInstance->icon(),
-                'label' => $stateInstance->label(),
-                'color' => $stateInstance->color(),
-                'tooltip' => $stateInstance->label(),
-            ];
-        } catch (Exception $e) {
-            return null;
-        }
     }
 
     public function canTransitionTo(mixed $recordId, string $stateClass): bool
@@ -191,6 +120,127 @@ final class IconStateSplitColumn extends XotBaseColumn
     }
 
     /**
+     * Listener per l'evento table-action
+     */
+    #[On('table-action')]
+    public function handleTableAction(string $action, int|string $recordId): void
+    {
+        if ($action === 'prova') {
+            $this->prova($recordId);
+        }
+    }
+
+    /**
+     * Metodo per eseguire la transizione di stato
+     */
+    public function transitionState(mixed $recordId, string $stateClass): void
+    {
+        \Webmozart\Assert\Assert::integer($recordId, 'Record ID must be an integer');
+        try {
+            if (! class_exists($this->modelClass)) {
+                throw new Exception('Model class does not exist: '.$this->modelClass);
+            }
+
+            $record = $this->modelClass::find($recordId);
+
+            if (! $record) {
+                throw new Exception('Record non trovato');
+            }
+
+            // Esegui la transizione
+            // PHPStan L10: isset() rispetta __get() per Eloquent magic properties
+            if (! is_object($record) || ! isset($record->state) || ! is_object($record->state) || ! method_exists($record->state, 'transitionTo')) {
+                throw new Exception('State transition not supported');
+            }
+
+            $record->state->transitionTo($stateClass);
+
+            Notification::make()
+                ->title('Transizione Completata')
+                ->body('Lo stato è stato cambiato con successo.')
+                ->success()
+                ->send();
+        } catch (Exception $e) {
+            Notification::make()
+                ->title('Errore Transizione')
+                ->body('Si è verificato un errore: '.$e->getMessage())
+                ->danger()
+                ->send();
+        }
+    }
+
+    /**
+     * Ottiene la mappatura degli stati dalla classe di stato
+     */
+    private function getStateMapping(): ?array
+    {
+        if (! class_exists($this->stateClass) || ! method_exists($this->stateClass, 'getStateMapping')) {
+            return null;
+        }
+
+        $stateMapping = $this->stateClass::getStateMapping();
+        if (! is_object($stateMapping) || ! method_exists($stateMapping, 'toArray')) {
+            return null;
+        }
+
+        $states = $stateMapping->toArray();
+
+        return is_array($states) ? $states : null;
+    }
+
+    /**
+     * Costruisce array di stati dal mapping
+     *
+     * @param  array<array-key, mixed>  $stateMapping
+     *
+     * @return array<array-key, array<string, mixed>>
+     */
+    private function buildStateArray(array $stateMapping, mixed $record): array
+    {
+        $result = [];
+
+        foreach ($stateMapping as $stateKey => $stateClass) {
+            /** @var array-key $safeStateKey */
+            $safeStateKey = $stateKey;
+            $stateData = $this->createStateData($stateClass, $record);
+            if ($stateData !== null) {
+                $result[$safeStateKey] = $stateData;
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * Crea dati per un singolo stato
+     *
+     * @return array<string, mixed>|null
+     */
+    private function createStateData(mixed $stateClass, mixed $record): ?array
+    {
+        if (! is_string($stateClass) || ! class_exists($stateClass)) {
+            return null;
+        }
+
+        try {
+            $stateInstance = new $stateClass($record);
+            if (! ($stateInstance instanceof StateContract)) {
+                return null;
+            }
+
+            return [
+                'class' => $stateInstance,
+                'icon' => $stateInstance->icon(),
+                'label' => $stateInstance->label(),
+                'color' => $stateInstance->color(),
+                'tooltip' => $stateInstance->label(),
+            ];
+        } catch (Exception $e) {
+            return null;
+        }
+    }
+
+    /**
      * Crea azione di test
      */
     private function createTestAction(mixed $record): Action
@@ -199,7 +249,7 @@ final class IconStateSplitColumn extends XotBaseColumn
             ->icon('heroicon-m-plus')
             ->color('primary')
             ->tooltip('Test Prova')
-            ->action(function () use ($record) {
+            ->action(function () use ($record): void {
                 $recordId = 'N/A';
                 if (is_object($record) && isset($record->id)) {
                     $recordId = (string) $record->id;
@@ -227,7 +277,7 @@ final class IconStateSplitColumn extends XotBaseColumn
             return null;
         }
 
-        $stateClassName = get_class($stateContract);
+        $stateClassName = $stateContract::class;
         $actionData = $this->extractActionData($state, $stateKey);
 
         return $this->buildTransitionAction($stateKey, $actionData, $recordId, $stateClassName);
@@ -285,55 +335,5 @@ final class IconStateSplitColumn extends XotBaseColumn
             ->color($actionData['color'])
             ->label($actionData['label'])
             ->action(fn () => $this->transitionState($recordId, $stateClassName));
-    }
-
-    /**
-     * Listener per l'evento table-action
-     */
-    #[On('table-action')]
-    public function handleTableAction(string $action, int|string $recordId): void
-    {
-        if ($action === 'prova') {
-            $this->prova($recordId);
-        }
-    }
-
-    /**
-     * Metodo per eseguire la transizione di stato
-     */
-    public function transitionState(mixed $recordId, string $stateClass): void
-    {
-        \Webmozart\Assert\Assert::integer($recordId, 'Record ID must be an integer');
-        try {
-            if (! class_exists($this->modelClass)) {
-                throw new Exception('Model class does not exist: '.$this->modelClass);
-            }
-
-            $record = $this->modelClass::find($recordId);
-
-            if (! $record) {
-                throw new Exception('Record non trovato');
-            }
-
-            // Esegui la transizione
-            // PHPStan L10: isset() rispetta __get() per Eloquent magic properties
-            if (! is_object($record) || ! isset($record->state) || ! is_object($record->state) || ! method_exists($record->state, 'transitionTo')) {
-                throw new Exception('State transition not supported');
-            }
-
-            $record->state->transitionTo($stateClass);
-
-            Notification::make()
-                ->title('Transizione Completata')
-                ->body('Lo stato è stato cambiato con successo.')
-                ->success()
-                ->send();
-        } catch (Exception $e) {
-            Notification::make()
-                ->title('Errore Transizione')
-                ->body('Si è verificato un errore: '.$e->getMessage())
-                ->danger()
-                ->send();
-        }
     }
 }

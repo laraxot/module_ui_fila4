@@ -40,6 +40,7 @@ class SelectState extends Select
 
     /**
      * @param  array<int|string, mixed>  $values
+     *
      * @return array<string, string>
      */
     private function buildOptionsFromValues(array $values): array
@@ -72,4 +73,3 @@ class SelectState extends Select
         return $mapped;
     }
 }
-

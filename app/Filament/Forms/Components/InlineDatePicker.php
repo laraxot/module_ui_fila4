@@ -9,9 +9,8 @@ use Closure;
 use Filament\Forms\Components\DatePicker;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
-use Throwable;
-
 use function Safe\preg_match;
+use Throwable;
 
 /**
  * InlineDatePicker - Calendario inline minimalista e multilingua
@@ -24,17 +23,17 @@ use function Safe\preg_match;
  */
 final class InlineDatePicker extends DatePicker
 {
+
+    /**
+     * Mese attualmente visualizzato (formato Y-m).
+     */
+    public string $currentViewMonth = '';
     /**
      * Date abilitate per la selezione.
      *
      * @var array<string>|Closure|null
      */
     protected array|Closure|null $enabledDates = null;
-
-    /**
-     * Mese attualmente visualizzato (formato Y-m).
-     */
-    public string $currentViewMonth = '';
 
     /**
      * Vista Blade per il rendering.
@@ -219,6 +218,62 @@ final class InlineDatePicker extends DatePicker
     }
 
     /**
+     * Ottiene i dati per la vista.
+     *
+     * @return array<string, mixed>
+     */
+    public function getViewData(): array
+    {
+        $calendarData = $this->generateCalendarData();
+
+        return array_merge(parent::getViewData(), [
+            'calendarData' => $calendarData,
+            'currentViewMonth' => $this->currentViewMonth,
+            'currentValue' => $this->getState(),
+            'enabledDates' => $this->getEnabledDates(),
+            'statePath' => $this->getStatePath(),
+            'monthName' => $calendarData['monthName'],
+            'year' => $calendarData['year'],
+            'weekdays' => $calendarData['weekdays'],
+        ]);
+    }
+
+    /**
+     * Ottiene i giorni della settimana localizzati da Carbon.
+     *
+     * @return array<string>
+     */
+    protected function getLocalizedWeekdays(): array
+    {
+        $weekdays = [];
+        $monday = Carbon::now()->startOfWeek(Carbon::MONDAY);
+
+        for ($i = 0; $i < 7; $i++) {
+            // PHPStan L10: locale() può restituire Carbon|string, gestiamo il caso
+            $dayCarbonRaw = $monday->copy()->addDays($i)->locale(App::getLocale());
+            // Assicuriamoci che sia sempre Carbon
+            if (! ($dayCarbonRaw instanceof Carbon)) {
+                $dayCarbon = Carbon::now()->startOfWeek(Carbon::MONDAY)->addDays($i)->locale(App::getLocale());
+                if (! ($dayCarbon instanceof Carbon)) {
+                    $dayCarbon = Carbon::now()->startOfWeek(Carbon::MONDAY)->addDays($i);
+                }
+            } else {
+                $dayCarbon = $dayCarbonRaw;
+            }
+            $shortDayName = $dayCarbon->shortLocaleDayOfWeek;
+            if (is_array($shortDayName) && isset($shortDayName[0]) && is_string($shortDayName[0])) {
+                $weekdays[] = $shortDayName[0];
+            } else {
+                $dayName = $dayCarbon->dayName;
+                $weekdays[] = is_string($dayName) ? substr($dayName, 0, 1) : '';
+            }
+        }
+
+        /** @var array<string> $weekdays */
+        return $weekdays;
+    }
+
+    /**
      * Genera le settimane del calendario.
      *
      * @return array<int, array<int, array<string, mixed>>>
@@ -300,61 +355,5 @@ final class InlineDatePicker extends DatePicker
         } catch (Throwable $e) {
             return false;
         }
-    }
-
-    /**
-     * Ottiene i giorni della settimana localizzati da Carbon.
-     *
-     * @return array<string>
-     */
-    protected function getLocalizedWeekdays(): array
-    {
-        $weekdays = [];
-        $monday = Carbon::now()->startOfWeek(Carbon::MONDAY);
-
-        for ($i = 0; $i < 7; $i++) {
-            // PHPStan L10: locale() può restituire Carbon|string, gestiamo il caso
-            $dayCarbonRaw = $monday->copy()->addDays($i)->locale(App::getLocale());
-            // Assicuriamoci che sia sempre Carbon
-            if (! ($dayCarbonRaw instanceof Carbon)) {
-                $dayCarbon = Carbon::now()->startOfWeek(Carbon::MONDAY)->addDays($i)->locale(App::getLocale());
-                if (! ($dayCarbon instanceof Carbon)) {
-                    $dayCarbon = Carbon::now()->startOfWeek(Carbon::MONDAY)->addDays($i);
-                }
-            } else {
-                $dayCarbon = $dayCarbonRaw;
-            }
-            $shortDayName = $dayCarbon->shortLocaleDayOfWeek;
-            if (is_array($shortDayName) && isset($shortDayName[0]) && is_string($shortDayName[0])) {
-                $weekdays[] = $shortDayName[0];
-            } else {
-                $dayName = $dayCarbon->dayName;
-                $weekdays[] = is_string($dayName) ? substr($dayName, 0, 1) : '';
-            }
-        }
-
-        /** @var array<string> $weekdays */
-        return $weekdays;
-    }
-
-    /**
-     * Ottiene i dati per la vista.
-     *
-     * @return array<string, mixed>
-     */
-    public function getViewData(): array
-    {
-        $calendarData = $this->generateCalendarData();
-
-        return array_merge(parent::getViewData(), [
-            'calendarData' => $calendarData,
-            'currentViewMonth' => $this->currentViewMonth,
-            'currentValue' => $this->getState(),
-            'enabledDates' => $this->getEnabledDates(),
-            'statePath' => $this->getStatePath(),
-            'monthName' => $calendarData['monthName'],
-            'year' => $calendarData['year'],
-            'weekdays' => $calendarData['weekdays'],
-        ]);
     }
 }

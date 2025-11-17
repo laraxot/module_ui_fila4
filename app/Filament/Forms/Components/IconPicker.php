@@ -49,14 +49,12 @@ final class IconPicker extends TextInput
                             $opts = array_values($opts);
                             // Filter to ensure all values are strings
                             $opts = array_filter($opts, 'is_string');
-                            $opts = array_combine($opts, $opts);
-
-                            return $opts;
+                            return array_combine($opts, $opts);
                         })
                         ->inline()
                         ->inlineLabel(false),
                 ])
-                ->action(function (array $data, Set $set) {
+                ->action(function (array $data, Set $set): void {
                     $set('icon', $data['newstate']);
                 }),
         );

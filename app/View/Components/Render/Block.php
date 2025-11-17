@@ -19,7 +19,8 @@ final class Block extends Component
     public function __construct(
         public string $view,
         public array $block = [],
-    ) {}
+    ) {
+    }
 
     public function render(): ViewFactory|View
     {

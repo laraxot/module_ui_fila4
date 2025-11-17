@@ -93,7 +93,7 @@ class IconStateColumn extends IconColumn
                     $state = $record->getAttribute($name);
 
                     return [
-                        'state' => $state instanceof State ? get_class($state) : null,
+                        'state' => $state instanceof State ? $state::class : null,
                     ];
                 })
                 ->action(function (Model $record, array $data): void {
@@ -141,6 +141,7 @@ class IconStateColumn extends IconColumn
 
     /**
      * @param array<int|string, mixed> $states
+     *
      * @return list<string>
      */
     private function normalizeStateIdentifiers(array $states): array
@@ -168,7 +169,7 @@ class IconStateColumn extends IconColumn
         }
 
         if ($value instanceof State) {
-            return get_class($value);
+            return $value::class;
         }
 
         if (is_object($value)) {
@@ -181,6 +182,7 @@ class IconStateColumn extends IconColumn
     /**
      * @param Model&HasStatesContract $record
      * @param list<string> $stateIdentifiers
+     *
      * @return array<string, string>
      */
     private function buildStateOptions(Model $record, array $stateIdentifiers): array
@@ -204,4 +206,3 @@ class IconStateColumn extends IconColumn
         return $options;
     }
 }
-

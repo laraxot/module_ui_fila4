@@ -70,6 +70,7 @@ final class IconStateGroupColumn extends XotBaseColumnGroup
      * Costruisce le colonne dagli stati.
      *
      * @param  array<string, mixed>  $states
+     *
      * @return array<IconColumn>
      */
     private function buildColumnsFromStates(array $states): array
@@ -167,7 +168,7 @@ final class IconStateGroupColumn extends XotBaseColumnGroup
             ->modalDescription(fn ($_record) => $stateInstance->modalDescription())
             ->schema(fn ($_record) => $stateInstance->modalFormSchema())
             ->fillForm($stateInstance->modalFillFormByRecord(...))
-            ->action(function (mixed $record, mixed $data) use ($stateInstance) {
+            ->action(function (mixed $record, mixed $data) use ($stateInstance): void {
                 if (! ($record instanceof \Illuminate\Database\Eloquent\Model)) {
                     return;
                 }
