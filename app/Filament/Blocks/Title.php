@@ -11,47 +11,24 @@ use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 use Modules\Xot\Actions\View\GetViewsSiblingsAndSelfAction;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
-class Title // extends XotBaseBlock
-{public static function make(string $name = 'title', string $context = 'form'): Block
+class Title extends XotBaseBlock
 {
-    // $view = 'ui::components.blocks.title.v1';
-    // $views = app(GetViewsSiblingsAndSelfAction::class)->execute($view);
+    public static function make(string $name = 'title', string $context = 'form'): Block
+    {
+        // $view = 'ui::components.blocks.title.v1';
+        // $views = app(GetViewsSiblingsAndSelfAction::class)->execute($view);
 
-    $options = app(GetViewBlocksOptionsByTypeAction::class)->execute('title', false);
+        $options = app(GetViewBlocksOptionsByTypeAction::class)->execute('title', false);
 
-<<<<<<< HEAD
         return Block::make($name)
             ->schema([
-                TextInput::make('text')->required(),
-                Select::make('level')
-                    ->options([
-                        'h2' => 'h2',
-                        'h3' => 'h3',
-                        'h4' => 'h4',
-                    ])
-                    ->afterStateHydrated(static function ($state, $set) {
-                        if (!$state) {
-                            $set('level', 'h2');
-                        }
-                    }),
-                Select::make('view')->options($options),
-            ])
-            ->columns($context === 'form' ? 2 : 1);
+                TextInput::make('content')
+                    ->label('Title Content')
+                    ->required(),
+                Select::make('view')
+                    ->label('View Template')
+                    ->options($options)
+                    ->default('ui::components.blocks.title.v1'),
+            ]);
     }
-=======
-    return Block::make($name)
-        ->schema([
-            TextInput::make('text')->required(),
-            Select::make('level')
-                ->options([
-                    'h2' => 'h2',
-                    'h3' => 'h3',
-                    'h4' => 'h4',
-                ])
-                ->afterStateHydrated(static fn ($state, $set) => $state || $set('level', 'h2')),
-            Select::make('view')->options($options),
-        ])
-        ->columns($context === 'form' ? 2 : 1);
-}
->>>>>>> 3b732b6 (.)
 }

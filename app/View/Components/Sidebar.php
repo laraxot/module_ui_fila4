@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\UI\View\Components;
 
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\View as ViewFacade;
 use Illuminate\View\Component;
 
 class Sidebar extends Component
@@ -13,9 +12,7 @@ class Sidebar extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
-    {
-    }
+    public function __construct() {}
 
     public function render(): View
     {

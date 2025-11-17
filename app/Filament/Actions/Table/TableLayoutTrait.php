@@ -21,8 +21,8 @@ trait TableLayoutTrait
         $sessionKey = "table_layout_{$identifier}";
         $layout = Session::get($sessionKey);
 
-        if ($layout && in_array($layout, TableLayoutEnum::cases(), strict: true)) {
-            return TableLayoutEnum::from(is_string($layout) ? $layout : $layout->value);
+        if ($layout instanceof TableLayoutEnum) {
+            return $layout;
         }
 
         return TableLayoutEnum::GRID;

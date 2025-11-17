@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\View\Components\Render;
 
-use Exception;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\View\Component;
 use Illuminate\View\View;
-use Webmozart\Assert\Assert;
 
 /**
  * .
@@ -16,7 +14,7 @@ use Webmozart\Assert\Assert;
 final class Block extends Component
 {
     /**
-     * @param array<string, mixed> $block
+     * @param  array<string, mixed>  $block
      */
     public function __construct(
         public string $view,
@@ -46,6 +44,7 @@ final class Block extends Component
         if (! is_array($view_params)) {
             $view_params = [];
         }
+
         /** @var array<string, mixed> $view_params */
         return view($view, $view_params);
     }

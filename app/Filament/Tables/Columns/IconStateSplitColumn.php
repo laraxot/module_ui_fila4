@@ -7,10 +7,10 @@ namespace Modules\UI\Filament\Tables\Columns;
 use Exception;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
-use Modules\Xot\Filament\Tables\Columns\XotBaseColumn;
 use Illuminate\Database\Eloquent\Model;
 use Livewire\Attributes\On;
 use Modules\Xot\Contracts\StateContract;
+use Modules\Xot\Filament\Tables\Columns\XotBaseColumn;
 
 /**
  * IconStateSplitColumn - Enhanced state transition column with compact grid layout

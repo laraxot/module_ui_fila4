@@ -15,34 +15,61 @@ class SelectState extends Select
     {
         parent::setUp();
 
-        //  $this->selectablePlaceholder(false);
-        $this->options(function ((Model&HasStatesContract)|null $record): array {
+        $this->options(function (?Model $record): array {
             $name = $this->getName();
-            if (is_null($record)) {
-                $model = $this->getModel();
-                if (is_string($model) && class_exists($model)) {
-                    $states = Arr::wrap(app($model)->getDefaultStateFor($name));
 
-                    /*
-                     * @var array<int|string>
-                     *
-                     * @phpstan-ignore argument.type
-                     */
-                    return array_combine($states, $states);
-                }
+            if ($record instanceof HasStatesContract) {
+                return $this->buildOptionsFromValues($record->getStatesFor($name)->toArray());
+            }
 
+            $model = $this->getModel();
+            if (! is_string($model) || ! class_exists($model)) {
                 return [];
             }
 
-            $states = $record->getStatesFor($name)->toArray();
+            $modelInstance = app($model);
+            if (! $modelInstance instanceof Model || ! $modelInstance instanceof HasStatesContract) {
+                return [];
+            }
 
-            /*
-             * @var array<int|string>
-             *
-             * @phpstan-ignore argument.type
-             */
-            return array_combine($states, $states);
+            return $this->buildOptionsFromValues(Arr::wrap($modelInstance->getDefaultStateFor($name)));
         });
+
         $this->required();
     }
+
+    /**
+     * @param  array<int|string, mixed>  $values
+     * @return array<string, string>
+     */
+    private function buildOptionsFromValues(array $values): array
+    {
+        $normalized = array_values(array_filter(
+            array_map(
+                static function (mixed $value): string {
+                    if (is_string($value) && $value !== '') {
+                        return $value;
+                    }
+
+                    if (is_int($value)) {
+                        return (string) $value;
+                    }
+
+                    return '';
+                },
+                $values
+            ),
+            static fn (string $value): bool => $value !== ''
+        ));
+
+        if ($normalized === []) {
+            return [];
+        }
+
+        /** @var array<string, string> $mapped */
+        $mapped = array_combine($normalized, $normalized) ?: [];
+
+        return $mapped;
+    }
 }
+

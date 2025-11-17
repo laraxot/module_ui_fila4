@@ -24,97 +24,96 @@ class IconStateColumn extends IconColumn
     {
         parent::setUp();
         // $this->getStateUsing(fn() => true); // the column requires a state to be passed to it
-        $this->icon(function ($state): ?string {
-            if (is_object($state) && method_exists($state, 'icon')) {
-                return $state->icon();
-            }
-            return null;
-        });
-        $this->color(function ($state): ?string {
-            if (is_object($state) && method_exists($state, 'color')) {
-                return $state->color();
-            }
-            return null;
-        });
-        $this->tooltip(function ($state): ?string {
-            if (is_object($state) && method_exists($state, 'label')) {
-                return $state->label();
-            }
-            return null;
-        });
+        $this->icon(fn (mixed $state): ?string => $this->callStateMethod($state, 'icon'));
+        $this->color(fn (mixed $state): ?string => $this->callStateMethod($state, 'color'));
+        $this->tooltip(fn (mixed $state): ?string => $this->callStateMethod($state, 'label'));
         // $this->label('aaa');
 
         $this->action(
             Action::make('change-state')
                 ->schema([
                     Select::make('state')
-                        ->options(function (Model&HasStatesContract $record, string $_state): array {
-                            $name = $this->getName();
-                            $state = $record->getAttribute($name);
-                            if ($state === null) {
-                                $defaultStates = $record->getDefaultStateFor($name);
-                                $states = Arr::wrap($defaultStates);
-
-                                /** @phpstan-ignore argument.type */
-                                return is_array($states) ? array_combine($states, $states) : [];
+                        ->options(function (?Model $record): array {
+                            if (! $record instanceof HasStatesContract) {
+                                return [];
                             }
-                            Assert::isInstanceOf($state, State::class);
+
+                            $name = $this->getName();
+                            $currentState = $record->getAttribute($name);
+
+                            if (! $currentState instanceof State) {
+                                $defaultStates = Arr::wrap($record->getDefaultStateFor($name));
+
+                                return $this->buildStateOptions($record, $this->normalizeStateIdentifiers($defaultStates));
+                            }
 
                             try {
-                                $states = $state->transitionableStates();
-                            } catch (Exception $e) {
-                                $states = $record->getStatesFor($name)->toArray();
+                                $transitionableStates = $currentState->transitionableStates();
+                            } catch (Exception) {
+                                $transitionableStates = $record->getStatesFor($name)->toArray();
                             }
-                            /** @phpstan-ignore-next-line */
-                            $states = Arr::mapWithKeys($states, function ($state) use ($record) {
-                                $model = Str::of(class_basename($record))->slug()->toString();
-                                /** @phpstan-ignore binaryOp.invalid */
-                                Assert::string($label = __('pub_theme::'.$model.'_states.'.$state.'.label'));
 
-                                /* @phpstan-ignore-next-line array.invalidKey */
-                                return [$state => $label];
-                            });
-
-                            return $states;
+                            return $this->buildStateOptions($record, $this->normalizeStateIdentifiers($transitionableStates));
                         })
                         ->required()
                         ->reactive(),
-                    Textarea::make('message')->required(function (Get $get, $record) {
-                        $newState = $get('state');
-                        $name = $this->getName();
-                        $state = $record->getAttribute($name);
-                        if (is_object($state) && method_exists($state, 'getStateMapping')) {
-                            $states = $state::getStateMapping();
-                            /** @var class-string<State> $newStateClass */
-                            $newStateClass = Arr::get($states, (string) $newState);
+                    Textarea::make('message')
+                        ->required(function (Get $get, ?Model $record): bool {
+                            if (! $record instanceof HasStatesContract) {
+                                return false;
+                            }
+
+                            $newState = $get('state');
+                            $name = $this->getName();
+                            $state = $record->getAttribute($name);
+                            if (! $state instanceof State) {
+                                return false;
+                            }
+
+                            $stateMapping = $state::getStateMapping();
+                            $newStateClass = Arr::get($stateMapping, (string) $newState);
                             if (! is_string($newStateClass) || ! class_exists($newStateClass)) {
                                 return false;
                             }
+
+                            /** @var State $newStateInstance */
                             $newStateInstance = new $newStateClass($record);
 
                             return method_exists($newStateInstance, 'isMessageRequired')
-                                ? $newStateInstance->isMessageRequired()
+                                ? (bool) $newStateInstance->isMessageRequired()
                                 : false;
-                        }
-                        return false;
-                    }),
+                        }),
                 ])
-                ->fillForm(function ($record) {
+                ->fillForm(function (?Model $record): array {
                     $name = $this->getName();
+                    if (! $record instanceof HasStatesContract) {
+                        return ['state' => null];
+                    }
+
                     $state = $record->getAttribute($name);
-                    
+
                     return [
-                        'state' => is_object($state) ? get_class($state) : null,
+                        'state' => $state instanceof State ? get_class($state) : null,
                     ];
                 })
-                ->action(function ($record, $data) {
-                    $state = $data['state'];
-                    $model = Str::of(class_basename($record))->slug()->toString();
-                    $label = __('pub_theme::'.$model.'_states.'.$state.'.label');
-                    if (!is_object($record->state) || !method_exists($record->state, 'transitionTo')) {
+                ->action(function (Model $record, array $data): void {
+                    Assert::isInstanceOf($record, HasStatesContract::class);
+                    Assert::string($stateClass = $data['state'] ?? null);
+                    $name = $this->getName();
+                    $currentState = $record->getAttribute($name);
+                    if (! $currentState instanceof State) {
                         throw new Exception('State property does not support transitions');
                     }
-                    $record->state->transitionTo($data['state'], $data['message']);
+
+                    $message = isset($data['message']) && is_string($data['message']) ? $data['message'] : null;
+                    $currentState->transitionTo($stateClass, $message);
+
+                    $model = Str::of(class_basename($record))->slug()->toString();
+                    $label = __('pub_theme::'.$model.'_states.'.$stateClass.'.label');
+                    if (! is_string($label)) {
+                        $label = Str::headline(class_basename($stateClass));
+                    }
+
                     Notification::make()
                         ->title('Stato aggiornato a '.$label)
                         ->success()
@@ -122,4 +121,87 @@ class IconStateColumn extends IconColumn
                 }),
         );
     }
+
+    private function callStateMethod(mixed $state, string $method): ?string
+    {
+        if ($state instanceof State && method_exists($state, $method)) {
+            $result = $state->{$method}();
+
+            return is_string($result) ? $result : null;
+        }
+
+        if (is_object($state) && method_exists($state, $method)) {
+            $result = $state->{$method}();
+
+            return is_string($result) ? $result : null;
+        }
+
+        return null;
+    }
+
+    /**
+     * @param array<int|string, mixed> $states
+     * @return list<string>
+     */
+    private function normalizeStateIdentifiers(array $states): array
+    {
+        $normalized = [];
+
+        foreach ($states as $key => $value) {
+            $candidate = $this->stateValueToString($key);
+            if ($candidate === null) {
+                $candidate = $this->stateValueToString($value);
+            }
+
+            if ($candidate !== null) {
+                $normalized[] = $candidate;
+            }
+        }
+
+        return array_values(array_unique(array_filter($normalized)));
+    }
+
+    private function stateValueToString(mixed $value): ?string
+    {
+        if (is_string($value) && $value !== '') {
+            return $value;
+        }
+
+        if ($value instanceof State) {
+            return get_class($value);
+        }
+
+        if (is_object($value)) {
+            return $value::class;
+        }
+
+        return null;
+    }
+
+    /**
+     * @param Model&HasStatesContract $record
+     * @param list<string> $stateIdentifiers
+     * @return array<string, string>
+     */
+    private function buildStateOptions(Model $record, array $stateIdentifiers): array
+    {
+        if ($stateIdentifiers === []) {
+            return [];
+        }
+
+        $modelSlug = Str::of(class_basename($record))->slug()->toString();
+        $options = [];
+
+        foreach ($stateIdentifiers as $stateIdentifier) {
+            $label = __('pub_theme::'.$modelSlug.'_states.'.$stateIdentifier.'.label');
+            if (! is_string($label)) {
+                $label = Str::headline(class_basename($stateIdentifier));
+            }
+
+            $options[$stateIdentifier] = $label;
+        }
+
+        return $options;
+    }
 }
+

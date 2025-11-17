@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Tables\Columns;
 
 use Exception;
-use Modules\Xot\Filament\Tables\Columns\XotBaseSelectColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
+use Modules\Xot\Filament\Tables\Columns\XotBaseSelectColumn;
 use Spatie\ModelStates\HasStatesContract;
 
 final class SelectStateColumn extends XotBaseSelectColumn

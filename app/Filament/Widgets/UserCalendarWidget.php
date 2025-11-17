@@ -11,7 +11,6 @@ use Filament\Schemas\Components\Grid;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
-use Webmozart\Assert\Assert;
 
 final class UserCalendarWidget extends XotBaseWidget
 {
@@ -54,7 +53,7 @@ final class UserCalendarWidget extends XotBaseWidget
         }
 
         $result = $this->executeAction($action);
-        
+
         // PHPStan L10: Type narrowing per assicurare che tutti gli elementi siano Component
         /** @var array<int|string, Component> $schema */
         $schema = [];
@@ -63,7 +62,7 @@ final class UserCalendarWidget extends XotBaseWidget
                 $schema[$key] = $item;
             }
         }
-        
+
         return $schema;
     }
 

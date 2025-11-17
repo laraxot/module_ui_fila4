@@ -6,9 +6,8 @@ namespace Modules\UI\Filament\Tables\Columns;
 
 use Filament\Actions\Action;
 use Filament\Schemas\Components\Utilities\Set;
-use Modules\Xot\Filament\Tables\Columns\XotBaseColumnGroup;
-use Modules\UI\Filament\Tables\Columns\IconColumn;
 use Modules\Xot\Contracts\StateContract;
+use Modules\Xot\Filament\Tables\Columns\XotBaseColumnGroup;
 
 final class IconStateGroupColumn extends XotBaseColumnGroup
 {
@@ -132,6 +131,7 @@ final class IconStateGroupColumn extends XotBaseColumnGroup
             ->default(function (mixed $record, Set $_set) use ($stateClass, $state) {
                 /** @var string $stateKey */
                 $stateKey = $state;
+
                 return $this->getColumnDefault($record, $stateClass, $stateKey);
             });
 
