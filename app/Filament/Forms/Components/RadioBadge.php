@@ -60,7 +60,7 @@ final class RadioBadge extends Radio
         return $color ?? $this->selectedColor;
     }
 
-    public function getIconForOption(string $value): ?string
+    public function getIconForOption(string $value): \Illuminate\Contracts\Support\Htmlable|string|null
     {
         $icon = $this->getEnumValue($value)?->getIcon();
 

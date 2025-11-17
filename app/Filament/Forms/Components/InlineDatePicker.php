@@ -9,8 +9,9 @@ use Closure;
 use Filament\Forms\Components\DatePicker;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
-use function Safe\preg_match;
 use Throwable;
+
+use function Safe\preg_match;
 
 /**
  * InlineDatePicker - Calendario inline minimalista e multilingua
@@ -23,11 +24,11 @@ use Throwable;
  */
 final class InlineDatePicker extends DatePicker
 {
-
     /**
      * Mese attualmente visualizzato (formato Y-m).
      */
     public string $currentViewMonth = '';
+
     /**
      * Date abilitate per la selezione.
      *

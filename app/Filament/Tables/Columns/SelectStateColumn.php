@@ -98,7 +98,6 @@ final class SelectStateColumn extends XotBaseSelectColumn
      * Unisce i valori dello stato con gli stati transitionabili.
      *
      * @param  array<int|string>  $states
-     *
      * @return array<int|string>
      */
     private function mergeStateValues(mixed $state, string $name, array $states): array
@@ -133,7 +132,6 @@ final class SelectStateColumn extends XotBaseSelectColumn
      * Normalizza gli stati in un array associativo con chiavi stringa.
      *
      * @param  array<int|string>  $states
-     *
      * @return array<string, string>
      */
     private function normalizeStates(array $states): array

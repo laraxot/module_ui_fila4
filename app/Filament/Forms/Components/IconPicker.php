@@ -49,6 +49,7 @@ final class IconPicker extends TextInput
                             $opts = array_values($opts);
                             // Filter to ensure all values are strings
                             $opts = array_filter($opts, 'is_string');
+
                             return array_combine($opts, $opts);
                         })
                         ->inline()

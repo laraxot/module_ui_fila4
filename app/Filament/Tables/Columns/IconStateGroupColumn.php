@@ -70,7 +70,6 @@ final class IconStateGroupColumn extends XotBaseColumnGroup
      * Costruisce le colonne dagli stati.
      *
      * @param  array<string, mixed>  $states
-     *
      * @return array<IconColumn>
      */
     private function buildColumnsFromStates(array $states): array

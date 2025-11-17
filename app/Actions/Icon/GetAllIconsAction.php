@@ -85,7 +85,6 @@ final class GetAllIconsAction
 
     /**
      * @param  array<string, array<string, mixed>>  $icons
-     *
      * @return array<string, array<string, mixed>>
      */
     private function processIconSets(array $icons): array
@@ -113,7 +112,6 @@ final class GetAllIconsAction
      * Extract icons from a single icon set.
      *
      * @param  array<string, mixed>  $set
-     *
      * @return array<int, string>
      */
     private function extractIconsFromSet(array $set): array

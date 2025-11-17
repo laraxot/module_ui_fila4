@@ -140,8 +140,7 @@ class IconStateColumn extends IconColumn
     }
 
     /**
-     * @param array<int|string, mixed> $states
-     *
+     * @param  array<int|string, mixed>  $states
      * @return list<string>
      */
     private function normalizeStateIdentifiers(array $states): array
@@ -180,9 +179,8 @@ class IconStateColumn extends IconColumn
     }
 
     /**
-     * @param Model&HasStatesContract $record
-     * @param list<string> $stateIdentifiers
-     *
+     * @param  Model&HasStatesContract  $record
+     * @param  list<string>  $stateIdentifiers
      * @return array<string, string>
      */
     private function buildStateOptions(Model $record, array $stateIdentifiers): array

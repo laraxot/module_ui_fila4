@@ -192,7 +192,6 @@ final class IconStateSplitColumn extends XotBaseColumn
      * Costruisce array di stati dal mapping
      *
      * @param  array<array-key, mixed>  $stateMapping
-     *
      * @return array<array-key, array<string, mixed>>
      */
     private function buildStateArray(array $stateMapping, mixed $record): array

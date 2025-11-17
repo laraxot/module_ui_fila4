@@ -14,8 +14,8 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 final class UserCalendarWidget extends XotBaseWidget
 {
-
     public string $type;
+
     protected string $view = 'ui::filament.widgets.user-calendar';
 
     public function getActionName(string $function): string
