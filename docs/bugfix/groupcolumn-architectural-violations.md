@@ -28,6 +28,7 @@ return $item instanceof \Filament\Tables\Columns\Column;
 return $item instanceof XotBaseColumn;
 ```
 
+<<<<<<< HEAD
 ### 2. Uso di `->getLabel()` nella View
 
 ```php
@@ -44,6 +45,27 @@ $label = $field->getLabel() ?? $name;
 // ✅ DOPO
 $label = __('ui::table.columns.' . $name . '.label');
 ```
+=======
+### 2. Gestione Label Localizzate (Aggiornamento 18 Nov 2025)
+
+```php
+// ✅ ATTUALE - group.blade.php
+$rawLabel = $field->getLabel();
+// ... fallback automatici e sanitizzazione
+```
+
+**Motivazione aggiornata**:
+- LangServiceProvider assegna automaticamente le label ai componenti Filament
+- GroupColumn ora utilizza `getLabel()` (che contiene già la traduzione) e applica fallback:
+  1. `getLabel()` (inclusi Htmlable/Closure)
+  2. `__('ui::table.columns.{name}.label')`
+  3. `Str::headline($name)`
+
+Questo garantisce:
+- Compatibilità con l'automazione esistente
+- Nessuna hardcoded namespace
+- Traduzioni sempre presenti anche se mancano le chiavi `ui::table.*`
+>>>>>>> c59340d4 (.)
 
 ### 3. Proprietà Inutilizzata (Dead Code)
 
@@ -198,21 +220,61 @@ final class GroupColumn extends XotBaseColumn
 @endforeach
 ```
 
+<<<<<<< HEAD
 **Dopo**:
 ```blade
 @php
     $fields = $getFields();  // ✅ PSR-12
+=======
+**Dopo (18 Nov 2025)**:
+```blade
+@php
+    $fields = $getFields();
+>>>>>>> c59340d4 (.)
     $record = $getRecord();
 @endphp
 
 @foreach ($fields as $field)
     @php
         $name = $field->getName();
+<<<<<<< HEAD
         $value = $record->{$name} ?? null;  // ✅ Direct access
         $label = __('ui::table.columns.' . $name . '.label');  // ✅ Translation
         $displayText = $label . ': ' . $formattedValue;
     @endphp
     {{ $displayText }}<br/>  // ✅ Escaped
+=======
+        $value = $record->{$name} ?? null;
+
+        if (empty($value) && $value !== 0 && $value !== '0') {
+            continue;
+        }
+
+        $rawLabel = $field->getLabel();
+
+        if ($rawLabel instanceof \Closure) {
+            $rawLabel = $rawLabel($record);
+        }
+
+        if ($rawLabel instanceof \Illuminate\Contracts\Support\Htmlable) {
+            $labelText = trim(strip_tags($rawLabel->toHtml()));
+        } elseif (is_string($rawLabel)) {
+            $labelText = trim($rawLabel);
+        } else {
+            $labelText = '';
+        }
+
+        if ($labelText === '') {
+            $translationKey = 'ui::table.columns.' . $name . '.label';
+            $translated = __($translationKey);
+            $labelText = $translated !== $translationKey
+                ? $translated
+                : \Illuminate\Support\Str::of((string) $name)->replace('_', ' ')->headline()->value();
+        }
+    @endphp
+
+    {{ $labelText }}: {{ $value }}<br/>
+>>>>>>> c59340d4 (.)
 @endforeach
 ```
 
@@ -241,8 +303,13 @@ Column (Filament - DO NOT REFERENCE)
 ### 1. No Direct Filament References
 ✅ Sempre usare XotBase classes
 
+<<<<<<< HEAD
 ### 2. No Label Methods
 ✅ Sempre usare sistema traduzione `__()`
+=======
+### 2. Auto Translation First
+✅ Usare `getLabel()` (tradotto da LangServiceProvider) con fallback `__()` + `Str::headline`
+>>>>>>> c59340d4 (.)
 
 ### 3. Dead Code Elimination
 ✅ Rimuovere tutto il codice inutilizzato
@@ -262,3 +329,7 @@ Column (Filament - DO NOT REFERENCE)
 - [Never Use Label Rule](../never_use_label_rule.md)
 - [XotBaseColumn](../../../../Xot/app/Filament/Tables/Columns/XotBaseColumn.php)
 - [Translation Pattern](../../translations/)
+<<<<<<< HEAD
+=======
+- [docs/blade-components.md](../../../docs/blade-components.md)
+>>>>>>> c59340d4 (.)
