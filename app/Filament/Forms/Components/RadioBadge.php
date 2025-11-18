@@ -21,11 +21,11 @@ final class RadioBadge extends Radio
     /**
      * Get enum value from string value
      *
-     * @return (BackedEnum&HasColor&HasIcon)|null
+     * @return (\BackedEnum&HasColor&HasIcon)|null
      */
-    public function getEnumValue(string $value): ?BackedEnum
+    public function getEnumValue(string $value): ?\BackedEnum
     {
-        if (! is_string($this->options)) {
+        if (! \is_string($this->options)) {
             return null;
         }
         if (! enum_exists($this->options)) {
@@ -34,7 +34,7 @@ final class RadioBadge extends Radio
         $enumClass = $this->options;
 
         // Check if the class is a BackedEnum
-        if (! is_subclass_of($enumClass, BackedEnum::class)) {
+        if (! is_subclass_of($enumClass, \BackedEnum::class)) {
             return null;
         }
 
@@ -46,7 +46,7 @@ final class RadioBadge extends Radio
         $res = $enumClass::tryFrom($value);
 
         // Ensure the result implements the required interfaces
-        if ($res instanceof BackedEnum && $res instanceof HasColor && $res instanceof HasIcon) {
+        if ($res instanceof \BackedEnum && $res instanceof HasColor && $res instanceof HasIcon) {
             return $res;
         }
 
@@ -64,7 +64,7 @@ final class RadioBadge extends Radio
     {
         $icon = $this->getEnumValue($value)?->getIcon();
 
-        return $icon instanceof BackedEnum ? (string) $icon->value : $icon;
+        return $icon instanceof \BackedEnum ? (string) $icon->value : $icon;
     }
 
     public function defaultColor(string $color): static
