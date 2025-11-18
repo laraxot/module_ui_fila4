@@ -53,7 +53,7 @@ Modules/Limesurvey/app/Models/SurveyResponse.php
 git checkout --ours <file>
 
 # Strip conflict markers
-perl -i -pe 's/^<<<<<<< HEAD\n//g; s/^=======\n//g; s/^>>>>>>> .*\n//g' <file>
+
 ```
 
 ### PHPStan Error Distribution
