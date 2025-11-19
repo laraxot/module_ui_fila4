@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
+use Illuminate\Database\Eloquent\Model;
 use Filament\Actions\Action;
 use Filament\Schemas\Components\Utilities\Set;
 use Modules\Xot\Contracts\StateContract;
@@ -168,7 +169,7 @@ final class IconStateGroupColumn extends XotBaseColumnGroup
             ->schema(fn ($_record) => $stateInstance->modalFormSchema())
             ->fillForm($stateInstance->modalFillFormByRecord(...))
             ->action(function (mixed $record, mixed $data) use ($stateInstance): void {
-                if (! ($record instanceof \Illuminate\Database\Eloquent\Model)) {
+                if (! ($record instanceof Model)) {
                     return;
                 }
                 if (! is_array($data)) {

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Livewire\Components\Map;
 
+use Illuminate\Contracts\View\View;
 use Exception;
 use Livewire\Component;
 use Modules\Geo\Services\GeocodingService;
@@ -70,7 +71,7 @@ final class InteractiveMap extends Component
         $this->loadMarkers();
     }
 
-    public function render(): \Illuminate\Contracts\View\View
+    public function render(): View
     {
         /** @var view-string $viewName */
         $viewName = 'ui::livewire.components.map.interactive-map';

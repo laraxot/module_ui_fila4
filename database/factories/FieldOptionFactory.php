@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Database\Factories;
 
+use Modules\UI\Models\FieldOption;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class FieldOptionFactory extends Factory
@@ -11,7 +12,7 @@ class FieldOptionFactory extends Factory
     /**
      * The name of the factory's corresponding model.
      */
-    protected $model = \Modules\UI\Models\FieldOption::class;
+    protected $model = FieldOption::class;
 
     /**
      * Define the model's default state.

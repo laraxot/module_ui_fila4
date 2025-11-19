@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
+use Illuminate\Contracts\Support\Htmlable;
 use BackedEnum;
 use Filament\Forms\Components\Radio;
 use Filament\Support\Contracts\HasColor;
@@ -17,13 +18,12 @@ final class RadioBadge extends Radio
     protected string $defaultColor = 'gray-200'; // gray-200
 
     protected string $selectedColor = 'blue-500'; // '#3b82f6'; // blue-500
-
     /**
      * Get enum value from string value
      *
-     * @return (\BackedEnum&HasColor&HasIcon)|null
+     * @return BackedEnum|null
      */
-    public function getEnumValue(string $value): ?\BackedEnum
+    public function getEnumValue(string $value): ?BackedEnum
     {
         if (! \is_string($this->options)) {
             return null;
@@ -34,7 +34,7 @@ final class RadioBadge extends Radio
         $enumClass = $this->options;
 
         // Check if the class is a BackedEnum
-        if (! is_subclass_of($enumClass, \BackedEnum::class)) {
+        if (! is_subclass_of($enumClass, BackedEnum::class)) {
             return null;
         }
 
@@ -46,7 +46,7 @@ final class RadioBadge extends Radio
         $res = $enumClass::tryFrom($value);
 
         // Ensure the result implements the required interfaces
-        if ($res instanceof \BackedEnum && $res instanceof HasColor && $res instanceof HasIcon) {
+        if ($res instanceof BackedEnum && $res instanceof HasColor && $res instanceof HasIcon) {
             return $res;
         }
 
@@ -55,16 +55,51 @@ final class RadioBadge extends Radio
 
     public function getColorForOption(string $value): string
     {
-        Assert::nullOrString($color = $this->getEnumValue($value)?->getColor());
+        $enumValue = $this->getEnumValue($value);
+        // Type narrowing: check if enum implements HasColor interface
+        if ($enumValue !== null && $enumValue instanceof HasColor) {
+            $color = $enumValue->getColor();
+            if (is_string($color)) {
+                return $color;
+            }
+        }
 
-        return $color ?? $this->selectedColor;
+        return $this->selectedColor;
     }
 
+    /**
+     * @return string|null
+     */
     public function getIconForOption(string $value): string|null
     {
-        $icon = $this->getEnumValue($value)?->getIcon();
+        $enumValue = $this->getEnumValue($value);
+        if ($enumValue === null) {
+            return null;
+        }
 
-        return $icon instanceof \BackedEnum ? (string) $icon->value : $icon;
+        // Type narrowing: check if enum implements HasIcon interface
+        if (! ($enumValue instanceof HasIcon)) {
+            return null;
+        }
+
+        $icon = $enumValue->getIcon();
+        if ($icon === null) {
+            return null;
+        }
+
+        // Type narrowing: convert Htmlable to string if needed
+        if (is_string($icon)) {
+            return $icon;
+        }
+
+        // If icon is Htmlable, convert to string
+        if ($icon instanceof Htmlable) {
+            return $icon->toHtml();
+        }
+
+        // Fallback: try to cast to string when possible
+        // @phpstan-ignore-next-line function.impossibleType
+        return is_scalar($icon) ? (string) $icon : null;
     }
 
     public function defaultColor(string $color): static

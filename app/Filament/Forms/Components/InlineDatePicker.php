@@ -156,7 +156,7 @@ final class InlineDatePicker extends DatePicker
             try {
                 /** @var array<array-key, mixed> $datesArray */
                 $datesArray = iterator_to_array($dates);
-            } catch (\Throwable $e) {
+            } catch (Throwable $e) {
                 $datesArray = [];
             }
         }

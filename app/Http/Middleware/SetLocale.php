@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Http\Middleware;
 
+use RuntimeException;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -32,6 +33,6 @@ final class SetLocale
             return $response;
         }
 
-        throw new \RuntimeException('Middleware must return a response');
+        throw new RuntimeException('Middleware must return a response');
     }
 }

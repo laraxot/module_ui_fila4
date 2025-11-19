@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
+use Traversable;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -118,7 +119,7 @@ final class SelectStateColumn extends XotBaseSelectColumn
             return array_merge($filteredStateValues, $states);
         }
 
-        if ($stateValue instanceof \Traversable) {
+        if ($stateValue instanceof Traversable) {
             $stateArray = iterator_to_array($stateValue);
             $filteredStateArray = array_filter($stateArray, fn ($item) => is_int($item) || is_string($item));
 

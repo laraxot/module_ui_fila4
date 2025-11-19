@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
+use Webmozart\Assert\Assert;
 use Exception;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
@@ -57,7 +58,7 @@ final class IconStateSplitColumn extends XotBaseColumn
 
     public function canTransitionTo(mixed $recordId, string $stateClass): bool
     {
-        \Webmozart\Assert\Assert::integer($recordId, 'Record ID must be an integer');
+        Assert::integer($recordId, 'Record ID must be an integer');
         if (! class_exists($this->modelClass)) {
             return false;
         }
@@ -135,7 +136,7 @@ final class IconStateSplitColumn extends XotBaseColumn
      */
     public function transitionState(mixed $recordId, string $stateClass): void
     {
-        \Webmozart\Assert\Assert::integer($recordId, 'Record ID must be an integer');
+        Assert::integer($recordId, 'Record ID must be an integer');
         try {
             if (! class_exists($this->modelClass)) {
                 throw new Exception('Model class does not exist: '.$this->modelClass);
