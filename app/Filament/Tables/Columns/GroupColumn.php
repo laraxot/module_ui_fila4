@@ -50,23 +50,14 @@ final class GroupColumn extends XotBaseColumn
     /**
      * Set the columns to display in the group.
      *
-<<<<<<< HEAD
-     * @param  array<mixed>  $columns
-=======
      * @param  array<Column>  $columns
->>>>>>> c59340d4 (.)
      */
     public function schema(array $columns): static
     {
         // Filter and accept only Column instances (includes both Filament and XotBase columns)
-<<<<<<< HEAD
-        $filtered = array_filter($columns, static fn (mixed $item): bool => $item instanceof Column);
-        $this->schema = array_values($filtered);
-=======
         // $filtered = array_filter($columns, static fn (mixed $item): bool => $item instanceof Column);
         // $this->schema = array_values($filtered);
         $this->schema = $columns;
->>>>>>> c59340d4 (.)
 
         return $this;
     }
