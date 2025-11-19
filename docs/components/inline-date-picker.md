@@ -610,5 +610,9 @@ public function register(): void
 
 **Ultimo aggiornamento**: Dicembre 2024  
 **Versione**: 2.0 con Navigazione Temporale Avanzata  
+<<<<<<< HEAD
 **Compatibilità**: Laraxot SaluteOra, Filament 4.x, Alpine.js 3.x  
+=======
+**Compatibilità**: Laraxot SaluteOra, Filament 3.x, Alpine.js 3.x  
+>>>>>>> 1899c5f (.)
 **Filosofia**: Fenomenologia Quantistica applicata al Design Temporale 
