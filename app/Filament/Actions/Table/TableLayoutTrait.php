@@ -19,10 +19,20 @@ trait TableLayoutTrait
     public function getCurrentLayout(string $identifier = 'default'): TableLayoutEnum
     {
         $sessionKey = "table_layout_{$identifier}";
+        /** @var mixed $layout */
         $layout = Session::get($sessionKey);
 
-        if ($layout && in_array($layout, TableLayoutEnum::cases(), strict: true)) {
-            return TableLayoutEnum::from($layout);
+        if ($layout !== null && in_array($layout, TableLayoutEnum::cases(), strict: true)) {
+            // $layout è già un TableLayoutEnum dopo il controllo in_array con strict
+            return $layout;
+        }
+
+        // Se $layout è una stringa/int, prova a convertirlo
+        if (is_string($layout) || is_int($layout)) {
+            $enum = TableLayoutEnum::tryFrom($layout);
+            if ($enum !== null) {
+                return $enum;
+            }
         }
 
         return TableLayoutEnum::GRID;

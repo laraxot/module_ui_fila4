@@ -31,10 +31,20 @@ class RadioBadge extends Radio
         if (! enum_exists($this->options)) {
             return null;
         }
+        /** @var class-string $enumClass */
         $enumClass = $this->options;
-        Assert::isInstanceOf($enumClass, BackedEnum::class);
-        Assert::implementsInterface($enumClass, HasColor::class);
-        Assert::implementsInterface($enumClass, HasIcon::class);
+        
+        // Verifica che sia un BackedEnum
+        if (!is_subclass_of($enumClass, BackedEnum::class)) {
+            return null;
+        }
+        
+        // Verifica che implementi le interfacce richieste
+        if (!is_subclass_of($enumClass, HasColor::class) || !is_subclass_of($enumClass, HasIcon::class)) {
+            return null;
+        }
+        
+        /** @var class-string<BackedEnum&HasColor&HasIcon> $enumClass */
         $res = $enumClass::tryFrom($value);
 
         return $res;
@@ -51,7 +61,21 @@ class RadioBadge extends Radio
     {
         $icon = $this->getEnumValue($value)?->getIcon();
 
-        return $icon instanceof BackedEnum ? (string) $icon->value : $icon;
+        // getIcon() può restituire Htmlable|string|null, ma dobbiamo restituire solo string|null
+        if ($icon === null) {
+            return null;
+        }
+        
+        if (is_string($icon)) {
+            return $icon;
+        }
+        
+        // Se è Htmlable, convertilo a string
+        if (is_object($icon) && method_exists($icon, '__toString')) {
+            return (string) $icon;
+        }
+        
+        return null;
     }
 
     public function defaultColor(string $color): static

@@ -39,8 +39,19 @@ class IconStateColumn extends IconColumn
                             $name = $this->getName();
                             $state = $record->getAttribute($name);
                             if ($state === null) {
-                                $states = Arr::wrap($record->getDefaultStateFor($name));
-                                return array_combine($states, $states);
+                                $defaultStates = Arr::wrap($record->getDefaultStateFor($name));
+
+                                /** @var array<string, string> $options */
+                                $options = [];
+                                foreach ($defaultStates as $defaultState) {
+                                    if (! is_string($defaultState)) {
+                                        continue;
+                                    }
+
+                                    $options[$defaultState] = $defaultState;
+                                }
+
+                                return $options;
                             }
                             Assert::isInstanceOf($state, State::class);
 
@@ -51,11 +62,14 @@ class IconStateColumn extends IconColumn
 
 
                             }
-                            /** @phpstan-ignore-next-line */
+                            /** @var array<int|string, mixed> $states */
                             $states = Arr::mapWithKeys($states, function ($state) use ($record) {
+                                if (!is_string($state)) {
+                                    return [];
+                                }
                                 $model = Str::of(class_basename($record))->slug()->toString();
-                                /** @phpstan-ignore binaryOp.invalid */
-                                Assert::string($label = __('pub_theme::' . $model . '_states.' . $state . '.label'));
+                                /** @var string $label */
+                                $label = __('pub_theme::' . $model . '_states.' . $state . '.label');
                                 return [$state => $label];
                             });
                             return $states;
@@ -78,14 +92,43 @@ class IconStateColumn extends IconColumn
                             : false;
                     }),
                 ])
-                ->fillForm(fn($record) => [
-                    'state' => $record->state::$name,
-                ])
+                ->fillForm(function ($record) {
+                    /** @var Model&HasStatesContract $record */
+                    $name = $this->getName();
+                    $state = $record->getAttribute($name);
+                    if (!($state instanceof State)) {
+                        return [];
+                    }
+                    /** @var string $stateName */
+                    $stateName = $state::$name ?? '';
+                    return [
+                        'state' => $stateName,
+                    ];
+                })
                 ->action(function ($record, $data) {
+                    /** @var array<string, mixed> $data */
+                    if (!isset($data['state']) || !is_string($data['state'])) {
+                        throw new Exception('State is required and must be a string');
+                    }
                     $state = $data['state'];
+                    /** @var Model $record */
+                    if (!is_object($record)) {
+                        throw new Exception('Record must be an object');
+                    }
                     $model = Str::of(class_basename($record))->slug()->toString();
-                    Assert::string($label = __('pub_theme::' . $model . '_states.' . $state . '.label'));
-                    $record->state->transitionTo($data['state'], $data['message']);
+                    /** @var string $label */
+                    $label = __('pub_theme::' . $model . '_states.' . $state . '.label');
+                    
+                    /** @var Model&HasStatesContract $record */
+                    $currentState = $record->getAttribute($this->getName());
+                    if (!($currentState instanceof State)) {
+                        throw new Exception('Current state is not a valid State instance');
+                    }
+                    
+                    /** @var string|null $message */
+                    $message = isset($data['message']) && is_string($data['message']) ? $data['message'] : null;
+                    $currentState->transitionTo($state, $message);
+                    
                     Notification::make()
                         ->title('Stato aggiornato a ' . $label)
                         ->success()
