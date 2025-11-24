@@ -19,7 +19,7 @@ trait TableLayoutTrait
     public function getCurrentLayout(string $identifier = 'default'): TableLayoutEnum
     {
         $sessionKey = "table_layout_{$identifier}";
-        /** @var mixed $layout */
+        /** @var TableLayoutEnum|string|int|null $layout */
         $layout = Session::get($sessionKey);
 
         if ($layout !== null && in_array($layout, TableLayoutEnum::cases(), strict: true)) {

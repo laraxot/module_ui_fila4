@@ -31,7 +31,7 @@ class RadioBadge extends Radio
         if (! enum_exists($this->options)) {
             return null;
         }
-        /** @var class-string $enumClass */
+        /** @var class-string<\UnitEnum> $enumClass */
         $enumClass = $this->options;
         
         // Verifica che sia un BackedEnum
