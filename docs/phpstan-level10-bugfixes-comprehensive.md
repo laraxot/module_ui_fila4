@@ -1,7 +1,7 @@
 # PHPStan Level 10 Comprehensive Bugfixes
 
 ## Problema Generale
-Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, <nome progetto>, UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, <nome modulo>, <nome progetto>, UI, Xot.
 
 ## Moduli Interessati e Correzioni
 
@@ -70,7 +70,7 @@ public function getSpecifyDiseases(): array
 {
 ```
 
-### 🟡 **SaluteMo Module** - ListReports
+### 🟡 **<nome modulo> Module** - ListReports
 **Stato**: ⚠️ Da Verificare
 
 #### ListReports.php
@@ -89,7 +89,7 @@ public function getSpecifyDiseases(): array
 | UI         | en/s3test.php                 | Duplicate array key        | ✅ Fix |
 | Xot        | GetCloudFrontSignedUrlAction  | Parameter type mismatch    | ✅ Fix |
 | <nome progetto>  | Report.php                    | Missing return type        | ✅ Fix |
-| SaluteMo   | ListReports.php               | Invalid return type        | ⚠️ TBD |
+| <nome modulo>   | ListReports.php               | Invalid return type        | ⚠️ TBD |
 
 ## Verifica Post-Correzione
 
@@ -100,7 +100,7 @@ cd /var/www/html/_bases/base_<nome progetto>/laravel
 ```
 
 ### Problemi Residui
-1. **SaluteMo/ListReports**: Richiede cache clear PHPStan
+1. **<nome modulo>/ListReports**: Richiede cache clear PHPStan
 2. **Media Module**: Verificare se la scansione PHPStan è aggiornata
 
 ## Best Practice Implementate
