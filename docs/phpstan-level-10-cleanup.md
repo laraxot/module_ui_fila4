@@ -32,14 +32,14 @@
 The first major issue was 13 files with unresolved Git merge conflicts causing PHP parse errors:
 
 ```
-Modules/Quaeris/app/Exports/AlertUser2Export.php
-Modules/Quaeris/app/Filament/Widgets/BaseTableWidget.php
-Modules/Quaeris/app/Filament/Widgets/ContactWidget.php
-Modules/Quaeris/app/Filament/Widgets/AlertWidget.php
-Modules/Quaeris/app/Filament/Pages/AutoPage.php
-Modules/Quaeris/app/Filament/Pages/DashboardV2.php
-Modules/Quaeris/app/Datas/DashboardFilterData.php
-Modules/Quaeris/app/Datas/AlertDashboardFilterData.php
+Modules/<nome progetto>/app/Exports/AlertUser2Export.php
+Modules/<nome progetto>/app/Filament/Widgets/BaseTableWidget.php
+Modules/<nome progetto>/app/Filament/Widgets/ContactWidget.php
+Modules/<nome progetto>/app/Filament/Widgets/AlertWidget.php
+Modules/<nome progetto>/app/Filament/Pages/AutoPage.php
+Modules/<nome progetto>/app/Filament/Pages/DashboardV2.php
+Modules/<nome progetto>/app/Datas/DashboardFilterData.php
+Modules/<nome progetto>/app/Datas/AlertDashboardFilterData.php
 Modules/Xot/app/Actions/Filament/GetModulesNavigationItems.php
 Modules/Xot/app/Actions/Factory/GetPropertiesFromMethodsByModelAction.php
 Modules/Xot/tests/Unit/metatagdatatest.php
@@ -101,7 +101,7 @@ public function execute(Model $model): array
 
 **Files Fixed**:
 - `Modules/Xot/app/Actions/Factory/GetPropertiesFromMethodsByModelAction.php`
-- `Modules/Quaeris/app/Filament/Widgets/BaseTableWidget.php`
+- `Modules/<nome progetto>/app/Filament/Widgets/BaseTableWidget.php`
 - `Modules/UI/app/Rules/OpeningHoursRule.php`
 
 **Impact**: Reduced 110 → 70 errors

@@ -476,7 +476,7 @@ $result = someFunction($value);
 
 ### Short Term (This Week)
 
-1. [ ] Code review altri moduli (Quaeris, Xot, User)
+1. [ ] Code review altri moduli (<nome progetto>, Xot, User)
 2. [ ] Creare test automatici per questi pattern
 3. [ ] Documentare in `03-development/code-quality-patterns.md`
 
@@ -863,7 +863,7 @@ $value = $model->property['key'] ?? null;
 ### Short Term (This Week)
 
 1. [ ] Completare UI module (tutti @phpstan-ignore rimossi)
-2. [ ] Applicare pattern a modulo Quaeris
+2. [ ] Applicare pattern a modulo <nome progetto>
 3. [ ] Applicare pattern a modulo Xot
 4. [ ] Documentare in `03-development/phpstan-level-10-patterns.md`
 
@@ -1083,7 +1083,7 @@ protected string $property = 'custom-value';
 1. [ ] InteractiveMap.php - Fix MapService class checks
 2. [ ] Completare modulo UI (100%)
 3. [ ] Verificare PHPStan Level 10 su intero modulo
-4. [ ] Apply pattern a modulo Quaeris
+4. [ ] Apply pattern a modulo <nome progetto>
 
 ---
 
