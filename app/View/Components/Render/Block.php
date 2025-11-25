@@ -48,7 +48,10 @@ class Block extends Component
 
             return view('ui::alert', $view_params);
         }
-        $view_params = $this->block['data'] ?? [];
+        $view_params_raw = $this->block['data'] ?? [];
+        $view_params = is_array($view_params_raw) ? $view_params_raw : [];
+        /** @var array<string, mixed> $view_params */
+        $view_params = (array) $view_params;
         Assert::string($view, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
         if (!view()->exists($view)) {
             throw new Exception('view not found [' . $view . ']');

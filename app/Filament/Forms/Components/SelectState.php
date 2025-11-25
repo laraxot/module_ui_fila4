@@ -20,24 +20,44 @@ class SelectState extends Select
             $name = $this->getName();
             if (is_null($record)) {
                 $model = $this->getModel();
-                $states = Arr::wrap(app($model)->getDefaultStateFor($name));
-
-                /**
-                 * @var array<int|string>
-                 *
-                 * @phpstan-ignore argument.type
-                 */
-                return array_combine($states, $states);
+                if (is_string($model) && class_exists($model)) {
+                    $instance = app($model);
+                    if (is_object($instance)) {
+                        $methodExists = method_exists($instance, 'getDefaultStateFor');
+                        if ($methodExists) {
+                            $statesRaw = $instance->getDefaultStateFor($name);
+                            if (!is_array($statesRaw)) {
+                                $statesRaw = Arr::wrap($statesRaw);
+                            }
+                            /** @var array<int|string, mixed> $statesRaw */
+                            $states = $statesRaw;
+                            $statesKeys = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
+                            $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
+                            
+                            $combined = array_combine($statesKeys, $statesValues);
+                            /** @var array<int|string, int|string> $combinedTyped */
+                            $combinedTyped = $combined ?: [];
+                            return $combinedTyped;
+                        }
+                    }
+                }
+                
+                return [];
             }
 
-            $states = $record->getStatesFor($name)->toArray();
-
-            /**
-             * @var array<int|string>
-             *
-             * @phpstan-ignore argument.type
-             */
-            return array_combine($states, $states);
+            // Record implements HasStatesContract which provides getStatesFor()
+            $statesCollection = $record->getStatesFor($name);
+            // getStatesFor() returns Collection which has toArray()
+            $statesRaw = $statesCollection->toArray();
+            /** @var array<int|string, mixed> $states */
+            $states = $statesRaw;
+            $statesKeys = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
+            $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
+            
+            $combined = array_combine($statesKeys, $statesValues);
+            /** @var array<int|string, int|string> $combinedTyped */
+            $combinedTyped = $combined ?: [];
+            return $combinedTyped;
         });
         $this->required();
     }

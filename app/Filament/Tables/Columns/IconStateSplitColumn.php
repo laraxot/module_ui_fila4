@@ -17,6 +17,7 @@ use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Model;
 use Livewire\Attributes\On;
 use Modules\Xot\Contracts\StateContract;
+use Spatie\ModelStates\State;
 use Webmozart\Assert\Assert;
 
 /**
@@ -52,22 +53,52 @@ class IconStateSplitColumn extends Column
         return $this;
     }
 
+    /**
+     * @return array<string, array{class: StateContract, icon: string, label: string, color: string, tooltip: string}>
+     */
     public function getRecordStates(): array
     {
-        $states = $this->stateClass::getStateMapping()->toArray();
+        $statesRaw = [];
+        if (class_exists($this->stateClass) && method_exists($this->stateClass, 'getStateMapping')) {
+            $stateMapping = $this->stateClass::getStateMapping();
+            if (is_object($stateMapping) && method_exists($stateMapping, 'toArray')) {
+                $statesArray = $stateMapping->toArray();
+                $statesRaw = is_array($statesArray) ? $statesArray : [];
+            }
+        }
+        
+        /** @var array<string, string> $states */
+        $states = $statesRaw;
         $record = $this->getRecord();
 
         $result = [];
-        foreach ($states as $stateKey => $stateClass) {
+        foreach ($states as $stateKey => $stateClassItem) {
             try {
-                $stateInstance = new $stateClass($record);
+                if (!is_string($stateClassItem) || !class_exists($stateClassItem)) {
+                    continue;
+                }
+                
+                $stateInstance = new $stateClassItem($record);
                 Assert::isInstanceOf($stateInstance, StateContract::class);
+                
+                // StateContract provides icon(), label(), color()
+                $icon = $stateInstance->icon();
+                $label = $stateInstance->label();
+                $color = $stateInstance->color();
+                
+                // Type narrowing: questi metodi restituiscono string
+                $iconString = (string) $icon;
+                $labelString = (string) $label;
+                $colorString = (string) $color;
+                
+                // $stateKey è già string dalla chiave dell'array
+                
                 $result[$stateKey] = [
                     'class' => $stateInstance,
-                    'icon' => $stateInstance->icon(),
-                    'label' => $stateInstance->label(),
-                    'color' => $stateInstance->color(),
-                    'tooltip' => $stateInstance->label(),
+                    'icon' => $iconString,
+                    'label' => $labelString,
+                    'color' => $colorString,
+                    'tooltip' => $labelString,
                 ];
             } catch (Exception $e) {
                 // Skip problematic states
@@ -80,17 +111,30 @@ class IconStateSplitColumn extends Column
 
     public function canTransitionTo(int|string $recordId, string $stateClass): bool
     {
-        $record = $this->modelClass::find($recordId);
+        if (!class_exists($this->modelClass) || !method_exists($this->modelClass, 'find')) {
+            return false;
+        }
+        
+        $recordRaw = $this->modelClass::find($recordId);
 
-        if (!$record) {
+        if (!$recordRaw || !is_object($recordRaw)) {
             return false;
         }
 
-        if (!$record->state) {
+        /** @var Model $record */
+        $record = $recordRaw;
+
+        if (!isset($record->state) || !is_object($record->state)) {
             return false;
         }
 
-        return $record->state->canTransitionTo($stateClass);
+        if (!($record->state instanceof State)) {
+            return false;
+        }
+
+        /** @var State $state */
+        $state = $record->state;
+        return $state->canTransitionTo($stateClass);
     }
 
     /**
@@ -134,16 +178,45 @@ class IconStateSplitColumn extends Column
 
         // Aggiungi azioni per gli stati
         foreach ($states as $stateKey => $state) {
-            $recordId = $record && isset($record->id) ? $record->id : null;
-            if ($recordId !== null && $this->canTransitionTo($recordId, $state['class']::class)) {
-                $actions["transition_to_{$stateKey}"] = Action::make(
-                    "transition_to_{$stateKey}",
-                )
-                    ->icon($state['icon'])
-                    ->color($state['color'])
-                    ->label($state['label'])
-                    ->action(fn() => $this->transitionState($recordId, $state['class']::class));
+            if (!is_array($state) || !isset($state['class']) || !isset($state['icon']) || !isset($state['color']) || !isset($state['label'])) {
+                continue;
             }
+            
+            $stateClass = $state['class'];
+            $stateIcon = $state['icon'];
+            $stateColor = $state['color'];
+            $stateLabel = $state['label'];
+            
+            if (!is_object($stateClass) || !($stateClass instanceof StateContract)) {
+                continue;
+            }
+            
+            $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
+            if ($recordIdRaw === null || (!is_int($recordIdRaw) && !is_string($recordIdRaw))) {
+                continue;
+            }
+            
+            $recordId = is_int($recordIdRaw) ? $recordIdRaw : (string) $recordIdRaw;
+            $stateClassName = $stateClass::class;
+            if (!$this->canTransitionTo($recordId, $stateClassName)) {
+                continue;
+            }
+            
+            // Type narrowing: questi sono già string dalla struttura array
+            $iconString = (string) $stateIcon;
+            $colorString = (string) $stateColor;
+            $labelString = (string) $stateLabel;
+            
+            $actions["transition_to_{$stateKey}"] = Action::make(
+                "transition_to_{$stateKey}",
+            )
+                ->icon($iconString)
+                ->color($colorString)
+                ->label($labelString)
+                ->action(function () use ($recordId, $stateClassName): void {
+                    // $recordId è già stato verificato come int|string sopra
+                    $this->transitionState($recordId, $stateClassName);
+                });
         }
 
         return $actions;
@@ -166,14 +239,31 @@ class IconStateSplitColumn extends Column
     public function transitionState(int|string $recordId, string $stateClass): void
     {
         try {
-            $record = $this->modelClass::find($recordId);
+            if (!class_exists($this->modelClass) || !method_exists($this->modelClass, 'find')) {
+                throw new Exception('Model class not found or invalid');
+            }
+            
+            $recordRaw = $this->modelClass::find($recordId);
 
-            if (!$record) {
+            if (!$recordRaw || !is_object($recordRaw)) {
                 throw new Exception('Record non trovato');
             }
 
+            /** @var Model $record */
+            $record = $recordRaw;
+
+            if (!isset($record->state) || !is_object($record->state)) {
+                throw new Exception('State transition method not available');
+            }
+
+            if (!($record->state instanceof State)) {
+                throw new Exception('State is not a valid State instance');
+            }
+
             // Esegui la transizione
-            $record->state->transitionTo($stateClass);
+            /** @var State $state */
+            $state = $record->state;
+            $state->transitionTo($stateClass);
 
             Notification::make()
                 ->title('Transizione Completata')

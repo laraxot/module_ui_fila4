@@ -1,7 +1,7 @@
 # PHPStan Level 10 Comprehensive Bugfixes
 
 ## Problema Generale
-Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, <nome modulo>, <nome progetto>, UI, Xot.
+Errori PHPStan level 10+ rilevati durante la scansione multi-modulo: Media, <nome modulo>, <nome progetto>, UI, Xot.
 
 ## Moduli Interessati e Correzioni
 
@@ -131,7 +131,7 @@ cd /var/www/html/_bases/base_<nome progetto>/laravel
 
 ## Aggiornamento Continuo
 
-Questo documento deve essere aggiornato ogni volta che vengono rilevati e corretti nuovi errori PHPStan level 9+.
+Questo documento deve essere aggiornato ogni volta che vengono rilevati e corretti nuovi errori PHPStan level 10+.
 
 **Data Ultimo Aggiornamento**: 2025-01-06  
 **PHPStan Version**: 1.12.x  

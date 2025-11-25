@@ -165,6 +165,14 @@ curl -I http://127.0.0.1:8001/<nome progetto>/admin/gaia/survey-pdfs
 - Supporta il metodo statico `make()` per l'istanziazione
 - Compatibile con il sistema di layout delle tabelle Filament
 
+## Aggiornamento PHPStan
+
+- **Problema**: l'azione `TableLayoutToggleHeaderAction` accedeva a `$livewire->layoutView` senza un tipo esplicito, causando l'errore `property.notFound` a livello PHPStan 10.
+- **Soluzione**: aggiunto un PHPDoc shape `object{layoutView?: string|null}` sopra le closure `->icon()` e `->action()` e sostituito `property_exists()` con `isset()` per rispettare la regola globale anti magic properties.
+- **Risultato**: eliminato l'errore statico garantendo type safety sulle azioni di header e allineamento con la regola “fix, don’t ignore”.
+- **Verifica**: `php -d memory_limit=4G ./vendor/bin/phpstan analyse Modules/UI --memory-limit=4G --no-progress`
+
+
 ## Riferimenti
 
 - [Interfaccia HasTableLayout](./HasTableLayout.php)

@@ -106,7 +106,7 @@ All AWS operations are wrapped in try-catch blocks to handle exceptions graceful
 - [Root Documentation: AWS Testing](../../docs/aws-testing.md)
 
 ## PHPStan Compliance
-The component has been updated to comply with PHPStan level 9 requirements:
+The component has been updated to comply with PHPStan level 10 requirements:
 - Explicit return types
 - Proper null handling
 - Correct parameter typing

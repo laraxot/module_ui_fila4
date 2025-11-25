@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\UI\Filament\Widgets;
 
 use Filament\Forms\Components\DateTimePicker;
@@ -22,7 +24,8 @@ class UserCalendarWidget extends Widget
         $action_suffix = Str::of($function)->studly()->append('Action')->toString();
         $resource = XotData::make()->getUserResourceClassByType($this->type);
         $model = $resource::getModel();
-        $action = Str::of($model)
+        $modelString = is_string($model) ? $model : (string) $model;
+        $action = Str::of($modelString)
             ->replace('\Models\\', '\Actions\\')
             ->append('\Calendar\\'.$action_suffix)
             ->toString();
@@ -30,23 +33,52 @@ class UserCalendarWidget extends Widget
         return $action;
     }
 
+    /**
+     * @param array<string, mixed> $fetchInfo
+     * @return array<int, array<string, mixed>>
+     */
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
-        return app($action)->execute($fetchInfo);
+        if (!class_exists($action)) {
+            return [];
+        }
+
+        $actionInstance = app($action);
+        if (!is_object($actionInstance) || !method_exists($actionInstance, 'execute')) {
+            return [];
+        }
+
+        $result = $actionInstance->execute($fetchInfo);
+        if (!is_array($result)) {
+            return [];
+        }
+        /** @var array<int, array<string, mixed>> $result */
+        return $result;
     }
 
+    /**
+     * @return array<int, \Filament\Forms\Components\TextInput|\Filament\Schemas\Components\Grid>
+     */
     public function getFormSchema(): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
         if (class_exists($action)) {
-            return app($action)->execute();
+            $actionInstance = app($action);
+            if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
+                $resultRaw = $actionInstance->execute();
+                if (is_array($resultRaw)) {
+                    /** @var array<int, \Filament\Forms\Components\TextInput|\Filament\Schemas\Components\Grid> $result */
+                    $result = $resultRaw;
+                    return $result;
+                }
+            }
         }
 
         // Fallback schema
-        return [
+        $schema = [
             TextInput::make('title'),
 
             Grid::make()
@@ -55,6 +87,8 @@ class UserCalendarWidget extends Widget
                     DateTimePicker::make('ends_at'),
                 ]),
         ];
+
+        return $schema;
     }
 
     /*

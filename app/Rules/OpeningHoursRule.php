@@ -41,12 +41,15 @@ class OpeningHoursRule implements ValidationRule
                 continue;
             }
 
+            // Type narrowing per dayLabel
+            $dayLabelString = is_string($dayLabel) ? $dayLabel : (string) $dayLabel;
+
             // Valida ogni sessione (mattina e pomeriggio)
-            $this->validateSession($dayHours, 'morning', $dayLabel, $fail);
-            $this->validateSession($dayHours, 'afternoon', $dayLabel, $fail);
+            $this->validateSession($dayHours, 'morning', $dayLabelString, $fail);
+            $this->validateSession($dayHours, 'afternoon', $dayLabelString, $fail);
 
             // Valida la coerenza tra sessioni dello stesso giorno
-            $this->validateDayLogic($dayHours, $dayLabel, $fail);
+            $this->validateDayLogic($dayHours, $dayLabelString, $fail);
         }
     }
 

@@ -123,7 +123,8 @@ class IconStateColumn extends IconColumn
                         return [];
                     }
                     /** @var string $stateName */
-                    $stateName = property_exists($state, 'name') && is_string($state->name)
+                    // ✅ isset() invece di property_exists() - più sicuro e coerente
+                    $stateName = isset($state->name) && is_string($state->name)
                         ? $state->name
                         : class_basename($state);
                     return [

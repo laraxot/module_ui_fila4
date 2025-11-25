@@ -54,12 +54,18 @@ class RadioCollection extends Field
 
     /**
      * Get the options collection.
+     *
+     * @return Collection<int|string, mixed>
      */
     public function getOptions(): Collection
     {
-        $options = $this->evaluate($this->options);
-
-        return $options;
+        $optionsRaw = $this->evaluate($this->options);
+        
+        if ($optionsRaw instanceof Collection) {
+            return $optionsRaw;
+        }
+        
+        return collect([]);
     }
 
     /**
