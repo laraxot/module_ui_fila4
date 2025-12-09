@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 @props(['title' => 'Appuntamenti'])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -133,12 +124,4 @@ function confirmCancel(appointmentId) {
     }
 }
 </script>
-<<<<<<< HEAD
-<<<<<<< HEAD
 @endpush
-=======
-@endpush 
->>>>>>> 727968c (.)
-=======
-@endpush
->>>>>>> ef3c5fa (.)
