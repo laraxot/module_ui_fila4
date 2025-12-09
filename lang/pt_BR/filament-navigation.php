@@ -13,10 +13,18 @@ return [
         'created_at' => 'Criado em',
         'updated_at' => 'Editado em',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'select-options' => [
         'same-tab' => 'Mesma tab',
         'new-tab' => 'Nova tab',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'items' => [
         'empty' => 'Nenhum item',
         'add-item' => 'Adicionar item',
@@ -27,6 +35,10 @@ return [
         'dedent' => 'Recuar',
         'remove' => 'Remover',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'items-modal' => [
         'title' => 'Item',
         'label' => 'Nome',

@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 {{-- https://flowbite.com/docs/components/carousel/#controls --}}
 
 
