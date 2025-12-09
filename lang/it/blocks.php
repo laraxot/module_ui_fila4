@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> 727968c (.)
 return [
     'navigation' => [
         'fields' => [
@@ -56,4 +59,8 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
 ];
+=======
+]; 
+>>>>>>> 727968c (.)

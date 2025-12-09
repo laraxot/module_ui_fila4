@@ -23,11 +23,16 @@ class Blocks extends Component
 {
     public array $blocks = [];
 
+<<<<<<< HEAD
     public function __construct(
         null|array $blocks = [],
         public null|Model $model = null,
         public string $tpl = 'v1',
     ) {
+=======
+    public function __construct(?array $blocks = [], public ?Model $model = null, public string $tpl = 'v1')
+    {
+>>>>>>> 727968c (.)
         if (is_array($blocks)) {
             $this->blocks = $blocks;
         }

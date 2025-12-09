@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 @php
     $fields=$getFields();
     $record=$getRecord();
