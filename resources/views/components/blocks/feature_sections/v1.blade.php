@@ -1,8 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 @props(['title', 'sections'])
 
 <section class="py-12 bg-white">
@@ -29,4 +47,20 @@ declare(strict_types=1);
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 </section>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+</section>
+=======
+</section> 
+>>>>>>> a12f125f4a (.)
+=======
+</section>
+>>>>>>> b93ef594b4 (.)
+=======
+</section> 
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)

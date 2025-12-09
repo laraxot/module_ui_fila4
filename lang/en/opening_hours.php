@@ -56,6 +56,14 @@ return [
         'from_before_to' => 'The "From" time must be before the "To" time',
         'to_after_from' => 'The "To" time must be after the "From" time',
         'time_sequence' => 'Start time must be before end time',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
         'morning_before_afternoon' => 'For :day, morning closing time must be before afternoon opening time.',
         'missing_closing_time' => 'If you specify :session opening time for :day, you must also specify closing time.',
         'missing_opening_time' => 'If you specify :session closing time for :day, you must also specify opening time.',
@@ -70,5 +78,15 @@ return [
             'morning' => 'morning',
             'afternoon' => 'afternoon',
         ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     ],
 ];
