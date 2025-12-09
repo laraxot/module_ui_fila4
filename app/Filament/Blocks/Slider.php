@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Blocks;
 
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Modules\UI\Filament\Forms\Components\RadioImage;
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
