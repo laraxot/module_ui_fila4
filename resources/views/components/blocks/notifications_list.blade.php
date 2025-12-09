@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 @props(['title' => 'Notifiche'])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -99,7 +105,11 @@ declare(strict_types=1);
         </div>
     @endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 </div>
 =======
 </div> 
 >>>>>>> 727968c (.)
+=======
+</div>
+>>>>>>> ef3c5fa (.)
