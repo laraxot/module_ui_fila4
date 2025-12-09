@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 declare(strict_types=1);
 
 
@@ -13,6 +16,7 @@ return [
      * | This is the array for the languages
      * |
      */
+<<<<<<< HEAD
 =======
 return [
     /*
@@ -24,22 +28,31 @@ return [
     |
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'languages' => [
         'it' => [
             'name' => 'Italiano',
             'script' => 'Latn',
             'native' => 'Italiano',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'regional' => 'it_IT',
 =======
             'regional' => 'it_IT'
 >>>>>>> 727968c (.)
+=======
+            'regional' => 'it_IT',
+>>>>>>> ef3c5fa (.)
         ],
         'en' => [
             'name' => 'English',
             'script' => 'Latn',
             'native' => 'English',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
             'regional' => 'en_GB',
         ],
     ],
@@ -51,6 +64,7 @@ return [
      * | This is the configuration for the language detection
      * |
      */
+<<<<<<< HEAD
 =======
             'regional' => 'en_GB'
         ]
@@ -65,6 +79,8 @@ return [
     |
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'detectBrowserLanguage' => true,
     'detectBrowserLanguageFromAcceptLanguage' => true,
     'detectBrowserLanguageFromAcceptLanguageHeader' => true,
@@ -73,6 +89,9 @@ return [
     'detectBrowserLanguageFromQueryString' => true,
     'detectBrowserLanguageFromRoute' => true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     /*
      * |--------------------------------------------------------------------------
      * | Language Selection
@@ -81,6 +100,7 @@ return [
      * | This is the configuration for the language selection
      * |
      */
+<<<<<<< HEAD
 =======
 
     /*
@@ -92,6 +112,8 @@ return [
     |
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'hideDefaultLocaleInURL' => false,
     'useAcceptLanguageHeader' => true,
     'useSessionLocale' => true,
@@ -99,6 +121,9 @@ return [
     'useQueryStringLocale' => true,
     'useRouteLocale' => true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     /*
      * |--------------------------------------------------------------------------
      * | Language Redirect
@@ -107,6 +132,7 @@ return [
      * | This is the configuration for the language redirect
      * |
      */
+<<<<<<< HEAD
 =======
 
     /*
@@ -118,6 +144,8 @@ return [
     |
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'redirectToDefaultLocale' => true,
     'redirectToDefaultLocaleIfNotSupported' => true,
     'redirectToDefaultLocaleIfNotInSupportedLocales' => true,
@@ -128,6 +156,9 @@ return [
     'redirectToDefaultLocaleIfNotInSupportedLocalesAndNotInQueryString' => true,
     'redirectToDefaultLocaleIfNotInSupportedLocalesAndNotInRoute' => true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     /*
      * |--------------------------------------------------------------------------
      * | Language Routes
@@ -136,6 +167,7 @@ return [
      * | This is the configuration for the language routes
      * |
      */
+<<<<<<< HEAD
 =======
 
     /*
@@ -147,6 +179,8 @@ return [
     |
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'useLocalizedRoutes' => true,
     'useLocalizedRoutesInMiddleware' => true,
     'useLocalizedRoutesInController' => true,
