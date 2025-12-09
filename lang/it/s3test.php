@@ -9,9 +9,12 @@ return [
         'description' => 'Pagina per testare la configurazione di S3 e CloudFront',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'fields' => [
         'attachment' => [
             'label' => 'File di Test',
@@ -25,9 +28,12 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'actions' => [
         'testCredentials' => [
             'label' => '🔐 Test Credenziali',
@@ -85,9 +91,12 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'notifications' => [
         's3_connection_tested' => 'Connessione S3 Testata',
         's3_permissions_tested' => 'Permessi S3 Testati',
@@ -105,9 +114,12 @@ return [
         'upload_file_first' => 'Carica prima un file per testare l\'invio email',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'debug' => [
         'run_tests_message' => 'Esegui i test per vedere i risultati...',
         'configuration_title' => '📋 Configurazione',
@@ -128,9 +140,12 @@ return [
         'incomplete' => '❌ Incompleto',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'email' => [
         'subject' => 'Test Email con Allegato S3',
         'body' => 'Questa è una email di test inviata dal sistema S3Test con allegato caricato su S3 e servito tramite CloudFront.',
