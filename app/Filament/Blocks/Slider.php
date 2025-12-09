@@ -12,10 +12,6 @@ use Modules\Xot\Actions\View\GetViewsSiblingsAndSelfAction;
 
 class Slider
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
     public static function make(string $name = 'slider', string $_context = 'form'): Block
     {
         // $view = 'ui::components.blocks.slider.v1';
@@ -34,39 +30,6 @@ class Slider
 
                 Select::make('view')->options($options),
             ])
-<<<<<<< HEAD
-=======
-    public static function make(
-        string $name = 'slider',
-        string $context = 'form',
-    ): Block {
-        // $view = 'ui::components.blocks.slider.v1';
-        // $views = app(GetViewsSiblingsAndSelfAction::class)->execute($view);
-        // dddx('a');
-        $options = app(GetViewBlocksOptionsByTypeAction::class)
-            ->execute('slider', true);
-
-        // dddx($options);
-        return Block::make($name)
-            ->schema(
-                [
-                    TextInput::make('method')
-
-                        ->hint('Inserisci il nome del metodo da richiamare nel tema')
-                        ->required(),
-
-                    // Select::make('_tpl')
-                    //     ->label('layout')
-                    //     ->options($options),
-                    // ->afterStateHydrated(static fn ($state, $set) => $state || $set('level', 'h2')),
-
-                    RadioImage::make('view')
-                        ->options($options),
-                ]
-            )
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
             ->columns(1);
     }
 
