@@ -42,6 +42,7 @@ declare(strict_types=1);
                         href="#"
                         class="overflow-hidden absolute inset-0 py-2 px-3 text-gray-600 font-medium rounded-xl ring-primary-500 dark:text-gray-400 group hover:ring-2 focus:ring-2">
 
+
                             <x-filament::icon
                                 icon="fas-futbol"
                                 :size="24"
