@@ -70,8 +70,13 @@ class VideoSpatie
                 TextInput::make('caption'),
                 // ->columnSpanFull()
                 // Filament\Forms\Components\SpatieMediaLibraryFileUpload::whereCustomProperties does not exist.
+<<<<<<< HEAD
                 // ->whereCustomProperties(fn(Forms\\Filament\Schemas\Components\Utilities\Get $get) => ['gallery_id' => $get('gallery_id')])
                 // ->customProperties(fn(Forms\\Filament\Schemas\Components\Utilities\Get $get) => ['gallery_id' => $get('gallery_id')]),
+=======
+                // ->whereCustomProperties(fn(Forms\Get $get) => ['gallery_id' => $get('gallery_id')])
+                // ->customProperties(fn(Forms\Get $get) => ['gallery_id' => $get('gallery_id')]),
+>>>>>>> e3274ea (.)
                 // Forms\Components\SpatieMediaLibraryFileUpload::make('media_id')
             ])
             ->columns($context === 'form' ? 2 : 1);
