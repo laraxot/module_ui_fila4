@@ -17,14 +17,6 @@ class OverlookWidget extends Widget
     public string $title = '';
 
     /*
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
      * public array $grid = [
      * 'default' => 6,
      * 'sm' => 6,
@@ -34,51 +26,14 @@ class OverlookWidget extends Widget
      * '2xl' => null,
      * ];
      */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/develop
-        public array $grid = [
-                    'default' => 6,
-                    'sm' => 6,
-                    'md' => 6,
-                    'lg' => 6,
-                    'xl' => 6,
-                    '2xl' => null,
-                ];
-                */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
 
     public array $stats = [];
 
     protected string $view = 'ui::filament.widgets.overlook';
-<<<<<<< HEAD
-=======
-=======
-
-    public array $stats = [];
-
-    protected static string $view = 'ui::filament.widgets.overlook';
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
 
     protected int|string|array $columnSpan = 1;
 
     /*
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
      * public function mount(array $filter): void
      * {
      * $this->filter = $filter;
@@ -97,35 +52,4 @@ class OverlookWidget extends Widget
      * }
      * }
      */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/develop
-    public function mount(array $filter): void
-    {
-        $this->filter = $filter;
-
-        $this->data = $this->getData();
-        // dddx($this->data);
-        if (empty($this->grid)) {
-            $this->grid = [
-                'default' => 2,
-                'sm' => 2,
-                'md' => 3,
-                'lg' => 3,
-                'xl' => 3,
-                '2xl' => null,
-            ];
-        }
-    }
-    */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
 }
