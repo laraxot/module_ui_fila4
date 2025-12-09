@@ -16,15 +16,7 @@ class RowWidget extends Widget
 
     public array $widgets = [];
 
-<<<<<<< HEAD
     protected string $view = 'ui::filament.widgets.row';
-=======
-<<<<<<< HEAD
-    protected string $view = 'ui::filament.widgets.row';
-=======
-    protected static string $view = 'ui::filament.widgets.row';
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
 
     protected int|string|array $columnSpan = 'full';
 
