@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 <div class="dark-mode-switcher-widget">
     <button 
         x-data="{ darkMode: {{ $darkMode ? 'true' : 'false' }} }"

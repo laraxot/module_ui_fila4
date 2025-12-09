@@ -10,20 +10,28 @@ use Illuminate\Support\Str;
 use Modules\Xot\Actions\File\GetClassNameByPathAction;
 use Modules\Xot\Datas\ComponentFileData;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 use function Safe\realpath;
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Safe\realpath;
 
 =======
 >>>>>>> 727968c (.)
+=======
+use function Safe\realpath;
+
+>>>>>>> ef3c5fa (.)
 class GetAllBlocksAction
 {
     use QueueableAction;
@@ -32,6 +40,9 @@ class GetAllBlocksAction
      * @return DataCollection<ComponentFileData>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     public function execute(string $_context = 'form'): DataCollection
     {
         Assert::string($relativePath = config('modules.paths.generator.model.path'));
@@ -56,6 +67,7 @@ class GetAllBlocksAction
                 'path' => $path,
             ];
         });
+<<<<<<< HEAD
 =======
     public function execute(string $context = 'form'): DataCollection
     {
@@ -87,6 +99,8 @@ class GetAllBlocksAction
             }
         );
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 
         return ComponentFileData::collection($blocks);
     }

@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 <x-filament-widgets::widget>
     <x-filament::section collapsible icon="{{ $icon }}">
         <x-slot name="description">
@@ -18,6 +24,9 @@ declare(strict_types=1);
 
         @if (count($widgets) == 3)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div class="col-span-1">
                     @livewire($widgets[0]['class'], $widgets[0]['properties'])
@@ -28,6 +37,7 @@ declare(strict_types=1);
                     @livewire($widgets[2]['class'], $widgets[2]['properties'])
                 </div>
             </div>
+<<<<<<< HEAD
 =======
             <x-filament::grid lg='2'>
                 <x-filament::grid.column>
@@ -40,6 +50,8 @@ declare(strict_types=1);
                 </x-filament::grid.column>
             </x-filament::grid>
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
         @endif
     </x-filament::section>
 </x-filament-widgets::widget>
