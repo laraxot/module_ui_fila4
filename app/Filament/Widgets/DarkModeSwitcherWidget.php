@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Widgets;
 
 use Filament\Schemas\Components\Component;
-use Filament\Schemas\Schema;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
@@ -15,9 +14,9 @@ final class DarkModeSwitcherWidget extends XotBaseWidget
 {
     public ?array $data = [];
 
-    protected string $view = 'ui::filament.widgets.dark-mode-switcher';
-
     public bool $darkMode = false;
+
+    protected string $view = 'ui::filament.widgets.dark-mode-switcher';
 
     public function mount(): void
     {

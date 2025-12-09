@@ -28,7 +28,8 @@ final class Blocks extends Component
         public string $view,
         public array $blocks = [],
         public ?Model $model = null,
-    ) {}
+    ) {
+    }
 
     public function render(): View
     {

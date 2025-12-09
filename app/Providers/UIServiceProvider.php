@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Providers;
 
-use Illuminate\Support\Facades\Blade;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 

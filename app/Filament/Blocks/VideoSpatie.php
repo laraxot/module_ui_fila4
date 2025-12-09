@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Blocks;
 
-use Filament\Forms;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Hidden;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Contracts\HasForms;
@@ -50,12 +48,12 @@ final class VideoSpatie
                         TemporaryUploadedFile $state,
                         Get $get,
                         HasMedia $record,
-                    ) {
+                    ): void {
                         // Call to an undefined method Filament\Forms\Contracts\HasForms::validateOnly().
                         // $livewire->validateOnly($component->getStatePath());
                         Assert::string(
                             $collection_name = $get('img_uuid'),
-                            '['.__LINE__.']['.class_basename(__CLASS__).']',
+                            '['.__LINE__.']['.class_basename(self::class).']',
                         );
                         $record->addMedia($state)->withResponsiveImages()->toMediaCollection($collection_name);
                     }),
