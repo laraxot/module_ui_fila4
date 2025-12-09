@@ -4,34 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Override;
-=======
->>>>>>> 727968c (.)
-=======
-use Override;
->>>>>>> ef3c5fa (.)
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 /**
  * RedirectWidget - Widget per gestire redirect verso URL specifici.
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
  * Questo widget è progettato per creare elementi UI (bottoni, link)
  * che reindirizzano l'utente verso URL specifici.
  *
-=======
- * Questo widget è progettato per creare elementi UI (bottoni, link) 
- * che reindirizzano l'utente verso URL specifici.
- * 
->>>>>>> 727968c (.)
-=======
- * Questo widget è progettato per creare elementi UI (bottoni, link)
- * che reindirizzano l'utente verso URL specifici.
- *
->>>>>>> ef3c5fa (.)
  * Utilizzo tipico in configurazioni JSON:
  * {
  *     "type": "widget",
@@ -74,14 +55,6 @@ class RedirectWidget extends XotBaseWidget
      * Può essere sovrascritta dalla configurazione con la chiave 'view'.
      */
     protected string $view = 'ui::filament.widgets.redirect-widget';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
-    
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 
     /**
      * Implementazione richiesta da XotBaseWidget.
@@ -89,14 +62,7 @@ class RedirectWidget extends XotBaseWidget
      *
      * @return array<string, mixed>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     #[Override]
-=======
->>>>>>> 727968c (.)
-=======
-    #[Override]
->>>>>>> ef3c5fa (.)
     public function getFormSchema(): array
     {
         return [];
@@ -109,13 +75,6 @@ class RedirectWidget extends XotBaseWidget
      */
     protected function getViewData(): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
         return [
             'to' => $this->to,
             'label' => $this->label ?: 'Vai',
@@ -133,12 +92,4 @@ class RedirectWidget extends XotBaseWidget
     {
         return true;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-} 
->>>>>>> 727968c (.)
-=======
-}
->>>>>>> ef3c5fa (.)

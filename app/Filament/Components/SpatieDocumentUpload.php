@@ -8,15 +8,7 @@ use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
 /**
  * Helper standardizzato per upload documenti usando Spatie Media Library.
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
-=======
- * 
->>>>>>> 727968c (.)
-=======
- *
->>>>>>> ef3c5fa (.)
  * Filosofia: Centralizzazione della configurazione per garantire coerenza sistemica.
  * Politica: Type safety, GDPR compliance, multi-tenant isolation.
  * Zen: Semplicità attraverso la standardizzazione, non la duplicazione.
@@ -46,23 +38,10 @@ class SpatieDocumentUpload
 
     /**
      * Upload documento identità - documento sensibile paziente.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
      *
      * Collection: 'documenti_identita'
      * Security: Private disk, audit trail
      *
-<<<<<<< HEAD
-=======
-     * 
-     * Collection: 'documenti_identita'
-     * Security: Private disk, audit trail
-     * 
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
      * @return SpatieMediaLibraryFileUpload
      */
     public static function forIdentityDocument(): SpatieMediaLibraryFileUpload
@@ -75,23 +54,10 @@ class SpatieDocumentUpload
 
     /**
      * Upload certificazione ISEE - documento fiscale sensibile.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
      *
      * Collection: 'certificazioni_isee'
      * Formats: Solo PDF per documenti ufficiali
      *
-<<<<<<< HEAD
-=======
-     * 
-     * Collection: 'certificazioni_isee'
-     * Formats: Solo PDF per documenti ufficiali
-     * 
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
      * @return SpatieMediaLibraryFileUpload
      */
     public static function forIseeDocument(): SpatieMediaLibraryFileUpload
@@ -103,23 +69,10 @@ class SpatieDocumentUpload
 
     /**
      * Upload certificato gravidanza - documento medico sensibile.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
      *
      * Collection: 'certificati_gravidanza'
      * GDPR: Retention policy automatica
      *
-<<<<<<< HEAD
-=======
-     * 
-     * Collection: 'certificati_gravidanza'
-     * GDPR: Retention policy automatica
-     * 
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
      * @return SpatieMediaLibraryFileUpload
      */
     public static function forPregnancyDocument(): SpatieMediaLibraryFileUpload
@@ -131,23 +84,10 @@ class SpatieDocumentUpload
 
     /**
      * Upload certificazioni professionali mediche - documenti multipli.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
      *
      * Collection: 'certificazioni_professionali'
      * Multiple: Supporta caricamento multiplo con riordinamento
      *
-<<<<<<< HEAD
-=======
-     * 
-     * Collection: 'certificazioni_professionali'
-     * Multiple: Supporta caricamento multiplo con riordinamento
-     * 
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
      * @return SpatieMediaLibraryFileUpload
      */
     public static function forCertifications(): SpatieMediaLibraryFileUpload
@@ -162,15 +102,7 @@ class SpatieDocumentUpload
 
     /**
      * Upload documento generico con collection personalizzata.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> 727968c (.)
-=======
-     *
->>>>>>> ef3c5fa (.)
      * @param string $name Nome del campo
      * @param string $collection Nome della collection
      * @param array<string> $mimeTypes Tipi MIME accettati
@@ -178,23 +110,10 @@ class SpatieDocumentUpload
      * @return SpatieMediaLibraryFileUpload
      */
     public static function custom(
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
         string $name,
         string $collection,
         array $mimeTypes = ['image/jpeg', 'image/png', 'application/pdf'],
         int $maxSize = 10240,
-<<<<<<< HEAD
-=======
-        string $name, 
-        string $collection, 
-        array $mimeTypes = ['image/jpeg', 'image/png', 'application/pdf'],
-        int $maxSize = 10240
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     ): SpatieMediaLibraryFileUpload {
         return SpatieMediaLibraryFileUpload::make($name)
             ->collection($collection)
@@ -207,12 +126,4 @@ class SpatieDocumentUpload
             ->acceptedFileTypes($mimeTypes)
             ->imagePreviewHeight('150');
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-} 
->>>>>>> 727968c (.)
-=======
-}
->>>>>>> ef3c5fa (.)
