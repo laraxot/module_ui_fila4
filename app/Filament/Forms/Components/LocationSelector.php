@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Modules\UI\Filament\Forms\Components;
+namespace Modules\Notify\Filament\Forms\Components;
 
-use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Group;
+use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Components\Utilities\Get;
 use Exception;
@@ -22,7 +22,7 @@ use Modules\Geo\Models\Comune;
  * - Provincia (dipendente da regione)
  * - CAP (dipendente da regione e provincia)
  *
- * @package Modules\UI\Filament\Forms\Components
+ * @package \Filament\Forms\Forms\Components
  */
 class LocationSelector extends Group
 {
@@ -169,7 +169,7 @@ class LocationSelector extends Group
                 ->searchable($this->searchable)
                 ->required($this->required)
                 ->live()
-                ->afterStateUpdated(function (Set $set) {
+                ->afterStateUpdated(function (\Filament\Schemas\Components\Utilities\Set $set) {
                     // Reset province e cap quando cambia la regione
                     $set($this->provinceFieldName, null);
                     $set($this->capFieldName, null);
@@ -179,15 +179,15 @@ class LocationSelector extends Group
             Select::make($this->provinceFieldName)
                 ->label($this->labels['province'])
                 ->placeholder($this->placeholders['province'])
-                ->options(function (Get $get): array {
+                ->options(function (\Filament\Schemas\Components\Utilities\Get $get): array {
                     $region = $get($this->regionFieldName);
                     return is_string($region) ? $this->getProvinceOptions($region) : [];
                 })
                 ->searchable($this->searchable)
                 ->required($this->required)
                 ->live()
-                ->disabled(fn(Get $get): bool => !$get($this->regionFieldName))
-                ->afterStateUpdated(function (Set $set) {
+                ->disabled(fn(\Filament\Schemas\Components\Utilities\Get $get): bool => !$get($this->regionFieldName))
+                ->afterStateUpdated(function (\Filament\Schemas\Components\Utilities\Set $set) {
                     // Reset cap quando cambia la provincia
                     $set($this->capFieldName, null);
                 })
@@ -196,14 +196,14 @@ class LocationSelector extends Group
             Select::make($this->capFieldName)
                 ->label($this->labels['cap'])
                 ->placeholder($this->placeholders['cap'])
-                ->options(function (Get $get): array {
+                ->options(function (\Filament\Schemas\Components\Utilities\Get $get): array {
                     $region = $get($this->regionFieldName);
                     $province = $get($this->provinceFieldName);
                     return is_string($region) && is_string($province) ? $this->getCapOptions($region, $province) : [];
                 })
                 ->searchable($this->searchable)
                 ->required($this->required)
-                ->disabled(fn(Get $get): bool => !$get($this->regionFieldName) || !$get($this->provinceFieldName))
+                ->disabled(fn(\Filament\Schemas\Components\Utilities\Get $get): bool => !$get($this->regionFieldName) || !$get($this->provinceFieldName))
                 ->helperText(__('ui::location_selector.cap.help')),
         ];
     }
