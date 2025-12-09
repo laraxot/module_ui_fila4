@@ -5,13 +5,6 @@ declare(strict_types=1);
     $fields = $getFields();
     $record = $getRecord();
 ?>
-<<<<<<< HEAD
-@php
-    $fields = $getFields();
-    $record = $getRecord();
-@endphp
-=======
->>>>>>> c59340d4 (.)
 <div
     {{
         $attributes
@@ -29,11 +22,6 @@ declare(strict_types=1);
         @php
             $name = $field->getName();
             $value = $record->{$name} ?? null;
-<<<<<<< HEAD
-            
-=======
-
->>>>>>> c59340d4 (.)
             // Skip empty values to save space
             if (empty($value) && $value !== 0 && $value !== '0') {
                 continue;
@@ -41,12 +29,6 @@ declare(strict_types=1);
 
             // Format the value for display
             $formattedValue = $value;
-<<<<<<< HEAD
-            
-            // Use translation for label following Laraxot pattern
-            $label = __('ui::table.columns.' . $name . '.label');
-            $displayText = $label . ': ' . $formattedValue;
-=======
 
             // Resolve the label leveraging LangServiceProvider auto translations
             $rawLabel = $field->getLabel();
@@ -72,7 +54,6 @@ declare(strict_types=1);
             }
 
             $displayText = $labelText . ': ' . $formattedValue;
->>>>>>> c59340d4 (.)
         @endphp
         
             {{ $displayText }}<br/>
