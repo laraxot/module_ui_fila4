@@ -7,14 +7,14 @@ use Tests\TestCase;
 
 uses(TestCase::class);
 
-beforeEach(function () {
+beforeEach(function (): void {
     // Ensure we're using the correct theme
     if (function_exists('config')) {
         config(['app.locale' => 'en']);
     }
 });
 
-test('kalshi inspired hero component renders without errors', function () {
+test('kalshi inspired hero component renders without errors', function (): void {
     $componentData = [
         'title' => 'Test Prediction Platform',
         'subtitle' => 'Trade on real events with confidence',
@@ -30,6 +30,7 @@ test('kalshi inspired hero component renders without errors', function () {
 
     expect($view)->not()->toBeNull();
 
+    /** @phpstan-ignore-next-line method.nonObject */
     $html = $view->render();
     expect($html)->toContain('Test Prediction Platform');
     expect($html)->toContain('Trade on real events with confidence');
@@ -37,11 +38,12 @@ test('kalshi inspired hero component renders without errors', function () {
     expect($html)->toContain('View Markets');
 });
 
-test('kalshi hero shows statistics when enabled', function () {
+test('kalshi hero shows statistics when enabled', function (): void {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired', [
         'show_stats' => true,
     ]);
 
+    /** @phpstan-ignore-next-line method.nonObject */
     $html = $view->render();
     expect($html)->toContain('250+');
     expect($html)->toContain('Active Markets');
@@ -53,21 +55,23 @@ test('kalshi hero shows statistics when enabled', function () {
     expect($html)->toContain('Active Traders');
 });
 
-test('kalshi hero hides statistics when disabled', function () {
+test('kalshi hero hides statistics when disabled', function (): void {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired', [
         'show_stats' => false,
     ]);
 
+    /** @phpstan-ignore-next-line method.nonObject */
     $html = $view->render();
     expect($html)->not()->toContain('Active Markets');
     expect($html)->not()->toContain('Total Predictions');
 });
 
-test('kalshi hero shows categories when enabled', function () {
+test('kalshi hero shows categories when enabled', function (): void {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired', [
         'show_categories' => true,
     ]);
 
+    /** @phpstan-ignore-next-line method.nonObject */
     $html = $view->render();
     expect($html)->toContain('Popular Categories');
     expect($html)->toContain('Politics');
@@ -78,16 +82,17 @@ test('kalshi hero shows categories when enabled', function () {
     expect($html)->toContain('Crypto');
 });
 
-test('kalshi hero hides categories when disabled', function () {
+test('kalshi hero hides categories when disabled', function (): void {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired', [
         'show_categories' => false,
     ]);
 
+    /** @phpstan-ignore-next-line method.nonObject */
     $html = $view->render();
     expect($html)->not()->toContain('Popular Categories');
 });
 
-test('kalshi hero supports custom props', function () {
+test('kalshi hero supports custom props', function (): void {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired', [
         'title' => 'Custom Market Title',
         'subtitle' => 'Custom trading platform description',
@@ -97,6 +102,7 @@ test('kalshi hero supports custom props', function () {
         'secondary_cta_link' => '/about',
     ]);
 
+    /** @phpstan-ignore-next-line method.nonObject */
     $html = $view->render();
     expect($html)->toContain('Custom Market Title');
     expect($html)->toContain('Custom trading platform description');
@@ -106,9 +112,10 @@ test('kalshi hero supports custom props', function () {
     expect($html)->toContain('href="/about"');
 });
 
-test('kalshi hero has proper css classes and styling', function () {
+test('kalshi hero has proper css classes and styling', function (): void {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired');
 
+    /** @phpstan-ignore-next-line method.nonObject */
     $html = $view->render();
     expect($html)->toContain('bg-gradient-to-br from-slate-900');
     expect($html)->toContain('animate-gradient-x');
@@ -116,18 +123,20 @@ test('kalshi hero has proper css classes and styling', function () {
     expect($html)->toContain('dark:from-slate-950');
 });
 
-test('kalshi hero includes required css animations', function () {
+test('kalshi hero includes required css animations', function (): void {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired');
 
+    /** @phpstan-ignore-next-line method.nonObject */
     $html = $view->render();
     expect($html)->toContain('@keyframes gradient-x');
     expect($html)->toContain('.animate-gradient-x');
     expect($html)->toContain('.bg-grid-pattern');
 });
 
-test('kalshi hero has responsive design classes', function () {
+test('kalshi hero has responsive design classes', function (): void {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired');
 
+    /** @phpstan-ignore-next-line method.nonObject */
     $html = $view->render();
     expect($html)->toContain('md:text-7xl lg:text-8xl');
     expect($html)->toContain('grid-cols-2 md:grid-cols-4');
