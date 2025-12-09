@@ -147,7 +147,7 @@ class UserCalendarWidget extends FullCalendarWidget
         null|array $resource,
     ): void {
         // TODO: Implementare la logica per la selezione della data
-        // dd('test');
+        // dddx('test');
     }
 >>>>>>> 1899c5f (.)
 }
