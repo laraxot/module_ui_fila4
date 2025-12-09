@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\UI\View\Composers;
 
 use Exception;
-use Illuminate\Config\Repository;
-use Illuminate\Contracts\Foundation\Application;
 use Illuminate\View\View;
 
 final class ThemeComposer
@@ -21,19 +19,12 @@ final class ThemeComposer
         return view($view);
     }
 
-    /**
-     * @return Repository|Application|mixed
-     */
-    public function metatag(string $index)
+    public function metatag(string $index): mixed
     {
         // $ris = self::__getStatic($index);
         // echo '<br/>['.$index.']['.$ris.']';
         // if ('' === $ris || null === $ris) {
-        $ris = config('metatag.'.$index);
-        // self::__setStatic($index, $ris);
-        // }
-
-        return $ris;
+        return config('metatag.'.$index);
     }
 
     public function showScripts(): string

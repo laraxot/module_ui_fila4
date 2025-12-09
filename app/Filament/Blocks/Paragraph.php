@@ -9,7 +9,6 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 // use Modules\Xot\Actions\View\GetViewsSiblingsAndSelfAction;
-use Filament\Forms\Forms\Components\RadioImage;
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 
 final class Paragraph

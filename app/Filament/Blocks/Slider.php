@@ -9,7 +9,6 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Modules\UI\Filament\Forms\Components\RadioImage;
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
-use Modules\Xot\Actions\View\GetViewsSiblingsAndSelfAction;
 
 final class Slider
 {

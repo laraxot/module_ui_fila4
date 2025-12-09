@@ -46,12 +46,12 @@ final class ImageSpatie
                         TemporaryUploadedFile $state,
                         Get $get,
                         HasMedia $record,
-                    ) {
+                    ): void {
                         // Call to an undefined method Filament\Forms\Contracts\HasForms::validateOnly().
                         // $livewire->validateOnly($component->getStatePath());
                         Assert::string(
                             $collection_name = $get('img_uuid'),
-                            '['.__LINE__.']['.class_basename(__CLASS__).']',
+                            '['.__LINE__.']['.class_basename(self::class).']',
                         );
                         $res = $record->addMedia($state)->withResponsiveImages()->toMediaCollection($collection_name);
                     }),

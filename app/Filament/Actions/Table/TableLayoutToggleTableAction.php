@@ -24,10 +24,12 @@ final class TableLayoutToggleTableAction extends Action implements HasTableLayou
             ->action($this->toggleLayout(...));
     }
 
-    /**
-     * @param  ListRecords|null  $livewire
-     */
-    protected function toggleLayout($livewire): void
+    public static function getDefaultName(): string
+    {
+        return 'table_layout_toggle';
+    }
+
+    protected function toggleLayout(?ListRecords $livewire): void
     {
         $currentLayout = $this->getCurrentLayout();
         $newLayout = $currentLayout->toggle();
@@ -37,10 +39,5 @@ final class TableLayoutToggleTableAction extends Action implements HasTableLayou
         if ($livewire instanceof ListRecords) {
             $livewire->dispatch('$refresh');
         }
-    }
-
-    public static function getDefaultName(): string
-    {
-        return 'table_layout_toggle';
     }
 }

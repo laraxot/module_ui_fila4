@@ -5,10 +5,6 @@ declare(strict_types=1);
 namespace Modules\UI\Providers\Filament;
 
 use Filament\Panel;
-use Filament\SpatieLaravelTranslatablePlugin;
-use Filament\Support\Assets\Css;
-use Filament\Support\Assets\Js;
-use Filament\Support\Facades\FilamentAsset;
 use Modules\Xot\Providers\Filament\XotBasePanelProvider;
 use Override;
 
@@ -21,7 +17,7 @@ class AdminPanelProvider extends XotBasePanelProvider
     #[Override]
     public function panel(Panel $panel): Panel
     {
-        $panel = parent::panel($panel);
+        return parent::panel($panel);
 
         // FilamentAsset::register(
         //     [
@@ -43,6 +39,5 @@ class AdminPanelProvider extends XotBasePanelProvider
          *
          * $panel->plugins($plugins);
          */
-        return $panel;
     }
 }

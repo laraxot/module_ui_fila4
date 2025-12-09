@@ -21,7 +21,7 @@ use Modules\Xot\Filament\Traits\TransTrait;
  * @method static self fromValue(string $value)
  * @method static self tryFromName(string $name)
  * @method static self tryFromValue(string $value)
- * @method static self[] cases()
+ * @method static array<self> cases()
  */
 enum FieldTypeEnum: string implements HasColor, HasIcon, HasLabel
 {
