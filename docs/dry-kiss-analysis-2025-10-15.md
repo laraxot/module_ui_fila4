@@ -35,3 +35,5 @@ Il modulo UI è l'esempio **perfetto** di come dovrebbe essere un BaseModel quan
 
 **Conclusione:** 🏆 **GOLD STANDARD** per BaseModel minimali!
 
+
+
