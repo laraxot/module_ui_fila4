@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 @props(['href'])
 <x-filament::button
     href="{{ $href }}"
@@ -15,6 +21,9 @@ declare(strict_types=1);
 
 />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
