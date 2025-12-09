@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 namespace Modules\UI\Filament\Forms\Components;
 
 use Filament\Forms\Components\Radio;

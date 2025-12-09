@@ -7,7 +7,6 @@ declare(strict_types=1);
  * @see https://github.com/ryangjchandler/filament-navigation
  */
 
-
 namespace Modules\UI\Filament\Forms\Components;
 
 use Filament\Forms\Components\Select;

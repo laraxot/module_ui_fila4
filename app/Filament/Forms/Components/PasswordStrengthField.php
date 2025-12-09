@@ -15,7 +15,7 @@ class PasswordStrengthField extends TextInput
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         /** @var view-string $viewString */
         $viewString = 'ui::filament.forms.components.password-strength';
         $this->view($viewString);

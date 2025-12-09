@@ -14,7 +14,7 @@ class TreeField extends Field
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         /** @var view-string $viewString */
         $viewString = 'ui::filament.forms.components.tree';
         $this->view($viewString);
