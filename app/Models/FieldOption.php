@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\Models;
 
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\UI\Database\Factories\FieldOptionFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Modules\UI\Database\Factories\FieldOptionFactory;
+use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\BaseModel;
 
 /**
@@ -17,7 +17,7 @@ use Modules\Xot\Models\BaseModel;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
- * @method static FieldOptionFactory factory($count = null, $state = [])
+ * @method static FieldOptionFactory          factory($count = null, $state = [])
  * @method static Builder<static>|FieldOption newModelQuery()
  * @method static Builder<static>|FieldOption newQuery()
  * @method static Builder<static>|FieldOption query()

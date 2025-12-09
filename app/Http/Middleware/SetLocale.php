@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Http\Middleware;
 
-use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
@@ -16,7 +15,7 @@ final class SetLocale
     /**
      * Handle an incoming request.
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, \Closure $next): Response
     {
         // Recupera la lingua dalla sessione o usa quella predefinita
         $locale = Session::get('locale', config('app.locale'));
@@ -27,7 +26,7 @@ final class SetLocale
         App::setLocale($locale);
 
         $response = $next($request);
-        if (!($response instanceof Response)) {
+        if (! ($response instanceof Response)) {
             throw new \RuntimeException('Middleware must return a Response instance');
         }
 

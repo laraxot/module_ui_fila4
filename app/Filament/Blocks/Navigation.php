@@ -7,11 +7,10 @@ namespace Modules\UI\Filament\Blocks;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
-use Override;
 
 final class Navigation extends XotBaseBlock
 {
-    #[Override]
+    #[\Override]
     public static function getBlockSchema(): array
     {
         return [

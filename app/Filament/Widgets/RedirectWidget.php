@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Widgets;
 
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
-use Override;
 
 /**
  * RedirectWidget - Widget per gestire redirect verso URL specifici.
@@ -64,7 +63,7 @@ final class RedirectWidget extends XotBaseWidget
      *
      * @return array<string, mixed>
      */
-    #[Override]
+    #[\Override]
     public function getFormSchema(): array
     {
         return [];

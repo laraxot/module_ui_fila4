@@ -11,7 +11,7 @@ use Modules\UI\Actions\Datetime\GetDaysMappingAction;
 use Modules\UI\Rules\OpeningHoursRule;
 
 /**
- * --
+ * --.
  */
 final class OpeningHoursField extends Field
 {
@@ -94,7 +94,7 @@ final class OpeningHoursField extends Field
              * $this->addError(null, 'test');
              * return false;
              * }*/
-            new OpeningHoursRule,
+            new OpeningHoursRule(),
         ]);
     }
 }

@@ -6,7 +6,6 @@ namespace Modules\UI\Providers\Filament;
 
 use Filament\Panel;
 use Modules\Xot\Providers\Filament\XotBasePanelProvider;
-use Override;
 
 // use LaraZeus\Bolt\BoltPlugin;
 
@@ -14,7 +13,7 @@ class AdminPanelProvider extends XotBasePanelProvider
 {
     protected string $module = 'UI';
 
-    #[Override]
+    #[\Override]
     public function panel(Panel $panel): Panel
     {
         return parent::panel($panel);

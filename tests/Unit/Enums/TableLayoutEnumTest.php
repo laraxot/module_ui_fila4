@@ -14,7 +14,7 @@ class TableLayoutEnumTest extends TestCase
     /**
      * Test enum values.
      */
-    public function test_enum_values(): void
+    public function testEnumValues(): void
     {
         static::assertSame('list', TableLayoutEnum::LIST->value);
         static::assertSame('grid', TableLayoutEnum::GRID->value);
@@ -23,7 +23,7 @@ class TableLayoutEnumTest extends TestCase
     /**
      * Test default layout.
      */
-    public function test_default_layout(): void
+    public function testDefaultLayout(): void
     {
         $default = TableLayoutEnum::init();
         static::assertSame(TableLayoutEnum::LIST, $default);
@@ -32,7 +32,7 @@ class TableLayoutEnumTest extends TestCase
     /**
      * Test toggle functionality.
      */
-    public function test_toggle_functionality(): void
+    public function testToggleFunctionality(): void
     {
         $list = TableLayoutEnum::LIST;
         $grid = TableLayoutEnum::GRID;
@@ -44,7 +44,7 @@ class TableLayoutEnumTest extends TestCase
     /**
      * Test layout type checks.
      */
-    public function test_layout_type_checks(): void
+    public function testLayoutTypeChecks(): void
     {
         $list = TableLayoutEnum::LIST;
         $grid = TableLayoutEnum::GRID;
@@ -59,7 +59,7 @@ class TableLayoutEnumTest extends TestCase
     /**
      * Test grid configuration.
      */
-    public function test_grid_configuration(): void
+    public function testGridConfiguration(): void
     {
         $grid = TableLayoutEnum::GRID;
         $config = $grid->getTableContentGrid();
@@ -75,7 +75,7 @@ class TableLayoutEnumTest extends TestCase
     /**
      * Test table columns method.
      */
-    public function test_table_columns_method(): void
+    public function testTableColumnsMethod(): void
     {
         $list = TableLayoutEnum::LIST;
         $grid = TableLayoutEnum::GRID;
@@ -104,7 +104,7 @@ class TableLayoutEnumTest extends TestCase
     /**
      * Test options method.
      */
-    public function test_options_method(): void
+    public function testOptionsMethod(): void
     {
         $options = TableLayoutEnum::getOptions();
 
@@ -118,7 +118,7 @@ class TableLayoutEnumTest extends TestCase
     /**
      * Test container classes.
      */
-    public function test_container_classes(): void
+    public function testContainerClasses(): void
     {
         $list = TableLayoutEnum::LIST;
         $grid = TableLayoutEnum::GRID;
@@ -135,7 +135,7 @@ class TableLayoutEnumTest extends TestCase
     /**
      * Test translation support.
      */
-    public function test_translation_support(): void
+    public function testTranslationSupport(): void
     {
         $list = TableLayoutEnum::LIST;
         $grid = TableLayoutEnum::GRID;
@@ -153,7 +153,7 @@ class TableLayoutEnumTest extends TestCase
     /**
      * Test color and icon methods.
      */
-    public function test_color_and_icon_methods(): void
+    public function testColorAndIconMethods(): void
     {
         $list = TableLayoutEnum::LIST;
         $grid = TableLayoutEnum::GRID;
