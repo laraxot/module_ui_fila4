@@ -5,8 +5,11 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Widgets;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
 =======
+=======
+>>>>>>> 760ce09 (.)
 <<<<<<< HEAD
 use Filament\Forms\Components\Component;
 use Override;
@@ -17,7 +20,15 @@ use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Forms\Form;
 >>>>>>> e6782b2 (.)
+<<<<<<< HEAD
 >>>>>>> 9567487 (.)
+=======
+=======
+use Filament\Schemas\Components\Component;
+use Override;
+use Filament\Forms\Form;
+>>>>>>> b55470f (.)
+>>>>>>> 760ce09 (.)
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;

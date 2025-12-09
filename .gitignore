@@ -3,24 +3,37 @@
 # ==============================================
 # Modulo UI Laraxot - Template standardizzato
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Ultimo aggiornamento: 2025-01-06
 =======
+=======
+>>>>>>> 760ce09 (.)
 <<<<<<< HEAD
 # Ultimo aggiornamento: 2025-01-31
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> e6782b2 (.)
+<<<<<<< HEAD
 >>>>>>> 9567487 (.)
+=======
+=======
+# Ultimo aggiornamento: 2025-01-06
+>>>>>>> b55470f (.)
+>>>>>>> 760ce09 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
 <<<<<<< HEAD
+<<<<<<< HEAD
 vendor/
 =======
 <<<<<<< HEAD
 >>>>>>> 9567487 (.)
+=======
+<<<<<<< HEAD
+>>>>>>> 760ce09 (.)
 /vendor/
 node_modules/
 /node_modules/
@@ -33,6 +46,8 @@ composer.lock
 =======
 npm-debug.log
 =======
+=======
+>>>>>>> b55470f (.)
 vendor/
 /vendor/
 node_modules/
@@ -42,8 +57,14 @@ package-lock.json
 yarn.lock
 yarn-error.log
 composer.lock
+<<<<<<< HEAD
 >>>>>>> e6782b2 (.)
+<<<<<<< HEAD
 >>>>>>> 9567487 (.)
+=======
+=======
+>>>>>>> b55470f (.)
+>>>>>>> 760ce09 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -67,13 +88,22 @@ cache/
 *.swo
 *.stackdump
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.exe
 =======
+=======
+>>>>>>> 760ce09 (.)
 <<<<<<< HEAD
 =======
 *.exe
 >>>>>>> e6782b2 (.)
+<<<<<<< HEAD
 >>>>>>> 9567487 (.)
+=======
+=======
+*.exe
+>>>>>>> b55470f (.)
+>>>>>>> 760ce09 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -86,13 +116,22 @@ v8-compile-cache-*
 error_log
 npm-debug.log*
 <<<<<<< HEAD
+<<<<<<< HEAD
 npm-debug.log
 =======
+=======
+>>>>>>> 760ce09 (.)
 <<<<<<< HEAD
 =======
 npm-debug.log
 >>>>>>> e6782b2 (.)
+<<<<<<< HEAD
 >>>>>>> 9567487 (.)
+=======
+=======
+npm-debug.log
+>>>>>>> b55470f (.)
+>>>>>>> 760ce09 (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -164,7 +203,10 @@ docs/cache/
 
 # ==============================================
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 760ce09 (.)
 <<<<<<< HEAD
 # LANGUAGE FILES
 # ==============================================
@@ -189,6 +231,8 @@ database_old/
 database_old
 =======
 =======
+=======
+>>>>>>> b55470f (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -202,8 +246,14 @@ database/Factories_old
 database/Factories_
 database_old/
 database_old
+<<<<<<< HEAD
 >>>>>>> e6782b2 (.)
+<<<<<<< HEAD
 >>>>>>> 9567487 (.)
+=======
+=======
+>>>>>>> b55470f (.)
+>>>>>>> 760ce09 (.)
 
 # ==============================================
 # MODULE SPECIFIC - UI
