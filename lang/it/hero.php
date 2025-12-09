@@ -53,7 +53,6 @@ return [
     'sections' => [
         'empty' => [
             'heading' => 'empty',
-            'label' => 'empty',
         ],
     ],
 ];
