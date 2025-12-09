@@ -6,15 +6,7 @@ namespace Modules\UI\Filament\Widgets;
 
 use Filament\Schemas\Components\Component;
 use Override;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Forms\Form;
-=======
 use Filament\Schemas\Schema;
->>>>>>> 19f3650 (.)
-=======
-use Filament\Schemas\Schema;
->>>>>>> 2dcb12a (.)
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
