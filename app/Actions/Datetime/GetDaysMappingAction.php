@@ -49,6 +49,7 @@ class GetDaysMappingAction
 
         /** @var array<string, mixed> $result */
         $result = $days->toArray();
+
         return $result;
     }
 }

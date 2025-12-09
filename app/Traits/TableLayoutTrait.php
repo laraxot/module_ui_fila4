@@ -15,6 +15,7 @@ trait TableLayoutTrait
         if (is_string($value) || is_int($value)) {
             return TableLayoutEnum::tryFrom((string) $value) ?? TableLayoutEnum::GRID;
         }
+
         return TableLayoutEnum::GRID;
     }
 
