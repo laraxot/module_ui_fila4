@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> 727968c (.)
 return [
     'login' => [
         'title' => 'Accedi',

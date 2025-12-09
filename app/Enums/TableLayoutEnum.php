@@ -7,8 +7,13 @@ namespace Modules\UI\Enums;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\ColumnGroup;
 use Filament\Tables\Columns\Layout\Component;
+<<<<<<< HEAD
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
+=======
+use Filament\Support\Contracts\HasIcon;
+use Filament\Support\Contracts\HasColor;
+>>>>>>> 727968c (.)
 use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Filament\Traits\TransTrait;
 
@@ -24,7 +29,11 @@ use Modules\Xot\Filament\Traits\TransTrait;
 enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 {
     use TransTrait;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 727968c (.)
     case LIST = 'list';
     case GRID = 'grid';
 
@@ -35,32 +44,56 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 
     public function getLabel(): string
     {
+<<<<<<< HEAD
         return $this->transClass(self::class, $this->value . '.label');
+=======
+        return $this->transClass(self::class, $this->value.'.label');
+>>>>>>> 727968c (.)
     }
 
     public function getColor(): string
     {
+<<<<<<< HEAD
         return $this->transClass(self::class, $this->value . '.color');
+=======
+        return $this->transClass(self::class, $this->value.'.color');
+>>>>>>> 727968c (.)
     }
 
     public function getIcon(): string
     {
+<<<<<<< HEAD
         return $this->transClass(self::class, $this->value . '.icon');
+=======
+        return $this->transClass(self::class, $this->value.'.icon');
+>>>>>>> 727968c (.)
     }
 
     public function getDescription(): string
     {
+<<<<<<< HEAD
         return $this->transClass(self::class, $this->value . '.description');
+=======
+        return $this->transClass(self::class, $this->value.'.description');
+>>>>>>> 727968c (.)
     }
 
     public function getTooltip(): string
     {
+<<<<<<< HEAD
         return $this->transClass(self::class, $this->value . '.tooltip');
+=======
+        return $this->transClass(self::class, $this->value.'.tooltip');
+>>>>>>> 727968c (.)
     }
 
     public function getHelperText(): string
     {
+<<<<<<< HEAD
         return $this->transClass(self::class, $this->value . '.helper_text');
+=======
+        return $this->transClass(self::class, $this->value.'.helper_text');
+>>>>>>> 727968c (.)
     }
 
     public function toggle(): self
@@ -89,7 +122,11 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
      *
      * @return array<string, int>|null Grid configuration or null for list layout
      */
+<<<<<<< HEAD
     public function getTableContentGrid(): null|array
+=======
+    public function getTableContentGrid(): ?array
+>>>>>>> 727968c (.)
     {
         return $this->isGridLayout()
             ? [

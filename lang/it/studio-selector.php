@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> 727968c (.)
 return [
     'actions' => [
         'select' => [
@@ -33,4 +36,8 @@ return [
         'selected_studio' => 'Studio selezionato',
         'select_studio' => 'Premi spazio o invio per selezionare questo studio',
     ],
+<<<<<<< HEAD
 ];
+=======
+]; 
+>>>>>>> 727968c (.)
