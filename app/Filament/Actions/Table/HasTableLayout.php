@@ -39,4 +39,3 @@ interface HasTableLayout
      */
     public function setTableLayout(TableLayoutEnum $layout): void;
 }
-
