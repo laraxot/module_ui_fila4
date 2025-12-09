@@ -5,19 +5,27 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Forms\Components;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Components\Utilities\Get;
 >>>>>>> 02e46f9 (.)
+=======
+>>>>>>> 86ad755 (.)
 use Exception;
 use Filament\Forms\Components\Select;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Group;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\Utilities\Set;
 =======
 >>>>>>> 02e46f9 (.)
+=======
+use Filament\Schemas\Components\Utilities\Get;
+use Filament\Schemas\Components\Utilities\Set;
+>>>>>>> 86ad755 (.)
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Models\Comune;
 
@@ -232,10 +240,14 @@ class LocationSelector extends Group
         try {
             /** @phpstan-ignore class.notFound */
 <<<<<<< HEAD
+<<<<<<< HEAD
             $regions = Comune::select('regione')
 =======
             return Comune::select('regione')
 >>>>>>> 02e46f9 (.)
+=======
+            $regions = Comune::select('regione')
+>>>>>>> 86ad755 (.)
                 ->distinct()
                 ->orderBy('regione->nome')
                 ->get()
@@ -267,10 +279,14 @@ class LocationSelector extends Group
         try {
             /** @phpstan-ignore class.notFound */
 <<<<<<< HEAD
+<<<<<<< HEAD
             $provinces = Comune::query()
 =======
             return Comune::query()
 >>>>>>> 02e46f9 (.)
+=======
+            $provinces = Comune::query()
+>>>>>>> 86ad755 (.)
                 ->where('regione->codice', $region)
                 ->select('provincia')
                 ->distinct()
@@ -305,10 +321,14 @@ class LocationSelector extends Group
         try {
             /** @phpstan-ignore class.notFound */
 <<<<<<< HEAD
+<<<<<<< HEAD
             $caps = Comune::query()
 =======
             return Comune::query()
 >>>>>>> 02e46f9 (.)
+=======
+            $caps = Comune::query()
+>>>>>>> 86ad755 (.)
                 ->where('regione->codice', $region)
                 ->where('provincia->codice', $province)
                 ->select('cap')
