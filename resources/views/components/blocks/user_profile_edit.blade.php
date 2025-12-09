@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 @props(['title' => 'Modifica Profilo'])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
