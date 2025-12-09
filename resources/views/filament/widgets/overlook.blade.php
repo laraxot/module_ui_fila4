@@ -7,6 +7,7 @@ declare(strict_types=1);
 
     <x-filament::section class="relative overflow-hidden overlook-card bg-gradient-to-tr group">
 
+
             <div class="grid items-center sm:gap-6 sm:grid-cols-2">
                 <div class="py-4">
                     <div class="text-center overlook-name ">{{ $title }}</div>
@@ -28,12 +29,10 @@ declare(strict_types=1);
 
         </div>
 
-<<<<<<< HEAD
         <x-filament::icon :icon="$icon" :size="24"
-=======
->>>>>>> e709487 (.)
             class="absolute w-auto transition left-2 text-primary-500 h-36 z-1 overlook-icon -bottom-12 opacity-10 dark:opacity-10 group-hover:scale-110 group-hover:-rotate-12 group-hover:opacity-30" />
 
     </x-filament::section>
+
 
 </x-filament-widgets::widget>
