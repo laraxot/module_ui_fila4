@@ -7,7 +7,11 @@ declare(strict_types=1);
  * @see https://github.com/ryangjchandler/filament-navigation
  */
 
+<<<<<<< HEAD
 namespace Modules\Notify\Filament\Forms\Components;
+=======
+namespace Modules\UI\Filament\Forms\Components;
+>>>>>>> e3274ea (.)
 
 use Filament\Forms\Components\Select;
 
