@@ -12,15 +12,27 @@ use Filament\Forms\Components\TextInput;
 
 class ImagesGallery
 {
+<<<<<<< HEAD
     public static function make(string $name = 'images_gallery', string $context = 'form'): Block
     {
+=======
+    public static function make(
+        string $name = 'images_gallery',
+        string $context = 'form',
+    ): Block {
+>>>>>>> 727968c (.)
         return Block::make($name)
             ->schema([
                 Repeater::make('gallery')
                     ->schema([
                         SpatieMediaLibraryFileUpload::make('image')
+<<<<<<< HEAD
                             // ->image()
                             // ->maxSize(5000)
+=======
+                        // ->image()
+                        // ->maxSize(5000)
+>>>>>>> 727968c (.)
                             ->multiple()
                             ->enableReordering()
                             ->openable()
@@ -30,16 +42,33 @@ class ImagesGallery
                             // ->conversion('thumbnail')
                             ->disk('uploads')
                             ->directory('photos'),
+<<<<<<< HEAD
                         TextInput::make('title')->columnSpanFull(),
                         TextInput::make('subtitle')->columnSpanFull(),
                         Select::make('version')
+=======
+
+                        TextInput::make('title')
+                            ->columnSpanFull(),
+
+                        TextInput::make('subtitle')
+                            ->columnSpanFull(),
+
+                        Select::make('version')
+
+>>>>>>> 727968c (.)
                             ->required()
                             ->options([
                                 'v1' => 'versione 1',
                                 'v2' => 'versione 2',
                             ]),
+<<<<<<< HEAD
                     ])
                     ->columnSpanFull(),
+=======
+                    ])->columnSpanFull(),
+
+>>>>>>> 727968c (.)
                 // FileUpload::make('image')
                 //     ,
                 // SpatieMediaLibraryFileUpload::make('image')
@@ -54,6 +83,7 @@ class ImagesGallery
                 //         // ->conversion('thumbnail')
                 //     ->disk('uploads')
                 //     ->directory('photos'),
+<<<<<<< HEAD
                 // TextInput::make('url')
                 //     ,
                 // Select::make('ratio')
@@ -61,6 +91,19 @@ class ImagesGallery
                 //     ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
                 // TextInput::make('alt')
                 //     ->columnSpanFull(),
+=======
+
+                // TextInput::make('url')
+                //     ,
+
+                // Select::make('ratio')
+                //     ->options(static::getRatios())
+                //     ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
+
+                // TextInput::make('alt')
+                //     ->columnSpanFull(),
+
+>>>>>>> 727968c (.)
                 // TextInput::make('caption')
                 //     ->columnSpanFull(),
             ])
