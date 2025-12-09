@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Tests\TestCase;
-use Filament\Schemas\Schema;
+use Filament\Forms\Form;
 use Illuminate\Support\Collection;
 use Carbon\Exceptions\InvalidFormatException;
 use Carbon\Carbon;
