@@ -43,20 +43,15 @@ test('it checks if date is enabled', function (): void {
 
 test('it generates calendar data and marks enabled dates', function (): void {
     $component = InlineDatePicker::make('test')->enabledDates(['2025-06-15']);
-    /** @phpstan-ignore-next-line method.nonObject */
     $component->currentViewMonth('2025-06');
-    /** @phpstan-ignore-next-line method.nonObject */
     $data = $component->generateCalendarData();
 
     expect($data)->toHaveKeys(['year', 'month', 'weeks', 'monthName', 'weekdays']);
     $found = false;
-    /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     foreach ($data['weeks'] as $week) {
         foreach ($week as $day) {
-            /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
             if (($day['datetime'] ?? $day['dateString'] ?? null) === '2025-06-15') {
                 $found = true;
-                /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
                 expect($day['isEnabled'])->toBeTrue();
             }
         }
@@ -67,7 +62,6 @@ test('it generates calendar data and marks enabled dates', function (): void {
 test('it respects locale in calendar data', function (): void {
     App::setLocale('it');
     $component = InlineDatePicker::make('test');
-    /** @phpstan-ignore-next-line method.nonObject */
     $data = $component->generateCalendarData();
     expect($data)->toHaveKey('monthName');
 });
@@ -125,25 +119,20 @@ test('it generates correct calendar data', function (): void {
     $picker->currentViewMonth = '2024-01';
 
     // Act
-    /** @phpstan-ignore-next-line method.nonObject */
     $calendarData = $picker->generateCalendarData();
 
     // Assert
     expect($calendarData)->toHaveKey('weeks');
     expect($calendarData)->toHaveKey('monthName');
     expect($calendarData)->toHaveKey('weekdays');
-    /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect(count($calendarData['weeks']))->toBeGreaterThanOrEqual(4);
-    /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect(count($calendarData['weeks']))->toBeLessThanOrEqual(6);
-    /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect($calendarData['weeks'][0])->toHaveCount(7); // 7 giorni per settimana
 });
 
 test('it handles enabled dates correctly', function (): void {
     // Arrange
     $picker = InlineDatePicker::make('test_date');
-    /** @phpstan-ignore-next-line method.nonObject */
     $picker->enabledDates(['2024-01-15', '2024-01-16']);
 
     // Act & Assert
@@ -175,10 +164,6 @@ test('it is kiss simple and clear', function (): void {
 
     // Assert: Metodi pubblici minimi e chiari
     $reflection = new ReflectionClass($picker);
-<<<<<<< HEAD
-    /** @phpstan-ignore-next-line method.nonObject */
-=======
->>>>>>> 3b732b6 (.)
     $publicMethods = array_filter($reflection->getMethods(), fn ($m) => $m->isPublic() && ! $m->isStatic());
 
     // Dovrebbe esporre metodi essenziali utilizzabili
@@ -200,11 +185,8 @@ test('it is kiss simple and clear', function (): void {
 function invokeMethod(object $object, string $methodName, array $parameters = []): mixed
 {
     $reflection = new ReflectionClass(get_class($object));
-    /** @phpstan-ignore-next-line method.nonObject */
     $method = $reflection->getMethod($methodName);
-    /** @phpstan-ignore-next-line method.nonObject */
     $method->setAccessible(true);
 
-    /** @phpstan-ignore-next-line method.nonObject */
     return $method->invokeArgs($object, $parameters);
 }
