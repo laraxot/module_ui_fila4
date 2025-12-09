@@ -2,60 +2,13 @@
 
 declare(strict_types=1);
 
-use Filament\Forms\Components\DateTimePicker;
-use Filament\Forms\Components\TextInput;
-use Illuminate\Database\Eloquent\Model;
+namespace Modules\UI\Tests\Unit\Widgets;
+
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
-
-// Mock class per testare il BaseCalendarWidget
-class MockCalendarWidget extends BaseCalendarWidget
-{
-    public string $model = MockEventModel::class;
-
-    public function fetchEvents(array $fetchInfo): array
-    {
-        return [
-            [
-                'id' => 1,
-                'title' => 'Test Event 1',
-                'start' => '2025-01-01T10:00:00',
-                'end' => '2025-01-01T12:00:00',
-                'color' => '#3B82F6',
-            ],
-            [
-                'id' => 2,
-                'title' => 'Test Event 2',
-                'start' => '2025-01-02T14:00:00',
-                'end' => '2025-01-02T16:00:00',
-                'color' => '#10B981',
-            ],
-        ];
-    }
-
-    public function getFormSchema(): array
-    {
-        return [
-            TextInput::make('title')->required(),
-            DateTimePicker::make('start')->required(),
-            DateTimePicker::make('end')->required(),
-        ];
-    }
-}
-
-// Mock model per gli eventi
-class MockEventModel extends Model
-{
-    protected $fillable = ['title', 'start', 'end', 'color'];
-
-    public function getTable()
-    {
-        return 'mock_events';
-    }
-}
+use Modules\UI\Filament\Widgets\FullCalendarWidget;
 
 beforeEach(function () {
-    $this->widget = new MockCalendarWidget;
+    $this->widget = new MockCalendarWidget();
 });
 
 describe('BaseCalendarWidget Inheritance', function () {
@@ -136,9 +89,8 @@ describe('BaseCalendarWidget Event Management', function () {
         }
     });
 
-    it('handles empty event list', function () {
-        $widget = new class extends BaseCalendarWidget
-        {
+    it('handles empty event list', static function () {
+        $widget = new class extends BaseCalendarWidget {
             public string $model = MockEventModel::class;
 
             public function fetchEvents(array $fetchInfo): array
@@ -163,15 +115,14 @@ describe('BaseCalendarWidget Event Management', function () {
         expect($events)->toHaveCount(0);
     });
 
-    it('handles large event lists efficiently', function () {
-        $widget = new class extends BaseCalendarWidget
-        {
+    it('handles large event lists efficiently', static function () {
+        $widget = new class extends BaseCalendarWidget {
             public string $model = MockEventModel::class;
 
             public function fetchEvents(array $fetchInfo): array
             {
                 $events = [];
-                for ($i = 1; $i <= 1000; $i++) {
+                for ($i = 1; $i <= 1000; ++$i) {
                     $events[] = [
                         'id' => $i,
                         'title' => "Event {$i}",
@@ -216,7 +167,7 @@ describe('BaseCalendarWidget Form Schema', function () {
     it('includes required form fields', function () {
         $formSchema = $this->widget->getFormSchema();
 
-        $fieldNames = collect($formSchema)->map(fn ($field) => $field->getName())->toArray();
+        $fieldNames = collect($formSchema)->map(static fn ($field) => $field->getName())->toArray();
 
         expect($fieldNames)->toContain('title', 'start', 'end');
     });
@@ -224,7 +175,7 @@ describe('BaseCalendarWidget Form Schema', function () {
     it('has title field with required validation', function () {
         $formSchema = $this->widget->getFormSchema();
 
-        $titleField = collect($formSchema)->first(fn ($field) => $field->getName() === 'title');
+        $titleField = collect($formSchema)->first(static fn ($field) => 'title' === $field->getName());
 
         expect($titleField)->not->toBeNull();
         expect($titleField->isRequired())->toBeTrue();
@@ -233,7 +184,7 @@ describe('BaseCalendarWidget Form Schema', function () {
     it('has start date field with required validation', function () {
         $formSchema = $this->widget->getFormSchema();
 
-        $startField = collect($formSchema)->first(fn ($field) => $field->getName() === 'start');
+        $startField = collect($formSchema)->first(static fn ($field) => 'start' === $field->getName());
 
         expect($startField)->not->toBeNull();
         expect($startField->isRequired())->toBeTrue();
@@ -242,7 +193,7 @@ describe('BaseCalendarWidget Form Schema', function () {
     it('has end date field with required validation', function () {
         $formSchema = $this->widget->getFormSchema();
 
-        $endField = collect($formSchema)->first(fn ($field) => $field->getName() === 'end');
+        $endField = collect($formSchema)->first(static fn ($field) => 'end' === $field->getName());
 
         expect($endField)->not->toBeNull();
         expect($endField->isRequired())->toBeTrue();
@@ -426,9 +377,8 @@ describe('BaseCalendarWidget Validation', function () {
 });
 
 describe('BaseCalendarWidget Performance', function () {
-    it('handles large date ranges efficiently', function () {
-        $widget = new class extends BaseCalendarWidget
-        {
+    it('handles large date ranges efficiently', static function () {
+        $widget = new class extends BaseCalendarWidget {
             public string $model = MockEventModel::class;
 
             public function fetchEvents(array $fetchInfo): array
@@ -440,7 +390,7 @@ describe('BaseCalendarWidget Performance', function () {
                 $interval = $start->diff($end);
                 $days = $interval->days;
 
-                for ($i = 0; $i < min($days, 100); $i++) {
+                for ($i = 0; $i < min($days, 100); ++$i) {
                     $events[] = [
                         'id' => $i + 1,
                         'title' => "Event Day {$i}",
@@ -497,12 +447,11 @@ describe('BaseCalendarWidget Performance', function () {
     });
 });
 
-describe('BaseCalendarWidget Integration', function () {
-    it('works with different model types', function () {
+describe('BaseCalendarWidget Integration', static function () {
+    it('works with different model types', static function () {
         $widgets = [
-            new MockCalendarWidget,
-            new class extends BaseCalendarWidget
-            {
+            new MockCalendarWidget(),
+            new class extends BaseCalendarWidget {
                 public string $model = MockEventModel::class;
 
                 public function fetchEvents(array $fetchInfo): array
@@ -524,9 +473,9 @@ describe('BaseCalendarWidget Integration', function () {
         }
     });
 
-    it('maintains consistent behavior across instances', function () {
-        $widget1 = new MockCalendarWidget;
-        $widget2 = new MockCalendarWidget;
+    it('maintains consistent behavior across instances', static function () {
+        $widget1 = new MockCalendarWidget();
+        $widget2 = new MockCalendarWidget();
 
         $fetchInfo = [
             'start' => '2025-01-01T00:00:00',
