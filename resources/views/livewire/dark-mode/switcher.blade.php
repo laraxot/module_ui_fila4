@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 <div>
     <button
         type="button"
@@ -47,7 +53,11 @@ declare(strict_types=1);
         });
     </script>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </div>
 =======
 </div>
 >>>>>>> 727968c (.)
+=======
+</div>
+>>>>>>> ef3c5fa (.)
