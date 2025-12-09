@@ -23,11 +23,33 @@ class Blocks extends Component
 {
     public array $blocks = [];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
     public function __construct(
         ?array $blocks = [],
         public ?Model $model = null,
         public string $tpl = 'v1',
     ) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    public function __construct(?array $blocks = [], public ?Model $model = null, public string $tpl = 'v1')
+    {
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    public function __construct(?array $blocks = [], public ?Model $model = null, public string $tpl = 'v1')
+    {
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
         if (is_array($blocks)) {
             $this->blocks = $blocks;
         }
