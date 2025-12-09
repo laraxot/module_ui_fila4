@@ -12,6 +12,9 @@ class GetDaysMappingAction
 {
     use QueueableAction;
 
+    /**
+     * @return array<string, mixed>
+     */
     public function execute(): array
     {
         $days = collect([
