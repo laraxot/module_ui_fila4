@@ -9,11 +9,7 @@ use Carbon\Exceptions\InvalidFormatException;
 use Carbon\Carbon;
 use Filament\Forms\Components\Field;
 use Illuminate\Support\Facades\App;
-<<<<<<< HEAD
 use \Filament\Forms\Forms\Components\InlineDatePicker;
-=======
-use Modules\UI\Filament\Forms\Components\InlineDatePicker;
->>>>>>> e3274ea (.)
 
 uses(TestCase::class);
 
