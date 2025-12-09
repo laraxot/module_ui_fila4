@@ -1,9 +1,5 @@
 # TableLayoutEnum Usage Guide
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 ## Nuovo Approccio (Corretto)
 
 Dopo la correzione del problema di visibilità, il metodo `getTableColumns()` ora richiede parametri espliciti invece di usare debug_backtrace.
@@ -12,11 +8,6 @@ Dopo la correzione del problema di visibilità, il metodo `getTableColumns()` or
 
 ```php
 use Modules\UI\Enums\TableLayoutEnum;
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 ## Overview
 
 The `TableLayoutEnum` provides standardized layout options for Filament tables and data grids, allowing users to toggle between list and grid views with appropriate styling and column configurations.
@@ -97,20 +88,11 @@ class ListUsers extends ListRecords
     {
         return $table
             ->columns($this->getColumnsForLayout())
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
             ->contentGrid($this->layout->getTableContentGrid());
     }
     
     /**
      * Restituisce le colonne appropriate per il layout corrente
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
             ->contentGrid($this->layout->getTableContentGrid())
             ->extraAttributes([
                 'class' => $this->layout->getContainerClasses(),
@@ -123,10 +105,6 @@ class ListUsers extends ListRecords
     protected function getColumnsForLayout(): array
     {
         $listColumns = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
             Tables\Columns\TextColumn::make('name'),
             Tables\Columns\TextColumn::make('email'),
             Tables\Columns\TextColumn::make('created_at'),
@@ -138,11 +116,6 @@ class ListUsers extends ListRecords
                     ->weight(FontWeight::Bold),
                 Tables\Columns\TextColumn::make('email'),
             ]),
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
             Tables\Columns\TextColumn::make('name')
                 ->searchable()
                 ->sortable(),
@@ -170,32 +143,16 @@ class ListUsers extends ListRecords
     }
     
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Toggle del layout tramite action
-=======
->>>>>>> 727968c (.)
-=======
-     * Toggle del layout tramite action
->>>>>>> ef3c5fa (.)
      * Layout toggle action.
      */
     protected function getHeaderActions(): array
     {
         return [
             Action::make('toggleLayout')
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ->icon($this->layout->getIcon())
                 ->action(function () {
                     $this->layout = $this->layout->toggle();
-=======
->>>>>>> 727968c (.)
-=======
-                ->icon($this->layout->getIcon())
-                ->action(function () {
-                    $this->layout = $this->layout->toggle();
->>>>>>> ef3c5fa (.)
                 ->action(function () {
                     $this->layout = $this->layout->toggle();
                     $this->resetTable();
@@ -205,10 +162,6 @@ class ListUsers extends ListRecords
 }
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 ### Vantaggi del nuovo approccio:
 
 1. **Type Safety**: Non usa più reflection o debug_backtrace
@@ -221,11 +174,6 @@ class ListUsers extends ListRecords
 Il metodo `getTableColumns()` ora richiede due parametri:
 - `$listColumns`: Array delle colonne per layout lista
 - `$gridColumns`: Array delle colonne per layout griglia 
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 ### Advantages of the New Approach
 
 1. **Type Safety**: No longer uses reflection or debug_backtrace
@@ -335,12 +283,4 @@ $columns = $this->layout->getTableColumns($listColumns, $gridColumns);
 - [Translation Standards](translations.md)
 - [Table Components](table-components.md)
 - [HasXotTable Trait](../../Xot/docs/has-xot-table.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Root Documentation: UI Components](../../../docs/components/ui-components.md)
-=======
-- [Root Documentation: UI Components](../../../docs/components/ui-components.md)
->>>>>>> 727968c (.)
-=======
-- [Root Documentation: UI Components](../../../docs/components/ui-components.md)
->>>>>>> ef3c5fa (.)
