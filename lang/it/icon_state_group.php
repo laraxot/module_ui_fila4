@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 declare(strict_types=1);
 
 
@@ -252,6 +255,7 @@ return [
         ],
     ],
 ];
+<<<<<<< HEAD
 =======
 return array (
   'fields' => 
@@ -584,3 +588,5 @@ return array (
   ),
 );
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)

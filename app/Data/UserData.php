@@ -13,12 +13,16 @@ class UserData extends Data
         public string $name,
         public string $email,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
         public null|string $avatar,
         public null|string $role,
         public array $permissions,
         public array $settings,
     ) {}
 }
+<<<<<<< HEAD
 =======
         public ?string $avatar,
         public ?string $role,
@@ -28,3 +32,5 @@ class UserData extends Data
     }
 } 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)

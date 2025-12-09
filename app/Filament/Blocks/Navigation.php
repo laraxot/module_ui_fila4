@@ -1,19 +1,27 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 727968c (.)
+=======
+
+>>>>>>> ef3c5fa (.)
 declare(strict_types=1);
 
 namespace Modules\UI\Filament\Blocks;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 use Override;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Forms;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
+<<<<<<< HEAD
 =======
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
@@ -21,11 +29,16 @@ use Filament\Forms\Components\Builder\Block;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
 use Filament\Forms\Components\Forms;
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 use Modules\Xot\Filament\Traits\TransTrait;
 
 class Navigation extends XotBaseBlock
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     #[Override]
     public static function getBlockSchema(): array
     {
@@ -41,6 +54,7 @@ class Navigation extends XotBaseBlock
                 ])
                 ->columns(2)
                 ->minItems(1),
+<<<<<<< HEAD
 =======
     
 
@@ -61,6 +75,8 @@ class Navigation extends XotBaseBlock
                     ->columns(2)
                     ->minItems(1),
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
         ];
     }
 
@@ -71,6 +87,7 @@ class Navigation extends XotBaseBlock
                 ->label(static::trans('blocks.navigation.fields.items.label'))
                 ->schema([
 <<<<<<< HEAD
+<<<<<<< HEAD
                     TextInput::make('text')->label(static::trans('blocks.navigation.fields.text.label')),
                     TextInput::make('url')->label(static::trans('blocks.navigation.fields.url.label')),
 =======
@@ -79,6 +96,10 @@ class Navigation extends XotBaseBlock
                     TextInput::make('url')
                         ->label(static::trans('blocks.navigation.fields.url.label')),
 >>>>>>> 727968c (.)
+=======
+                    TextInput::make('text')->label(static::trans('blocks.navigation.fields.text.label')),
+                    TextInput::make('url')->label(static::trans('blocks.navigation.fields.url.label')),
+>>>>>>> ef3c5fa (.)
                 ]),
         ];
     }

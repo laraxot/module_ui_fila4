@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 declare(strict_types=1);
 
 
@@ -47,6 +50,7 @@ return [
         ],
         'short' => ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'],
         'min' => ['Do', 'Lu', 'Ma', 'Me', 'Gi', 'Ve', 'Sa'],
+<<<<<<< HEAD
 =======
 return [
     'months' => [
@@ -66,6 +70,8 @@ return [
         'short' => ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'],
         'min' => ['Do', 'Lu', 'Ma', 'Me', 'Gi', 'Ve', 'Sa']
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     ],
     'buttons' => [
         'previous' => 'Mese precedente',
@@ -74,20 +80,28 @@ return [
         'cancel' => 'Annulla',
         'save' => 'Salva',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'close' => 'Chiudi',
 =======
         'close' => 'Chiudi'
 >>>>>>> 727968c (.)
+=======
+        'close' => 'Chiudi',
+>>>>>>> ef3c5fa (.)
     ],
     'labels' => [
         'today' => 'Oggi',
         'all_day' => 'Tutto il giorno',
         'no_events' => 'Nessun evento programmato',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'loading' => 'Caricamento in corso...',
 =======
         'loading' => 'Caricamento in corso...'
 >>>>>>> 727968c (.)
+=======
+        'loading' => 'Caricamento in corso...',
+>>>>>>> ef3c5fa (.)
     ],
     'fields' => [
         'title' => [
@@ -126,14 +140,19 @@ return [
             'success' => 'Evento creato con successo',
             'error' => 'Errore durante la creazione dell\'evento',
 <<<<<<< HEAD
+<<<<<<< HEAD
         ],
 =======
         ]
 >>>>>>> 727968c (.)
+=======
+        ],
+>>>>>>> ef3c5fa (.)
     ],
     'validation' => [
         'required' => 'Questo campo è obbligatorio',
         'date' => 'Inserisci una data valida',
+<<<<<<< HEAD
 <<<<<<< HEAD
         'after' => 'La data di fine deve essere successiva alla data di inizio',
     ],
@@ -141,4 +160,8 @@ return [
         'after' => 'La data di fine deve essere successiva alla data di inizio'
     ]
 >>>>>>> 727968c (.)
+=======
+        'after' => 'La data di fine deve essere successiva alla data di inizio',
+    ],
+>>>>>>> ef3c5fa (.)
 ];
