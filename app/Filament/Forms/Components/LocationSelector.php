@@ -166,8 +166,8 @@ class LocationSelector extends Group
         return [
             // Campo Regione
             Select::make($this->regionFieldName)
-                ->label($this->labels['region'])
-                ->placeholder($this->placeholders['region'])
+                ->label(is_string($this->labels['region']) ? $this->labels['region'] : 'Region')
+                ->placeholder(is_string($this->placeholders['region']) ? $this->placeholders['region'] : 'Select region')
                 ->options($this->getRegionOptions())
                 ->searchable($this->searchable)
                 ->required($this->required)
@@ -180,8 +180,8 @@ class LocationSelector extends Group
                 ->helperText(__('ui::location_selector.region.help')),
             // Campo Provincia
             Select::make($this->provinceFieldName)
-                ->label($this->labels['province'])
-                ->placeholder($this->placeholders['province'])
+                ->label(is_string($this->labels['province']) ? $this->labels['province'] : 'Province')
+                ->placeholder(is_string($this->placeholders['province']) ? $this->placeholders['province'] : 'Select province')
                 ->options(function (Get $get): array {
                     $region = $get($this->regionFieldName);
 
@@ -198,8 +198,8 @@ class LocationSelector extends Group
                 ->helperText(__('ui::location_selector.province.help')),
             // Campo CAP
             Select::make($this->capFieldName)
-                ->label($this->labels['cap'])
-                ->placeholder($this->placeholders['cap'])
+                ->label(is_string($this->labels['cap']) ? $this->labels['cap'] : 'CAP')
+                ->placeholder(is_string($this->placeholders['cap']) ? $this->placeholders['cap'] : 'Select CAP')
                 ->options(function (Get $get): array {
                     $region = $get($this->regionFieldName);
                     $province = $get($this->provinceFieldName);
