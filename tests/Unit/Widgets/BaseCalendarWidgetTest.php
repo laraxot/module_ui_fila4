@@ -6,19 +6,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DateTimePicker;
 use Illuminate\Database\Eloquent\Model;
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget; // Temporaneamente disabilitato per Filament v4
-=======
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
->>>>>>> e6782b2 (.)
-=======
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
->>>>>>> b55470f (.)
-=======
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
->>>>>>> 6be0161 (.)
 
 // Mock class per testare il BaseCalendarWidget
 class MockCalendarWidget extends BaseCalendarWidget
@@ -71,24 +59,9 @@ beforeEach(function () {
 });
 
 describe('BaseCalendarWidget Inheritance', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     it('extends FullCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
     });
->>>>>>> e6782b2 (.)
-=======
-    it('extends FullCalendarWidget', function () {
-        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
-    });
->>>>>>> b55470f (.)
-=======
-    it('extends FullCalendarWidget', function () {
-        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
-    });
->>>>>>> 6be0161 (.)
 
     it('extends BaseCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(BaseCalendarWidget::class);
@@ -97,19 +70,6 @@ describe('BaseCalendarWidget Inheritance', function () {
     it('has model property set', function () {
         expect($this->widget->model)->toBe(MockEventModel::class);
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    // it('extends FullCalendarWidget', function () {
-    //     expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
-    // }); // Temporaneamente disabilitato per Filament v4
-=======
->>>>>>> e6782b2 (.)
-=======
->>>>>>> b55470f (.)
-=======
->>>>>>> 6be0161 (.)
 });
 
 describe('BaseCalendarWidget Configuration', function () {
