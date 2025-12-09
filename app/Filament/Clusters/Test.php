@@ -9,7 +9,10 @@ use Filament\Clusters\Cluster;
 final class Test extends Cluster
 {
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-squares-2x2';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 727968c (.)
     // protected static ?string $navigationParentItem = 'Notifications';
     // protected static ?string $navigationGroup = 'Settings';
 }
