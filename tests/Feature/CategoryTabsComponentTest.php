@@ -2,8 +2,16 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\View;
 use Tests\TestCase;
+=======
+namespace Modules\UI\Tests\Feature\CategoryTabsComponentTest;
+
+namespace Modules\UI\Tests\Feature;
+
+use Illuminate\Support\Facades\View;
+>>>>>>> 727968c (.)
 
 uses(TestCase::class);
 
@@ -60,12 +68,21 @@ test('category tabs shows counts when enabled', function (): void {
 
     // Should contain count indicators
     expect($html)->toContain('250'); // All markets count
+<<<<<<< HEAD
     expect($html)->toContain('45'); // Politics count
     expect($html)->toContain('67'); // Sports count
     expect($html)->toContain('34'); // Economics count
     expect($html)->toContain('28'); // Technology count
     expect($html)->toContain('23'); // Entertainment count
     expect($html)->toContain('19'); // Crypto count
+=======
+    expect($html)->toContain('45');  // Politics count
+    expect($html)->toContain('67');  // Sports count
+    expect($html)->toContain('34');  // Economics count
+    expect($html)->toContain('28');  // Technology count
+    expect($html)->toContain('23');  // Entertainment count
+    expect($html)->toContain('19');  // Crypto count
+>>>>>>> 727968c (.)
 });
 
 test('category tabs hides counts when disabled', function (): void {
@@ -77,12 +94,17 @@ test('category tabs hides counts when disabled', function (): void {
     $html = $view->render();
 
     // Should not contain specific count numbers in count badges
+<<<<<<< HEAD
     expect($html)
         ->not()
         ->toContain('<span class="ml-1 px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">45</span>');
     expect($html)
         ->not()
         ->toContain('<span class="ml-1 px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">67</span>');
+=======
+    expect($html)->not()->toContain('<span class="ml-1 px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">45</span>');
+    expect($html)->not()->toContain('<span class="ml-1 px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">67</span>');
+>>>>>>> 727968c (.)
 });
 
 test('category tabs has mobile scrollable styling', function (): void {
@@ -170,5 +192,9 @@ test('category tabs has proper category icons', function (): void {
     expect($html)->toContain('📈'); // Economics
     expect($html)->toContain('💻'); // Technology
     expect($html)->toContain('🎬'); // Entertainment
+<<<<<<< HEAD
     expect($html)->toContain('₿'); // Crypto
+=======
+    expect($html)->toContain('₿');  // Crypto
+>>>>>>> 727968c (.)
 });
