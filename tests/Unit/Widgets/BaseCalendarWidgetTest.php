@@ -6,11 +6,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DateTimePicker;
 use Illuminate\Database\Eloquent\Model;
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
-<<<<<<< HEAD
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
-=======
 // use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget; // Temporaneamente disabilitato per Filament v4
->>>>>>> d426663 (.)
 
 // Mock class per testare il BaseCalendarWidget
 class MockCalendarWidget extends BaseCalendarWidget
@@ -63,15 +59,6 @@ beforeEach(function () {
 });
 
 describe('BaseCalendarWidget Inheritance', function () {
-<<<<<<< HEAD
-    it('extends FullCalendarWidget', function () {
-        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
-    });
-=======
-    // it('extends FullCalendarWidget', function () {
-    //     expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
-    // }); // Temporaneamente disabilitato per Filament v4
->>>>>>> d426663 (.)
 
     it('extends BaseCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(BaseCalendarWidget::class);
@@ -80,6 +67,10 @@ describe('BaseCalendarWidget Inheritance', function () {
     it('has model property set', function () {
         expect($this->widget->model)->toBe(MockEventModel::class);
     });
+
+    // it('extends FullCalendarWidget', function () {
+    //     expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
+    // }); // Temporaneamente disabilitato per Filament v4
 });
 
 describe('BaseCalendarWidget Configuration', function () {
