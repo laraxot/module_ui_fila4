@@ -4,15 +4,24 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
+<<<<<<< HEAD
 use Override;
+=======
+>>>>>>> 727968c (.)
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 /**
  * RedirectWidget - Widget per gestire redirect verso URL specifici.
  *
+<<<<<<< HEAD
  * Questo widget è progettato per creare elementi UI (bottoni, link)
  * che reindirizzano l'utente verso URL specifici.
  *
+=======
+ * Questo widget è progettato per creare elementi UI (bottoni, link) 
+ * che reindirizzano l'utente verso URL specifici.
+ * 
+>>>>>>> 727968c (.)
  * Utilizzo tipico in configurazioni JSON:
  * {
  *     "type": "widget",
@@ -55,6 +64,11 @@ class RedirectWidget extends XotBaseWidget
      * Può essere sovrascritta dalla configurazione con la chiave 'view'.
      */
     protected string $view = 'ui::filament.widgets.redirect-widget';
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> 727968c (.)
 
     /**
      * Implementazione richiesta da XotBaseWidget.
@@ -62,7 +76,10 @@ class RedirectWidget extends XotBaseWidget
      *
      * @return array<string, mixed>
      */
+<<<<<<< HEAD
     #[Override]
+=======
+>>>>>>> 727968c (.)
     public function getFormSchema(): array
     {
         return [];
@@ -75,6 +92,10 @@ class RedirectWidget extends XotBaseWidget
      */
     protected function getViewData(): array
     {
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 727968c (.)
         return [
             'to' => $this->to,
             'label' => $this->label ?: 'Vai',
@@ -92,4 +113,8 @@ class RedirectWidget extends XotBaseWidget
     {
         return true;
     }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> 727968c (.)

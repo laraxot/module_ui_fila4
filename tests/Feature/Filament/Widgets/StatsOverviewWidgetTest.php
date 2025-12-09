@@ -3,8 +3,13 @@
 declare(strict_types=1);
 
 use Tests\TestCase;
+<<<<<<< HEAD
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Modules\UI\Filament\Widgets\StatsOverviewWidget;
+=======
+use Modules\UI\Filament\Widgets\StatsOverviewWidget;
+use Filament\Widgets\StatsOverviewWidget\Stat;
+>>>>>>> 727968c (.)
 
 uses(TestCase::class);
 

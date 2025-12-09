@@ -13,10 +13,18 @@ return [
         'created_at' => 'Créé le',
         'updated_at' => 'Màj le',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'select-options' => [
         'same-tab' => 'Même fenêtre',
         'new-tab' => 'Nouvelle fenêtre',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'items' => [
         'empty' => 'pas d\'élément',
         'add-item' => 'Ajouter un élément',
@@ -27,6 +35,10 @@ return [
         'dedent' => 'Désindenter',
         'remove' => 'Supprimer',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'items-modal' => [
         'title' => 'Élément',
         'label' => 'Label',

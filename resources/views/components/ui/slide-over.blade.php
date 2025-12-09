@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 @props([
     'name',
     'title' => 'Slide-over Title',
@@ -77,3 +80,7 @@ $maxWidth = [
         </div>
     </template>
 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
