@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 <div class="bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Support center</h2>
@@ -13,6 +19,9 @@ declare(strict_types=1);
     </div>
   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
