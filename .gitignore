@@ -4,6 +4,7 @@
 # Modulo UI Laraxot - Template standardizzato
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Ultimo aggiornamento: 2025-01-31
 =======
 # Ultimo aggiornamento: 2025-01-06
@@ -11,11 +12,15 @@
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> b55470f (.)
+=======
+# Ultimo aggiornamento: 2025-01-06
+>>>>>>> 6be0161 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /vendor/
@@ -31,6 +36,8 @@ npm-debug.log
 =======
 =======
 >>>>>>> b55470f (.)
+=======
+>>>>>>> 6be0161 (.)
 vendor/
 /vendor/
 node_modules/
@@ -41,9 +48,12 @@ yarn.lock
 yarn-error.log
 composer.lock
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e6782b2 (.)
 =======
 >>>>>>> b55470f (.)
+=======
+>>>>>>> 6be0161 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -68,12 +78,16 @@ cache/
 *.stackdump
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 *.exe
 >>>>>>> e6782b2 (.)
 =======
 *.exe
 >>>>>>> b55470f (.)
+=======
+*.exe
+>>>>>>> 6be0161 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -87,12 +101,16 @@ error_log
 npm-debug.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 npm-debug.log
 >>>>>>> e6782b2 (.)
 =======
 npm-debug.log
 >>>>>>> b55470f (.)
+=======
+npm-debug.log
+>>>>>>> 6be0161 (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -165,6 +183,7 @@ docs/cache/
 # ==============================================
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # LANGUAGE FILES
 # ==============================================
 lang/lang/
@@ -181,6 +200,8 @@ database_old/
 =======
 =======
 >>>>>>> b55470f (.)
+=======
+>>>>>>> 6be0161 (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -195,9 +216,12 @@ database/Factories_
 database_old/
 database_old
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e6782b2 (.)
 =======
 >>>>>>> b55470f (.)
+=======
+>>>>>>> 6be0161 (.)
 
 # ==============================================
 # MODULE SPECIFIC - UI
