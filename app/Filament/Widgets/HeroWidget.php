@@ -19,10 +19,14 @@ class HeroWidget extends BaseWidget
     public string $icon = '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected null|string $pollingInterval = null;
 =======
     protected ?string $pollingInterval = null;
 >>>>>>> 727968c (.)
+=======
+    protected null|string $pollingInterval = null;
+>>>>>>> ef3c5fa (.)
 
     public function getColumns(): int
     {
@@ -33,11 +37,15 @@ class HeroWidget extends BaseWidget
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             Stat::make('', $this->title)->icon($this->icon),
 =======
             Stat::make('', $this->title)
                 ->icon($this->icon),
 >>>>>>> 727968c (.)
+=======
+            Stat::make('', $this->title)->icon($this->icon),
+>>>>>>> ef3c5fa (.)
         ];
     }
 }

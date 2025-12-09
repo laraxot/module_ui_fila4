@@ -17,19 +17,27 @@ class TestChartWidget extends ChartWidget
 
     // protected static ?string $heading = 'Blog Posts';
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected null|string $pollingInterval = null;
 =======
     protected ?string $pollingInterval = null;
 >>>>>>> 727968c (.)
+=======
+    protected null|string $pollingInterval = null;
+>>>>>>> ef3c5fa (.)
 
     // danger, gray, info, primary, success or warning
     protected string $color = 'info';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getDescription(): null|string
 =======
     public function getDescription(): ?string
 >>>>>>> 727968c (.)
+=======
+    public function getDescription(): null|string
+>>>>>>> ef3c5fa (.)
     {
         return 'The number of blog posts published per month.';
     }
@@ -39,19 +47,27 @@ class TestChartWidget extends ChartWidget
     protected function getData(): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->maxHeight = $this->max_height;
 =======
         static::$maxHeight = $this->max_height;
 >>>>>>> 727968c (.)
+=======
+        $this->maxHeight = $this->max_height;
+>>>>>>> ef3c5fa (.)
 
         return [
             'datasets' => [
                 [
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'label' => 'Blog posts created ' . $this->qid,
 =======
                     'label' => 'Blog posts created '.$this->qid,
 >>>>>>> 727968c (.)
+=======
+                    'label' => 'Blog posts created ' . $this->qid,
+>>>>>>> ef3c5fa (.)
                     'data' => [0, 10, 5, 2, 21, 32, 45, 74, 65, 45, 77, 89],
                     'backgroundColor' => '#36A2EB',
                     'borderColor' => '#9BD0F5',
@@ -70,6 +86,9 @@ class TestChartWidget extends ChartWidget
     {
         return RawJs::make(<<<'JS'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
             {
                 scales: {
                     y: {
@@ -80,6 +99,7 @@ class TestChartWidget extends ChartWidget
                 },
             }
         JS);
+<<<<<<< HEAD
 =======
         {
             scales: {
@@ -92,5 +112,7 @@ class TestChartWidget extends ChartWidget
         }
     JS);
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     }
 }

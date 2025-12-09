@@ -18,6 +18,9 @@ use Webmozart\Assert\Assert;
 class ImageSpatie
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     public static function make(string $name = 'image_spatie', string $context = 'form'): Block
     {
         return Block::make($name)
@@ -26,6 +29,7 @@ class ImageSpatie
                     ->default(Str::uuid()->toString(...))
                     ->formatStateUsing(fn($state) => $state ?? Str::uuid()->toString()),
                 // ->live()
+<<<<<<< HEAD
 =======
     public static function make(
         string $name = 'image_spatie',
@@ -41,6 +45,8 @@ class ImageSpatie
                 ,
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
                 SpatieMediaLibraryFileUpload::make('image')
                     ->live()
                     ->hiddenLabel()
@@ -56,6 +62,9 @@ class ImageSpatie
                     ->downloadable()
                     // ->rules(Rule::dimensions()->maxWidth(600)->maxHeight(800))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
                     ->collection(fn(Get $get) => $get('img_uuid'))
                     ->afterStateUpdated(function (
                         HasForms $_livewire,
@@ -72,6 +81,7 @@ class ImageSpatie
                         );
                         $res = $record->addMedia($state)->withResponsiveImages()->toMediaCollection($collection_name);
                     }),
+<<<<<<< HEAD
 =======
                     ->collection(fn (Get $get) => $get('img_uuid'))
                     ->afterStateUpdated(
@@ -87,6 +97,8 @@ class ImageSpatie
                     ),
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
                 TextInput::make('caption'),
             ])
             ->columns('form' === $context ? 2 : 1);

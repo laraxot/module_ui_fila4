@@ -11,6 +11,9 @@ use Modules\UI\Models\Asset;
 
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
  * |--------------------------------------------------------------------------
  * | Test Case
  * |--------------------------------------------------------------------------
@@ -48,6 +51,7 @@ expect()->extend('toBeAsset', fn() => $this->toBeInstanceOf(Asset::class));
  * | Queste funzioni saranno disponibili in tutti i test.
  * |
  */
+<<<<<<< HEAD
 =======
 |--------------------------------------------------------------------------
 | Test Case
@@ -95,6 +99,8 @@ expect()->extend('toBeAsset', function () {
 |
 */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 
 function createTheme(array $attributes = []): Theme
 {
