@@ -80,10 +80,10 @@ class OpeningHoursField extends Field
 
         $this->schema($form)->columns(5);
 
-        $this->afterStateUpdated(function ($_state): void {
+        $this->afterStateUpdated(function ($_state) {
             // dddx($state);
         });
-        $this->afterStateHydrated(function (OpeningHoursField $_component, $_state): void {
+        $this->afterStateHydrated(function (OpeningHoursField $_component, $_state) {
             // Qui puoi normalizzare lo stato iniziale se serve
             // dddx($state);
         });
