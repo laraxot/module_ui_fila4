@@ -9,9 +9,12 @@ return [
         'description' => 'Page to test and diagnose complete AWS configuration',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'fields' => [
         'cloudfront_url' => [
             'label' => 'CloudFront Distribution URL',
@@ -30,9 +33,12 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'actions' => [
         'test_s3_connection' => [
             'label' => 'Test Basic Connection',
@@ -84,9 +90,12 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'sections' => [
         's3_connection_test' => [
             'label' => 'S3 Connection Test',
@@ -106,9 +115,12 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'tabs' => [
         'tests' => [
             'label' => 'Tests',
@@ -127,9 +139,12 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'notifications' => [
         's3_connection_successful' => 'S3 Connection Successful',
         's3_connection_failed' => 'S3 Connection Failed',
@@ -138,9 +153,12 @@ return [
         'full_diagnostic_completed' => 'Full Diagnostic Completed',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'test_results' => [
         'status_success' => 'success',
         'status_error' => 'error',
