@@ -2,12 +2,21 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\UI\Tests\Unit\Filament\Widgets;
 
 use Filament\Widgets\Widget;
 use Illuminate\Contracts\View\View;
 use Modules\UI\Filament\Widgets\RowWidget;
 use Tests\TestCase;
+=======
+namespace Modules\UI\Tests\Unit\Filament\Widgets\RowWidgetTest;
+
+namespace Modules\UI\Tests\Unit\Filament\Widgets;
+
+use Filament\Widgets\Widget;
+use Modules\UI\Filament\Widgets\RowWidget;
+>>>>>>> 727968c (.)
 
 uses(TestCase::class);
 
@@ -40,6 +49,10 @@ test('row widget has proper properties', function (): void {
 test('row widget can render', function (): void {
     /** @phpstan-ignore-next-line property.notFound */
     $view = $this->widget->render();
+<<<<<<< HEAD
 
     expect($view)->toBeInstanceOf(View::class);
+=======
+    expect($view)->toBeInstanceOf(\Illuminate\Contracts\View\View::class);
+>>>>>>> 727968c (.)
 });
