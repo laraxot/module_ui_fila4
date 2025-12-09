@@ -107,6 +107,69 @@ Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
 
 La stessa filosofia di gestione centralizzata dei path tramite action (es. GetModulePathByGeneratorAction) si applica anche alle traduzioni. Vedi la sezione aggiornata in [XotBaseServiceProvider.md](./XotBaseServiceProvider.md#gestione-dei-path-delle-traduzioni).
 
+## Icone Disponibili
+
+### Icona Login
+- **Nome**: `ui-login`
+- **File**: `Modules/UI/resources/svg/login.svg`
+- **Descrizione**: Icona per l'autenticazione e il login degli utenti
+- **Utilizzo**: `@svg('ui-login')` o `ui-login` nei componenti Filament
+- **Aggiunta**: 2025-01-27 - Sostituisce `heroicon-o-login` non disponibile
+
+### Icona Authenticate
+- **Nome**: `ui-authenticate`
+- **File**: `Modules/UI/resources/svg/authenticate.svg`
+- **Descrizione**: Icona per l'autenticazione e verifica utenti
+- **Utilizzo**: `@svg('ui-authenticate')` o `ui-authenticate` nei componenti Filament
+- **Aggiunta**: 2025-01-27 - Sostituisce `authenticate` non disponibile
+
+## Come Funziona il Sistema
+
+### Registrazione Automatica
+Il sistema registra automaticamente tutte le icone SVG presenti in `Modules/UI/resources/svg/` con il prefisso `ui-`.
+
+### Formato delle Icone
+- **File SVG**: Deve essere un file SVG valido
+- **Nome file**: `nome-icona.svg` (es. `login.svg`)
+- **Nome icona**: `ui-nome-icona` (es. `ui-login`)
+
+### Esempi di Utilizzo
+
+#### In Blade Templates
+```blade
+{{-- Utilizzo diretto --}}
+@svg('ui-login')
+
+{{-- Con classi CSS --}}
+@svg('ui-login', 'w-6 h-6 text-blue-500')
+
+{{-- Con attributi --}}
+@svg('ui-login', ['class' => 'w-6 h-6', 'id' => 'login-icon'])
+```
+
+#### Nei Componenti Filament
+```php
+// In form components
+Forms\Components\TextInput::make('email')
+    ->prefixIcon('ui-login')
+
+// In table columns
+Tables\Columns\TextColumn::make('name')
+    ->icon('ui-login')
+
+// In actions
+Actions\Action::make('login')
+    ->icon('ui-login')
+```
+
+#### Nei Menu Items
+```php
+MenuItem::make()
+    ->label('Login')
+    ->icon('ui-login')
+    ->url('/login')
+```
+
 ## Nota sulla correzione e centralizzazione (2025-05-13)
 
 - Seguire i pattern e le regole documentate in [XotBaseServiceProvider.md](./XotBaseServiceProvider.md) per la registrazione delle icone Blade.
