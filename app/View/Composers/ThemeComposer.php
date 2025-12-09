@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\UI\View\Composers;
 
-use Illuminate\Config\Repository;
-use Illuminate\View\View;
 use Exception;
+use Illuminate\Config\Repository;
 use Illuminate\Contracts\Foundation\Application;
+use Illuminate\View\View;
 
 class ThemeComposer
 {
@@ -22,8 +22,7 @@ class ThemeComposer
     }
 
     /**
-     * @param string $index
-     *
+     * @param  string  $index
      * @return Repository|Application|mixed
      */
     public function metatag($index)
@@ -31,7 +30,7 @@ class ThemeComposer
         // $ris = self::__getStatic($index);
         // echo '<br/>['.$index.']['.$ris.']';
         // if ('' === $ris || null === $ris) {
-        $ris = config('metatag.' . $index);
+        $ris = config('metatag.'.$index);
         // self::__setStatic($index, $ris);
         // }
 
@@ -46,8 +45,8 @@ class ThemeComposer
     public function flag(string $lang): View
     {
         $view = "ui::svg.flags.{$lang}";
-        if (!view()->exists($view)) {
-            throw new Exception('view not exits [' . $view . ']');
+        if (! view()->exists($view)) {
+            throw new Exception('view not exits ['.$view.']');
         }
 
         return view($view);
