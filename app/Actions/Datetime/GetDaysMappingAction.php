@@ -12,9 +12,6 @@ class GetDaysMappingAction
 {
     use QueueableAction;
 
-    /**
-     * @return array<string, mixed>
-     */
     public function execute(): array
     {
         $days = collect([
@@ -47,9 +44,6 @@ class GetDaysMappingAction
             return [$dayKey => $dayLabel];
         });
 
-        /** @var array<string, mixed> $result */
-        $result = $days->toArray();
-
-        return $result;
+        return $days->toArray();
     }
 }
