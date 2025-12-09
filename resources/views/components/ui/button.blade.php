@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 @props([
     'type' => 'primary', 
     'size' => 'md', 
@@ -62,12 +53,4 @@ switch ($tag ?? 'button') {
 
 <{!! $tagAttr !!} {!! $attributes->except(['class']) !!} class="{{ $sizeClasses }} {{ $typeClasses }} cursor-pointer inline-flex items-center w-full justify-center disabled:opacity-50 font-semibold focus:outline-none">
     {{ $slot }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 </{{ $tagClose }}>
-=======
-</{{ $tagClose }}>
->>>>>>> 727968c (.)
-=======
-</{{ $tagClose }}>
->>>>>>> ef3c5fa (.)
