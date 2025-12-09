@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 use Illuminate\View\Component;
 
+<<<<<<< HEAD
 test('ui components can be rendered', function (): void {
+=======
+test('ui components can be rendered', function () {
+>>>>>>> 3b732b6 (.)
     $component = new class extends Component
     {
         public function render()
