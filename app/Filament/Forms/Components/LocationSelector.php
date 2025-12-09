@@ -347,7 +347,6 @@ class LocationSelector extends Group
      * Ottiene le opzioni per il campo provincia basate sulla regione.
      *
      * @param  string  $region  Codice regione
-     *
      * @return array<string, string>
      */
     protected function getProvinceOptions(string $region): array
@@ -386,7 +385,6 @@ class LocationSelector extends Group
      *
      * @param  string  $region  Codice regione
      * @param  string  $province  Codice provincia
-     *
      * @return array<string, string>
      */
     protected function getCapOptions(string $region, string $province): array
