@@ -14,10 +14,14 @@ return [
     'grid' => [
         'label' => 'Griglia',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'color' => 'secondary',
 =======
         'color' => 'secondary', 
 >>>>>>> 727968c (.)
+=======
+        'color' => 'secondary',
+>>>>>>> ef3c5fa (.)
         'icon' => 'heroicon-o-squares-2x2',
         'description' => 'Layout a griglia responsive con card',
         'tooltip' => 'Visualizza i dati in formato card responsive',
