@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 ?>
 {{--
+<<<<<<< HEAD
 <x-filament::field-wrapper :id="$getId()" :label="$getLabel()" :label-sr-only="$isLabelHidden()" :helper-text="$getHelperText()" :hint="$getHint()"
+=======
+<x-filament-forms::field-wrapper :id="$getId()" :label="$getLabel()" :label-sr-only="$isLabelHidden()" :helper-text="$getHelperText()" :hint="$getHint()"
+>>>>>>> c6fab1a (.)
     :hint-icon="$getHintIcon()" :required="$isRequired()" :state-path="$getStatePath()">
     <div x-data="{ state: $wire.{{ $applyStateBindingModifiers('entangle(\'' . $getStatePath() . '\')') }} }" class="flex items-center space-x-4">
 
@@ -24,5 +28,9 @@ declare(strict_types=1);
             </button>
 
     </div>
+<<<<<<< HEAD
 </x-filament::field-wrapper>
+=======
+</x-filament-forms::field-wrapper>
+>>>>>>> c6fab1a (.)
 --}}
