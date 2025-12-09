@@ -389,14 +389,17 @@ class LocationSelector extends Group
                 return null;
             }
 
+            $regione = is_array($comune->regione) ? $comune->regione : [];
+            $provincia = is_array($comune->provincia) ? $comune->provincia : [];
+            
             return [
                 'region' => [
-                    'code' => $comune->regione['codice'] ?? null,
-                    'name' => $comune->regione['nome'] ?? null,
+                    'code' => $regione['codice'] ?? null,
+                    'name' => $regione['nome'] ?? null,
                 ],
                 'province' => [
-                    'code' => $comune->provincia['codice'] ?? null,
-                    'name' => $comune->provincia['nome'] ?? null,
+                    'code' => $provincia['codice'] ?? null,
+                    'name' => $provincia['nome'] ?? null,
                 ],
                 /** @phpstan-ignore offsetAccess.nonOffsetAccessible */
                 'cap' => $state[$this->capFieldName] ?? null,
