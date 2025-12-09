@@ -4,27 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\UI\Forms\Components;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 use Closure;
 use Filament\Forms\Components\Field;
 
 /**
  * Radio Card Selector Component
  *
-<<<<<<< HEAD
-=======
-use Filament\Forms\Components\Field;
-use Closure;
-
-/**
- * Radio Card Selector Component
- * 
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
  * Componente riutilizzabile per selezione tramite card radio.
  * Popola automaticamente un TextInput con il nome dell'elemento selezionato.
  */
@@ -40,67 +25,27 @@ class RadioCardSelector extends Field
     /**
      * @var string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected null|string $sectionTitle = null;
-=======
-    protected ?string $sectionTitle = null;
->>>>>>> 727968c (.)
-=======
-    protected null|string $sectionTitle = null;
->>>>>>> ef3c5fa (.)
 
     /**
      * @var string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected null|string $sectionSubtitle = null;
-=======
-    protected ?string $sectionSubtitle = null;
->>>>>>> 727968c (.)
-=======
-    protected null|string $sectionSubtitle = null;
->>>>>>> ef3c5fa (.)
 
     /**
      * @var string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected null|string $targetFieldName = null;
-=======
-    protected ?string $targetFieldName = null;
->>>>>>> 727968c (.)
-=======
-    protected null|string $targetFieldName = null;
->>>>>>> ef3c5fa (.)
 
     /**
      * @var string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected null|string $emptyStateTitle = null;
-=======
-    protected ?string $emptyStateTitle = null;
->>>>>>> 727968c (.)
-=======
-    protected null|string $emptyStateTitle = null;
->>>>>>> ef3c5fa (.)
 
     /**
      * @var string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected null|string $emptyStateDescription = null;
-=======
-    protected ?string $emptyStateDescription = null;
->>>>>>> 727968c (.)
-=======
-    protected null|string $emptyStateDescription = null;
->>>>>>> ef3c5fa (.)
 
     /**
      * Imposta le card disponibili per la selezione.
@@ -121,15 +66,7 @@ class RadioCardSelector extends Field
      * @param string|null $title
      * @return static
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function sectionTitle(null|string $title): static
-=======
-    public function sectionTitle(?string $title): static
->>>>>>> 727968c (.)
-=======
-    public function sectionTitle(null|string $title): static
->>>>>>> ef3c5fa (.)
     {
         $this->sectionTitle = $title;
 
@@ -142,15 +79,7 @@ class RadioCardSelector extends Field
      * @param string|null $subtitle
      * @return static
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function sectionSubtitle(null|string $subtitle): static
-=======
-    public function sectionSubtitle(?string $subtitle): static
->>>>>>> 727968c (.)
-=======
-    public function sectionSubtitle(null|string $subtitle): static
->>>>>>> ef3c5fa (.)
     {
         $this->sectionSubtitle = $subtitle;
 
@@ -176,15 +105,7 @@ class RadioCardSelector extends Field
      * @param string|null $title
      * @return static
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function emptyStateTitle(null|string $title): static
-=======
-    public function emptyStateTitle(?string $title): static
->>>>>>> 727968c (.)
-=======
-    public function emptyStateTitle(null|string $title): static
->>>>>>> ef3c5fa (.)
     {
         $this->emptyStateTitle = $title;
 
@@ -197,15 +118,7 @@ class RadioCardSelector extends Field
      * @param string|null $description
      * @return static
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function emptyStateDescription(null|string $description): static
-=======
-    public function emptyStateDescription(?string $description): static
->>>>>>> 727968c (.)
-=======
-    public function emptyStateDescription(null|string $description): static
->>>>>>> ef3c5fa (.)
     {
         $this->emptyStateDescription = $description;
 
@@ -215,28 +128,12 @@ class RadioCardSelector extends Field
     /**
      * Ottiene le card per la visualizzazione.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> 727968c (.)
-=======
-     *
->>>>>>> ef3c5fa (.)
      */
     public function getCards(): array
     {
         $result = $this->evaluate($this->cards);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 727968c (.)
-=======
-
->>>>>>> ef3c5fa (.)
         return is_array($result) ? $result : [];
     }
 
@@ -245,15 +142,7 @@ class RadioCardSelector extends Field
      *
      * @return string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getSectionTitle(): null|string
-=======
-    public function getSectionTitle(): ?string
->>>>>>> 727968c (.)
-=======
-    public function getSectionTitle(): null|string
->>>>>>> ef3c5fa (.)
     {
         return $this->sectionTitle;
     }
@@ -263,15 +152,7 @@ class RadioCardSelector extends Field
      *
      * @return string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getSectionSubtitle(): null|string
-=======
-    public function getSectionSubtitle(): ?string
->>>>>>> 727968c (.)
-=======
-    public function getSectionSubtitle(): null|string
->>>>>>> ef3c5fa (.)
     {
         return $this->sectionSubtitle;
     }
@@ -281,15 +162,7 @@ class RadioCardSelector extends Field
      *
      * @return string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getTargetFieldName(): null|string
-=======
-    public function getTargetFieldName(): ?string
->>>>>>> 727968c (.)
-=======
-    public function getTargetFieldName(): null|string
->>>>>>> ef3c5fa (.)
     {
         return $this->targetFieldName;
     }
@@ -299,15 +172,7 @@ class RadioCardSelector extends Field
      *
      * @return string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getEmptyStateTitle(): null|string
-=======
-    public function getEmptyStateTitle(): ?string
->>>>>>> 727968c (.)
-=======
-    public function getEmptyStateTitle(): null|string
->>>>>>> ef3c5fa (.)
     {
         return $this->emptyStateTitle;
     }
@@ -317,22 +182,8 @@ class RadioCardSelector extends Field
      *
      * @return string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
     public function getEmptyStateDescription(): null|string
     {
         return $this->emptyStateDescription;
     }
 }
-<<<<<<< HEAD
-=======
-    public function getEmptyStateDescription(): ?string
-    {
-        return $this->emptyStateDescription;
-    }
-} 
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
