@@ -14,17 +14,23 @@ return [
         'updated_at' => 'Data di aggiornamento',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'select-options' => [
         'same-tab' => 'Stessa scheda',
         'new-tab' => 'Nuova scheda',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'items' => [
         'empty' => 'Nessuna voce di menù.',
         'add-item' => 'Aggiungi voce di menù',
@@ -37,9 +43,12 @@ return [
         'sorted' => 'Ordinato',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'items-modal' => [
         'title' => 'Voce di menù',
         'label' => 'Etichetta',

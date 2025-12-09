@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Config;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 use Illuminate\Support\Facades\Log;
 use Spatie\QueueableAction\QueueableAction;
 use Modules\User\Filament\Pages\Tenancy\RegisterTenant;
@@ -21,6 +24,7 @@ use Modules\User\Filament\Pages\Tenancy\EditTenantProfile;
  * NOTA: Temporaneamente disabilitato per migrazione a Filament v4.
  * Il pacchetto Saade\FilamentFullCalendar non è ancora compatibile con Filament v4.
  */
+<<<<<<< HEAD
 =======
 use Spatie\QueueableAction\QueueableAction;
 use Modules\User\Filament\Pages\Tenancy\RegisterTenant;
@@ -28,6 +32,8 @@ use Modules\User\Filament\Pages\Tenancy\EditTenantProfile;
 use Saade\FilamentFullCalendar\FilamentFullCalendarPlugin;
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 class ApplyCalendarToPanelAction
 {
     use QueueableAction;
@@ -35,6 +41,9 @@ class ApplyCalendarToPanelAction
     public function execute(Panel &$panel): Panel
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
         // TODO: Reimplementare quando sarà disponibile un pacchetto FullCalendar compatibile con Filament v4
         // Per ora ritorniamo il panel senza modifiche per evitare errori
         
@@ -43,6 +52,7 @@ class ApplyCalendarToPanelAction
             Log::info('ApplyCalendarToPanelAction: FullCalendar temporaneamente disabilitato per Filament v4');
         }
 
+<<<<<<< HEAD
 =======
         $timezone = Config::string('fullcalendar.localization.timezone', 'Europe/Rome');
         $locale = Config::string('fullcalendar.localization.locale', 'it');
@@ -69,6 +79,8 @@ class ApplyCalendarToPanelAction
         $panel->plugin($calendarPlugin);
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
         return $panel;
     }
 }

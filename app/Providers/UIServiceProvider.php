@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace Modules\UI\Providers;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Blade;
 use Modules\UI\Services\UIService;
@@ -12,6 +15,7 @@ use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
 use function Safe\realpath;
+<<<<<<< HEAD
 =======
 use function Safe\realpath;
 use Illuminate\Support\Facades\Blade;
@@ -20,6 +24,8 @@ use Modules\UI\Services\UIService;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 
 /**
  * Service Provider per il modulo UI.
@@ -55,6 +61,7 @@ class UIServiceProvider extends XotBaseServiceProvider
      * @return void
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
     public function boot(): void
@@ -67,12 +74,16 @@ class UIServiceProvider extends XotBaseServiceProvider
         // Blade::anonymousComponentPath($componentViewPath);
     }
 >>>>>>> 727968c (.)
+=======
+    
+>>>>>>> ef3c5fa (.)
 
     /**
      * Registra i servizi del provider.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 
@@ -84,6 +95,10 @@ class UIServiceProvider extends XotBaseServiceProvider
     }
     
 >>>>>>> 727968c (.)
+=======
+    
+
+>>>>>>> ef3c5fa (.)
     /**
      * Restituisce il percorso delle viste dei componenti UI.
      *
