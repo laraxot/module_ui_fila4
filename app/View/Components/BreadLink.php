@@ -20,11 +20,15 @@ class BreadLink extends Component
         // public bool $showAuthor = false,
         public string $tpl = 'v1',
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
     }
 >>>>>>> 727968c (.)
+=======
+    ) {}
+>>>>>>> ef3c5fa (.)
 
     public function render(): Renderable
     {

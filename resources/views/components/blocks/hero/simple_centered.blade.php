@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 <div class="relative overflow-hidden bg-gray-50">
     <div class="hidden sm:absolute sm:inset-y-0 sm:block sm:h-full sm:w-full" aria-hidden="true">
       <div class="relative mx-auto h-full max-w-7xl">
@@ -122,6 +128,9 @@ declare(strict_types=1);
     </div>
   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
