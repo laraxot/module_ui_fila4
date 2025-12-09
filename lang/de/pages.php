@@ -46,12 +46,4 @@ return [
             'email_sent_error' => 'Fehler beim Senden der E-Mail',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
-=======
-]; 
->>>>>>> 727968c (.)
-=======
-];
->>>>>>> ef3c5fa (.)

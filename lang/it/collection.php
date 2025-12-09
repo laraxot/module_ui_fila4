@@ -1,9 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 declare(strict_types=1);
 
 return [
@@ -36,48 +32,3 @@ return [
         ],
     ],
 ];
-<<<<<<< HEAD
-=======
-return array (
-  'actions' => 
-  array (
-    'create' => 
-    array (
-      'label' => 'create',
-    ),
-  ),
-  'fields' => 
-  array (
-    'openFilters' => 
-    array (
-      'label' => 'openFilters',
-    ),
-    'applyFilters' => 
-    array (
-      'label' => 'applyFilters',
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-    ),
-    'reorderRecords' => 
-    array (
-      'label' => 'reorderRecords',
-    ),
-    'toggleColumns' => 
-    array (
-      'label' => 'toggleColumns',
-    ),
-    'name' => 
-    array (
-      'label' => 'name',
-    ),
-    'values-list' => 
-    array (
-      'label' => 'values-list',
-    ),
-  ),
-);
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
