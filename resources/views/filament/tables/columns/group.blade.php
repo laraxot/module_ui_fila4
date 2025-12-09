@@ -20,7 +20,6 @@ declare(strict_types=1);
     }}
 >
     @foreach ($fields as $field)
-<<<<<<< HEAD
      
         @php
         /*
@@ -32,24 +31,17 @@ declare(strict_types=1);
         ]);
         */
             /*
-=======
-        @php
->>>>>>> e3274ea (.)
             $state=$field->record($record)->getState();
             if($state==null){
                 continue;
             }
-<<<<<<< HEAD
             */
             /*
-=======
->>>>>>> e3274ea (.)
             try{
                 $out=str_replace(', ',',<br/>',$state).'<br/>';
             }catch(\TypeError $e){
                 $out=$field->record($record)->render();
             }
-<<<<<<< HEAD
             */
             //$out=$field->record($record)->render();
             /*
@@ -72,9 +64,5 @@ declare(strict_types=1);
         @endphp
         {!! $out !!}<br/>
         
-=======
-        @endphp
-        {!! $out !!}
->>>>>>> e3274ea (.)
     @endforeach
 </div>
