@@ -15,11 +15,7 @@ declare(strict_types=1);
     ✅ Accessibile: Supporto screen reader
 --}}
 
-<<<<<<< HEAD
 <x-filament::page>
-=======
-<x-fi<x-filament::page>
->>>>>>> 19f3650 (.)
     <x-filament::section>
         <x-slot name="heading">
             {{ __('ui::pages.s3test.heading') }}
