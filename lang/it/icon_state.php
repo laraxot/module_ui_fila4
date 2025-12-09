@@ -40,4 +40,11 @@ return [
             'helper_text' => '',
         ],
     ],
+    'actions' => [
+        'change-state' => [
+            'label' => 'change-state',
+            'icon' => 'change-state',
+            'tooltip' => 'change-state',
+        ],
+    ],
 ];

@@ -13,7 +13,7 @@ use Modules\UI\Rules\OpeningHoursRule;
 /**
  * --
  */
-class OpeningHoursField extends Field
+final class OpeningHoursField extends Field
 {
     /**
      * Vista Blade per il rendering del componente.

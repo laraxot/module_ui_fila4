@@ -7,7 +7,7 @@ namespace Modules\Ui\Http\Livewire;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
-class DarkModeSwitcher extends Component
+final class DarkModeSwitcher extends Component
 {
     public bool $darkMode = false;
 

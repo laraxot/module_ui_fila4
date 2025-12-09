@@ -6,18 +6,15 @@ namespace Modules\UI\Actions\Panel;
 
 use Filament\Panel;
 use Illuminate\Support\Facades\Log;
-use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per applicare il calendario al panel Filament.
  * NOTA: Temporaneamente disabilitato per migrazione a Filament v4.
  * Il pacchetto Saade\FilamentFullCalendar non è ancora compatibile con Filament v4.
  */
-class ApplyCalendarToPanelAction
+final class ApplyCalendarToPanelAction
 {
-    use QueueableAction;
-
-    public function execute(Panel &$panel): Panel
+    public function execute(Panel $panel, string $calendar_class): Panel
     {
         // TODO: Reimplementare quando sarà disponibile un pacchetto FullCalendar compatibile con Filament v4
         // Per ora ritorniamo il panel senza modifiche per evitare errori

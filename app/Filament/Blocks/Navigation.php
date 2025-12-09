@@ -9,7 +9,7 @@ use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
 use Override;
 
-class Navigation extends XotBaseBlock
+final class Navigation extends XotBaseBlock
 {
     #[Override]
     public static function getBlockSchema(): array
@@ -33,10 +33,10 @@ class Navigation extends XotBaseBlock
     {
         return [
             Repeater::make('items')
-                ->label(static::trans('blocks.navigation.fields.items.label'))
+                ->label(self::trans('blocks.navigation.fields.items.label'))
                 ->schema([
-                    TextInput::make('text')->label(static::trans('blocks.navigation.fields.text.label')),
-                    TextInput::make('url')->label(static::trans('blocks.navigation.fields.url.label')),
+                    TextInput::make('text')->label(self::trans('blocks.navigation.fields.text.label')),
+                    TextInput::make('url')->label(self::trans('blocks.navigation.fields.url.label')),
                 ]),
         ];
     }

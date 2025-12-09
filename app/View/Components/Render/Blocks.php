@@ -14,31 +14,28 @@ declare(strict_types=1);
 
 namespace Modules\UI\View\Components\Render;
 
-use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\View\Component;
 use Modules\Xot\Actions\GetViewAction;
 
-class Blocks extends Component
+final class Blocks extends Component
 {
-    public array $blocks = [];
-
+    /**
+     * @param array<int|string, mixed> $blocks
+     */
     public function __construct(
-        ?array $blocks = [],
+        public string $view,
+        public array $blocks = [],
         public ?Model $model = null,
-        public string $tpl = 'v1',
-    ) {
-        if (is_array($blocks)) {
-            $this->blocks = $blocks;
-        }
-    }
+    ) {}
 
-    public function render(): Renderable
+    public function render(): View
     {
         /**
          * @phpstan-var view-string
          */
-        $view = app(GetViewAction::class)->execute($this->tpl);
+        $view = app(GetViewAction::class)->execute($this->view);
         $view_params = [
             'view' => $view,
             'blocks' => $this->blocks,

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 ?>
 @php
-    $fields=$getFields();
-    $record=$getRecord();
+    $fields = $getFields();
+    $record = $getRecord();
 @endphp
 <div
     {{
@@ -23,7 +23,7 @@ declare(strict_types=1);
      
         @php
             $name = $field->getName();
-            $value = $record->getAttribute($name);
+            $value = $record->{$name} ?? null;
             
             // Skip empty values to save space
             if (empty($value) && $value !== 0 && $value !== '0') {
@@ -33,12 +33,12 @@ declare(strict_types=1);
             // Format the value for display
             $formattedValue = $value;
             
-            // Add label if the field has one (for better readability)
-            $label = $field->getLabel() ?? $name;
+            // Use translation for label following Laraxot pattern
+            $label = __('ui::table.columns.' . $name . '.label');
             $displayText = $label . ': ' . $formattedValue;
         @endphp
         
-            {!! $displayText !!}<br/>
+            {{ $displayText }}<br/>
         
         
     @endforeach

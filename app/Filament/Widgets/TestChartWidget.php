@@ -7,7 +7,7 @@ namespace Modules\UI\Filament\Widgets;
 use Filament\Support\RawJs;
 use Filament\Widgets\ChartWidget;
 
-class TestChartWidget extends ChartWidget
+final class TestChartWidget extends ChartWidget
 {
     public int $qid = 0;
 
@@ -21,7 +21,7 @@ class TestChartWidget extends ChartWidget
     // danger, gray, info, primary, success or warning
     protected string $color = 'info';
 
-    public function getDescription(): ?string
+    public function getDescription(): string
     {
         return 'The number of blog posts published per month.';
     }
