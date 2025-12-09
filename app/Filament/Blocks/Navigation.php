@@ -29,10 +29,6 @@ class Navigation extends XotBaseBlock
         ];
     }
 
-    /**
-     * @return array<string, mixed>
-     */
-    /** @phpstan-ignore-next-line return.type */
     public function getFormSchema(): array
     {
         return [
