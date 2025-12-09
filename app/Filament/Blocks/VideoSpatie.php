@@ -43,12 +43,12 @@ class VideoSpatie
                     ->previewable()
                     ->downloadable()
                     // ->rules(Rule::dimensions()->maxWidth(600)->maxHeight(800))
-                    ->collection(fn(\Filament\Schemas\Components\Utilities\Get $get) => $get('img_uuid'))
+                    ->collection(fn(Get $get) => $get('img_uuid'))
                     ->afterStateUpdated(function (
                         HasForms $_livewire,
                         SpatieMediaLibraryFileUpload $_component,
                         TemporaryUploadedFile $state,
-                        \Filament\Schemas\Components\Utilities\Get $get,
+                        Get $get,
                         HasMedia $record,
                     ) {
                         // Call to an undefined method Filament\Forms\Contracts\HasForms::validateOnly().
