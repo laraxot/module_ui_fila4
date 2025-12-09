@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 <x-layouts.main>
     
     <x-ui.app.header />
@@ -22,4 +25,8 @@ declare(strict_types=1);
         </div>
     </div>
 
+<<<<<<< HEAD
 </x-layouts.main>
+=======
+</x-layouts.main>
+>>>>>>> 727968c (.)
