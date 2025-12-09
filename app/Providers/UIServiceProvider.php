@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\UI\Providers;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 1899c5f (.)
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Blade;
 use Modules\UI\Services\UIService;
@@ -11,6 +17,33 @@ use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
 use function Safe\realpath;
+<<<<<<< HEAD
+=======
+=======
+use function Safe\realpath;
+use Illuminate\Support\Facades\Blade;
+=======
+>>>>>>> b93ef594b4 (.)
+use Illuminate\Foundation\AliasLoader;
+use Illuminate\Support\Facades\Blade;
+use Modules\UI\Services\UIService;
+use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+use Modules\Xot\Providers\XotBaseServiceProvider;
+
+use function Safe\realpath;
+>>>>>>> b93ef594b4 (.)
+=======
+use function Safe\realpath;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Foundation\AliasLoader;
+use Modules\UI\Services\UIService;
+use Modules\Xot\Providers\XotBaseServiceProvider;
+use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 
 /**
  * Service Provider per il modulo UI.
@@ -45,15 +78,70 @@ class UIServiceProvider extends XotBaseServiceProvider
      *
      * @return void
      */
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+=======
+    public function boot(): void
+    {
+        parent::boot();
+
+=======
+    public function boot(): void
+    {
+        parent::boot();
+        
+>>>>>>> origin/develop
+        // La registrazione dei Blade components modulari avviene tramite GetModulePathByGeneratorAction
+        // per garantire la corretta risoluzione dei path secondo la struttura dei moduli
+        // $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
+        // Blade::anonymousComponentPath($componentViewPath);
+    }
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+    
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 
     /**
      * Registra i servizi del provider.
      *
      * @return void
      */
+<<<<<<< HEAD
     
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+
+=======
+=======
+>>>>>>> origin/develop
+    public function register(): void
+    {
+        parent::register();
+        // AliasLoader e BladeIcons sono gestiti a livello di XotBaseServiceProvider
+    }
+    
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+    
+
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     /**
      * Restituisce il percorso delle viste dei componenti UI.
      *
