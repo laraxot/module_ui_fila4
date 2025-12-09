@@ -10,6 +10,9 @@ class SliderData extends Data
 {
     public function __construct(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
         public null|string $desktop_thumbnail,
         public null|string $mobile_thumbnail,
         public null|string $desktop_thumbnail_webp,
@@ -19,6 +22,7 @@ class SliderData extends Data
         public null|string $short_description,
         public null|string $description,
         public null|string $action_text,
+<<<<<<< HEAD
 =======
         public ?string $desktop_thumbnail,
         public ?string $mobile_thumbnail,
@@ -30,6 +34,8 @@ class SliderData extends Data
         public ?string $description,
         public ?string $action_text,
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     ) {
         $this->short_description = $this->description;
     }

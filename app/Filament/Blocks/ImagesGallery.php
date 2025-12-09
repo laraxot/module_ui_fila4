@@ -13,6 +13,7 @@ use Filament\Forms\Components\TextInput;
 class ImagesGallery
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function make(string $name = 'images_gallery', string $context = 'form'): Block
     {
 =======
@@ -21,11 +22,16 @@ class ImagesGallery
         string $context = 'form',
     ): Block {
 >>>>>>> 727968c (.)
+=======
+    public static function make(string $name = 'images_gallery', string $context = 'form'): Block
+    {
+>>>>>>> ef3c5fa (.)
         return Block::make($name)
             ->schema([
                 Repeater::make('gallery')
                     ->schema([
                         SpatieMediaLibraryFileUpload::make('image')
+<<<<<<< HEAD
 <<<<<<< HEAD
                             // ->image()
                             // ->maxSize(5000)
@@ -33,6 +39,10 @@ class ImagesGallery
                         // ->image()
                         // ->maxSize(5000)
 >>>>>>> 727968c (.)
+=======
+                            // ->image()
+                            // ->maxSize(5000)
+>>>>>>> ef3c5fa (.)
                             ->multiple()
                             ->enableReordering()
                             ->openable()
@@ -42,6 +52,7 @@ class ImagesGallery
                             // ->conversion('thumbnail')
                             ->disk('uploads')
                             ->directory('photos'),
+<<<<<<< HEAD
 <<<<<<< HEAD
                         TextInput::make('title')->columnSpanFull(),
                         TextInput::make('subtitle')->columnSpanFull(),
@@ -57,11 +68,17 @@ class ImagesGallery
                         Select::make('version')
 
 >>>>>>> 727968c (.)
+=======
+                        TextInput::make('title')->columnSpanFull(),
+                        TextInput::make('subtitle')->columnSpanFull(),
+                        Select::make('version')
+>>>>>>> ef3c5fa (.)
                             ->required()
                             ->options([
                                 'v1' => 'versione 1',
                                 'v2' => 'versione 2',
                             ]),
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ])
                     ->columnSpanFull(),
@@ -69,6 +86,10 @@ class ImagesGallery
                     ])->columnSpanFull(),
 
 >>>>>>> 727968c (.)
+=======
+                    ])
+                    ->columnSpanFull(),
+>>>>>>> ef3c5fa (.)
                 // FileUpload::make('image')
                 //     ,
                 // SpatieMediaLibraryFileUpload::make('image')
@@ -84,6 +105,9 @@ class ImagesGallery
                 //     ->disk('uploads')
                 //     ->directory('photos'),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
                 // TextInput::make('url')
                 //     ,
                 // Select::make('ratio')
@@ -91,6 +115,7 @@ class ImagesGallery
                 //     ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
                 // TextInput::make('alt')
                 //     ->columnSpanFull(),
+<<<<<<< HEAD
 =======
 
                 // TextInput::make('url')
@@ -104,6 +129,8 @@ class ImagesGallery
                 //     ->columnSpanFull(),
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
                 // TextInput::make('caption')
                 //     ->columnSpanFull(),
             ])

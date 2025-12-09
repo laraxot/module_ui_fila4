@@ -7,6 +7,9 @@ namespace Modules\UI\Filament\Tables\Columns;
 use Filament\Actions\Action;
 use Filament\Tables\Columns\Column;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 use Filament\Tables\Columns\ColumnGroup;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
@@ -14,6 +17,7 @@ use Filament\Tables\Columns\ViewColumn;
 
 class DummyActionsColumn extends ColumnGroup
 {
+<<<<<<< HEAD
 =======
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
@@ -25,6 +29,8 @@ class DummyActionsColumn extends ColumnGroup
     
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     protected array $actions = [];
 
     public function actions(array $actions): static
@@ -44,6 +50,9 @@ class DummyActionsColumn extends ColumnGroup
         parent::setUp();
         $this->wrapHeader(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 
         $this->extraHeaderAttributes(['class' => 'hidden no-header-group', 'style' => 'display: none']);
         $this->columns([
@@ -67,6 +76,7 @@ class DummyActionsColumn extends ColumnGroup
                     ->action(function () {
                         dddx('Azione prova eseguita2!');
                     })),
+<<<<<<< HEAD
 =======
         
         $this->extraHeaderAttributes(['class' => 'hidden no-header-group','style' => 'display: none']); 
@@ -93,6 +103,8 @@ class DummyActionsColumn extends ColumnGroup
                     dddx('Azione prova eseguita2!');
                 })),
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
         ]);
     }
 }
