@@ -2,10 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 
-=======
->>>>>>> b55470f (.)
 return [
     /*
      * |--------------------------------------------------------------------------
@@ -99,8 +96,4 @@ return [
     'useLocalizedRoutesInRouteModelBindingWithSlugAndLocaleAndFallbackAndRedirectAndSessionAndCookie' => true,
     'useLocalizedRoutesInRouteModelBindingWithSlugAndLocaleAndFallbackAndRedirectAndSessionAndCookieAndQueryString' => true,
     'useLocalizedRoutesInRouteModelBindingWithSlugAndLocaleAndFallbackAndRedirectAndSessionAndCookieAndQueryStringAndRoute' => true,
-<<<<<<< HEAD
 ];
-=======
-];
->>>>>>> b55470f (.)
