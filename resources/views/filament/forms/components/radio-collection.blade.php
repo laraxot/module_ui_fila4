@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 {{-- resources/views/forms/components/radio-collection.blade.php --}}
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
     <div class="space-y-2">
@@ -50,7 +56,11 @@ declare(strict_types=1);
         @enderror
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </x-dynamic-component>
 =======
 </x-dynamic-component>
 >>>>>>> 727968c (.)
+=======
+</x-dynamic-component>
+>>>>>>> ef3c5fa (.)
