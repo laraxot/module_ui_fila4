@@ -9,7 +9,7 @@ use Illuminate\Config\Repository;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\View\View;
 
-class ThemeComposer
+final class ThemeComposer
 {
     public function metatags(): View
     {
@@ -22,10 +22,9 @@ class ThemeComposer
     }
 
     /**
-     * @param  string  $index
      * @return Repository|Application|mixed
      */
-    public function metatag($index)
+    public function metatag(string $index)
     {
         // $ris = self::__getStatic($index);
         // echo '<br/>['.$index.']['.$ris.']';

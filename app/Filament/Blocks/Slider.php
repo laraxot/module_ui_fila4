@@ -11,9 +11,9 @@ use Modules\UI\Filament\Forms\Components\RadioImage;
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 use Modules\Xot\Actions\View\GetViewsSiblingsAndSelfAction;
 
-class Slider
+final class Slider
 {
-    public static function make(string $name = 'slider', string $_context = 'form'): Block
+    public static function make(string $name = 'slider', string $context = 'form'): Block
     {
         // $view = 'ui::components.blocks.slider.v1';
         // $views = app(GetViewsSiblingsAndSelfAction::class)->execute($view);

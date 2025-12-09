@@ -15,7 +15,7 @@ use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Spatie\MediaLibrary\HasMedia;
 use Webmozart\Assert\Assert;
 
-class ImageSpatie
+final class ImageSpatie
 {
     public static function make(string $name = 'image_spatie', string $context = 'form'): Block
     {

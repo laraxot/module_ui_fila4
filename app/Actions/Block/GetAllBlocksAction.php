@@ -10,19 +10,16 @@ use Illuminate\Support\Str;
 use Modules\Xot\Actions\File\GetClassNameByPathAction;
 use Modules\Xot\Datas\ComponentFileData;
 use Spatie\LaravelData\DataCollection;
-use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 use function Safe\realpath;
 
-class GetAllBlocksAction
+final class GetAllBlocksAction
 {
-    use QueueableAction;
-
     /**
-     * @return DataCollection<ComponentFileData>
+     * @return DataCollection<int, ComponentFileData>
      */
-    public function execute(string $_context = 'form'): DataCollection
+    public function execute(): DataCollection
     {
         Assert::string($relativePath = config('modules.paths.generator.model.path'));
 

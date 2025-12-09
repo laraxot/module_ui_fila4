@@ -7,7 +7,7 @@ namespace Modules\UI\Filament\Forms\Components;
 
 use Filament\Forms\Components\Radio;
 
-class RadioIcon extends Radio
+final class RadioIcon extends Radio
 {
     /**
      * @var view-string

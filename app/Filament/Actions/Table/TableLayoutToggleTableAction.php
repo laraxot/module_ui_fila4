@@ -7,7 +7,7 @@ namespace Modules\UI\Filament\Actions\Table;
 use Filament\Actions\Action;
 use Filament\Resources\Pages\ListRecords;
 
-class TableLayoutToggleTableAction extends Action implements HasTableLayout
+final class TableLayoutToggleTableAction extends Action implements HasTableLayout
 {
     use TableLayoutTrait;
 

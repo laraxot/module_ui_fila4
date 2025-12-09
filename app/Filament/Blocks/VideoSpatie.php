@@ -17,7 +17,7 @@ use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Spatie\MediaLibrary\HasMedia;
 use Webmozart\Assert\Assert;
 
-class VideoSpatie
+final class VideoSpatie
 {
     public static function make(string $name = 'video_spatie', string $context = 'form'): Block
     {
@@ -57,7 +57,7 @@ class VideoSpatie
                             $collection_name = $get('img_uuid'),
                             '['.__LINE__.']['.class_basename(__CLASS__).']',
                         );
-                        $res = $record->addMedia($state)->withResponsiveImages()->toMediaCollection($collection_name);
+                        $record->addMedia($state)->withResponsiveImages()->toMediaCollection($collection_name);
                     }),
                 /*
                  * Select::make('ratio')

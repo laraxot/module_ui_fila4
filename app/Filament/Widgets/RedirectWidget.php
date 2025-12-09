@@ -23,12 +23,9 @@ use Override;
  *     }
  * }
  */
-class RedirectWidget extends XotBaseWidget
+final class RedirectWidget extends XotBaseWidget
 {
-    /**
-     * URL di destinazione per il redirect.
-     */
-    public string $to = '';
+    public ?string $url = null;
 
     /**
      * Testo del link/button (opzionale).
@@ -39,6 +36,11 @@ class RedirectWidget extends XotBaseWidget
      * Icona da mostrare (opzionale).
      */
     public string $icon = '';
+
+    /**
+     * Destinazione del redirect.
+     */
+    public ?string $to = null;
 
     /**
      * Classe CSS per styling (opzionale).
@@ -76,7 +78,7 @@ class RedirectWidget extends XotBaseWidget
     protected function getViewData(): array
     {
         return [
-            'to' => $this->to,
+            'to' => $this->to ?? $this->url,
             'label' => $this->label ?: 'Vai',
             'icon' => $this->icon,
             'class' => $this->class,
