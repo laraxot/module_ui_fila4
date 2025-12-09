@@ -14,6 +14,9 @@ use Modules\Xot\Actions\View\GetViewsSiblingsAndSelfAction;
 class Slider
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     public static function make(string $name = 'slider', string $_context = 'form'): Block
     {
         // $view = 'ui::components.blocks.slider.v1';
@@ -32,6 +35,7 @@ class Slider
 
                 RadioImage::make('view')->options($options),
             ])
+<<<<<<< HEAD
 =======
     public static function make(
         string $name = 'slider',
@@ -62,6 +66,8 @@ class Slider
                 ]
             )
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
             ->columns(1);
     }
 
