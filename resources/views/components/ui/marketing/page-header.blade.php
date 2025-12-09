@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 @props([
     'title' => 'Page Header Title', 
     'description' => 'Description goes here'
@@ -18,7 +24,11 @@ declare(strict_types=1);
         <p class="mx-auto mt-1.5 text-base font-medium text-neutral-400 dark:text-slate-400 md:mt-2">{{ $description }}</p>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </div>
 =======
 </div>
 >>>>>>> 727968c (.)
+=======
+</div>
+>>>>>>> ef3c5fa (.)
