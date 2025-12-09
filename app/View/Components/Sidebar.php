@@ -14,7 +14,25 @@ class Sidebar extends Component
     public function __construct(
         public Collection $collection,
         // public string $tpl = 'v1'
+<<<<<<< HEAD
     ) {}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    ) {}
+=======
+    ) {
+    }
+>>>>>>> a12f125f4a (.)
+=======
+    ) {}
+>>>>>>> b93ef594b4 (.)
+=======
+    ) {
+    }
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 
     /**
      * Get the view / contents that represent the component.
@@ -42,6 +60,20 @@ class Sidebar extends Component
     //         ->orderByDesc('total')
     //         ->limit(5)
     //         ->get();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     //     return view('components.sidebar', ['categories' => $categories]);
     // }
 }
