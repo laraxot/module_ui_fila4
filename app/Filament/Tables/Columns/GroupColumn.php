@@ -19,6 +19,7 @@ class GroupColumn extends Column
 
     public function getFields(): array
     {
+        /** @var array<string, mixed> */
         return $this->schema;
     }
 
