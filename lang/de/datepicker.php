@@ -1,11 +1,17 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
 =======
 >>>>>>> 727968c (.)
+=======
+declare(strict_types=1);
+
+
+>>>>>>> ef3c5fa (.)
 return [
     'previous_month' => 'Mese precedente',
     'next_month' => 'Mese successivo',

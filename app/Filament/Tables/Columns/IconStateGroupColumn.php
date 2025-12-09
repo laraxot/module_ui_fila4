@@ -7,6 +7,9 @@ namespace Modules\UI\Filament\Tables\Columns;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Actions\Action;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Get;
 use Filament\Tables\Columns\ColumnGroup;
@@ -121,6 +124,7 @@ class IconStateGroupColumn extends ColumnGroup
         return $this;
     }
 }
+<<<<<<< HEAD
 =======
 use Filament\Forms\Get;
 use Illuminate\Support\Arr;
@@ -207,3 +211,5 @@ class IconStateGroupColumn extends ColumnGroup
     }
 }
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
