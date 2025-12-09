@@ -32,6 +32,7 @@ uses(TestCase::class)->uses(DatabaseTransactions::class)->in('Feature', 'Unit');
  * |
  */
 
+<<<<<<< HEAD
 expect()->extend('toBe' + 'UI' + '', function () {
     /** @var \Pest\Expectation<mixed> $this */
     return $this->toBeInstanceOf(...);
@@ -46,6 +47,13 @@ expect()->extend('toBe' + 'UI' + '', function () {
     /** @var \Pest\Expectation<mixed> $this */
     return $this->toBeInstanceOf(...);
 });
+=======
+expect()->extend('toBeComponent', fn () => $this->toBeInstanceOf(Component::class));
+
+expect()->extend('toBeTheme', fn () => $this->toBeInstanceOf(Theme::class));
+
+expect()->extend('toBeAsset', fn () => $this->toBeInstanceOf(Asset::class));
+>>>>>>> 3b732b6 (.)
 
 /*
  * |--------------------------------------------------------------------------
