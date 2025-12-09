@@ -2,12 +2,37 @@
 # LARAXOT MODULE UI - .GITIGNORE
 # ==============================================
 # Modulo UI Laraxot - Template standardizzato
+<<<<<<< HEAD
 # Ultimo aggiornamento: 2025-01-06
+=======
+<<<<<<< HEAD
+# Ultimo aggiornamento: 2025-01-31
+=======
+# Ultimo aggiornamento: 2025-01-06
+>>>>>>> e6782b2 (.)
+>>>>>>> 9567487 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
+vendor/
+=======
+<<<<<<< HEAD
+>>>>>>> 9567487 (.)
+/vendor/
+node_modules/
+/node_modules/
+/docs/vendor/
+package-lock.json
+yarn.lock
+yarn-error.log
+<<<<<<< HEAD
+composer.lock
+=======
+npm-debug.log
+=======
 vendor/
 /vendor/
 node_modules/
@@ -17,6 +42,8 @@ package-lock.json
 yarn.lock
 yarn-error.log
 composer.lock
+>>>>>>> e6782b2 (.)
+>>>>>>> 9567487 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -39,7 +66,14 @@ cache/
 *.swp
 *.swo
 *.stackdump
+<<<<<<< HEAD
 *.exe
+=======
+<<<<<<< HEAD
+=======
+*.exe
+>>>>>>> e6782b2 (.)
+>>>>>>> 9567487 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -51,7 +85,14 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
+<<<<<<< HEAD
 npm-debug.log
+=======
+<<<<<<< HEAD
+=======
+npm-debug.log
+>>>>>>> e6782b2 (.)
+>>>>>>> 9567487 (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -122,6 +163,32 @@ docs/phpstan/
 docs/cache/
 
 # ==============================================
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# LANGUAGE FILES
+# ==============================================
+lang/lang/
+resources/lang/
+
+# ==============================================
+>>>>>>> 9567487 (.)
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+resources/views/Components_old
+database/Migrations_old/
+database/Migrations_old
+database/Seeders_old/
+database/Seeders_old
+database/Factories_old/
+database/Factories_old
+database/Factories_
+database_old/
+<<<<<<< HEAD
+database_old
+=======
+=======
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -135,6 +202,8 @@ database/Factories_old
 database/Factories_
 database_old/
 database_old
+>>>>>>> e6782b2 (.)
+>>>>>>> 9567487 (.)
 
 # ==============================================
 # MODULE SPECIFIC - UI
