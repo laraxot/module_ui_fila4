@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 <ul class="ml-auto flex items-center space-x-4">
         @foreach ($menu->items as $item)
             <li>

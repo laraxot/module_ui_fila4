@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 @props(['material'])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -96,4 +99,8 @@ declare(strict_types=1);
             </a>
         </div>
     </div>
+<<<<<<< HEAD
 </div>
+=======
+</div> 
+>>>>>>> 727968c (.)
