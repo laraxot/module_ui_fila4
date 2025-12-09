@@ -10,11 +10,7 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
 use \Filament\Forms\Forms\Components\RadioImage;
-=======
-use Modules\UI\Filament\Forms\Components\RadioImage;
->>>>>>> e3274ea (.)
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 
 class Hero
