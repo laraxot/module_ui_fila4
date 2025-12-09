@@ -8,8 +8,8 @@ use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
 class RouteServiceProvider extends XotBaseRouteServiceProvider
 {
-
     public string $name = 'UI';
+
     protected string $moduleNamespace = 'Modules\UI\Http\Controllers';
 
     protected string $module_dir = __DIR__;
