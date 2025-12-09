@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 {{-- Componente per la selezione di studi odontoiatrici tramite pulsanti --}}
 <x-dynamic-component
     :component="$getFieldWrapperView()"
