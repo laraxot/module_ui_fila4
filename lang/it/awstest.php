@@ -8,6 +8,20 @@ return [
         'heading' => 'Diagnostica Configurazione AWS',
         'description' => 'Pagina per testare e diagnosticare la configurazione AWS completa',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'fields' => [
         'cloudfront_url' => [
             'label' => 'URL Distribuzione CloudFront',
@@ -25,6 +39,20 @@ return [
             'helper_text' => 'Panoramica della configurazione AWS attuale',
         ],
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'actions' => [
         'test_s3_connection' => [
             'label' => 'Test Connessione Base',
@@ -75,6 +103,20 @@ return [
             'error' => 'Errore durante la diagnostica completa',
         ],
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'sections' => [
         's3_connection_test' => [
             'label' => 'Test Connessione S3',
@@ -93,6 +135,20 @@ return [
             'description' => 'Esegue tutti i test diagnostici AWS',
         ],
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'tabs' => [
         'tests' => [
             'label' => 'Test',
@@ -110,6 +166,20 @@ return [
             'label' => 'Diagnostica',
         ],
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'notifications' => [
         's3_connection_successful' => 'Connessione S3 riuscita',
         's3_connection_failed' => 'Connessione S3 fallita',
@@ -117,6 +187,20 @@ return [
         'cloudfront_config_error' => 'Errore configurazione CloudFront',
         'full_diagnostic_completed' => 'Diagnostica completa completata',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'test_results' => [
         'status_success' => 'successo',
         'status_error' => 'errore',
