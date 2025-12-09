@@ -18,6 +18,9 @@ class OverlookWidget extends Widget
 
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
      * public array $grid = [
      * 'default' => 6,
      * 'sm' => 6,
@@ -27,6 +30,7 @@ class OverlookWidget extends Widget
      * '2xl' => null,
      * ];
      */
+<<<<<<< HEAD
 =======
         public array $grid = [
                     'default' => 6,
@@ -38,6 +42,8 @@ class OverlookWidget extends Widget
                 ];
                 */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 
     public array $stats = [];
 
@@ -47,6 +53,9 @@ class OverlookWidget extends Widget
 
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
      * public function mount(array $filter): void
      * {
      * $this->filter = $filter;
@@ -65,6 +74,7 @@ class OverlookWidget extends Widget
      * }
      * }
      */
+<<<<<<< HEAD
 =======
     public function mount(array $filter): void
     {
@@ -85,4 +95,6 @@ class OverlookWidget extends Widget
     }
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 }

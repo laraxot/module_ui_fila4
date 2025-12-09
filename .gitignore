@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 # ==============================================
 # LARAXOT MODULE UI - .GITIGNORE
 # ==============================================
@@ -163,6 +166,7 @@ design_notes.txt
 *.fila2
 laravel
 public_html
+<<<<<<< HEAD
 =======
 # Dependencies
 vendor/
@@ -202,3 +206,5 @@ docs/phpstan/
 # Other
 -e
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
