@@ -5,16 +5,79 @@ declare(strict_types=1);
 namespace Modules\UI\Tests\Unit\Widgets;
 
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
+<<<<<<< HEAD
 use Modules\UI\Filament\Widgets\FullCalendarWidget;
+=======
+<<<<<<< HEAD
+// use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget; // Temporaneamente disabilitato per Filament v4
+=======
+use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+>>>>>>> e6782b2 (.)
+
+// Mock class per testare il BaseCalendarWidget
+class MockCalendarWidget extends BaseCalendarWidget
+{
+    public string $model = MockEventModel::class;
+
+    public function fetchEvents(array $fetchInfo): array
+    {
+        return [
+            [
+                'id' => 1,
+                'title' => 'Test Event 1',
+                'start' => '2025-01-01T10:00:00',
+                'end' => '2025-01-01T12:00:00',
+                'color' => '#3B82F6',
+            ],
+            [
+                'id' => 2,
+                'title' => 'Test Event 2',
+                'start' => '2025-01-02T14:00:00',
+                'end' => '2025-01-02T16:00:00',
+                'color' => '#10B981',
+            ],
+        ];
+    }
+
+    public function getFormSchema(): array
+    {
+        return [
+            TextInput::make('title')->required(),
+            DateTimePicker::make('start')->required(),
+            DateTimePicker::make('end')->required(),
+        ];
+    }
+}
+
+// Mock model per gli eventi
+class MockEventModel extends Model
+{
+    protected $fillable = ['title', 'start', 'end', 'color'];
+
+    public function getTable()
+    {
+        return 'mock_events';
+    }
+}
+>>>>>>> 9567487 (.)
 
 beforeEach(function () {
     $this->widget = new MockCalendarWidget();
 });
 
 describe('BaseCalendarWidget Inheritance', function () {
+<<<<<<< HEAD
     it('extends FullCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
     });
+=======
+<<<<<<< HEAD
+=======
+    it('extends FullCalendarWidget', function () {
+        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
+    });
+>>>>>>> e6782b2 (.)
+>>>>>>> 9567487 (.)
 
     it('extends BaseCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(BaseCalendarWidget::class);
@@ -23,6 +86,16 @@ describe('BaseCalendarWidget Inheritance', function () {
     it('has model property set', function () {
         expect($this->widget->model)->toBe(MockEventModel::class);
     });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    // it('extends FullCalendarWidget', function () {
+    //     expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
+    // }); // Temporaneamente disabilitato per Filament v4
+=======
+>>>>>>> e6782b2 (.)
+>>>>>>> 9567487 (.)
 });
 
 describe('BaseCalendarWidget Configuration', function () {
