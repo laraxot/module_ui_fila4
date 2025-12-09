@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Unit\Filament\Widgets;
 
-use Illuminate\Contracts\View\View;
 use Filament\Widgets\Widget;
+use Illuminate\Contracts\View\View;
 use Modules\UI\Filament\Widgets\StatWithIconWidget;
 use Tests\TestCase;
 
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->widget = new StatWithIconWidget();
+    $this->widget = new StatWithIconWidget;
 });
 
 test('stat with icon widget extends filament widget', function () {

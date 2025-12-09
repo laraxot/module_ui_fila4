@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\UI\Providers\Filament;
 
-use Override;
 use Filament\Panel;
 use Filament\SpatieLaravelTranslatablePlugin;
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Modules\Xot\Providers\Filament\XotBasePanelProvider;
+use Override;
 
-//use LaraZeus\Bolt\BoltPlugin;
+// use LaraZeus\Bolt\BoltPlugin;
 
 class AdminPanelProvider extends XotBasePanelProvider
 {
@@ -22,6 +22,7 @@ class AdminPanelProvider extends XotBasePanelProvider
     public function panel(Panel $panel): Panel
     {
         $panel = parent::panel($panel);
+
         // FilamentAsset::register(
         //     [
         //         Css::make('filament-navigation-styles', __DIR__.'/../../resources/dist/plugin.css'),

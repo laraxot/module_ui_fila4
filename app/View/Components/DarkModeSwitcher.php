@@ -25,7 +25,7 @@ class DarkModeSwitcher extends Component
      */
     public function __construct()
     {
-        $this->widget = new DarkModeSwitcherWidget();
+        $this->widget = new DarkModeSwitcherWidget;
     }
 
     /**
@@ -34,7 +34,7 @@ class DarkModeSwitcher extends Component
     public function render(): View
     {
         // Verifica se il widget può essere visualizzato
-        if (!DarkModeSwitcherWidget::canView()) {
+        if (! DarkModeSwitcherWidget::canView()) {
             return view('ui::components.empty');
         }
 
