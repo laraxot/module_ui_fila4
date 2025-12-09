@@ -14,17 +14,23 @@ return [
         'updated_at' => 'Actualizado',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'select-options' => [
         'same-tab' => 'Misma pestaña',
         'new-tab' => 'Nueva pestaña',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'items' => [
         'empty' => 'No hay ítems.',
         'add-item' => 'Agregar ítem',
@@ -36,9 +42,12 @@ return [
         'remove' => 'Remover',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'items-modal' => [
         'title' => 'Ítem',
         'label' => 'Etiqueta',
