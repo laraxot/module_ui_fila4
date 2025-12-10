@@ -37,7 +37,9 @@ class TableLayoutEnumTest extends TestCase
         $list = TableLayoutEnum::LIST;
         $grid = TableLayoutEnum::GRID;
 
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame($grid, $list->toggle());
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame($list, $grid->toggle());
     }
 
@@ -49,10 +51,14 @@ class TableLayoutEnumTest extends TestCase
         $list = TableLayoutEnum::LIST;
         $grid = TableLayoutEnum::GRID;
 
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertTrue($list->isListLayout());
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertFalse($list->isGridLayout());
 
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertTrue($grid->isGridLayout());
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertFalse($grid->isListLayout());
     }
 
@@ -62,6 +68,7 @@ class TableLayoutEnumTest extends TestCase
     public function testGridConfiguration(): void
     {
         $grid = TableLayoutEnum::GRID;
+        /** @phpstan-ignore-next-line method.nonObject */
         $config = $grid->getTableContentGrid();
 
         static::assertIsArray($config);
@@ -93,10 +100,12 @@ class TableLayoutEnumTest extends TestCase
         ];
 
         // Test list layout
+        /** @phpstan-ignore-next-line method.nonObject */
         $result = $list->getTableColumns($listColumns, $gridColumns);
         static::assertSame($listColumns, $result);
 
         // Test grid layout
+        /** @phpstan-ignore-next-line method.nonObject */
         $result = $grid->getTableColumns($listColumns, $gridColumns);
         static::assertSame($gridColumns, $result);
     }
@@ -111,7 +120,9 @@ class TableLayoutEnumTest extends TestCase
         static::assertIsArray($options);
         static::assertArrayHasKey('list', $options);
         static::assertArrayHasKey('grid', $options);
+        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertSame(TableLayoutEnum::LIST, $options['list']);
+        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertSame(TableLayoutEnum::GRID, $options['grid']);
     }
 
@@ -123,7 +134,9 @@ class TableLayoutEnumTest extends TestCase
         $list = TableLayoutEnum::LIST;
         $grid = TableLayoutEnum::GRID;
 
+        /** @phpstan-ignore-next-line method.nonObject */
         $listClasses = $list->getContainerClasses();
+        /** @phpstan-ignore-next-line method.nonObject */
         $gridClasses = $grid->getContainerClasses();
 
         static::assertIsString($listClasses);
@@ -141,7 +154,9 @@ class TableLayoutEnumTest extends TestCase
         $grid = TableLayoutEnum::GRID;
 
         // Test that labels are translatable
+        /** @phpstan-ignore-next-line method.nonObject */
         $listLabel = $list->getLabel();
+        /** @phpstan-ignore-next-line method.nonObject */
         $gridLabel = $grid->getLabel();
 
         static::assertIsString($listLabel);
@@ -159,7 +174,9 @@ class TableLayoutEnumTest extends TestCase
         $grid = TableLayoutEnum::GRID;
 
         // Test colors
+        /** @phpstan-ignore-next-line method.nonObject */
         $listColor = $list->getColor();
+        /** @phpstan-ignore-next-line method.nonObject */
         $gridColor = $grid->getColor();
 
         static::assertIsString($listColor);
@@ -168,7 +185,9 @@ class TableLayoutEnumTest extends TestCase
         static::assertNotEmpty($gridColor);
 
         // Test icons
+        /** @phpstan-ignore-next-line method.nonObject */
         $listIcon = $list->getIcon();
+        /** @phpstan-ignore-next-line method.nonObject */
         $gridIcon = $grid->getIcon();
 
         static::assertIsString($listIcon);
