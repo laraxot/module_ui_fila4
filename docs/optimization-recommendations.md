@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8ee2a17 (.)
 # Raccomandazioni di Ottimizzazione - Modulo UI
@@ -279,3 +280,5 @@ php artisan ui:accessibility-check
 >>>>>>> da29ca4 (.)
 =======
 >>>>>>> 8ee2a17 (.)
+=======
+>>>>>>> 12ba306 (.)
