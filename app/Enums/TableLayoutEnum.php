@@ -110,7 +110,6 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
      *
      * @param  array<Column|ColumnGroup|Component>  $listColumns  Columns for list layout
      * @param  array<Column|ColumnGroup|Component>  $gridColumns  Columns for grid layout
-     *
      * @return array<Column|ColumnGroup|Component>
      */
     public function getTableColumns(array $listColumns, array $gridColumns): array
