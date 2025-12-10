@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 {{-- Radio Card Selector Component --}}
 @php
     $cards = $getCards();
@@ -158,12 +149,4 @@ declare(strict_types=1);
             </p>
         </div>
     @endif
-<<<<<<< HEAD
-<<<<<<< HEAD
 </div>
-=======
-</div> 
->>>>>>> 727968c (.)
-=======
-</div>
->>>>>>> ef3c5fa (.)
