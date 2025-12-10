@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 {{--
     Studio Selector Component - Selezione semplice studio con pulsanti
     
@@ -146,12 +137,4 @@ declare(strict_types=1);
             </div>
         </div>
     @endif
-<<<<<<< HEAD
-<<<<<<< HEAD
 </div>
-=======
-</div> 
->>>>>>> 727968c (.)
-=======
-</div>
->>>>>>> ef3c5fa (.)
