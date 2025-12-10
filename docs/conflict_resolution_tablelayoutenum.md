@@ -65,15 +65,9 @@ Il file `Modules/UI/app/Enums/TableLayoutEnum.php` presenta un conflitto Git nel
 ## Collegamenti Correlati
 
 - [UI Components](../components/volt.md)
-<<<<<<< HEAD
 - [PHPStan Level 10 Fixes](../../Xot/docs/phpstan-level10-fixes.md)
 - [Translation Standards](../../Lang/docs/translation-standards.md)
 - [Best Practices](../../Xot/docs/translation-keys-best-practices.md)
-=======
-- [PHPStan Level 10 Fixes](../../Xot/project_docs/phpstan-level10-fixes.md)
-- [Translation Standards](../../Lang/project_docs/translation-standards.md)
-- [Best Practices](../../Xot/project_docs/translation-keys-best-practices.md)
->>>>>>> b55470f (.)
 
 ## Note per Sviluppatori Futuri
 
@@ -88,7 +82,3 @@ Il file `Modules/UI/app/Enums/TableLayoutEnum.php` presenta un conflitto Git nel
 - **Modulo**: UI
 - **File**: `app/Enums/TableLayoutEnum.php`
 - **Tipo Conflitto**: Sintassi PHPStan
-<<<<<<< HEAD
-=======
-- **Scelta**: Versione Branch 988693e (sintassi moderna) 
->>>>>>> b55470f (.)
