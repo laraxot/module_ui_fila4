@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -556,3 +557,5 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 - **[REGOLA CRITICA: SEMPRE usa transClass()](transclass_rule.md)**
 
 *Ultimo aggiornamento: gennaio 2025* 
+=======
+>>>>>>> da29ca4 (.)

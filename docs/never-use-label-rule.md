@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # REGOLA CRITICA: MAI usare ->label()
 
 ## Data: 2025-01-06
@@ -189,3 +190,5 @@ rules:
 
 *Ultimo aggiornamento: 2025-01-06*
 >>>>>>> 3057426 (.)
+=======
+>>>>>>> da29ca4 (.)

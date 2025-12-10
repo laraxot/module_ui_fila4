@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # StudioCardSelector Component - Modulo UI
 
 ## 🎯 **Panoramica**
@@ -160,3 +161,5 @@ return [
 =======
 **Last Updated**: January 2025 
 >>>>>>> 4d64b9a (.)
+=======
+>>>>>>> da29ca4 (.)
