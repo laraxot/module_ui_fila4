@@ -5,8 +5,12 @@ declare(strict_types=1);
 use Illuminate\View\Component;
 
 test('ui components can be rendered', function () {
+<<<<<<< HEAD
     $component = new class() extends Component
     {
+=======
+    $component = new class extends Component {
+>>>>>>> 161e28f (Lint)
         public function render()
         {
             return view('ui::components.ui.button');

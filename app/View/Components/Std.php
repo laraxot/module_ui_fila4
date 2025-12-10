@@ -20,7 +20,12 @@ final class Std extends Component
      */
     public function __construct(
         public string $tpl = '',
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> 161e28f (Lint)
 
     public function render(): Renderable
     {

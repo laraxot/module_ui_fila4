@@ -39,9 +39,13 @@ class IconPicker extends TextInput
                             /** @var array<string, string> $packsOptions */
                             $packsOptions = $packs;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 359d970 (.)
+=======
+
+>>>>>>> 161e28f (Lint)
                             return $packsOptions;
                         })
                         ->reactive()
@@ -60,6 +64,7 @@ class IconPicker extends TextInput
                             );
                             /** @var array<int|string, mixed> $optsRaw */
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $optsValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
                             /** @var array<int|string> $optsKeys */
                             $optsKeys = array_map(fn($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
@@ -68,6 +73,11 @@ class IconPicker extends TextInput
                             /** @var array<int|string> $optsKeys */
                             $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
 >>>>>>> 359d970 (.)
+=======
+                            $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
+                            /** @var array<int|string> $optsKeys */
+                            $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
+>>>>>>> 161e28f (Lint)
                             $optsCombined = array_combine($optsKeys, $optsValues);
 
                             return $optsCombined ?: [];

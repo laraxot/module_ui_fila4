@@ -18,7 +18,13 @@ final class Navbar extends Component
     /**
      * Create a new component instance.
      */
+<<<<<<< HEAD
     public function __construct() {}
+=======
+    public function __construct()
+    {
+    }
+>>>>>>> 161e28f (Lint)
 
     public function render(): Renderable
     {

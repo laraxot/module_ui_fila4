@@ -5,6 +5,11 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 161e28f (Lint)
 
 use Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
 use Filament\Schemas\Components\Grid;
@@ -36,6 +41,12 @@ class UserCalendarWidget extends FullCalendarWidget
     public function fetchEvents(array $fetchInfo): array
     {
         $action=$this->getActionName(__FUNCTION__);
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 760ce09 (.)
+>>>>>>> 161e28f (Lint)
 use App\Filament\Resources\EventResource;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Grid;
@@ -68,6 +79,18 @@ class UserCalendarWidget extends FullCalendarWidget
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 1899c5f (.)
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b55470f (.)
+>>>>>>> 760ce09 (.)
+>>>>>>> 161e28f (Lint)
 
 use Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
 use Filament\Schemas\Components\Grid;
@@ -99,12 +122,29 @@ class UserCalendarWidget extends FullCalendarWidget
     public function fetchEvents(array $fetchInfo): array
     {
         $action=$this->getActionName(__FUNCTION__);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e6782b2 (.)
+<<<<<<< HEAD
+>>>>>>> 9567487 (.)
+=======
+=======
+>>>>>>> b55470f (.)
+>>>>>>> 760ce09 (.)
+>>>>>>> 161e28f (Lint)
         return app($action)->execute($fetchInfo);
     }
 
     public function getFormSchema(): array
     {
         $action = $this->getActionName(__FUNCTION__);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 161e28f (Lint)
         
         if (class_exists($action)) {
             return app($action)->execute();
@@ -140,6 +180,12 @@ class UserCalendarWidget extends FullCalendarWidget
     }
 
     
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 760ce09 (.)
+>>>>>>> 161e28f (Lint)
 
         if (class_exists($action)) {
             return app($action)->execute();
@@ -175,6 +221,18 @@ class UserCalendarWidget extends FullCalendarWidget
         // TODO: Implementare la logica per la selezione della data
         // dddx('test');
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 1899c5f (.)
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b55470f (.)
+>>>>>>> 760ce09 (.)
+>>>>>>> 161e28f (Lint)
         
         if (class_exists($action)) {
             return app($action)->execute();
@@ -210,5 +268,16 @@ class UserCalendarWidget extends FullCalendarWidget
     }
 
     
+<<<<<<< HEAD
 }
 }
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e6782b2 (.)
+>>>>>>> 9567487 (.)
+}
+=======
+}
+>>>>>>> b55470f (.)
+>>>>>>> 161e28f (Lint)

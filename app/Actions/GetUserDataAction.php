@@ -18,10 +18,14 @@ class GetUserDataAction
         $user = Auth::user();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$user instanceof User) {
 =======
         if (! $user instanceof User) {
 >>>>>>> 359d970 (.)
+=======
+        if (! $user instanceof User) {
+>>>>>>> 161e28f (Lint)
             return null;
         }
 
@@ -30,10 +34,14 @@ class GetUserDataAction
         if (isset($user->profile_photo_path) && is_string($user->profile_photo_path)) {
             $avatarValue = $user->profile_photo_path;
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif ($user->relationLoaded('profile') && $user->profile !== null) {
 =======
         } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
 >>>>>>> 359d970 (.)
+=======
+        } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
+>>>>>>> 161e28f (Lint)
             $profile = $user->profile;
             if (is_object($profile) && method_exists($profile, 'getAvatarUrl')) {
                 $avatarValue = $profile->getAvatarUrl();
@@ -51,10 +59,14 @@ class GetUserDataAction
         // Get settings - could be in profile or extra attributes
         $settingsArray = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($user->relationLoaded('profile') && $user->profile !== null) {
 =======
         if ($user->relationLoaded('profile') && null !== $user->profile) {
 >>>>>>> 359d970 (.)
+=======
+        if ($user->relationLoaded('profile') && null !== $user->profile) {
+>>>>>>> 161e28f (Lint)
             $profile = $user->profile;
             if (is_object($profile) && isset($profile->extra)) {
                 $extra = $profile->extra;
@@ -79,12 +91,17 @@ class GetUserDataAction
             name: (string) ($user->name ?? ''),
             email: (string) ($user->email ?? ''),
 <<<<<<< HEAD
+<<<<<<< HEAD
             avatar: $avatarValue !== null ? (string) $avatarValue : null,
             role: $roleValue !== null ? (string) $roleValue : null,
 =======
             avatar: null !== $avatarValue ? (string) $avatarValue : null,
             role: null !== $roleValue ? (string) $roleValue : null,
 >>>>>>> 359d970 (.)
+=======
+            avatar: null !== $avatarValue ? (string) $avatarValue : null,
+            role: null !== $roleValue ? (string) $roleValue : null,
+>>>>>>> 161e28f (Lint)
             permissions: $permissionsArray,
             settings: $settingsArray,
         );

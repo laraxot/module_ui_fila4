@@ -60,18 +60,24 @@ final class RadioCollection extends Field
     {
         $optionsRaw = $this->evaluate($this->options);
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
         }
         
 =======
+=======
+>>>>>>> 161e28f (Lint)
 
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
         }
 
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
+=======
+>>>>>>> 161e28f (Lint)
         return collect([]);
     }
 

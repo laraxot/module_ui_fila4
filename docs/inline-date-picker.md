@@ -208,3 +208,15 @@ If the component doesn't look right, make sure you have the required Tailwind CS
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+<<<<<<< HEAD
+=======
+
+
+## ♻️ Manutenzione 2025-11
+
+- Rafforzata la tipizzazione delle settimane generate (`array<int, array<int, array<string, mixed>>>`).
+- Annotazioni esplicite sui container `$weeks` e `$week` per coerenza PHPStan L10.
+- Chiusure di dehydratazione rese statiche con gestione esplicita del parametro inutilizzato.
+- Verifiche qualità: PHPStan L10 ✅, PHPMD ✅, PHPInsights ✅ (avvisi legacy su proprietà pubbliche già tracciati).
+
+>>>>>>> 161e28f (Lint)

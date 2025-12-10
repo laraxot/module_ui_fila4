@@ -57,7 +57,11 @@ class RadioBadge extends Radio
         return $color ?? $this->selectedColor;
     }
 
+<<<<<<< HEAD
     public function getIconForOption(string $value): string|null
+=======
+    public function getIconForOption(string $value): ?string
+>>>>>>> 161e28f (Lint)
     {
         $icon = $this->getEnumValue($value)?->getIcon();
 

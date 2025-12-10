@@ -33,10 +33,14 @@ class GroupColumn extends Column
             return $item instanceof Column;
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
 >>>>>>> 359d970 (.)
+=======
+
+>>>>>>> 161e28f (Lint)
         /** @var array<int|string, Column> $filtered */
         /** @var array<int, Column> $filteredValues */
         $filteredValues = array_values($filtered);

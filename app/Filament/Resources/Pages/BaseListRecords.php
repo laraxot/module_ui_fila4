@@ -6,4 +6,10 @@ namespace Modules\UI\Filament\Resources\Pages;
 
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
+<<<<<<< HEAD
 abstract class BaseListRecords extends XotBaseListRecords {}
+=======
+abstract class BaseListRecords extends XotBaseListRecords
+{
+}
+>>>>>>> 161e28f (Lint)

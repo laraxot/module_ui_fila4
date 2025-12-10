@@ -52,6 +52,7 @@ class Block extends Component
         /** @var array<string, mixed> $view_params */
         $view_params = (array) $view_params;
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert::string($view, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
         if (!view()->exists($view)) {
             throw new Exception('view not found [' . $view . ']');
@@ -60,6 +61,11 @@ class Block extends Component
         if (! view()->exists($view)) {
             throw new \Exception('view not found ['.$view.']');
 >>>>>>> 359d970 (.)
+=======
+        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
+        if (! view()->exists($view)) {
+            throw new \Exception('view not found ['.$view.']');
+>>>>>>> 161e28f (Lint)
         }
 
         return view($view, $view_params);

@@ -28,10 +28,14 @@ class IconStateGroupColumn extends ColumnGroup
         $this->modelClass = $modelClass;
         $statesRaw = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
 >>>>>>> 359d970 (.)
+=======
+
+>>>>>>> 161e28f (Lint)
         if (class_exists($stateClass) && method_exists($stateClass, 'getStateMapping')) {
             $stateMapping = $stateClass::getStateMapping();
             if (is_object($stateMapping) && method_exists($stateMapping, 'toArray')) {
@@ -40,15 +44,20 @@ class IconStateGroupColumn extends ColumnGroup
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
 >>>>>>> 359d970 (.)
+=======
+
+>>>>>>> 161e28f (Lint)
         /** @var array<string, string> $states */
         $states = $statesRaw;
         $columns = [];
 
         foreach ($states as $stateKey => $stateClassItem) {
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (!is_string($stateClassItem) || !class_exists($stateClassItem)) {
                 continue;
@@ -65,6 +74,8 @@ class IconStateGroupColumn extends ColumnGroup
 
             $column = IconColumn::make($stateKey . '-icon')
 =======
+=======
+>>>>>>> 161e28f (Lint)
             if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
                 continue;
             }
@@ -79,7 +90,10 @@ class IconStateGroupColumn extends ColumnGroup
             $this->data[$visibleKey] = true;
 
             $column = IconColumn::make($stateKey.'-icon')
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
+=======
+>>>>>>> 161e28f (Lint)
                 ->icon($stateInstance->icon(...))
                 ->color($stateInstance->color(...))
                 ->tooltip($stateInstance->label(...))
@@ -96,6 +110,7 @@ class IconStateGroupColumn extends ColumnGroup
                         $res = is_bool($canTransition) ? $canTransition : false;
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $visibleKey = $stateKey . '-visible';
                     $this->data[$visibleKey] = $res;
                     if (!$res) {
@@ -104,16 +119,25 @@ class IconStateGroupColumn extends ColumnGroup
                     $this->data[$visibleKey] = $res;
                     if (! $res) {
 >>>>>>> 359d970 (.)
+=======
+                    $visibleKey = $stateKey.'-visible';
+                    $this->data[$visibleKey] = $res;
+                    if (! $res) {
+>>>>>>> 161e28f (Lint)
                         return null;
                     }
 
                     return true;
                 });
 <<<<<<< HEAD
+<<<<<<< HEAD
             $column->action(Action::make($stateKey . '-action')
 =======
             $column->action(Action::make($stateKey.'-action')
 >>>>>>> 359d970 (.)
+=======
+            $column->action(Action::make($stateKey.'-action')
+>>>>>>> 161e28f (Lint)
                 ->requiresConfirmation()
                 ->modalHeading(function ($_record) use ($stateInstance) {
                     // StateContract provides modalHeading()
@@ -131,12 +155,17 @@ class IconStateGroupColumn extends ColumnGroup
                 ->action(function (mixed $record, mixed $data) use ($stateInstance) {
                     // StateContract provides modalActionByRecord()
 <<<<<<< HEAD
+<<<<<<< HEAD
                     /** @var \Illuminate\Database\Eloquent\Model $record */
                     /** @var array<string, mixed> $data */
 =======
                     /* @var \Illuminate\Database\Eloquent\Model $record */
                     /* @var array<string, mixed> $data */
 >>>>>>> 359d970 (.)
+=======
+                    /* @var \Illuminate\Database\Eloquent\Model $record */
+                    /* @var array<string, mixed> $data */
+>>>>>>> 161e28f (Lint)
                     $stateInstance->modalActionByRecord($record, $data);
 
                     // $this->invalidateCache();
@@ -147,10 +176,14 @@ class IconStateGroupColumn extends ColumnGroup
                     // ]);
                 }));
 <<<<<<< HEAD
+<<<<<<< HEAD
             $visibleKey = $stateKey . '-visible';
 =======
             $visibleKey = $stateKey.'-visible';
 >>>>>>> 359d970 (.)
+=======
+            $visibleKey = $stateKey.'-visible';
+>>>>>>> 161e28f (Lint)
             $visibleValue = $this->data[$visibleKey] ?? false;
             $column->visible(is_bool($visibleValue) ? $visibleValue : false);
             $columns[] = $column;

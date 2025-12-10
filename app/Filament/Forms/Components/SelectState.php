@@ -27,14 +27,19 @@ class SelectState extends Select
                         if ($methodExists) {
                             $statesRaw = $instance->getDefaultStateFor($name);
 <<<<<<< HEAD
+<<<<<<< HEAD
                             if (!is_array($statesRaw)) {
 =======
                             if (! is_array($statesRaw)) {
 >>>>>>> 359d970 (.)
+=======
+                            if (! is_array($statesRaw)) {
+>>>>>>> 161e28f (Lint)
                                 $statesRaw = Arr::wrap($statesRaw);
                             }
                             /** @var array<int|string, mixed> $statesRaw */
                             $states = $statesRaw;
+<<<<<<< HEAD
 <<<<<<< HEAD
                             $statesKeys = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
                             $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
@@ -43,6 +48,8 @@ class SelectState extends Select
                             /** @var array<int|string, int|string> $combinedTyped */
                             $combinedTyped = $combined ?: [];
 =======
+=======
+>>>>>>> 161e28f (Lint)
                             $statesKeys = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
                             $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
 
@@ -50,16 +57,23 @@ class SelectState extends Select
                             /** @var array<int|string, int|string> $combinedTyped */
                             $combinedTyped = $combined ?: [];
 
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
+=======
+>>>>>>> 161e28f (Lint)
                             return $combinedTyped;
                         }
                     }
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
 =======
 
 >>>>>>> 359d970 (.)
+=======
+
+>>>>>>> 161e28f (Lint)
                 return [];
             }
 
@@ -70,6 +84,7 @@ class SelectState extends Select
             /** @var array<int|string, mixed> $states */
             $states = $statesRaw;
 <<<<<<< HEAD
+<<<<<<< HEAD
             $statesKeys = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
             $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
             
@@ -77,6 +92,8 @@ class SelectState extends Select
             /** @var array<int|string, int|string> $combinedTyped */
             $combinedTyped = $combined ?: [];
 =======
+=======
+>>>>>>> 161e28f (Lint)
             $statesKeys = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
             $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
 
@@ -84,7 +101,10 @@ class SelectState extends Select
             /** @var array<int|string, int|string> $combinedTyped */
             $combinedTyped = $combined ?: [];
 
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
+=======
+>>>>>>> 161e28f (Lint)
             return $combinedTyped;
         });
         $this->required();

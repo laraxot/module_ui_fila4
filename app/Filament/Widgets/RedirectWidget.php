@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Widgets;
 
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
+<<<<<<< HEAD
 use Override;
+=======
+>>>>>>> 161e28f (Lint)
 
 /**
  * RedirectWidget - Widget per gestire redirect verso URL specifici.
