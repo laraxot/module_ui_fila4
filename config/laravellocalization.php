@@ -2,10 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c6fab1a (.)
 return [
     /*
      * |--------------------------------------------------------------------------
@@ -99,8 +96,4 @@ return [
     'useLocalizedRoutesInRouteModelBindingWithSlugAndLocaleAndFallbackAndRedirectAndSessionAndCookie' => true,
     'useLocalizedRoutesInRouteModelBindingWithSlugAndLocaleAndFallbackAndRedirectAndSessionAndCookieAndQueryString' => true,
     'useLocalizedRoutesInRouteModelBindingWithSlugAndLocaleAndFallbackAndRedirectAndSessionAndCookieAndQueryStringAndRoute' => true,
-<<<<<<< HEAD
 ];
-=======
-];
->>>>>>> c6fab1a (.)
