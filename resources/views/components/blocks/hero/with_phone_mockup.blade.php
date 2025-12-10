@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 <div class="bg-white">
     <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -120,6 +126,9 @@ declare(strict_types=1);
     </div>
   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
