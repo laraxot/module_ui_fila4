@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Database\Factories;
 
+use Modules\UI\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\UI\Models\Category;
 
