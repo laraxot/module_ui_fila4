@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 return [
     'name' => 'UI',
     'description' => 'Modulo per la gestione dell\'interfaccia utente e componenti',
@@ -19,6 +18,3 @@ return [
         'Modules\\UI\\Providers\\UIServiceProvider',
     ],
 ];
-=======
-return [];
->>>>>>> e709487 (.)
