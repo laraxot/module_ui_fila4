@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+
 return [
     'fields' => [
         'img_uuid' => [

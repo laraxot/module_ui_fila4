@@ -1,8 +1,9 @@
-# UI Module - Componenti e Design System
+# 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
 
-## Panoramica
-
-Il modulo **UI** fornisce componenti riutilizzabili, design system e interfacce utente per l'applicazione Laraxot.
+[![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
+[![Filament 3.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
+[![PHPStan level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+[![Translation Ready](https://img.shields.io/badge/Translation-IT%20%7C%20EN%20%7C%20DE-green.svg)](https://laravel.com/docs/localization)
 
 ## 🚨 Regole Critiche
 

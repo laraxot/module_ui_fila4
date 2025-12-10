@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+
 return [
     'actions' => [
         'table_layout_toggle' => [

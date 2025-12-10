@@ -6,9 +6,9 @@ namespace Modules\UI\Services;
 
 use Modules\Xot\Actions\File\AssetAction;
 
-final class UIService
+class UIService
 {
-    public static function asset(string $asset): string
+    public static function asset(string $asset): null|string
     {
         return app(AssetAction::class)->execute($asset);
     }

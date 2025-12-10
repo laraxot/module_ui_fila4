@@ -13,7 +13,7 @@ use Filament\Forms\Components\Select;
 
 // use RyanChandler\FilamentNavigation\Models\Navigation;
 
-final class ParentSelect extends Select
+class ParentSelect extends Select
 {
     protected string $optionValueProperty = 'id';
 

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
-use Modules\Xot\Filament\Tables\Columns\XotBaseColumn;
+use Filament\Tables\Columns\Column;
 
-final class TreeColumn extends XotBaseColumn
+class TreeColumn extends Column
 {
-    protected string $view = 'ui::filament.tables.columns.tree-column';
+    protected string $view = 'ui::filament.tables.columns.tree';
 }

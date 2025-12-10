@@ -6,7 +6,7 @@ namespace Modules\UI\Filament\Clusters;
 
 use Filament\Clusters\Cluster;
 
-final class Test extends Cluster
+class Test extends Cluster
 {
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-squares-2x2';
 

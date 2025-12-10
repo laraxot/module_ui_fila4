@@ -6,7 +6,7 @@ namespace \Filament\Forms\Forms\Components\Field;
 
 use Filament\Forms\Components\Field;
 
-final class QrReader extends Field
+class QrReader extends Field
 {
     protected string $view = 'ui::filament.forms.components.field.qr-reader';
 

@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
+
 namespace Modules\UI\Filament\Blocks;
 
+use Modules\Xot\Filament\Blocks\XotBaseBlock;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
-use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
 final class Post extends XotBaseBlock
 {

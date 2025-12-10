@@ -11,16 +11,10 @@ trait TableLayoutTrait
 {
     public function getTableLayout(): TableLayoutEnum
     {
-        $value = Session::get('table_layout');
-
-        if ($value instanceof TableLayoutEnum) {
-            return $value;
-        }
-
+        $value = Session::get('table_layout', TableLayoutEnum::GRID->value);
         if (is_string($value) || is_int($value)) {
             return TableLayoutEnum::tryFrom((string) $value) ?? TableLayoutEnum::GRID;
         }
-
         return TableLayoutEnum::GRID;
     }
 

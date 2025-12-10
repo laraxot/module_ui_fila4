@@ -4,17 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
+use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 
 class HeroWidget extends BaseWidget
 {
-    protected ?string $heading = 'Hero Widget';
+    // use InteractsWithPageFilters;
 
-    // PHPStan L10: Protected per type safety - public properties sono viste come mixed
-    protected string $title = '';
+    // protected static ?int $sort = 0;
 
-    protected string $icon = '';
+    public string $title = 'no-set';
+
+    public string $icon = '';
+
+    protected null|string $pollingInterval = null;
 
     public function getColumns(): int
     {
@@ -24,7 +28,7 @@ class HeroWidget extends BaseWidget
     protected function getStats(): array
     {
         return [
-            Stat::make('', $this->title ?? '')->icon($this->icon ?? ''),
+            Stat::make('', $this->title)->icon($this->icon),
         ];
     }
 }

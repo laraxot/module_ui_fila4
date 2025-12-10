@@ -6,8 +6,11 @@ namespace Modules\UI\Filament\Actions\Table;
 
 use Filament\Actions\Action;
 use Filament\Resources\Pages\ListRecords;
+use Modules\UI\Enums\TableLayoutEnum;
+use Modules\UI\Filament\Actions\Table\TableLayoutTrait;
+use Modules\UI\Filament\Actions\Table\HasTableLayout;
 
-final class TableLayoutToggleTableAction extends Action implements HasTableLayout
+class TableLayoutToggleTableAction extends Action implements HasTableLayout
 {
     use TableLayoutTrait;
 
@@ -24,12 +27,10 @@ final class TableLayoutToggleTableAction extends Action implements HasTableLayou
             ->action($this->toggleLayout(...));
     }
 
-    public static function getDefaultName(): string
-    {
-        return 'table_layout_toggle';
-    }
-
-    protected function toggleLayout(?ListRecords $livewire): void
+    /**
+     * @param ListRecords|null $livewire
+     */
+    protected function toggleLayout($livewire): void
     {
         $currentLayout = $this->getCurrentLayout();
         $newLayout = $currentLayout->toggle();
@@ -39,5 +40,11 @@ final class TableLayoutToggleTableAction extends Action implements HasTableLayou
         if ($livewire instanceof ListRecords) {
             $livewire->dispatch('$refresh');
         }
+    }
+
+
+    public static function getDefaultName(): string
+    {
+        return 'table_layout_toggle';
     }
 }

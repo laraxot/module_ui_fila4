@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\View\Components;
 
-use Illuminate\Contracts\View\View;
+use Illuminate\Contracts\Support\Renderable;
 use Illuminate\View\Component;
 use Modules\Xot\Actions\GetViewAction;
 
@@ -13,24 +13,25 @@ use Modules\Xot\Actions\GetViewAction;
 /**
  * .
  */
-final class Svg extends Component
+class Svg extends Component
 {
-    /**
-     * Create a new component instance.
-     */
     public function __construct(
-        public string $tpl = '',
+        // public Post $article,
+        // public bool $showAuthor = false,
+        public string $tpl = 'v1',
     ) {}
     ) {
     }
 
-    public function render(): View
+    public function render(): Renderable
     {
         /**
          * @phpstan-var view-string
          */
         $view = app(GetViewAction::class)->execute($this->tpl);
 
-        return view($view);
+        $view_params = [];
+
+        return view($view, $view_params);
     }
 }

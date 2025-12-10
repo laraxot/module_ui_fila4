@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
-use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn;
+use Filament\Tables\Columns\Column;
 
-class IconColumn extends XotBaseIconColumn
+class IconColumn extends Column
 {
     protected string $view = 'ui::filament.tables.columns.icon';
 }
