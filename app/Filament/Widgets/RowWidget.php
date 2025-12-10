@@ -29,4 +29,9 @@ final class RowWidget extends XotBaseWidget
     {
         return 3;
     }
+
+    public function getFormSchema(): array
+    {
+        return [];
+    }
 }
