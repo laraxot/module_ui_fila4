@@ -44,7 +44,7 @@ class IconPicker extends TextInput
                         ->reactive()
                         ->live(),
                     RadioIcon::make('newstate')
-                        ->options(function (\Filament\Schemas\Components\Utilities\Get $get) use ($icons): array {
+                        ->options(function (Get $get) use ($icons): array {
                             $pack = $get('pack');
                             if (! is_string($pack)) {
                                 return [];
@@ -66,7 +66,7 @@ class IconPicker extends TextInput
                         ->inline()
                         ->inlineLabel(false),
                 ])
-                ->action(function (array $data, \Filament\Schemas\Components\Utilities\Set $set) {
+                ->action(function (array $data, Set $set) {
                     $set('icon', $data['newstate']);
                 }),
         );
