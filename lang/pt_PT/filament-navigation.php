@@ -13,24 +13,10 @@ return [
         'created_at' => 'Criado em',
         'updated_at' => 'Editado em',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'select-options' => [
         'same-tab' => 'Mesmo separador',
         'new-tab' => 'Novo separador',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'items' => [
         'empty' => 'Nenhum item',
         'add-item' => 'Adicionar item',
@@ -41,13 +27,6 @@ return [
         'dedent' => 'Recuar',
         'remove' => 'Remover',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'items-modal' => [
         'title' => 'Item',
         'label' => 'Nome',
