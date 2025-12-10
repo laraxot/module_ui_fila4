@@ -2,118 +2,32 @@
 # LARAXOT MODULE UI - .GITIGNORE
 # ==============================================
 # Modulo UI Laraxot - Template standardizzato
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Ultimo aggiornamento: 2025-01-06
 # Ultimo aggiornamento: 2025-01-31
-# Ultimo aggiornamento: 2025-01-06
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
-<<<<<<< HEAD
-# Ultimo aggiornamento: 2025-01-06
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
-# Ultimo aggiornamento: 2025-01-31
-=======
-# Ultimo aggiornamento: 2025-01-06
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
-# Ultimo aggiornamento: 2025-01-06
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
 # ==============================================
+
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
-<<<<<<< HEAD
-vendor/
-=======
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-<<<<<<< HEAD
->>>>>>> 760ce09 (.)
 /vendor/
-node_modules/
 /node_modules/
 /docs/vendor/
+
+composer.lock
 package-lock.json
 yarn.lock
 yarn-error.log
-<<<<<<< HEAD
-composer.lock
-=======
 npm-debug.log
-=======
-=======
->>>>>>> b55470f (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
-vendor/
-/vendor/
-node_modules/
-/node_modules/
-/docs/vendor/
-package-lock.json
-yarn.lock
-yarn-error.log
-composer.lock
-<<<<<<< HEAD
-<<<<<<< HEAD
-vendor/
-/vendor/
-node_modules/
-/node_modules/
-/docs/vendor/
-package-lock.json
-yarn.lock
-yarn-error.log
-composer.lock
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
+
 
 # ==============================================
 # BUILD & COMPILED FILES
 # ==============================================
-/build
 /build/
-build/
-dist/
+/dist/
 docs/cache/
 cache/
+
 
 # ==============================================
 # CACHE & TEMPORARY FILES
@@ -126,38 +40,12 @@ cache/
 *.swp
 *.swo
 *.stackdump
-<<<<<<< HEAD
-<<<<<<< HEAD
-*.exe
-*.exe
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
-<<<<<<< HEAD
-*.exe
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
-=======
-*.exe
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
-*.exe
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
 *:Zone.Identifier
 v8-compile-cache-*
+
 .php-cs-fixer.cache
 .phpunit.result.cache
+
 
 # ==============================================
 # LOG FILES
@@ -165,66 +53,41 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
-<<<<<<< HEAD
-<<<<<<< HEAD
-npm-debug.log
-npm-debug.log
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
-<<<<<<< HEAD
-npm-debug.log
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
-=======
-npm-debug.log
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
-npm-debug.log
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
 yarn-error.log*
 lerna-debug.log*
+
 
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
-bootstrap/compiled.php
-app/storage/
-public/storage
-public/hot
-public_html/storage
-public_html/hot
-storage/*.key
+/storage/*.key
+/public/storage
+/public/hot
+/public_html/storage
+/public_html/hot
+
 .env
 .env.*
 !.env.example
 
+
 # ==============================================
-# ENVIRONMENT & CONFIGURATION
+# ENVIRONMENT & IDE
 # ==============================================
 Homestead.yaml
 Homestead.json
 /.vagrant
 /.idea
 .phpintel
+.phpstorm.meta.php
+
 
 # ==============================================
 # GIT SPECIFIC
 # ==============================================
 .git-rewrite/
-.git-rewrite
 .git-blame-ignore-revs
+
 
 # ==============================================
 # SYSTEM FILES
@@ -237,6 +100,7 @@ Homestead.json
 ehthumbs.db
 Thumbs.db
 
+
 # ==============================================
 # BACKUP FILES
 # ==============================================
@@ -246,139 +110,67 @@ Thumbs.db
 *.backup
 *.backup.*
 *.bak
-*.bakcup
 *.new
+
 
 # ==============================================
 # DEVELOPMENT TOOLS
 # ==============================================
 .windsurf/
 .cursor/
-.phpstorm.meta.php
+
 
 # ==============================================
-# DOCUMENTATION CACHE
+# DOCUMENTATION & ANALYSIS CACHE
 # ==============================================
 docs/phpstan/
 docs/cache/
 
+
 # ==============================================
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
-# LANGUAGE FILES
+# LANGUAGE FILES (generated / duplicated)
 # ==============================================
 lang/lang/
 resources/lang/
 
+
 # ==============================================
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/develop
->>>>>>> 9567487 (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
-resources/views/Components_old
 database/Migrations_old/
-database/Migrations_old
 database/Seeders_old/
-database/Seeders_old
 database/Factories_old/
-database/Factories_old
-database/Factories_
 database_old/
-<<<<<<< HEAD
-database_old
-=======
-=======
-=======
->>>>>>> b55470f (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-resources/views/Components_old
-database/Migrations_old/
-database/Migrations_old
-database/Seeders_old/
-database/Seeders_old
-database/Factories_old/
-database/Factories_old
-database/Factories_
-database_old/
-database_old
-<<<<<<< HEAD
-<<<<<<< HEAD
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-resources/views/Components_old
-database/Migrations_old/
-database/Migrations_old
-database/Seeders_old/
-database/Seeders_old
-database/Factories_old/
-database/Factories_old
-database/Factories_
-database_old/
-database_old
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
+
 
 # ==============================================
 # MODULE SPECIFIC - UI
 # ==============================================
-# File di configurazione locale
+# Config locale
 config/local.php
 config/development.php
 
-# Asset compilati
+# Asset UI compilati
 public/css/compiled/
 public/js/compiled/
 public/mix-manifest.json
 
-# File temporanei di design
+# Design / UI tools
 *.psd
 *.sketch
 *.fig
 design_notes.txt
 
-# ==============================================
-# END OF UI .GITIGNORE
-# ==============================================
 
-# 🚫 File specifici del progetto
+# ==============================================
+# PROJECT-SPECIFIC
+# ==============================================
 *.fila2
 laravel
 public_html
+
+
+# ==============================================
+# END OF UI .GITIGNORE
+# ==============================================

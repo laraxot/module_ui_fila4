@@ -14,17 +14,8 @@ final class SliderDataCollection extends Data
      */
     public DataCollection $slider_data;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct() {}
-=======
     public function __construct()
     {
     }
->>>>>>> 161e28f (Lint)
-=======
-    public function __construct()
-    {
-    }
->>>>>>> laraxot/develop
 }

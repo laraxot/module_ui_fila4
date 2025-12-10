@@ -17,19 +17,9 @@ class GetUserDataAction
     {
         $user = Auth::user();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!$user instanceof User) {
-=======
         if (! $user instanceof User) {
->>>>>>> 359d970 (.)
-=======
         if (! $user instanceof User) {
->>>>>>> 161e28f (Lint)
-=======
-        if (! $user instanceof User) {
->>>>>>> laraxot/develop
             return null;
         }
 
@@ -37,19 +27,9 @@ class GetUserDataAction
         $avatarValue = null;
         if (isset($user->profile_photo_path) && is_string($user->profile_photo_path)) {
             $avatarValue = $user->profile_photo_path;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         } elseif ($user->relationLoaded('profile') && $user->profile !== null) {
-=======
         } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
->>>>>>> 359d970 (.)
-=======
         } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
->>>>>>> 161e28f (Lint)
-=======
-        } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
->>>>>>> laraxot/develop
             $profile = $user->profile;
             if (is_object($profile) && method_exists($profile, 'getAvatarUrl')) {
                 $avatarValue = $profile->getAvatarUrl();
@@ -66,19 +46,9 @@ class GetUserDataAction
 
         // Get settings - could be in profile or extra attributes
         $settingsArray = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($user->relationLoaded('profile') && $user->profile !== null) {
-=======
         if ($user->relationLoaded('profile') && null !== $user->profile) {
->>>>>>> 359d970 (.)
-=======
         if ($user->relationLoaded('profile') && null !== $user->profile) {
->>>>>>> 161e28f (Lint)
-=======
-        if ($user->relationLoaded('profile') && null !== $user->profile) {
->>>>>>> laraxot/develop
             $profile = $user->profile;
             if (is_object($profile) && isset($profile->extra)) {
                 $extra = $profile->extra;
@@ -102,23 +72,12 @@ class GetUserDataAction
             id: (int) $user->id,
             name: (string) ($user->name ?? ''),
             email: (string) ($user->email ?? ''),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             avatar: $avatarValue !== null ? (string) $avatarValue : null,
             role: $roleValue !== null ? (string) $roleValue : null,
-=======
             avatar: null !== $avatarValue ? (string) $avatarValue : null,
             role: null !== $roleValue ? (string) $roleValue : null,
->>>>>>> 359d970 (.)
-=======
             avatar: null !== $avatarValue ? (string) $avatarValue : null,
             role: null !== $roleValue ? (string) $roleValue : null,
->>>>>>> 161e28f (Lint)
-=======
-            avatar: null !== $avatarValue ? (string) $avatarValue : null,
-            role: null !== $roleValue ? (string) $roleValue : null,
->>>>>>> laraxot/develop
             permissions: $permissionsArray,
             settings: $settingsArray,
         );

@@ -1,18 +1,8 @@
 {
     "name": "UI",
     "alias": "ui",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "description": "Sistema di componenti UI riutilizzabili e design system per interfacce utente coerenti",
     "keywords": ["ui", "components", "design-system", "frontend", "tailwind"],
-=======
-    "description": "",
-    "keywords": [],
->>>>>>> 161e28f (Lint)
-=======
-    "description": "",
-    "keywords": [],
->>>>>>> laraxot/develop
     "priority": 0,
     "providers": [
         "Modules\\UI\\Providers\\UIServiceProvider",

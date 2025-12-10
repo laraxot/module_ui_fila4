@@ -72,15 +72,8 @@ final class VideoSpatie
                 // ->customProperties(fn(Forms\Get $get) => ['gallery_id' => $get('gallery_id')]),
                 // Forms\Components\SpatieMediaLibraryFileUpload::make('media_id')
             ])
-<<<<<<< HEAD
-<<<<<<< HEAD
             ->columns($context === 'form' ? 2 : 1);
-=======
             ->columns('form' === $context ? 2 : 1);
->>>>>>> 161e28f (Lint)
-=======
-            ->columns('form' === $context ? 2 : 1);
->>>>>>> laraxot/develop
     }
 
     public static function getRatios(): array

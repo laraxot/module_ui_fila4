@@ -20,17 +20,9 @@ final class Std extends Component
      */
     public function __construct(
         public string $tpl = '',
-<<<<<<< HEAD
-<<<<<<< HEAD
     ) {}
-=======
     ) {
     }
->>>>>>> 161e28f (Lint)
-=======
-    ) {
-    }
->>>>>>> laraxot/develop
 
     public function render(): Renderable
     {

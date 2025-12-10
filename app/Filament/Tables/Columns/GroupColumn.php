@@ -32,19 +32,9 @@ class GroupColumn extends Column
         $filtered = array_filter($form, function (mixed $item): bool {
             return $item instanceof Column;
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         
-=======
 
->>>>>>> 359d970 (.)
-=======
 
->>>>>>> 161e28f (Lint)
-=======
-
->>>>>>> laraxot/develop
         /** @var array<int|string, Column> $filtered */
         /** @var array<int, Column> $filteredValues */
         $filteredValues = array_values($filtered);

@@ -35,99 +35,44 @@ class UserCalendarWidget extends Widget
 
     /**
      * @param array<string, mixed> $fetchInfo
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
      *
->>>>>>> 359d970 (.)
-=======
      *
->>>>>>> 161e28f (Lint)
-=======
-     *
->>>>>>> laraxot/develop
      * @return array<int, array<string, mixed>>
      */
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!class_exists($action)) {
-=======
         if (! class_exists($action)) {
->>>>>>> 359d970 (.)
-=======
         if (! class_exists($action)) {
->>>>>>> 161e28f (Lint)
-=======
-        if (! class_exists($action)) {
->>>>>>> laraxot/develop
             return [];
         }
 
         $actionInstance = app($action);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!is_object($actionInstance) || !method_exists($actionInstance, 'execute')) {
-=======
         if (! is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
->>>>>>> 359d970 (.)
-=======
         if (! is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
->>>>>>> 161e28f (Lint)
-=======
-        if (! is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
->>>>>>> laraxot/develop
             return [];
         }
 
         $result = $actionInstance->execute($fetchInfo);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!is_array($result)) {
             return [];
         }
         /** @var array<int, array<string, mixed>> $result */
-=======
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
         if (! is_array($result)) {
             return [];
         }
 
         /* @var array<int, array<string, mixed>> $result */
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
         return $result;
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return array<int, \Filament\Forms\Components\TextInput|\Filament\Schemas\Components\Grid>
-=======
      * @return array<int, TextInput|Grid>
->>>>>>> 359d970 (.)
-=======
      * @return array<int, TextInput|Grid>
->>>>>>> 161e28f (Lint)
-=======
-     * @return array<int, TextInput|Grid>
->>>>>>> laraxot/develop
      */
     public function getFormSchema(): array
     {
@@ -138,26 +83,14 @@ class UserCalendarWidget extends Widget
             if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
                 if (is_array($resultRaw)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                     /** @var array<int, \Filament\Forms\Components\TextInput|\Filament\Schemas\Components\Grid> $result */
                     $result = $resultRaw;
-=======
                     /** @var array<int, TextInput|Grid> $result */
                     $result = $resultRaw;
 
->>>>>>> 359d970 (.)
-=======
                     /** @var array<int, TextInput|Grid> $result */
                     $result = $resultRaw;
 
->>>>>>> 161e28f (Lint)
-=======
-                    /** @var array<int, TextInput|Grid> $result */
-                    $result = $resultRaw;
-
->>>>>>> laraxot/develop
                     return $result;
                 }
             }

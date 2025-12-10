@@ -5,32 +5,12 @@ declare(strict_types=1);
 namespace Modules\UI\Tests\Unit\Widgets;
 
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Modules\UI\Filament\Widgets\FullCalendarWidget;
 // use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget; // Temporaneamente disabilitato per Filament v4
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
-<<<<<<< HEAD
 use Modules\UI\Filament\Widgets\FullCalendarWidget;
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
 // use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget; // Temporaneamente disabilitato per Filament v4
-=======
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
->>>>>>> e6782b2 (.)
-=======
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
->>>>>>> b55470f (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
 
 // Mock class per testare il BaseCalendarWidget
 class MockCalendarWidget extends BaseCalendarWidget
@@ -77,58 +57,24 @@ class MockEventModel extends Model
         return 'mock_events';
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9567487 (.)
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> 9567487 (.)
->>>>>>> laraxot/develop
 
 beforeEach(function () {
     $this->widget = new MockCalendarWidget();
 });
 
 describe('BaseCalendarWidget Inheritance', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
     it('extends FullCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
     });
     it('extends FullCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
     });
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
-<<<<<<< HEAD
     it('extends FullCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
     });
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
-=======
     it('extends FullCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
     });
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
-    it('extends FullCalendarWidget', function () {
-        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
-    });
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
 
     it('extends BaseCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(BaseCalendarWidget::class);
@@ -137,42 +83,10 @@ describe('BaseCalendarWidget Inheritance', function () {
     it('has model property set', function () {
         expect($this->widget->model)->toBe(MockEventModel::class);
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
 
     // it('extends FullCalendarWidget', function () {
     //     expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
     // }); // Temporaneamente disabilitato per Filament v4
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/develop
-=======
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
 });
 
 describe('BaseCalendarWidget Configuration', function () {

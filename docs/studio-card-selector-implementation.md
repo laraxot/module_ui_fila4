@@ -1,53 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 1f9515b (.)
-=======
->>>>>>> 8ee2a17 (.)
-=======
->>>>>>> laraxot/develop
 # StudioCardSelector Component - Modulo UI
 
 ## 🎯 **Panoramica**
 Componente Filament Form altamente riutilizzabile per la selezione di studi medici/odontoiatrici attraverso un'interfaccia card visuale moderna e responsive.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## 🏗️ **Architettura Component**
-=======
 
 ## 🏗️ **Architettura Component**
 
->>>>>>> 1f9515b (.)
-=======
 
 ## 🏗️ **Architettura Component**
 
->>>>>>> 8ee2a17 (.)
-=======
-
-## 🏗️ **Architettura Component**
-
->>>>>>> laraxot/develop
 ### Classe PHP
 ```php
 // Modules/UI/app/Forms/Components/StudioCardSelector.php
 <?php
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
 namespace Modules\UI\Forms\Components;
 use Filament\Forms\Components\Field;
 use Illuminate\Database\Eloquent\Collection;
 use Closure;
-=======
-=======
->>>>>>> 8ee2a17 (.)
-=======
->>>>>>> laraxot/develop
 
 declare(strict_types=1);
 
@@ -57,57 +27,27 @@ use Filament\Forms\Components\Field;
 use Illuminate\Database\Eloquent\Collection;
 use Closure;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1f9515b (.)
-=======
->>>>>>> 8ee2a17 (.)
-=======
->>>>>>> laraxot/develop
 class StudioCardSelector extends Field
 {
     protected string $view = 'ui::forms.components.studio-card-selector';
     
     // Dati studios da visualizzare
     protected Collection|Closure|null $studios = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 1f9515b (.)
-=======
     
->>>>>>> 8ee2a17 (.)
-=======
-    
->>>>>>> laraxot/develop
     // Personalizzazioni UI
     protected bool $showDistance = false;
     protected bool $showSpecializations = false;
     protected bool $showPhone = false;
     protected string $cardLayout = 'default'; // 'default', 'compact', 'detailed'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 1f9515b (.)
-=======
     
->>>>>>> 8ee2a17 (.)
-=======
-    
->>>>>>> laraxot/develop
     // Configure studios data source
     public function studios(Collection|Closure $studios): static
     {
         $this->studios = $studios;
         return $this;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Enable/disable features
     public function showDistance(bool $show = true): static
         $this->showDistance = $show;
@@ -138,11 +78,6 @@ class StudioCardSelector extends Field
 // Nel widget FindDoctorAndAppointmentWidget
 use Modules\UI\Forms\Components\StudioCardSelector;
 protected function getStudioStepSchema(): array
-=======
-=======
->>>>>>> 8ee2a17 (.)
-=======
->>>>>>> laraxot/develop
     
     // Enable/disable features
     public function showDistance(bool $show = true): static
@@ -213,13 +148,6 @@ use Modules\UI\Forms\Components\StudioCardSelector;
 
 protected function getStudioStepSchema(): array
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1f9515b (.)
-=======
->>>>>>> 8ee2a17 (.)
-=======
->>>>>>> laraxot/develop
     return [
         'selected_studio' => StudioCardSelector::make('selected_studio')
             ->studios(fn (Get $get) => $this->getStudiosForLocation($get))
@@ -227,39 +155,17 @@ protected function getStudioStepSchema(): array
             ->showPhone()
             ->required()
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 private function getStudiosForLocation(Get $get): Collection
     $cap = $get('cap');
     $province = $get('province'); 
     $region = $get('region');
     if (!$cap || !$province || !$region) {
         return collect();
-<<<<<<< HEAD
     }
     
-<<<<<<< HEAD
-<<<<<<< HEAD
     return \Modules\<nome progetto>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
-=======
-    return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
->>>>>>> 3057426 (.)
-=======
-=======
->>>>>>> 4d64b9a (.)
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
     return \Modules\SaluteOra\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
-<<<<<<< HEAD
->>>>>>> 727968c (.)
->>>>>>> ef5ce98 (.)
-=======
->>>>>>> 4d64b9a (.)
-=======
-=======
->>>>>>> 8ee2a17 (.)
-=======
->>>>>>> laraxot/develop
 }
 
 private function getStudiosForLocation(Get $get): Collection
@@ -272,16 +178,9 @@ private function getStudiosForLocation(Get $get): Collection
         return collect();
     }
     
-<<<<<<< HEAD
-<<<<<<< HEAD
     return \Modules\SaluteOra\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
->>>>>>> 1f9515b (.)
-=======
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
->>>>>>> 8ee2a17 (.)
-=======
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
->>>>>>> laraxot/develop
         $q->where('postal_code', $cap)
           ->where('administrative_area_level_3', $province)
           ->where('administrative_area_level_2', $region);
@@ -289,17 +188,9 @@ private function getStudiosForLocation(Get $get): Collection
     ->where('active', true)
     ->with(['address', 'doctors', 'specializations'])
     ->get();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## 🌐 **Sistema Traduzioni**
 ### File Traduzioni UI
 // Modules/UI/lang/it/studio-selector.php
-=======
-=======
->>>>>>> 8ee2a17 (.)
-=======
->>>>>>> laraxot/develop
 }
 ```
 
@@ -310,13 +201,6 @@ private function getStudiosForLocation(Get $get): Collection
 // Modules/UI/lang/it/studio-selector.php
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1f9515b (.)
-=======
->>>>>>> 8ee2a17 (.)
-=======
->>>>>>> laraxot/develop
 return [
     'actions' => [
         'select' => [
@@ -327,25 +211,12 @@ return [
     'empty' => [
         'title' => 'Nessuno studio trovato',
         'description' => 'Non ci sono studi disponibili per la zona selezionata.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     ],
->>>>>>> 1f9515b (.)
-=======
     ],
->>>>>>> 8ee2a17 (.)
-=======
-    ],
->>>>>>> laraxot/develop
     'fields' => [
         'distance' => [
             'label' => 'Distanza',
             'helper_text' => 'Distanza approssimativa dalla tua posizione',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         'phone' => [
             'label' => 'Telefono',
             'helper_text' => 'Numero di telefono dello studio',
@@ -357,47 +228,18 @@ return [
 ### Modulo UI
 - [Components Overview](./components.md)
 - [Form Components Guide](./form-components.md)
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### Modulo <nome progetto>
 - [Widget Analysis](../<nome progetto>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
-=======
-### Modulo Generico
-- [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
->>>>>>> 3057426 (.)
-=======
-=======
->>>>>>> 4d64b9a (.)
 ### Modulo Generico
 - [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
 ### Modulo SaluteOra
 - [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
-<<<<<<< HEAD
->>>>>>> 727968c (.)
->>>>>>> ef5ce98 (.)
 
-=======
->>>>>>> 4d64b9a (.)
 ---
 **Component Status**: 📋 Documented - Ready for Implementation  
 **Reusability**: 🔄 High - Cross-module compatible  
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 **Last Updated**: January 2025 
->>>>>>> 3057426 (.)
-=======
-**Last Updated**: January 2025 
->>>>>>> 4d64b9a (.)
-=======
->>>>>>> da29ca4 (.)
-=======
-=======
->>>>>>> 8ee2a17 (.)
-=======
->>>>>>> laraxot/develop
         ],
         'phone' => [
             'label' => 'Telefono',
@@ -417,30 +259,15 @@ return [
 - [Components Overview](./components.md)
 - [Form Components Guide](./form-components.md)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### Modulo SaluteOra
 - [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
-=======
 ### Modulo Generico
 - [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
->>>>>>> 8ee2a17 (.)
-=======
-### Modulo Generico
-- [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
->>>>>>> laraxot/develop
 
 ---
 
 **Component Status**: 📋 Documented - Ready for Implementation  
 **Reusability**: 🔄 High - Cross-module compatible  
-<<<<<<< HEAD
-<<<<<<< HEAD
 **Last Updated**: January 2025 
->>>>>>> 1f9515b (.)
-=======
 **Last Updated**: January 2025 
->>>>>>> 8ee2a17 (.)
-=======
 **Last Updated**: January 2025 
->>>>>>> laraxot/develop

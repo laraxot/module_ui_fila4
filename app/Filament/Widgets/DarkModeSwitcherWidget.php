@@ -4,53 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/develop
-<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
 use Filament\Forms\Components\Component;
 use Override;
 use Filament\Forms\Form;
 use Filament\Forms\Form;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Forms\Form;
-=======
-=======
->>>>>>> laraxot/develop
-=======
 use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Forms\Form;
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
 use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Forms\Form;
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> laraxot/develop
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
