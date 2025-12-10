@@ -1,9 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 declare(strict_types=1);
 
 return [
@@ -15,20 +11,6 @@ return [
      * | This is the array for the languages.
      * |
      */
-<<<<<<< HEAD
-=======
-return [
-    /*
-    |--------------------------------------------------------------------------
-    | Languages
-    |--------------------------------------------------------------------------
-    |
-    | This is the array for the languages.
-    |
-    */
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'languages' => [
         'it' => [
             'name' => 'Italiano',
@@ -43,10 +25,7 @@ return [
             'regional' => 'en_GB',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
+
     /*
      * |--------------------------------------------------------------------------
      * | Language Detection
@@ -55,29 +34,12 @@ return [
      * | This is the configuration for the language detection.
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Language Detection
-    |--------------------------------------------------------------------------
-    |
-    | This is the configuration for the language detection.
-    |
-    */
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'detect' => [
         'browser' => true,
         'session' => true,
         'cookie' => true,
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
+
     /*
      * |--------------------------------------------------------------------------
      * | Language Selection
@@ -86,28 +48,11 @@ return [
      * | This is the configuration for the language selection.
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Language Selection
-    |--------------------------------------------------------------------------
-    |
-    | This is the configuration for the language selection.
-    |
-    */
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'selection' => [
         'default' => 'it',
         'fallback' => 'en',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
+
     /*
      * |--------------------------------------------------------------------------
      * | URL Configuration
@@ -116,28 +61,11 @@ return [
      * | This is the configuration for the URL.
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | URL Configuration
-    |--------------------------------------------------------------------------
-    |
-    | This is the configuration for the URL.
-    |
-    */
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'url' => [
         'prefix' => true,
         'hide_default' => false,
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
+
     /*
      * |--------------------------------------------------------------------------
      * | Route Configuration
@@ -146,20 +74,6 @@ return [
      * | This is the configuration for the routes.
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Route Configuration
-    |--------------------------------------------------------------------------
-    |
-    | This is the configuration for the routes.
-    |
-    */
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'route' => [
         'prefix' => '{locale}',
         'middleware' => [
