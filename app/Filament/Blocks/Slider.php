@@ -4,16 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Blocks;
 
-<<<<<<< HEAD
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-=======
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Builder\Block;
-use Filament\Forms\Components\TextInput;
-use Modules\UI\Filament\Forms\Components\RadioImage;
->>>>>>> e3274ea (.)
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 
 final class Slider
@@ -34,11 +27,7 @@ final class Slider
                 //     ->options($options),
                 // ->afterStateHydrated(static fn ($state, $set) => $state || $set('level', 'h2')),
 
-<<<<<<< HEAD
                 Select::make('view')->options($options),
-=======
-                RadioImage::make('view')->options($options),
->>>>>>> e3274ea (.)
             ])
             ->columns(1);
     }
