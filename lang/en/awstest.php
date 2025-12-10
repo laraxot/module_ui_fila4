@@ -8,6 +8,20 @@ return [
         'heading' => 'AWS Configuration Diagnostics',
         'description' => 'Page to test and diagnose complete AWS configuration',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'fields' => [
         'cloudfront_url' => [
             'label' => 'CloudFront Distribution URL',
@@ -25,6 +39,20 @@ return [
             'helper_text' => 'Overview of current AWS configuration',
         ],
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'actions' => [
         'test_s3_connection' => [
             'label' => 'Test Basic Connection',
@@ -75,6 +103,20 @@ return [
             'error' => 'Error during full diagnostic',
         ],
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'sections' => [
         's3_connection_test' => [
             'label' => 'S3 Connection Test',
@@ -93,6 +135,20 @@ return [
             'description' => 'Run all AWS diagnostic tests',
         ],
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'tabs' => [
         'tests' => [
             'label' => 'Tests',
@@ -110,6 +166,20 @@ return [
             'label' => 'Diagnostics',
         ],
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'notifications' => [
         's3_connection_successful' => 'S3 Connection Successful',
         's3_connection_failed' => 'S3 Connection Failed',
@@ -117,6 +187,20 @@ return [
         'cloudfront_config_error' => 'CloudFront Config Error',
         'full_diagnostic_completed' => 'Full Diagnostic Completed',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     'test_results' => [
         'status_success' => 'success',
         'status_error' => 'error',
