@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 @props(['title' => 'Verifica Idoneità'])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -167,12 +158,4 @@ declare(strict_types=1);
             </div>
         @endif
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 @endif
-=======
-@endif 
->>>>>>> 727968c (.)
-=======
-@endif
->>>>>>> ef3c5fa (.)
