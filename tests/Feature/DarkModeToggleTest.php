@@ -6,13 +6,13 @@ use Tests\TestCase;
 
 uses(TestCase::class);
 
-beforeEach(function (): void {
+beforeEach(function () {
     if (function_exists('config')) {
         config(['app.locale' => 'en']);
     }
 });
 
-test('pages include dark mode toggle functionality', function (): void {
+test('pages include dark mode toggle functionality', function () {
     // Since home route redirects, test that our theme supports dark mode functionality
     // by checking the JSON config and component files exist
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
@@ -26,7 +26,7 @@ test('pages include dark mode toggle functionality', function (): void {
     expect($heroContent)->toContain('dark:to-slate-950');
 });
 
-test('dark mode classes are present in components', function (): void {
+test('dark mode classes are present in components', function () {
     // Test that our component files include proper dark mode classes
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $heroContent = file_get_contents($heroPath);
@@ -37,7 +37,7 @@ test('dark mode classes are present in components', function (): void {
     expect($heroContent)->toContain('dark:to-slate-950');
 });
 
-test('kalshi hero component supports dark mode', function (): void {
+test('kalshi hero component supports dark mode', function () {
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
 
@@ -51,7 +51,7 @@ test('kalshi hero component supports dark mode', function (): void {
     }
 });
 
-test('category tabs support dark mode', function (): void {
+test('category tabs support dark mode', function () {
     // Test that navigation component file has dark mode classes
     $tabsPath = base_path('Themes/TwentyOne/resources/views/components/blocks/navigation/category-tabs.blade.php');
 
@@ -66,7 +66,7 @@ test('category tabs support dark mode', function (): void {
     }
 });
 
-test('market cards support dark mode', function (): void {
+test('market cards support dark mode', function () {
     // Test that our market card components support dark mode
     $cardsPath = base_path('Themes/TwentyOne/resources/views/components/blocks/markets/data-driven-cards.blade.php');
 
@@ -84,7 +84,7 @@ test('market cards support dark mode', function (): void {
     }
 });
 
-test('consistent dark mode color scheme', function (): void {
+test('consistent dark mode color scheme', function () {
     // Test that hero component uses consistent dark mode colors
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
@@ -95,7 +95,7 @@ test('consistent dark mode color scheme', function (): void {
     }
 });
 
-test('dark mode javascript initialization', function (): void {
+test('dark mode javascript initialization', function () {
     // Test that components support theme switching functionality
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     expect(file_exists($heroPath))->toBeTrue();
@@ -104,7 +104,7 @@ test('dark mode javascript initialization', function (): void {
     expect(true)->toBeTrue();
 });
 
-test('proper contrast ratios in dark mode', function (): void {
+test('proper contrast ratios in dark mode', function () {
     // Test that hero component has proper contrast
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
@@ -118,7 +118,7 @@ test('proper contrast ratios in dark mode', function (): void {
     }
 });
 
-test('gradient backgrounds work in dark mode', function (): void {
+test('gradient backgrounds work in dark mode', function () {
     // Test that hero component gradients have dark variants
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
@@ -130,7 +130,7 @@ test('gradient backgrounds work in dark mode', function (): void {
     }
 });
 
-test('interactive elements have dark mode hover states', function (): void {
+test('interactive elements have dark mode hover states', function () {
     // Test that hero component buttons have proper hover states
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
@@ -143,7 +143,7 @@ test('interactive elements have dark mode hover states', function (): void {
     }
 });
 
-test('border colors adapt to dark mode', function (): void {
+test('border colors adapt to dark mode', function () {
     // Test that components have appropriate dark mode border colors
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
@@ -157,7 +157,7 @@ test('border colors adapt to dark mode', function (): void {
     }
 });
 
-test('backdrop effects work in dark mode', function (): void {
+test('backdrop effects work in dark mode', function () {
     // Test that hero component has backdrop effects
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
     $content = file_get_contents($heroPath);
