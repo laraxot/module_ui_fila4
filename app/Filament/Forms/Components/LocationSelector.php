@@ -361,7 +361,7 @@ class LocationSelector extends Group
 
             $regione = is_array($comune->regione) ? $comune->regione : [];
             $provincia = is_array($comune->provincia) ? $comune->provincia : [];
-            
+
             return [
                 'region' => [
                     /* @phpstan-ignore-next-line nullCoalesce.offset */
