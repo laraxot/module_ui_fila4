@@ -16,7 +16,8 @@ class MockCalendarWidget extends BaseCalendarWidget
     public string $model = MockEventModel::class;
 
     /**
-     * @param  array<string, mixed>  $fetchInfo
+     * @param array<string, mixed> $fetchInfo
+     *
      * @return array<int, array<string, string|int>>
      */
     public function fetchEvents(array $fetchInfo): array
