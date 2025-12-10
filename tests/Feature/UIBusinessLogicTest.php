@@ -258,8 +258,13 @@ describe('UI Business Logic Integration', function (): void {
         });
     });
 
+<<<<<<< HEAD
     describe('Component Service Business Rules', function (): void {
         it('enforces component rendering rules', function (): void {
+=======
+    describe('Component Service Business Rules', function () {
+        it('enforces component rendering rules', function () {
+>>>>>>> 3b732b6 (.)
             $service = new ComponentService;
 
             /** @var \Illuminate\Database\Eloquent\Collection */
@@ -281,7 +286,11 @@ describe('UI Business Logic Integration', function (): void {
             expect($component->template)->toContain('</div>');
         });
 
+<<<<<<< HEAD
         it('enforces component caching rules', function (): void {
+=======
+        it('enforces component caching rules', function () {
+>>>>>>> 3b732b6 (.)
             $service = new ComponentService;
 
             /** @var \Illuminate\Database\Eloquent\Collection */
@@ -304,7 +313,11 @@ describe('UI Business Logic Integration', function (): void {
             expect($component->cache_ttl)->toBeLessThan(86400); // 24 ore
         });
 
+<<<<<<< HEAD
         it('enforces component validation rules', function (): void {
+=======
+        it('enforces component validation rules', function () {
+>>>>>>> 3b732b6 (.)
             $service = new ComponentService;
 
             /** @var \Illuminate\Database\Eloquent\Collection */
@@ -328,8 +341,13 @@ describe('UI Business Logic Integration', function (): void {
         });
     });
 
+<<<<<<< HEAD
     describe('Theme Service Business Rules', function (): void {
         it('enforces theme compilation rules', function (): void {
+=======
+    describe('Theme Service Business Rules', function () {
+        it('enforces theme compilation rules', function () {
+>>>>>>> 3b732b6 (.)
             $service = new ThemeService;
 
             /** @var \Illuminate\Database\Eloquent\Collection */
@@ -349,7 +367,11 @@ describe('UI Business Logic Integration', function (): void {
             expect($theme->source_path)->not->toBe($theme->compiled_path);
         });
 
+<<<<<<< HEAD
         it('enforces theme asset compilation', function (): void {
+=======
+        it('enforces theme asset compilation', function () {
+>>>>>>> 3b732b6 (.)
             $service = new ThemeService;
 
             /** @phpstan-ignore-next-line property.notFound */
@@ -376,7 +398,11 @@ describe('UI Business Logic Integration', function (): void {
             }
         });
 
+<<<<<<< HEAD
         it('enforces theme configuration inheritance', function (): void {
+=======
+        it('enforces theme configuration inheritance', function () {
+>>>>>>> 3b732b6 (.)
             $service = new ThemeService;
 
             /** @var \Illuminate\Database\Eloquent\Collection */
