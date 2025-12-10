@@ -25,9 +25,9 @@ class TableLayoutToggleHeaderAction extends Action
             // ->tooltip(trans('setting::database_connection.actions.database-backup.tooltip'))
             // ->icon(trans('setting::database_connection.actions.database-backup.icon'))
             // ->icon($this->listIcon)
-            /**
             /*
-            /*
+             * /*
+             * /*
              * @param object{layoutView?: string|null} $livewire
              */
             ->icon(function (object $livewire): string {
@@ -41,9 +41,9 @@ class TableLayoutToggleHeaderAction extends Action
 
                 return $this->listIcon; // default icon
             })
-            /**
             /*
-            /*
+             * /*
+             * /*
              * @param object{layoutView?: string|null} $livewire
              */
             ->action(function (object $livewire): void {
