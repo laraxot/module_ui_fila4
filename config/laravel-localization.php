@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 declare(strict_types=1);
 
 return [
@@ -12,6 +15,7 @@ return [
      * | This is the array for the languages.
      * |
      */
+<<<<<<< HEAD
 =======
 return [
     /*
@@ -23,6 +27,8 @@ return [
     |
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'languages' => [
         'it' => [
             'name' => 'Italiano',
@@ -38,6 +44,9 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     /*
      * |--------------------------------------------------------------------------
      * | Language Detection
@@ -46,6 +55,7 @@ return [
      * | This is the configuration for the language detection.
      * |
      */
+<<<<<<< HEAD
 =======
 
     /*
@@ -57,12 +67,17 @@ return [
     |
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'detect' => [
         'browser' => true,
         'session' => true,
         'cookie' => true,
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     /*
      * |--------------------------------------------------------------------------
      * | Language Selection
@@ -71,6 +86,7 @@ return [
      * | This is the configuration for the language selection.
      * |
      */
+<<<<<<< HEAD
 =======
 
     /*
@@ -82,11 +98,16 @@ return [
     |
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'selection' => [
         'default' => 'it',
         'fallback' => 'en',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     /*
      * |--------------------------------------------------------------------------
      * | URL Configuration
@@ -95,6 +116,7 @@ return [
      * | This is the configuration for the URL.
      * |
      */
+<<<<<<< HEAD
 =======
 
     /*
@@ -106,11 +128,16 @@ return [
     |
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'url' => [
         'prefix' => true,
         'hide_default' => false,
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
     /*
      * |--------------------------------------------------------------------------
      * | Route Configuration
@@ -119,6 +146,7 @@ return [
      * | This is the configuration for the routes.
      * |
      */
+<<<<<<< HEAD
 =======
 
     /*
@@ -130,6 +158,8 @@ return [
     |
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     'route' => [
         'prefix' => '{locale}',
         'middleware' => [
