@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\View\Component;
 
-<<<<<<< HEAD
-test('ui components can be rendered', function (): void {
-=======
 test('ui components can be rendered', function () {
->>>>>>> 3b732b6 (.)
     $component = new class extends Component
     {
         public function render()
@@ -20,7 +16,7 @@ test('ui components can be rendered', function () {
     expect($component)->toBeInstanceOf(Component::class);
 });
 
-test('ui button component has correct attributes', function (): void {
+test('ui button component has correct attributes', function () {
     $view = view('ui::components.ui.button', [
         'type' => 'primary',
         'size' => 'md',
@@ -30,7 +26,7 @@ test('ui button component has correct attributes', function (): void {
     expect($view->render())->toContain('btn')->toContain('btn-primary');
 });
 
-test('ui card component renders content', function (): void {
+test('ui card component renders content', function () {
     $view = view('ui::components.ui.card', [
         'title' => 'Test Card',
         'content' => 'Test Content',
