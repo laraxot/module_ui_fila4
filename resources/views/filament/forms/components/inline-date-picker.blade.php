@@ -1,8 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 {{--
 /**
  * InlineDatePicker View - KISS Principle
@@ -142,4 +160,20 @@ declare(strict_types=1);
 .inline-date-picker button {
     transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+<<<<<<< HEAD
 </style>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+</style>
+=======
+</style> 
+>>>>>>> a12f125f4a (.)
+=======
+</style>
+>>>>>>> b93ef594b4 (.)
+=======
+</style> 
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
