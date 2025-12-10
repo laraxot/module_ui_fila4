@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace \Filament\Forms\Forms\Components\Field;
+namespace Modules\UI\Filament\Forms\Components\Field;
 
 use Filament\Forms\Components\Field;
 

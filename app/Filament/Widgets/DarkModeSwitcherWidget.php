@@ -4,16 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
-use Filament\Forms\Components\Component;
-use Filament\Forms\Form;
-use Filament\Forms\Form;
-use Filament\Forms\Form;
-use Filament\Forms\Form;
-use Filament\Forms\Form;
-use Filament\Schemas\Components\Component;
-use Filament\Schemas\Components\Component;
-use Filament\Schemas\Components\Component;
-use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;

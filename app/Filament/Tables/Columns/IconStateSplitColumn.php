@@ -72,32 +72,17 @@ class IconStateSplitColumn extends Column
                 
                 $stateInstance = new $stateClassItem($record);
                 Assert::isInstanceOf($stateInstance, StateContract::class);
-                
-                if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
-                    continue;
-                }
-
-                $stateInstance = new $stateClassItem($record);
-                Assert::isInstanceOf($stateInstance, StateContract::class);
 
                 // StateContract provides icon(), label(), color()
                 $icon = $stateInstance->icon();
                 $label = $stateInstance->label();
                 $color = $stateInstance->color();
-                
-
 
                 // Type narrowing: questi metodi restituiscono string
                 $iconString = (string) $icon;
                 $labelString = (string) $label;
                 $colorString = (string) $color;
                 
-                // $stateKey è già string dalla chiave dell'array
-                
-
-                // $stateKey è già string dalla chiave dell'array
-
-
                 // $stateKey è già string dalla chiave dell'array
 
                 $result[$stateKey] = [
@@ -136,30 +121,11 @@ class IconStateSplitColumn extends Column
         }
 
         if (!($record->state instanceof State)) {
-        if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
-            return false;
-        }
-
-        $recordRaw = $this->modelClass::find($recordId);
-
-        if (! $recordRaw || ! is_object($recordRaw)) {
-            return false;
-        }
-
-        /** @var Model $record */
-        $record = $recordRaw;
-
-        if (! isset($record->state) || ! is_object($record->state)) {
-            return false;
-        }
-
-        if (! ($record->state instanceof State)) {
             return false;
         }
 
         /** @var State $state */
         $state = $record->state;
-
 
         return $state->canTransitionTo($stateClass);
     }
@@ -208,10 +174,6 @@ class IconStateSplitColumn extends Column
             if (!is_array($state) || !isset($state['class']) || !isset($state['icon']) || !isset($state['color']) || !isset($state['label'])) {
                 continue;
             }
-            
-            if (! is_array($state) || ! isset($state['class']) || ! isset($state['icon']) || ! isset($state['color']) || ! isset($state['label'])) {
-                continue;
-            }
 
             $stateClass = $state['class'];
             $stateIcon = $state['icon'];
@@ -232,29 +194,11 @@ class IconStateSplitColumn extends Column
             if (!$this->canTransitionTo($recordId, $stateClassName)) {
                 continue;
             }
-            
-
-            if (! is_object($stateClass) || ! ($stateClass instanceof StateContract)) {
-                continue;
-            }
-
-            $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
-            if (null === $recordIdRaw || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
-                continue;
-            }
-
-            $recordId = is_int($recordIdRaw) ? $recordIdRaw : (string) $recordIdRaw;
-            $stateClassName = $stateClass::class;
-            if (! $this->canTransitionTo($recordId, $stateClassName)) {
-                continue;
-            }
 
             // Type narrowing: questi sono già string dalla struttura array
             $iconString = (string) $stateIcon;
             $colorString = (string) $stateColor;
             $labelString = (string) $stateLabel;
-            
-
 
             $actions["transition_to_{$stateKey}"] = Action::make(
                 "transition_to_{$stateKey}",
@@ -289,43 +233,24 @@ class IconStateSplitColumn extends Column
     {
         try {
             if (!class_exists($this->modelClass) || !method_exists($this->modelClass, 'find')) {
-                throw new Exception('Model class not found or invalid');
+                throw new \Exception('Model class not found or invalid');
             }
             
             $recordRaw = $this->modelClass::find($recordId);
 
             if (!$recordRaw || !is_object($recordRaw)) {
-                throw new Exception('Record non trovato');
-            if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
-                throw new \Exception('Model class not found or invalid');
-            }
-
-            $recordRaw = $this->modelClass::find($recordId);
-
-            if (! $recordRaw || ! is_object($recordRaw)) {
                 throw new \Exception('Record non trovato');
             }
 
             /** @var Model $record */
             $record = $recordRaw;
 
-            if (! isset($record->state) || ! is_object($record->state)) {
+            if (!isset($record->state) || !is_object($record->state)) {
                 throw new \Exception('State transition method not available');
             }
 
-            if (! ($record->state instanceof State)) {
-                throw new \Exception('State is not a valid State instance');
-            }
-
-            /** @var Model $record */
-            $record = $recordRaw;
-
-            if (!isset($record->state) || !is_object($record->state)) {
-                throw new Exception('State transition method not available');
-            }
-
             if (!($record->state instanceof State)) {
-                throw new Exception('State is not a valid State instance');
+                throw new \Exception('State is not a valid State instance');
             }
 
             // Esegui la transizione

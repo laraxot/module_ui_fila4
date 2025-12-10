@@ -18,8 +18,6 @@ class SelectStateColumn extends SelectColumn
         //  $this->selectablePlaceholder(false);
         $this->options(function (Model&HasStatesContract $record, mixed $state): array {
             $name = $this->getName();
-            if ($state === null) {
-            if (null === $state) {
             if (null === $state) {
                 // Record implements HasStatesContract which provides getDefaultStateFor()
                 $defaultStates = $record->getDefaultStateFor($name);
@@ -28,18 +26,9 @@ class SelectStateColumn extends SelectColumn
                 $states = is_array($states) ? $states : [];
                 $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
                 $statesKeys = array_map(fn($k) => is_string($k) ? $k : (string) $k, array_keys($states));
-            $combined = array_combine($statesKeys, $statesValues);
-            /** @var array<int|string, int|string> $result */
-            $result = $combined ?: [];
-            return $result;
-            }
-            
-                $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
-                $statesKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($states));
                 $combined = array_combine($statesKeys, $statesValues);
                 /** @var array<int|string, int|string> $result */
                 $result = $combined ?: [];
-
                 return $result;
             }
 
@@ -51,8 +40,6 @@ class SelectStateColumn extends SelectColumn
                         $states = is_array($transitionableStates) ? $transitionableStates : iterator_to_array($transitionableStates);
                     }
                 }
-            } catch (Exception $e) {
-            } catch (\Exception $e) {
             } catch (\Exception $e) {
                 // Record implements HasStatesContract which provides getStatesFor()
                 $fetchedStates = $record->getStatesFor($name);
@@ -77,8 +64,6 @@ class SelectStateColumn extends SelectColumn
                     } catch (\ReflectionException) {
                         // Property non esiste, $stateNameProperty rimane null
                     }
-                    if ($stateNameProperty !== null) {
-                    if (null !== $stateNameProperty) {
                     if (null !== $stateNameProperty) {
                         $statesValues = array_values($states);
                         /** @var list<int|string> $statesValuesTyped */
@@ -123,29 +108,14 @@ class SelectStateColumn extends SelectColumn
             $state = is_string($stateRaw) ? $stateRaw : $stateRaw;
             $message = '';
             
-            if (!isset($record->state) || !is_object($record->state)) {
-                return;
-            }
-            
-            if (!($record->state instanceof State)) {
-                return;
-            }
-            
-            if (! is_string($stateRaw) && ! ($stateRaw instanceof State)) {
-                return;
-            }
-
-            $state = is_string($stateRaw) ? $stateRaw : $stateRaw;
-            $message = '';
-
             if (! isset($record->state) || ! is_object($record->state)) {
                 return;
             }
-
+            
             if (! ($record->state instanceof State)) {
                 return;
             }
-
+            
             /** @var State $stateObj */
             $stateObj = $record->state;
             $stateObj->transitionTo($state, $message);

@@ -73,7 +73,6 @@ final class VideoSpatie
                 // Forms\Components\SpatieMediaLibraryFileUpload::make('media_id')
             ])
             ->columns($context === 'form' ? 2 : 1);
-            ->columns('form' === $context ? 2 : 1);
     }
 
     public static function getRatios(): array

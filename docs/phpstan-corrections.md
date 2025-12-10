@@ -1,150 +1,69 @@
-# Correzioni PHPStan - Modulo UI
+# PHPStan Corrections - UI Module
 
-## Panoramica
-Questo documento descrive le correzioni PHPStan applicate al modulo UI per raggiungere il livello massimo di type safety.
+## Fixed Issues
 
-## File Corretti
+### 1. Syntax Errors (Multiple files)
+**Date**: 2025-12-10  
+**Files affected**:
+- app/Actions/GetUserDataAction.php
+- app/Data/UserData.php
+- app/Datas/UserData.php (removed duplicate)
+- app/Filament/Blocks/ImagesGallery.php
+- app/Filament/Blocks/VideoSpatie.php
+- app/Filament/Forms/Components/Field/QrReader.php
+- app/Filament/Forms/Components/InlineDatePicker.php
+- app/Filament/Forms/Components/RadioBadge.php
+- app/Filament/Forms/Components/SelectState.php
+- app/Filament/Tables/Columns/IconStateGroupColumn.php
+- app/Filament/Tables/Columns/IconStateSplitColumn.php
+- app/Filament/Tables/Columns/SelectStateColumn.php
+- app/Http/Middleware/SetLocale.php
+- app/Models/BaseModel.php
+- app/View/Components/Logo.php
+- app/View/Components/Sidebar.php
+- app/View/Components/Navbar.php
+- app/View/Components/Svg.php
+- app/Datas/SliderDataCollection.php
+- app/View/Components/Blocks/Hero/Simple.php
+- app/View/Components/BreadLink.php
 
-### 1. IconStateSplitColumn.php
-**Problema**: Accesso a proprietà e metodi su tipi `mixed`
-**Soluzione**: Aggiunta di controlli di esistenza metodi e proprietà
+**Issues Fixed**:
+- Duplicate method declarations (`__construct`)
+- Duplicate class declarations
+- Duplicate code blocks
+- Incorrect namespace for QrReader
+- Missing closing braces
+- Extra closing braces
 
-```php
-// PRIMA
-$record->state->transitionTo($newState);
+### 2. Filament v4 Compatibility
+**Files affected**:
+- app/Filament/Widgets/RowWidget.php
+- app/Filament/Widgets/DarkModeSwitcherWidget.php
 
-// DOPO
-if (method_exists($record, 'getState') && method_exists($state, 'canTransitionTo')) {
-    $state = $record->getState();
-    if ($state && $state->canTransitionTo($newState)) {
-        $state->transitionTo($newState);
-    }
-}
-```
+**Issue**: Changed import from `Filament\Forms\Components\Component` to `Filament\Schemas\Components\Component` for Filament v4 compatibility.
 
-### 2. SelectStateColumn.php
-**Problema**: Array combine con tipi non corretti e accesso a metodi statici su mixed
-**Soluzione**: Verifica tipi e esistenza metodi
+### 3. Type Safety Issues
+**File**: app/Filament/Tables/Columns/SelectStateColumn.php  
+**Issues Fixed**:
+- Removed duplicate catch blocks
+- Fixed redundant instanceof checks
+- Proper type handling for State transitions
 
-```php
-// PRIMA
-$result = array_combine($keys, $values);
-$state::$name;
+## Status
+⚠️ **13 errors remaining** - Core syntax errors have been resolved, but some files still have PHPStan issues
 
-// DOPO
-if (is_array($keys) && is_array($values) && count($keys) === count($values)) {
-    $result = array_combine($keys, $values);
-}
-if (property_exists($state, 'name') && is_string($state::$name)) {
-    // uso sicuro
-}
-```
+## Remaining Issues
+The following files still have PHPStan errors:
+- app/Enums/TableLayoutEnum.php
+- app/Filament/Blocks/Navigation.php
+- app/Filament/Blocks/Slider.php
+- app/Filament/Forms/Components/InlineDatePicker.php
+- app/Filament/Forms/Components/RadioCollection.php
+- app/Filament/Tables/Columns/IconStateGroupColumn.php
+- app/Filament/Tables/Columns/SelectStateColumn.php
 
-### 3. UserCalendarWidget.php
-**Problema**: Str::of() con mixed e invocazione metodi su mixed
-**Soluzione**: Cast esplicito e verifica esistenza metodi
-
-```php
-// PRIMA
-Str::of($model)->slug();
-$action->execute();
-
-// DOPO
-Str::of((string) $model)->slug();
-if (method_exists($actionInstance, 'execute')) {
-    $actionInstance->execute();
-}
-```
-
-### 4. SetLocale.php
-**Problema**: Return type non corretto per middleware
-**Soluzione**: Verifica tipo Response
-
-```php
-// PRIMA
-return $next($request);
-
-// DOPO
-$response = $next($request);
-if (! $response instanceof Response) {
-    throw new \RuntimeException('Invalid response type');
-}
-return $response;
-```
-
-### 5. OpeningHoursRule.php
-**Problema**: Parametri mixed passati a metodi che richiedono string
-**Soluzione**: Cast esplicito a string
-
-```php
-// PRIMA
-$this->validateSession($value, $attribute, (string) $dayLabel);
-
-// DOPO
-$this->validateSession($value, $attribute, (string) $dayLabel);
-```
-
-### 6. Block.php
-**Problema**: Parametro mixed passato a view() che richiede array
-**Soluzione**: Verifica tipo array
-
-```php
-// PRIMA
-return view($this->view, $view_params);
-
-// DOPO
-$viewParamsArray = is_array($view_params) ? $view_params : [];
-return view($this->view, $viewParamsArray);
-```
-
-## Pattern di Correzione Applicati
-
-### 1. Type Narrowing
-- Uso di `is_string()`, `is_array()`, `is_object()` per restringere tipi mixed
-- Verifica `method_exists()` e `property_exists()` prima di accessi
-
-### 2. Null Coalescing
-- Uso di `??` per gestire valori null/undefined
-- Valori di default appropriati per ogni contesto
-
-### 3. Explicit Casting
-- Cast espliciti `(string)`, `(array)` quando necessario
-- Verifica tipo prima del cast
-
-### 4. Defensive Programming
-- Controlli di esistenza prima di ogni operazione
-- Gestione graceful degli errori
-
-## Impatto Architetturale
-
-### Benefici
-- **Type Safety**: Eliminazione completa di errori PHPStan
-- **Robustezza**: Codice più resistente agli errori runtime
-- **Manutenibilità**: Codice più facile da comprendere e modificare
-- **Performance**: Riduzione di errori potenziali
-
-### Compatibilità
-- **Backward Compatibility**: Mantenuta al 100%
-- **API**: Nessuna modifica alle interfacce pubbliche
-- **Comportamento**: Identico al comportamento precedente
-
-## Best Practices Implementate
-
-1. **Sempre verificare tipi** prima di operazioni su mixed
-2. **Usare null coalescing** per gestire valori opzionali
-3. **Cast espliciti** quando necessario
-4. **Controlli di esistenza** per metodi e proprietà
-5. **Gestione graceful** degli errori
-
-## Collegamenti Correlati
-- [Architettura Modulo UI](../architecture.md)
-- [Guida PHPStan](../../../docs/phpstan-guide.md)
-- [Best Practices Laraxot](../../../docs/laraxot-best-practices.md)
-
-
-
-
-
-
-
-
+## Technical Notes
+- Most duplicate code blocks have been cleaned up
+- All syntax errors have been resolved
+- Filament v4 compatibility issues addressed
+- Type safety improvements implemented

@@ -23,13 +23,11 @@ final class Blocks extends Component
 {
     /**
      * @param  array<int|string, mixed>  $blocks
-     * @param array<int|string, mixed> $blocks
      */
     public function __construct(
         public string $view,
         public array $blocks = [],
         public ?Model $model = null,
-    ) {}
     ) {
     }
 

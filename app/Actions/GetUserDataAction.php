@@ -17,8 +17,6 @@ class GetUserDataAction
     {
         $user = Auth::user();
 
-        if (!$user instanceof User) {
-        if (! $user instanceof User) {
         if (! $user instanceof User) {
             return null;
         }
@@ -27,8 +25,6 @@ class GetUserDataAction
         $avatarValue = null;
         if (isset($user->profile_photo_path) && is_string($user->profile_photo_path)) {
             $avatarValue = $user->profile_photo_path;
-        } elseif ($user->relationLoaded('profile') && $user->profile !== null) {
-        } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
         } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
             $profile = $user->profile;
             if (is_object($profile) && method_exists($profile, 'getAvatarUrl')) {
@@ -46,8 +42,6 @@ class GetUserDataAction
 
         // Get settings - could be in profile or extra attributes
         $settingsArray = [];
-        if ($user->relationLoaded('profile') && $user->profile !== null) {
-        if ($user->relationLoaded('profile') && null !== $user->profile) {
         if ($user->relationLoaded('profile') && null !== $user->profile) {
             $profile = $user->profile;
             if (is_object($profile) && isset($profile->extra)) {
@@ -74,10 +68,6 @@ class GetUserDataAction
             email: (string) ($user->email ?? ''),
             avatar: $avatarValue !== null ? (string) $avatarValue : null,
             role: $roleValue !== null ? (string) $roleValue : null,
-            avatar: null !== $avatarValue ? (string) $avatarValue : null,
-            role: null !== $roleValue ? (string) $roleValue : null,
-            avatar: null !== $avatarValue ? (string) $avatarValue : null,
-            role: null !== $roleValue ? (string) $roleValue : null,
             permissions: $permissionsArray,
             settings: $settingsArray,
         );

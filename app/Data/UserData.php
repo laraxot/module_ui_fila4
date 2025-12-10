@@ -16,7 +16,6 @@ class UserData extends Data
         public null|string $role,
         public array $permissions,
         public array $settings,
-    ) {}
     ) {
     }
 }
