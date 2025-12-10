@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 @props(['title', 'sections'])
 
 <section class="py-12 bg-white">
@@ -33,7 +39,11 @@ declare(strict_types=1);
         </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </section>
 =======
 </section> 
 >>>>>>> 727968c (.)
+=======
+</section>
+>>>>>>> ef3c5fa (.)
