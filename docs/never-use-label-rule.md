@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1f9515b (.)
 # REGOLA CRITICA: MAI usare ->label()
 
 ## Data: 2025-01-06
@@ -113,23 +116,31 @@ TextColumn::make('status')
 
 ## Checklist Pre-Implementazione
 
+<<<<<<< HEAD
 ### Prima di usare qualsiasi componente Filament:
 <<<<<<< HEAD
 =======
 Prima di usare qualsiasi componente Filament:
 
 >>>>>>> 3057426 (.)
+=======
+Prima di usare qualsiasi componente Filament:
+
+>>>>>>> 1f9515b (.)
 - [ ] Implementare traduzioni in `lang/it/fields.php`
 - [ ] Implementare traduzioni in `lang/en/fields.php`
 - [ ] Implementare traduzioni in `lang/de/fields.php`
 - [ ] Verificare struttura espansa (label, placeholder, tooltip, helper_text)
 - [ ] Non usare mai `->label()` nel codice
 
+<<<<<<< HEAD
 ### Prima di committare:
 - [ ] Verificare che non ci siano `->label()` nel codice
 - [ ] Controllare che tutte le traduzioni siano implementate
 - [ ] Testare che le traduzioni funzionino correttamente
 
+=======
+>>>>>>> 1f9515b (.)
 ## Verifica Automatica
 
 ### PHPStan Rule (Ideale)
@@ -170,6 +181,7 @@ rules:
 
 **RICORDA SEMPRE**: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **RICORDA SEMPRE**:
 =======
 >>>>>>> 3057426 (.)
@@ -183,12 +195,17 @@ rules:
 *Ultimo aggiornamento: 2025-01-06*
 *Ultimo aggiornamento: 2025-01-06*
 =======
+=======
+>>>>>>> 1f9515b (.)
 - MAI `->label()` 
 - SEMPRE traduzioni nei file lang/
 - SEMPRE struttura espansa
 - SEMPRE sincronizzazione IT/EN/DE
 
 *Ultimo aggiornamento: 2025-01-06*
+<<<<<<< HEAD
 >>>>>>> 3057426 (.)
 =======
 >>>>>>> da29ca4 (.)
+=======
+>>>>>>> 1f9515b (.)
