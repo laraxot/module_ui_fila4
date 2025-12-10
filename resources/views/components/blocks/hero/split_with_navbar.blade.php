@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 <div class="relative bg-gray-50">
     <div class="relative bg-white shadow">
       <div class="mx-auto max-w-7xl px-6">
@@ -317,3 +320,7 @@ declare(strict_types=1);
       </div>
     </main>
   </div>
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 727968c (.)
