@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 <!--
   This example requires some changes to your config:
 
@@ -145,3 +148,7 @@ declare(strict_types=1);
       <!-- More main page content here... -->
     </main>
   </div>
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 727968c (.)
