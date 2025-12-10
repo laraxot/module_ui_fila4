@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 <div class="relative bg-white">
     <div class="absolute inset-0" aria-hidden="true">
       <div class="absolute inset-y-0 right-0 w-1/2 bg-indigo-700"></div>
@@ -136,10 +127,3 @@ declare(strict_types=1);
       </div>
     </div>
   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
