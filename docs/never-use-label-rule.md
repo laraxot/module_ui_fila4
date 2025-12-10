@@ -117,9 +117,15 @@ TextColumn::make('status')
 ## Checklist Pre-Implementazione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Prima di usare qualsiasi componente Filament:
 <<<<<<< HEAD
 =======
+=======
+=======
+### Prima di usare qualsiasi componente Filament:
+>>>>>>> b55470f (.)
+>>>>>>> 8ee2a17 (.)
 Prima di usare qualsiasi componente Filament:
 
 >>>>>>> 3057426 (.)
@@ -134,13 +140,21 @@ Prima di usare qualsiasi componente Filament:
 - [ ] Non usare mai `->label()` nel codice
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8ee2a17 (.)
 ### Prima di committare:
 - [ ] Verificare che non ci siano `->label()` nel codice
 - [ ] Controllare che tutte le traduzioni siano implementate
 - [ ] Testare che le traduzioni funzionino correttamente
 
+<<<<<<< HEAD
 =======
 >>>>>>> 1f9515b (.)
+=======
+>>>>>>> b55470f (.)
+>>>>>>> 8ee2a17 (.)
 ## Verifica Automatica
 
 ### PHPStan Rule (Ideale)
@@ -182,14 +196,19 @@ rules:
 **RICORDA SEMPRE**: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **RICORDA SEMPRE**:
 =======
 >>>>>>> 3057426 (.)
+=======
+=======
+>>>>>>> 8ee2a17 (.)
 - MAI usare `->label()` in componenti Filament
 - SEMPRE implementare traduzioni nei file `lang/`
 - SEMPRE struttura espansa (label, placeholder, tooltip, helper_text)
 - SEMPRE sincronizzare IT/EN/DE
 - SEMPRE testare le traduzioni prima del commit
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 *Ultimo aggiornamento: 2025-01-06*
@@ -197,6 +216,9 @@ rules:
 =======
 =======
 >>>>>>> 1f9515b (.)
+=======
+>>>>>>> b55470f (.)
+>>>>>>> 8ee2a17 (.)
 - MAI `->label()` 
 - SEMPRE traduzioni nei file lang/
 - SEMPRE struttura espansa
