@@ -4,19 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use Closure;
 use Filament\Forms\Components\Field;
 use Illuminate\Support\Collection;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 
-class RadioCollection extends Field
+final class RadioCollection extends Field
 {
     protected string $view = 'ui::filament.forms.components.radio-collection';
 
     /**
      * Callback per ottenere gli studi.
      */
-    protected Closure|Collection|null $options = null;
+    protected \Closure|Collection|null $options = null;
 
     protected string $itemView;
 
@@ -25,7 +24,7 @@ class RadioCollection extends Field
     /**
      * Set the options collection for the radio buttons.
      */
-    public function options(Closure|Collection|null $options): static
+    public function options(\Closure|Collection|null $options): static
     {
         $this->options = $options;
 
@@ -60,11 +59,19 @@ class RadioCollection extends Field
     public function getOptions(): Collection
     {
         $optionsRaw = $this->evaluate($this->options);
+<<<<<<< HEAD
         
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
         }
         
+=======
+
+        if ($optionsRaw instanceof Collection) {
+            return $optionsRaw;
+        }
+
+>>>>>>> 359d970 (.)
         return collect([]);
     }
 
@@ -86,15 +93,14 @@ class RadioCollection extends Field
 
     /**
      * Comparazione type-safe per determinare se un'opzione è selezionata.
-     *
-     * @param  mixed  $option
      */
-    public function isOptionSelected($option): bool
+    public function isOptionSelected(mixed $option): bool
     {
         $state = SafeStringCastAction::cast($this->getState());
         $currentValue = (string) $state;
+
+        // PHPStan L10: data_get restituisce mixed, SafeStringCastAction accetta mixed
         $optionData = data_get($option, $this->getValueKey());
-        /** @phpstan-ignore-next-line */
         $optionValue = SafeStringCastAction::cast($optionData);
 
         return $currentValue === $optionValue;

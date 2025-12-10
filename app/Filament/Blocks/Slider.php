@@ -7,12 +7,12 @@ namespace Modules\UI\Filament\Blocks;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Modules\UI\Filament\Forms\Components\RadioImage;
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
-use Modules\Xot\Actions\View\GetViewsSiblingsAndSelfAction;
 
-class Slider
+final class Slider
 {
-    public static function make(string $name = 'slider', string $_context = 'form'): Block
+    public static function make(string $name = 'slider', string $context = 'form'): Block
     {
         // $view = 'ui::components.blocks.slider.v1';
         // $views = app(GetViewsSiblingsAndSelfAction::class)->execute($view);
@@ -28,7 +28,7 @@ class Slider
                 //     ->options($options),
                 // ->afterStateHydrated(static fn ($state, $set) => $state || $set('level', 'h2')),
 
-                Select::make('view')->options($options),
+                RadioImage::make('view')->options($options),
             ])
             ->columns(1);
     }

@@ -10,7 +10,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 
-class ImagesGallery
+final class ImagesGallery
 {
     public static function make(string $name = 'images_gallery', string $context = 'form'): Block
     {
@@ -64,7 +64,7 @@ class ImagesGallery
                 // TextInput::make('caption')
                 //     ->columnSpanFull(),
             ])
-            ->columns('form' === $context ? 2 : 1);
+            ->columns($context === 'form' ? 2 : 1);
     }
 
     public static function getRatios(): array

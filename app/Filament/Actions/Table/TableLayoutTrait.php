@@ -9,12 +9,12 @@ use Modules\UI\Enums\TableLayoutEnum;
 
 /**
  * Trait TableLayoutTrait
- * Fornisce funzionalità per la gestione del layout delle tabelle
+ * Fornisce funzionalità per la gestione del layout delle tabelle.
  */
 trait TableLayoutTrait
 {
     /**
-     * Ottiene il layout corrente dalla sessione o restituisce il default
+     * Ottiene il layout corrente dalla sessione o restituisce il default.
      */
     public function getCurrentLayout(string $identifier = 'default'): TableLayoutEnum
     {
@@ -22,7 +22,7 @@ trait TableLayoutTrait
         /** @var TableLayoutEnum|string|int|null $layout */
         $layout = Session::get($sessionKey);
 
-        if ($layout !== null && in_array($layout, TableLayoutEnum::cases(), strict: true)) {
+        if (null !== $layout && in_array($layout, TableLayoutEnum::cases(), strict: true)) {
             // $layout è già un TableLayoutEnum dopo il controllo in_array con strict
             return $layout;
         }
@@ -30,7 +30,7 @@ trait TableLayoutTrait
         // Se $layout è una stringa/int, prova a convertirlo
         if (is_string($layout) || is_int($layout)) {
             $enum = TableLayoutEnum::tryFrom($layout);
-            if ($enum !== null) {
+            if (null !== $enum) {
                 return $enum;
             }
         }
@@ -39,7 +39,7 @@ trait TableLayoutTrait
     }
 
     /**
-     * Salva il layout corrente nella sessione
+     * Salva il layout corrente nella sessione.
      */
     public function saveLayout(TableLayoutEnum $layout, string $identifier = 'default'): void
     {
@@ -48,7 +48,7 @@ trait TableLayoutTrait
     }
 
     /**
-     * Resetta il layout alla visualizzazione default
+     * Resetta il layout alla visualizzazione default.
      */
     public function resetLayout(string $identifier = 'default'): void
     {

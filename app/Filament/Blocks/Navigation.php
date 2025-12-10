@@ -4,17 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Blocks;
 
-use Override;
-use Filament\Forms\Components\Builder\Block;
-use Filament\Forms\Components\Forms;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
-use Modules\Xot\Filament\Traits\TransTrait;
 
-class Navigation extends XotBaseBlock
+final class Navigation extends XotBaseBlock
 {
-    #[Override]
+    #[\Override]
     public static function getBlockSchema(): array
     {
         return [
@@ -32,14 +28,17 @@ class Navigation extends XotBaseBlock
         ];
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getFormSchema(): array
     {
         return [
             Repeater::make('items')
-                ->label(static::trans('blocks.navigation.fields.items.label'))
+                ->label(self::trans('blocks.navigation.fields.items.label'))
                 ->schema([
-                    TextInput::make('text')->label(static::trans('blocks.navigation.fields.text.label')),
-                    TextInput::make('url')->label(static::trans('blocks.navigation.fields.url.label')),
+                    TextInput::make('text')->label(self::trans('blocks.navigation.fields.text.label')),
+                    TextInput::make('url')->label(self::trans('blocks.navigation.fields.url.label')),
                 ]),
         ];
     }

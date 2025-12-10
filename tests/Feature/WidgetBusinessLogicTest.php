@@ -22,7 +22,7 @@ class WidgetBusinessLogicTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function row_widget_can_render_correctly(): void
+    public function rowWidgetCanRenderCorrectly(): void
     {
         // Arrange
         $widget = new RowWidget();
@@ -37,7 +37,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function stat_with_icon_widget_can_display_statistics(): void
+    public function statWithIconWidgetCanDisplayStatistics(): void
     {
         // Arrange
         $widget = new StatWithIconWidget();
@@ -53,7 +53,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function overlook_widget_can_provide_overview_data(): void
+    public function overlookWidgetCanProvideOverviewData(): void
     {
         // Arrange
         $widget = new OverlookWidget();
@@ -68,7 +68,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function hero_widget_can_display_hero_content(): void
+    public function heroWidgetCanDisplayHeroContent(): void
     {
         // Arrange
         $widget = new HeroWidget();
@@ -83,7 +83,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function test_chart_widget_can_display_chart_data(): void
+    public function testChartWidgetCanDisplayChartData(): void
     {
         // Arrange
         $widget = new TestChartWidget();
@@ -98,7 +98,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function stats_overview_widget_can_display_multiple_statistics(): void
+    public function statsOverviewWidgetCanDisplayMultipleStatistics(): void
     {
         // Arrange
         $widget = new StatsOverviewWidget();
@@ -112,7 +112,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function group_widget_can_group_related_content(): void
+    public function groupWidgetCanGroupRelatedContent(): void
     {
         // Arrange
         $widget = new GroupWidget();
@@ -126,7 +126,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function redirect_widget_can_handle_redirects(): void
+    public function redirectWidgetCanHandleRedirects(): void
     {
         // Arrange
         $widget = new RedirectWidget();
@@ -141,7 +141,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function user_calendar_widget_can_display_calendar(): void
+    public function userCalendarWidgetCanDisplayCalendar(): void
     {
         // Arrange
         $widget = new UserCalendarWidget();
@@ -155,7 +155,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_be_configured_with_custom_data(): void
+    public function widgetsCanBeConfiguredWithCustomData(): void
     {
         // Arrange
         $widget = new StatWithIconWidget();
@@ -172,7 +172,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_empty_data_gracefully(): void
+    public function widgetsCanHandleEmptyDataGracefully(): void
     {
         // Arrange
         $widget = new StatsOverviewWidget();
@@ -185,7 +185,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_be_rendered_in_livewire_context(): void
+    public function widgetsCanBeRenderedInLivewireContext(): void
     {
         // Arrange
         $widget = new RowWidget();
@@ -198,7 +198,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_dynamic_content(): void
+    public function widgetsCanHandleDynamicContent(): void
     {
         // Arrange
         $widget = new OverlookWidget();
@@ -213,7 +213,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_validate_required_properties(): void
+    public function widgetsCanValidateRequiredProperties(): void
     {
         // Arrange
         $widget = new HeroWidget();
@@ -228,7 +228,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_custom_styling(): void
+    public function widgetsCanHandleCustomStyling(): void
     {
         // Arrange
         $widget = new StatWithIconWidget();
@@ -243,7 +243,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_responsive_behavior(): void
+    public function widgetsCanHandleResponsiveBehavior(): void
     {
         // Arrange
         $widget = new RowWidget();
@@ -256,7 +256,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_interactive_features(): void
+    public function widgetsCanHandleInteractiveFeatures(): void
     {
         // Arrange
         $widget = new TestChartWidget();
@@ -269,7 +269,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_error_states(): void
+    public function widgetsCanHandleErrorStates(): void
     {
         // Arrange
         $widget = new StatsOverviewWidget();
@@ -282,7 +282,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_loading_states(): void
+    public function widgetsCanHandleLoadingStates(): void
     {
         // Arrange
         $widget = new UserCalendarWidget();
@@ -295,7 +295,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_empty_states(): void
+    public function widgetsCanHandleEmptyStates(): void
     {
         // Arrange
         $widget = new GroupWidget();
@@ -308,7 +308,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_custom_actions(): void
+    public function widgetsCanHandleCustomActions(): void
     {
         // Arrange
         $widget = new RedirectWidget();
@@ -321,7 +321,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_data_refresh(): void
+    public function widgetsCanHandleDataRefresh(): void
     {
         // Arrange
         $widget = new TestChartWidget();
@@ -334,7 +334,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_custom_events(): void
+    public function widgetsCanHandleCustomEvents(): void
     {
         // Arrange
         $widget = new OverlookWidget();
@@ -347,7 +347,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_accessibility_features(): void
+    public function widgetsCanHandleAccessibilityFeatures(): void
     {
         // Arrange
         $widget = new HeroWidget();
@@ -360,7 +360,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_internationalization(): void
+    public function widgetsCanHandleInternationalization(): void
     {
         // Arrange
         $widget = new StatWithIconWidget();
@@ -373,7 +373,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_theme_customization(): void
+    public function widgetsCanHandleThemeCustomization(): void
     {
         // Arrange
         $widget = new RowWidget();
@@ -386,7 +386,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_performance_optimization(): void
+    public function widgetsCanHandlePerformanceOptimization(): void
     {
         // Arrange
         $widget = new StatsOverviewWidget();
@@ -399,7 +399,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_security_features(): void
+    public function widgetsCanHandleSecurityFeatures(): void
     {
         // Arrange
         $widget = new UserCalendarWidget();
@@ -412,7 +412,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_logging_and_monitoring(): void
+    public function widgetsCanHandleLoggingAndMonitoring(): void
     {
         // Arrange
         $widget = new TestChartWidget();
@@ -425,7 +425,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_backup_and_recovery(): void
+    public function widgetsCanHandleBackupAndRecovery(): void
     {
         // Arrange
         $widget = new GroupWidget();
@@ -438,7 +438,7 @@ class WidgetBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function widgets_can_handle_scalability_features(): void
+    public function widgetsCanHandleScalabilityFeatures(): void
     {
         // Arrange
         $widget = new RedirectWidget();

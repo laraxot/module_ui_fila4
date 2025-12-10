@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\UI\Livewire\Components\Map;
 
 use Illuminate\Contracts\View\View;
-use Exception;
 use Livewire\Component;
 use Modules\Geo\Services\GeocodingService;
 use Modules\Geo\Services\MapService;
@@ -120,11 +119,11 @@ final class InteractiveMap extends Component
         try {
             /** @phpstan-ignore-next-line class.notFound */
             $mapService = app(MapService::class);
-            /** @phpstan-ignore-next-line class.notFound, assign.propertyType */
+            /* @phpstan-ignore-next-line class.notFound, assign.propertyType */
             $this->markers = $mapService->getMarkers($this->filters);
-            /** @phpstan-ignore-next-line class.notFound, assign.propertyType */
+            /* @phpstan-ignore-next-line class.notFound, assign.propertyType */
             $this->stats = $mapService->getMapStats($this->filters);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $this->addError('map', 'Errore nel caricamento dei marker: '.$e->getMessage());
             $this->markers = [];
             $this->stats = [];
@@ -164,7 +163,7 @@ final class InteractiveMap extends Component
                 'type' => 'success',
                 'message' => 'Dati esportati con successo!',
             ]);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $this->addError('export', 'Errore nell\'esportazione: '.$e->getMessage());
         }
     }
@@ -197,7 +196,7 @@ final class InteractiveMap extends Component
                 'type' => 'success',
                 'message' => 'Indirizzo trovato: '.$address,
             ]);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $this->addError('search', 'Indirizzo non trovato: '.$e->getMessage());
         }
     }
@@ -215,9 +214,9 @@ final class InteractiveMap extends Component
             /** @phpstan-ignore-next-line class.notFound */
             $geocodingService = app(GeocodingService::class);
 
-            /** @phpstan-ignore-next-line class.notFound, return.type */
+            /* @phpstan-ignore-next-line class.notFound, return.type */
             return $geocodingService->getSuggestions($this->searchQuery);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return [];
         }
     }
@@ -330,7 +329,7 @@ final class InteractiveMap extends Component
             'csv' => 'text/csv',
             'geojson' => 'application/geo+json',
             'kml' => 'application/vnd.google-earth.kml+xml',
-            default => 'application/json'
+            default => 'application/json',
         };
     }
 }

@@ -13,11 +13,15 @@ class GetUserDataAction
 {
     use QueueableAction;
 
-    public function execute(): null|UserData
+    public function execute(): ?UserData
     {
         $user = Auth::user();
 
+<<<<<<< HEAD
         if (!$user instanceof User) {
+=======
+        if (! $user instanceof User) {
+>>>>>>> 359d970 (.)
             return null;
         }
 
@@ -25,7 +29,11 @@ class GetUserDataAction
         $avatarValue = null;
         if (isset($user->profile_photo_path) && is_string($user->profile_photo_path)) {
             $avatarValue = $user->profile_photo_path;
+<<<<<<< HEAD
         } elseif ($user->relationLoaded('profile') && $user->profile !== null) {
+=======
+        } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
+>>>>>>> 359d970 (.)
             $profile = $user->profile;
             if (is_object($profile) && method_exists($profile, 'getAvatarUrl')) {
                 $avatarValue = $profile->getAvatarUrl();
@@ -42,7 +50,11 @@ class GetUserDataAction
 
         // Get settings - could be in profile or extra attributes
         $settingsArray = [];
+<<<<<<< HEAD
         if ($user->relationLoaded('profile') && $user->profile !== null) {
+=======
+        if ($user->relationLoaded('profile') && null !== $user->profile) {
+>>>>>>> 359d970 (.)
             $profile = $user->profile;
             if (is_object($profile) && isset($profile->extra)) {
                 $extra = $profile->extra;
@@ -66,8 +78,13 @@ class GetUserDataAction
             id: (int) $user->id,
             name: (string) ($user->name ?? ''),
             email: (string) ($user->email ?? ''),
+<<<<<<< HEAD
             avatar: $avatarValue !== null ? (string) $avatarValue : null,
             role: $roleValue !== null ? (string) $roleValue : null,
+=======
+            avatar: null !== $avatarValue ? (string) $avatarValue : null,
+            role: null !== $roleValue ? (string) $roleValue : null,
+>>>>>>> 359d970 (.)
             permissions: $permissionsArray,
             settings: $settingsArray,
         );

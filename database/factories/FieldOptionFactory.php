@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\UI\Database\Factories;
 
-use Modules\UI\Models\FieldOption;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\UI\Models\FieldOption;
 
 class FieldOptionFactory extends Factory
 {

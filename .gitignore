@@ -3,11 +3,22 @@
 # ==============================================
 # Modulo UI Laraxot - Template standardizzato
 # Ultimo aggiornamento: 2025-01-06
+# Ultimo aggiornamento: 2025-01-31
+# Ultimo aggiornamento: 2025-01-06
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+vendor/
+/vendor/
+node_modules/
+/node_modules/
+/docs/vendor/
+package-lock.json
+yarn.lock
+yarn-error.log
+composer.lock
 vendor/
 /vendor/
 node_modules/
@@ -40,6 +51,7 @@ cache/
 *.swo
 *.stackdump
 *.exe
+*.exe
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -51,6 +63,7 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
+npm-debug.log
 npm-debug.log
 yarn-error.log*
 lerna-debug.log*
@@ -122,6 +135,25 @@ docs/phpstan/
 docs/cache/
 
 # ==============================================
+# LANGUAGE FILES
+# ==============================================
+lang/lang/
+resources/lang/
+
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+resources/views/Components_old
+database/Migrations_old/
+database/Migrations_old
+database/Seeders_old/
+database/Seeders_old
+database/Factories_old/
+database/Factories_old
+database/Factories_
+database_old/
+database_old
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
