@@ -149,10 +149,14 @@
 
 ### Documentazione
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel Blade](https://laravel.com/docs/12.x/blade)
 =======
 - [Laravel Blade](https://laravel.com/project_docs/12.x/blade)
 >>>>>>> 727968c (.)
+=======
+- [Laravel Blade](https://laravel.com/docs/12.x/blade)
+>>>>>>> ef3c5fa (.)
 - [Filament Documentation](https://filamentphp.com/docs)
 - [Livewire Documentation](https://livewire.laravel.com/docs)
 
@@ -183,6 +187,9 @@
 
 ## Collegamenti tra versioni di roadmap.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 * [roadmap.md](bashscripts/docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
 * [roadmap.md](../../../Gdpr/docs/roadmap.md)
@@ -199,6 +206,7 @@
 * [roadmap.md](../../../Patient/docs/roadmap.md)
 * [roadmap.md](../../../Cms/docs/roadmap.md)
 * [roadmap.md](../../../../Themes/One/docs/roadmap.md)
+<<<<<<< HEAD
 =======
 * [roadmap.md](bashscripts/project_docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
@@ -217,6 +225,8 @@
 * [roadmap.md](../../../Cms/project_docs/roadmap.md)
 * [roadmap.md](../../../../Themes/One/project_docs/roadmap.md)
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 
 
 ---
