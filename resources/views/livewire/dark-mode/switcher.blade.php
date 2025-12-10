@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 <div>
     <button
         type="button"
@@ -43,4 +46,8 @@ declare(strict_types=1);
             }
         });
     </script>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> 727968c (.)

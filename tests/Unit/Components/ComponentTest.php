@@ -12,7 +12,11 @@ test('ui components can be rendered', function (): void {
             return view('ui::components.ui.button');
         }
     };
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 727968c (.)
     expect($component)->toBeInstanceOf(Component::class);
 });
 
@@ -22,8 +26,15 @@ test('ui button component has correct attributes', function (): void {
         'size' => 'md',
         'disabled' => false,
     ]);
+<<<<<<< HEAD
 
     expect($view->render())->toContain('btn')->toContain('btn-primary');
+=======
+    
+    expect($view->render())
+        ->toContain('btn')
+        ->toContain('btn-primary');
+>>>>>>> 727968c (.)
 });
 
 test('ui card component renders content', function (): void {
@@ -31,6 +42,13 @@ test('ui card component renders content', function (): void {
         'title' => 'Test Card',
         'content' => 'Test Content',
     ]);
+<<<<<<< HEAD
 
     expect($view->render())->toContain('Test Card')->toContain('Test Content');
+=======
+    
+    expect($view->render())
+        ->toContain('Test Card')
+        ->toContain('Test Content');
+>>>>>>> 727968c (.)
 });
