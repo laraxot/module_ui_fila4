@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 {{-- 
     Componente separatore per dropdown di Filament 
     Questo componente aggiunge una linea di separazione visiva all'interno dei dropdown.
