@@ -59,11 +59,10 @@ final class RadioCollection extends Field
     public function getOptions(): Collection
     {
         $optionsRaw = $this->evaluate($this->options);
-        
+
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
         }
-        
 
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
