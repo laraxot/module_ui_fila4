@@ -12,12 +12,12 @@ use Modules\UI\Services\ThemeService;
 
 describe('UI Business Logic Integration', function (): void {
     beforeEach(function (): void {
-        $this->theme = Theme::factory()->create([
+        $this->theme = Theme/** @phpstan-ignore-line */ ::factory()->create([
             'name' => 'Default Theme',
             'is_active' => true,
         ]);
 
-        $this->component = Component::factory()->create([
+        $this->component = Component/** @phpstan-ignore-line */ ::factory()->create([
             'name' => 'test-component',
             /** @phpstan-ignore-next-line property.notFound */
             'theme_id' => $this->theme->id,
@@ -28,7 +28,7 @@ describe('UI Business Logic Integration', function (): void {
     describe('Theme Management Business Rules', function (): void {
         it('enforces theme activation rules', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $theme = Theme::factory()->create([
+        $theme = Theme/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'Test Theme',
                 'is_active' => false,
             ]);
@@ -54,7 +54,7 @@ describe('UI Business Logic Integration', function (): void {
 
         it('enforces theme configuration validation', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $theme = Theme::factory()->create([
+        $theme = Theme/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'Configurable Theme',
                 'config' => [
                     'primary_color' => '#007bff',
@@ -72,13 +72,13 @@ describe('UI Business Logic Integration', function (): void {
 
         it('enforces theme inheritance rules', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $parentTheme = Theme::factory()->create([
+        $parentTheme = Theme/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'Parent Theme',
                 'is_active' => false,
             ]);
 
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $childTheme = Theme::factory()->create([
+        $childTheme = Theme/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'Child Theme',
                 'parent_id' => $parentTheme->id,
                 'is_active' => false,
@@ -110,7 +110,7 @@ describe('UI Business Logic Integration', function (): void {
 
             foreach ($validNames as $name) {
                 /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                     'name' => $name,
                     /** @phpstan-ignore-next-line property.notFound */
                     'theme_id' => $this->theme->id,
@@ -125,7 +125,7 @@ describe('UI Business Logic Integration', function (): void {
 
         it('enforces component versioning rules', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'versioned-component',
                 /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
@@ -152,7 +152,7 @@ describe('UI Business Logic Integration', function (): void {
 
         it('enforces component dependency rules', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'dependent-component',
                 /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
@@ -175,7 +175,7 @@ describe('UI Business Logic Integration', function (): void {
     describe('Asset Management Business Rules', function (): void {
         it('enforces asset file validation', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $asset = Asset::factory()->create([
+        $asset = Asset/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'main.css',
                 'type' => 'css',
                 'path' => '/assets/css/main.css',
@@ -197,7 +197,7 @@ describe('UI Business Logic Integration', function (): void {
 
         it('enforces asset optimization rules', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $asset = Asset::factory()->create([
+        $asset = Asset/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'optimized.js',
                 'type' => 'js',
                 'path' => '/assets/js/optimized.js',
@@ -219,21 +219,21 @@ describe('UI Business Logic Integration', function (): void {
 
         it('enforces asset loading order', function (): void {
             $assets = collect([
-                Asset::factory()->create([
+                Asset/** @phpstan-ignore-line */ ::factory()->create([
                     'name' => 'jquery.js',
                     'type' => 'js',
                     'order' => 1,
                     /** @phpstan-ignore-next-line property.notFound */
                     'theme_id' => $this->theme->id,
                 ]),
-                Asset::factory()->create([
+                Asset/** @phpstan-ignore-line */ ::factory()->create([
                     'name' => 'bootstrap.js',
                     'type' => 'js',
                     'order' => 2,
                     /** @phpstan-ignore-next-line property.notFound */
                     'theme_id' => $this->theme->id,
                 ]),
-                Asset::factory()->create([
+                Asset/** @phpstan-ignore-line */ ::factory()->create([
                     'name' => 'app.js',
                     'type' => 'js',
                     'order' => 3,
@@ -263,7 +263,7 @@ describe('UI Business Logic Integration', function (): void {
             $service = new ComponentService;
 
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'renderable-component',
                 /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
@@ -285,7 +285,7 @@ describe('UI Business Logic Integration', function (): void {
             $service = new ComponentService;
 
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'cacheable-component',
                 /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
@@ -308,7 +308,7 @@ describe('UI Business Logic Integration', function (): void {
             $service = new ComponentService;
 
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'validated-component',
                 /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
@@ -333,7 +333,7 @@ describe('UI Business Logic Integration', function (): void {
             $service = new ThemeService;
 
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $theme = Theme::factory()->create([
+        $theme = Theme/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'Compilable Theme',
                 'source_path' => '/themes/compilable',
                 'compiled_path' => '/public/themes/compilable',
@@ -380,7 +380,7 @@ describe('UI Business Logic Integration', function (): void {
             $service = new ThemeService;
 
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $parentTheme = Theme::factory()->create([
+        $parentTheme = Theme/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'Parent Theme',
                 'config' => [
                     'colors' => ['primary' => '#007bff'],
@@ -389,7 +389,7 @@ describe('UI Business Logic Integration', function (): void {
             ]);
 
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $childTheme = Theme::factory()->create([
+        $childTheme = Theme/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'Child Theme',
                 'parent_id' => $parentTheme->id,
                 'config' => [
@@ -415,7 +415,7 @@ describe('UI Business Logic Integration', function (): void {
     describe('UI Rendering Business Rules', function (): void {
         it('enforces view compilation rules', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'view-component',
                 /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
@@ -433,7 +433,7 @@ describe('UI Business Logic Integration', function (): void {
 
         it('enforces component data binding', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'data-component',
                 /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
@@ -459,7 +459,7 @@ describe('UI Business Logic Integration', function (): void {
 
         it('enforces responsive design rules', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'responsive-component',
                 /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
@@ -528,7 +528,7 @@ describe('UI Business Logic Integration', function (): void {
 
         it('enforces lazy loading rules', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'lazy-component',
                 /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
@@ -547,7 +547,7 @@ describe('UI Business Logic Integration', function (): void {
 
         it('enforces caching strategies', function (): void {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $component = Component::factory()->create([
+        $component = Component/** @phpstan-ignore-line */ ::factory()->create([
                 'name' => 'cacheable-ui-component',
                 /** @phpstan-ignore-next-line property.notFound */
                 'theme_id' => $this->theme->id,
