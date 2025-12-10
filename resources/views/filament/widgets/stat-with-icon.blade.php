@@ -12,12 +12,16 @@ declare(strict_types=1);
                                 icon="fas-futbol"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                 size="24"
 >>>>>>> e6782b2 (.)
 =======
                                 size="24"
 >>>>>>> b55470f (.)
+=======
+                                size="24"
+>>>>>>> 6be0161 (.)
                                 class="w-auto h-12"
                             />
                 </span>
@@ -55,19 +59,25 @@ declare(strict_types=1);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <x-filament::icon
                                 icon="fas-futbol"
 =======
 =======
 >>>>>>> b55470f (.)
+=======
+>>>>>>> 6be0161 (.)
 
                             <x-filament::icon
                                 icon="fas-futbol"
                                 :size="24"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e6782b2 (.)
 =======
 >>>>>>> b55470f (.)
+=======
+>>>>>>> 6be0161 (.)
                                 class="w-auto h-24 absolute left-0 top-8 text-primary-500 opacity-20 dark:opacity-20 transition group-hover:scale-110 group-hover:-rotate-12 group-hover:opacity-40 dark:group-hover:opacity-80"
                             />
                             <span class="overlook-name">AAA</span>
