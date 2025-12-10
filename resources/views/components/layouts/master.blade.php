@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
