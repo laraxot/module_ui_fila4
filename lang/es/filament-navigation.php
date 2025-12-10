@@ -13,10 +13,18 @@ return [
         'created_at' => 'Creado',
         'updated_at' => 'Actualizado',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'select-options' => [
         'same-tab' => 'Misma pestaña',
         'new-tab' => 'Nueva pestaña',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'items' => [
         'empty' => 'No hay ítems.',
         'add-item' => 'Agregar ítem',
@@ -27,6 +35,10 @@ return [
         'dedent' => 'Desindentar',
         'remove' => 'Remover',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'items-modal' => [
         'title' => 'Ítem',
         'label' => 'Etiqueta',
