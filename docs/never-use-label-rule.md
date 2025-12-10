@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1f9515b (.)
+=======
+>>>>>>> laraxot/develop
 # REGOLA CRITICA: MAI usare ->label()
 
 ## Data: 2025-01-06
@@ -119,6 +122,7 @@ TextColumn::make('status')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Prima di usare qualsiasi componente Filament:
 <<<<<<< HEAD
 =======
@@ -136,12 +140,17 @@ Prima di usare qualsiasi componente Filament:
 Prima di usare qualsiasi componente Filament:
 
 >>>>>>> 1f9515b (.)
+=======
+Prima di usare qualsiasi componente Filament:
+
+>>>>>>> laraxot/develop
 - [ ] Implementare traduzioni in `lang/it/fields.php`
 - [ ] Implementare traduzioni in `lang/en/fields.php`
 - [ ] Implementare traduzioni in `lang/de/fields.php`
 - [ ] Verificare struttura espansa (label, placeholder, tooltip, helper_text)
 - [ ] Non usare mai `->label()` nel codice
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,6 +170,8 @@ Prima di usare qualsiasi componente Filament:
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 12ba306 (.)
+=======
+>>>>>>> laraxot/develop
 ## Verifica Automatica
 
 ### PHPStan Rule (Ideale)
@@ -204,6 +215,7 @@ rules:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **RICORDA SEMPRE**:
 =======
 >>>>>>> 3057426 (.)
@@ -228,6 +240,8 @@ rules:
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 12ba306 (.)
+=======
+>>>>>>> laraxot/develop
 - MAI `->label()` 
 - SEMPRE traduzioni nei file lang/
 - SEMPRE struttura espansa
@@ -235,8 +249,11 @@ rules:
 
 *Ultimo aggiornamento: 2025-01-06*
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3057426 (.)
 =======
 >>>>>>> da29ca4 (.)
 =======
 >>>>>>> 1f9515b (.)
+=======
+>>>>>>> laraxot/develop

@@ -61,6 +61,7 @@ final class RadioCollection extends Field
         $optionsRaw = $this->evaluate($this->options);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
@@ -69,15 +70,20 @@ final class RadioCollection extends Field
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
 
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
         return collect([]);
     }
 

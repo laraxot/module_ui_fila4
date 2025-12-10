@@ -29,6 +29,7 @@ class IconStateGroupColumn extends ColumnGroup
         $statesRaw = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
@@ -36,6 +37,9 @@ class IconStateGroupColumn extends ColumnGroup
 =======
 
 >>>>>>> 161e28f (Lint)
+=======
+
+>>>>>>> laraxot/develop
         if (class_exists($stateClass) && method_exists($stateClass, 'getStateMapping')) {
             $stateMapping = $stateClass::getStateMapping();
             if (is_object($stateMapping) && method_exists($stateMapping, 'toArray')) {
@@ -45,6 +49,7 @@ class IconStateGroupColumn extends ColumnGroup
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
@@ -52,11 +57,15 @@ class IconStateGroupColumn extends ColumnGroup
 =======
 
 >>>>>>> 161e28f (Lint)
+=======
+
+>>>>>>> laraxot/develop
         /** @var array<string, string> $states */
         $states = $statesRaw;
         $columns = [];
 
         foreach ($states as $stateKey => $stateClassItem) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             if (!is_string($stateClassItem) || !class_exists($stateClassItem)) {
@@ -76,6 +85,8 @@ class IconStateGroupColumn extends ColumnGroup
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
             if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
                 continue;
             }
@@ -91,9 +102,12 @@ class IconStateGroupColumn extends ColumnGroup
 
             $column = IconColumn::make($stateKey.'-icon')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
                 ->icon($stateInstance->icon(...))
                 ->color($stateInstance->color(...))
                 ->tooltip($stateInstance->label(...))
@@ -111,6 +125,7 @@ class IconStateGroupColumn extends ColumnGroup
                     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $visibleKey = $stateKey . '-visible';
                     $this->data[$visibleKey] = $res;
                     if (!$res) {
@@ -124,11 +139,17 @@ class IconStateGroupColumn extends ColumnGroup
                     $this->data[$visibleKey] = $res;
                     if (! $res) {
 >>>>>>> 161e28f (Lint)
+=======
+                    $visibleKey = $stateKey.'-visible';
+                    $this->data[$visibleKey] = $res;
+                    if (! $res) {
+>>>>>>> laraxot/develop
                         return null;
                     }
 
                     return true;
                 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             $column->action(Action::make($stateKey . '-action')
@@ -138,6 +159,9 @@ class IconStateGroupColumn extends ColumnGroup
 =======
             $column->action(Action::make($stateKey.'-action')
 >>>>>>> 161e28f (Lint)
+=======
+            $column->action(Action::make($stateKey.'-action')
+>>>>>>> laraxot/develop
                 ->requiresConfirmation()
                 ->modalHeading(function ($_record) use ($stateInstance) {
                     // StateContract provides modalHeading()
@@ -156,6 +180,7 @@ class IconStateGroupColumn extends ColumnGroup
                     // StateContract provides modalActionByRecord()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     /** @var \Illuminate\Database\Eloquent\Model $record */
                     /** @var array<string, mixed> $data */
 =======
@@ -166,6 +191,10 @@ class IconStateGroupColumn extends ColumnGroup
                     /* @var \Illuminate\Database\Eloquent\Model $record */
                     /* @var array<string, mixed> $data */
 >>>>>>> 161e28f (Lint)
+=======
+                    /* @var \Illuminate\Database\Eloquent\Model $record */
+                    /* @var array<string, mixed> $data */
+>>>>>>> laraxot/develop
                     $stateInstance->modalActionByRecord($record, $data);
 
                     // $this->invalidateCache();
@@ -177,6 +206,7 @@ class IconStateGroupColumn extends ColumnGroup
                 }));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             $visibleKey = $stateKey . '-visible';
 =======
             $visibleKey = $stateKey.'-visible';
@@ -184,6 +214,9 @@ class IconStateGroupColumn extends ColumnGroup
 =======
             $visibleKey = $stateKey.'-visible';
 >>>>>>> 161e28f (Lint)
+=======
+            $visibleKey = $stateKey.'-visible';
+>>>>>>> laraxot/develop
             $visibleValue = $this->data[$visibleKey] ?? false;
             $column->visible(is_bool($visibleValue) ? $visibleValue : false);
             $columns[] = $column;

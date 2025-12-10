@@ -6,9 +6,12 @@ namespace Modules\UI\Filament\Widgets;
 
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
 
 /**
  * RedirectWidget - Widget per gestire redirect verso URL specifici.

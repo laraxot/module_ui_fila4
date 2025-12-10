@@ -65,10 +65,14 @@ final class ImagesGallery
                 //     ->columnSpanFull(),
             ])
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->columns($context === 'form' ? 2 : 1);
 =======
             ->columns('form' === $context ? 2 : 1);
 >>>>>>> 161e28f (Lint)
+=======
+            ->columns('form' === $context ? 2 : 1);
+>>>>>>> laraxot/develop
     }
 
     public static function getRatios(): array

@@ -58,10 +58,14 @@ class RadioBadge extends Radio
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getIconForOption(string $value): string|null
 =======
     public function getIconForOption(string $value): ?string
 >>>>>>> 161e28f (Lint)
+=======
+    public function getIconForOption(string $value): ?string
+>>>>>>> laraxot/develop
     {
         $icon = $this->getEnumValue($value)?->getIcon();
 

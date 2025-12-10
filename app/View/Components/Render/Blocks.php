@@ -23,21 +23,30 @@ final class Blocks extends Component
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<int|string, mixed>  $blocks
 =======
      * @param array<int|string, mixed> $blocks
 >>>>>>> 161e28f (Lint)
+=======
+     * @param array<int|string, mixed> $blocks
+>>>>>>> laraxot/develop
      */
     public function __construct(
         public string $view,
         public array $blocks = [],
         public ?Model $model = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
     }
 >>>>>>> 161e28f (Lint)
+=======
+    ) {
+    }
+>>>>>>> laraxot/develop
 
     public function render(): View
     {

@@ -19,12 +19,18 @@ final class Navbar extends Component
      * Create a new component instance.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct() {}
 =======
     public function __construct()
     {
     }
 >>>>>>> 161e28f (Lint)
+=======
+    public function __construct()
+    {
+    }
+>>>>>>> laraxot/develop
 
     public function render(): Renderable
     {

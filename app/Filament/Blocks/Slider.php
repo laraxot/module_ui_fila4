@@ -7,7 +7,11 @@ namespace Modules\UI\Filament\Blocks;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
 use \Filament\Forms\Forms\Components\RadioImage;
+=======
+use Filament\Forms\Forms\Components\RadioImage;
+>>>>>>> laraxot/develop
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 
 final class Slider

@@ -54,6 +54,7 @@ class InlineDatePicker extends DatePicker
         $this->afterStateHydrated(static function (self $component, mixed $state): void {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($state !== null && is_string($state) && $state !== '') {
                 try {
                     $date = Carbon::parse($state);
@@ -62,15 +63,20 @@ class InlineDatePicker extends DatePicker
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
             if (null !== $state && is_string($state) && '' !== $state) {
                 try {
                     $date = Carbon::parse($state);
                     $component->currentViewMonth = $date->format('Y-m');
                 } catch (\Exception $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
                     // Handle invalid date
                     $component->currentViewMonth = now()->format('Y-m');
                 }
@@ -80,6 +86,7 @@ class InlineDatePicker extends DatePicker
         $this->dehydrateStateUsing(static function (self $_component, mixed $state): ?string {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($state !== null && is_string($state) && $state !== '') {
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
@@ -90,6 +97,8 @@ class InlineDatePicker extends DatePicker
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
             if (null !== $state && is_string($state) && '' !== $state) {
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
@@ -99,9 +108,12 @@ class InlineDatePicker extends DatePicker
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
             return null;
         });
     }
@@ -175,6 +187,7 @@ class InlineDatePicker extends DatePicker
         $datesRaw = $this->evaluate($this->enabledDates) ?? [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         if (!is_iterable($datesRaw)) {
             $datesRaw = [];
@@ -183,20 +196,26 @@ class InlineDatePicker extends DatePicker
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
 
         if (! is_iterable($datesRaw)) {
             $datesRaw = [];
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
         /** @var iterable<int|string, mixed> $datesRaw */
         $dates = is_array($datesRaw) ? $datesRaw : iterator_to_array($datesRaw);
 
         /** @var Collection<int, non-falsy-string> $result */
         $result = collect($dates)->map(function (mixed $date): string {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             if (!is_string($date) || $date === '') {
@@ -206,10 +225,14 @@ class InlineDatePicker extends DatePicker
 =======
             if (! is_string($date) || '' === $date) {
 >>>>>>> 161e28f (Lint)
+=======
+            if (! is_string($date) || '' === $date) {
+>>>>>>> laraxot/develop
                 return '';
             }
             try {
                 return Carbon::parse($date)->format('Y-m-d');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             } catch (Exception $e) {
@@ -222,6 +245,8 @@ class InlineDatePicker extends DatePicker
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
             } catch (\Exception $e) {
                 return '';
             }
@@ -231,9 +256,12 @@ class InlineDatePicker extends DatePicker
         $resultTyped = $result;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
         return $resultTyped;
     }
 
@@ -282,6 +310,7 @@ class InlineDatePicker extends DatePicker
                     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 } catch (Throwable $e) {
 =======
                 } catch (\Throwable $e) {
@@ -289,6 +318,9 @@ class InlineDatePicker extends DatePicker
 =======
                 } catch (\Throwable $e) {
 >>>>>>> 161e28f (Lint)
+=======
+                } catch (\Throwable $e) {
+>>>>>>> laraxot/develop
                     $isSelected = false;
                 }
 
