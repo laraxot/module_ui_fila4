@@ -5,6 +5,14 @@ declare(strict_types=1);
 return [
     'months' => [
         '0' => 'Gennaio',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
         '1' => 'Febbraio',
         '2' => 'Marzo',
         '3' => 'Aprile',
@@ -16,6 +24,30 @@ return [
         '9' => 'Ottobre',
         '10' => 'Novembre',
         '11' => 'Dicembre',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/develop
+        '1' => 'Febbraio', 
+        '2' => 'Marzo', 
+        '3' => 'Aprile', 
+        '4' => 'Maggio', 
+        '5' => 'Giugno', 
+        '6' => 'Luglio', 
+        '7' => 'Agosto', 
+        '8' => 'Settembre', 
+        '9' => 'Ottobre', 
+        '10' => 'Novembre', 
+        '11' => 'Dicembre'
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     ],
     'days_short' => [
         'mon' => 'Lun',
