@@ -39,12 +39,13 @@ class IconPicker extends TextInput
                             /** @var array<string, string> $packsOptions */
                             $packsOptions = $packs;
 
+
                             return $packsOptions;
                         })
                         ->reactive()
                         ->live(),
                     RadioIcon::make('newstate')
-                        ->options(function (Get $get) use ($icons): array {
+                        ->options(function (\Filament\Schemas\Components\Utilities\Get $get) use ($icons): array {
                             $pack = $get('pack');
                             if (! is_string($pack)) {
                                 return [];
@@ -56,9 +57,9 @@ class IconPicker extends TextInput
                                 '['.__LINE__.']['.class_basename($this).']',
                             );
                             /** @var array<int|string, mixed> $optsRaw */
-                            $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
+                            $optsValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
                             /** @var array<int|string> $optsKeys */
-                            $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
+                            $optsKeys = array_map(fn($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
                             $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
                             /** @var array<int|string> $optsKeys */
                             $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
@@ -78,7 +79,7 @@ class IconPicker extends TextInput
                         ->inline()
                         ->inlineLabel(false),
                 ])
-                ->action(function (array $data, Set $set) {
+                ->action(function (array $data, \Filament\Schemas\Components\Utilities\Set $set) {
                     $set('icon', $data['newstate']);
                 }),
         );

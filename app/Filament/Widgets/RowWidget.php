@@ -22,7 +22,7 @@ abstract class RowWidget extends XotBaseWidget
     protected int|string|array $columnSpan = 'full';
 
     /**
-     * @return array<int|string, Component>
+     * @return array<int|string, \Filament\Schemas\Components\Component>
      */
     public function getFormSchema(): array
     {

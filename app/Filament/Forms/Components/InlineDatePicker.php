@@ -52,7 +52,7 @@ class InlineDatePicker extends DatePicker
 
         // Hydration/Dehydration del valore
         $this->afterStateHydrated(static function (self $component, mixed $state): void {
-            if (null !== $state && is_string($state) && '' !== $state) {
+            if ($state !== null && is_string($state) && $state !== '') {
                 try {
                     $date = Carbon::parse($state);
                     $component->currentViewMonth = $date->format('Y-m');
@@ -64,7 +64,7 @@ class InlineDatePicker extends DatePicker
         });
 
         $this->dehydrateStateUsing(static function (self $_component, mixed $state): ?string {
-            if (null !== $state && is_string($state) && '' !== $state) {
+            if ($state !== null && is_string($state) && $state !== '') {
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
                 } catch (\Exception $e) {
@@ -143,8 +143,8 @@ class InlineDatePicker extends DatePicker
     public function getEnabledDates(): Collection
     {
         $datesRaw = $this->evaluate($this->enabledDates) ?? [];
-
-        if (! is_iterable($datesRaw)) {
+        
+        if (!is_iterable($datesRaw)) {
             $datesRaw = [];
         }
 
