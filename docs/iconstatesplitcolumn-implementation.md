@@ -45,8 +45,8 @@ use Modules\<nome progetto>\States\Appointment\AppointmentState;
 use Modules\<nome progetto>\Models\Appointment;
 use Modules\<nome modulo>\States\Appointment\AppointmentState;
 use Modules\<nome modulo>\Models\Appointment;
-use Modules\SaluteOra\States\Appointment\AppointmentState;
-use Modules\SaluteOra\Models\Appointment;
+use Modules\<nome progetto>\States\Appointment\AppointmentState;
+use Modules\<nome progetto>\Models\Appointment;
 
 
 ## Implementation
@@ -55,8 +55,8 @@ use Modules\SaluteOra\Models\Appointment;
 
 ```php
 use Modules\UI\Filament\Tables\Columns\IconStateSplitColumn;
-use Modules\SaluteOra\States\Appointment\AppointmentState;
-use Modules\SaluteOra\Models\Appointment;
+use Modules\<nome progetto>\States\Appointment\AppointmentState;
+use Modules\<nome progetto>\Models\Appointment;
 
 use Modules\<nome modulo>\States\Appointment\AppointmentState;
 use Modules\<nome modulo>\Models\Appointment;
