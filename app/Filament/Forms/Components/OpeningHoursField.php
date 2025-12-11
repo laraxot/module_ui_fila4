@@ -13,7 +13,7 @@ use Modules\UI\Rules\OpeningHoursRule;
 /**
  * --.
  */
-class OpeningHoursField extends Field
+final class OpeningHoursField extends Field
 {
     /**
      * Vista Blade per il rendering del componente.
@@ -80,10 +80,10 @@ class OpeningHoursField extends Field
 
         $this->schema($form)->columns(5);
 
-        $this->afterStateUpdated(function ($_state) {
+        $this->afterStateUpdated(function ($_state): void {
             // dddx($state);
         });
-        $this->afterStateHydrated(function (OpeningHoursField $_component, $_state) {
+        $this->afterStateHydrated(function (OpeningHoursField $_component, $_state): void {
             // Qui puoi normalizzare lo stato iniziale se serve
             // dddx($state);
         });

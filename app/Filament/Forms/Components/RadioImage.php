@@ -6,7 +6,7 @@ namespace Modules\Notify\Filament\Forms\Components;
 
 use Filament\Forms\Components\Radio;
 
-class RadioImage extends Radio
+final class RadioImage extends Radio
 {
     /**
      * @var view-string

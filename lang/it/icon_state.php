@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 return [
     'fields' => [
         'name' => [
@@ -39,6 +38,13 @@ return [
             'help' => 'Messaggio informativo',
             'description' => 'Testo del messaggio',
             'helper_text' => '',
+        ],
+    ],
+    'actions' => [
+        'change-state' => [
+            'label' => 'change-state',
+            'icon' => 'change-state',
+            'tooltip' => 'change-state',
         ],
     ],
 ];

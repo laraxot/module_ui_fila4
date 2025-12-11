@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
 
-class SetLocale
+final class SetLocale
 {
     /**
      * Handle an incoming request.
@@ -19,7 +19,7 @@ class SetLocale
     {
         // Recupera la lingua dalla sessione o usa quella predefinita
         $locale = Session::get('locale', config('app.locale'));
-        if (!is_string($locale)) {
+        if (! is_string($locale)) {
             $locale = Config::string('app.locale');
         }
         // Imposta la lingua
