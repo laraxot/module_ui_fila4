@@ -11,7 +11,6 @@ use Modules\Xot\Filament\Pages\XotBaseDashboard;
 
 class Dashboard extends XotBaseDashboard
 {
-
     protected function getHeaderWidgets(): array
     {
         $widgets = [

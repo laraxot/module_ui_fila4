@@ -24,11 +24,12 @@ class SelectStateColumn extends SelectColumn
                 $states = Arr::wrap($defaultStates);
                 /** @var array<int|string, mixed> $states */
                 $states = is_array($states) ? $states : [];
-                $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
-                $statesKeys = array_map(fn($k) => is_string($k) ? $k : (string) $k, array_keys($states));
+                $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
+                $statesKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($states));
                 $combined = array_combine($statesKeys, $statesValues);
                 /** @var array<int|string, int|string> $result */
                 $result = $combined ?: [];
+
                 return $result;
             }
 
@@ -46,8 +47,6 @@ class SelectStateColumn extends SelectColumn
                 $statesArray = $fetchedStates->toArray();
                 $states = $statesArray;
             }
-            
-
 
             /** @var array<int|string, mixed> $states */
             if (is_object($state)) {
@@ -72,18 +71,16 @@ class SelectStateColumn extends SelectColumn
                     }
                 }
             }
-            
-
 
             /** @var array<int|string, mixed> $states */
             $statesFiltered = array_filter($states, function (mixed $item): bool {
                 return is_string($item) || is_int($item);
             });
-            
+
             /** @var array<int|string> $statesKeys */
-            $statesKeys = array_map(fn($k) => is_string($k) ? $k : (string) $k, array_keys($statesFiltered));
+            $statesKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($statesFiltered));
             /** @var array<int|string> $statesValues */
-            $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($statesFiltered));
+            $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($statesFiltered));
             $combined = array_combine($statesKeys, $statesValues);
             /** @var array<int|string, int|string> $combinedTyped */
             $combinedTyped = $combined ?: [];
@@ -101,21 +98,21 @@ class SelectStateColumn extends SelectColumn
 
         $this->beforeStateUpdated(function (Model&HasStatesContract $record, mixed $stateRaw): void {
             // Type narrowing per $state: deve essere State|string
-            if (!is_string($stateRaw) && !($stateRaw instanceof State)) {
+            if (! is_string($stateRaw) && ! ($stateRaw instanceof State)) {
                 return;
             }
-            
+
             $state = is_string($stateRaw) ? $stateRaw : $stateRaw;
             $message = '';
-            
+
             if (! isset($record->state) || ! is_object($record->state)) {
                 return;
             }
-            
+
             if (! ($record->state instanceof State)) {
                 return;
             }
-            
+
             /** @var State $stateObj */
             $stateObj = $record->state;
             $stateObj->transitionTo($state, $message);

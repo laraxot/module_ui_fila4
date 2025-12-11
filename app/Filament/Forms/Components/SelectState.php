@@ -31,9 +31,9 @@ class SelectState extends Select
                             }
                             /** @var array<int|string, mixed> $statesRaw */
                             $states = $statesRaw;
-                            $statesKeys = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
-                            $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
-                            
+                            $statesKeys = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
+                            $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
+
                             $combined = array_combine($statesKeys, $statesValues);
                             /** @var array<int|string, int|string> $combinedTyped */
                             $combinedTyped = $combined ?: [];
@@ -48,8 +48,6 @@ class SelectState extends Select
                         }
                     }
                 }
-                
-
 
                 return [];
             }
@@ -60,9 +58,9 @@ class SelectState extends Select
             $statesRaw = $statesCollection->toArray();
             /** @var array<int|string, mixed> $states */
             $states = $statesRaw;
-            $statesKeys = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
-            $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
-            
+            $statesKeys = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
+            $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
+
             $combined = array_combine($statesKeys, $statesValues);
             /** @var array<int|string, int|string> $combinedTyped */
             $combinedTyped = $combined ?: [];

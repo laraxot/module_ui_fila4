@@ -66,8 +66,8 @@ class GetUserDataAction
             id: (int) $user->id,
             name: (string) ($user->name ?? ''),
             email: (string) ($user->email ?? ''),
-            avatar: $avatarValue !== null ? (string) $avatarValue : null,
-            role: $roleValue !== null ? (string) $roleValue : null,
+            avatar: null !== $avatarValue ? (string) $avatarValue : null,
+            role: null !== $roleValue ? (string) $roleValue : null,
             permissions: $permissionsArray,
             settings: $settingsArray,
         );

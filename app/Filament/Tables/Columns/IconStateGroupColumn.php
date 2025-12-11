@@ -41,20 +41,20 @@ class IconStateGroupColumn extends ColumnGroup
         $columns = [];
 
         foreach ($states as $stateKey => $stateClassItem) {
-            if (!is_string($stateClassItem) || !class_exists($stateClassItem)) {
+            if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
                 continue;
             }
-            
-            if (!is_string($stateKey)) {
+
+            if (! is_string($stateKey)) {
                 continue;
             }
-            
+
             $stateInstance = new $stateClassItem($this->modelClass);
             Assert::isInstanceOf($stateInstance, StateContract::class);
-            $visibleKey = $stateKey . '-visible';
+            $visibleKey = $stateKey.'-visible';
             $this->data[$visibleKey] = true;
 
-            $column = IconColumn::make($stateKey . '-icon')
+            $column = IconColumn::make($stateKey.'-icon')
                 ->icon($stateInstance->icon(...))
                 ->color($stateInstance->color(...))
                 ->tooltip($stateInstance->label(...))
@@ -70,16 +70,16 @@ class IconStateGroupColumn extends ColumnGroup
                         $canTransition = $record->state->canTransitionTo($stateClassItem);
                         $res = is_bool($canTransition) ? $canTransition : false;
                     }
-                    $visibleKey = $stateKey . '-visible';
+                    $visibleKey = $stateKey.'-visible';
                     $this->data[$visibleKey] = $res;
-                    if (!$res) {
+                    if (! $res) {
                         return null;
                     }
 
                     return true;
                 });
-                
-            $column->action(Action::make($stateKey . '-action')
+
+            $column->action(Action::make($stateKey.'-action')
                 ->requiresConfirmation()
                 ->modalHeading(function ($_record) use ($stateInstance) {
                     // StateContract provides modalHeading()
@@ -96,8 +96,8 @@ class IconStateGroupColumn extends ColumnGroup
                 ->fillForm($stateInstance->modalFillFormByRecord(...))
                 ->action(function (mixed $record, mixed $data) use ($stateInstance) {
                     // StateContract provides modalActionByRecord()
-                    /** @var \Illuminate\Database\Eloquent\Model $record */
-                    /** @var array<string, mixed> $data */
+                    /* @var \Illuminate\Database\Eloquent\Model $record */
+                    /* @var array<string, mixed> $data */
                     $stateInstance->modalActionByRecord($record, $data);
 
                     // $this->invalidateCache();
@@ -107,7 +107,7 @@ class IconStateGroupColumn extends ColumnGroup
                     //    'message' => __('ui::messages.action_completed'),
                     // ]);
                 }));
-                
+
             $visibleValue = $this->data[$visibleKey] ?? false;
             $column->visible($visibleValue);
             $columns[] = $column;
