@@ -18,7 +18,7 @@ return [
         'placeholder' => 'Seleziona un CAP',
         'help' => 'Prima seleziona regione e provincia',
     ],
-     'administrative_area_level_3' => [
+    'administrative_area_level_3' => [
         'label' => 'Comune',
         'description' => 'Comune di appartenza',
         'icon' => 'heroicon-o-building-office',
