@@ -79,7 +79,6 @@ class S3Test extends XotBasePage
 5. **UTILIZZARE** metodi della classe base quando possibile
 
 ## Collegamenti
-- [Regole Estensione Filament](../../../.cursor/rules/filament-extension-rules.mdc)
+- [Regole Estensione Filament](../../../docs/architecture/filament-extension-rules.md)
 - [XotBasePage Implementation](../../Xot/docs/xotbasepage_implementation.md)
 - [Filament Best Practices](../../../docs/FILAMENT-BEST-PRACTICES.md)
-
