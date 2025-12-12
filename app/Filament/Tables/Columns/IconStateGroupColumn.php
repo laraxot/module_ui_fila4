@@ -5,16 +5,18 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Tables\Columns;
 
 use Filament\Actions\Action;
-use Filament\Schemas\Components\Utilities\Set;
 use Filament\Tables\Columns\ColumnGroup;
 use Filament\Tables\Columns\IconColumn;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Contracts\StateContract;
 use Webmozart\Assert\Assert;
 
 class IconStateGroupColumn extends ColumnGroup
 {
     public string $stateClass = '';
+
     public string $modelClass = '';
+
     public array $data = [];
 
     protected function setUp(): void
@@ -64,11 +66,12 @@ class IconStateGroupColumn extends ColumnGroup
                 ])
                 ->extraCellAttributes(['class' => 'px-1 py-1'])
                 ->label('')
-                ->default(function (mixed $record, Set $_set) use ($stateClassItem, $stateKey) {
-                    $res = false;
-                    if (is_object($record) && isset($record->state) && is_object($record->state) && method_exists($record->state, 'canTransitionTo')) {
+                ->default(function (Model $record) use ($stateClassItem, $stateKey): ?bool {
+                    if (isset($record->state) && is_object($record->state) && method_exists($record->state, 'canTransitionTo')) {
                         $canTransition = $record->state->canTransitionTo($stateClassItem);
                         $res = is_bool($canTransition) ? $canTransition : false;
+                    } else {
+                        $res = false;
                     }
                     $visibleKey = $stateKey.'-visible';
                     $this->data[$visibleKey] = $res;
@@ -79,34 +82,30 @@ class IconStateGroupColumn extends ColumnGroup
                     return true;
                 });
 
-            $column->action(Action::make($stateKey.'-action')
-                ->requiresConfirmation()
-                ->modalHeading(function ($_record) use ($stateInstance) {
-                    // StateContract provides modalHeading()
-                    return $stateInstance->modalHeading();
-                })
-                ->modalDescription(function ($_record) use ($stateInstance) {
-                    // StateContract provides modalDescription()
-                    return $stateInstance->modalDescription();
-                })
-                ->schema(function ($_record) use ($stateInstance) {
-                    // StateContract provides modalFormSchema()
-                    return $stateInstance->modalFormSchema();
-                })
-                ->fillForm($stateInstance->modalFillFormByRecord(...))
-                ->action(function (mixed $record, mixed $data) use ($stateInstance) {
-                    // StateContract provides modalActionByRecord()
-                    /* @var \Illuminate\Database\Eloquent\Model $record */
-                    /* @var array<string, mixed> $data */
-                    $stateInstance->modalActionByRecord($record, $data);
+            $column->action(
+                Action::make($stateKey.'-action')
+                    ->requiresConfirmation()
+                    ->modalHeading(function (Model $record) use ($stateInstance) {
+                        // StateContract provides modalHeading()
+                        return $stateInstance->modalHeading();
+                    })
+                    ->modalDescription(function (Model $record) use ($stateInstance) {
+                        // StateContract provides modalDescription()
+                        return $stateInstance->modalDescription();
+                    })
+                    ->schema(function (Model $record) use ($stateInstance) {
+                        // StateContract provides modalFormSchema()
+                        return $stateInstance->modalFormSchema();
+                    })
+                    ->fillForm($stateInstance->modalFillFormByRecord(...))
+                    ->action(function (Model $record, array $data) use ($stateInstance): void {
+                        // Ensure data is treated as array<string, mixed> for PHPStan and StateContract
+                        /** @var array<string, mixed> $typedData */
+                        $typedData = $data;
 
-                    // $this->invalidateCache();
-                    // $this->loadAppointments();
-                    // $this->dispatch('notify', [
-                    //    'type' => 'success',
-                    //    'message' => __('ui::messages.action_completed'),
-                    // ]);
-                }));
+                        $stateInstance->modalActionByRecord($record, $typedData);
+                    })
+            );
 
             $visibleValue = $this->data[$visibleKey] ?? false;
             $column->visible($visibleValue);

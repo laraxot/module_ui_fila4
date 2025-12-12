@@ -157,6 +157,25 @@ use Modules\UI\Filament\Tables\Columns\IconStateGroupColumn;
     ->stateClass(AppointmentState::class, Appointment::class),
 ```
 
+### Implementation notes (PHPStan + DRY/KISS)
+
+- Le azioni sono registrate con closure tipizzate `function (Model $record, array $data): void`, compatibili con Filament 3/4.
+- Prima di invocare il metodo dello **state object**, i dati vengono normalizzati in `array<string, mixed>` filtrando tutte le chiavi non stringa. Questo rende esplicito il contratto con `modalActionByRecord()`.
+- La colonna si limita a:
+  - risolvere la classe di stato,
+  - preparare il payload di dati tipizzato,
+  - delegare l'esecuzione al metodo dello stato.
+
+Questo mantiene la responsabilità delle transizioni nello state, e lascia alla colonna solo il ruolo di adapter tra Filament e il domain state machine.
+
+#### TODO / Miglioramenti DRY + KISS
+
+- Estrarre un piccolo trait/base class condivisa per tutte le colonne "state-based" (`IconStateSplitColumn`, `IconStateGroupColumn`, `SelectStateColumn`) che gestisca:
+  - normalizzazione del payload `array<string, mixed>`,
+  - risoluzione della state class,
+  - boilerplate comune per le azioni.
+- Documentare un contratto minimo per gli state (es. interfaccia con `modalActionByRecord(Model $record, array $data): void`) per ridurre la conoscenza implicita tra colonna e state.
+
 ## SelectStateColumn
 
 ### Purpose

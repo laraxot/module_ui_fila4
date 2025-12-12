@@ -32,8 +32,7 @@ class UserCalendarWidget extends Widget
     }
 
     /**
-     * @param array<string, mixed> $fetchInfo
-     *
+     * @param  array<string, mixed>  $fetchInfo
      * @return array<int, array<string, mixed>>
      */
     public function fetchEvents(array $fetchInfo): array
@@ -49,13 +48,40 @@ class UserCalendarWidget extends Widget
             return [];
         }
 
-        $result = $actionInstance->execute($fetchInfo);
-        if (! is_array($result)) {
+        $resultRaw = $actionInstance->execute($fetchInfo);
+
+        if (! self::isValidEventsArray($resultRaw)) {
             return [];
         }
 
-        /* @var array<int, array<string, mixed>> $result */
+        /** @var array<int, array<string, mixed>> $result */
+        $result = $resultRaw;
+
         return $result;
+    }
+
+    /**
+     * Validate that the given value is an array of events with string keys.
+     */
+    private static function isValidEventsArray(mixed $value): bool
+    {
+        if (! is_array($value)) {
+            return false;
+        }
+
+        foreach ($value as $event) {
+            if (! is_array($event)) {
+                return false;
+            }
+
+            foreach (array_keys($event) as $key) {
+                if (! is_string($key)) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 
     /**

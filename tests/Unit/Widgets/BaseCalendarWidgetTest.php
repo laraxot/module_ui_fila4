@@ -6,11 +6,7 @@ namespace Modules\UI\Tests\Unit\Widgets;
 
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
 use Modules\UI\Filament\Widgets\FullCalendarWidget;
-// use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget; // Temporaneamente disabilitato per Filament v4
-use Modules\UI\Filament\Widgets\FullCalendarWidget;
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
-// use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget; // Temporaneamente disabilitato per Filament v4
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget as BaseSaadeFullCalendarWidget;
 
 // Mock class per testare il BaseCalendarWidget
 class MockCalendarWidget extends BaseCalendarWidget
@@ -63,15 +59,6 @@ beforeEach(function () {
 });
 
 describe('BaseCalendarWidget Inheritance', function () {
-    it('extends FullCalendarWidget', function () {
-        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
-    });
-    it('extends FullCalendarWidget', function () {
-        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
-    });
-    it('extends FullCalendarWidget', function () {
-        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
-    });
     it('extends FullCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
     });

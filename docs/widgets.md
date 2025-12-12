@@ -65,6 +65,30 @@ $widget = RedirectWidget::configure([
 - `StatsOverviewWidget`: Shows multiple statistics in a grid
 - `UserCalendarWidget`: Displays a user's calendar
 
+### UserCalendarWidget
+
+`UserCalendarWidget` è il wrapper standard per l'integrazione del calendario utente nel pannello Filament.
+
+#### Pattern di implementazione
+
+- Estende `XotBaseWidget` e delega la logica di business a una **action** dedicata.
+- Il metodo `fetchEvents(array $fetchInfo): array`:
+  - ricava il nome della classe action con `getActionName(__FUNCTION__)`;
+  - risolve l'istanza via `app()` e verifica la presenza del metodo `execute`;
+  - esegue l'action passando `$fetchInfo`;
+  - normalizza il risultato in `array<int, array<string, mixed>>`, scartando valori non conformi.
+
+Questo garantisce che il widget rimanga sottile (thin wrapper) e che tutta la logica sia riusabile anche fuori dal contesto Filament.
+
+#### TODO / Miglioramenti DRY + KISS
+
+- Documentare e standardizzare la convenzione di naming delle action usate da `fetchEvents()` (es. `<Module>\Actions\Calendar\UserCalendarFetchEventsAction`).
+- Valutare un trait condiviso per i widget calendario che gestisca:
+  - risoluzione dinamica dell'action;
+  - normalizzazione del risultato in `array<int, array<string, mixed>>`;
+  - logging di errori/edge case (action mancante, risultato non valido).
+- Aggiungere esempi di action concrete nella doc (es. `UserCalendarFetchEventsAction`) per rendere più esplicito il pattern agli sviluppatori.
+
 ## Creating Custom Widgets
 
 To create a new widget:
