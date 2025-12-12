@@ -6,7 +6,6 @@ namespace Modules\UI\Tests\Unit\Widgets;
 
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
 use Modules\UI\Filament\Widgets\FullCalendarWidget;
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget as BaseSaadeFullCalendarWidget;
 
 // Mock class per testare il BaseCalendarWidget
 class MockCalendarWidget extends BaseCalendarWidget
