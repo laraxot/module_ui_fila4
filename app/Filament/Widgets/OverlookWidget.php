@@ -18,6 +18,9 @@ final class OverlookWidget extends XotBaseWidget
 
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
      * public array $grid = [
      * 'default' => 6,
      * 'sm' => 6,
@@ -27,6 +30,7 @@ final class OverlookWidget extends XotBaseWidget
      * '2xl' => null,
      * ];
      */
+<<<<<<< HEAD
 =======
         public array $grid = [
                     'default' => 6,
@@ -38,6 +42,8 @@ final class OverlookWidget extends XotBaseWidget
                 ];
                 */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 
     public array $stats = [];
 
@@ -52,6 +58,9 @@ final class OverlookWidget extends XotBaseWidget
 
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
      * public function mount(array $filter): void
      * {
      * $this->filter = $filter;
@@ -70,6 +79,7 @@ final class OverlookWidget extends XotBaseWidget
      * }
      * }
      */
+<<<<<<< HEAD
 =======
     public function mount(array $filter): void
     {
@@ -90,4 +100,6 @@ final class OverlookWidget extends XotBaseWidget
     }
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 }

@@ -6,6 +6,9 @@ return [
     'months' => [
         '0' => 'Gennaio',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
         '1' => 'Febbraio',
         '2' => 'Marzo',
         '3' => 'Aprile',
@@ -17,6 +20,7 @@ return [
         '9' => 'Ottobre',
         '10' => 'Novembre',
         '11' => 'Dicembre',
+<<<<<<< HEAD
 =======
         '1' => 'Febbraio', 
         '2' => 'Marzo', 
@@ -30,6 +34,8 @@ return [
         '10' => 'Novembre', 
         '11' => 'Dicembre'
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     ],
     'days_short' => [
         'mon' => 'Lun',
