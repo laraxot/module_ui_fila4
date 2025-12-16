@@ -8,6 +8,14 @@
 - app/Actions/GetUserDataAction.php
 - app/Data/UserData.php
 - app/Datas/UserData.php (removed duplicate)
+
+### 1.1. UserData.php Syntax Error Fix (Gennaio 2025)
+**Date**: 2025-01-XX  
+**File**: app/Datas/UserData.php  
+**Issue**: Doppia chiusura del costruttore (`}` duplicata alla riga 19-20)  
+**Fix**: Rimossa chiusura duplicata, mantenuta solo la chiusura corretta del costruttore  
+**Additional**: Pint ha corretto automaticamente il formato nullable types (`null|string` → `?string`) per conformità PSR-12  
+**Status**: ✅ PHPStan Level 10 compliant
 - app/Filament/Blocks/ImagesGallery.php
 - app/Filament/Blocks/VideoSpatie.php
 - app/Filament/Forms/Components/Field/QrReader.php
