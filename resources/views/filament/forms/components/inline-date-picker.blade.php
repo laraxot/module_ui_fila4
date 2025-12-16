@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 {{--
 /**
  * InlineDatePicker View - KISS Principle
@@ -142,4 +145,8 @@ declare(strict_types=1);
 .inline-date-picker button {
     transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+<<<<<<< HEAD
 </style>
+=======
+</style> 
+>>>>>>> 727968c (.)
