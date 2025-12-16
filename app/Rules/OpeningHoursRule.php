@@ -9,6 +9,7 @@ namespace Modules\UI\Rules;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Modules\UI\Actions\Datetime\GetDaysMappingAction;
 use Modules\Xot\Filament\Traits\TransTrait;
+
 use function Safe\preg_match;
 
 class OpeningHoursRule implements ValidationRule
