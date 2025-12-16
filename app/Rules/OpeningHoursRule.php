@@ -1,10 +1,6 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 
 // app/Rules/OpeningHoursRule.php
 
@@ -154,50 +150,3 @@ class OpeningHoursRule implements ValidationRule
         return (bool) preg_match('/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/', $time);
     }
 }
-<<<<<<< HEAD
-=======
-// app/Rules/OpeningHoursRule.php
-namespace Modules\UI\Rules;
-
-use Closure;
-use Illuminate\Contracts\Validation\ValidationRule;
-use Carbon\Carbon;
-use Illuminate\Translation\PotentiallyTranslatedString;
-
-class OpeningHoursRule implements ValidationRule
-{
-    public function validate(string $attribute, mixed $value, Closure $fail): void
-    {
-        $days = collect([
-            Carbon::MONDAY,
-            Carbon::TUESDAY,
-            Carbon::WEDNESDAY,
-            Carbon::THURSDAY,
-            Carbon::FRIDAY,
-            Carbon::SATURDAY,
-        ])->mapWithKeys(function ($day) {
-            /** @phpstan-ignore method.nonObject */
-            $dayKey = strtolower(Carbon::create()->startOfWeek()->addDays($day - 1)->format('l'));
-            /** @phpstan-ignore method.nonObject */
-            $dayLabel = ucfirst(Carbon::create()->startOfWeek()->addDays($day - 1)->isoFormat('dddd'));
-
-            return [$dayKey => $dayLabel];
-        })->toArray();
-        /*
-        foreach ($days as $dayKey => $dayLabel) {
-            $hours = $value[$dayKey];
-
-            foreach ($hours as $hourKey => $hour) {
-                if(is_string($hour) && $hour===''){
-
-                    $fail("L'orario di {$hourKey} deve essere impostato per il {$dayLabel}.");
-                }
-            }
-        }
-        */
-        
-    }
-}
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
