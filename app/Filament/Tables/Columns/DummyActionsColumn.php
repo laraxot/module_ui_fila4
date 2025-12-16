@@ -25,6 +25,7 @@ final class DummyActionsColumn extends XotBaseColumnGroup
      */
     public function getActions(): array
     {
+        /** @var array<string, mixed> */
         return $this->actions;
     }
 
