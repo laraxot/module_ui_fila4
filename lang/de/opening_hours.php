@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 declare(strict_types=1);
 
 return [
@@ -71,6 +74,7 @@ return [
             'morning' => 'Vormittag',
             'afternoon' => 'Nachmittag',
         ],
+<<<<<<< HEAD
 =======
 return [
     'instructions' => [
@@ -127,5 +131,7 @@ return [
         'to_after_from' => 'L\'orario \"Alle\" deve essere successivo all\'orario \"Dalle\"',
         'time_sequence' => 'L\'orario di inizio deve essere precedente a quello di fine',
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
     ],
 ];
