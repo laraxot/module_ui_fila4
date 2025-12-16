@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 <!--
   This example requires some changes to your config:
 
@@ -149,6 +155,9 @@ declare(strict_types=1);
     </main>
   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
