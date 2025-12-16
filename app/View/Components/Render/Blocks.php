@@ -23,7 +23,7 @@ final class Blocks extends Component
 {
 <<<<<<< HEAD
     /**
-     * @param array<int|string, mixed> $blocks
+     * @param  array<int|string, mixed>  $blocks
      */
 =======
     public array $blocks = [];
