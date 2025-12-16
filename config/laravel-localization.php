@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
@@ -12,6 +13,17 @@ return [
      * | This is the array for the languages.
      * |
      */
+=======
+return [
+    /*
+    |--------------------------------------------------------------------------
+    | Languages
+    |--------------------------------------------------------------------------
+    |
+    | This is the array for the languages.
+    |
+    */
+>>>>>>> 727968c (.)
     'languages' => [
         'it' => [
             'name' => 'Italiano',
@@ -26,6 +38,7 @@ return [
             'regional' => 'en_GB',
         ],
     ],
+<<<<<<< HEAD
     /*
      * |--------------------------------------------------------------------------
      * | Language Detection
@@ -34,11 +47,23 @@ return [
      * | This is the configuration for the language detection.
      * |
      */
+=======
+
+    /*
+    |--------------------------------------------------------------------------
+    | Language Detection
+    |--------------------------------------------------------------------------
+    |
+    | This is the configuration for the language detection.
+    |
+    */
+>>>>>>> 727968c (.)
     'detect' => [
         'browser' => true,
         'session' => true,
         'cookie' => true,
     ],
+<<<<<<< HEAD
     /*
      * |--------------------------------------------------------------------------
      * | Language Selection
@@ -47,10 +72,22 @@ return [
      * | This is the configuration for the language selection.
      * |
      */
+=======
+
+    /*
+    |--------------------------------------------------------------------------
+    | Language Selection
+    |--------------------------------------------------------------------------
+    |
+    | This is the configuration for the language selection.
+    |
+    */
+>>>>>>> 727968c (.)
     'selection' => [
         'default' => 'it',
         'fallback' => 'en',
     ],
+<<<<<<< HEAD
     /*
      * |--------------------------------------------------------------------------
      * | URL Configuration
@@ -59,10 +96,22 @@ return [
      * | This is the configuration for the URL.
      * |
      */
+=======
+
+    /*
+    |--------------------------------------------------------------------------
+    | URL Configuration
+    |--------------------------------------------------------------------------
+    |
+    | This is the configuration for the URL.
+    |
+    */
+>>>>>>> 727968c (.)
     'url' => [
         'prefix' => true,
         'hide_default' => false,
     ],
+<<<<<<< HEAD
     /*
      * |--------------------------------------------------------------------------
      * | Route Configuration
@@ -71,6 +120,17 @@ return [
      * | This is the configuration for the routes.
      * |
      */
+=======
+
+    /*
+    |--------------------------------------------------------------------------
+    | Route Configuration
+    |--------------------------------------------------------------------------
+    |
+    | This is the configuration for the routes.
+    |
+    */
+>>>>>>> 727968c (.)
     'route' => [
         'prefix' => '{locale}',
         'middleware' => [
