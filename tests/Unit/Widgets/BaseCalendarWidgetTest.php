@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Unit\Widgets;
 
+<<<<<<< HEAD
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
 use Modules\UI\Filament\Widgets\FullCalendarWidget;
 
@@ -142,28 +143,45 @@ describe('BaseCalendarWidget Event Management', function () {
     it('handles empty event list', static function () {
         $widget = new class extends BaseCalendarWidget {
             public string $model = MockEventModel::class;
+=======
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Grid;
+use Modules\UI\Filament\Widgets\UserCalendarWidget;
 
-            public function fetchEvents(array $fetchInfo): array
-            {
-                return [];
-            }
+beforeEach(function () {
+    $this->widget = new class extends UserCalendarWidget {
+        public function getActionName(string $function): string
+        {
+            unset($function);
+>>>>>>> 70885a68 (.)
 
-            public function getFormSchema(): array
-            {
-                return [];
-            }
-        };
+            return 'Modules\\UI\\Tests\\Unit\\Widgets\\NonExistingAction';
+        }
+    };
 
+    $this->widget->type = 'test';
+});
+
+describe('UserCalendarWidget Basics', function () {
+    it('is a UserCalendarWidget', function () {
+        expect($this->widget)->toBeInstanceOf(UserCalendarWidget::class);
+    });
+});
+
+describe('UserCalendarWidget Event Management', function () {
+    it('returns empty events if action class does not exist', function () {
         $fetchInfo = [
             'start' => '2025-01-01T00:00:00',
             'end' => '2025-01-31T23:59:59',
         ];
 
-        $events = $widget->fetchEvents($fetchInfo);
+        $events = $this->widget->fetchEvents($fetchInfo);
 
         expect($events)->toBeArray();
         expect($events)->toHaveCount(0);
     });
+<<<<<<< HEAD
 
     it('handles large event lists efficiently', static function () {
         $widget = new class extends BaseCalendarWidget {
@@ -204,27 +222,37 @@ describe('BaseCalendarWidget Event Management', function () {
         expect($events)->toHaveCount(1000);
         expect($executionTime)->toBeLessThan(1.0); // Dovrebbe essere veloce
     });
+=======
+>>>>>>> 70885a68 (.)
 });
 
-describe('BaseCalendarWidget Form Schema', function () {
-    it('provides form schema for event creation', function () {
+describe('UserCalendarWidget Form Schema', function () {
+    it('falls back to a minimal schema if action does not exist', function () {
         $formSchema = $this->widget->getFormSchema();
 
         expect($formSchema)->toBeArray();
-        expect($formSchema)->toHaveCount(3);
+        expect($formSchema)->toHaveCount(2);
+
+        expect($formSchema[0])->toBeInstanceOf(TextInput::class);
+        expect($formSchema[1])->toBeInstanceOf(Grid::class);
+
+        expect($formSchema[0]->getName())->toBe('title');
     });
 
-    it('includes required form fields', function () {
+    it('fallback schema contains datetime pickers', function () {
         $formSchema = $this->widget->getFormSchema();
 
-        $fieldNames = collect($formSchema)->map(static fn ($field) => $field->getName())->toArray();
+        $grid = $formSchema[1];
+        expect($grid)->toBeInstanceOf(Grid::class);
 
-        expect($fieldNames)->toContain('title', 'start', 'end');
-    });
+        $gridSchema = $grid->getChildComponents();
+        expect($gridSchema)->toBeArray();
+        expect($gridSchema)->toHaveCount(2);
 
-    it('has title field with required validation', function () {
-        $formSchema = $this->widget->getFormSchema();
+        expect($gridSchema[0])->toBeInstanceOf(DateTimePicker::class);
+        expect($gridSchema[1])->toBeInstanceOf(DateTimePicker::class);
 
+<<<<<<< HEAD
         $titleField = collect($formSchema)->first(static fn ($field) => 'title' === $field->getName());
 
         expect($titleField)->not->toBeNull();
@@ -540,3 +568,10 @@ describe('BaseCalendarWidget Integration', static function () {
         expect($events2)->toHaveCount(2);
     });
 });
+=======
+        expect($gridSchema[0]->getName())->toBe('starts_at');
+        expect($gridSchema[1]->getName())->toBe('ends_at');
+    });
+});
+
+>>>>>>> 70885a68 (.)
