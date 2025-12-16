@@ -165,11 +165,7 @@ private function getStudiosForLocation(Get $get): Collection
     
     return \Modules\<nome progetto>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
-<<<<<<< HEAD
     return \Modules\<nome progetto>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
-=======
-    return \Modules\SaluteOra\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
->>>>>>> d7dfa0b6 (.)
 }
 
 private function getStudiosForLocation(Get $get): Collection
@@ -182,11 +178,7 @@ private function getStudiosForLocation(Get $get): Collection
         return collect();
     }
     
-<<<<<<< HEAD
     return \Modules\<nome progetto>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
-=======
-    return \Modules\SaluteOra\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
->>>>>>> d7dfa0b6 (.)
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
         $q->where('postal_code', $cap)
@@ -241,13 +233,8 @@ return [
 - [Widget Analysis](../<nome progetto>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
 ### Modulo Generico
 - [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
-<<<<<<< HEAD
 ### Modulo <nome progetto>
 - [Widget Analysis](../<nome progetto>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
-=======
-### Modulo SaluteOra
-- [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
->>>>>>> d7dfa0b6 (.)
 
 ---
 **Component Status**: 📋 Documented - Ready for Implementation  
@@ -272,13 +259,8 @@ return [
 - [Components Overview](./components.md)
 - [Form Components Guide](./form-components.md)
 
-<<<<<<< HEAD
 ### Modulo <nome progetto>
 - [Widget Analysis](../<nome progetto>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
-=======
-### Modulo SaluteOra
-- [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
->>>>>>> d7dfa0b6 (.)
 ### Modulo Generico
 - [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
 

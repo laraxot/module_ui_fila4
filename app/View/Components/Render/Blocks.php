@@ -22,20 +22,12 @@ use Modules\Xot\Actions\GetViewAction;
 final class Blocks extends Component
 {
     /**
-<<<<<<< HEAD
-=======
-     * @param  array<int|string, mixed>  $blocks
->>>>>>> d7dfa0b6 (.)
      * @param array<int|string, mixed> $blocks
      */
     public function __construct(
         public string $view,
         public array $blocks = [],
         public ?Model $model = null,
-<<<<<<< HEAD
-=======
-    ) {}
->>>>>>> d7dfa0b6 (.)
     ) {
     }
 

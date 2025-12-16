@@ -34,28 +34,17 @@ class UserCalendarWidget extends Widget
     /**
      * @param array<string, mixed> $fetchInfo
      *
-<<<<<<< HEAD
-=======
-     *
->>>>>>> d7dfa0b6 (.)
      * @return array<int, array<string, mixed>>
      */
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
-<<<<<<< HEAD
         if (! class_exists($action)) {
-=======
-        if (!class_exists($action)) {
-        if (! class_exists($action)) {
-        if (! class_exists($action)) {
->>>>>>> d7dfa0b6 (.)
             return [];
         }
 
         $actionInstance = app($action);
-<<<<<<< HEAD
         if (! is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
             return [];
         }
@@ -63,35 +52,16 @@ class UserCalendarWidget extends Widget
         $resultRaw = $actionInstance->execute($fetchInfo);
 
         if (! self::isValidEventsArray($resultRaw)) {
-=======
-        if (!is_object($actionInstance) || !method_exists($actionInstance, 'execute')) {
-        if (! is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
-        if (! is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
-            return [];
-        }
-
-        $result = $actionInstance->execute($fetchInfo);
-        if (!is_array($result)) {
->>>>>>> d7dfa0b6 (.)
             return [];
         }
 
         /** @var array<int, array<string, mixed>> $result */
-<<<<<<< HEAD
         $result = $resultRaw;
 
-=======
-        if (! is_array($result)) {
-            return [];
-        }
-
-        /* @var array<int, array<string, mixed>> $result */
->>>>>>> d7dfa0b6 (.)
         return $result;
     }
 
     /**
-<<<<<<< HEAD
      * Validate that the given value is an array of events with string keys.
      */
     private static function isValidEventsArray(mixed $value): bool
@@ -117,11 +87,6 @@ class UserCalendarWidget extends Widget
 
     /**
      * @return array<int, TextInput|Grid>
-=======
-     * @return array<int, \Filament\Forms\Components\TextInput|\Filament\Schemas\Components\Grid>
-     * @return array<int, TextInput|Grid>
-     * @return array<int, TextInput|Grid>
->>>>>>> d7dfa0b6 (.)
      */
     public function getFormSchema(): array
     {
@@ -132,20 +97,9 @@ class UserCalendarWidget extends Widget
             if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
                 if (is_array($resultRaw)) {
-<<<<<<< HEAD
                     /** @var array<int, TextInput|Grid> $result */
                     $result = $resultRaw;
 
-=======
-                    /** @var array<int, \Filament\Forms\Components\TextInput|\Filament\Schemas\Components\Grid> $result */
-                    $result = $resultRaw;
-                    /** @var array<int, TextInput|Grid> $result */
-                    $result = $resultRaw;
-
-                    /** @var array<int, TextInput|Grid> $result */
-                    $result = $resultRaw;
-
->>>>>>> d7dfa0b6 (.)
                     return $result;
                 }
             }

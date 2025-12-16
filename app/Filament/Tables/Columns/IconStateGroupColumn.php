@@ -29,13 +29,7 @@ class IconStateGroupColumn extends ColumnGroup
         $this->stateClass = $stateClass;
         $this->modelClass = $modelClass;
         $statesRaw = [];
-<<<<<<< HEAD
 
-=======
-        
-
-
->>>>>>> d7dfa0b6 (.)
         if (class_exists($stateClass) && method_exists($stateClass, 'getStateMapping')) {
             $stateMapping = $stateClass::getStateMapping();
             if (is_object($stateMapping) && method_exists($stateMapping, 'toArray')) {
@@ -43,35 +37,12 @@ class IconStateGroupColumn extends ColumnGroup
                 $statesRaw = is_array($statesArray) ? $statesArray : [];
             }
         }
-<<<<<<< HEAD
 
-=======
-        
-
-
->>>>>>> d7dfa0b6 (.)
         /** @var array<string, string> $states */
         $states = $statesRaw;
         $columns = [];
 
         foreach ($states as $stateKey => $stateClassItem) {
-<<<<<<< HEAD
-=======
-            if (!is_string($stateClassItem) || !class_exists($stateClassItem)) {
-                continue;
-            }
-            
-            if (!is_string($stateKey)) {
-                continue;
-            }
-            
-            $stateInstance = new $stateClassItem($this->modelClass);
-            Assert::isInstanceOf($stateInstance, StateContract::class);
-            $visibleKey = $stateKey . '-visible';
-            $this->data[$visibleKey] = true;
-
-            $column = IconColumn::make($stateKey . '-icon')
->>>>>>> d7dfa0b6 (.)
             if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
                 continue;
             }
@@ -102,27 +73,14 @@ class IconStateGroupColumn extends ColumnGroup
                     } else {
                         $res = false;
                     }
-<<<<<<< HEAD
                     $visibleKey = $stateKey.'-visible';
                     $this->data[$visibleKey] = $res;
                     if (! $res) {
-=======
-                    $visibleKey = $stateKey . '-visible';
-                    $this->data[$visibleKey] = $res;
-                    if (!$res) {
-                    $visibleKey = $stateKey.'-visible';
-                    $this->data[$visibleKey] = $res;
-                    if (! $res) {
-                    $visibleKey = $stateKey.'-visible';
-                    $this->data[$visibleKey] = $res;
-                    if (! $res) {
->>>>>>> d7dfa0b6 (.)
                         return null;
                     }
 
                     return true;
                 });
-<<<<<<< HEAD
 
             $column->action(
                 Action::make($stateKey.'-action')
@@ -149,45 +107,6 @@ class IconStateGroupColumn extends ColumnGroup
                     })
             );
 
-=======
-            $column->action(Action::make($stateKey . '-action')
-            $column->action(Action::make($stateKey.'-action')
-            $column->action(Action::make($stateKey.'-action')
-                ->requiresConfirmation()
-                ->modalHeading(function ($_record) use ($stateInstance) {
-                    // StateContract provides modalHeading()
-                    return $stateInstance->modalHeading();
-                })
-                ->modalDescription(function ($_record) use ($stateInstance) {
-                    // StateContract provides modalDescription()
-                    return $stateInstance->modalDescription();
-                })
-                ->schema(function ($_record) use ($stateInstance) {
-                    // StateContract provides modalFormSchema()
-                    return $stateInstance->modalFormSchema();
-                })
-                ->fillForm($stateInstance->modalFillFormByRecord(...))
-                ->action(function (mixed $record, mixed $data) use ($stateInstance) {
-                    // StateContract provides modalActionByRecord()
-                    /** @var \Illuminate\Database\Eloquent\Model $record */
-                    /** @var array<string, mixed> $data */
-                    /* @var \Illuminate\Database\Eloquent\Model $record */
-                    /* @var array<string, mixed> $data */
-                    /* @var \Illuminate\Database\Eloquent\Model $record */
-                    /* @var array<string, mixed> $data */
-                    $stateInstance->modalActionByRecord($record, $data);
-
-                    // $this->invalidateCache();
-                    // $this->loadAppointments();
-                    // $this->dispatch('notify', [
-                    //    'type' => 'success',
-                    //    'message' => __('ui::messages.action_completed'),
-                    // ]);
-                }));
-            $visibleKey = $stateKey . '-visible';
-            $visibleKey = $stateKey.'-visible';
-            $visibleKey = $stateKey.'-visible';
->>>>>>> d7dfa0b6 (.)
             $visibleValue = $this->data[$visibleKey] ?? false;
             $column->visible($visibleValue);
             $columns[] = $column;

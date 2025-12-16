@@ -95,11 +95,7 @@ FileUpload::make('logo_header') // Metatag
 ```php
 // BaseModel <nome progetto> - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
 // BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
-<<<<<<< HEAD
 // BaseModel <nome progetto> - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
-=======
-// BaseModel SaluteOra - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
->>>>>>> d7dfa0b6 (.)
 ```
 
 ### 🏗️ **Architettura HasMedia Esistente**
@@ -107,11 +103,7 @@ FileUpload::make('logo_header') // Metatag
 **SCOPERTA CRUCIALE**: I modelli principali implementano già `HasMedia`!
 
 ```php
-<<<<<<< HEAD
 // BaseModel <nome progetto> - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
-=======
-// BaseModel SaluteOra - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
->>>>>>> d7dfa0b6 (.)
 // BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
 // BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
 abstract class BaseModel extends Model implements HasMedia
@@ -279,11 +271,7 @@ class SpatieImageUpload
 ```php
 // Modules/<nome progetto>/app/Filament/Resources/PatientResource.php - getFormSchema()
 // Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
-<<<<<<< HEAD
 // Modules/<nome progetto>/app/Filament/Resources/PatientResource.php - getFormSchema()
-=======
-// Modules/SaluteOra/app/Filament/Resources/PatientResource.php - getFormSchema()
->>>>>>> d7dfa0b6 (.)
 
     }
     
@@ -305,11 +293,7 @@ class SpatieImageUpload
 #### 3.1 PatientResource - Priorità MASSIMA (Documenti Sensibili)
 
 ```php
-<<<<<<< HEAD
 // Modules/<nome progetto>/app/Filament/Resources/PatientResource.php - getFormSchema()
-=======
-// Modules/SaluteOra/app/Filament/Resources/PatientResource.php - getFormSchema()
->>>>>>> d7dfa0b6 (.)
 
 // Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
 
@@ -326,13 +310,8 @@ class SpatieImageUpload
 'health_card' => \Modules\UI\Filament\Components\SpatieDocumentUpload::forHealthCard()
     ->label(trans('<nome progetto>::patients.fields.health_card.label'))
     ->helperText(trans('<nome progetto>::patients.fields.health_card.help')),
-<<<<<<< HEAD
     ->label(trans('<nome progetto>::patients.fields.health_card.label'))
     ->helperText(trans('<nome progetto>::patients.fields.health_card.help')),
-=======
-    ->label(trans('saluteora::patients.fields.health_card.label'))
-    ->helperText(trans('saluteora::patients.fields.health_card.help')),
->>>>>>> d7dfa0b6 (.)
 #### 3.2 UI Blocks - Standardizzazione Architettura
 // Modules/UI/app/Filament/Blocks/Image.php - Refactoring Completo
 // PRIMA
@@ -399,11 +378,7 @@ Schema::table('users', function (Blueprint $table) {
 ```php
 // Modules/<nome progetto>/app/Models/User.php - Aggiunta registerMediaCollections
 // Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
-<<<<<<< HEAD
 // Modules/<nome progetto>/app/Models/User.php - Aggiunta registerMediaCollections
-=======
-// Modules/SaluteOra/app/Models/User.php - Aggiunta registerMediaCollections
->>>>>>> d7dfa0b6 (.)
 
 public function registerMediaCollections(): void
 {
@@ -422,11 +397,7 @@ public function registerMediaConversions(Media $media = null): void
 ### **Media Collections Configuration**
 
 ```php
-<<<<<<< HEAD
 // Modules/<nome progetto>/app/Models/User.php - Aggiunta registerMediaCollections
-=======
-// Modules/SaluteOra/app/Models/User.php - Aggiunta registerMediaCollections
->>>>>>> d7dfa0b6 (.)
 // Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
 
 public function registerMediaCollections(): void
@@ -473,11 +444,7 @@ public function registerMediaConversions(Media $media = null): void
 ```php
 // Modules/<nome progetto>/app/Models/User.php - Accessors di transizione
 // Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
-<<<<<<< HEAD
 // Modules/<nome progetto>/app/Models/User.php - Accessors di transizione
-=======
-// Modules/SaluteOra/app/Models/User.php - Accessors di transizione
->>>>>>> d7dfa0b6 (.)
 
         
     $this->addMediaConversion('preview')
@@ -490,11 +457,7 @@ public function registerMediaConversions(Media $media = null): void
 ### **Accessors per Backward Compatibility**
 
 ```php
-<<<<<<< HEAD
 // Modules/<nome progetto>/app/Models/User.php - Accessors di transizione
-=======
-// Modules/SaluteOra/app/Models/User.php - Accessors di transizione
->>>>>>> d7dfa0b6 (.)
 
 // Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
 
@@ -535,15 +498,9 @@ public function getCertificationsAttribute(): array
     @if($patient->hasMedia('tessere_sanitarie'))
         <div class="document-preview">
             <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
-<<<<<<< HEAD
             <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
             <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
             <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
-=======
-            <h4>{{ __('saluteora::patients.health_card') }}</h4>
-            <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
-            <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
->>>>>>> d7dfa0b6 (.)
             <img src="{{ $patient->getFirstMediaUrl('tessere_sanitarie', 'thumbnail') }}" 
                  alt="Tessera Sanitaria"
                  class="w-full h-32 object-cover rounded">
@@ -551,21 +508,13 @@ public function getCertificationsAttribute(): array
                target="_blank" 
                class="text-blue-600 text-sm">
                 {{ __('<nome progetto>::common.view_document') }}
-<<<<<<< HEAD
                 {{ __('<nome progetto>::common.view_document') }}
-=======
-                {{ __('saluteora::common.view_document') }}
->>>>>>> d7dfa0b6 (.)
             </a>
         </div>
     @endif
     @if($patient->hasMedia('certificazioni_isee'))
             <h4>{{ __('<nome progetto>::patients.isee_certificate') }}</h4>
-<<<<<<< HEAD
             <h4>{{ __('<nome progetto>::patients.isee_certificate') }}</h4>
-=======
-            <h4>{{ __('saluteora::patients.isee_certificate') }}</h4>
->>>>>>> d7dfa0b6 (.)
                 {{ __('<nome progetto>::common.view_document') }}
             </a>
         </div>
@@ -715,11 +664,7 @@ public function downloadDocument(Media $media): Response
 - [UI Components Docs](./filament-components-rules.md)
 - [Modulo Generico Models Architecture](../<nome modulo>/docs/models-architecture.md)
 - [Spatie Media Library Official Docs](https://spatie.be/docs/laravel-medialibrary)
-<<<<<<< HEAD
 - [<nome progetto> Models Architecture](../<nome progetto>/docs/models-architecture.md)
-=======
-- [SaluteOra Models Architecture](../SaluteOra/docs/models-architecture.md)
->>>>>>> d7dfa0b6 (.)
 
 ### **Repository e Risorse**
 - [GitHub Filament Plugin](https://github.com/filamentphp/spatie-laravel-media-library-plugin)
@@ -734,11 +679,7 @@ public function downloadDocument(Media $media): Response
 - [Spatie Media Library Official Docs](https://spatie.be/docs/laravel-medialibrary)
 - [Filament Plugin Documentation](https://filamentphp.com/plugins/filament-spatie-media-library)
 - [UI Components Docs](./filament-components-rules.md)
-<<<<<<< HEAD
 - [<nome progetto> Models Architecture](../<nome progetto>/docs/models-architecture.md)
-=======
-- [SaluteOra Models Architecture](../SaluteOra/docs/models-architecture.md)
->>>>>>> d7dfa0b6 (.)
 
 ### **Repository e Risorse**
 - [GitHub Filament Plugin](https://github.com/filamentphp/spatie-laravel-media-library-plugin)
@@ -771,22 +712,13 @@ public function downloadDocument(Media $media): Response
 *Versione: 1.0*  
 *Compatibilità: Laraxot <nome progetto>, Spatie Media Library 11.x, Filament 4.x* 
 *Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
-<<<<<<< HEAD
 *Compatibilità: Laraxot <nome progetto>, Spatie Media Library 11.x, Filament 3.x* 
-=======
-*Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 3.x* 
->>>>>>> d7dfa0b6 (.)
 
 ---
 
 *Ultimo aggiornamento: Dicembre 2024*  
 *Versione: 1.0*  
-<<<<<<< HEAD
 *Compatibilità: Laraxot <nome progetto>, Spatie Media Library 11.x, Filament 4.x* 
 *Compatibilità: Laraxot <nome progetto>, Spatie Media Library 11.x, Filament 4.x* 
-=======
-*Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 4.x* 
-*Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 4.x* 
->>>>>>> d7dfa0b6 (.)
 *Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
 *Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 

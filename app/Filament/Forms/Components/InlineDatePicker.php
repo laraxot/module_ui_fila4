@@ -52,14 +52,6 @@ class InlineDatePicker extends DatePicker
 
         // Hydration/Dehydration del valore
         $this->afterStateHydrated(static function (self $component, mixed $state): void {
-<<<<<<< HEAD
-=======
-            if ($state !== null && is_string($state) && $state !== '') {
-                try {
-                    $date = Carbon::parse($state);
-                    $component->currentViewMonth = $date->format('Y-m');
-                } catch (Exception $e) {
->>>>>>> d7dfa0b6 (.)
             if (null !== $state && is_string($state) && '' !== $state) {
                 try {
                     $date = Carbon::parse($state);
@@ -72,16 +64,6 @@ class InlineDatePicker extends DatePicker
         });
 
         $this->dehydrateStateUsing(static function (self $_component, mixed $state): ?string {
-<<<<<<< HEAD
-=======
-            if ($state !== null && is_string($state) && $state !== '') {
-                try {
-                    return Carbon::parse($state)->format('Y-m-d');
-                } catch (Exception $e) {
-                    return null;
-                }
-            }
->>>>>>> d7dfa0b6 (.)
             if (null !== $state && is_string($state) && '' !== $state) {
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
@@ -161,14 +143,6 @@ class InlineDatePicker extends DatePicker
     public function getEnabledDates(): Collection
     {
         $datesRaw = $this->evaluate($this->enabledDates) ?? [];
-<<<<<<< HEAD
-=======
-        
-        if (!is_iterable($datesRaw)) {
-            $datesRaw = [];
-        }
-
->>>>>>> d7dfa0b6 (.)
 
         if (! is_iterable($datesRaw)) {
             $datesRaw = [];
@@ -179,27 +153,11 @@ class InlineDatePicker extends DatePicker
 
         /** @var Collection<int, non-falsy-string> $result */
         $result = collect($dates)->map(function (mixed $date): string {
-<<<<<<< HEAD
             if (! is_string($date) || '' === $date) {
-=======
-            if (!is_string($date) || $date === '') {
-            if (! is_string($date) || '' === $date) {
-            if (! is_string($date) || '' === $date) {
->>>>>>> d7dfa0b6 (.)
                 return '';
             }
             try {
                 return Carbon::parse($date)->format('Y-m-d');
-<<<<<<< HEAD
-=======
-            } catch (Exception $e) {
-                return '';
-            }
-        })->filter(fn(string $v): bool => $v !== '')->values(); // Remove empty strings and reindex
-        
-        /** @var Collection<int, string> $resultTyped */
-        $resultTyped = $result;
->>>>>>> d7dfa0b6 (.)
             } catch (\Exception $e) {
                 return '';
             }
@@ -254,13 +212,7 @@ class InlineDatePicker extends DatePicker
                     if ($state && is_string($state)) {
                         $isSelected = $currentDay->isSameDay(Carbon::parse($state));
                     }
-<<<<<<< HEAD
                 } catch (\Throwable $e) {
-=======
-                } catch (Throwable $e) {
-                } catch (\Throwable $e) {
-                } catch (\Throwable $e) {
->>>>>>> d7dfa0b6 (.)
                     $isSelected = false;
                 }
 

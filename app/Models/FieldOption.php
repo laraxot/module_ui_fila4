@@ -22,7 +22,7 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|FieldOption newQuery()
  * @method static Builder<static>|FieldOption query()
  *
- * @property \Modules\TechPlanner\Models\Profile|null $deleter
+ * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */

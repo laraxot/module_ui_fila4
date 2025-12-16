@@ -51,7 +51,7 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|Category whereUpdatedAt($value)
  * @method static Builder<static>|Category whereUpdatedBy($value)
  *
- * @property \Modules\TechPlanner\Models\Profile|null $deleter
+ * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */

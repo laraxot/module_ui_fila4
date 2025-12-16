@@ -8,10 +8,6 @@ use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
-=======
-use Filament\Forms\Forms\Components\RadioImage;
->>>>>>> d7dfa0b6 (.)
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 
 final class Slider

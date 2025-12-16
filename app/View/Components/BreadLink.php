@@ -15,13 +15,6 @@ final class BreadLink extends Component
     public function __construct()
     {
     }
-<<<<<<< HEAD
-=======
-
-    public function __construct()
-    {
-    }
->>>>>>> d7dfa0b6 (.)
 
     public function render(): View
     {
