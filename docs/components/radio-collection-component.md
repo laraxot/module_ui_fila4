@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # RadioCollection Component: Analisi Ontologica e Fenomenologica
 
 ## 🎭 Filosofia & Epistemologia del Componente
@@ -428,3 +429,5 @@ wire:model.live="{{ $getStatePath() }}"
 **Ultimo aggiornamento ontologico**: Dicembre 2024  
 **Versione dell'esistenza**: 1.0.0  
 **Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+ 
+=======
+>>>>>>> ca1e225 (.)

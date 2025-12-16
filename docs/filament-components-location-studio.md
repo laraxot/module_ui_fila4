@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Componenti Filament per Location e Studio Selection
 
 ## Overview
@@ -244,3 +245,5 @@ class FindDoctorWidgetStep2Test extends TestCase
 **Versione**: 2.0 - Semplificato  
 **Stato**: Implementation Ready  
 **Approccio**: Pulsanti + TextInput (semplice e diretto) 
+=======
+>>>>>>> ca1e225 (.)

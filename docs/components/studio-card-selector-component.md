@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # StudioCardSelector Component - Modulo UI
 
 ## 🎯 **Panoramica**
@@ -507,3 +508,5 @@ class StudioCardSelectorTest extends DuskTestCase
 **Complexity**: 🟡 Medium - Custom view with Alpine.js  
 **Maintenance**: 🟢 Low - Well-documented and tested  
 **Last Updated**: January 2025 
+=======
+>>>>>>> ca1e225 (.)

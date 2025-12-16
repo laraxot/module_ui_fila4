@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Algolia DocSearch
 description: Configure Algolia DocSearch with the Jigsaw docs starter template
@@ -85,3 +86,5 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 
 ---
 
+=======
+>>>>>>> ca1e225 (.)

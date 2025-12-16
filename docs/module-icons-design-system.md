@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sistema di Design per Icone SVG dei Moduli
 
 ## Principi di Design
@@ -145,3 +146,5 @@ return [
 - [Accessibility Guidelines](../docs/accessibility-standards.md)
 
 *Ultimo aggiornamento: Agosto 2025*
+=======
+>>>>>>> ca1e225 (.)

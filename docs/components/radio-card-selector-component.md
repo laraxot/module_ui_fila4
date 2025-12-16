@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # RadioCardSelector Component - Modulo UI
 
 ## 🎯 **Panoramica**
@@ -281,3 +282,5 @@ RadioCardSelector::make('item')
 **Ultima modifica**: Gennaio 2025  
 **Versione**: 1.0.0
 **Status**: ✅ Production Ready 
+=======
+>>>>>>> ca1e225 (.)

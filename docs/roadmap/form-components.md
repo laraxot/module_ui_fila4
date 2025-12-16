@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Form Components - 95% Completato
 
 ## Descrizione
@@ -94,3 +95,5 @@ I componenti form forniscono un'interfaccia standardizzata per la creazione e ge
 * [form-components.md](../../../UI/docs/form-components.md)
 * [form-components.md](../../../UI/docs/roadmap/form-components.md)
 
+=======
+>>>>>>> ca1e225 (.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Supporto per Icone nei Componenti Filament
 
 ## Riepilogo della Compatibilità
@@ -111,3 +112,5 @@ Forms\Components\TextInput::make('name')
 - [API Components Filament](../UI/docs/filament/components-api.md)
 
 > **NOTA**: Questa documentazione segue la regola di centralizzare tutte le documentazioni UI nel modulo UI con collegamenti bidirezionali dagli altri moduli.
+=======
+>>>>>>> ca1e225 (.)

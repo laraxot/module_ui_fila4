@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FileUpload Component in Filament
 
 ## Metodi Disponibili
@@ -96,3 +97,5 @@ return [
 ## Vedi Anche
 - [Filament File Upload](https://filamentphp.com/docs/forms/fields/file-upload)
 - [Laravel File Storage](https://laravel.com/docs/filesystem) 
+=======
+>>>>>>> ca1e225 (.)

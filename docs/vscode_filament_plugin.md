@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Plugin VSCode per Filament
 
 ## Overview
@@ -202,3 +203,5 @@ TextInput::make('full_name')
 - [VSCode PHP Setup](vscode-php-setup.md)
 - [Development Tools](development-tools.md)
 - [Filament Documentation](https://filamentphp.com/docs) 
+=======
+>>>>>>> ca1e225 (.)

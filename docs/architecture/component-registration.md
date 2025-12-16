@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Registrazione dei Componenti nei Moduli
 
 ## Regola Fondamentale
@@ -74,3 +75,5 @@ Se hai bisogno di personalizzazioni nella registrazione dei componenti:
 
 - [XotBaseServiceProvider](../Xot/app/Providers/XotBaseServiceProvider.php)
 - [RegisterBladeComponentsAction](../Xot/Actions/Blade/RegisterBladeComponentsAction.php)
+=======
+>>>>>>> ca1e225 (.)

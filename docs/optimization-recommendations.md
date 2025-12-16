@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Raccomandazioni di Ottimizzazione - Modulo UI
 
 ## 🎯 Stato Attuale e Analisi
@@ -235,3 +236,5 @@ php artisan ui:accessibility-check
 - [TableLayoutEnum Guide](table-layout-enum-complete-guide.md)
 
 *Ultimo aggiornamento: gennaio 2025*
+=======
+>>>>>>> ca1e225 (.)

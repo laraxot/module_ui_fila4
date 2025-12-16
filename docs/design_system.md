@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Design System
 
 ## Panoramica
@@ -132,3 +133,5 @@ Il design system definisce gli standard visivi e di interazione per garantire co
 - [Tailwind Config](../config/tailwind.config.js)
 - [Theme Config](../config/theme.php)
 - [Filament UI](../../Cms/docs/filament-components.md) 
+=======
+>>>>>>> ca1e225 (.)

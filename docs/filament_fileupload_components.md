@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Componenti FileUpload in Filament
 
 ## Errore Comune: prefixIcon
@@ -62,3 +63,5 @@ Forms\Components\FileUpload::make('certifications')
 ## Vedi Anche
 - [Filament FileUpload Documentation](https://filamentphp.com/docs/forms/fields#file-upload)
 - [Best Practices](../../Xot/docs/filament-best-practices.md) 
+=======
+>>>>>>> ca1e225 (.)

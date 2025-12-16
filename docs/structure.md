@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modulo UI
 
 Data: 2025-04-23 19:09:56
@@ -518,3 +519,5 @@ tests_old
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
 
+=======
+>>>>>>> ca1e225 (.)

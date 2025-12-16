@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Versione HEAD
 
 # Struttura dei Temi
@@ -464,3 +465,5 @@ AdminLayout::make()
    - Documentare personalizzazioni
    - Seguire convenzioni di naming
    - Centralizzare configurazioni 
+=======
+>>>>>>> ca1e225 (.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Componenti Filament UI
 
 ## Collegamenti Bidirezionali
@@ -62,3 +63,5 @@
 * [filament-components.md](../../Cms/docs/filament-components.md)
 * [filament-components.md](../../../docs/rules/filament-components.md)
 
+=======
+>>>>>>> ca1e225 (.)

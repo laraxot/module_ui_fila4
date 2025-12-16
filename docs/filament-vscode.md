@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Filament VSCode Extension
 
 ## Panoramica
@@ -210,3 +211,5 @@ Forms\Components\Wizard::make([
 - [Filament Documentation](https://filamentphp.com)
 - [VSCode PHP Extension](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
 - [Laravel Extension Pack](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-extension-pack) 
+=======
+>>>>>>> ca1e225 (.)

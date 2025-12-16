@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Utilizzo dei componenti Blade di Filament
 
 ## Regola fondamentale
@@ -105,3 +106,5 @@ Per migrare da componenti personalizzati a componenti Filament:
 ## Moduli correlati
 
 - [User](../../User/docs/blade/using-filament-components.md) - Implementazione dei componenti profilo con Filament
+=======
+>>>>>>> ca1e225 (.)

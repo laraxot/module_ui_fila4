@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Errore UI: Uso di `prefixIcon` su FileUpload di Filament
 
 ## Descrizione
@@ -32,3 +33,5 @@ Se serve un’icona, usare solo i metodi previsti dalla documentazione Filament.
 ## Collegamenti tra versioni di filament-error-fileupload-prefixicon.md
 * [filament-error-fileupload-prefixicon.md](../../Patient/docs/filament-error-fileupload-prefixicon.md)
 
+=======
+>>>>>>> ca1e225 (.)

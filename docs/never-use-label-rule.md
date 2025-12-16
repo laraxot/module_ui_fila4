@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # REGOLA CRITICA: MAI usare ->label()
 
 ## Data: 2025-01-06
@@ -184,3 +185,5 @@ rules:
 - SEMPRE sincronizzazione IT/EN/DE
 
 *Ultimo aggiornamento: 2025-01-06*
+=======
+>>>>>>> ca1e225 (.)

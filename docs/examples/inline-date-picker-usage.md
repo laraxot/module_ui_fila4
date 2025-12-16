@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Esempi di Utilizzo di InlineDatePicker
 
 ## Esempio 1: Prenotazione Appuntamenti Medici
@@ -434,3 +435,5 @@ class InlineDatePickerTest extends TestCase
 
 *Ultima modifica: Gennaio 2025*
 *Versione: 1.0.0* 
+=======
+>>>>>>> ca1e225 (.)

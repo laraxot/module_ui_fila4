@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # OpeningHoursField Component
 
 ## Introduzione
@@ -415,3 +416,5 @@ class Doctor extends BaseModel
 ---
 
 *Ultimo aggiornamento: Dicembre 2024* 
+=======
+>>>>>>> ca1e225 (.)

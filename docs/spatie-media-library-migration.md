@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Migrazione da FileUpload a Spatie Media Library
 
 ## 🌍 Analisi Multidimensionale della Migrazione
@@ -722,3 +723,5 @@ public function downloadDocument(Media $media): Response
 *Compatibilità: Laraxot <nome progetto>, Spatie Media Library 11.x, Filament 4.x* 
 *Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
 *Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
+=======
+>>>>>>> ca1e225 (.)

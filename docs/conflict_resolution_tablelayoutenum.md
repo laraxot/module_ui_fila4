@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Risoluzione Conflitto TableLayoutEnum
 
 ## Problema Identificato
@@ -83,3 +84,5 @@ Il file `Modules/UI/app/Enums/TableLayoutEnum.php` presenta un conflitto Git nel
 - **File**: `app/Enums/TableLayoutEnum.php`
 - **Tipo Conflitto**: Sintassi PHPStan
 - **Scelta**: Versione Branch 988693e (sintassi moderna) 
+=======
+>>>>>>> ca1e225 (.)

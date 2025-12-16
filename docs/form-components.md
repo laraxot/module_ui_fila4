@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Componenti Form
 
 ## Introduzione
@@ -291,3 +292,5 @@ form.addEventListener('submit', (e) => {
 * [form-components.md](../../../UI/project_docs/form-components.md)
 * [form-components.md](../../../UI/project_docs/roadmap/form-components.md)
 
+=======
+>>>>>>> ca1e225 (.)

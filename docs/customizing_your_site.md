@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Customizing Your Site
 description: Customizing your Jigsaw docs site
@@ -89,3 +90,5 @@ class Foo extends bar
 
 ---
 
+=======
+>>>>>>> ca1e225 (.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IconStateSplitColumn Implementation
 
 ## Overview
@@ -447,3 +448,5 @@ document.addEventListener('state-transition', function(event) {
 **Compatibility**: Filament 4.x, Laravel 10.x 
 **Compatibility**: Filament 3.x, Laravel 10.x 
 **Compatibility**: Filament 3.x, Laravel 10.x 
+=======
+>>>>>>> ca1e225 (.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Componenti Table
 
 ## Introduzione
@@ -140,3 +141,5 @@ class UserTable extends Component
 - [Componenti Chart](./chart-components.md)
 - [Componenti Layout](./layout-components.md)
 - [Documentazione Frontend](../Cms/docs/frontend-architecture.md) 
+=======
+>>>>>>> ca1e225 (.)

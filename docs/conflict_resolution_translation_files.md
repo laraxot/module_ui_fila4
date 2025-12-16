@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Risoluzione Conflitti File di Traduzione UI
 
 ## Problema Identificato
@@ -151,3 +152,5 @@ Applicare la stessa logica a tutti i file di traduzione con conflitti simili:
 - **File**: Multipli file di traduzione
 - **Tipo Conflitto**: Dichiarazione PHP e sintassi array
 - **Scelta**: Versione HEAD (con strict types e sintassi moderna)
+=======
+>>>>>>> ca1e225 (.)

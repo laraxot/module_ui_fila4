@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sistema di Traduzione Automatica delle Etichette (Label) in Filament
 
 ## Regola Fondamentale
@@ -71,3 +72,5 @@ Se vedi un'etichetta come `FIX:modulo::fields.nome_campo.label`, significa che i
 - [Implementazione del LangServiceProvider](../Lang/app/Providers/LangServiceProvider.php)
 - [AutoLabelAction](../Lang/app/Actions/Filament/AutoLabelAction.php)
 - [Documentazione Filament sui Form](https://filamentphp.com/docs/3.x/forms/fields/getting-started)
+=======
+>>>>>>> ca1e225 (.)
