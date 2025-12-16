@@ -7,62 +7,16 @@ return [
         'title' => 'Configurazione Orari',
         'description' => 'Imposta gli orari di apertura per ogni giorno della settimana. Lascia vuoto per giorni di chiusura.',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1899c5f (.)
     'headers' => [
         'day' => 'Giorno',
         'morning' => 'Mattino',
         'afternoon' => 'Pomeriggio',
     ],
-<<<<<<< HEAD
-=======
-=======
-    
-=======
->>>>>>> b93ef594b4 (.)
-    'headers' => [
-        'day' => 'Giorno',
-        'morning' => 'Mattino',
-        'afternoon' => 'Pomeriggio',
-    ],
-<<<<<<< HEAD
-    
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-    
-    'headers' => [
-        'day' => 'Giorno',
-        'morning' => 'Mattina',
-        'afternoon' => 'Pomeriggio',
-    ],
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
     'legend' => [
         'open' => 'Aperto',
         'closed' => 'Chiuso',
         'format' => 'Formato: HH:MM',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
     'days' => [
         'monday' => 'Lunedì',
         'tuesday' => 'Martedì',
@@ -72,12 +26,6 @@ return [
         'saturday' => 'Sabato',
         'sunday' => 'Domenica',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1899c5f (.)
     'periods' => [
         'morning' => 'Mattino',
         'afternoon' => 'Pomeriggio',
@@ -85,47 +33,11 @@ return [
     ],
     'labels' => [
         'morning' => 'Mattino',
-<<<<<<< HEAD
-=======
-=======
-    
-=======
->>>>>>> b93ef594b4 (.)
-    'periods' => [
-        'morning' => 'Mattino',
-        'afternoon' => 'Pomeriggio',
-        'evening' => 'Sera',
-    ],
-    'labels' => [
-<<<<<<< HEAD
-        'morning' => 'Mattina',
->>>>>>> a12f125f4a (.)
-=======
-        'morning' => 'Mattino',
->>>>>>> b93ef594b4 (.)
-=======
-    
-    'periods' => [
-        'morning' => 'Mattina',
-        'afternoon' => 'Pomeriggio',
-        'evening' => 'Sera',
-    ],
-    
-    'labels' => [
-        'morning' => 'Mattina',
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
         'afternoon' => 'Pomeriggio',
         'from' => 'Dalle',
         'to' => 'Alle',
         'closed' => 'Chiuso',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1899c5f (.)
     'descriptions' => [
         'day_schedule' => 'Configura gli orari di apertura per questo giorno',
     ],
@@ -133,55 +45,10 @@ return [
         'morning_hours' => 'Orari del mattino',
         'afternoon_hours' => 'Orari del pomeriggio',
     ],
-<<<<<<< HEAD
-=======
-=======
-    
-=======
->>>>>>> b93ef594b4 (.)
-    'descriptions' => [
-        'day_schedule' => 'Configura gli orari di apertura per questo giorno',
-    ],
-    'placeholders' => [
-        'morning_hours' => 'Orari del mattino',
-        'afternoon_hours' => 'Orari del pomeriggio',
-    ],
-<<<<<<< HEAD
-    
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-    
-    'descriptions' => [
-        'day_schedule' => 'Configura gli orari di apertura per questo giorno',
-    ],
-    
-    'placeholders' => [
-        'morning_hours' => 'Orario mattutino',
-        'afternoon_hours' => 'Orario pomeridiano',
-    ],
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
     'notes' => [
         'format_hint' => 'Utilizzare il formato 24 ore (es. 14:30 per le 2:30 del pomeriggio)',
         'empty_hint' => 'Lasciare vuoto significa "chiuso"',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
     'validation' => [
         'invalid_format' => 'Formato orario non valido. Utilizzare HH:MM-HH:MM',
         'invalid_time_range' => 'L\'orario di apertura deve essere precedente all\'orario di chiusura',
@@ -189,14 +56,6 @@ return [
         'from_before_to' => 'L\'orario "Dalle" deve essere precedente all\'orario "Alle"',
         'to_after_from' => 'L\'orario "Alle" deve essere successivo all\'orario "Dalle"',
         'time_sequence' => 'L\'orario di inizio deve essere precedente a quello di fine',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
         'morning_before_afternoon' => 'Per :day, l\'orario di chiusura del mattino deve essere precedente all\'apertura del pomeriggio.',
         'missing_closing_time' => 'Se specifichi l\'orario di apertura del :session  :day, devi specificare anche quello di chiusura.',
         'missing_opening_time' => 'Se specifichi l\'orario di chiusura del :session  :day, devi specificare anche quello di apertura.',
@@ -213,17 +72,3 @@ return [
         ],
     ],
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    ],
-]; 
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-    ],
-]; 
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
