@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 <div class="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
     <div class="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
       <div class="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
@@ -38,10 +29,3 @@ declare(strict_types=1);
       </div>
     </div>
   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
