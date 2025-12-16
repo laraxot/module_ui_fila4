@@ -46,4 +46,8 @@ return [
             'email_sent_error' => 'Error sending email',
         ],
     ],
+<<<<<<< HEAD
 ];
+=======
+]; 
+>>>>>>> 727968c (.)

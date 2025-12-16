@@ -95,7 +95,11 @@ Components should never rely on variables that haven't been explicitly defined a
 
 ```blade
 <!-- INCORRECT: Hard-coded project references -->
+<<<<<<< HEAD
 <div class="title">Welcome to </div>
+=======
+<div class="title">Welcome to SaluteOra</div>
+>>>>>>> 727968c (.)
 
 <!-- CORRECT: Dynamic configuration -->
 <div class="title">Welcome to {{ config('app.name') }}</div>
