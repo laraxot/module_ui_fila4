@@ -72,4 +72,3 @@ describe('UserCalendarWidget Form Schema', function () {
         expect($gridSchema[1]->getName())->toBe('ends_at');
     });
 });
-
