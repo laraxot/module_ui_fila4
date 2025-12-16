@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 {{--
     Studio Card Component - Visualizzazione informazioni studio odontoiatrico
     
@@ -272,7 +278,11 @@ declare(strict_types=1);
         </div>
     @endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 </div>
 =======
 </div> 
 >>>>>>> 727968c (.)
+=======
+</div>
+>>>>>>> ef3c5fa (.)
