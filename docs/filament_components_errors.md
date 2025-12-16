@@ -103,11 +103,7 @@ TextInput::make('first_name')  // ✅ Il LangServiceProvider gestirà automatica
 ## Regole per la Documentazione degli Errori UI
 
 1. **Posizione della Documentazione**:
-<<<<<<< HEAD
    - Gli errori UI devono essere documentati in `Modules/UI/docs/`
-=======
-   - Gli errori UI devono essere documentati in `Modules/UI/project_docs/`
->>>>>>> 1899c5f (.)
    - Creare sottocartelle specifiche per tipo di errore
    - Mantenere una struttura coerente
 
@@ -142,11 +138,7 @@ TextInput::make('first_name')  // ✅ Il LangServiceProvider gestirà automatica
 
 ## Collegamenti Bidirezionali
 
-<<<<<<< HEAD
 - [Documentazione Componenti Filament](../../../docs/filament/components.md)
-=======
-- [Documentazione Componenti Filament](../../../project_docs/filament/components.md)
->>>>>>> 1899c5f (.)
 - [Best Practices UI](../../best-practices.md)
 - [Errori Comuni UI](../../common-errors.md)
 - [Implementazione Corretta](../../examples/correct-implementation.md)
@@ -174,11 +166,7 @@ TextInput::make('first_name')  // ✅ Il LangServiceProvider gestirà automatica
 
 ## Note Importanti
 
-<<<<<<< HEAD
 1. La documentazione degli errori UI deve essere sempre in `Modules/UI/docs/`
-=======
-1. La documentazione degli errori UI deve essere sempre in `Modules/UI/project_docs/`
->>>>>>> 1899c5f (.)
 2. Mantenere collegamenti bidirezionali aggiornati
 3. Seguire le convenzioni di naming del progetto
 4. Aggiornare la documentazione quando vengono scoperti nuovi errori 
