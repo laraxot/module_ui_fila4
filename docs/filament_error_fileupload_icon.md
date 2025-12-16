@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Errore: Metodo `icon()` su FileUpload di Filament
 
 ## Descrizione
@@ -24,5 +23,3 @@ Il metodo `icon()` **NON esiste** sul componente `Filament\Forms\Components\File
 ## Collegamenti tra versioni di filament-error-fileupload-icon.md
 * [filament-error-fileupload-icon.md](../../Patient/docs/filament-error-fileupload-icon.md)
 
-=======
->>>>>>> ca1e225 (.)

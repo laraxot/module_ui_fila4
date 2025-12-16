@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: Custom 404 Page
 description: Custom 404 pages with Jigsaw docs starter template
@@ -45,5 +44,3 @@ Depending on where your site is hosted, you may need to configure your server to
 
 ---
 
-=======
->>>>>>> ca1e225 (.)

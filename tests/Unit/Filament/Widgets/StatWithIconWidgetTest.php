@@ -12,11 +12,7 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-<<<<<<< HEAD
     $this->widget = new StatWithIconWidget();
-=======
-    $this->widget = new StatWithIconWidget;
->>>>>>> 4f1ecbf (.)
 });
 
 test('stat with icon widget extends filament widget', function () {

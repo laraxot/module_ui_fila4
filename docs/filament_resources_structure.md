@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Struttura delle Filament Resources
 
 ## Panoramica
@@ -83,5 +82,3 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 
 ## Note
 Questa documentazione è collegata bidirezionalmente con la documentazione specifica dei moduli. Per dettagli su resources specifiche, consultare la documentazione del modulo corrispondente. 
-=======
->>>>>>> ca1e225 (.)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Correzione Errori PHPStan - RadioBadge.php
 
 ## Data Aggiornamento
@@ -145,5 +144,3 @@ class RadioBadge extends Radio
 - [Filament HasColor Interface](https://filamentphp.com/docs/3.x/support/colors)
 - [Filament HasIcon Interface](https://filamentphp.com/docs/3.x/support/icons)
 - [PHPStan Intersection Types](https://phpstan.org/writing-php-code/phpdoc-types#intersection-types) 
-=======
->>>>>>> ca1e225 (.)

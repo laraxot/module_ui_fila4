@@ -9,20 +9,10 @@ use Illuminate\View\Component;
 
 final class BreadLink extends Component
 {
-<<<<<<< HEAD
     /**
      * Create a new component instance.
      */
     public function __construct()
-=======
-    public function __construct(
-        // public Post $article,
-        // public bool $showAuthor = false,
-        public string $tpl = 'v1',
-    ) {}
-
-    public function render(): Renderable
->>>>>>> 8d182bf (.)
     {
     }
 

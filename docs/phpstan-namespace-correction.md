@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Correzione Namespace nel Modulo UI
 
 ## Problema Identificato
@@ -94,5 +93,3 @@ Modules/
 - [Documentazione Ufficiale Laravel Modules](https://nwidart.com/laravel-modules/v6/introduction)
 - [PSR-4 Autoloading Standard](https://www.php-fig.org/psr/psr-4/)
 - [Laravel Package Development](https://laravel.com/docs/package-development) 
-=======
->>>>>>> ca1e225 (.)

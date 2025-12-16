@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # InlineDatePicker Component
 
 ## Overview
@@ -613,5 +612,3 @@ public function register(): void
 **Versione**: 2.0 con Navigazione Temporale Avanzata  
 **Compatibilità**: Laraxot , Filament 3.x, Alpine.js 3.x  
 **Filosofia**: Fenomenologia Quantistica applicata al Design Temporale 
-=======
->>>>>>> ca1e225 (.)

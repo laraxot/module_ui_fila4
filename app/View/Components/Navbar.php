@@ -15,25 +15,12 @@ use Modules\Xot\Actions\GetViewAction;
  */
 final class Navbar extends Component
 {
-<<<<<<< HEAD
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
     }
-=======
-    public function __construct(
-        // public Post $article,
-        // public bool $showAuthor = false,
-        // public string $tpl = 'v1'
-<<<<<<< HEAD
-    ) {}
-=======
-    ) {
-    }
->>>>>>> 727968c (.)
->>>>>>> 8d182bf (.)
 
     public function render(): Renderable
     {

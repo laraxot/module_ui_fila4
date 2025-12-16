@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -6,15 +5,6 @@ declare(strict_types=1);
     $fields = $getFields();
     $record = $getRecord();
 ?>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 727968c (.)
-@php
-    $fields=$getFields();
-    $record=$getRecord();
-@endphp
->>>>>>> 8d182bf (.)
 <div
     {{
         $attributes

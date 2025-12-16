@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Table Columns Components
 
 ## Overview
@@ -266,5 +265,3 @@ use Modules\UI\Filament\Tables\Columns\SelectStateColumn;
 **Last Updated**: June 2025
 **Version**: 2.0
 **Compatibility**: Filament 3.x, Laravel 10.x
-=======
->>>>>>> ca1e225 (.)

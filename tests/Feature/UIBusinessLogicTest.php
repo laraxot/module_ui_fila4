@@ -236,11 +236,7 @@ describe('UI Business Logic Integration', function () {
 
     describe('Component Service Business Rules', function () {
         it('enforces component rendering rules', function () {
-<<<<<<< HEAD
             $service = new ComponentService();
-=======
-            $service = new ComponentService;
->>>>>>> 4f1ecbf (.)
 
             $component = Component::factory()->create([
                 'name' => 'renderable-component',
@@ -260,11 +256,7 @@ describe('UI Business Logic Integration', function () {
         });
 
         it('enforces component caching rules', function () {
-<<<<<<< HEAD
             $service = new ComponentService();
-=======
-            $service = new ComponentService;
->>>>>>> 4f1ecbf (.)
 
             $component = Component::factory()->create([
                 'name' => 'cacheable-component',
@@ -285,11 +277,7 @@ describe('UI Business Logic Integration', function () {
         });
 
         it('enforces component validation rules', function () {
-<<<<<<< HEAD
             $service = new ComponentService();
-=======
-            $service = new ComponentService;
->>>>>>> 4f1ecbf (.)
 
             $component = Component::factory()->create([
                 'name' => 'validated-component',
@@ -312,11 +300,7 @@ describe('UI Business Logic Integration', function () {
 
     describe('Theme Service Business Rules', function () {
         it('enforces theme compilation rules', function () {
-<<<<<<< HEAD
             $service = new ThemeService();
-=======
-            $service = new ThemeService;
->>>>>>> 4f1ecbf (.)
 
             $theme = Theme::factory()->create([
                 'name' => 'Compilable Theme',
@@ -335,11 +319,7 @@ describe('UI Business Logic Integration', function () {
         });
 
         it('enforces theme asset compilation', function () {
-<<<<<<< HEAD
             $service = new ThemeService();
-=======
-            $service = new ThemeService;
->>>>>>> 4f1ecbf (.)
 
             $theme = $this->theme;
             $assets = Asset::factory()
@@ -364,11 +344,7 @@ describe('UI Business Logic Integration', function () {
         });
 
         it('enforces theme configuration inheritance', function () {
-<<<<<<< HEAD
             $service = new ThemeService();
-=======
-            $service = new ThemeService;
->>>>>>> 4f1ecbf (.)
 
             $parentTheme = Theme::factory()->create([
                 'name' => 'Parent Theme',

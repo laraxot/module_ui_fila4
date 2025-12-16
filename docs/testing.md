@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Testing del Modulo UI
 
 > **Principi DRY + KISS + SOLID + ROBUST + LARAXOT**: Testing focalizzato sulla business logic, copertura completa, manutenibilità e robustezza.
@@ -351,5 +350,3 @@ $this->assertSee('data-testid="component"');
 
 *Testing del Modulo UI: DRY + KISS + SOLID + ROBUST + LARAXOT*
 
-=======
->>>>>>> ca1e225 (.)

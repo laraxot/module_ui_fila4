@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Best Practices UI
 
 ## Principi Generali
@@ -254,5 +253,3 @@ class AdvancedForm extends Component
 
 ---
 
-=======
->>>>>>> ca1e225 (.)

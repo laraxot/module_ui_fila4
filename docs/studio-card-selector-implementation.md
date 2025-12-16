@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # StudioCardSelector Component - Modulo UI
 
 ## 🎯 **Panoramica**
@@ -272,5 +271,3 @@ return [
 **Last Updated**: January 2025 
 **Last Updated**: January 2025 
 **Last Updated**: January 2025 
-=======
->>>>>>> ca1e225 (.)

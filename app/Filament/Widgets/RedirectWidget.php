@@ -63,11 +63,7 @@ final class RedirectWidget extends XotBaseWidget
      *
      * @return array<string, mixed>
      */
-<<<<<<< HEAD
     #[\Override]
-=======
-    #[Override]
->>>>>>> 4f1ecbf (.)
     public function getFormSchema(): array
     {
         return [];

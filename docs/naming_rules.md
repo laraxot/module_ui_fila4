@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Regole di Naming nei Moduli
 
 ## Regola: No Nomi Specifici dell'Applicazione
@@ -45,5 +44,3 @@ I nomi specifici dell'applicazione devono apparire solo:
 - [Documentazione Principale](../../../docs/README.md)
 - [Standard di Codice](../../../docs/standards/coding-standards.md)
 - [Best Practices](../../../docs/standards/best-practices.md) 
-=======
->>>>>>> ca1e225 (.)

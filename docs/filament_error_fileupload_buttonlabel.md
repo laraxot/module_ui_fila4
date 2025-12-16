@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Errore: Metodo `buttonLabel()` su FileUpload di Filament
 
 ## Descrizione
@@ -30,5 +29,3 @@ Questa doc va sempre consultata e linkata in ogni review e sviluppo che coinvolg
 ## Collegamenti tra versioni di filament-error-fileupload-buttonlabel.md
 * [filament-error-fileupload-buttonlabel.md](../../Patient/docs/filament-error-fileupload-buttonlabel.md)
 
-=======
->>>>>>> ca1e225 (.)

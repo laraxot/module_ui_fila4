@@ -13,11 +13,7 @@ beforeEach(function (): void {
 });
 
 test('stats overview widget extends correct base class', function (): void {
-<<<<<<< HEAD
     expect($this->widget)->toBeInstanceOf(Filament\Widgets\StatsOverviewWidget::class);
-=======
-    expect($this->widget)->toBeInstanceOf(\Filament\Widgets\StatsOverviewWidget::class);
->>>>>>> 4f1ecbf (.)
 });
 
 test('stats overview widget has correct namespace', function (): void {

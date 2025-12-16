@@ -28,12 +28,9 @@ final class Navigation extends XotBaseBlock
         ];
     }
 
-<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
-=======
->>>>>>> 4f1ecbf (.)
     public function getFormSchema(): array
     {
         return [

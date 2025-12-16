@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Theme Build & Publish Guide
 
 ## Installazione dipendenze
@@ -23,5 +22,3 @@ npm run copy
 > **Requisito:** Filament 4.x supporta solo **Tailwind CSS 3.x**. Verificare in `package.json` di avere `"tailwindcss": "^3.x"` come dipendenza.
 
 Se è la prima volta, verificare di aver eseguito `npm install` per le dipendenze.
-=======
->>>>>>> ca1e225 (.)

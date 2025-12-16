@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Risoluzione Conflitto TableLayoutEnum
 
 ## Problema Identificato
@@ -66,15 +65,9 @@ Il file `Modules/UI/app/Enums/TableLayoutEnum.php` presenta un conflitto Git nel
 ## Collegamenti Correlati
 
 - [UI Components](../components/volt.md)
-<<<<<<< HEAD
 - [PHPStan Level 10 Fixes](../../Xot/docs/phpstan-level10-fixes.md)
 - [Translation Standards](../../Lang/docs/translation-standards.md)
 - [Best Practices](../../Xot/docs/translation-keys-best-practices.md)
-=======
-- [PHPStan Level 10 Fixes](../../Xot/project_docs/phpstan-level10-fixes.md)
-- [Translation Standards](../../Lang/project_docs/translation-standards.md)
-- [Best Practices](../../Xot/project_docs/translation-keys-best-practices.md)
->>>>>>> 1899c5f (.)
 
 ## Note per Sviluppatori Futuri
 
@@ -90,5 +83,3 @@ Il file `Modules/UI/app/Enums/TableLayoutEnum.php` presenta un conflitto Git nel
 - **File**: `app/Enums/TableLayoutEnum.php`
 - **Tipo Conflitto**: Sintassi PHPStan
 - **Scelta**: Versione Branch 988693e (sintassi moderna) 
-=======
->>>>>>> ca1e225 (.)

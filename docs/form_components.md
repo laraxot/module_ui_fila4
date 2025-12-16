@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Componenti Form
 
 ## Introduzione
@@ -109,7 +108,7 @@ use Filament\Forms\Form;
 use Filament\Forms\Components\Section;
 use Modules\UI\Filament\Forms\Components\InlineDatePicker;
 
-public function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
+public function form(Form $form): Form
 {
     return $form->schema([
         Section::make('Prenotazione Appuntamento')
@@ -292,5 +291,3 @@ form.addEventListener('submit', (e) => {
 * [form-components.md](../../../UI/docs/form-components.md)
 * [form-components.md](../../../UI/docs/roadmap/form-components.md)
 
-=======
->>>>>>> ca1e225 (.)

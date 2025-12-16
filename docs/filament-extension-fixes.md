@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Correzione Estensione Filament - S3Test.php
 
 ## Problema Identificato
@@ -83,5 +82,3 @@ class S3Test extends XotBasePage
 - [Regole Estensione Filament](../../../docs/architecture/filament-extension-rules.md)
 - [XotBasePage Implementation](../../Xot/docs/xotbasepage_implementation.md)
 - [Filament Best Practices](../../../docs/FILAMENT-BEST-PRACTICES.md)
-=======
->>>>>>> ca1e225 (.)

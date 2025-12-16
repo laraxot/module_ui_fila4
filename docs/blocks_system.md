@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sistema di Blocchi
 
 ## Introduzione
@@ -103,5 +102,3 @@ public function render()
 
 ## Note
 Questa documentazione è parte del sistema di documentazione di il progetto. Per dettagli specifici sui singoli blocchi, consultare la documentazione dei rispettivi moduli. 
-=======
->>>>>>> ca1e225 (.)

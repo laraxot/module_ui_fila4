@@ -23,12 +23,8 @@ class PasswordStrengthField extends TextInput
 
     public function evaluateStrength(): static
     {
-<<<<<<< HEAD
         $this->afterStateUpdated(function (string $state): void {
             unset($state);
-=======
-        $this->afterStateUpdated(function (string $_state) {
->>>>>>> 4f1ecbf (.)
             // $zxcvbn = new Zxcvbn();
             // $result = $zxcvbn->passwordStrength($state);
             // Ottieni il punteggio della password (da 0 a 4)

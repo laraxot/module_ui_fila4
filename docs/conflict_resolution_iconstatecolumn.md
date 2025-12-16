@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Risoluzione Conflitto IconStateColumn.php
 
 ## Problema Identificato
@@ -72,5 +71,3 @@ Il file `Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php` presenta co
 - [Modules/UI/docs/](../docs/)
 
 *Ultimo aggiornamento: 29 luglio 2025*
-=======
->>>>>>> ca1e225 (.)
