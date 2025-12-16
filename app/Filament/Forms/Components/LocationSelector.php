@@ -166,8 +166,13 @@ class LocationSelector extends Group
         return [
             // Campo Regione
             Select::make($this->regionFieldName)
+<<<<<<< HEAD
                 ->label(is_string($this->labels['region']) ? $this->labels['region'] : 'Region')
                 ->placeholder(is_string($this->placeholders['region']) ? $this->placeholders['region'] : 'Select region')
+=======
+                ->label($this->labels['region'])
+                ->placeholder($this->placeholders['region'])
+>>>>>>> 4f1ecbf (.)
                 ->options($this->getRegionOptions())
                 ->searchable($this->searchable)
                 ->required($this->required)
@@ -180,8 +185,13 @@ class LocationSelector extends Group
                 ->helperText(__('ui::location_selector.region.help')),
             // Campo Provincia
             Select::make($this->provinceFieldName)
+<<<<<<< HEAD
                 ->label(is_string($this->labels['province']) ? $this->labels['province'] : 'Province')
                 ->placeholder(is_string($this->placeholders['province']) ? $this->placeholders['province'] : 'Select province')
+=======
+                ->label($this->labels['province'])
+                ->placeholder($this->placeholders['province'])
+>>>>>>> 4f1ecbf (.)
                 ->options(function (Get $get): array {
                     $region = $get($this->regionFieldName);
 
@@ -198,8 +208,13 @@ class LocationSelector extends Group
                 ->helperText(__('ui::location_selector.province.help')),
             // Campo CAP
             Select::make($this->capFieldName)
+<<<<<<< HEAD
                 ->label(is_string($this->labels['cap']) ? $this->labels['cap'] : 'CAP')
                 ->placeholder(is_string($this->placeholders['cap']) ? $this->placeholders['cap'] : 'Select CAP')
+=======
+                ->label($this->labels['cap'])
+                ->placeholder($this->placeholders['cap'])
+>>>>>>> 4f1ecbf (.)
                 ->options(function (Get $get): array {
                     $region = $get($this->regionFieldName);
                     $province = $get($this->provinceFieldName);
@@ -359,21 +374,14 @@ class LocationSelector extends Group
                 return null;
             }
 
-            $regione = is_array($comune->regione) ? $comune->regione : [];
-            $provincia = is_array($comune->provincia) ? $comune->provincia : [];
-
             return [
                 'region' => [
-                    /* @phpstan-ignore-next-line nullCoalesce.offset */
-                    'code' => $regione['codice'] ?? null,
-                    /* @phpstan-ignore-next-line nullCoalesce.offset */
-                    'name' => $regione['nome'] ?? null,
+                    'code' => $comune->regione['codice'] ?? null,
+                    'name' => $comune->regione['nome'] ?? null,
                 ],
                 'province' => [
-                    /* @phpstan-ignore-next-line nullCoalesce.offset */
-                    'code' => $provincia['codice'] ?? null,
-                    /* @phpstan-ignore-next-line nullCoalesce.offset */
-                    'name' => $provincia['nome'] ?? null,
+                    'code' => $comune->provincia['codice'] ?? null,
+                    'name' => $comune->provincia['nome'] ?? null,
                 ],
                 /* @phpstan-ignore offsetAccess.nonOffsetAccessible */
                 'cap' => $state[$this->capFieldName] ?? null,

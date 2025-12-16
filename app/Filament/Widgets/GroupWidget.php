@@ -10,7 +10,13 @@ final class GroupWidget extends XotBaseWidget
 {
     protected static ?string $heading = 'Group Widget';
 
+<<<<<<< HEAD
     #[\Override]
+=======
+    protected static ?string $pollingInterval = null;
+
+    #[Override]
+>>>>>>> 4f1ecbf (.)
     public function getFormSchema(): array
     {
         return [];

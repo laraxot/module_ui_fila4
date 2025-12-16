@@ -11,11 +11,14 @@ final class GetDaysMappingAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     /**
      * Execute action to get weekday mapping.
      *
      * @return array<string, string>
      */
+=======
+>>>>>>> 4f1ecbf (.)
     public function execute(): array
     {
         $weekdays = $this->getWeekdays();
@@ -62,6 +65,7 @@ final class GetDaysMappingAction
         return [$dayKey => $dayLabel];
     }
 
+<<<<<<< HEAD
     /**
      * Create Carbon instance.
      */
@@ -74,5 +78,8 @@ final class GetDaysMappingAction
         }
 
         return $carbon;
+=======
+        return $days->toArray();
+>>>>>>> 4f1ecbf (.)
     }
 }

@@ -8,5 +8,51 @@ use Modules\Xot\Filament\Tables\Columns\XotBaseColumnGroup;
 
 final class DummyActionsColumn extends XotBaseColumnGroup
 {
+<<<<<<< HEAD
     protected string $view = 'ui::filament.tables.columns.dummy-actions-column';
+=======
+    protected array $actions = [];
+
+    public function actions(array $actions): static
+    {
+        $this->actions = $actions;
+
+        return $this;
+    }
+
+    public function getActions(): array
+    {
+        return $this->actions;
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->wrapHeader(true);
+
+        $this->extraHeaderAttributes(['class' => 'hidden no-header-group', 'style' => 'display: none']);
+        $this->columns([
+            IconColumn::make('uno')
+                ->label('')
+                ->default(false)
+                ->boolean()
+                ->extraCellAttributes(['class' => 'px-0'])
+                ->action(Action::make('uno-action')
+                    ->label('Prova Action')
+                    ->action(function () {
+                        dddx('Azione prova eseguita1!');
+                    })),
+            IconColumn::make('due')
+                ->label('')
+                ->default(true)
+                ->boolean()
+                ->extraCellAttributes(['class' => 'px-0'])
+                ->action(Action::make('due-action')
+                    ->label('Prova Action')
+                    ->action(function () {
+                        dddx('Azione prova eseguita2!');
+                    })),
+        ]);
+    }
+>>>>>>> 4f1ecbf (.)
 }

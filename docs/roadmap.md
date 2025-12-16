@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎨 UI MODULE - ROADMAP 2025
 
 **Modulo**: UI (User Interface Components & Design System)  
@@ -300,3 +301,5 @@ UI Module
 ---
 
 *Questa roadmap è specifica per il modulo UI e viene aggiornata regolarmente in base ai progressi e alle nuove esigenze.*
+=======
+>>>>>>> 4f1ecbf (.)

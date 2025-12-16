@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -566,3 +567,5 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 *Ultimo aggiornamento: gennaio 2025* 
 =======
 >>>>>>> ca1e225 (.)
+=======
+>>>>>>> 4f1ecbf (.)

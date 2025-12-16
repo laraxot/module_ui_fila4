@@ -12,7 +12,11 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
+<<<<<<< HEAD
     $this->widget = new RowWidget();
+=======
+    $this->widget = new RowWidget;
+>>>>>>> 4f1ecbf (.)
 });
 
 test('row widget extends filament widget', function () {
