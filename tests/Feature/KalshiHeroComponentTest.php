@@ -2,8 +2,32 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\View;
 use Tests\TestCase;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+use Illuminate\Support\Facades\View;
+use Tests\TestCase;
+=======
+namespace Modules\UI\Tests\Feature\KalshiHeroComponentTest;
+
+namespace Modules\UI\Tests\Feature;
+
+use Illuminate\Support\Facades\View;
+>>>>>>> a12f125f4a (.)
+=======
+use Illuminate\Support\Facades\View;
+use Tests\TestCase;
+>>>>>>> b93ef594b4 (.)
+=======
+use Illuminate\Support\Facades\View;
+use Tests\TestCase;
+use function Pest\Laravel\{get};
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
 
 uses(TestCase::class);
 
@@ -27,9 +51,21 @@ test('kalshi inspired hero component renders without errors', function () {
     ];
 
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired', $componentData);
+<<<<<<< HEAD
 
     expect($view)->not()->toBeNull();
 
+=======
+<<<<<<< HEAD
+
+    expect($view)->not()->toBeNull();
+
+=======
+    
+    expect($view)->not()->toBeNull();
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     $html = $view->render();
     expect($html)->toContain('Test Prediction Platform');
     expect($html)->toContain('Trade on real events with confidence');
@@ -41,7 +77,22 @@ test('kalshi hero shows statistics when enabled', function () {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired', [
         'show_stats' => true,
     ]);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> a12f125f4a (.)
+=======
+
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     $html = $view->render();
     expect($html)->toContain('250+');
     expect($html)->toContain('Active Markets');
@@ -57,7 +108,22 @@ test('kalshi hero hides statistics when disabled', function () {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired', [
         'show_stats' => false,
     ]);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> a12f125f4a (.)
+=======
+
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     $html = $view->render();
     expect($html)->not()->toContain('Active Markets');
     expect($html)->not()->toContain('Total Predictions');
@@ -67,7 +133,22 @@ test('kalshi hero shows categories when enabled', function () {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired', [
         'show_categories' => true,
     ]);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> a12f125f4a (.)
+=======
+
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     $html = $view->render();
     expect($html)->toContain('Popular Categories');
     expect($html)->toContain('Politics');
@@ -82,7 +163,22 @@ test('kalshi hero hides categories when disabled', function () {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired', [
         'show_categories' => false,
     ]);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> a12f125f4a (.)
+=======
+
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     $html = $view->render();
     expect($html)->not()->toContain('Popular Categories');
 });
@@ -96,7 +192,22 @@ test('kalshi hero supports custom props', function () {
         'secondary_cta_text' => 'Learn More',
         'secondary_cta_link' => '/about',
     ]);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> a12f125f4a (.)
+=======
+
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     $html = $view->render();
     expect($html)->toContain('Custom Market Title');
     expect($html)->toContain('Custom trading platform description');
@@ -108,7 +219,22 @@ test('kalshi hero supports custom props', function () {
 
 test('kalshi hero has proper css classes and styling', function () {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired');
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> a12f125f4a (.)
+=======
+
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     $html = $view->render();
     expect($html)->toContain('bg-gradient-to-br from-slate-900');
     expect($html)->toContain('animate-gradient-x');
@@ -118,7 +244,22 @@ test('kalshi hero has proper css classes and styling', function () {
 
 test('kalshi hero includes required css animations', function () {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired');
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> a12f125f4a (.)
+=======
+
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     $html = $view->render();
     expect($html)->toContain('@keyframes gradient-x');
     expect($html)->toContain('.animate-gradient-x');
@@ -127,10 +268,33 @@ test('kalshi hero includes required css animations', function () {
 
 test('kalshi hero has responsive design classes', function () {
     $view = View::make('pub_theme::components.blocks.hero.kalshi-inspired');
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> a12f125f4a (.)
+=======
+
+>>>>>>> b93ef594b4 (.)
+=======
+    
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
     $html = $view->render();
     expect($html)->toContain('md:text-7xl lg:text-8xl');
     expect($html)->toContain('grid-cols-2 md:grid-cols-4');
     expect($html)->toContain('md:grid-cols-3 lg:grid-cols-6');
     expect($html)->toContain('flex-col sm:flex-row');
+<<<<<<< HEAD
 });
+=======
+<<<<<<< HEAD
+});
+=======
+});
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
