@@ -8,6 +8,10 @@ return [
         'heading' => 'AWS Konfiguration Diagnose',
         'description' => 'Seite zum Testen und Diagnostizieren der kompletten AWS Konfiguration',
     ],
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 727968c (.)
     'fields' => [
         'cloudfront_url' => [
             'label' => 'CloudFront Distribution URL',
@@ -25,6 +29,10 @@ return [
             'helper_text' => 'Übersicht der aktuellen AWS Konfiguration',
         ],
     ],
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 727968c (.)
     'actions' => [
         'test_s3_connection' => [
             'label' => 'Basis Verbindung Testen',
@@ -75,6 +83,10 @@ return [
             'error' => 'Fehler während der vollständigen Diagnose',
         ],
     ],
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 727968c (.)
     'sections' => [
         's3_connection_test' => [
             'label' => 'S3 Verbindungstest',
@@ -93,6 +105,10 @@ return [
             'description' => 'Alle AWS Diagnose Tests ausführen',
         ],
     ],
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 727968c (.)
     'tabs' => [
         'tests' => [
             'label' => 'Tests',
@@ -110,6 +126,10 @@ return [
             'label' => 'Diagnose',
         ],
     ],
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 727968c (.)
     'notifications' => [
         's3_connection_successful' => 'S3 Verbindung Erfolgreich',
         's3_connection_failed' => 'S3 Verbindung Fehlgeschlagen',
@@ -117,6 +137,10 @@ return [
         'cloudfront_config_error' => 'CloudFront Konfiguration Fehler',
         'full_diagnostic_completed' => 'Vollständige Diagnose Abgeschlossen',
     ],
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 727968c (.)
     'test_results' => [
         'status_success' => 'Erfolg',
         'status_error' => 'Fehler',
