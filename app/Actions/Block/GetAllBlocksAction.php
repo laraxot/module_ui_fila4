@@ -9,18 +9,44 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Modules\Xot\Actions\File\GetClassNameByPathAction;
 use Modules\Xot\Datas\ComponentFileData;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 use function Safe\realpath;
 
+>>>>>>> 727968c (.)
+use Spatie\LaravelData\DataCollection;
+use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
+>>>>>>> 8d182bf (.)
+
+<<<<<<< HEAD
+use function Safe\realpath;
+
+<<<<<<< HEAD
 use Spatie\LaravelData\DataCollection;
 use Webmozart\Assert\Assert;
+=======
+=======
+>>>>>>> 727968c (.)
+class GetAllBlocksAction
+{
+    use QueueableAction;
+>>>>>>> 8d182bf (.)
 
 final class GetAllBlocksAction
 {
     /**
      * @return DataCollection<int, ComponentFileData>
      */
+<<<<<<< HEAD
     public function execute(): DataCollection
+=======
+<<<<<<< HEAD
+    public function execute(string $_context = 'form'): DataCollection
+>>>>>>> 8d182bf (.)
     {
         Assert::string($relativePath = config('modules.paths.generator.model.path'));
 
@@ -44,6 +70,37 @@ final class GetAllBlocksAction
                 'path' => $path,
             ];
         });
+=======
+    public function execute(string $context = 'form'): DataCollection
+    {
+        Assert::string($relativePath = config('modules.paths.generator.model.path'));
+
+        $files = File::glob(base_path('Modules').'/*/'.$relativePath.'/../Filament/Blocks/*.php');
+
+        $blocks = Arr::map(
+            $files,
+            function (string $path) {
+                $path = realpath($path);
+                $class = app(GetClassNameByPathAction::class)->execute($path);
+
+                $name = Str::of(class_basename($class))->snake()->toString();
+                if (Str::endsWith($name, '_block')) {
+                    $name = Str::before($name, '_block');
+                }
+
+                $module = Str::of($class)
+                    ->between('Modules\\', '\Filament\\')
+                    ->toString();
+
+                return [
+                    'name' => $name,
+                    'class' => $class,
+                    'module' => $module,
+                    'path' => $path,
+                ];
+            }
+        );
+>>>>>>> 727968c (.)
 
         return ComponentFileData::collection($blocks);
     }
