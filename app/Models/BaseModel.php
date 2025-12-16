@@ -12,3 +12,9 @@ use Modules\Xot\Models\XotBaseModel;
 abstract class BaseModel extends XotBaseModel
 {
 }
+<<<<<<< HEAD
+=======
+abstract class BaseModel extends XotBaseModel
+{
+}
+>>>>>>> d7dfa0b6 (.)

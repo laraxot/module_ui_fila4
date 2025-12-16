@@ -72,6 +72,10 @@ final class VideoSpatie
                 // ->customProperties(fn(Forms\Get $get) => ['gallery_id' => $get('gallery_id')]),
                 // Forms\Components\SpatieMediaLibraryFileUpload::make('media_id')
             ])
+<<<<<<< HEAD
+=======
+            ->columns($context === 'form' ? 2 : 1);
+>>>>>>> d7dfa0b6 (.)
             ->columns('form' === $context ? 2 : 1);
     }
 

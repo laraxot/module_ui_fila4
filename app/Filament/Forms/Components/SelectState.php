@@ -26,14 +26,26 @@ class SelectState extends Select
                         $methodExists = method_exists($instance, 'getDefaultStateFor');
                         if ($methodExists) {
                             $statesRaw = $instance->getDefaultStateFor($name);
+<<<<<<< HEAD
                             if (! is_array($statesRaw)) {
+=======
+                            if (!is_array($statesRaw)) {
+                            if (! is_array($statesRaw)) {
+                            if (! is_array($statesRaw)) {
+>>>>>>> d7dfa0b6 (.)
                                 $statesRaw = Arr::wrap($statesRaw);
                             }
                             /** @var array<int|string, mixed> $statesRaw */
                             $states = $statesRaw;
+<<<<<<< HEAD
                             $statesKeys = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
                             $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
 
+=======
+                            $statesKeys = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
+                            $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
+                            
+>>>>>>> d7dfa0b6 (.)
                             $combined = array_combine($statesKeys, $statesValues);
                             /** @var array<int|string, int|string> $combinedTyped */
                             $combinedTyped = $combined ?: [];
@@ -48,7 +60,13 @@ class SelectState extends Select
                         }
                     }
                 }
+<<<<<<< HEAD
 
+=======
+                
+
+
+>>>>>>> d7dfa0b6 (.)
                 return [];
             }
 
@@ -58,6 +76,15 @@ class SelectState extends Select
             $statesRaw = $statesCollection->toArray();
             /** @var array<int|string, mixed> $states */
             $states = $statesRaw;
+<<<<<<< HEAD
+=======
+            $statesKeys = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
+            $statesValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($states));
+            
+            $combined = array_combine($statesKeys, $statesValues);
+            /** @var array<int|string, int|string> $combinedTyped */
+            $combinedTyped = $combined ?: [];
+>>>>>>> d7dfa0b6 (.)
             $statesKeys = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
             $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
 

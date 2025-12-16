@@ -336,6 +336,7 @@ Tutte le icone sono compatibili con Filament 4.x e versioni successive.
 - **🔧 Registrazione Automatica**: Icone registrate automaticamente
 - **📚 Documentazione**: Documentazione completa del sistema
 - **🎯 Integrazione Filament**: Compatibilità completa con Filament 4.x
+<<<<<<< HEAD
 
 
 ## ♻️ Manutenzione 2025-11
@@ -345,3 +346,5 @@ Tutte le icone sono compatibili con Filament 4.x e versioni successive.
 - Prefisso garantito stringa: cast esplicito e fallback `''` per i set personalizzati.
 - Verifiche qualità: PHPStan L10 ✅, PHPMD ✅, PHPInsights ✅ (nota: soglia complessità legacy ancora 20).
 - Documentare nuove icone o prefissi aggiuntivi in questa sezione prima del rilascio.
+=======
+>>>>>>> d7dfa0b6 (.)

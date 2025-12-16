@@ -28,4 +28,11 @@ class EventServiceProvider extends BaseEventServiceProvider
     protected function configureEmailVerification(): void
     {
     }
+<<<<<<< HEAD
+=======
+
+    protected function configureEmailVerification(): void
+    {
+    }
+>>>>>>> d7dfa0b6 (.)
 }

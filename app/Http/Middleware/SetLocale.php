@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
 
-final class SetLocale
+class SetLocale
 {
     /**
      * Handle an incoming request.
@@ -19,14 +19,20 @@ final class SetLocale
     {
         // Recupera la lingua dalla sessione o usa quella predefinita
         $locale = Session::get('locale', config('app.locale'));
-        if (! is_string($locale)) {
+        if (!is_string($locale)) {
             $locale = Config::string('app.locale');
         }
         // Imposta la lingua
         App::setLocale($locale);
 
         $response = $next($request);
+<<<<<<< HEAD
         if (! ($response instanceof Response)) {
+=======
+        if (!($response instanceof Response)) {
+        if (! ($response instanceof Response)) {
+        if (! ($response instanceof Response)) {
+>>>>>>> d7dfa0b6 (.)
             throw new \RuntimeException('Middleware must return a Response instance');
         }
 

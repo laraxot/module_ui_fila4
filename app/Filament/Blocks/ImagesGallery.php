@@ -64,6 +64,10 @@ final class ImagesGallery
                 // TextInput::make('caption')
                 //     ->columnSpanFull(),
             ])
+<<<<<<< HEAD
+=======
+            ->columns($context === 'form' ? 2 : 1);
+>>>>>>> d7dfa0b6 (.)
             ->columns('form' === $context ? 2 : 1);
     }
 

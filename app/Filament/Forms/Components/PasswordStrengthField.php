@@ -10,21 +10,17 @@ use Filament\Forms\Components\TextInput;
 class PasswordStrengthField extends TextInput
 {
     /**
-     * Setup iniziale del componente.
+     * Summary of view.
+     *
+     * @phpstan-var view-string
+     *
+     * @phpstan-ignore property.defaultValue
      */
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        /** @var view-string $viewString */
-        $viewString = 'ui::filament.forms.components.password-strength';
-        $this->view($viewString);
-    }
+    protected string $view = 'ui::filament.forms.components.password-strength';
 
     public function evaluateStrength(): static
     {
-        $this->afterStateUpdated(function (string $state): void {
-            unset($state);
+        $this->afterStateUpdated(function (string $_state) {
             // $zxcvbn = new Zxcvbn();
             // $result = $zxcvbn->passwordStrength($state);
             // Ottieni il punteggio della password (da 0 a 4)

@@ -9,3 +9,9 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 abstract class BaseListRecords extends XotBaseListRecords
 {
 }
+<<<<<<< HEAD
+=======
+abstract class BaseListRecords extends XotBaseListRecords
+{
+}
+>>>>>>> d7dfa0b6 (.)

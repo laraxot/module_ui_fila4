@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
+use Tests\TestCase;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Modules\UI\Filament\Widgets\StatsOverviewWidget;
-use Tests\TestCase;
 
 uses(TestCase::class);
 

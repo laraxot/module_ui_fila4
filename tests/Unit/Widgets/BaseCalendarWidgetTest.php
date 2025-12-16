@@ -7,6 +7,14 @@ namespace Modules\UI\Tests\Unit\Widgets;
 <<<<<<< HEAD
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
 use Modules\UI\Filament\Widgets\FullCalendarWidget;
+<<<<<<< HEAD
+=======
+// use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget; // Temporaneamente disabilitato per Filament v4
+use Modules\UI\Filament\Widgets\FullCalendarWidget;
+use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+// use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget; // Temporaneamente disabilitato per Filament v4
+use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+>>>>>>> d7dfa0b6 (.)
 
 // Mock class per testare il BaseCalendarWidget
 class MockCalendarWidget extends BaseCalendarWidget
@@ -62,6 +70,18 @@ describe('BaseCalendarWidget Inheritance', function () {
     it('extends FullCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
     });
+<<<<<<< HEAD
+=======
+    it('extends FullCalendarWidget', function () {
+        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
+    });
+    it('extends FullCalendarWidget', function () {
+        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
+    });
+    it('extends FullCalendarWidget', function () {
+        expect($this->widget)->toBeInstanceOf(FullCalendarWidget::class);
+    });
+>>>>>>> d7dfa0b6 (.)
 
     it('extends BaseCalendarWidget', function () {
         expect($this->widget)->toBeInstanceOf(BaseCalendarWidget::class);
@@ -253,6 +273,9 @@ describe('UserCalendarWidget Form Schema', function () {
         expect($gridSchema[1])->toBeInstanceOf(DateTimePicker::class);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d7dfa0b6 (.)
         $titleField = collect($formSchema)->first(static fn ($field) => 'title' === $field->getName());
 
         expect($titleField)->not->toBeNull();

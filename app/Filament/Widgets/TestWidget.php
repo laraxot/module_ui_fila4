@@ -4,14 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Filament\Widgets\Widget as BaseWidget;
 
-final class TestWidget extends XotBaseWidget
+class TestWidget extends BaseWidget
 {
-    protected ?string $heading = 'Test Widget';
+    public array $widgets = [];
 
-    public function getFormSchema(): array
-    {
-        return [];
-    }
+    protected string $view = 'ui::filament.widgets.test-widget';
 }
