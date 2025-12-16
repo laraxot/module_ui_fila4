@@ -41,7 +41,11 @@ return [
         'region_province_required_for_cap' => 'Devi selezionare regione e provincia prima di scegliere il CAP',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 ]; 
 >>>>>>> 727968c (.)
+=======
+];
+>>>>>>> ef3c5fa (.)
