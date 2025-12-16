@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 <div class="bg-gray-50">
     <div class="relative bg-indigo-600">
       <!-- Overlapping background -->
@@ -1175,10 +1166,3 @@ declare(strict_types=1);
       </div>
     </section>
   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
