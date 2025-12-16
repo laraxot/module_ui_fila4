@@ -4,7 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
+<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
+=======
+<<<<<<< HEAD
+use Filament\Forms\Components\Component;
+use Override;
+use Filament\Forms\Form;
+use Filament\Forms\Form;
+=======
+use Filament\Schemas\Components\Component;
+use Override;
+use Filament\Forms\Form;
+>>>>>>> e6782b2 (.)
+>>>>>>> 9567487 (.)
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
