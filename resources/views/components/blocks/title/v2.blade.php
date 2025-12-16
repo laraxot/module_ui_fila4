@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 @props(['text', 'level'])
 
 <div class="py-4">
@@ -29,4 +32,8 @@ declare(strict_types=1);
             </article>
         </div>
     {{-- </template> --}}
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> 727968c (.)
