@@ -13,10 +13,18 @@ return [
         'created_at' => 'Vytvořeno',
         'updated_at' => 'Upraveno',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'select-options' => [
         'same-tab' => 'Ve stejném okně',
         'new-tab' => 'V novém okně',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'items' => [
         'empty' => 'Žádné položky',
         'add-item' => 'Přidat položku',
@@ -27,6 +35,10 @@ return [
         'dedent' => 'Oddělit',
         'remove' => 'Odstranit',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     'items-modal' => [
         'title' => 'Nová položka',
         'label' => 'Název',
