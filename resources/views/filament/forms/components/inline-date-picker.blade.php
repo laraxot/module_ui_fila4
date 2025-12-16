@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 {{--
 /**
  * InlineDatePicker View - KISS Principle
@@ -146,7 +152,11 @@ declare(strict_types=1);
     transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 </style>
 =======
 </style> 
 >>>>>>> 727968c (.)
+=======
+</style>
+>>>>>>> ef3c5fa (.)
