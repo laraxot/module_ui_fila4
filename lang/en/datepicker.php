@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 return [
     'months' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
         'January',
         'February',
         'March',
@@ -38,19 +34,6 @@ return [
         'friday' => 'Friday',
         'saturday' => 'Saturday',
         'sunday' => 'Sunday',
-<<<<<<< HEAD
-=======
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December',
-    ],
-    'days_short' => [
-        'mon' => 'Mon', 'tue' => 'Tue', 'wed' => 'Wed', 'thu' => 'Thu', 'fri' => 'Fri', 'sat' => 'Sat', 'sun' => 'Sun',
-    ],
-    'days_full' => [
-        'monday' => 'Monday', 'tuesday' => 'Tuesday', 'wednesday' => 'Wednesday', 'thursday' => 'Thursday', 'friday' => 'Friday', 'saturday' => 'Saturday', 'sunday' => 'Sunday',
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     ],
     'today' => 'Today',
     'select_date' => 'Select date',
