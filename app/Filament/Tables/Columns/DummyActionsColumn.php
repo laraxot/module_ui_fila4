@@ -20,12 +20,8 @@ final class DummyActionsColumn extends XotBaseColumnGroup
         return $this;
     }
 
-    /**
-     * @return array<string, mixed>
-     */
     public function getActions(): array
     {
-        /** @var array<string, mixed> */
         return $this->actions;
     }
 
@@ -43,7 +39,7 @@ final class DummyActionsColumn extends XotBaseColumnGroup
                 ->extraCellAttributes(['class' => 'px-0'])
                 ->action(Action::make('uno-action')
                     ->label('Prova Action')
-                    ->action(function (): void {
+                    ->action(function () {
                         dddx('Azione prova eseguita1!');
                     })),
             IconColumn::make('due')
@@ -53,7 +49,7 @@ final class DummyActionsColumn extends XotBaseColumnGroup
                 ->extraCellAttributes(['class' => 'px-0'])
                 ->action(Action::make('due-action')
                     ->label('Prova Action')
-                    ->action(function (): void {
+                    ->action(function () {
                         dddx('Azione prova eseguita2!');
                     })),
         ]);
