@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 {{--
     Studio Selector Component - Selezione semplice studio con pulsanti
     
@@ -137,4 +140,8 @@ declare(strict_types=1);
             </div>
         </div>
     @endif
+<<<<<<< HEAD
 </div>
+=======
+</div> 
+>>>>>>> 727968c (.)
