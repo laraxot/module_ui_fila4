@@ -3,11 +3,7 @@
 
 ## Overview
 
-<<<<<<< HEAD
 Questi componenti Filament sono stati creati per supportare la selezione geografica e la gestione degli studi odontoiatrici nel widget `FindDoctorAndAppointmentWidget` del modulo SaluteOra.
-=======
-Questi componenti Filament sono stati creati per supportare la selezione geografica e la gestione degli studi odontoiatrici nel widget `FindDoctorAndAppointmentWidget` del modulo <nome progetto>.
->>>>>>> b55470f (.)
 
 ## Componenti Implementati
 
@@ -91,11 +87,7 @@ protected function getStudioStepSchema(): array
 {
     return [
         // Titolo step
-<<<<<<< HEAD
         View::make('saluteora::filament.widgets.studio-step-header')
-=======
-        View::make('<nome progetto>::filament.widgets.studio-step-header')
->>>>>>> b55470f (.)
             ->viewData([
                 'studiosCount' => $this->getStudiosCount(),
                 'geographicArea' => $this->getGeographicAreaName(),
@@ -103,11 +95,7 @@ protected function getStudioStepSchema(): array
             ->visible(fn (): bool => $this->hasValidGeographicSelection()),
 
         // Pulsanti selezione studio
-<<<<<<< HEAD
         View::make('saluteora::filament.widgets.studio-selector')
-=======
-        View::make('<nome progetto>::filament.widgets.studio-selector')
->>>>>>> b55470f (.)
             ->viewData([
                 'studios' => $this->getStudiosForSelectedArea(),
                 'selectedStudio' => $this->data['selected_studio'] ?? null,
@@ -116,13 +104,8 @@ protected function getStudioStepSchema(): array
 
         // TextInput per mostrare studio selezionato
         TextInput::make('selected_studio_name')
-<<<<<<< HEAD
             ->label(__('saluteora::widgets.find_doctor.fields.selected_studio.label'))
             ->placeholder(__('saluteora::widgets.find_doctor.fields.selected_studio.placeholder'))
-=======
-            ->label(__('<nome progetto>::widgets.find_doctor.fields.selected_studio.label'))
-            ->placeholder(__('<nome progetto>::widgets.find_doctor.fields.selected_studio.placeholder'))
->>>>>>> b55470f (.)
             ->readonly()
             ->visible(fn (): bool => !empty($this->data['selected_studio']))
             ->suffixIcon('heroicon-o-check-circle')
