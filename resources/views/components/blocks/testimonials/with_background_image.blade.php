@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 <div class="bg-white py-16 sm:py-24">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="relative overflow-hidden bg-gray-900 px-6 py-20 shadow-xl sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
@@ -38,10 +29,3 @@ declare(strict_types=1);
       </div>
     </div>
   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
