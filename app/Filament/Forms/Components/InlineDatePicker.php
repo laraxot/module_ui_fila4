@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Filament\Forms\Components;
+=======
+namespace Modules\UI\Filament\Forms\Components;
+>>>>>>> 24eb066 (Lint)
 
 use Carbon\Carbon;
 use Filament\Forms\Components\DatePicker;
@@ -55,6 +59,7 @@ class InlineDatePicker extends DatePicker
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($state !== null && is_string($state) && $state !== '') {
                 try {
                     $date = Carbon::parse($state);
@@ -65,6 +70,8 @@ class InlineDatePicker extends DatePicker
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
             if (null !== $state && is_string($state) && '' !== $state) {
                 try {
                     $date = Carbon::parse($state);
@@ -72,11 +79,14 @@ class InlineDatePicker extends DatePicker
                 } catch (\Exception $e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
                     // Handle invalid date
                     $component->currentViewMonth = now()->format('Y-m');
                 }
@@ -87,6 +97,7 @@ class InlineDatePicker extends DatePicker
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($state !== null && is_string($state) && $state !== '') {
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
@@ -99,6 +110,8 @@ class InlineDatePicker extends DatePicker
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
             if (null !== $state && is_string($state) && '' !== $state) {
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
@@ -108,9 +121,12 @@ class InlineDatePicker extends DatePicker
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> 24eb066 (Lint)
             return null;
         });
     }
@@ -185,6 +201,7 @@ class InlineDatePicker extends DatePicker
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         if (!is_iterable($datesRaw)) {
             $datesRaw = [];
@@ -193,11 +210,14 @@ class InlineDatePicker extends DatePicker
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> 24eb066 (Lint)
 
         if (! is_iterable($datesRaw)) {
             $datesRaw = [];
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
@@ -209,11 +229,14 @@ class InlineDatePicker extends DatePicker
         }
 
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
         /** @var iterable<int|string, mixed> $datesRaw */
         $dates = is_array($datesRaw) ? $datesRaw : iterator_to_array($datesRaw);
 
         /** @var Collection<int, non-falsy-string> $result */
         $result = collect($dates)->map(function (mixed $date): string {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,10 +250,14 @@ class InlineDatePicker extends DatePicker
 =======
             if (! is_string($date) || '' === $date) {
 >>>>>>> a8fbb3e (.)
+=======
+            if (! is_string($date) || '' === $date) {
+>>>>>>> 24eb066 (Lint)
                 return '';
             }
             try {
                 return Carbon::parse($date)->format('Y-m-d');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,6 +279,11 @@ class InlineDatePicker extends DatePicker
                 return '';
             }
 >>>>>>> a8fbb3e (.)
+=======
+            } catch (\Exception $e) {
+                return '';
+            }
+>>>>>>> 24eb066 (Lint)
         })->filter(fn (string $v): bool => '' !== $v)->values(); // Remove empty strings and reindex
 
         /** @var Collection<int, string> $resultTyped */
@@ -259,11 +291,14 @@ class InlineDatePicker extends DatePicker
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
         return $resultTyped;
     }
 
@@ -313,6 +348,7 @@ class InlineDatePicker extends DatePicker
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 } catch (Throwable $e) {
 =======
                 } catch (\Throwable $e) {
@@ -323,6 +359,9 @@ class InlineDatePicker extends DatePicker
 =======
                 } catch (\Throwable $e) {
 >>>>>>> a8fbb3e (.)
+=======
+                } catch (\Throwable $e) {
+>>>>>>> 24eb066 (Lint)
                     $isSelected = false;
                 }
 

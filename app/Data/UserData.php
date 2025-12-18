@@ -18,6 +18,7 @@ final class UserData extends Data
         public array $settings,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
@@ -27,4 +28,8 @@ final class UserData extends Data
     ) {
     }
 >>>>>>> a8fbb3e (.)
+=======
+    ) {
+    }
+>>>>>>> 24eb066 (Lint)
 }

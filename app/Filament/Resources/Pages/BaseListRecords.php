@@ -8,6 +8,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 abstract class BaseListRecords extends XotBaseListRecords {}
 =======
 abstract class BaseListRecords extends XotBaseListRecords
@@ -19,3 +20,8 @@ abstract class BaseListRecords extends XotBaseListRecords
 {
 }
 >>>>>>> a8fbb3e (.)
+=======
+abstract class BaseListRecords extends XotBaseListRecords
+{
+}
+>>>>>>> 24eb066 (Lint)

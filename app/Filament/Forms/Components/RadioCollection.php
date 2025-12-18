@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Filament\Forms\Components;
+=======
+namespace Modules\UI\Filament\Forms\Components;
+>>>>>>> 24eb066 (Lint)
 
 use Filament\Forms\Components\Field;
 use Illuminate\Support\Collection;
@@ -62,6 +66,7 @@ final class RadioCollection extends Field
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
@@ -72,15 +77,20 @@ final class RadioCollection extends Field
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
 
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> 24eb066 (Lint)
         return collect([]);
     }
 

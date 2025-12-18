@@ -3,6 +3,7 @@
     "alias": "ui",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "Sistema di componenti UI riutilizzabili e design system per interfacce utente coerenti",
     "keywords": ["ui", "components", "design-system", "frontend", "tailwind"],
 =======
@@ -13,6 +14,10 @@
     "description": "Sistema di componenti UI riutilizzabili e design system per interfacce utente coerenti",
     "keywords": ["ui", "components", "design-system", "frontend", "tailwind"],
 >>>>>>> a8fbb3e (.)
+=======
+    "description": "Sistema di componenti UI riutilizzabili e design system per interfacce utente coerenti",
+    "keywords": ["ui", "components", "design-system", "frontend", "tailwind"],
+>>>>>>> 24eb066 (Lint)
     "priority": 0,
     "providers": [
         "Modules\\UI\\Providers\\UIServiceProvider",

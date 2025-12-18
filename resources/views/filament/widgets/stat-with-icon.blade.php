@@ -21,11 +21,14 @@ declare(strict_types=1);
         </div>
     </x-filament::section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </x-filament-widgets::widget>
 =======
 <<<<<<< HEAD
 </x-filament-widgets::widget>
 =======
+=======
+>>>>>>> 24eb066 (Lint)
 </x-filament-widgets::widget>
 </x-filament-widgets::widget>
 </x-filament-widgets::widget>
@@ -65,5 +68,8 @@ declare(strict_types=1);
     </x-filament-widgets::widget>
 
 --}}
+<<<<<<< HEAD
 >>>>>>> 9567487 (.)
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> 24eb066 (Lint)

@@ -7,12 +7,15 @@ namespace Modules\UI\Filament\Widgets;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
 
 use Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
 use Filament\Schemas\Components\Grid;
@@ -46,6 +49,7 @@ class UserCalendarWidget extends FullCalendarWidget
         $action=$this->getActionName(__FUNCTION__);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -53,6 +57,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
 use App\Filament\Resources\EventResource;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Grid;
@@ -87,6 +93,7 @@ class UserCalendarWidget extends FullCalendarWidget
         $action = $this->getActionName(__FUNCTION__);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,6 +107,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
 
 use Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
 use Filament\Schemas\Components\Grid;
@@ -133,6 +142,7 @@ class UserCalendarWidget extends FullCalendarWidget
         $action=$this->getActionName(__FUNCTION__);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -146,6 +156,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
         return app($action)->execute($fetchInfo);
     }
 
@@ -154,12 +166,15 @@ class UserCalendarWidget extends FullCalendarWidget
         $action = $this->getActionName(__FUNCTION__);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
         
         if (class_exists($action)) {
             return app($action)->execute();
@@ -197,6 +212,7 @@ class UserCalendarWidget extends FullCalendarWidget
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -204,6 +220,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
 
         if (class_exists($action)) {
             return app($action)->execute();
@@ -241,6 +259,7 @@ class UserCalendarWidget extends FullCalendarWidget
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -254,6 +273,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
         
         if (class_exists($action)) {
             return app($action)->execute();
@@ -291,6 +312,7 @@ class UserCalendarWidget extends FullCalendarWidget
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 }
@@ -308,3 +330,9 @@ class UserCalendarWidget extends FullCalendarWidget
 }
 >>>>>>> b55470f (.)
 >>>>>>> 161e28f (Lint)
+=======
+}
+}
+}
+}
+>>>>>>> 24eb066 (Lint)

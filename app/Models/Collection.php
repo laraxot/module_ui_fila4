@@ -22,10 +22,15 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|Collection newQuery()
  * @method static Builder<static>|Collection query()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
  * @property ProfileContract|null $deleter
 >>>>>>> a8fbb3e (.)
+=======
+ *
+ * @property ProfileContract|null $deleter
+>>>>>>> 24eb066 (Lint)
  *
  * @mixin \Eloquent
  */

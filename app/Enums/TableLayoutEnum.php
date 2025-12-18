@@ -75,6 +75,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this === self::GRID;
 =======
         return self::GRID === $this;
@@ -82,10 +83,14 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 =======
         return self::GRID === $this;
 >>>>>>> a8fbb3e (.)
+=======
+        return self::GRID === $this;
+>>>>>>> 24eb066 (Lint)
     }
 
     public function isListLayout(): bool
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         return $this === self::LIST;
@@ -95,6 +100,9 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 =======
         return self::LIST === $this;
 >>>>>>> a8fbb3e (.)
+=======
+        return self::LIST === $this;
+>>>>>>> 24eb066 (Lint)
     }
 
     /**
@@ -126,6 +134,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
      *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<Column|ColumnGroup|Component>  $listColumns  Columns for list layout
      * @param  array<Column|ColumnGroup|Component>  $gridColumns  Columns for grid layout
 =======
@@ -134,12 +143,17 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
      *
 >>>>>>> 161e28f (Lint)
 =======
+=======
+>>>>>>> 24eb066 (Lint)
      * @param array<Column|ColumnGroup|Component> $listColumns Columns for list layout
      * @param array<Column|ColumnGroup|Component> $gridColumns Columns for grid layout
      * @param array<Column|ColumnGroup|Component> $listColumns Columns for list layout
      * @param array<Column|ColumnGroup|Component> $gridColumns Columns for grid layout
      *
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
      * @return array<Column|ColumnGroup|Component>
      */
     public function getTableColumns(array $listColumns, array $gridColumns): array

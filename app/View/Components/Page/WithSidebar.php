@@ -17,6 +17,7 @@ final class WithSidebar extends Component
         public string $tpl = '',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
@@ -26,6 +27,10 @@ final class WithSidebar extends Component
     ) {
     }
 >>>>>>> a8fbb3e (.)
+=======
+    ) {
+    }
+>>>>>>> 24eb066 (Lint)
 
     public function render(): Renderable
     {

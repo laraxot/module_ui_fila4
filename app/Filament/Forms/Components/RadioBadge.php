@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Filament\Forms\Components;
+=======
+namespace Modules\UI\Filament\Forms\Components;
+>>>>>>> 24eb066 (Lint)
 
 use BackedEnum;
 use Filament\Forms\Components\Radio;
@@ -59,6 +63,7 @@ class RadioBadge extends Radio
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getIconForOption(string $value): string|null
 =======
     public function getIconForOption(string $value): ?string
@@ -66,6 +71,9 @@ class RadioBadge extends Radio
 =======
     public function getIconForOption(string $value): ?string
 >>>>>>> a8fbb3e (.)
+=======
+    public function getIconForOption(string $value): ?string
+>>>>>>> 24eb066 (Lint)
     {
         $icon = $this->getEnumValue($value)?->getIcon();
 

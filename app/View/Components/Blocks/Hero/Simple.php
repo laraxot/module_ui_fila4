@@ -14,6 +14,7 @@ class Simple extends ViewComponent
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct() {}
 =======
     public function __construct()
@@ -25,6 +26,11 @@ class Simple extends ViewComponent
     {
     }
 >>>>>>> a8fbb3e (.)
+=======
+    public function __construct()
+    {
+    }
+>>>>>>> 24eb066 (Lint)
 
     public function render(): View
     {

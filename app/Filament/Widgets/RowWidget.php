@@ -33,9 +33,12 @@ abstract class RowWidget extends XotBaseWidget
     {
         return 3;
     }
+<<<<<<< HEAD
 
     public function getFormSchema(): array
     {
         return [];
     }
+=======
+>>>>>>> 24eb066 (Lint)
 }

@@ -66,6 +66,7 @@ final class ImagesGallery
             ])
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->columns($context === 'form' ? 2 : 1);
 =======
             ->columns('form' === $context ? 2 : 1);
@@ -73,6 +74,9 @@ final class ImagesGallery
 =======
             ->columns('form' === $context ? 2 : 1);
 >>>>>>> a8fbb3e (.)
+=======
+            ->columns('form' === $context ? 2 : 1);
+>>>>>>> 24eb066 (Lint)
     }
 
     public static function getRatios(): array

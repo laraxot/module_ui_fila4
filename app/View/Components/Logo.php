@@ -22,6 +22,7 @@ final class Logo extends Component
         public string $tpl = '',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
@@ -31,6 +32,10 @@ final class Logo extends Component
     ) {
     }
 >>>>>>> a8fbb3e (.)
+=======
+    ) {
+    }
+>>>>>>> 24eb066 (Lint)
 
     public function render(): View
     {

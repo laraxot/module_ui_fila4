@@ -4,6 +4,7 @@
 # Modulo UI Laraxot - Template standardizzato
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Ultimo aggiornamento: 2025-01-06
 # Ultimo aggiornamento: 2025-01-31
 # Ultimo aggiornamento: 2025-01-06
@@ -30,6 +31,9 @@
 =======
 # Ultimo aggiornamento: 2025-01-31
 >>>>>>> a8fbb3e (.)
+=======
+# Ultimo aggiornamento: 2025-01-31
+>>>>>>> 24eb066 (Lint)
 # ==============================================
 
 
@@ -38,6 +42,7 @@
 # ==============================================
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +71,8 @@ npm-debug.log
 vendor/
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
 /vendor/
 /node_modules/
 /docs/vendor/
@@ -74,6 +81,7 @@ composer.lock
 package-lock.json
 yarn.lock
 yarn-error.log
+<<<<<<< HEAD
 <<<<<<< HEAD
 composer.lock
 <<<<<<< HEAD
@@ -100,6 +108,10 @@ composer.lock
 npm-debug.log
 
 >>>>>>> a8fbb3e (.)
+=======
+npm-debug.log
+
+>>>>>>> 24eb066 (Lint)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -123,6 +135,7 @@ cache/
 *.stackdump
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.exe
 *.exe
 =======
@@ -146,6 +159,8 @@ cache/
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
 *:Zone.Identifier
 v8-compile-cache-*
 
@@ -161,6 +176,7 @@ error_log
 npm-debug.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 npm-debug.log
 npm-debug.log
 =======
@@ -184,6 +200,8 @@ npm-debug.log
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
 yarn-error.log*
 lerna-debug.log*
 
@@ -267,6 +285,7 @@ resources/lang/
 
 # ==============================================
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -339,6 +358,16 @@ database_old
 =======
 
 >>>>>>> a8fbb3e (.)
+=======
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+database/Migrations_old/
+database/Seeders_old/
+database/Factories_old/
+database_old/
+
+>>>>>>> 24eb066 (Lint)
 
 # ==============================================
 # MODULE SPECIFIC - UI

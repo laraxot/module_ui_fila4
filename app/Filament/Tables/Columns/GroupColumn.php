@@ -35,6 +35,7 @@ class GroupColumn extends Column
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
@@ -45,6 +46,9 @@ class GroupColumn extends Column
 =======
 
 >>>>>>> a8fbb3e (.)
+=======
+
+>>>>>>> 24eb066 (Lint)
         /** @var array<int|string, Column> $filtered */
         /** @var array<int, Column> $filteredValues */
         $filteredValues = array_values($filtered);

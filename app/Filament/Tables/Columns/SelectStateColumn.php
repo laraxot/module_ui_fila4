@@ -21,6 +21,7 @@ class SelectStateColumn extends SelectColumn
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($state === null) {
 =======
             if (null === $state) {
@@ -31,11 +32,15 @@ class SelectStateColumn extends SelectColumn
 =======
             if (null === $state) {
 >>>>>>> a8fbb3e (.)
+=======
+            if (null === $state) {
+>>>>>>> 24eb066 (Lint)
                 // Record implements HasStatesContract which provides getDefaultStateFor()
                 $defaultStates = $record->getDefaultStateFor($name);
                 $states = Arr::wrap($defaultStates);
                 /** @var array<int|string, mixed> $states */
                 $states = is_array($states) ? $states : [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +57,8 @@ class SelectStateColumn extends SelectColumn
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
                 $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
                 $statesKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($states));
                 $combined = array_combine($statesKeys, $statesValues);
@@ -63,11 +70,14 @@ class SelectStateColumn extends SelectColumn
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
             $states = [];
             try {
                 if (is_object($state) && method_exists($state, 'transitionableStates')) {
@@ -76,6 +86,7 @@ class SelectStateColumn extends SelectColumn
                         $states = is_array($transitionableStates) ? $transitionableStates : iterator_to_array($transitionableStates);
                     }
                 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,11 +100,15 @@ class SelectStateColumn extends SelectColumn
 =======
             } catch (\Exception $e) {
 >>>>>>> a8fbb3e (.)
+=======
+            } catch (\Exception $e) {
+>>>>>>> 24eb066 (Lint)
                 // Record implements HasStatesContract which provides getStatesFor()
                 $fetchedStates = $record->getStatesFor($name);
                 $statesArray = $fetchedStates->toArray();
                 $states = $statesArray;
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,6 +234,8 @@ class SelectStateColumn extends SelectColumn
 =======
 >>>>>>> 161e28f (Lint)
 =======
+=======
+>>>>>>> 24eb066 (Lint)
 
             /** @var array<int|string, mixed> $states */
             if (is_object($state)) {
@@ -285,7 +302,10 @@ class SelectStateColumn extends SelectColumn
                 return;
             }
 
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
+=======
+>>>>>>> 24eb066 (Lint)
             /** @var State $stateObj */
             $stateObj = $record->state;
             $stateObj->transitionTo($state, $message);

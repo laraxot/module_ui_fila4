@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Widgets;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
 =======
 <<<<<<< HEAD
@@ -39,6 +40,9 @@ use Filament\Forms\Form;
 >>>>>>> b55470f (.)
 >>>>>>> 760ce09 (.)
 >>>>>>> 161e28f (Lint)
+=======
+use Filament\Schemas\Components\Component;
+>>>>>>> 24eb066 (Lint)
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;

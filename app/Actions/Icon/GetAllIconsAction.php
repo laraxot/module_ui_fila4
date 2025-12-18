@@ -57,9 +57,13 @@ class GetAllIconsAction
             if (! is_iterable($paths)) {
                 $mappedIcons[$name] = $set;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a8fbb3e (.)
+=======
+
+>>>>>>> 24eb066 (Lint)
                 continue;
             }
 
