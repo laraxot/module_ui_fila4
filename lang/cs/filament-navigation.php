@@ -13,24 +13,10 @@ return [
         'created_at' => 'Vytvořeno',
         'updated_at' => 'Upraveno',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'select-options' => [
         'same-tab' => 'Ve stejném okně',
         'new-tab' => 'V novém okně',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'items' => [
         'empty' => 'Žádné položky',
         'add-item' => 'Přidat položku',
@@ -41,13 +27,6 @@ return [
         'dedent' => 'Oddělit',
         'remove' => 'Odstranit',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'items-modal' => [
         'title' => 'Nová položka',
         'label' => 'Název',
