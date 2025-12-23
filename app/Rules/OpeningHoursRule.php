@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 
 // app/Rules/OpeningHoursRule.php
 
@@ -161,6 +164,7 @@ class OpeningHoursRule implements ValidationRule
     }
         */
 }
+<<<<<<< HEAD
 =======
 // app/Rules/OpeningHoursRule.php
 namespace Modules\UI\Rules;
@@ -205,3 +209,5 @@ class OpeningHoursRule implements ValidationRule
     }
 }
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)

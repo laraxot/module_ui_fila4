@@ -71,10 +71,14 @@ return [
 ```bash
 # Cerca tutti i ->label() nel modulo UI
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 grep -r "->label(" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
 
 # Cerca in tutti i file Filament
 find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/ -name "*.php" -exec grep -l "->label(" {} \;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 grep -r "->label(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/
@@ -90,6 +94,12 @@ find /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/ -name "*.php"
 =======
 >>>>>>> 727968c (.)
 >>>>>>> a63dc48 (.)
+=======
+=======
+>>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
+>>>>>>> 499f479 (.)
 grep -r "->label(" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/
 
 # Cerca in tutti i file Filament
