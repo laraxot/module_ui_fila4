@@ -103,14 +103,20 @@ return [
 ### Pattern da Cercare
 ```bash
 # Cercare enum con metodi di traduzione hardcoded
+<<<<<<< HEAD
 grep -r "return match" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
+<<<<<<< HEAD
 <<<<<<< HEAD
 grep -r "return match" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
 grep -r "return match" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
 =======
+=======
+=======
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)
 grep -r "return match" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
 >>>>>>> 7eb1087 (.)

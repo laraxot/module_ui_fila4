@@ -428,7 +428,14 @@ wire:model.live="{{ $getStatePath() }}"
 **Ultimo aggiornamento ontologico**: Dicembre 2024  
 **Versione dell'esistenza**: 1.0.0  
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+ 
 =======
 **Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+ 
 >>>>>>> 7eb1087 (.)
+=======
+**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+ 
+=======
+**Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+ 
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)

@@ -228,6 +228,7 @@ FileUpload::make('logo_header') // Metatag
 ```php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // BaseModel SaluteOra - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
 >>>>>>> 1f9515b (.)
 =======
@@ -236,6 +237,12 @@ FileUpload::make('logo_header') // Metatag
 =======
 // BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
 >>>>>>> 7eb1087 (.)
+=======
+// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+=======
+// BaseModel SaluteOra - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)
 abstract class BaseModel extends Model implements HasMedia
 {
     use InteractsWithMedia;
@@ -537,11 +544,17 @@ class SpatieImageUpload
 ```php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Modules/SaluteOra/app/Filament/Resources/PatientResource.php - getFormSchema()
 
 >>>>>>> 1f9515b (.)
 =======
+=======
+>>>>>>> a63dc48 (.)
 // Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
+=======
+// Modules/SaluteOra/app/Filament/Resources/PatientResource.php - getFormSchema()
+>>>>>>> 727968c (.)
 
 >>>>>>> 8ee2a17 (.)
 =======
@@ -565,8 +578,10 @@ class SpatieImageUpload
 >>>>>>> 7eb1087 (.)
 // DOPO (SpatieMediaLibraryFileUpload)  
 'health_card' => \Modules\UI\Filament\Components\SpatieDocumentUpload::forHealthCard()
+<<<<<<< HEAD
     ->label(trans('<nome progetto>::patients.fields.health_card.label'))
     ->helperText(trans('<nome progetto>::patients.fields.health_card.help')),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     ->label(trans('saluteora::patients.fields.health_card.label'))
@@ -585,6 +600,12 @@ FileUpload::make('image'),
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+=======
+    ->label(trans('saluteora::patients.fields.health_card.label'))
+    ->helperText(trans('saluteora::patients.fields.health_card.help')),
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)
 ```
 
 #### 3.2 UI Blocks - Standardizzazione Architettura
@@ -727,6 +748,7 @@ public function registerMediaConversions(Media $media = null): void
 ```php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Modules/SaluteOra/app/Models/User.php - Aggiunta registerMediaCollections
 =======
 // Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
@@ -734,6 +756,12 @@ public function registerMediaConversions(Media $media = null): void
 =======
 // Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
 >>>>>>> 7eb1087 (.)
+=======
+// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
+=======
+// Modules/SaluteOra/app/Models/User.php - Aggiunta registerMediaCollections
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)
 
 public function registerMediaCollections(): void
 {
@@ -823,11 +851,17 @@ public function registerMediaConversions(Media $media = null): void
 ```php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Modules/SaluteOra/app/Models/User.php - Accessors di transizione
 
 >>>>>>> 1f9515b (.)
 =======
+=======
+>>>>>>> a63dc48 (.)
 // Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
+=======
+// Modules/SaluteOra/app/Models/User.php - Accessors di transizione
+>>>>>>> 727968c (.)
 
 >>>>>>> 8ee2a17 (.)
 =======
@@ -886,6 +920,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
 =======
 >>>>>>> 1f9515b (.)
@@ -896,12 +931,19 @@ public function getCertificationsAttribute(): array
 =======
             <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
 >>>>>>> 7eb1087 (.)
+=======
+            <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
+=======
+            <h4>{{ __('saluteora::patients.health_card') }}</h4>
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)
             <img src="{{ $patient->getFirstMediaUrl('tessere_sanitarie', 'thumbnail') }}" 
                  alt="Tessera Sanitaria"
                  class="w-full h-32 object-cover rounded">
             <a href="{{ $patient->getFirstMediaUrl('tessere_sanitarie') }}" 
                target="_blank" 
                class="text-blue-600 text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -924,18 +966,30 @@ public function getCertificationsAttribute(): array
 =======
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> a63dc48 (.)
                 {{ __('<nome progetto>::common.view_document') }}
+=======
+                {{ __('saluteora::common.view_document') }}
+>>>>>>> 727968c (.)
             </a>
         </div>
     @endif
     
     @if($patient->hasMedia('certificazioni_isee'))
         <div class="document-preview">
+<<<<<<< HEAD
             <h4>{{ __('<nome progetto>::patients.isee_certificate') }}</h4>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+=======
+            <h4>{{ __('saluteora::patients.isee_certificate') }}</h4>
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)
             <div class="bg-red-100 h-32 flex items-center justify-center rounded">
                 <i class="fas fa-file-pdf text-red-600 text-3xl"></i>
             </div>
@@ -953,12 +1007,19 @@ public function getCertificationsAttribute(): array
                 {{ __('saluteora::common.download_pdf') }}
 =======
                class="text-blue-600 text-sm">
+<<<<<<< HEAD
                 {{ __('<nome progetto>::common.download_pdf') }}
+<<<<<<< HEAD
 >>>>>>> 8ee2a17 (.)
 =======
                class="text-blue-600 text-sm">
                 {{ __('<nome progetto>::common.download_pdf') }}
 >>>>>>> 7eb1087 (.)
+=======
+=======
+                {{ __('saluteora::common.download_pdf') }}
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)
             </a>
         </div>
     @endif
@@ -1201,13 +1262,17 @@ public function downloadDocument(Media $media): Response
 
 ### **Documentazione Correlata**
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> a63dc48 (.)
 - [Spatie Media Library Official Docs](https://spatie.be/project_docs/laravel-medialibrary)
 - [Filament Plugin Documentation](https://filamentphp.com/plugins/filament-spatie-media-library)
 - [UI Components Docs](./filament-components-rules.md)
 - [Modulo Generico Models Architecture](../<nome modulo>/docs/models-architecture.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1236,14 +1301,21 @@ public function downloadDocument(Media $media): Response
 ## 🔗 Collegamenti e Riferimenti
 
 ### **Documentazione Correlata**
+=======
+=======
+>>>>>>> a63dc48 (.)
 - [Spatie Media Library Official Docs](https://spatie.be/docs/laravel-medialibrary)
 - [Filament Plugin Documentation](https://filamentphp.com/plugins/filament-spatie-media-library)
 - [UI Components Docs](./filament-components-rules.md)
 - [SaluteOra Models Architecture](../SaluteOra/docs/models-architecture.md)
+<<<<<<< HEAD
 =======
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)
 
 ### **Repository e Risorse**
 - [GitHub Filament Plugin](https://github.com/filamentphp/spatie-laravel-media-library-plugin)
@@ -1336,6 +1408,7 @@ public function downloadDocument(Media $media): Response
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 4.x* 
 >>>>>>> 1f9515b (.)
 =======
@@ -1351,3 +1424,9 @@ public function downloadDocument(Media $media): Response
 =======
 *Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
 >>>>>>> 7eb1087 (.)
+=======
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
+=======
+*Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 3.x* 
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)

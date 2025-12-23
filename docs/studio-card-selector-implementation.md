@@ -274,6 +274,7 @@ private function getStudiosForLocation(Get $get): Collection
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     return \Modules\SaluteOra\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
 >>>>>>> 1f9515b (.)
 =======
@@ -282,6 +283,12 @@ private function getStudiosForLocation(Get $get): Collection
 =======
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
 >>>>>>> 7eb1087 (.)
+=======
+    return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
+=======
+    return \Modules\SaluteOra\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)
         $q->where('postal_code', $cap)
           ->where('administrative_area_level_3', $province)
           ->where('administrative_area_level_2', $region);
@@ -419,6 +426,7 @@ return [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Modulo SaluteOra
 - [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
 =======
@@ -429,6 +437,14 @@ return [
 ### Modulo Generico
 - [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
 >>>>>>> 7eb1087 (.)
+=======
+### Modulo Generico
+- [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
+=======
+### Modulo SaluteOra
+- [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
+>>>>>>> 727968c (.)
+>>>>>>> a63dc48 (.)
 
 ---
 

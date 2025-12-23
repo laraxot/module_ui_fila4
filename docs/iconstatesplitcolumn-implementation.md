@@ -126,13 +126,20 @@ use Modules\SaluteOra\Models\Appointment;
 use Modules\UI\Filament\Tables\Columns\IconStateSplitColumn;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\SaluteOra\States\Appointment\AppointmentState;
 use Modules\SaluteOra\Models\Appointment;
 
 >>>>>>> 1f9515b (.)
 =======
+=======
+>>>>>>> a63dc48 (.)
 use Modules\<nome modulo>\States\Appointment\AppointmentState;
 use Modules\<nome modulo>\Models\Appointment;
+=======
+use Modules\SaluteOra\States\Appointment\AppointmentState;
+use Modules\SaluteOra\Models\Appointment;
+>>>>>>> 727968c (.)
 
 >>>>>>> 8ee2a17 (.)
 =======
