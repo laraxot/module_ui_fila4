@@ -50,6 +50,11 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|Category whereTitle($value)
  * @method static Builder<static>|Category whereUpdatedAt($value)
  * @method static Builder<static>|Category whereUpdatedBy($value)
+<<<<<<< HEAD
+=======
+ *
+ * @property ProfileContract|null $deleter
+>>>>>>> a8fbb3e (.)
  *
  * @mixin \Eloquent
  */

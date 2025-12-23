@@ -17,9 +17,14 @@ final class UserData extends Data
         public array $permissions,
         public array $settings,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
     }
 >>>>>>> 161e28f (Lint)
+=======
+    ) {
+    }
+>>>>>>> a8fbb3e (.)
 }

@@ -27,6 +27,7 @@ class TableLayoutToggleHeaderAction extends Action
             // ->icon($this->listIcon)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             /**
 =======
             /*
@@ -34,6 +35,13 @@ class TableLayoutToggleHeaderAction extends Action
 =======
             /*
 >>>>>>> 161e28f (Lint)
+=======
+            /*
+             * /*
+             * /*
+             * /*
+             * /*
+>>>>>>> a8fbb3e (.)
              * @param object{layoutView?: string|null} $livewire
              */
             ->icon(function (object $livewire): string {
@@ -49,6 +57,7 @@ class TableLayoutToggleHeaderAction extends Action
             })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             /**
 =======
             /*
@@ -56,6 +65,13 @@ class TableLayoutToggleHeaderAction extends Action
 =======
             /*
 >>>>>>> 161e28f (Lint)
+=======
+            /*
+             * /*
+             * /*
+             * /*
+             * /*
+>>>>>>> a8fbb3e (.)
              * @param object{layoutView?: string|null} $livewire
              */
             ->action(function (object $livewire): void {

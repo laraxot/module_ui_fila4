@@ -21,6 +21,11 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|Collection newModelQuery()
  * @method static Builder<static>|Collection newQuery()
  * @method static Builder<static>|Collection query()
+<<<<<<< HEAD
+=======
+ *
+ * @property ProfileContract|null $deleter
+>>>>>>> a8fbb3e (.)
  *
  * @mixin \Eloquent
  */

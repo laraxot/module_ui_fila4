@@ -21,6 +21,11 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|FieldOption newModelQuery()
  * @method static Builder<static>|FieldOption newQuery()
  * @method static Builder<static>|FieldOption query()
+<<<<<<< HEAD
+=======
+ *
+ * @property ProfileContract|null $deleter
+>>>>>>> a8fbb3e (.)
  *
  * @mixin \Eloquent
  */

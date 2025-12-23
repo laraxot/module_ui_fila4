@@ -19,6 +19,7 @@ class GetUserDataAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$user instanceof User) {
 =======
         if (! $user instanceof User) {
@@ -26,6 +27,9 @@ class GetUserDataAction
 =======
         if (! $user instanceof User) {
 >>>>>>> 161e28f (Lint)
+=======
+        if (! $user instanceof User) {
+>>>>>>> a8fbb3e (.)
             return null;
         }
 
@@ -35,6 +39,7 @@ class GetUserDataAction
             $avatarValue = $user->profile_photo_path;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif ($user->relationLoaded('profile') && $user->profile !== null) {
 =======
         } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
@@ -42,6 +47,9 @@ class GetUserDataAction
 =======
         } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
 >>>>>>> 161e28f (Lint)
+=======
+        } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
+>>>>>>> a8fbb3e (.)
             $profile = $user->profile;
             if (is_object($profile) && method_exists($profile, 'getAvatarUrl')) {
                 $avatarValue = $profile->getAvatarUrl();
@@ -60,6 +68,7 @@ class GetUserDataAction
         $settingsArray = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($user->relationLoaded('profile') && $user->profile !== null) {
 =======
         if ($user->relationLoaded('profile') && null !== $user->profile) {
@@ -67,6 +76,9 @@ class GetUserDataAction
 =======
         if ($user->relationLoaded('profile') && null !== $user->profile) {
 >>>>>>> 161e28f (Lint)
+=======
+        if ($user->relationLoaded('profile') && null !== $user->profile) {
+>>>>>>> a8fbb3e (.)
             $profile = $user->profile;
             if (is_object($profile) && isset($profile->extra)) {
                 $extra = $profile->extra;
@@ -92,6 +104,7 @@ class GetUserDataAction
             email: (string) ($user->email ?? ''),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             avatar: $avatarValue !== null ? (string) $avatarValue : null,
             role: $roleValue !== null ? (string) $roleValue : null,
 =======
@@ -102,6 +115,10 @@ class GetUserDataAction
             avatar: null !== $avatarValue ? (string) $avatarValue : null,
             role: null !== $roleValue ? (string) $roleValue : null,
 >>>>>>> 161e28f (Lint)
+=======
+            avatar: null !== $avatarValue ? (string) $avatarValue : null,
+            role: null !== $roleValue ? (string) $roleValue : null,
+>>>>>>> a8fbb3e (.)
             permissions: $permissionsArray,
             settings: $settingsArray,
         );

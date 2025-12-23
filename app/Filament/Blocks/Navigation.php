@@ -34,7 +34,7 @@ final class Navigation extends XotBaseBlock
     public function getFormSchema(): array
     {
         return [
-            Repeater::make('items')
+            'items' => Repeater::make('items')
                 ->label(self::trans('blocks.navigation.fields.items.label'))
                 ->schema([
                     TextInput::make('text')->label(self::trans('blocks.navigation.fields.text.label')),

@@ -5,9 +5,13 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Blocks;
 
 use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
 use \Filament\Forms\Forms\Components\RadioImage;
+=======
+>>>>>>> a8fbb3e (.)
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 
 final class Slider
@@ -28,7 +32,7 @@ final class Slider
                 //     ->options($options),
                 // ->afterStateHydrated(static fn ($state, $set) => $state || $set('level', 'h2')),
 
-                RadioImage::make('view')->options($options),
+                Radio::make('view')->options($options),
             ])
             ->columns(1);
     }
@@ -36,7 +40,7 @@ final class Slider
     public static function getFormSchema(): array
     {
         return [
-            Select::make('layout')
+            'layout' => Select::make('layout')
                 ->options([
                     'default' => 'Default',
                     'fullscreen' => 'Fullscreen',

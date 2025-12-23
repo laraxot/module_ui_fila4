@@ -5,9 +5,15 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Tables\Columns;
 
 use Filament\Actions\Action;
+<<<<<<< HEAD
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Tables\Columns\ColumnGroup;
 use Filament\Tables\Columns\IconColumn;
+=======
+use Filament\Tables\Columns\ColumnGroup;
+use Filament\Tables\Columns\IconColumn;
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> a8fbb3e (.)
 use Modules\Xot\Contracts\StateContract;
 use Webmozart\Assert\Assert;
 
@@ -29,6 +35,7 @@ class IconStateGroupColumn extends ColumnGroup
         $statesRaw = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
@@ -36,6 +43,9 @@ class IconStateGroupColumn extends ColumnGroup
 =======
 
 >>>>>>> 161e28f (Lint)
+=======
+
+>>>>>>> a8fbb3e (.)
         if (class_exists($stateClass) && method_exists($stateClass, 'getStateMapping')) {
             $stateMapping = $stateClass::getStateMapping();
             if (is_object($stateMapping) && method_exists($stateMapping, 'toArray')) {
@@ -45,6 +55,7 @@ class IconStateGroupColumn extends ColumnGroup
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
@@ -52,11 +63,15 @@ class IconStateGroupColumn extends ColumnGroup
 =======
 
 >>>>>>> 161e28f (Lint)
+=======
+
+>>>>>>> a8fbb3e (.)
         /** @var array<string, string> $states */
         $states = $statesRaw;
         $columns = [];
 
         foreach ($states as $stateKey => $stateClassItem) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             if (!is_string($stateClassItem) || !class_exists($stateClassItem)) {
@@ -76,6 +91,8 @@ class IconStateGroupColumn extends ColumnGroup
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> a8fbb3e (.)
             if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
                 continue;
             }
@@ -91,9 +108,12 @@ class IconStateGroupColumn extends ColumnGroup
 
             $column = IconColumn::make($stateKey.'-icon')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> a8fbb3e (.)
                 ->icon($stateInstance->icon(...))
                 ->color($stateInstance->color(...))
                 ->tooltip($stateInstance->label(...))
@@ -103,6 +123,7 @@ class IconStateGroupColumn extends ColumnGroup
                 ])
                 ->extraCellAttributes(['class' => 'px-1 py-1'])
                 ->label('')
+<<<<<<< HEAD
                 ->default(function (mixed $record, Set $_set) use ($stateClassItem, $stateKey) {
                     $res = false;
                     if (is_object($record) && isset($record->state) && is_object($record->state) && method_exists($record->state, 'canTransitionTo')) {
@@ -124,11 +145,24 @@ class IconStateGroupColumn extends ColumnGroup
                     $this->data[$visibleKey] = $res;
                     if (! $res) {
 >>>>>>> 161e28f (Lint)
+=======
+                ->default(function (Model $record) use ($stateClassItem, $stateKey): ?bool {
+                    if (isset($record->state) && is_object($record->state) && method_exists($record->state, 'canTransitionTo')) {
+                        $canTransition = $record->state->canTransitionTo($stateClassItem);
+                        $res = is_bool($canTransition) ? $canTransition : false;
+                    } else {
+                        $res = false;
+                    }
+                    $visibleKey = $stateKey.'-visible';
+                    $this->data[$visibleKey] = $res;
+                    if (! $res) {
+>>>>>>> a8fbb3e (.)
                         return null;
                     }
 
                     return true;
                 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             $column->action(Action::make($stateKey . '-action')
@@ -186,6 +220,36 @@ class IconStateGroupColumn extends ColumnGroup
 >>>>>>> 161e28f (Lint)
             $visibleValue = $this->data[$visibleKey] ?? false;
             $column->visible(is_bool($visibleValue) ? $visibleValue : false);
+=======
+
+            $column->action(
+                Action::make($stateKey.'-action')
+                    ->requiresConfirmation()
+                    ->modalHeading(function (Model $record) use ($stateInstance) {
+                        // StateContract provides modalHeading()
+                        return $stateInstance->modalHeading();
+                    })
+                    ->modalDescription(function (Model $record) use ($stateInstance) {
+                        // StateContract provides modalDescription()
+                        return $stateInstance->modalDescription();
+                    })
+                    ->schema(function (Model $record) use ($stateInstance) {
+                        // StateContract provides modalFormSchema()
+                        return $stateInstance->modalFormSchema();
+                    })
+                    ->fillForm($stateInstance->modalFillFormByRecord(...))
+                    ->action(function (Model $record, array $data) use ($stateInstance): void {
+                        // Ensure data is treated as array<string, mixed> for PHPStan and StateContract
+                        /** @var array<string, mixed> $typedData */
+                        $typedData = $data;
+
+                        $stateInstance->modalActionByRecord($record, $typedData);
+                    })
+            );
+
+            $visibleValue = $this->data[$visibleKey] ?? false;
+            $column->visible($visibleValue);
+>>>>>>> a8fbb3e (.)
             $columns[] = $column;
         }
 

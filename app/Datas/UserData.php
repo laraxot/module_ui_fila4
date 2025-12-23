@@ -6,7 +6,7 @@ namespace Modules\UI\Datas;
 
 use Spatie\LaravelData\Data;
 
-final class UserData extends Data
+class UserData extends Data
 {
     public function __construct(
         public int $id,
@@ -17,9 +17,14 @@ final class UserData extends Data
         public array $permissions,
         public array $settings,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
     }
 >>>>>>> 161e28f (Lint)
+=======
+    ) {
+    }
+>>>>>>> a8fbb3e (.)
 }

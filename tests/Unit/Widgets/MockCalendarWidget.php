@@ -21,8 +21,12 @@ class MockCalendarWidget extends BaseCalendarWidget
 =======
      * @param array<string, mixed> $fetchInfo
      *
+<<<<<<< HEAD
 >>>>>>> 161e28f (Lint)
      * @return array<int, array<string, string|int>>
+=======
+     * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
+>>>>>>> a8fbb3e (.)
      */
     public function fetchEvents(array $fetchInfo): array
     {

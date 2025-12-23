@@ -26,6 +26,10 @@ use Webmozart\Assert\Assert;
 class IconStateSplitColumn extends Column
 {
     protected string $view = 'ui::filament.tables.columns.icon-state-split';
+<<<<<<< HEAD
+=======
+
+>>>>>>> a8fbb3e (.)
     protected string $stateClass = '';
     protected string $modelClass = '';
 
@@ -61,10 +65,13 @@ class IconStateSplitColumn extends Column
         
 =======
 
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> a8fbb3e (.)
         /** @var array<string, string> $states */
         $states = $statesRaw;
         $record = $this->getRecord();
@@ -72,6 +79,7 @@ class IconStateSplitColumn extends Column
         $result = [];
         foreach ($states as $stateKey => $stateClassItem) {
             try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 if (!is_string($stateClassItem) || !class_exists($stateClassItem)) {
@@ -84,6 +92,8 @@ class IconStateSplitColumn extends Column
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> a8fbb3e (.)
                 if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
                     continue;
                 }
@@ -92,15 +102,19 @@ class IconStateSplitColumn extends Column
                 Assert::isInstanceOf($stateInstance, StateContract::class);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> a8fbb3e (.)
                 // StateContract provides icon(), label(), color()
                 $icon = $stateInstance->icon();
                 $label = $stateInstance->label();
                 $color = $stateInstance->color();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
 =======
 
@@ -108,12 +122,16 @@ class IconStateSplitColumn extends Column
 =======
 
 >>>>>>> 161e28f (Lint)
+=======
+
+>>>>>>> a8fbb3e (.)
                 // Type narrowing: questi metodi restituiscono string
                 $iconString = (string) $icon;
                 $labelString = (string) $label;
                 $colorString = (string) $color;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
                 // $stateKey è già string dalla chiave dell'array
                 
@@ -127,6 +145,11 @@ class IconStateSplitColumn extends Column
                 // $stateKey è già string dalla chiave dell'array
 
 >>>>>>> 161e28f (Lint)
+=======
+
+                // $stateKey è già string dalla chiave dell'array
+
+>>>>>>> a8fbb3e (.)
                 $result[$stateKey] = [
                     'class' => $stateInstance,
                     'icon' => $iconString,
@@ -145,6 +168,7 @@ class IconStateSplitColumn extends Column
 
     public function canTransitionTo(int|string $recordId, string $stateClass): bool
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         if (!class_exists($this->modelClass) || !method_exists($this->modelClass, 'find')) {
@@ -190,11 +214,32 @@ class IconStateSplitColumn extends Column
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+        if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
+            return false;
+        }
+
+        $recordRaw = $this->modelClass::find($recordId);
+
+        if (! $recordRaw || ! is_object($recordRaw)) {
+            return false;
+        }
+
+        /** @var Model $record */
+        $record = $recordRaw;
+
+        if (! isset($record->state) || ! is_object($record->state)) {
+            return false;
+        }
+
+        if (! ($record->state instanceof State)) {
+>>>>>>> a8fbb3e (.)
             return false;
         }
 
         /** @var State $state */
         $state = $record->state;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -203,6 +248,9 @@ class IconStateSplitColumn extends Column
 =======
 
 >>>>>>> 161e28f (Lint)
+=======
+
+>>>>>>> a8fbb3e (.)
         return $state->canTransitionTo($stateClass);
     }
 
@@ -249,6 +297,7 @@ class IconStateSplitColumn extends Column
         foreach ($states as $stateKey => $state) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!is_array($state) || !isset($state['class']) || !isset($state['icon']) || !isset($state['color']) || !isset($state['label'])) {
                 continue;
             }
@@ -264,10 +313,17 @@ class IconStateSplitColumn extends Column
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+            if (! is_array($state) || ! isset($state['class']) || ! isset($state['icon']) || ! isset($state['color']) || ! isset($state['label'])) {
+                continue;
+            }
+
+>>>>>>> a8fbb3e (.)
             $stateClass = $state['class'];
             $stateIcon = $state['icon'];
             $stateColor = $state['color'];
             $stateLabel = $state['label'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             
@@ -289,6 +345,8 @@ class IconStateSplitColumn extends Column
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> a8fbb3e (.)
 
             if (! is_object($stateClass) || ! ($stateClass instanceof StateContract)) {
                 continue;
@@ -306,13 +364,17 @@ class IconStateSplitColumn extends Column
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> a8fbb3e (.)
             // Type narrowing: questi sono già string dalla struttura array
             $iconString = (string) $stateIcon;
             $colorString = (string) $stateColor;
             $labelString = (string) $stateLabel;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             
@@ -322,6 +384,9 @@ class IconStateSplitColumn extends Column
 =======
 
 >>>>>>> 161e28f (Lint)
+=======
+
+>>>>>>> a8fbb3e (.)
             $actions["transition_to_{$stateKey}"] = Action::make(
                 "transition_to_{$stateKey}",
             )
@@ -356,6 +421,7 @@ class IconStateSplitColumn extends Column
         try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!class_exists($this->modelClass) || !method_exists($this->modelClass, 'find')) {
                 throw new Exception('Model class not found or invalid');
             }
@@ -367,6 +433,8 @@ class IconStateSplitColumn extends Column
 =======
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> a8fbb3e (.)
             if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
                 throw new \Exception('Model class not found or invalid');
             }
@@ -387,6 +455,7 @@ class IconStateSplitColumn extends Column
             if (! ($record->state instanceof State)) {
                 throw new \Exception('State is not a valid State instance');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
             }
 
@@ -401,6 +470,8 @@ class IconStateSplitColumn extends Column
                 throw new Exception('State is not a valid State instance');
 =======
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> a8fbb3e (.)
             }
 
             // Esegui la transizione

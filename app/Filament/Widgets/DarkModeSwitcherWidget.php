@@ -42,7 +42,6 @@ use Filament\Forms\Form;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
-use Override;
 
 final class DarkModeSwitcherWidget extends XotBaseWidget
 {
@@ -73,7 +72,7 @@ final class DarkModeSwitcherWidget extends XotBaseWidget
      *
      * @return array<int, Component>
      */
-    #[Override]
+    #[\Override]
     public function getFormSchema(): array
     {
         return [];

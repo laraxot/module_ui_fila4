@@ -21,11 +21,16 @@ final class Svg extends Component
     public function __construct(
         public string $tpl = '',
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
     }
 >>>>>>> 161e28f (Lint)
+=======
+    ) {
+    }
+>>>>>>> a8fbb3e (.)
 
     public function render(): View
     {

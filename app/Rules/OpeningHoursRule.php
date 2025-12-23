@@ -142,11 +142,17 @@ class OpeningHoursRule implements ValidationRule
         return null;
     }
 
+<<<<<<< HEAD
     /**
+=======
+    /*
+>>>>>>> a8fbb3e (.)
      * Verifica se l'orario è nel formato HH:MM valido.
      */
+    /*
     private function isValidTimeFormat(string $time): bool
     {
         return (bool) preg_match('/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/', $time);
     }
+        */
 }

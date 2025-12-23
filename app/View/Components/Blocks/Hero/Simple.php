@@ -13,12 +13,18 @@ class Simple extends ViewComponent
      * Create a new component instance.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct() {}
 =======
     public function __construct()
     {
     }
 >>>>>>> 161e28f (Lint)
+=======
+    public function __construct()
+    {
+    }
+>>>>>>> a8fbb3e (.)
 
     public function render(): View
     {

@@ -6,11 +6,15 @@ use Illuminate\View\Component;
 
 test('ui components can be rendered', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $component = new class() extends Component
     {
 =======
     $component = new class extends Component {
 >>>>>>> 161e28f (Lint)
+=======
+    $component = new class extends Component {
+>>>>>>> a8fbb3e (.)
         public function render()
         {
             return view('ui::components.ui.button');

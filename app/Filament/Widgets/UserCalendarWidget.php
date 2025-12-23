@@ -7,14 +7,20 @@ namespace Modules\UI\Filament\Widgets;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
+<<<<<<< HEAD
 // use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+=======
+>>>>>>> a8fbb3e (.)
 use Filament\Widgets\Widget;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\XotData;
 
 class UserCalendarWidget extends Widget
 {
+<<<<<<< HEAD
     // use InteractsWithEvents;
+=======
+>>>>>>> a8fbb3e (.)
     protected string $view = 'ui::filament.widgets.user-calendar';
 
     public string $type;
@@ -26,8 +32,13 @@ class UserCalendarWidget extends Widget
         $model = $resource::getModel();
         $modelString = is_string($model) ? $model : (string) $model;
         $action = Str::of($modelString)
+<<<<<<< HEAD
             ->replace('\Models\\', '\Actions\\')
             ->append('\Calendar\\'.$action_suffix)
+=======
+            ->replace('\Models\\', '\\Actions\\')
+            ->append('\\Calendar\\'.$action_suffix)
+>>>>>>> a8fbb3e (.)
             ->toString();
 
         return $action;
@@ -37,18 +48,23 @@ class UserCalendarWidget extends Widget
      * @param array<string, mixed> $fetchInfo
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
 >>>>>>> 359d970 (.)
 =======
      *
 >>>>>>> 161e28f (Lint)
+=======
+     *
+>>>>>>> a8fbb3e (.)
      * @return array<int, array<string, mixed>>
      */
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         if (!class_exists($action)) {
@@ -58,10 +74,14 @@ class UserCalendarWidget extends Widget
 =======
         if (! class_exists($action)) {
 >>>>>>> 161e28f (Lint)
+=======
+        if (! class_exists($action)) {
+>>>>>>> a8fbb3e (.)
             return [];
         }
 
         $actionInstance = app($action);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         if (!is_object($actionInstance) || !method_exists($actionInstance, 'execute')) {
@@ -93,10 +113,26 @@ class UserCalendarWidget extends Widget
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
+=======
+        if (! is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
+            return [];
+        }
+
+        $resultRaw = $actionInstance->execute($fetchInfo);
+
+        if (! self::isValidEventsArray($resultRaw)) {
+            return [];
+        }
+
+        /** @var array<int, array<string, mixed>> $result */
+        $result = $resultRaw;
+
+>>>>>>> a8fbb3e (.)
         return $result;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      * @return array<int, \Filament\Forms\Components\TextInput|\Filament\Schemas\Components\Grid>
@@ -106,6 +142,33 @@ class UserCalendarWidget extends Widget
 =======
      * @return array<int, TextInput|Grid>
 >>>>>>> 161e28f (Lint)
+=======
+     * Validate that the given value is an array of events with string keys.
+     */
+    private static function isValidEventsArray(mixed $value): bool
+    {
+        if (! is_array($value)) {
+            return false;
+        }
+
+        foreach ($value as $event) {
+            if (! is_array($event)) {
+                return false;
+            }
+
+            foreach (array_keys($event) as $key) {
+                if (! is_string($key)) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * @return array<int, TextInput|Grid>
+>>>>>>> a8fbb3e (.)
      */
     public function getFormSchema(): array
     {
@@ -116,6 +179,7 @@ class UserCalendarWidget extends Widget
             if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
                 if (is_array($resultRaw)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     /** @var array<int, \Filament\Forms\Components\TextInput|\Filament\Schemas\Components\Grid> $result */
@@ -130,13 +194,22 @@ class UserCalendarWidget extends Widget
                     $result = $resultRaw;
 
 >>>>>>> 161e28f (Lint)
+=======
+                    /** @var array<int, TextInput|Grid> $result */
+                    $result = $resultRaw;
+
+>>>>>>> a8fbb3e (.)
                     return $result;
                 }
             }
         }
 
         // Fallback schema
+<<<<<<< HEAD
         $schema = [
+=======
+        return [
+>>>>>>> a8fbb3e (.)
             TextInput::make('title'),
 
             Grid::make()
@@ -163,5 +236,10 @@ class UserCalendarWidget extends Widget
     {
         // TODO: Implementare la logica per la selezione della data
         // dd('test');
+    }
+
+    public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void
+    {
+        // TODO: Implementare la logica per la selezione della data
     }
 }
