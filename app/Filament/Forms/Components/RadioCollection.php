@@ -3,10 +3,14 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Notify\Filament\Forms\Components;
 =======
 namespace Modules\UI\Filament\Forms\Components;
 >>>>>>> 24eb066 (Lint)
+=======
+namespace Modules\UI\Filament\Forms\Components;
+>>>>>>> laraxot/develop
 
 use Filament\Forms\Components\Field;
 use Illuminate\Support\Collection;
@@ -67,6 +71,7 @@ final class RadioCollection extends Field
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
@@ -79,6 +84,8 @@ final class RadioCollection extends Field
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
 
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
@@ -86,11 +93,14 @@ final class RadioCollection extends Field
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
         return collect([]);
     }
 

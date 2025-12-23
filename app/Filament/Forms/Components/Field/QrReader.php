@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace \Filament\Forms\Forms\Components\Field;
 =======
 namespace Modules\Xot\Exceptions\Formatters;
@@ -11,6 +12,9 @@ namespace Modules\Xot\Exceptions\Formatters;
 =======
 namespace Modules\UI\Filament\Forms\Components\Field;
 >>>>>>> 24eb066 (Lint)
+=======
+namespace Modules\UI\Filament\Forms\Components\Field;
+>>>>>>> laraxot/develop
 
 use Filament\Forms\Components\Field;
 

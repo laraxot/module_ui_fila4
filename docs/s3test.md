@@ -5,17 +5,23 @@ The S3Test component is a Filament page that provides diagnostic tools for AWS S
 
 ## File Location
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **Class**: `/var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php`
 - **View**: `/var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/resources/views/filament/components/test-results.blade.php`
 - **Translations**: `/var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/lang/it/s3test.php`
 =======
+=======
+>>>>>>> laraxot/develop
 - **Class**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php`
 - **View**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/resources/views/filament/components/test-results.blade.php`
 - **Translations**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/lang/it/s3test.php`
 - **Class**: `/var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php`
 - **View**: `/var/www/html/_bases/base_saluteora/laravel/Modules/UI/resources/views/filament/components/test-results.blade.php`
 - **Translations**: `/var/www/html/_bases/base_saluteora/laravel/Modules/UI/lang/it/s3test.php`
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 
 ## Features
 - S3 connection testing
@@ -116,10 +122,14 @@ All AWS operations are wrapped in try-catch blocks to handle exceptions graceful
 
 ## PHPStan Compliance
 <<<<<<< HEAD
+<<<<<<< HEAD
 The component has been updated to comply with PHPStan level 10 requirements:
 =======
 The component has been updated to comply with PHPStan level 9 requirements:
 >>>>>>> 7eb1087 (.)
+=======
+The component has been updated to comply with PHPStan level 9 requirements:
+>>>>>>> laraxot/develop
 - Explicit return types
 - Proper null handling
 - Correct parameter typing

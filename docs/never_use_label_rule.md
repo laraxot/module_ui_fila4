@@ -127,6 +127,7 @@ TextColumn::make('status')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7eb1087 (.)
@@ -142,6 +143,8 @@ TextColumn::make('status')
 >>>>>>> 499f479 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 ## Verifica Automatica
 
 ### PHPStan Rule (Ideale)
@@ -182,9 +185,12 @@ rules:
 
 **RICORDA SEMPRE**: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **RICORDA SEMPRE**:
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 - MAI usare `->label()` in componenti Filament
 - SEMPRE implementare traduzioni nei file `lang/`
 - SEMPRE struttura espansa (label, placeholder, tooltip, helper_text)
@@ -193,6 +199,9 @@ rules:
 
 *Ultimo aggiornamento: 2025-01-06*
 <<<<<<< HEAD
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-01-06*
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop

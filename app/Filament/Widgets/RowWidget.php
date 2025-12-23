@@ -34,6 +34,7 @@ abstract class RowWidget extends XotBaseWidget
         return 3;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function getFormSchema(): array
     {
@@ -41,4 +42,6 @@ abstract class RowWidget extends XotBaseWidget
     }
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
 }

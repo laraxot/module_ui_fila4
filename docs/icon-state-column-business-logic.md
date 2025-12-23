@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # icon state column business logic
 
 ## obiettivo
@@ -21,6 +22,8 @@ Garantire che la colonna `IconStateColumn` utilizzi callback sicuri per icona e 
 - traduzioni: `Modules/UI/lang/*/notifications.php`
 - regole progetto: `Modules/Xot/docs/never-use-label-rule.md`
 =======
+=======
+>>>>>>> laraxot/develop
 # IconStateColumn - Business Logic Analysis
 
 ## Overview
@@ -203,5 +206,9 @@ IconStateColumn::make('state')
 
 ## Conclusioni
 
+<<<<<<< HEAD
 Questa implementazione fornisce una soluzione robusta e user-friendly per la gestione degli stati dei modelli in contesti amministrativi, con particolare attenzione all'esperienza utente e alla sicurezza delle transizioni.
 >>>>>>> 7eb1087 (.)
+=======
+Questa implementazione fornisce una soluzione robusta e user-friendly per la gestione degli stati dei modelli in contesti amministrativi, con particolare attenzione all'esperienza utente e alla sicurezza delle transizioni.
+>>>>>>> laraxot/develop

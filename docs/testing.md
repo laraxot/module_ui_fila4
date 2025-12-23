@@ -341,18 +341,24 @@ $this->assertSee('data-testid="component"');
 ## 🔗 Collegamenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Testing Strategy](../../../project_docs/testing-strategy.md)
 - [UI Module Documentation](../README.md)
 - [Chart Module Testing](../../Chart/project_docs/testing.md)
 - [User Module Testing](../../User/project_docs/testing.md)
 - [Testing Best Practices](../../../project_docs/testing-best-practices.md)
 =======
+=======
+>>>>>>> laraxot/develop
 - [Testing Strategy](../../../docs/testing-strategy.md)
 - [UI Module Documentation](../README.md)
 - [Chart Module Testing](../../Chart/docs/testing.md)
 - [User Module Testing](../../User/docs/testing.md)
 - [Testing Best Practices](../../../docs/testing-best-practices.md)
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 
 ---
 

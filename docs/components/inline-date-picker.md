@@ -399,6 +399,7 @@ public function register(): void
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Compatibilità**: Laraxot , Filament 3.x, Alpine.js 3.x  
 =======
 **Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x  
@@ -415,3 +416,8 @@ public function register(): void
 =======
 **Filosofia**: Fenomenologia Quantistica applicata al Design Temporale 
 >>>>>>> dc14e10 (.)
+=======
+**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x  
+**Compatibilità**: Laraxot SaluteOra, Filament 3.x, Alpine.js 3.x  
+**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale 
+>>>>>>> laraxot/develop

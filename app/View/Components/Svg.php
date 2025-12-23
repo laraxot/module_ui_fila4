@@ -23,6 +23,7 @@ final class Svg extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
@@ -36,6 +37,10 @@ final class Svg extends Component
     ) {
     }
 >>>>>>> 24eb066 (Lint)
+=======
+    ) {
+    }
+>>>>>>> laraxot/develop
 
     public function render(): View
     {

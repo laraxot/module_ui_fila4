@@ -23,6 +23,7 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|Collection query()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
  * @property ProfileContract|null $deleter
@@ -31,6 +32,10 @@ use Modules\Xot\Models\BaseModel;
  *
  * @property ProfileContract|null $deleter
 >>>>>>> 24eb066 (Lint)
+=======
+ *
+ * @property ProfileContract|null $deleter
+>>>>>>> laraxot/develop
  *
  * @mixin \Eloquent
  */

@@ -133,10 +133,14 @@ Applicare la stessa logica a tutti i file di traduzione con conflitti simili:
 ## Collegamenti Correlati
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Translation Standards](../../../docs/translation-standards.md)
 =======
 - [Translation Standards](../../../project_docs/translation-standards.md)
 >>>>>>> 7eb1087 (.)
+=======
+- [Translation Standards](../../../project_docs/translation-standards.md)
+>>>>>>> laraxot/develop
 - [PHP Strict Types](./strict_types_implementation.md)
 - [UI Module Structure](./structure.md)
 - [Best Practices](./best-practices.md)

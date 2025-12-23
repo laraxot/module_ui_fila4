@@ -78,10 +78,14 @@ Mostra documentazione al passaggio del mouse su:
 ```php
 // Digitare 'fil-form' e premere Tab
 <<<<<<< HEAD
+<<<<<<< HEAD
 public static function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
 =======
 public static function form(Form $form): Form
 >>>>>>> 7eb1087 (.)
+=======
+public static function form(Form $form): Form
+>>>>>>> laraxot/develop
 {
     return $form->schema([
         // Digitare 'fil-text' e premere Tab

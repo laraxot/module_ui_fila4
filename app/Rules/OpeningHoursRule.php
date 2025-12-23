@@ -144,6 +144,7 @@ class OpeningHoursRule implements ValidationRule
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
 =======
     /*
@@ -151,6 +152,9 @@ class OpeningHoursRule implements ValidationRule
 =======
     /*
 >>>>>>> 24eb066 (Lint)
+=======
+    /*
+>>>>>>> laraxot/develop
      * Verifica se l'orario è nel formato HH:MM valido.
      */
     /*

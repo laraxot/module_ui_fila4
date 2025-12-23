@@ -58,12 +58,16 @@ class GetAllIconsAction
                 $mappedIcons[$name] = $set;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a8fbb3e (.)
 =======
 
 >>>>>>> 24eb066 (Lint)
+=======
+
+>>>>>>> laraxot/develop
                 continue;
             }
 

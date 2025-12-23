@@ -8,6 +8,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 727968c (.)
@@ -27,5 +28,8 @@ declare(strict_types=1);
 =======
 <x-filament::page>
 >>>>>>> 24eb066 (Lint)
+=======
+<x-filament::page>
+>>>>>>> laraxot/develop
 
 </x-filament::page>

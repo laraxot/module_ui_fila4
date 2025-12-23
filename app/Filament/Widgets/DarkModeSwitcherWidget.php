@@ -6,6 +6,7 @@ namespace Modules\UI\Filament\Widgets;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
 =======
 <<<<<<< HEAD
@@ -43,6 +44,9 @@ use Filament\Forms\Form;
 =======
 use Filament\Schemas\Components\Component;
 >>>>>>> 24eb066 (Lint)
+=======
+use Filament\Schemas\Components\Component;
+>>>>>>> laraxot/develop
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;

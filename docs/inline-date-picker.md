@@ -210,6 +210,7 @@ If the component doesn't look right, make sure you have the required Tailwind CS
 Contributions are welcome! Please feel free to submit a Pull Request.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -223,3 +224,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop

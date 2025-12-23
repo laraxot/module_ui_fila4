@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # UI Module - Componenti e Design System
 
 ## Panoramica
@@ -111,6 +112,8 @@ if (property_exists($model, 'email')) {
 **Versione**: 1.0  
 **Framework**: Laravel 12 + Filament 4
 =======
+=======
+>>>>>>> laraxot/develop
 # 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -544,4 +547,7 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 **🐛 PHPStan Level 9**: File core certificati ✅  
 **🌐 Translation Standards**: File traduzione certificati ✅  
 **🚀 Performance**: 97/100 score 
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop

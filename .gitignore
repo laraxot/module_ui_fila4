@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Ultimo aggiornamento: 2025-01-06
 # Ultimo aggiornamento: 2025-01-31
 # Ultimo aggiornamento: 2025-01-06
@@ -34,6 +35,9 @@
 =======
 # Ultimo aggiornamento: 2025-01-31
 >>>>>>> 24eb066 (Lint)
+=======
+# Ultimo aggiornamento: 2025-01-31
+>>>>>>> laraxot/develop
 # ==============================================
 
 
@@ -43,6 +47,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,6 +78,8 @@ vendor/
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
 /vendor/
 /node_modules/
 /docs/vendor/
@@ -81,6 +88,7 @@ composer.lock
 package-lock.json
 yarn.lock
 yarn-error.log
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 composer.lock
@@ -112,6 +120,10 @@ npm-debug.log
 npm-debug.log
 
 >>>>>>> 24eb066 (Lint)
+=======
+npm-debug.log
+
+>>>>>>> laraxot/develop
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -136,6 +148,7 @@ cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.exe
 *.exe
 =======
@@ -161,6 +174,8 @@ cache/
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
 *:Zone.Identifier
 v8-compile-cache-*
 
@@ -177,6 +192,7 @@ npm-debug.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 npm-debug.log
 npm-debug.log
 =======
@@ -202,6 +218,8 @@ npm-debug.log
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
 yarn-error.log*
 lerna-debug.log*
 
@@ -286,6 +304,7 @@ resources/lang/
 # ==============================================
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -359,6 +378,8 @@ database_old
 
 >>>>>>> a8fbb3e (.)
 =======
+=======
+>>>>>>> laraxot/develop
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -367,7 +388,10 @@ database/Seeders_old/
 database/Factories_old/
 database_old/
 
+<<<<<<< HEAD
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
 
 # ==============================================
 # MODULE SPECIFIC - UI

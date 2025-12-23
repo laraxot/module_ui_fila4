@@ -270,6 +270,7 @@ wire:model.live="{{ $getStatePath() }}"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+ 
 =======
 **Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+ 
@@ -284,3 +285,7 @@ wire:model.live="{{ $getStatePath() }}"
 >>>>>>> a63dc48 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+ 
+**Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+ 
+>>>>>>> laraxot/develop

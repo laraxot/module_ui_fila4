@@ -2,10 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 # Raccomandazioni di Ottimizzazione - Modulo UI
 
 ## 🎯 Stato Attuale e Analisi
@@ -13,6 +16,7 @@
 ### ✅ PUNTI DI FORZA ECCELLENTI
 
 #### Qualità del Codice
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +30,9 @@
 =======
 - **PHPStan Level 9**: 12/12 file core certificati
 >>>>>>> 7eb1087 (.)
+=======
+- **PHPStan Level 9**: 12/12 file core certificati
+>>>>>>> laraxot/develop
 - **Translation Standards**: 100% compliance con struttura espansa
 - **Component Architecture**: 50+ componenti Blade riutilizzabili
 - **Filament Integration**: 20+ widget personalizzati perfettamente integrati
@@ -55,6 +62,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **Esempi troppo specifici** per <nome progetto>
 =======
 - **Esempi troppo specifici** per 
@@ -65,6 +73,9 @@
 =======
 - **Esempi troppo specifici** per 
 >>>>>>> 7eb1087 (.)
+=======
+- **Esempi troppo specifici** per 
+>>>>>>> laraxot/develop
 
 ## 🔧 RACCOMANDAZIONI SPECIFICHE
 
@@ -73,6 +84,7 @@
 #### Pattern di Correzione
 ```php
 // ❌ PROBLEMI ATTUALI (in documentazione)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -86,6 +98,9 @@
 =======
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
 >>>>>>> 7eb1087 (.)
+=======
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
+>>>>>>> laraxot/develop
 https://api.<nome progetto>.com/
 
 // ✅ SOLUZIONI
@@ -116,6 +131,7 @@ Modulo riutilizzabile per componenti Blade, widget Filament e design system.
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - ✅ PHPStan level 10 (12/12 files)
 =======
 - ✅ PHPStan Level 9 (12/12 files)
@@ -126,6 +142,9 @@ Modulo riutilizzabile per componenti Blade, widget Filament e design system.
 =======
 - ✅ PHPStan Level 9 (12/12 files)
 >>>>>>> 7eb1087 (.)
+=======
+- ✅ PHPStan Level 9 (12/12 files)
+>>>>>>> laraxot/develop
 - ✅ Translation Standards 100%
 - ✅ 50+ Blade Components
 - ✅ Accessibility Score 98/100
@@ -267,6 +286,7 @@ php artisan ui:accessibility-check
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **NON toccare** l'architettura PHPStan level 10
 =======
 - **NON toccare** l'architettura PHPStan Level 9
@@ -277,6 +297,9 @@ php artisan ui:accessibility-check
 =======
 - **NON toccare** l'architettura PHPStan Level 9
 >>>>>>> 7eb1087 (.)
+=======
+- **NON toccare** l'architettura PHPStan Level 9
+>>>>>>> laraxot/develop
 - **NON modificare** il sistema TableLayoutEnum (perfetto)
 - **NON cambiare** il pattern TransTrait (eccellente)
 - **NON alterare** la struttura componenti (ben organizzata)
@@ -300,6 +323,7 @@ php artisan ui:accessibility-check
 *Ultimo aggiornamento: gennaio 2025*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> da29ca4 (.)
 =======
@@ -308,3 +332,5 @@ php artisan ui:accessibility-check
 >>>>>>> 12ba306 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop

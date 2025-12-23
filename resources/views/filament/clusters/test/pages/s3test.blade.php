@@ -17,6 +17,7 @@ declare(strict_types=1);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-filament::page>
 =======
 <x-fi<x-filament::page>
@@ -24,6 +25,9 @@ declare(strict_types=1);
 =======
 <x-filament::page>
 >>>>>>> 24eb066 (Lint)
+=======
+<x-filament::page>
+>>>>>>> laraxot/develop
     <x-filament::section>
         <x-slot name="heading">
             {{ __('ui::pages.s3test.heading') }}

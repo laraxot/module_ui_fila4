@@ -28,6 +28,7 @@ class EventServiceProvider extends BaseEventServiceProvider
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function configureEmailVerification(): void {}
 =======
     protected function configureEmailVerification(): void
@@ -44,4 +45,9 @@ class EventServiceProvider extends BaseEventServiceProvider
     {
     }
 >>>>>>> 24eb066 (Lint)
+=======
+    protected function configureEmailVerification(): void
+    {
+    }
+>>>>>>> laraxot/develop
 }

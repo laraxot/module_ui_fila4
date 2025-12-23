@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # PHPStan Fixes - Gennaio 2025
 
 ## Modulo UI - Correzioni Completate
@@ -56,6 +57,8 @@
 - **Pattern applicati**: Type narrowing, Array safety, Closure hints
 
 =======
+=======
+>>>>>>> laraxot/develop
 # Correzioni PHPStan - Modulo UI
 
 Questo documento traccia gli errori PHPStan identificati nel modulo UI e le relative soluzioni implementate.
@@ -201,4 +204,7 @@ if ($record !== null && property_exists($record, 'id')) {
 1. **Error States**: Gestire gracefully gli stati di errore
 2. **Loading States**: Implementare stati di caricamento appropriati
 3. **Accessibility**: Assicurare accessibilità per tutti i componenti
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
