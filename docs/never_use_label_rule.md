@@ -123,7 +123,10 @@ TextColumn::make('status')
 - [ ] Verificare che non ci siano `->label()` nel codice
 - [ ] Controllare che tutte le traduzioni siano implementate
 - [ ] Testare che le traduzioni funzionino correttamente
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7eb1087 (.)
 ## Verifica Automatica
 
 ### PHPStan Rule (Ideale)
@@ -163,7 +166,10 @@ rules:
 ## Memoria Permanente
 
 **RICORDA SEMPRE**: 
+<<<<<<< HEAD
 **RICORDA SEMPRE**:
+=======
+>>>>>>> 7eb1087 (.)
 - MAI usare `->label()` in componenti Filament
 - SEMPRE implementare traduzioni nei file `lang/`
 - SEMPRE struttura espansa (label, placeholder, tooltip, helper_text)
@@ -171,4 +177,7 @@ rules:
 - SEMPRE testare le traduzioni prima del commit
 
 *Ultimo aggiornamento: 2025-01-06*
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-01-06*
+=======
+>>>>>>> 7eb1087 (.)

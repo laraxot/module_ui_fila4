@@ -9,9 +9,18 @@ Durante l'audit del modulo `UI`, sono state identificate **violazioni critiche d
 ### 1. Dipendenze Dirette su Moduli Specifici
 ```php
 // ❌ ERRORE CRITICO - Dipendenze hardcoded
+<<<<<<< HEAD
 use Modules\<nome progetto>\Models\User;
 use Modules\<nome progetto>\Models\Patient;
 use Modules\<nome progetto>\States\User\UserState;
+=======
+use Modules\<nome modulo>\Models\User;
+use Modules\<nome modulo>\Models\Patient;
+use Modules\<nome modulo>\States\User\UserState;
+use Modules\SaluteOra\Models\User;
+use Modules\SaluteOra\Models\Patient;
+use Modules\SaluteOra\States\User\UserState;
+>>>>>>> 7eb1087 (.)
 ```
 
 **File contaminati:**
@@ -25,6 +34,11 @@ use Modules\<nome progetto>\States\User\UserState;
 // ❌ ERRORE CRITICO - Traduzioni hardcoded
 __('<nome progetto>::widgets.find_doctor_and_appointment.messages.studio_selected_title')
 __('<nome progetto>::widgets.find_doctor_and_appointment.studio_list.title')
+<<<<<<< HEAD
+=======
+__('saluteora::widgets.find_doctor_and_appointment.messages.studio_selected_title')
+__('saluteora::widgets.find_doctor_and_appointment.studio_list.title')
+>>>>>>> 7eb1087 (.)
 ```
 
 **File contaminati:**
@@ -170,6 +184,7 @@ class SelectState extends Component
 ### Variabili d'Ambiente
 ```env
 # Configurazione Modelli UI
+<<<<<<< HEAD
 UI_USER_MODEL=Modules\<nome progetto>\Models\User
 UI_PATIENT_MODEL=Modules\<nome progetto>\Models\Patient
 
@@ -179,6 +194,26 @@ UI_PATIENT_STATE=Modules\<nome progetto>\States\Patient\PatientState
 
 # Configurazione Traduzioni UI
 UI_TRANSLATION_NAMESPACE=<nome progetto>
+=======
+UI_USER_MODEL=Modules\<nome modulo>\Models\User
+UI_PATIENT_MODEL=Modules\<nome modulo>\Models\Patient
+
+# Configurazione Stati UI
+UI_USER_STATE=Modules\<nome modulo>\States\User\UserState
+UI_PATIENT_STATE=Modules\<nome modulo>\States\Patient\PatientState
+
+# Configurazione Traduzioni UI
+UI_TRANSLATION_NAMESPACE=<nome progetto>
+UI_USER_MODEL=Modules\SaluteOra\Models\User
+UI_PATIENT_MODEL=Modules\SaluteOra\Models\Patient
+
+# Configurazione Stati UI
+UI_USER_STATE=Modules\SaluteOra\States\User\UserState
+UI_PATIENT_STATE=Modules\SaluteOra\States\Patient\PatientState
+
+# Configurazione Traduzioni UI
+UI_TRANSLATION_NAMESPACE=saluteora
+>>>>>>> 7eb1087 (.)
 UI_TRANSLATION_FALLBACK=ui
 ```
 
@@ -190,8 +225,15 @@ Ogni progetto può personalizzare i modelli, stati e traduzioni tramite variabil
 ### Comando di Verifica
 ```bash
 # Verifica dipendenze hardcoded
+<<<<<<< HEAD
 grep -r "Modules\\<nome progetto>" laravel/Modules/UI/ --include="*.php"
 grep -r "<nome progetto>::" laravel/Modules/UI/ --include="*.php"
+=======
+grep -r "Modules\\" laravel/Modules/UI/ --include="*.php"
+grep -r "<nome progetto>::" laravel/Modules/UI/ --include="*.php"
+grep -r "Modules\\SaluteOra" laravel/Modules/UI/ --include="*.php"
+grep -r "saluteora::" laravel/Modules/UI/ --include="*.php"
+>>>>>>> 7eb1087 (.)
 ```
 
 ### Risultato Atteso

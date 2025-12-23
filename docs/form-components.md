@@ -108,7 +108,11 @@ use Filament\Forms\Form;
 use Filament\Forms\Components\Section;
 use Modules\UI\Filament\Forms\Components\InlineDatePicker;
 
+<<<<<<< HEAD
 public function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
+=======
+public function form(Form $form): Form
+>>>>>>> 7eb1087 (.)
 {
     return $form->schema([
         Section::make('Prenotazione Appuntamento')

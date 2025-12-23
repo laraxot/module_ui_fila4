@@ -209,6 +209,7 @@ If the component doesn't look right, make sure you have the required Tailwind CS
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -220,3 +221,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - Verifiche qualità: PHPStan L10 ✅, PHPMD ✅, PHPInsights ✅ (avvisi legacy su proprietà pubbliche già tracciati).
 
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> 7eb1087 (.)

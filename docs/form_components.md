@@ -108,7 +108,11 @@ use Filament\Forms\Form;
 use Filament\Forms\Components\Section;
 use Modules\UI\Filament\Forms\Components\InlineDatePicker;
 
+<<<<<<< HEAD
 public function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
+=======
+public function form(Form $form): Form
+>>>>>>> 7eb1087 (.)
 {
     return $form->schema([
         Section::make('Prenotazione Appuntamento')
@@ -286,8 +290,15 @@ form.addEventListener('submit', (e) => {
 - [Componenti Table](./table-components.md)
 - [Componenti Chart](./chart-components.md)
 - [Componenti Layout](./layout-components.md)
+<<<<<<< HEAD
 - [Documentazione Frontend](../Cms/docs/frontend-architecture.md) 
 ## Collegamenti tra versioni di form-components.md
 * [form-components.md](../../../UI/docs/form-components.md)
 * [form-components.md](../../../UI/docs/roadmap/form-components.md)
+=======
+- [Documentazione Frontend](../Cms/project_docs/frontend-architecture.md) 
+## Collegamenti tra versioni di form-components.md
+* [form-components.md](../../../UI/project_docs/form-components.md)
+* [form-components.md](../../../UI/project_docs/roadmap/form-components.md)
+>>>>>>> 7eb1087 (.)
 
