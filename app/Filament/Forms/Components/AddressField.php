@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -79,9 +82,9 @@ class AddressField extends Field
         }
 
         $relationship = $record->{$relationshipMethod}();
-        if (! $relationship instanceof \Illuminate\Database\Eloquent\Relations\HasOne
-            && ! $relationship instanceof \Illuminate\Database\Eloquent\Relations\MorphOne
-            && ! $relationship instanceof \Illuminate\Database\Eloquent\Relations\HasMany) {
+        if (! $relationship instanceof HasOne
+            && ! $relationship instanceof MorphOne
+            && ! $relationship instanceof HasMany) {
             return;
         }
 

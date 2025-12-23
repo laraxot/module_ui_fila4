@@ -8,7 +8,6 @@ use BackedEnum;
 use Filament\Forms\Components\Radio;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
-use Webmozart\Assert\Assert;
 
 class RadioBadge extends Radio
 {
@@ -25,7 +24,7 @@ class RadioBadge extends Radio
      */
     public function getEnumValue(string $value): ?\BackedEnum
     {
-        if (! is_string($this->options)) {
+        if (! \is_string($this->options)) {
             return null;
         }
         if (! enum_exists($this->options)) {
@@ -52,26 +51,33 @@ class RadioBadge extends Radio
 
     public function getColorForOption(string $value): string
     {
-        Assert::nullOrString($color = $this->getEnumValue($value)?->getColor());
+        $enum = $this->getEnumValue($value);
+        if ($enum instanceof HasColor) {
+            return $enum->getColor() ?? $this->selectedColor;
+        }
 
-        return $color ?? $this->selectedColor;
+        return $this->selectedColor;
     }
 
     public function getIconForOption(string $value): ?string
     {
-        $icon = $this->getEnumValue($value)?->getIcon();
+        $enum = $this->getEnumValue($value);
+        if (! ($enum instanceof HasIcon)) {
+            return null;
+        }
+        $icon = $enum->getIcon();
 
         // getIcon() può restituire Htmlable|string|null, ma dobbiamo restituire solo string|null
         if (null === $icon) {
             return null;
         }
 
-        if (is_string($icon)) {
+        if (\is_string($icon)) {
             return $icon;
         }
 
         // Se è Htmlable, convertilo a string
-        if (is_object($icon) && method_exists($icon, '__toString')) {
+        if (\is_object($icon) && method_exists($icon, '__toString')) {
             return (string) $icon;
         }
 

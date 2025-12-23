@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Unit\Widgets;
 
+use Filament\Schemas\Components\Component;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
@@ -43,7 +44,7 @@ class MockCalendarWidget extends BaseCalendarWidget
     }
 
     /**
-     * @return array<int, \Filament\Forms\Components\Component>
+     * @return array<int, Component>
      */
     public function getFormSchema(): array
     {

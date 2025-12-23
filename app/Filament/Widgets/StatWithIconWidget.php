@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
+use Closure;
 use Illuminate\Contracts\Support\Htmlable;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
@@ -14,7 +15,7 @@ final class StatWithIconWidget extends XotBaseWidget
     protected string|Htmlable $label;
 
     /**
-     * @var scalar|Htmlable|\Closure
+     * @var scalar|Htmlable|Closure
      */
     protected $value;
 

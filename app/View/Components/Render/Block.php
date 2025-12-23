@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\View\Components\Render;
 
+use Exception;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -53,7 +54,7 @@ class Block extends Component
         $view_params = (array) $view_params;
         Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
         if (! view()->exists($view)) {
-            throw new \Exception('view not found ['.$view.']');
+            throw new Exception('view not found ['.$view.']');
         }
 
         return view($view, $view_params);
