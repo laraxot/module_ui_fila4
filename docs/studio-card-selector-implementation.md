@@ -15,6 +15,7 @@ Componente Filament Form altamente riutilizzabile per la selezione di studi medi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## 🏗️ **Architettura Component**
 =======
 
@@ -31,6 +32,9 @@ Componente Filament Form altamente riutilizzabile per la selezione di studi medi
 ## 🏗️ **Architettura Component**
 
 >>>>>>> 7eb1087 (.)
+=======
+## 🏗️ **Architettura Component**
+>>>>>>> dc14e10 (.)
 ### Classe PHP
 ```php
 // Modules/UI/app/Forms/Components/StudioCardSelector.php
@@ -38,6 +42,7 @@ Componente Filament Form altamente riutilizzabile per la selezione di studi medi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 namespace Modules\UI\Forms\Components;
 use Filament\Forms\Components\Field;
@@ -49,13 +54,14 @@ use Closure;
 =======
 >>>>>>> 7eb1087 (.)
 
+=======
+>>>>>>> dc14e10 (.)
 declare(strict_types=1);
-
 namespace Modules\UI\Forms\Components;
-
 use Filament\Forms\Components\Field;
 use Illuminate\Database\Eloquent\Collection;
 use Closure;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,6 +70,8 @@ use Closure;
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 class StudioCardSelector extends Field
 {
     protected string $view = 'ui::forms.components.studio-card-selector';
@@ -73,6 +81,7 @@ class StudioCardSelector extends Field
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 1f9515b (.)
@@ -82,6 +91,8 @@ class StudioCardSelector extends Field
 =======
     
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
     // Personalizzazioni UI
     protected bool $showDistance = false;
     protected bool $showSpecializations = false;
@@ -90,6 +101,7 @@ class StudioCardSelector extends Field
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 1f9515b (.)
@@ -99,6 +111,8 @@ class StudioCardSelector extends Field
 =======
     
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
     // Configure studios data source
     public function studios(Collection|Closure $studios): static
     {
@@ -108,6 +122,7 @@ class StudioCardSelector extends Field
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Enable/disable features
     public function showDistance(bool $show = true): static
         $this->showDistance = $show;
@@ -144,74 +159,39 @@ protected function getStudioStepSchema(): array
 =======
 >>>>>>> 7eb1087 (.)
     
+=======
+>>>>>>> dc14e10 (.)
     // Enable/disable features
     public function showDistance(bool $show = true): static
-    {
         $this->showDistance = $show;
-        return $this;
-    }
-    
     public function showSpecializations(bool $show = true): static
-    {
         $this->showSpecializations = $show;
-        return $this;
-    }
-    
     public function showPhone(bool $show = true): static
-    {
         $this->showPhone = $show;
-        return $this;
-    }
-    
     // Layout variants
     public function compact(): static
-    {
         $this->cardLayout = 'compact';
-        return $this;
-    }
-    
     public function detailed(): static
-    {
         $this->cardLayout = 'detailed';
-        return $this;
-    }
-    
     // Data getters for view
     public function getStudios(): Collection
-    {
         return $this->evaluate($this->studios) ?? collect();
-    }
-    
     public function getCardLayout(): string
-    {
         return $this->cardLayout;
-    }
-    
     public function shouldShowDistance(): bool
-    {
         return $this->showDistance;
-    }
-    
     public function shouldShowSpecializations(): bool
-    {
         return $this->showSpecializations;
-    }
-    
     public function shouldShowPhone(): bool
-    {
         return $this->showPhone;
-    }
 }
 ```
-
 ## 🔧 **Utilizzo nel Widget**
-
 ### Implementazione Base
-```php
 // Nel widget FindDoctorAndAppointmentWidget
 use Modules\UI\Forms\Components\StudioCardSelector;
-
 protected function getStudioStepSchema(): array
+<<<<<<< HEAD
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -220,6 +200,8 @@ protected function getStudioStepSchema(): array
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
     return [
         'selected_studio' => StudioCardSelector::make('selected_studio')
             ->studios(fn (Get $get) => $this->getStudiosForLocation($get))
@@ -227,6 +209,7 @@ protected function getStudioStepSchema(): array
             ->showPhone()
             ->required()
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,14 +245,15 @@ private function getStudiosForLocation(Get $get): Collection
 >>>>>>> 7eb1087 (.)
 }
 
+=======
+>>>>>>> dc14e10 (.)
 private function getStudiosForLocation(Get $get): Collection
-{
     $cap = $get('cap');
     $province = $get('province'); 
     $region = $get('region');
-    
     if (!$cap || !$province || !$region) {
         return collect();
+<<<<<<< HEAD
     }
     
 <<<<<<< HEAD
@@ -284,11 +268,15 @@ private function getStudiosForLocation(Get $get): Collection
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
 >>>>>>> 7eb1087 (.)
 =======
-    return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
 =======
+>>>>>>> dc14e10 (.)
+    return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
     return \Modules\SaluteOra\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
+<<<<<<< HEAD
 >>>>>>> 727968c (.)
 >>>>>>> a63dc48 (.)
+=======
+>>>>>>> dc14e10 (.)
         $q->where('postal_code', $cap)
           ->where('administrative_area_level_3', $province)
           ->where('administrative_area_level_2', $region);
@@ -296,6 +284,7 @@ private function getStudiosForLocation(Get $get): Collection
     ->where('active', true)
     ->with(['address', 'doctors', 'specializations'])
     ->get();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -310,11 +299,12 @@ private function getStudiosForLocation(Get $get): Collection
 }
 ```
 
+=======
+>>>>>>> dc14e10 (.)
 ## 🌐 **Sistema Traduzioni**
-
 ### File Traduzioni UI
-```php
 // Modules/UI/lang/it/studio-selector.php
+<<<<<<< HEAD
 <?php
 
 <<<<<<< HEAD
@@ -324,6 +314,8 @@ private function getStudiosForLocation(Get $get): Collection
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 return [
     'actions' => [
         'select' => [
@@ -337,6 +329,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     ],
 >>>>>>> 1f9515b (.)
@@ -346,10 +339,13 @@ return [
 =======
     ],
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
     'fields' => [
         'distance' => [
             'label' => 'Distanza',
             'helper_text' => 'Distanza approssimativa dalla tua posizione',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -406,23 +402,20 @@ return [
 =======
 >>>>>>> 7eb1087 (.)
         ],
+=======
+>>>>>>> dc14e10 (.)
         'phone' => [
             'label' => 'Telefono',
             'helper_text' => 'Numero di telefono dello studio',
-        ],
         'specializations' => [
             'label' => 'Specializzazioni',
             'helper_text' => 'Servizi offerti dallo studio',
-        ],
-    ],
 ];
-```
-
 ## 📖 **Collegamenti Documentazione**
-
 ### Modulo UI
 - [Components Overview](./components.md)
 - [Form Components Guide](./form-components.md)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -438,18 +431,22 @@ return [
 - [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
 >>>>>>> 7eb1087 (.)
 =======
+=======
+>>>>>>> dc14e10 (.)
 ### Modulo Generico
 - [Widget Analysis](../<nome modulo>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
-=======
 ### Modulo SaluteOra
 - [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
+<<<<<<< HEAD
 >>>>>>> 727968c (.)
 >>>>>>> a63dc48 (.)
 
+=======
+>>>>>>> dc14e10 (.)
 ---
-
 **Component Status**: 📋 Documented - Ready for Implementation  
 **Reusability**: 🔄 High - Cross-module compatible  
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 **Last Updated**: January 2025 
@@ -460,3 +457,6 @@ return [
 =======
 **Last Updated**: January 2025 
 >>>>>>> 7eb1087 (.)
+=======
+**Last Updated**: January 2025 
+>>>>>>> dc14e10 (.)

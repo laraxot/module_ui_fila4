@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,6 +18,8 @@ declare(strict_types=1);
 =======
 >>>>>>> ef3c5fa (.)
 >>>>>>> 499f479 (.)
+=======
+>>>>>>> dc14e10 (.)
 <x-filament::page>
 =======
 <x-fi<x-filament::page>

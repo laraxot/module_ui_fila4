@@ -13,6 +13,7 @@
 # Migrazione da FileUpload a Spatie Media Library
 
 ## 🌍 Analisi Multidimensionale della Migrazione
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,6 +22,8 @@
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Filosofia & Spiritualità**
 - **Evoluzione Paradigmatica**: Passaggio da gestione **atomistica** (FileUpload singoli) a gestione **sistemica** (Media Library ecosystem)
 - **Humilitas Technologica**: Riconoscere la superiorità di soluzioni specializzate mature
@@ -28,6 +31,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -37,6 +41,8 @@
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Economia & Sostenibilità**
 - **ROI Esponenziale**: Riduzione drammatica dei costi di manutenzione
 - **Debito Tecnico**: Eliminazione di custom implementations fragili
@@ -45,6 +51,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -54,6 +61,8 @@
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Biologia & Chimica del Codice**
 - **DNA Superiore**: Architettura genetica più robusta con conversioni automatiche
 - **Sistema Immunitario**: Resistenza naturale a bug comuni di file handling
@@ -62,6 +71,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -71,6 +81,8 @@
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Politica & Governance**
 - **Democrazia Tecnologica**: Seguire standard di comunità vs autorità interna
 - **Transparency**: Comportamenti predicibili e documentati
@@ -78,6 +90,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 ## 📊 Situazione Attuale (Analisi Completa)
 =======
@@ -86,9 +99,11 @@
 =======
 >>>>>>> 7eb1087 (.)
 
+=======
+>>>>>>> dc14e10 (.)
 ---
-
 ## 📊 Situazione Attuale (Analisi Completa)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,6 +112,8 @@
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### ✅ **Già Migrati a SpatieMediaLibraryFileUpload**
 ```php
 // User Profile
@@ -104,6 +121,7 @@ SpatieMediaLibraryFileUpload::make('photo_profile')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Notify Themes  
 SpatieMediaLibraryFileUpload::make('logo_src')
 // UI Blocks
@@ -121,21 +139,20 @@ SpatieMediaLibraryFileUpload::make('image') // ImagesGallery
 =======
 >>>>>>> 7eb1087 (.)
 
+=======
+>>>>>>> dc14e10 (.)
 // Notify Themes  
 SpatieMediaLibraryFileUpload::make('logo_src')
-
 // UI Blocks
 SpatieMediaLibraryFileUpload::make('image') // ImageSpatie
 SpatieMediaLibraryFileUpload::make('video') // VideoSpatie
-
 // CMS Menu
 SpatieMediaLibraryFileUpload::make('image')
-
 // Gallery Components
 SpatieMediaLibraryFileUpload::make('image') // ImagesGallery
 ```
-
 ### ❌ **Da Migrare (FileUpload Standard)**
+<<<<<<< HEAD
 ```php
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +161,8 @@ SpatieMediaLibraryFileUpload::make('image') // ImagesGallery
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 // PatientResource (4 documenti)
 Forms\Components\FileUpload::make('health_card')
 Forms\Components\FileUpload::make('identity_document') 
@@ -152,6 +171,7 @@ Forms\Components\FileUpload::make('pregnancy_certificate')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // DoctorResource
 Forms\Components\FileUpload::make('certifications')
 =======
@@ -170,6 +190,10 @@ Forms\Components\FileUpload::make('certifications')
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+// DoctorResource
+Forms\Components\FileUpload::make('certifications')
+>>>>>>> dc14e10 (.)
 // UI Blocks Standard
 FileUpload::make('image') // Image block
 FileUpload::make('background') // Hero block  
@@ -177,6 +201,7 @@ FileUpload::make('logo') // InfoBlock, LogoBlock
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -186,10 +211,13 @@ FileUpload::make('logo') // InfoBlock, LogoBlock
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 // Appearance Pages
 FileUpload::make('logo') // Logo page
 FileUpload::make('background') // Background, Footer, HeaderNav
 FileUpload::make('logo_header') // Metatag
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -221,9 +249,11 @@ FileUpload::make('logo_header') // Metatag
 >>>>>>> 7eb1087 (.)
 ```
 
+=======
+>>>>>>> dc14e10 (.)
 ### 🏗️ **Architettura HasMedia Esistente**
-
 **SCOPERTA CRUCIALE**: I modelli principali implementano già `HasMedia`!
+<<<<<<< HEAD
 
 ```php
 <<<<<<< HEAD
@@ -238,11 +268,15 @@ FileUpload::make('logo_header') // Metatag
 // BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
 >>>>>>> 7eb1087 (.)
 =======
-// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
 =======
+>>>>>>> dc14e10 (.)
+// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
 // BaseModel SaluteOra - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+<<<<<<< HEAD
 >>>>>>> 727968c (.)
 >>>>>>> a63dc48 (.)
+=======
+>>>>>>> dc14e10 (.)
 abstract class BaseModel extends Model implements HasMedia
 {
     use InteractsWithMedia;
@@ -251,6 +285,7 @@ abstract class BaseModel extends Model implements HasMedia
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // BaseProfile User Module - IMPLEMENTA GIÀ
 abstract class BaseProfile extends BaseModel implements ProfileContract
     // ... Profili utente pronti!
@@ -267,29 +302,19 @@ Ogni tipo di documento dovrà avere la sua collection specifica:
 =======
 >>>>>>> 7eb1087 (.)
 
+=======
+>>>>>>> dc14e10 (.)
 // BaseProfile User Module - IMPLEMENTA GIÀ
 abstract class BaseProfile extends BaseModel implements ProfileContract
-{
-    use InteractsWithMedia;
     // ... Profili utente pronti!
-}
-
 // BaseTenant - IMPLEMENTA GIÀ  
 abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia
-{
-    use InteractsWithMedia;
     // ... Tenant multi-studio pronti!
-}
-```
-
----
-
 ## 🎯 Strategia di Migrazione
-
 ### **Fase 1: Documentazione e Preparazione**
-
 #### 1.1 Analisi Impatto Collections
 Ogni tipo di documento dovrà avere la sua collection specifica:
+<<<<<<< HEAD
 
 ```php
 <<<<<<< HEAD
@@ -299,6 +324,8 @@ Ogni tipo di documento dovrà avere la sua collection specifica:
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 // Patient Documents Collections
 'health_card' => 'tessere_sanitarie'
 'identity_document' => 'documenti_identita'  
@@ -307,6 +334,7 @@ Ogni tipo di documento dovrà avere la sua collection specifica:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Doctor Documents Collections  
 'certifications' => 'certificazioni_professionali'
 =======
@@ -325,10 +353,15 @@ Ogni tipo di documento dovrà avere la sua collection specifica:
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+// Doctor Documents Collections  
+'certifications' => 'certificazioni_professionali'
+>>>>>>> dc14e10 (.)
 // UI/Appearance Collections
 'logos' => 'loghi_sistema'
 'backgrounds' => 'sfondi_interfaccia' 
 'headers' => 'intestazioni'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -342,11 +375,12 @@ public function registerMediaCollections(): void
 >>>>>>> 7eb1087 (.)
 ```
 
+=======
+>>>>>>> dc14e10 (.)
 #### 1.2 Configurazione Media Collections
-
-```php
 // In ogni modello che usa media
 public function registerMediaCollections(): void
+<<<<<<< HEAD
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -355,6 +389,8 @@ public function registerMediaCollections(): void
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
     $this->addMediaCollection('tessere_sanitarie')
         ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf'])
         ->singleFile();
@@ -363,6 +399,7 @@ public function registerMediaCollections(): void
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     $this->addMediaCollection('certificazioni_isee')
         ->acceptsMimeTypes(['application/pdf'])
     $this->addMediaCollection('certificati_gravidanza')
@@ -378,23 +415,16 @@ class SpatieDocumentUpload
         ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf'])
         ->singleFile();
         
+=======
+>>>>>>> dc14e10 (.)
     $this->addMediaCollection('certificazioni_isee')
         ->acceptsMimeTypes(['application/pdf'])
-        ->singleFile();
-        
     $this->addMediaCollection('certificati_gravidanza')
-        ->acceptsMimeTypes(['application/pdf'])
-        ->singleFile();
-}
-```
-
 ### **Fase 2: Migrazione Componenti UI Base**
-
 #### 2.1 Creazione Componenti Standardizzati
-
-```php
 // Modules/UI/app/Filament/Components/SpatieDocumentUpload.php
 class SpatieDocumentUpload
+<<<<<<< HEAD
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -403,6 +433,8 @@ class SpatieDocumentUpload
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
     public static function make(string $name, string $collection): SpatieMediaLibraryFileUpload
     {
         return SpatieMediaLibraryFileUpload::make($name)
@@ -420,6 +452,7 @@ class SpatieDocumentUpload
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return static::make('health_card', 'tessere_sanitarie')
             ->imagePreviewHeight('150')
             ->maxSize(5120); // 5MB per documenti leggeri
@@ -430,12 +463,13 @@ class SpatieDocumentUpload
 =======
 >>>>>>> 7eb1087 (.)
     {
+=======
+>>>>>>> dc14e10 (.)
         return static::make('health_card', 'tessere_sanitarie')
             ->imagePreviewHeight('150')
             ->maxSize(5120); // 5MB per documenti leggeri
-    }
-    
     public static function forCertifications(): SpatieMediaLibraryFileUpload
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,11 +478,14 @@ class SpatieDocumentUpload
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
         return static::make('certifications', 'certificazioni_professionali')
             ->multiple()
             ->enableReordering()
             ->maxFiles(10)
             ->acceptedFileTypes(['application/pdf']);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -466,15 +503,14 @@ class SpatieImageUpload
 }
 ```
 
+=======
+>>>>>>> dc14e10 (.)
 #### 2.2 Helper per Immagini UI
-
-```php
 // Modules/UI/app/Filament/Components/SpatieImageUpload.php  
 class SpatieImageUpload
-{
     public static function forLogo(string $collection = 'logos'): SpatieMediaLibraryFileUpload
-    {
         return SpatieMediaLibraryFileUpload::make('logo')
+<<<<<<< HEAD
             ->collection($collection)
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -483,11 +519,14 @@ class SpatieImageUpload
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
             ->image()
             ->disk('public')
             ->imagePreviewHeight('100')
             ->maxSize(2048) // 2MB
             ->singleFile();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -524,22 +563,15 @@ class SpatieImageUpload
 >>>>>>> 7eb1087 (.)
     }
     
+=======
+>>>>>>> dc14e10 (.)
     public static function forBackground(string $collection = 'backgrounds'): SpatieMediaLibraryFileUpload
-    {
         return SpatieMediaLibraryFileUpload::make('background')
-            ->collection($collection)
-            ->image()
-            ->disk('public')
             ->imagePreviewHeight('200')
             ->maxSize(5120) // 5MB
-            ->singleFile();
-    }
-}
-```
-
 ### **Fase 3: Implementazione Progressiva**
-
 #### 3.1 PatientResource - Priorità MASSIMA (Documenti Sensibili)
+<<<<<<< HEAD
 
 ```php
 <<<<<<< HEAD
@@ -551,9 +583,11 @@ class SpatieImageUpload
 =======
 =======
 >>>>>>> a63dc48 (.)
-// Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
 =======
+>>>>>>> dc14e10 (.)
+// Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
 // Modules/SaluteOra/app/Filament/Resources/PatientResource.php - getFormSchema()
+<<<<<<< HEAD
 >>>>>>> 727968c (.)
 
 >>>>>>> 8ee2a17 (.)
@@ -561,6 +595,8 @@ class SpatieImageUpload
 // Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 // PRIMA (FileUpload standard)
 'health_card' => Forms\Components\FileUpload::make('health_card')
     ->disk('private')
@@ -570,17 +606,20 @@ class SpatieImageUpload
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 8ee2a17 (.)
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 // DOPO (SpatieMediaLibraryFileUpload)  
 'health_card' => \Modules\UI\Filament\Components\SpatieDocumentUpload::forHealthCard()
-<<<<<<< HEAD
     ->label(trans('<nome progetto>::patients.fields.health_card.label'))
     ->helperText(trans('<nome progetto>::patients.fields.health_card.help')),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -608,13 +647,15 @@ FileUpload::make('image'),
 >>>>>>> a63dc48 (.)
 ```
 
+=======
+    ->label(trans('saluteora::patients.fields.health_card.label'))
+    ->helperText(trans('saluteora::patients.fields.health_card.help')),
+>>>>>>> dc14e10 (.)
 #### 3.2 UI Blocks - Standardizzazione Architettura
-
-```php
 // Modules/UI/app/Filament/Blocks/Image.php - Refactoring Completo
-
 // PRIMA
 FileUpload::make('image'),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -623,10 +664,13 @@ FileUpload::make('image'),
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 // DOPO  
 \Modules\UI\Filament\Components\SpatieImageUpload::make('image', 'content_images')
     ->imagePreviewHeight('250')
     ->conversion('thumbnail'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -643,16 +687,15 @@ public function up(): void
 >>>>>>> 7eb1087 (.)
 ```
 
+=======
+>>>>>>> dc14e10 (.)
 ### **Fase 4: Migrazione Database e Conversioni**
-
 #### 4.1 Migrazione Dati Esistenti
-
-```php
 // Database/Migrations/migrate_file_uploads_to_media_library.php
 public function up(): void
-{
     // Migrazione automatica dei file esistenti
     $patients = Patient::whereNotNull('health_card')->get();
+<<<<<<< HEAD
     
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -661,11 +704,14 @@ public function up(): void
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
     foreach($patients as $patient) {
         if($patient->health_card && Storage::exists($patient->health_card)) {
             $patient->addMediaFromUrl(Storage::url($patient->health_card))
                 ->toMediaCollection('tessere_sanitarie');
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -689,6 +735,9 @@ public function up(): void
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+#### 4.2 Rimozione Campi Database Obsoleti
+>>>>>>> dc14e10 (.)
 // Dopo migrazione completa - rimuovere colonne file paths
 Schema::table('users', function (Blueprint $table) {
     $table->dropColumn([
@@ -699,6 +748,7 @@ Schema::table('users', function (Blueprint $table) {
         'certifications'
     ]);
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -741,9 +791,11 @@ public function registerMediaConversions(Media $media = null): void
 
 ---
 
+=======
+>>>>>>> dc14e10 (.)
 ## 🔧 Implementazione Tecnica Dettagliata
-
 ### **Media Collections Configuration**
+<<<<<<< HEAD
 
 ```php
 <<<<<<< HEAD
@@ -757,42 +809,25 @@ public function registerMediaConversions(Media $media = null): void
 // Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
 >>>>>>> 7eb1087 (.)
 =======
-// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
 =======
+>>>>>>> dc14e10 (.)
+// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
 // Modules/SaluteOra/app/Models/User.php - Aggiunta registerMediaCollections
+<<<<<<< HEAD
 >>>>>>> 727968c (.)
 >>>>>>> a63dc48 (.)
 
 public function registerMediaCollections(): void
 {
+=======
+>>>>>>> dc14e10 (.)
     // Documenti paziente
-    $this->addMediaCollection('tessere_sanitarie')
-        ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf'])
         ->singleFile()
         ->useDisk('private');
-        
-    $this->addMediaCollection('documenti_identita')
-        ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf'])
-        ->singleFile()
-        ->useDisk('private');
-        
-    $this->addMediaCollection('certificazioni_isee')
-        ->acceptsMimeTypes(['application/pdf'])
-        ->singleFile()
-        ->useDisk('private');
-        
-    $this->addMediaCollection('certificati_gravidanza')
-        ->acceptsMimeTypes(['application/pdf'])
-        ->singleFile()
-        ->useDisk('private');
-        
     // Certificazioni dottore (multiple)
     $this->addMediaCollection('certificazioni_professionali')
-        ->acceptsMimeTypes(['application/pdf'])
-        ->useDisk('private');
-}
-
 public function registerMediaConversions(Media $media = null): void
+<<<<<<< HEAD
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -801,11 +836,14 @@ public function registerMediaConversions(Media $media = null): void
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
     $this->addMediaConversion('thumbnail')
         ->width(300)
         ->height(300)
         ->sharpen(10)
         ->performOnCollections('tessere_sanitarie', 'documenti_identita');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -839,14 +877,13 @@ public function registerMediaConversions(Media $media = null): void
 =======
 >>>>>>> 7eb1087 (.)
         
+=======
+>>>>>>> dc14e10 (.)
     $this->addMediaConversion('preview')
         ->width(600)
         ->height(400)
-        ->performOnCollections('tessere_sanitarie', 'documenti_identita');
-}
-```
-
 ### **Accessors per Backward Compatibility**
+<<<<<<< HEAD
 
 ```php
 <<<<<<< HEAD
@@ -858,9 +895,11 @@ public function registerMediaConversions(Media $media = null): void
 =======
 =======
 >>>>>>> a63dc48 (.)
-// Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
 =======
+>>>>>>> dc14e10 (.)
+// Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
 // Modules/SaluteOra/app/Models/User.php - Accessors di transizione
+<<<<<<< HEAD
 >>>>>>> 727968c (.)
 
 >>>>>>> 8ee2a17 (.)
@@ -868,6 +907,8 @@ public function registerMediaConversions(Media $media = null): void
 // Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 /**
  * Accessor per compatibilità con codice esistente.
  * Restituisce URL del primo media nella collection health_card.
@@ -876,6 +917,7 @@ public function getHealthCardAttribute(): ?string
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     return $this->getFirstMediaUrl('tessere_sanitarie');
  * Accessor per array di certificazioni (dottori).
 public function getCertificationsAttribute(): array
@@ -889,21 +931,16 @@ public function getCertificationsAttribute(): array
 =======
 >>>>>>> 7eb1087 (.)
 {
+=======
+>>>>>>> dc14e10 (.)
     return $this->getFirstMediaUrl('tessere_sanitarie');
-}
-
-/**
  * Accessor per array di certificazioni (dottori).
- */
 public function getCertificationsAttribute(): array
-{
     return $this->getMedia('certificazioni_professionali')
         ->map(fn($media) => $media->getUrl())
         ->toArray();
-}
-```
-
 ### **View Components Integration**
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -912,6 +949,8 @@ public function getCertificationsAttribute(): array
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ```blade
 {{-- resources/views/components/patient-documents.blade.php --}}
 <div class="grid grid-cols-2 gap-4">
@@ -921,6 +960,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
 =======
 >>>>>>> 1f9515b (.)
@@ -932,11 +972,15 @@ public function getCertificationsAttribute(): array
             <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
 >>>>>>> 7eb1087 (.)
 =======
-            <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
 =======
+>>>>>>> dc14e10 (.)
+            <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
             <h4>{{ __('saluteora::patients.health_card') }}</h4>
+<<<<<<< HEAD
 >>>>>>> 727968c (.)
 >>>>>>> a63dc48 (.)
+=======
+>>>>>>> dc14e10 (.)
             <img src="{{ $patient->getFirstMediaUrl('tessere_sanitarie', 'thumbnail') }}" 
                  alt="Tessera Sanitaria"
                  class="w-full h-32 object-cover rounded">
@@ -947,6 +991,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {{ __('<nome progetto>::common.view_document') }}
 =======
 >>>>>>> 1f9515b (.)
@@ -968,18 +1013,16 @@ public function getCertificationsAttribute(): array
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> a63dc48 (.)
-                {{ __('<nome progetto>::common.view_document') }}
 =======
+>>>>>>> dc14e10 (.)
+                {{ __('<nome progetto>::common.view_document') }}
                 {{ __('saluteora::common.view_document') }}
->>>>>>> 727968c (.)
             </a>
         </div>
     @endif
-    
     @if($patient->hasMedia('certificazioni_isee'))
-        <div class="document-preview">
-<<<<<<< HEAD
             <h4>{{ __('<nome progetto>::patients.isee_certificate') }}</h4>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8ee2a17 (.)
@@ -990,6 +1033,9 @@ public function getCertificationsAttribute(): array
             <h4>{{ __('saluteora::patients.isee_certificate') }}</h4>
 >>>>>>> 727968c (.)
 >>>>>>> a63dc48 (.)
+=======
+            <h4>{{ __('saluteora::patients.isee_certificate') }}</h4>
+>>>>>>> dc14e10 (.)
             <div class="bg-red-100 h-32 flex items-center justify-center rounded">
                 <i class="fas fa-file-pdf text-red-600 text-3xl"></i>
             </div>
@@ -998,6 +1044,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {{ __('<nome progetto>::common.download_pdf') }}
                 {{ __('saluteora::common.download_pdf') }}
 </div>
@@ -1023,12 +1070,13 @@ public function getCertificationsAttribute(): array
             </a>
         </div>
     @endif
+=======
+                {{ __('<nome progetto>::common.download_pdf') }}
+                {{ __('saluteora::common.download_pdf') }}
+>>>>>>> dc14e10 (.)
 </div>
-```
-
----
-
 ## 🚀 Vantaggi della Migrazione
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1037,6 +1085,8 @@ public function getCertificationsAttribute(): array
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Tecnici**
 - ✅ **Conversioni Automatiche**: Thumbnail, preview, optimized images
 - ✅ **Storage Flessibile**: Multiple disks, cloud storage ready
@@ -1046,6 +1096,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1055,6 +1106,8 @@ public function getCertificationsAttribute(): array
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Business Logic**
 - ✅ **Audit Trail**: Chi ha caricato cosa e quando
 - ✅ **Versioning**: Storia completa delle modifiche documenti
@@ -1063,6 +1116,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1072,6 +1126,8 @@ public function getCertificationsAttribute(): array
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Developer Experience**
 - ✅ **Type Safety**: Interface HasMedia garantisce contratti
 - ✅ **IDE Support**: Autocompletamento metodi media
@@ -1080,6 +1136,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1089,11 +1146,14 @@ public function getCertificationsAttribute(): array
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **User Experience**
 - ✅ **Drag & Drop**: Upload intuitivo
 - ✅ **Preview**: Anteprima immediata documenti
 - ✅ **Progress**: Indicatori di upload avanzati
 - ✅ **Error Handling**: Gestione errori professionale
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1107,9 +1167,11 @@ public function getCertificationsAttribute(): array
 
 ---
 
+=======
+>>>>>>> dc14e10 (.)
 ## 🛡️ Sicurezza e Privacy
-
 ### **GDPR Compliance**
+<<<<<<< HEAD
 ```php
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1118,6 +1180,8 @@ public function getCertificationsAttribute(): array
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 // Auto-deletion per privacy compliance
 $this->addMediaCollection('documenti_temporanei')
     ->acceptsMimeTypes(['application/pdf'])
@@ -1126,6 +1190,7 @@ $this->addMediaCollection('documenti_temporanei')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Retention policies
 public function scopeExpiredDocuments($query)
     return $query->whereHas('media', function($q) {
@@ -1141,21 +1206,18 @@ public function downloadDocument(Media $media): Response
 =======
 >>>>>>> 7eb1087 (.)
 
+=======
+>>>>>>> dc14e10 (.)
 // Retention policies
 public function scopeExpiredDocuments($query)
-{
     return $query->whereHas('media', function($q) {
         $q->where('created_at', '<', now()->subYears(7));
     });
-}
-```
-
 ### **Access Control**
-```php
 // Policy-based access
 public function downloadDocument(Media $media): Response
-{
     $this->authorize('download', $media);
+<<<<<<< HEAD
     
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1164,11 +1226,14 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
     if($media->collection_name === 'tessere_sanitarie') {
         // Log accesso a documento sensibile
         activity()
             ->performedOn($media)
             ->log('downloaded_health_card');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1181,13 +1246,11 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 7eb1087 (.)
     }
     
+=======
+>>>>>>> dc14e10 (.)
     return response()->download($media->getPath());
-}
-```
-
----
-
 ## 📋 Checklist Migrazione
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1196,6 +1259,8 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Pre-Migrazione**
 - [ ] Backup completo database e files
 - [ ] Analisi spazio disco necessario (conversioni)
@@ -1204,6 +1269,7 @@ public function downloadDocument(Media $media): Response
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1213,6 +1279,8 @@ public function downloadDocument(Media $media): Response
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Durante Migrazione**
 - [ ] Implementazione per feature (non tutto insieme)
 - [ ] Test regression dopo ogni batch
@@ -1221,6 +1289,7 @@ public function downloadDocument(Media $media): Response
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1230,11 +1299,14 @@ public function downloadDocument(Media $media): Response
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Post-Migrazione**  
 - [ ] Cleanup file obsoleti
 - [ ] Performance comparison
 - [ ] User training su nuove features
 - [ ] Documentation update completa
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1258,9 +1330,11 @@ public function downloadDocument(Media $media): Response
 
 ---
 
+=======
+>>>>>>> dc14e10 (.)
 ## 🔗 Collegamenti e Riferimenti
-
 ### **Documentazione Correlata**
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8ee2a17 (.)
@@ -1268,10 +1342,13 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> a63dc48 (.)
+=======
+>>>>>>> dc14e10 (.)
 - [Spatie Media Library Official Docs](https://spatie.be/project_docs/laravel-medialibrary)
 - [Filament Plugin Documentation](https://filamentphp.com/plugins/filament-spatie-media-library)
 - [UI Components Docs](./filament-components-rules.md)
 - [Modulo Generico Models Architecture](../<nome modulo>/docs/models-architecture.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1304,10 +1381,11 @@ public function downloadDocument(Media $media): Response
 =======
 =======
 >>>>>>> a63dc48 (.)
+=======
+>>>>>>> dc14e10 (.)
 - [Spatie Media Library Official Docs](https://spatie.be/docs/laravel-medialibrary)
-- [Filament Plugin Documentation](https://filamentphp.com/plugins/filament-spatie-media-library)
-- [UI Components Docs](./filament-components-rules.md)
 - [SaluteOra Models Architecture](../SaluteOra/docs/models-architecture.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8ee2a17 (.)
@@ -1317,13 +1395,13 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 727968c (.)
 >>>>>>> a63dc48 (.)
 
+=======
+>>>>>>> dc14e10 (.)
 ### **Repository e Risorse**
 - [GitHub Filament Plugin](https://github.com/filamentphp/spatie-laravel-media-library-plugin)
 - [Spatie Media Library](https://github.com/spatie/laravel-medialibrary)
-
----
-
 ## 📝 Note di Implementazione
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1332,6 +1410,8 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Ordine di Priorità**
 1. **CRITICO**: PatientResource (documenti sensibili)
 2. **ALTO**: DoctorResource (certificazioni professionali)  
@@ -1340,6 +1420,7 @@ public function downloadDocument(Media $media): Response
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1349,6 +1430,8 @@ public function downloadDocument(Media $media): Response
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Rollback Strategy**
 - Mantenere FileUpload come fallback per 30 giorni
 - Feature flags per switch graduale
@@ -1357,6 +1440,7 @@ public function downloadDocument(Media $media): Response
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1366,11 +1450,14 @@ public function downloadDocument(Media $media): Response
 =======
 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> dc14e10 (.)
 ### **Performance Considerations**
 - Conversions su queue per files grandi
 - CDN configuration per immagini pubbliche
 - Database indexing su media collections
 - Cleanup automatico temporary uploads
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1425,8 +1512,14 @@ public function downloadDocument(Media $media): Response
 *Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
 >>>>>>> 7eb1087 (.)
 =======
-*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
 =======
+*Ultimo aggiornamento: Dicembre 2024*  
+*Versione: 1.0*  
+>>>>>>> dc14e10 (.)
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
 *Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 3.x* 
+<<<<<<< HEAD
 >>>>>>> 727968c (.)
 >>>>>>> a63dc48 (.)
+=======
+>>>>>>> dc14e10 (.)

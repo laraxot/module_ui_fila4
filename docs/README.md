@@ -114,15 +114,7 @@ if (property_exists($model, 'email')) {
 # 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
-<<<<<<< HEAD
-<<<<<<< HEAD
 [![Filament 4.x](https://img.shields.io/badge/Filament-4.x-blue.svg)](https://filamentphp.com/)
-=======
-[![Filament 3.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
->>>>>>> 727968c (.)
-=======
-[![Filament 4.x](https://img.shields.io/badge/Filament-4.x-blue.svg)](https://filamentphp.com/)
->>>>>>> ef3c5fa (.)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 [![Translation Ready](https://img.shields.io/badge/Translation-IT%20%7C%20EN%20%7C%20DE-green.svg)](https://laravel.com/docs/localization)
 [![Blade Components](https://img.shields.io/badge/Blade-Components%20Ready-orange.svg)](https://laravel.com/docs/blade)
@@ -142,10 +134,6 @@ Il modulo **UI** è il cuore dell'interfaccia utente dell'applicazione, fornendo
 - 🎯 **Design System** - Sistema design coerente
 - ⚡ **Performance Ottimizzata** - Componenti ottimizzati per velocità
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 ## 🚀 **Aggiornamento Filament 4.x**
 
 **Data**: 2025-01-27
@@ -167,11 +155,6 @@ Il modulo UI è stato aggiornato con successo a Filament 4.x. Tutti i componenti
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 ## ⚡ **Funzionalità Core**
 
 ### 🧩 **Blade Components**
@@ -318,20 +301,11 @@ php artisan ui:test-components
 - [Architecture Rules](architecture_rules.md) - Regole architetturali
 - [Best Practices](best-practices.md) - Linee guida sviluppo
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 ### 🔗 **Collegamenti Moduli**
 - **[Xot Module](../Xot/docs/README.md)** - Framework core e convenzioni
 - **[User Module](../User/docs/README.md)** - Gestione utenti e autenticazione
 - **[Lang Module](../Lang/docs/README.md)** - Gestione traduzioni
 
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 ### 🧩 **Componenti**
 - [Blade Components](blade-components.md) - Componenti Blade riutilizzabili
 - [Form Components](form-components.md) - Componenti form avanzati
@@ -348,10 +322,7 @@ php artisan ui:test-components
 - [PHPStan Fixes](phpstan/README.md) - Log completo correzioni PHPStan
 - [Translation Fixes](theme-translation-sync.md) - Correzioni traduzioni
 - [Clean Code](clean-code/README.md) - Principi clean code
-<<<<<<< HEAD
-=======
 - [Syntax Error Fixes](clean-code/syntax-error-fixes.md) - Correzioni errori di sintassi
->>>>>>> ef3c5fa (.)
 
 ## 🎨 **Componenti Principali**
 

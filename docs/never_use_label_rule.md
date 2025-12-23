@@ -112,41 +112,18 @@ TextColumn::make('status')
 
 ## Checklist Pre-Implementazione
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### Prima di usare qualsiasi componente Filament:
-=======
-### Prima di usare un componente Filament:
-- [ ] Implementare traduzioni in `lang/it/fields.php`
-- [ ] Implementare traduzioni in `lang/en/fields.php`
-- [ ] Implementare traduzioni in `lang/de/fields.php`
-- [ ] Verificare che le chiavi siano corrette
-- [ ] Testare che le traduzioni funzionino
-
-### Prima di committare:
-- [ ] Verificare che non ci siano `->label()` nel codice
-- [ ] Controllare che tutte le traduzioni siano implementate
-- [ ] Testare che le traduzioni funzionino correttamente
-Prima di usare qualsiasi componente Filament:
-
->>>>>>> 727968c (.)
-=======
-### Prima di usare qualsiasi componente Filament:
->>>>>>> ef3c5fa (.)
 - [ ] Implementare traduzioni in `lang/it/fields.php`
 - [ ] Implementare traduzioni in `lang/en/fields.php`
 - [ ] Implementare traduzioni in `lang/de/fields.php`
 - [ ] Verificare struttura espansa (label, placeholder, tooltip, helper_text)
 - [ ] Non usare mai `->label()` nel codice
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 ### Prima di committare:
 - [ ] Verificare che non ci siano `->label()` nel codice
 - [ ] Controllare che tutte le traduzioni siano implementate
 - [ ] Testare che le traduzioni funzionino correttamente
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +140,8 @@ Prima di usare qualsiasi componente Filament:
 =======
 >>>>>>> ef3c5fa (.)
 >>>>>>> 499f479 (.)
+=======
+>>>>>>> dc14e10 (.)
 ## Verifica Automatica
 
 ### PHPStan Rule (Ideale)
@@ -195,21 +174,9 @@ rules:
 
 ## Collegamenti
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Translation Standards](../../../docs/translation-standards.md)
 - [Filament Best Practices](../../../docs/filament-best-practices.md)
 - [LangServiceProvider Documentation](../../../docs/lang-service-provider.md)
-=======
-- [Translation Standards](../../../project_docs/translation-standards.md)
-- [Filament Best Practices](../../../project_docs/filament-best-practices.md)
-- [LangServiceProvider Documentation](../../../project_docs/lang-service-provider.md)
->>>>>>> 727968c (.)
-=======
-- [Translation Standards](../../../docs/translation-standards.md)
-- [Filament Best Practices](../../../docs/filament-best-practices.md)
-- [LangServiceProvider Documentation](../../../docs/lang-service-provider.md)
->>>>>>> ef3c5fa (.)
 
 ## Memoria Permanente
 
@@ -220,24 +187,9 @@ rules:
 >>>>>>> 7eb1087 (.)
 - MAI usare `->label()` in componenti Filament
 - SEMPRE implementare traduzioni nei file `lang/`
-<<<<<<< HEAD
-<<<<<<< HEAD
 - SEMPRE struttura espansa (label, placeholder, tooltip, helper_text)
 - SEMPRE sincronizzare IT/EN/DE
 - SEMPRE testare le traduzioni prima del commit
-=======
-- SEMPRE sincronizzare IT/EN/DE
-- SEMPRE testare le traduzioni prima del commit
-- MAI `->label()` 
-- SEMPRE traduzioni nei file lang/
-- SEMPRE struttura espansa
-- SEMPRE sincronizzazione IT/EN/DE
->>>>>>> 727968c (.)
-=======
-- SEMPRE struttura espansa (label, placeholder, tooltip, helper_text)
-- SEMPRE sincronizzare IT/EN/DE
-- SEMPRE testare le traduzioni prima del commit
->>>>>>> ef3c5fa (.)
 
 *Ultimo aggiornamento: 2025-01-06*
 <<<<<<< HEAD
