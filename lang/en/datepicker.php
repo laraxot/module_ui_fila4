@@ -4,17 +4,6 @@ declare(strict_types=1);
 
 return [
     'months' => [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
         'January',
         'February',
         'March',
@@ -27,13 +16,6 @@ return [
         'October',
         'November',
         'December',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     ],
     'days_short' => [
         'mon' => 'Mon',
@@ -52,50 +34,6 @@ return [
         'friday' => 'Friday',
         'saturday' => 'Saturday',
         'sunday' => 'Sunday',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December',
-=======
->>>>>>> b93ef594b4 (.)
-    ],
-    'days_short' => [
-        'mon' => 'Mon',
-        'tue' => 'Tue',
-        'wed' => 'Wed',
-        'thu' => 'Thu',
-        'fri' => 'Fri',
-        'sat' => 'Sat',
-        'sun' => 'Sun',
-    ],
-    'days_full' => [
-<<<<<<< HEAD
-        'monday' => 'Monday', 'tuesday' => 'Tuesday', 'wednesday' => 'Wednesday', 'thursday' => 'Thursday', 'friday' => 'Friday', 'saturday' => 'Saturday', 'sunday' => 'Sunday',
->>>>>>> a12f125f4a (.)
-=======
-        'monday' => 'Monday',
-        'tuesday' => 'Tuesday',
-        'wednesday' => 'Wednesday',
-        'thursday' => 'Thursday',
-        'friday' => 'Friday',
-        'saturday' => 'Saturday',
-        'sunday' => 'Sunday',
->>>>>>> b93ef594b4 (.)
-=======
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December',
-    ],
-    'days_short' => [
-        'mon' => 'Mon', 'tue' => 'Tue', 'wed' => 'Wed', 'thu' => 'Thu', 'fri' => 'Fri', 'sat' => 'Sat', 'sun' => 'Sun',
-    ],
-    'days_full' => [
-        'monday' => 'Monday', 'tuesday' => 'Tuesday', 'wednesday' => 'Wednesday', 'thursday' => 'Thursday', 'friday' => 'Friday', 'saturday' => 'Saturday', 'sunday' => 'Sunday',
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     ],
     'today' => 'Today',
     'select_date' => 'Select date',

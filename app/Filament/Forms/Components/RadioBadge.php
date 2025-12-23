@@ -2,15 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-namespace Modules\Notify\Filament\Forms\Components;
-=======
 namespace Modules\UI\Filament\Forms\Components;
->>>>>>> 24eb066 (Lint)
-=======
-namespace Modules\UI\Filament\Forms\Components;
->>>>>>> laraxot/develop
 
 use BackedEnum;
 use Filament\Forms\Components\Radio;
@@ -65,23 +57,7 @@ class RadioBadge extends Radio
         return $color ?? $this->selectedColor;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function getIconForOption(string $value): string|null
-=======
     public function getIconForOption(string $value): ?string
->>>>>>> 161e28f (Lint)
-=======
-    public function getIconForOption(string $value): ?string
->>>>>>> a8fbb3e (.)
-=======
-    public function getIconForOption(string $value): ?string
->>>>>>> 24eb066 (Lint)
-=======
-    public function getIconForOption(string $value): ?string
->>>>>>> laraxot/develop
     {
         $icon = $this->getEnumValue($value)?->getIcon();
 

@@ -1,32 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 <x-dynamic-component
     :component="$getFieldWrapperView()"
     :field="$field"
@@ -78,24 +54,4 @@ declare(strict_types=1);
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 </x-dynamic-component>
-=======
-<<<<<<< HEAD
-</x-dynamic-component>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-</x-dynamic-component>
-=======
-</x-dynamic-component> 
->>>>>>> a12f125f4a (.)
-=======
-</x-dynamic-component>
->>>>>>> b93ef594b4 (.)
-=======
-</x-dynamic-component> 
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop

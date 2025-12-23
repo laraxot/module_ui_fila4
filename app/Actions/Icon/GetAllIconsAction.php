@@ -56,30 +56,10 @@ class GetAllIconsAction
             $paths = $set['paths'] ?? [];
             if (! is_iterable($paths)) {
                 $mappedIcons[$name] = $set;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a8fbb3e (.)
-=======
-
->>>>>>> 24eb066 (Lint)
-                continue;
-            }
-
-=======
-=======
->>>>>>> laraxot/develop
 
                 continue;
             }
 
-<<<<<<< HEAD
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
             foreach ($paths as $path) {
                 if (! is_string($path)) {
                     continue;

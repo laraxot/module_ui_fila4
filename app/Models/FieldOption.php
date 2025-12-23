@@ -21,37 +21,8 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|FieldOption newModelQuery()
  * @method static Builder<static>|FieldOption newQuery()
  * @method static Builder<static>|FieldOption query()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
  *
  * @property ProfileContract|null $deleter
->>>>>>> a8fbb3e (.)
-=======
- *
- * @property ProfileContract|null $deleter
->>>>>>> 24eb066 (Lint)
-=======
- *
- * @property ProfileContract|null $deleter
->>>>>>> 61831e43 (.)
-=======
- *                                                                                <<<<<<< HEAD
- *                                                                                <<<<<<< HEAD
- *                                                                                <<<<<<< HEAD
- *                                                                                =======
- *
- * @property ProfileContract|null $deleter
- *                                         >>>>>>> a8fbb3e (.)
- *                                         =======
- * @property ProfileContract|null $deleter
- *                                         >>>>>>> 24eb066 (Lint)
- *                                         =======
- * @property ProfileContract|null $deleter
- *                                         >>>>>>> laraxot/develop
->>>>>>> laraxot/develop
  *
  * @mixin \Eloquent
  */

@@ -1,32 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 @props(['title' => 'Prenota Appuntamento'])
 
 <div class="bg-white p-6 rounded-lg shadow-md" id="booking-form">
@@ -107,24 +83,4 @@ declare(strict_types=1);
             </a>
         </div>
     @endif
-<<<<<<< HEAD
 </div>
-=======
-<<<<<<< HEAD
-</div>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-</div>
-=======
-</div> 
->>>>>>> a12f125f4a (.)
-=======
-</div>
->>>>>>> b93ef594b4 (.)
-=======
-</div> 
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop

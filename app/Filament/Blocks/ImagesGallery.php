@@ -12,68 +12,15 @@ use Filament\Forms\Components\TextInput;
 
 final class ImagesGallery
 {
-<<<<<<< HEAD
     public static function make(string $name = 'images_gallery', string $context = 'form'): Block
     {
-=======
-<<<<<<< HEAD
-    public static function make(string $name = 'images_gallery', string $context = 'form'): Block
-    {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public static function make(string $name = 'images_gallery', string $context = 'form'): Block
-    {
-=======
-=======
->>>>>>> origin/develop
-    public static function make(
-        string $name = 'images_gallery',
-        string $context = 'form',
-    ): Block {
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    public static function make(string $name = 'images_gallery', string $context = 'form'): Block
-    {
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
         return Block::make($name)
             ->schema([
                 Repeater::make('gallery')
                     ->schema([
                         SpatieMediaLibraryFileUpload::make('image')
-<<<<<<< HEAD
                             // ->image()
                             // ->maxSize(5000)
-=======
-<<<<<<< HEAD
-                            // ->image()
-                            // ->maxSize(5000)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                            // ->image()
-                            // ->maxSize(5000)
-=======
-                        // ->image()
-                        // ->maxSize(5000)
->>>>>>> a12f125f4a (.)
-=======
-                            // ->image()
-                            // ->maxSize(5000)
->>>>>>> b93ef594b4 (.)
-=======
-                        // ->image()
-                        // ->maxSize(5000)
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
                             ->multiple()
                             ->enableReordering()
                             ->openable()
@@ -83,77 +30,16 @@ final class ImagesGallery
                             // ->conversion('thumbnail')
                             ->disk('uploads')
                             ->directory('photos'),
-<<<<<<< HEAD
                         TextInput::make('title')->columnSpanFull(),
                         TextInput::make('subtitle')->columnSpanFull(),
                         Select::make('version')
-=======
-<<<<<<< HEAD
-                        TextInput::make('title')->columnSpanFull(),
-                        TextInput::make('subtitle')->columnSpanFull(),
-                        Select::make('version')
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        TextInput::make('title')->columnSpanFull(),
-                        TextInput::make('subtitle')->columnSpanFull(),
-                        Select::make('version')
-=======
-=======
->>>>>>> origin/develop
-
-                        TextInput::make('title')
-                            ->columnSpanFull(),
-
-                        TextInput::make('subtitle')
-                            ->columnSpanFull(),
-
-                        Select::make('version')
-
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-                        TextInput::make('title')->columnSpanFull(),
-                        TextInput::make('subtitle')->columnSpanFull(),
-                        Select::make('version')
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
                             ->required()
                             ->options([
                                 'v1' => 'versione 1',
                                 'v2' => 'versione 2',
                             ]),
-<<<<<<< HEAD
                     ])
                     ->columnSpanFull(),
-=======
-<<<<<<< HEAD
-                    ])
-                    ->columnSpanFull(),
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    ])
-                    ->columnSpanFull(),
-=======
-                    ])->columnSpanFull(),
-
->>>>>>> a12f125f4a (.)
-=======
-                    ])
-                    ->columnSpanFull(),
->>>>>>> b93ef594b4 (.)
-=======
-                    ])->columnSpanFull(),
-
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
                 // FileUpload::make('image')
                 //     ,
                 // SpatieMediaLibraryFileUpload::make('image')
@@ -168,15 +54,6 @@ final class ImagesGallery
                 //         // ->conversion('thumbnail')
                 //     ->disk('uploads')
                 //     ->directory('photos'),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
                 // TextInput::make('url')
                 //     ,
                 // Select::make('ratio')
@@ -184,65 +61,10 @@ final class ImagesGallery
                 //     ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
                 // TextInput::make('alt')
                 //     ->columnSpanFull(),
-<<<<<<< HEAD
-                // TextInput::make('caption')
-                //     ->columnSpanFull(),
-            ])
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ->columns($context === 'form' ? 2 : 1);
-=======
-            ->columns('form' === $context ? 2 : 1);
->>>>>>> 161e28f (Lint)
-=======
-            ->columns('form' === $context ? 2 : 1);
->>>>>>> a8fbb3e (.)
-=======
-            ->columns('form' === $context ? 2 : 1);
->>>>>>> 24eb066 (Lint)
-=======
-            ->columns('form' === $context ? 2 : 1);
->>>>>>> 61831e43 (.)
-=======
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> b93ef594b4 (.)
-                // TextInput::make('url')
-                //     ,
-                // Select::make('ratio')
-                //     ->options(static::getRatios())
-                //     ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
-                // TextInput::make('alt')
-                //     ->columnSpanFull(),
-<<<<<<< HEAD
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
-                // TextInput::make('url')
-                //     ,
-
-                // Select::make('ratio')
-                //     ->options(static::getRatios())
-                //     ->afterStateHydrated(static fn ($state, $set) => $state || $set('ratio', '4-3')),
-
-                // TextInput::make('alt')
-                //     ->columnSpanFull(),
-
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
                 // TextInput::make('caption')
                 //     ->columnSpanFull(),
             ])
             ->columns('form' === $context ? 2 : 1);
->>>>>>> laraxot/develop
     }
 
     public static function getRatios(): array

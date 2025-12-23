@@ -26,31 +26,7 @@ final class SetLocale
         App::setLocale($locale);
 
         $response = $next($request);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (!($response instanceof Response)) {
-=======
         if (! ($response instanceof Response)) {
->>>>>>> 359d970 (.)
-=======
-        if (! ($response instanceof Response)) {
->>>>>>> 161e28f (Lint)
-=======
-        if (! ($response instanceof Response)) {
->>>>>>> a8fbb3e (.)
-=======
-        if (! ($response instanceof Response)) {
->>>>>>> 24eb066 (Lint)
-=======
-        if (! ($response instanceof Response)) {
->>>>>>> 61831e43 (.)
-=======
-        if (! ($response instanceof Response)) {
->>>>>>> laraxot/develop
             throw new \RuntimeException('Middleware must return a Response instance');
         }
 

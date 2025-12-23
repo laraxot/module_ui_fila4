@@ -11,27 +11,7 @@ enum TableLayout: string
 
     public function getLabel(): string
     {
-<<<<<<< HEAD
         return match ($this) {
-=======
-<<<<<<< HEAD
-        return match ($this) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return match ($this) {
-=======
-        return match($this) {
->>>>>>> a12f125f4a (.)
-=======
-        return match ($this) {
->>>>>>> b93ef594b4 (.)
-=======
-        return match($this) {
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
             self::LIST => 'List View',
             self::GRID => 'Grid View',
         };
@@ -39,27 +19,7 @@ enum TableLayout: string
 
     public function getColor(): string
     {
-<<<<<<< HEAD
         return match ($this) {
-=======
-<<<<<<< HEAD
-        return match ($this) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return match ($this) {
-=======
-        return match($this) {
->>>>>>> a12f125f4a (.)
-=======
-        return match ($this) {
->>>>>>> b93ef594b4 (.)
-=======
-        return match($this) {
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
             self::LIST => 'primary',
             self::GRID => 'secondary',
         };
@@ -67,27 +27,7 @@ enum TableLayout: string
 
     public function getIcon(): string
     {
-<<<<<<< HEAD
         return match ($this) {
-=======
-<<<<<<< HEAD
-        return match ($this) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return match ($this) {
-=======
-        return match($this) {
->>>>>>> a12f125f4a (.)
-=======
-        return match ($this) {
->>>>>>> b93ef594b4 (.)
-=======
-        return match($this) {
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
             self::LIST => 'heroicon-o-list-bullet',
             self::GRID => 'heroicon-o-squares-2x2',
         };
@@ -95,27 +35,7 @@ enum TableLayout: string
 
     public function toggle(): self
     {
-<<<<<<< HEAD
         return match ($this) {
-=======
-<<<<<<< HEAD
-        return match ($this) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return match ($this) {
-=======
-        return match($this) {
->>>>>>> a12f125f4a (.)
-=======
-        return match ($this) {
->>>>>>> b93ef594b4 (.)
-=======
-        return match($this) {
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
             self::LIST => self::GRID,
             self::GRID => self::LIST,
         };

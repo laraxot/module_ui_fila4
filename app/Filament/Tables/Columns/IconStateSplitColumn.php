@@ -26,23 +26,9 @@ use Webmozart\Assert\Assert;
 class IconStateSplitColumn extends Column
 {
     protected string $view = 'ui::filament.tables.columns.icon-state-split';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a8fbb3e (.)
-    protected string $stateClass = '';
-=======
 
     protected string $stateClass = '';
 
->>>>>>> 24eb066 (Lint)
-=======
-
-    protected string $stateClass = '';
-
->>>>>>> laraxot/develop
     protected string $modelClass = '';
 
     /**
@@ -72,30 +58,7 @@ class IconStateSplitColumn extends Column
                 $statesRaw = is_array($statesArray) ? $statesArray : [];
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-=======
 
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
-
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
-
->>>>>>> 24eb066 (Lint)
-=======
-
->>>>>>> 61831e43 (.)
-=======
-
->>>>>>> laraxot/develop
         /** @var array<string, string> $states */
         $states = $statesRaw;
         $record = $this->getRecord();
@@ -103,28 +66,6 @@ class IconStateSplitColumn extends Column
         $result = [];
         foreach ($states as $stateKey => $stateClassItem) {
             try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                if (!is_string($stateClassItem) || !class_exists($stateClassItem)) {
-                    continue;
-                }
-                
-                $stateInstance = new $stateClassItem($record);
-                Assert::isInstanceOf($stateInstance, StateContract::class);
-                
-=======
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
                 if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
                     continue;
                 }
@@ -132,100 +73,18 @@ class IconStateSplitColumn extends Column
                 $stateInstance = new $stateClassItem($record);
                 Assert::isInstanceOf($stateInstance, StateContract::class);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
-                if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
-                    continue;
-                }
-
-                $stateInstance = new $stateClassItem($record);
-                Assert::isInstanceOf($stateInstance, StateContract::class);
-
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
                 // StateContract provides icon(), label(), color()
                 $icon = $stateInstance->icon();
                 $label = $stateInstance->label();
                 $color = $stateInstance->color();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                
-=======
 
->>>>>>> 359d970 (.)
-=======
-
->>>>>>> 161e28f (Lint)
-=======
-
->>>>>>> a8fbb3e (.)
-=======
-
->>>>>>> 24eb066 (Lint)
-=======
-
->>>>>>> 61831e43 (.)
-=======
-
->>>>>>> laraxot/develop
                 // Type narrowing: questi metodi restituiscono string
                 $iconString = (string) $icon;
                 $labelString = (string) $label;
                 $colorString = (string) $color;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                
-                // $stateKey è già string dalla chiave dell'array
-                
-=======
 
                 // $stateKey è già string dalla chiave dell'array
 
->>>>>>> 359d970 (.)
-=======
-
-                // $stateKey è già string dalla chiave dell'array
-
->>>>>>> 161e28f (Lint)
-=======
-
-                // $stateKey è già string dalla chiave dell'array
-
->>>>>>> a8fbb3e (.)
-=======
-
-                // $stateKey è già string dalla chiave dell'array
-
->>>>>>> 24eb066 (Lint)
-=======
-
-                // $stateKey è già string dalla chiave dell'array
-
->>>>>>> 61831e43 (.)
-=======
-
-                // $stateKey è già string dalla chiave dell'array
-
->>>>>>> laraxot/develop
                 $result[$stateKey] = [
                     'class' => $stateInstance,
                     'icon' => $iconString,
@@ -244,104 +103,6 @@ class IconStateSplitColumn extends Column
 
     public function canTransitionTo(int|string $recordId, string $stateClass): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (!class_exists($this->modelClass) || !method_exists($this->modelClass, 'find')) {
-            return false;
-        }
-        
-        $recordRaw = $this->modelClass::find($recordId);
-
-        if (!$recordRaw || !is_object($recordRaw)) {
-            return false;
-        }
-
-        /** @var Model $record */
-        $record = $recordRaw;
-
-        if (!isset($record->state) || !is_object($record->state)) {
-            return false;
-        }
-
-        if (!($record->state instanceof State)) {
-=======
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> 24eb066 (Lint)
-        if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
-            return false;
-        }
-
-        $recordRaw = $this->modelClass::find($recordId);
-
-        if (! $recordRaw || ! is_object($recordRaw)) {
-            return false;
-        }
-
-        /** @var Model $record */
-        $record = $recordRaw;
-
-        if (! isset($record->state) || ! is_object($record->state)) {
-            return false;
-        }
-
-        if (! ($record->state instanceof State)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
->>>>>>> 161e28f (Lint)
-=======
-        if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
-            return false;
-        }
-
-        $recordRaw = $this->modelClass::find($recordId);
-
-        if (! $recordRaw || ! is_object($recordRaw)) {
-            return false;
-        }
-
-        /** @var Model $record */
-        $record = $recordRaw;
-
-        if (! isset($record->state) || ! is_object($record->state)) {
-            return false;
-        }
-
-        if (! ($record->state instanceof State)) {
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-            return false;
-        }
-
-        /** @var State $state */
-        $state = $record->state;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 359d970 (.)
-=======
-
->>>>>>> 161e28f (Lint)
-=======
-
->>>>>>> a8fbb3e (.)
-=======
-
->>>>>>> 24eb066 (Lint)
-=======
-=======
->>>>>>> laraxot/develop
         if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
             return false;
         }
@@ -366,10 +127,6 @@ class IconStateSplitColumn extends Column
         /** @var State $state */
         $state = $record->state;
 
-<<<<<<< HEAD
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
         return $state->canTransitionTo($stateClass);
     }
 
@@ -414,77 +171,6 @@ class IconStateSplitColumn extends Column
 
         // Aggiungi azioni per gli stati
         foreach ($states as $stateKey => $state) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (!is_array($state) || !isset($state['class']) || !isset($state['icon']) || !isset($state['color']) || !isset($state['label'])) {
-                continue;
-            }
-            
-=======
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> 24eb066 (Lint)
-            if (! is_array($state) || ! isset($state['class']) || ! isset($state['icon']) || ! isset($state['color']) || ! isset($state['label'])) {
-                continue;
-            }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
->>>>>>> 161e28f (Lint)
-=======
-            if (! is_array($state) || ! isset($state['class']) || ! isset($state['icon']) || ! isset($state['color']) || ! isset($state['label'])) {
-                continue;
-            }
-
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-            $stateClass = $state['class'];
-            $stateIcon = $state['icon'];
-            $stateColor = $state['color'];
-            $stateLabel = $state['label'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
-            if (!is_object($stateClass) || !($stateClass instanceof StateContract)) {
-                continue;
-            }
-            
-            $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
-            if ($recordIdRaw === null || (!is_int($recordIdRaw) && !is_string($recordIdRaw))) {
-                continue;
-            }
-            
-            $recordId = is_int($recordIdRaw) ? $recordIdRaw : (string) $recordIdRaw;
-            $stateClassName = $stateClass::class;
-            if (!$this->canTransitionTo($recordId, $stateClassName)) {
-                continue;
-            }
-            
-=======
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-
-            if (! is_object($stateClass) || ! ($stateClass instanceof StateContract)) {
-                continue;
-            }
-
-=======
-=======
->>>>>>> laraxot/develop
             if (! is_array($state) || ! isset($state['class']) || ! isset($state['icon']) || ! isset($state['color']) || ! isset($state['label'])) {
                 continue;
             }
@@ -498,10 +184,6 @@ class IconStateSplitColumn extends Column
                 continue;
             }
 
-<<<<<<< HEAD
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
             $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
             if (null === $recordIdRaw || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
                 continue;
@@ -513,51 +195,11 @@ class IconStateSplitColumn extends Column
                 continue;
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
             // Type narrowing: questi sono già string dalla struttura array
             $iconString = (string) $stateIcon;
             $colorString = (string) $stateColor;
             $labelString = (string) $stateLabel;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> 359d970 (.)
-=======
-
->>>>>>> 161e28f (Lint)
-=======
-
->>>>>>> a8fbb3e (.)
-=======
-
->>>>>>> 24eb066 (Lint)
-=======
-
->>>>>>> 61831e43 (.)
-=======
-
->>>>>>> laraxot/develop
             $actions["transition_to_{$stateKey}"] = Action::make(
                 "transition_to_{$stateKey}",
             )
@@ -590,31 +232,6 @@ class IconStateSplitColumn extends Column
     public function transitionState(int|string $recordId, string $stateClass): void
     {
         try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (!class_exists($this->modelClass) || !method_exists($this->modelClass, 'find')) {
-                throw new Exception('Model class not found or invalid');
-            }
-            
-            $recordRaw = $this->modelClass::find($recordId);
-
-            if (!$recordRaw || !is_object($recordRaw)) {
-                throw new Exception('Record non trovato');
-=======
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
             if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
                 throw new \Exception('Model class not found or invalid');
             }
@@ -634,33 +251,6 @@ class IconStateSplitColumn extends Column
 
             if (! ($record->state instanceof State)) {
                 throw new \Exception('State is not a valid State instance');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-            }
-
-            /** @var Model $record */
-            $record = $recordRaw;
-
-            if (!isset($record->state) || !is_object($record->state)) {
-                throw new Exception('State transition method not available');
-            }
-
-            if (!($record->state instanceof State)) {
-                throw new Exception('State is not a valid State instance');
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
             }
 
             // Esegui la transizione

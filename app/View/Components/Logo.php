@@ -20,32 +20,8 @@ final class Logo extends Component
      */
     public function __construct(
         public string $tpl = '',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> 161e28f (Lint)
-=======
-    ) {
-    }
->>>>>>> a8fbb3e (.)
-=======
-    ) {
-    }
->>>>>>> 24eb066 (Lint)
-=======
-    ) {
-    }
->>>>>>> 61831e43 (.)
-=======
-    ) {
-    }
->>>>>>> laraxot/develop
 
     public function render(): View
     {

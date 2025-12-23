@@ -2,15 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-namespace Modules\Notify\Filament\Forms\Components;
-=======
 namespace Modules\UI\Filament\Forms\Components;
->>>>>>> 24eb066 (Lint)
-=======
-namespace Modules\UI\Filament\Forms\Components;
->>>>>>> laraxot/develop
 
 use Carbon\Carbon;
 use Filament\Forms\Components\DatePicker;
@@ -60,49 +52,11 @@ class InlineDatePicker extends DatePicker
 
         // Hydration/Dehydration del valore
         $this->afterStateHydrated(static function (self $component, mixed $state): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if ($state !== null && is_string($state) && $state !== '') {
-                try {
-                    $date = Carbon::parse($state);
-                    $component->currentViewMonth = $date->format('Y-m');
-                } catch (Exception $e) {
-=======
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
             if (null !== $state && is_string($state) && '' !== $state) {
                 try {
                     $date = Carbon::parse($state);
                     $component->currentViewMonth = $date->format('Y-m');
                 } catch (\Exception $e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
                     // Handle invalid date
                     $component->currentViewMonth = now()->format('Y-m');
                 }
@@ -110,30 +64,6 @@ class InlineDatePicker extends DatePicker
         });
 
         $this->dehydrateStateUsing(static function (self $_component, mixed $state): ?string {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if ($state !== null && is_string($state) && $state !== '') {
-                try {
-                    return Carbon::parse($state)->format('Y-m-d');
-                } catch (Exception $e) {
-                    return null;
-                }
-            }
-=======
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
             if (null !== $state && is_string($state) && '' !== $state) {
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
@@ -142,19 +72,6 @@ class InlineDatePicker extends DatePicker
                 }
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
             return null;
         });
     }
@@ -226,146 +143,29 @@ class InlineDatePicker extends DatePicker
     public function getEnabledDates(): Collection
     {
         $datesRaw = $this->evaluate($this->enabledDates) ?? [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        if (!is_iterable($datesRaw)) {
-            $datesRaw = [];
-        }
-
-=======
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> 24eb066 (Lint)
-
-=======
-
->>>>>>> 61831e43 (.)
-        if (! is_iterable($datesRaw)) {
-            $datesRaw = [];
-        }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
->>>>>>> 161e28f (Lint)
-=======
-=======
->>>>>>> laraxot/develop
 
         if (! is_iterable($datesRaw)) {
             $datesRaw = [];
         }
 
-<<<<<<< HEAD
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
         /** @var iterable<int|string, mixed> $datesRaw */
         $dates = is_array($datesRaw) ? $datesRaw : iterator_to_array($datesRaw);
 
         /** @var Collection<int, non-falsy-string> $result */
         $result = collect($dates)->map(function (mixed $date): string {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (!is_string($date) || $date === '') {
-=======
             if (! is_string($date) || '' === $date) {
->>>>>>> 359d970 (.)
-=======
-            if (! is_string($date) || '' === $date) {
->>>>>>> 161e28f (Lint)
-=======
-            if (! is_string($date) || '' === $date) {
->>>>>>> a8fbb3e (.)
-=======
-            if (! is_string($date) || '' === $date) {
->>>>>>> 24eb066 (Lint)
-=======
-            if (! is_string($date) || '' === $date) {
->>>>>>> 61831e43 (.)
-=======
-            if (! is_string($date) || '' === $date) {
->>>>>>> laraxot/develop
                 return '';
             }
             try {
                 return Carbon::parse($date)->format('Y-m-d');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            } catch (Exception $e) {
-                return '';
-            }
-        })->filter(fn(string $v): bool => $v !== '')->values(); // Remove empty strings and reindex
-        
-        /** @var Collection<int, string> $resultTyped */
-        $resultTyped = $result;
-=======
-=======
->>>>>>> 161e28f (Lint)
             } catch (\Exception $e) {
                 return '';
             }
-=======
-            } catch (\Exception $e) {
-                return '';
-            }
->>>>>>> a8fbb3e (.)
-=======
-            } catch (\Exception $e) {
-                return '';
-            }
->>>>>>> 24eb066 (Lint)
-=======
-            } catch (\Exception $e) {
-                return '';
-            }
->>>>>>> 61831e43 (.)
-=======
-            } catch (\Exception $e) {
-                return '';
-            }
->>>>>>> laraxot/develop
         })->filter(fn (string $v): bool => '' !== $v)->values(); // Remove empty strings and reindex
 
         /** @var Collection<int, string> $resultTyped */
         $resultTyped = $result;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
         return $resultTyped;
     }
 
@@ -412,31 +212,7 @@ class InlineDatePicker extends DatePicker
                     if ($state && is_string($state)) {
                         $isSelected = $currentDay->isSameDay(Carbon::parse($state));
                     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                } catch (Throwable $e) {
-=======
                 } catch (\Throwable $e) {
->>>>>>> 359d970 (.)
-=======
-                } catch (\Throwable $e) {
->>>>>>> 161e28f (Lint)
-=======
-                } catch (\Throwable $e) {
->>>>>>> a8fbb3e (.)
-=======
-                } catch (\Throwable $e) {
->>>>>>> 24eb066 (Lint)
-=======
-                } catch (\Throwable $e) {
->>>>>>> 61831e43 (.)
-=======
-                } catch (\Throwable $e) {
->>>>>>> laraxot/develop
                     $isSelected = false;
                 }
 

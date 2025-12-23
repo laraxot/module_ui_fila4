@@ -2,15 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-namespace Modules\Notify\Filament\Forms\Components;
-=======
 namespace Modules\UI\Filament\Forms\Components;
->>>>>>> 24eb066 (Lint)
-=======
-namespace Modules\UI\Filament\Forms\Components;
->>>>>>> laraxot/develop
 
 use Filament\Forms\Components\Field;
 use Illuminate\Support\Collection;
@@ -67,46 +59,11 @@ final class RadioCollection extends Field
     public function getOptions(): Collection
     {
         $optionsRaw = $this->evaluate($this->options);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        if ($optionsRaw instanceof Collection) {
-            return $optionsRaw;
-        }
-        
-=======
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
 
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 359d970 (.)
-=======
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> 61831e43 (.)
-=======
->>>>>>> laraxot/develop
         return collect([]);
     }
 

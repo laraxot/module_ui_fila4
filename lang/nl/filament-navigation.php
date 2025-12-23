@@ -13,44 +13,10 @@ return [
         'created_at' => 'Aangemaakt op',
         'updated_at' => 'Aangepast op',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     'select-options' => [
         'same-tab' => 'Dezelfde tab',
         'new-tab' => 'Nieuwe tab',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     'items' => [
         'empty' => 'Geen elementen.',
         'add-item' => 'Nieuw element',
@@ -61,23 +27,6 @@ return [
         'dedent' => 'Terugspringen',
         'remove' => 'Verwijderen',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     'items-modal' => [
         'title' => 'Element',
         'label' => 'Label',

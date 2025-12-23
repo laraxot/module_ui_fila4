@@ -1,32 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 {{--
     S3Test Page - Test page for email functionality
     View: ui::filament.clusters.test.pages.s3test
@@ -39,19 +15,7 @@ declare(strict_types=1);
     ✅ Accessibile: Supporto screen reader
 --}}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <x-filament::page>
-=======
-<x-fi<x-filament::page>
->>>>>>> 19f3650 (.)
-=======
-<x-filament::page>
->>>>>>> 24eb066 (Lint)
-=======
-<x-filament::page>
->>>>>>> laraxot/develop
     <x-filament::section>
         <x-slot name="heading">
             {{ __('ui::pages.s3test.heading') }}

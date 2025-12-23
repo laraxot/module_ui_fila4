@@ -51,45 +51,9 @@ class Block extends Component
         $view_params = is_array($view_params_raw) ? $view_params_raw : [];
         /** @var array<string, mixed> $view_params */
         $view_params = (array) $view_params;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        Assert::string($view, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
-        if (!view()->exists($view)) {
-            throw new Exception('view not found [' . $view . ']');
-=======
         Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
         if (! view()->exists($view)) {
             throw new \Exception('view not found ['.$view.']');
->>>>>>> 359d970 (.)
-=======
-        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
-        if (! view()->exists($view)) {
-            throw new \Exception('view not found ['.$view.']');
->>>>>>> 161e28f (Lint)
-=======
-        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
-        if (! view()->exists($view)) {
-            throw new \Exception('view not found ['.$view.']');
->>>>>>> a8fbb3e (.)
-=======
-        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
-        if (! view()->exists($view)) {
-            throw new \Exception('view not found ['.$view.']');
->>>>>>> 24eb066 (Lint)
-=======
-        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
-        if (! view()->exists($view)) {
-            throw new \Exception('view not found ['.$view.']');
->>>>>>> 61831e43 (.)
-=======
-        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
-        if (! view()->exists($view)) {
-            throw new \Exception('view not found ['.$view.']');
->>>>>>> laraxot/develop
         }
 
         return view($view, $view_params);
