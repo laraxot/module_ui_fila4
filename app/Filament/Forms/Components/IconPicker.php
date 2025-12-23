@@ -46,6 +46,7 @@ class IconPicker extends TextInput
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 359d970 (.)
@@ -58,6 +59,9 @@ class IconPicker extends TextInput
 =======
 
 >>>>>>> 24eb066 (Lint)
+=======
+
+>>>>>>> 61831e43 (.)
                             return $packsOptions;
                         })
                         ->reactive()
@@ -83,6 +87,7 @@ class IconPicker extends TextInput
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $optsValues = array_map(fn($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
                             /** @var array<int|string> $optsKeys */
                             $optsKeys = array_map(fn($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
@@ -99,6 +104,8 @@ class IconPicker extends TextInput
 =======
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
                             $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
                             /** @var array<int|string> $optsKeys */
                             $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
@@ -115,9 +122,12 @@ class IconPicker extends TextInput
                             /** @var array<int|string> $optsKeys */
                             $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
                             $optsCombined = array_combine($optsKeys, $optsValues);
 
                             return $optsCombined ?: [];
@@ -127,6 +137,7 @@ class IconPicker extends TextInput
                 ])
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->action(function (array $data, \Filament\Schemas\Components\Utilities\Set $set) {
 =======
                 ->action(function (array $data, Set $set) {
@@ -134,6 +145,9 @@ class IconPicker extends TextInput
 =======
                 ->action(function (array $data, Set $set) {
 >>>>>>> 24eb066 (Lint)
+=======
+                ->action(function (array $data, Set $set) {
+>>>>>>> 61831e43 (.)
                     $set('icon', $data['newstate']);
                 }),
         );

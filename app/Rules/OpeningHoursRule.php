@@ -145,12 +145,15 @@ class OpeningHoursRule implements ValidationRule
 <<<<<<< HEAD
 <<<<<<< HEAD
     /**
+<<<<<<< HEAD
 =======
     /*
 >>>>>>> a8fbb3e (.)
 =======
     /*
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
      * Verifica se l'orario è nel formato HH:MM valido.
      */
     /*

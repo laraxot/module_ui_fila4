@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Ultimo aggiornamento: 2025-01-06
 # Ultimo aggiornamento: 2025-01-31
 # Ultimo aggiornamento: 2025-01-06
@@ -34,6 +35,9 @@
 =======
 # Ultimo aggiornamento: 2025-01-31
 >>>>>>> 24eb066 (Lint)
+=======
+# Ultimo aggiornamento: 2025-01-31
+>>>>>>> 61831e43 (.)
 # ==============================================
 
 
@@ -43,6 +47,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -86,13 +91,17 @@ yarn-error.log
 composer.lock
 <<<<<<< HEAD
 vendor/
+=======
+>>>>>>> 61831e43 (.)
 /vendor/
-node_modules/
 /node_modules/
 /docs/vendor/
+
+composer.lock
 package-lock.json
 yarn.lock
 yarn-error.log
+<<<<<<< HEAD
 composer.lock
 =======
 <<<<<<< HEAD
@@ -112,6 +121,10 @@ npm-debug.log
 npm-debug.log
 
 >>>>>>> 24eb066 (Lint)
+=======
+npm-debug.log
+
+>>>>>>> 61831e43 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -136,6 +149,7 @@ cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.exe
 *.exe
 =======
@@ -161,6 +175,8 @@ cache/
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 
@@ -177,6 +193,7 @@ npm-debug.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 npm-debug.log
 npm-debug.log
 =======
@@ -202,6 +219,8 @@ npm-debug.log
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -276,6 +295,16 @@ docs/phpstan/
 docs/cache/
 
 
+<<<<<<< HEAD
+=======
+# ==============================================
+# LANGUAGE FILES (generated / duplicated)
+# ==============================================
+lang/lang/
+resources/lang/
+
+
+>>>>>>> 61831e43 (.)
 # ==============================================
 # LANGUAGE FILES (generated / duplicated)
 # ==============================================
@@ -335,15 +364,11 @@ database_old
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
-resources/views/Components_old
 database/Migrations_old/
-database/Migrations_old
 database/Seeders_old/
-database/Seeders_old
 database/Factories_old/
-database/Factories_old
-database/Factories_
 database_old/
+<<<<<<< HEAD
 database_old
 =======
 <<<<<<< HEAD
@@ -368,6 +393,9 @@ database/Factories_old/
 database_old/
 
 >>>>>>> 24eb066 (Lint)
+=======
+
+>>>>>>> 61831e43 (.)
 
 # ==============================================
 # MODULE SPECIFIC - UI

@@ -75,6 +75,7 @@ final class VideoSpatie
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->columns($context === 'form' ? 2 : 1);
 =======
             ->columns('form' === $context ? 2 : 1);
@@ -85,6 +86,9 @@ final class VideoSpatie
 =======
             ->columns('form' === $context ? 2 : 1);
 >>>>>>> 24eb066 (Lint)
+=======
+            ->columns('form' === $context ? 2 : 1);
+>>>>>>> 61831e43 (.)
     }
 
     public static function getRatios(): array

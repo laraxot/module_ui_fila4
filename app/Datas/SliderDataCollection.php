@@ -17,6 +17,7 @@ final class SliderDataCollection extends Data
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct() {}
 =======
     public function __construct()
@@ -33,4 +34,9 @@ final class SliderDataCollection extends Data
     {
     }
 >>>>>>> 24eb066 (Lint)
+=======
+    public function __construct()
+    {
+    }
+>>>>>>> 61831e43 (.)
 }

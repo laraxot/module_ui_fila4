@@ -6,6 +6,7 @@ namespace Modules\UI\Tests\Unit\Widgets;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
 <<<<<<< HEAD
 use Modules\UI\Filament\Widgets\FullCalendarWidget;
@@ -80,18 +81,24 @@ class MockEventModel extends Model
 =======
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
 use Modules\UI\Filament\Widgets\UserCalendarWidget;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
 
 beforeEach(function () {
     $this->widget = new class extends UserCalendarWidget {
         public function getActionName(string $function): string
+<<<<<<< HEAD
         {
             unset($function);
 
@@ -247,20 +254,19 @@ describe('UserCalendarWidget Basics', function () {
 <<<<<<< HEAD
     it('handles empty event list', static function () {
         $widget = new class() extends BaseCalendarWidget
+=======
+>>>>>>> 61831e43 (.)
         {
-            public string $model = MockEventModel::class;
+            unset($function);
 
-            public function fetchEvents(array $fetchInfo): array
-            {
-                return [];
-            }
+            return 'Modules\\UI\\Tests\\Unit\\Widgets\\NonExistingAction';
+        }
+    };
 
-            public function getFormSchema(): array
-            {
-                return [];
-            }
-        };
+    $this->widget->type = 'test';
+});
 
+<<<<<<< HEAD
 =======
 describe('UserCalendarWidget Event Management', function () {
     it('returns empty events if action class does not exist', function () {
@@ -269,6 +275,16 @@ describe('UserCalendarWidget Event Management', function () {
 describe('UserCalendarWidget Event Management', function () {
     it('returns empty events if action class does not exist', function () {
 >>>>>>> 24eb066 (Lint)
+=======
+describe('UserCalendarWidget Basics', function () {
+    it('is a UserCalendarWidget', function () {
+        expect($this->widget)->toBeInstanceOf(UserCalendarWidget::class);
+    });
+});
+
+describe('UserCalendarWidget Event Management', function () {
+    it('returns empty events if action class does not exist', function () {
+>>>>>>> 61831e43 (.)
         $fetchInfo = [
             'start' => '2025-01-01T00:00:00',
             'end' => '2025-01-31T23:59:59',
@@ -279,6 +295,7 @@ describe('UserCalendarWidget Event Management', function () {
         expect($events)->toBeArray();
         expect($events)->toHaveCount(0);
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -326,6 +343,8 @@ describe('UserCalendarWidget Event Management', function () {
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
 });
 
 describe('UserCalendarWidget Form Schema', function () {
@@ -354,6 +373,7 @@ describe('UserCalendarWidget Form Schema', function () {
         expect($gridSchema[0])->toBeInstanceOf(DateTimePicker::class);
         expect($gridSchema[1])->toBeInstanceOf(DateTimePicker::class);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $titleField = collect($formSchema)->first(static fn ($field) => $field->getName() === 'title');
@@ -679,5 +699,9 @@ describe('BaseCalendarWidget Integration', static function () {
         expect($gridSchema[0]->getName())->toBe('starts_at');
         expect($gridSchema[1]->getName())->toBe('ends_at');
 >>>>>>> 24eb066 (Lint)
+=======
+        expect($gridSchema[0]->getName())->toBe('starts_at');
+        expect($gridSchema[1]->getName())->toBe('ends_at');
+>>>>>>> 61831e43 (.)
     });
 });

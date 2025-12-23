@@ -15,8 +15,11 @@ class Sidebar extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct() {}
 =======
+=======
+>>>>>>> 61831e43 (.)
     public function __construct()
     {
     }

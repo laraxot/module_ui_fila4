@@ -52,6 +52,7 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|Category whereUpdatedBy($value)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
  * @property ProfileContract|null $deleter
@@ -60,6 +61,10 @@ use Modules\Xot\Models\BaseModel;
  *
  * @property ProfileContract|null $deleter
 >>>>>>> 24eb066 (Lint)
+=======
+ *
+ * @property ProfileContract|null $deleter
+>>>>>>> 61831e43 (.)
  *
  * @mixin \Eloquent
  */

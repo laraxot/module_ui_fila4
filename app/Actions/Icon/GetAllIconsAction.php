@@ -58,6 +58,7 @@ class GetAllIconsAction
                 $mappedIcons[$name] = $set;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a8fbb3e (.)
@@ -67,6 +68,12 @@ class GetAllIconsAction
                 continue;
             }
 
+=======
+
+                continue;
+            }
+
+>>>>>>> 61831e43 (.)
             foreach ($paths as $path) {
                 if (! is_string($path)) {
                     continue;

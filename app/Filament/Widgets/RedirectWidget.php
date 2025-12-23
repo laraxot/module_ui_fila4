@@ -8,6 +8,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 161e28f (Lint)
@@ -15,6 +16,8 @@ use Override;
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
 
 /**
  * RedirectWidget - Widget per gestire redirect verso URL specifici.

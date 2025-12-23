@@ -23,6 +23,7 @@ final class Logo extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
@@ -36,6 +37,10 @@ final class Logo extends Component
     ) {
     }
 >>>>>>> 24eb066 (Lint)
+=======
+    ) {
+    }
+>>>>>>> 61831e43 (.)
 
     public function render(): View
     {

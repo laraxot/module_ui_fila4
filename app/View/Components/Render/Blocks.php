@@ -25,6 +25,7 @@ final class Blocks extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<int|string, mixed>  $blocks
 =======
      * @param array<int|string, mixed> $blocks
@@ -35,6 +36,9 @@ final class Blocks extends Component
 =======
      * @param array<int|string, mixed> $blocks
 >>>>>>> 24eb066 (Lint)
+=======
+     * @param array<int|string, mixed> $blocks
+>>>>>>> 61831e43 (.)
      */
     public function __construct(
         public string $view,
@@ -43,8 +47,11 @@ final class Blocks extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
+=======
+>>>>>>> 61831e43 (.)
     ) {
     }
 >>>>>>> 161e28f (Lint)

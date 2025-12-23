@@ -18,6 +18,7 @@ final class WithSidebar extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
@@ -31,6 +32,10 @@ final class WithSidebar extends Component
     ) {
     }
 >>>>>>> 24eb066 (Lint)
+=======
+    ) {
+    }
+>>>>>>> 61831e43 (.)
 
     public function render(): Renderable
     {

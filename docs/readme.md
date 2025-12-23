@@ -14,8 +14,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![PHPStan level 10](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 =======
+=======
+[![PHPStan level 10](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
+# 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
+
+[![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
+[![Filament 4.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
+[![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
+[![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
+>>>>>>> 61831e43 (.)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 >>>>>>> 161e28f (Lint)
 =======
@@ -118,6 +128,7 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 <<<<<<< HEAD
 <<<<<<< HEAD
 - **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
+<<<<<<< HEAD
 =======
 >>>>>>> 1899c5f (.)
 =======
@@ -126,6 +137,10 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 =======
 - **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
 >>>>>>> 7eb1087 (.)
+=======
+- **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
+- **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
+>>>>>>> 61831e43 (.)
 
 ## File di Traduzione
 
@@ -138,6 +153,7 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 <<<<<<< HEAD
 <<<<<<< HEAD
 - `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
+<<<<<<< HEAD
 =======
 >>>>>>> 1899c5f (.)
 =======
@@ -146,6 +162,10 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 =======
 - `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
 >>>>>>> 7eb1087 (.)
+=======
+- `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
+- `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
+>>>>>>> 61831e43 (.)
 
 ### Fix Implementati
 - [Fix Traduzioni Opening Hours Field](opening_hours_translation_fix.md) - **REGOLA CRITICA**: Sincronizzazione obbligatoria tra lingue IT/EN
@@ -209,9 +229,18 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### ✅ **PHPStan level 10 Compliance**
 - **File Core Certificati**: 12/12 file core raggiungono level 10
 =======
+=======
+### ✅ **PHPStan level 10 Compliance**
+- **File Core Certificati**: 12/12 file core raggiungono level 10
+### ✅ **PHPStan Level 9 Compliance**
+- **File Core Certificati**: 12/12 file core raggiungono Level 9
+### ✅ **PHPStan Level 9 Compliance**
+- **File Core Certificati**: 12/12 file core raggiungono Level 9
+>>>>>>> 61831e43 (.)
 ### ✅ **PHPStan Level 9 Compliance**
 - **File Core Certificati**: 12/12 file core raggiungono Level 9
 >>>>>>> 161e28f (Lint)
@@ -549,8 +578,14 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [ ] Codice passa PHPStan level 10
 =======
+=======
+- [ ] Codice passa PHPStan level 10
+- [ ] Codice passa PHPStan Level 9
+- [ ] Codice passa PHPStan Level 9
+>>>>>>> 61831e43 (.)
 - [ ] Codice passa PHPStan Level 9
 >>>>>>> 161e28f (Lint)
 =======
@@ -607,8 +642,14 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **🏅 PHPStan level 10**: File core certificati ✅
 =======
+=======
+- **🏅 PHPStan level 10**: File core certificati ✅
+- **🏅 PHPStan Level 9**: File core certificati ✅
+- **🏅 PHPStan Level 9**: File core certificati ✅
+>>>>>>> 61831e43 (.)
 - **🏅 PHPStan Level 9**: File core certificati ✅
 >>>>>>> 161e28f (Lint)
 =======
@@ -643,8 +684,14 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **🐛 PHPStan level 10**: File core certificati ✅  
 =======
+=======
+**🐛 PHPStan level 10**: File core certificati ✅  
+**🐛 PHPStan Level 9**: File core certificati ✅  
+**🐛 PHPStan Level 9**: File core certificati ✅  
+>>>>>>> 61831e43 (.)
 **🐛 PHPStan Level 9**: File core certificati ✅  
 >>>>>>> 161e28f (Lint)
 =======
@@ -675,6 +722,7 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 >>>>>>> 1899c5f (.)
 *Ultimo aggiornamento: gennaio 2025* 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> da29ca4 (.)
 =======
@@ -685,3 +733,7 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 =======
 *Ultimo aggiornamento: gennaio 2025* 
 >>>>>>> 7eb1087 (.)
+=======
+*Ultimo aggiornamento: gennaio 2025* 
+*Ultimo aggiornamento: gennaio 2025* 
+>>>>>>> 61831e43 (.)

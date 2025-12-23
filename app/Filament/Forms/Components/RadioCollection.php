@@ -67,6 +67,7 @@ final class RadioCollection extends Field
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
@@ -79,6 +80,8 @@ final class RadioCollection extends Field
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
 
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
@@ -86,11 +89,14 @@ final class RadioCollection extends Field
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> 61831e43 (.)
         return collect([]);
     }
 

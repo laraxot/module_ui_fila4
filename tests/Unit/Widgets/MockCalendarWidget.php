@@ -18,6 +18,7 @@ class MockCalendarWidget extends BaseCalendarWidget
     /**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $fetchInfo
 =======
      * @param array<string, mixed> $fetchInfo
@@ -33,6 +34,11 @@ class MockCalendarWidget extends BaseCalendarWidget
      *
      * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
 >>>>>>> 24eb066 (Lint)
+=======
+     * @param array<string, mixed> $fetchInfo
+     *
+     * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
+>>>>>>> 61831e43 (.)
      */
     public function fetchEvents(array $fetchInfo): array
     {
