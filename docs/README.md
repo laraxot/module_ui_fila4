@@ -1,7 +1,11 @@
 # 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
+<<<<<<< HEAD
 [![Filament 4.x](https://img.shields.io/badge/Filament-4.x-blue.svg)](https://filamentphp.com/)
+=======
+[![Filament 3.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
+>>>>>>> 727968c (.)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 [![Translation Ready](https://img.shields.io/badge/Translation-IT%20%7C%20EN%20%7C%20DE-green.svg)](https://laravel.com/docs/localization)
 [![Blade Components](https://img.shields.io/badge/Blade-Components%20Ready-orange.svg)](https://laravel.com/docs/blade)
@@ -21,6 +25,7 @@ Il modulo **UI** è il cuore dell'interfaccia utente dell'applicazione, fornendo
 - 🎯 **Design System** - Sistema design coerente
 - ⚡ **Performance Ottimizzata** - Componenti ottimizzati per velocità
 
+<<<<<<< HEAD
 ## 🚀 **Aggiornamento Filament 4.x**
 
 **Data**: 2025-01-27
@@ -42,6 +47,8 @@ Il modulo UI è stato aggiornato con successo a Filament 4.x. Tutti i componenti
 
 ---
 
+=======
+>>>>>>> 727968c (.)
 ## ⚡ **Funzionalità Core**
 
 ### 🧩 **Blade Components**
@@ -188,11 +195,14 @@ php artisan ui:test-components
 - [Architecture Rules](architecture_rules.md) - Regole architetturali
 - [Best Practices](best-practices.md) - Linee guida sviluppo
 
+<<<<<<< HEAD
 ### 🔗 **Collegamenti Moduli**
 - **[Xot Module](../Xot/docs/README.md)** - Framework core e convenzioni
 - **[User Module](../User/docs/README.md)** - Gestione utenti e autenticazione
 - **[Lang Module](../Lang/docs/README.md)** - Gestione traduzioni
 
+=======
+>>>>>>> 727968c (.)
 ### 🧩 **Componenti**
 - [Blade Components](blade-components.md) - Componenti Blade riutilizzabili
 - [Form Components](form-components.md) - Componenti form avanzati
