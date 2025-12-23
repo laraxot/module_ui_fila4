@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 <svg xmlns="http://www.w3.org/2000/svg" class="size-5" id="flag-icons-us" viewBox="0 0 640 480">
     <path fill="#bd3d44" d="M0 0h640v480H0"/>
     <path stroke="#fff" stroke-width="37" d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"/>
@@ -14,7 +20,11 @@ declare(strict_types=1);
     </marker>
     <path fill="none" marker-mid="url(#us-a)" d="m0 0 16 11h61 61 61 61 60L47 37h61 61 60 61L16 63h61 61 61 61 60L47 89h61 61 60 61L16 115h61 61 61 61 60L47 141h61 61 60 61L16 166h61 61 61 61 60L47 192h61 61 60 61L16 218h61 61 61 61 60z"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </svg>
 =======
 </svg>
 >>>>>>> 727968c (.)
+=======
+</svg>
+>>>>>>> ef3c5fa (.)

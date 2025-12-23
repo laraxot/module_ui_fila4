@@ -14,6 +14,9 @@ final class Children extends ViewField
 
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
      * public static function make($livewire): static
      * {
      * $result = app(static::class, ['livewire' => $livewire]);
@@ -21,6 +24,7 @@ final class Children extends ViewField
      * return $result;
      * }
      */
+<<<<<<< HEAD
 =======
     public static function make($livewire): static
     {
@@ -30,4 +34,6 @@ final class Children extends ViewField
     }
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 }
