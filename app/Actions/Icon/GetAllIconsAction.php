@@ -56,18 +56,7 @@ class GetAllIconsAction
             $paths = $set['paths'] ?? [];
             if (! is_iterable($paths)) {
                 $mappedIcons[$name] = $set;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> a8fbb3e (.)
-=======
-
->>>>>>> 24eb066 (Lint)
-=======
-
->>>>>>> laraxot/develop
                 continue;
             }
 

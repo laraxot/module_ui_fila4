@@ -2,84 +2,13 @@
 # LARAXOT MODULE UI - .GITIGNORE
 # ==============================================
 # Modulo UI Laraxot - Template standardizzato
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Ultimo aggiornamento: 2025-01-06
 # Ultimo aggiornamento: 2025-01-31
-# Ultimo aggiornamento: 2025-01-06
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Ultimo aggiornamento: 2025-01-06
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
-# Ultimo aggiornamento: 2025-01-31
-=======
-# Ultimo aggiornamento: 2025-01-06
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
-# Ultimo aggiornamento: 2025-01-06
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
->>>>>>> 161e28f (Lint)
-=======
-# Ultimo aggiornamento: 2025-01-31
->>>>>>> a8fbb3e (.)
-=======
-# Ultimo aggiornamento: 2025-01-31
->>>>>>> 24eb066 (Lint)
-=======
-# Ultimo aggiornamento: 2025-01-31
->>>>>>> laraxot/develop
 # ==============================================
 
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-vendor/
-=======
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-<<<<<<< HEAD
->>>>>>> 760ce09 (.)
-/vendor/
-node_modules/
-/node_modules/
-/docs/vendor/
-package-lock.json
-yarn.lock
-yarn-error.log
-<<<<<<< HEAD
-composer.lock
-=======
-npm-debug.log
-=======
-=======
->>>>>>> b55470f (.)
->>>>>>> 161e28f (Lint)
-vendor/
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
 /vendor/
 /node_modules/
 /docs/vendor/
@@ -88,42 +17,8 @@ composer.lock
 package-lock.json
 yarn.lock
 yarn-error.log
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-composer.lock
-<<<<<<< HEAD
-vendor/
-/vendor/
-node_modules/
-/node_modules/
-/docs/vendor/
-package-lock.json
-yarn.lock
-yarn-error.log
-composer.lock
-=======
-<<<<<<< HEAD
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
->>>>>>> 161e28f (Lint)
-=======
 npm-debug.log
 
->>>>>>> a8fbb3e (.)
-=======
-npm-debug.log
-
->>>>>>> 24eb066 (Lint)
-=======
-npm-debug.log
-
->>>>>>> laraxot/develop
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -145,37 +40,6 @@ cache/
 *.swp
 *.swo
 *.stackdump
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-*.exe
-*.exe
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-*.exe
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
-=======
-*.exe
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
-*.exe
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
 *:Zone.Identifier
 v8-compile-cache-*
 
@@ -189,37 +53,6 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-npm-debug.log
-npm-debug.log
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-npm-debug.log
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
-=======
-npm-debug.log
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
-npm-debug.log
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
 yarn-error.log*
 lerna-debug.log*
 
@@ -302,84 +135,6 @@ resources/lang/
 
 
 # ==============================================
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 760ce09 (.)
-<<<<<<< HEAD
->>>>>>> 161e28f (Lint)
-# LANGUAGE FILES
-# ==============================================
-lang/lang/
-resources/lang/
-
-# ==============================================
-<<<<<<< HEAD
-=======
->>>>>>> 9567487 (.)
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-resources/views/Components_old
-database/Migrations_old/
-database/Migrations_old
-database/Seeders_old/
-database/Seeders_old
-database/Factories_old/
-database/Factories_old
-database/Factories_
-database_old/
-<<<<<<< HEAD
-database_old
-=======
-=======
-=======
->>>>>>> b55470f (.)
->>>>>>> 161e28f (Lint)
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-database/Migrations_old/
-database/Seeders_old/
-database/Factories_old/
-database_old/
-<<<<<<< HEAD
-database_old
-<<<<<<< HEAD
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-resources/views/Components_old
-database/Migrations_old/
-database/Migrations_old
-database/Seeders_old/
-database/Seeders_old
-database/Factories_old/
-database/Factories_old
-database/Factories_
-database_old/
-database_old
-=======
-<<<<<<< HEAD
->>>>>>> e6782b2 (.)
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
-=======
-=======
->>>>>>> b55470f (.)
->>>>>>> 760ce09 (.)
->>>>>>> 161e28f (Lint)
-=======
-
->>>>>>> a8fbb3e (.)
-=======
-=======
->>>>>>> laraxot/develop
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -388,10 +143,6 @@ database/Seeders_old/
 database/Factories_old/
 database_old/
 
-<<<<<<< HEAD
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
 
 # ==============================================
 # MODULE SPECIFIC - UI

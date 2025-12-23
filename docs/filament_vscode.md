@@ -77,15 +77,7 @@ Mostra documentazione al passaggio del mouse su:
 
 ```php
 // Digitare 'fil-form' e premere Tab
-<<<<<<< HEAD
-<<<<<<< HEAD
-public static function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
-=======
 public static function form(Form $form): Form
->>>>>>> 7eb1087 (.)
-=======
-public static function form(Form $form): Form
->>>>>>> laraxot/develop
 {
     return $form->schema([
         // Digitare 'fil-text' e premere Tab
@@ -171,50 +163,4 @@ Forms\Components\Wizard::make([
 
 ## Best Practices
 
-1. **Organizzazione del Codice**
-   - Usare gli snippet per mantenere una struttura consistente
-   - Raggruppare componenti correlati in sezioni
-   - Utilizzare i commenti per documentare la logica complessa
-
-2. **Autocompletamento**
-   - Sfruttare l'autocompletamento per esplorare le API disponibili
-   - Verificare i tipi di dati supportati
-   - Controllare i metodi disponibili
-
-3. **Diagnostica**
-   - Prestare attenzione agli avvisi dell'estensione
-   - Correggere gli errori segnalati
-   - Seguire le best practices suggerite
-
-## Scorciatoie da Tastiera
-
-| Comando | Descrizione |
-|---------|-------------|
-| `Ctrl+Space` | Attiva l'autocompletamento |
-| `Ctrl+Shift+Space` | Mostra la firma del metodo |
-| `F12` | Vai alla definizione |
-| `Alt+F12` | Mostra la definizione |
-| `Shift+F12` | Mostra tutti i riferimenti |
-
-## Troubleshooting
-
-1. **Gli snippet non funzionano**
-   - Verificare che l'estensione sia installata
-   - Controllare che il file sia riconosciuto come PHP
-   - Riavviare VSCode
-
-2. **Autocompletamento non funziona**
-   - Verificare che il progetto abbia le dipendenze Filament
-   - Controllare che il file `composer.json` sia valido
-   - Rigenerare l'autoload di Composer
-
-3. **Errori di diagnostica errati**
-   - Pulire la cache di VSCode
-   - Aggiornare l'estensione
-   - Verificare la versione di PHP
-
-## Vedi Anche
-
-- [Filament Documentation](https://filamentphp.com)
-- [VSCode PHP Extension](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
-- [Laravel Extension Pack](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-extension-pack) 
+1. Organizzazione del codice

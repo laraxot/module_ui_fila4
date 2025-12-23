@@ -25,35 +25,11 @@ class TableLayoutToggleHeaderAction extends Action
             // ->tooltip(trans('setting::database_connection.actions.database-backup.tooltip'))
             // ->icon(trans('setting::database_connection.actions.database-backup.icon'))
             // ->icon($this->listIcon)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            /**
-=======
-            /*
->>>>>>> 359d970 (.)
-=======
-            /*
->>>>>>> 161e28f (Lint)
-=======
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
             /*
              * /*
              * /*
              * /*
              * /*
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
              * @param object{layoutView?: string|null} $livewire
              */
             ->icon(function (object $livewire): string {
@@ -67,35 +43,11 @@ class TableLayoutToggleHeaderAction extends Action
 
                 return $this->listIcon; // default icon
             })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            /**
-=======
-            /*
->>>>>>> 359d970 (.)
-=======
-            /*
->>>>>>> 161e28f (Lint)
-=======
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
             /*
              * /*
              * /*
              * /*
              * /*
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
              * @param object{layoutView?: string|null} $livewire
              */
             ->action(function (object $livewire): void {

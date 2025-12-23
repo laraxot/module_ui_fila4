@@ -72,20 +72,8 @@ $monthGrid = $datePicker->generateMonthGrid(2025, 6);
 #### Esempio Completo
 use Filament\Forms\Form;
 use Filament\Forms\Components\Section;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\UI\Filament\Forms\Components\InlineDatePicker;
-
-<<<<<<< HEAD
-public function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
-=======
-=======
->>>>>>> dc14e10 (.)
 public function form(Form $form): Form
->>>>>>> 7eb1087 (.)
-=======
 public function form(Form $form): Form
->>>>>>> laraxot/develop
 {
     return $form->schema([
         Section::make('Prenotazione Appuntamento')

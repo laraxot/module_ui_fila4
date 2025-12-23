@@ -142,19 +142,7 @@ class OpeningHoursRule implements ValidationRule
         return null;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
-=======
-    /*
->>>>>>> a8fbb3e (.)
-=======
-    /*
->>>>>>> 24eb066 (Lint)
-=======
-    /*
->>>>>>> laraxot/develop
      * Verifica se l'orario è nel formato HH:MM valido.
      */
     /*

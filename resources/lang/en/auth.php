@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/develop
 return [
     'login' => [
         'title' => 'Sign in',

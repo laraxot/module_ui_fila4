@@ -2,15 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-return [];
-=======
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
 return [
     'name' => 'UI',
     'description' => 'Modulo per la gestione dell\'interfaccia utente e componenti',
@@ -27,10 +18,3 @@ return [
         'Modules\\UI\\Providers\\UIServiceProvider',
     ],
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a8fbb3e (.)
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop

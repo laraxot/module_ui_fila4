@@ -132,30 +132,3 @@ Applicare la stessa logica a tutti i file di traduzione con conflitti simili:
 
 ## Collegamenti Correlati
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Translation Standards](../../../docs/translation-standards.md)
-=======
-- [Translation Standards](../../../project_docs/translation-standards.md)
->>>>>>> 7eb1087 (.)
-=======
-- [Translation Standards](../../../project_docs/translation-standards.md)
->>>>>>> laraxot/develop
-- [PHP Strict Types](./strict_types_implementation.md)
-- [UI Module Structure](./structure.md)
-- [Best Practices](./best-practices.md)
-
-## Note per Sviluppatori Futuri
-
-1. **Strict Types**: Utilizzare sempre `declare(strict_types=1);` nei file PHP
-2. **Sintassi Array**: Preferire sempre `[]` a `array()`
-3. **Traduzioni**: Mantenere struttura espansa per completezza
-4. **Consistenza**: Seguire sempre gli standard Laraxot PTVX
-
-## Data Risoluzione
-
-- **Data**: 29 Luglio 2025
-- **Modulo**: UI
-- **File**: Multipli file di traduzione
-- **Tipo Conflitto**: Dichiarazione PHP e sintassi array
-- **Scelta**: Versione HEAD (con strict types e sintassi moderna)

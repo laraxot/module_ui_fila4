@@ -20,18 +20,6 @@ declare(strict_types=1);
             </div>
         </div>
     </x-filament::section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-</x-filament-widgets::widget>
-=======
-<<<<<<< HEAD
-</x-filament-widgets::widget>
-=======
-=======
->>>>>>> 24eb066 (Lint)
-=======
->>>>>>> laraxot/develop
 </x-filament-widgets::widget>
 </x-filament-widgets::widget>
 </x-filament-widgets::widget>
@@ -71,28 +59,3 @@ declare(strict_types=1);
     </x-filament-widgets::widget>
 
 --}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 9567487 (.)
->>>>>>> 161e28f (Lint)
-=======
->>>>>>> 24eb066 (Lint)
-=======
-=======
-
->>>>>>> 727968c (.)
->>>>>>> a63dc48 (.)
-=======
-=======
-
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
->>>>>>> 499f479 (.)
-=======
->>>>>>> dc14e10 (.)
-=======
->>>>>>> laraxot/develop
