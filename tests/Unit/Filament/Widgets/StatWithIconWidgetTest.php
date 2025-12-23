@@ -2,39 +2,17 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 namespace Modules\UI\Tests\Unit\Filament\Widgets;
 
 use Filament\Widgets\Widget;
 use Illuminate\Contracts\View\View;
 use Modules\UI\Filament\Widgets\StatWithIconWidget;
 use Tests\TestCase;
-<<<<<<< HEAD
-=======
-namespace Modules\UI\Tests\Unit\Filament\Widgets\StatWithIconWidgetTest;
-
-namespace Modules\UI\Tests\Unit\Filament\Widgets;
-
-
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 
 uses(TestCase::class);
 
 beforeEach(function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
     $this->widget = new StatWithIconWidget();
-=======
-$this->widget = new StatWithIconWidget();
->>>>>>> 727968c (.)
-=======
-    $this->widget = new StatWithIconWidget();
->>>>>>> ef3c5fa (.)
 });
 
 test('stat with icon widget extends filament widget', function () {
@@ -58,15 +36,7 @@ test('stat with icon widget has proper properties', function () {
 test('stat with icon widget can render', function () {
     $view = $this->widget->render();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     expect($view)->toBeInstanceOf(View::class);
-=======
-    expect($view)->toBeInstanceOf(\Illuminate\Contracts\View\View::class);
->>>>>>> 727968c (.)
-=======
-    expect($view)->toBeInstanceOf(View::class);
->>>>>>> ef3c5fa (.)
 });
 
 test('stat with icon widget has default values', function () {
