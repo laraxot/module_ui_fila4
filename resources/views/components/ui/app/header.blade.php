@@ -1,8 +1,32 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 <header x-data="{ open: false }" class="bg-white border-b border-gray-200/80 dark:bg-gray-900/40 dark:border-gray-200/[15%]">
     <!-- Primary Navigation Menu -->
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -78,4 +102,24 @@ declare(strict_types=1);
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 </header>
+=======
+<<<<<<< HEAD
+</header>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+</header>
+=======
+</header>
+>>>>>>> a12f125f4a (.)
+=======
+</header>
+>>>>>>> b93ef594b4 (.)
+=======
+</header>
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop

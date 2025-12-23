@@ -318,6 +318,7 @@ class AssetManagementService
 
 ## 🔗 Collegamenti Correlati
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Block Component](/var/www/html/_bases/base_<nome progetto>_fila3_mono/laravel/Modules/UI/app/View/Components/Render/Block.php)
 - [Blocks Component](/var/www/html/_bases/base_<nome progetto>_fila3_mono/laravel/Modules/UI/app/View/Components/Render/Blocks.php)
 - [GroupWidget](/var/www/html/_bases/base_<nome progetto>_fila3_mono/laravel/Modules/UI/app/Filament/Widgets/GroupWidget.php)
@@ -325,13 +326,18 @@ class AssetManagementService
 - [GetAllIconsAction](/var/www/html/_bases/base_<nome progetto>_fila3_mono/laravel/Modules/UI/app/Actions/Icon/GetAllIconsAction.php)
 - [Sidebar Component](/var/www/html/_bases/base_<nome progetto>_fila3_mono/laravel/Modules/UI/app/View/Components/Sidebar.php)
 =======
+=======
+>>>>>>> laraxot/develop
 - [Block Component](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/View/Components/Render/Block.php)
 - [Blocks Component](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/View/Components/Render/Blocks.php)
 - [GroupWidget](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/Filament/Widgets/GroupWidget.php)
 - [HeroWidget](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/Filament/Widgets/HeroWidget.php)
 - [GetAllIconsAction](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/Actions/Icon/GetAllIconsAction.php)
 - [Sidebar Component](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/View/Components/Sidebar.php)
+<<<<<<< HEAD
 >>>>>>> 161e28f (Lint)
+=======
+>>>>>>> laraxot/develop
 
 ---
 *Analisi completata con principi DRY + KISS | Data: $(date)*

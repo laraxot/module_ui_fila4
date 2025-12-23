@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1f9515b (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 # REGOLA CRITICA: MAI usare ->label()
 
 ## Data: 2025-01-06
@@ -123,6 +126,7 @@ TextColumn::make('status')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Prima di usare qualsiasi componente Filament:
 <<<<<<< HEAD
 =======
@@ -145,6 +149,19 @@ Prima di usare qualsiasi componente Filament:
 Prima di usare qualsiasi componente Filament:
 
 >>>>>>> 7eb1087 (.)
+=======
+### Prima di usare qualsiasi componente Filament:
+Prima di usare qualsiasi componente Filament:
+
+Prima di usare qualsiasi componente Filament:
+
+### Prima di usare qualsiasi componente Filament:
+Prima di usare qualsiasi componente Filament:
+
+### Prima di usare qualsiasi componente Filament:
+Prima di usare qualsiasi componente Filament:
+
+>>>>>>> laraxot/develop
 - [ ] Implementare traduzioni in `lang/it/fields.php`
 - [ ] Implementare traduzioni in `lang/en/fields.php`
 - [ ] Implementare traduzioni in `lang/de/fields.php`
@@ -155,16 +172,20 @@ Prima di usare qualsiasi componente Filament:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 ### Prima di committare:
 - [ ] Verificare che non ci siano `->label()` nel codice
 - [ ] Controllare che tutte le traduzioni siano implementate
 - [ ] Testare che le traduzioni funzionino correttamente
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -176,6 +197,8 @@ Prima di usare qualsiasi componente Filament:
 >>>>>>> 12ba306 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 ## Verifica Automatica
 
 ### PHPStan Rule (Ideale)
@@ -220,6 +243,7 @@ rules:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **RICORDA SEMPRE**:
 =======
 >>>>>>> 3057426 (.)
@@ -228,11 +252,14 @@ rules:
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 - MAI usare `->label()` in componenti Filament
 - SEMPRE implementare traduzioni nei file `lang/`
 - SEMPRE struttura espansa (label, placeholder, tooltip, helper_text)
 - SEMPRE sincronizzare IT/EN/DE
 - SEMPRE testare le traduzioni prima del commit
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -249,12 +276,15 @@ rules:
 >>>>>>> 12ba306 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 - MAI `->label()` 
 - SEMPRE traduzioni nei file lang/
 - SEMPRE struttura espansa
 - SEMPRE sincronizzazione IT/EN/DE
 
 *Ultimo aggiornamento: 2025-01-06*
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 3057426 (.)
@@ -264,3 +294,5 @@ rules:
 >>>>>>> 1f9515b (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop

@@ -78,10 +78,14 @@ Mostra documentazione al passaggio del mouse su:
 ```php
 // Digitare 'fil-form' e premere Tab
 <<<<<<< HEAD
+<<<<<<< HEAD
 public static function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
 =======
 public static function form(Form $form): Form
 >>>>>>> 7eb1087 (.)
+=======
+public static function form(Form $form): Form
+>>>>>>> laraxot/develop
 {
     return $form->schema([
         // Digitare 'fil-text' e premere Tab
@@ -167,6 +171,7 @@ Forms\Components\Wizard::make([
 
 ## Best Practices
 
+<<<<<<< HEAD
 1. **Organizzazione del Codice**
    - Usare gli snippet per mantenere una struttura consistente
    - Raggruppare componenti correlati in sezioni
@@ -214,3 +219,6 @@ Forms\Components\Wizard::make([
 - [Filament Documentation](https://filamentphp.com)
 - [VSCode PHP Extension](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
 - [Laravel Extension Pack](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-extension-pack) 
+=======
+1. Organizzazione del codice
+>>>>>>> laraxot/develop

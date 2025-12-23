@@ -19,6 +19,7 @@ class MockCalendarWidget extends BaseCalendarWidget
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $fetchInfo
 =======
      * @param array<string, mixed> $fetchInfo
@@ -39,6 +40,31 @@ class MockCalendarWidget extends BaseCalendarWidget
      *
      * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
 >>>>>>> 61831e43 (.)
+=======
+     * <<<<<<< HEAD
+     * <<<<<<< HEAD
+     * <<<<<<< HEAD.
+     *
+     * @param array<string, mixed> $fetchInfo
+     *                                        =======
+     * @param array<string, mixed> $fetchInfo
+     *
+     * <<<<<<< HEAD
+     * >>>>>>> 161e28f (Lint)
+     * @param array<string, mixed> $fetchInfo
+     * @param array<string, mixed> $fetchInfo
+     *
+     * @return array<int, array<string, string|int>>
+     *                                                                                         =======
+     * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
+     *                                                                                         >>>>>>> a8fbb3e (.)
+     *                                                                                         =======
+     * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
+     *                                                                                         >>>>>>> 24eb066 (Lint)
+     *                                                                                         =======
+     * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
+     *                                                                                         >>>>>>> laraxot/develop
+>>>>>>> laraxot/develop
      */
     public function fetchEvents(array $fetchInfo): array
     {

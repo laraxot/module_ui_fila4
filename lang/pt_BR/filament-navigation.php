@@ -13,10 +13,44 @@ return [
         'created_at' => 'Criado em',
         'updated_at' => 'Editado em',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
     'select-options' => [
         'same-tab' => 'Mesma tab',
         'new-tab' => 'Nova tab',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
     'items' => [
         'empty' => 'Nenhum item',
         'add-item' => 'Adicionar item',
@@ -27,6 +61,23 @@ return [
         'dedent' => 'Recuar',
         'remove' => 'Remover',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
     'items-modal' => [
         'title' => 'Item',
         'label' => 'Nome',

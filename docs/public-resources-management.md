@@ -17,11 +17,18 @@ La struttura corretta per le risorse pubbliche  è la seguente:
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 /var/www/html/<nome progetto>/
 =======
 /var/www/html/_bases/base_techplanner_fila3_mono/
 /var/www/html/saluteora/
 >>>>>>> 7eb1087 (.)
+=======
+/var/www/html/_bases/base_techplanner_fila3_mono/
+/var/www/html/saluteora/
+/var/www/html/_bases/base_techplanner_fila3_mono/
+/var/www/html/saluteora/
+>>>>>>> laraxot/develop
 ├── public_html/           # Directory pubblica principale
 │   ├── images/            # Immagini pubbliche
 │   ├── css/               # File CSS
@@ -32,22 +39,36 @@ La struttura corretta per le risorse pubbliche  è la seguente:
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 > **IMPORTANTE**: MAI utilizzare `/var/www/html/<nome progetto>/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di <nome progetto>.
 =======
 > **IMPORTANTE**: MAI utilizzare `/var/www/html/_bases/base_ptvx_fila3_mono/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di PTVX.
 > **IMPORTANTE**: MAI utilizzare `/var/www/html/saluteora/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di SaluteOra.
 >>>>>>> 7eb1087 (.)
+=======
+> **IMPORTANTE**: MAI utilizzare `/var/www/html/_bases/base_ptvx_fila3_mono/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di PTVX.
+> **IMPORTANTE**: MAI utilizzare `/var/www/html/saluteora/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di SaluteOra.
+> **IMPORTANTE**: MAI utilizzare `/var/www/html/_bases/base_ptvx_fila3_mono/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di PTVX.
+> **IMPORTANTE**: MAI utilizzare `/var/www/html/saluteora/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di SaluteOra.
+>>>>>>> laraxot/develop
 
 ## Tipi di Risorse
 
 ### Immagini
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Le immagini devono essere posizionate in `/var/www/html/<nome progetto>/public_html/images/` e organizzate in sottocartelle per tipologia:
 =======
 Le immagini devono essere posizionate in `/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/` e organizzate in sottocartelle per tipologia:
 Le immagini devono essere posizionate in `/var/www/html/saluteora/public_html/images/` e organizzate in sottocartelle per tipologia:
 >>>>>>> 7eb1087 (.)
+=======
+Le immagini devono essere posizionate in `/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `/var/www/html/saluteora/public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `/var/www/html/saluteora/public_html/images/` e organizzate in sottocartelle per tipologia:
+>>>>>>> laraxot/develop
 
 - `/images/avatars/` - Avatar utenti
 - `/images/logos/` - Loghi
@@ -128,12 +149,21 @@ I font devono essere posizionati in `/public_html/fonts/` e organizzati per fami
     <img 
         src="{{ asset('images/logos/<nome progetto>-logo.svg') }}" 
 <<<<<<< HEAD
+<<<<<<< HEAD
         alt="<nome progetto>" 
 =======
         alt="" 
         src="{{ asset('images/logos/saluteora-logo.svg') }}" 
         alt="SaluteOra" 
 >>>>>>> 7eb1087 (.)
+=======
+        alt="" 
+        src="{{ asset('images/logos/saluteora-logo.svg') }}" 
+        alt="SaluteOra" 
+        alt="" 
+        src="{{ asset('images/logos/saluteora-logo.svg') }}" 
+        alt="SaluteOra" 
+>>>>>>> laraxot/develop
         class="h-8"
     >
 </a>
@@ -149,8 +179,15 @@ I font devono essere posizionati in `/public_html/fonts/` e organizzati per fami
 ## Conclusione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto <nome progetto>.
 =======
 Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto .
 Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto SaluteOra.
 >>>>>>> 7eb1087 (.)
+=======
+Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto .
+Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto SaluteOra.
+Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto .
+Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto SaluteOra.
+>>>>>>> laraxot/develop

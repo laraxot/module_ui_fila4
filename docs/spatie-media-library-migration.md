@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Migrazione da FileUpload a Spatie Media Library
 
 ## 🌍 Analisi Multidimensionale della Migrazione
@@ -24,6 +25,14 @@
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+# Migrazione da FileUpload a Spatie Media Library
+
+## 🌍 Analisi Multidimensionale della Migrazione
+# Migrazione da FileUpload a Spatie Media Library
+
+## 🌍 Analisi Multidimensionale della Migrazione
+>>>>>>> laraxot/develop
 ### **Filosofia & Spiritualità**
 - **Evoluzione Paradigmatica**: Passaggio da gestione **atomistica** (FileUpload singoli) a gestione **sistemica** (Media Library ecosystem)
 - **Humilitas Technologica**: Riconoscere la superiorità di soluzioni specializzate mature
@@ -32,6 +41,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -43,6 +53,11 @@
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### **Economia & Sostenibilità**
 - **ROI Esponenziale**: Riduzione drammatica dei costi di manutenzione
 - **Debito Tecnico**: Eliminazione di custom implementations fragili
@@ -52,6 +67,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -63,6 +79,11 @@
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### **Biologia & Chimica del Codice**
 - **DNA Superiore**: Architettura genetica più robusta con conversioni automatiche
 - **Sistema Immunitario**: Resistenza naturale a bug comuni di file handling
@@ -72,6 +93,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -83,6 +105,11 @@
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### **Politica & Governance**
 - **Democrazia Tecnologica**: Seguire standard di comunità vs autorità interna
 - **Transparency**: Comportamenti predicibili e documentati
@@ -91,6 +118,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 ## 📊 Situazione Attuale (Analisi Completa)
 =======
@@ -114,6 +142,13 @@
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+---
+## 📊 Situazione Attuale (Analisi Completa)
+---
+## 📊 Situazione Attuale (Analisi Completa)
+>>>>>>> laraxot/develop
 ### ✅ **Già Migrati a SpatieMediaLibraryFileUpload**
 ```php
 // User Profile
@@ -122,6 +157,9 @@ SpatieMediaLibraryFileUpload::make('photo_profile')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 // Notify Themes  
 SpatieMediaLibraryFileUpload::make('logo_src')
 // UI Blocks
@@ -133,6 +171,7 @@ SpatieMediaLibraryFileUpload::make('image')
 SpatieMediaLibraryFileUpload::make('image') // ImagesGallery
 ```
 ### ❌ **Da Migrare (FileUpload Standard)**
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -141,6 +180,9 @@ SpatieMediaLibraryFileUpload::make('image') // ImagesGallery
 
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+>>>>>>> laraxot/develop
 // Notify Themes  
 SpatieMediaLibraryFileUpload::make('logo_src')
 // UI Blocks
@@ -152,6 +194,7 @@ SpatieMediaLibraryFileUpload::make('image')
 SpatieMediaLibraryFileUpload::make('image') // ImagesGallery
 ```
 ### ❌ **Da Migrare (FileUpload Standard)**
+<<<<<<< HEAD
 <<<<<<< HEAD
 ```php
 <<<<<<< HEAD
@@ -163,6 +206,8 @@ SpatieMediaLibraryFileUpload::make('image') // ImagesGallery
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 // PatientResource (4 documenti)
 Forms\Components\FileUpload::make('health_card')
 Forms\Components\FileUpload::make('identity_document') 
@@ -172,6 +217,7 @@ Forms\Components\FileUpload::make('pregnancy_certificate')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // DoctorResource
 Forms\Components\FileUpload::make('certifications')
 =======
@@ -179,10 +225,13 @@ Forms\Components\FileUpload::make('certifications')
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 
 // DoctorResource
 Forms\Components\FileUpload::make('certifications')
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 1f9515b (.)
@@ -194,6 +243,12 @@ Forms\Components\FileUpload::make('certifications')
 // DoctorResource
 Forms\Components\FileUpload::make('certifications')
 >>>>>>> dc14e10 (.)
+=======
+// DoctorResource
+Forms\Components\FileUpload::make('certifications')
+// DoctorResource
+Forms\Components\FileUpload::make('certifications')
+>>>>>>> laraxot/develop
 // UI Blocks Standard
 FileUpload::make('image') // Image block
 FileUpload::make('background') // Hero block  
@@ -202,6 +257,7 @@ FileUpload::make('logo') // InfoBlock, LogoBlock
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -213,10 +269,16 @@ FileUpload::make('logo') // InfoBlock, LogoBlock
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 // Appearance Pages
 FileUpload::make('logo') // Logo page
 FileUpload::make('background') // Background, Footer, HeaderNav
 FileUpload::make('logo_header') // Metatag
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -277,6 +339,23 @@ FileUpload::make('logo_header') // Metatag
 >>>>>>> a63dc48 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+// BaseModel SaluteOra - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+```
+
+### 🏗️ **Architettura HasMedia Esistente**
+**SCOPERTA CRUCIALE**: I modelli principali implementano già `HasMedia`!
+// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+// BaseModel SaluteOra - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+### 🏗️ **Architettura HasMedia Esistente**
+**SCOPERTA CRUCIALE**: I modelli principali implementano già `HasMedia`!
+// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+// BaseModel SaluteOra - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
+>>>>>>> laraxot/develop
 abstract class BaseModel extends Model implements HasMedia
 {
     use InteractsWithMedia;
@@ -286,6 +365,9 @@ abstract class BaseModel extends Model implements HasMedia
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 // BaseProfile User Module - IMPLEMENTA GIÀ
 abstract class BaseProfile extends BaseModel implements ProfileContract
     // ... Profili utente pronti!
@@ -296,6 +378,7 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia
 ### **Fase 1: Documentazione e Preparazione**
 #### 1.1 Analisi Impatto Collections
 Ogni tipo di documento dovrà avere la sua collection specifica:
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -304,6 +387,9 @@ Ogni tipo di documento dovrà avere la sua collection specifica:
 
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+>>>>>>> laraxot/develop
 // BaseProfile User Module - IMPLEMENTA GIÀ
 abstract class BaseProfile extends BaseModel implements ProfileContract
     // ... Profili utente pronti!
@@ -314,6 +400,7 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia
 ### **Fase 1: Documentazione e Preparazione**
 #### 1.1 Analisi Impatto Collections
 Ogni tipo di documento dovrà avere la sua collection specifica:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ```php
@@ -326,11 +413,14 @@ Ogni tipo di documento dovrà avere la sua collection specifica:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 // Patient Documents Collections
 'health_card' => 'tessere_sanitarie'
 'identity_document' => 'documenti_identita'  
 'isee_certificate' => 'certificazioni_isee'
 'pregnancy_certificate' => 'certificati_gravidanza'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -342,10 +432,13 @@ Ogni tipo di documento dovrà avere la sua collection specifica:
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 
 // Doctor Documents Collections  
 'certifications' => 'certificazioni_professionali'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 1f9515b (.)
@@ -357,10 +450,17 @@ Ogni tipo di documento dovrà avere la sua collection specifica:
 // Doctor Documents Collections  
 'certifications' => 'certificazioni_professionali'
 >>>>>>> dc14e10 (.)
+=======
+// Doctor Documents Collections  
+'certifications' => 'certificazioni_professionali'
+// Doctor Documents Collections  
+'certifications' => 'certificazioni_professionali'
+>>>>>>> laraxot/develop
 // UI/Appearance Collections
 'logos' => 'loghi_sistema'
 'backgrounds' => 'sfondi_interfaccia' 
 'headers' => 'intestazioni'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -391,6 +491,16 @@ public function registerMediaCollections(): void
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+```
+
+#### 1.2 Configurazione Media Collections
+// In ogni modello che usa media
+public function registerMediaCollections(): void
+#### 1.2 Configurazione Media Collections
+// In ogni modello che usa media
+public function registerMediaCollections(): void
+>>>>>>> laraxot/develop
     $this->addMediaCollection('tessere_sanitarie')
         ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf'])
         ->singleFile();
@@ -400,6 +510,9 @@ public function registerMediaCollections(): void
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
     $this->addMediaCollection('certificazioni_isee')
         ->acceptsMimeTypes(['application/pdf'])
     $this->addMediaCollection('certificati_gravidanza')
@@ -407,6 +520,7 @@ public function registerMediaCollections(): void
 #### 2.1 Creazione Componenti Standardizzati
 // Modules/UI/app/Filament/Components/SpatieDocumentUpload.php
 class SpatieDocumentUpload
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -417,6 +531,11 @@ class SpatieDocumentUpload
         
 =======
 >>>>>>> dc14e10 (.)
+=======
+        ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf'])
+        ->singleFile();
+        
+>>>>>>> laraxot/develop
     $this->addMediaCollection('certificazioni_isee')
         ->acceptsMimeTypes(['application/pdf'])
     $this->addMediaCollection('certificati_gravidanza')
@@ -424,6 +543,7 @@ class SpatieDocumentUpload
 #### 2.1 Creazione Componenti Standardizzati
 // Modules/UI/app/Filament/Components/SpatieDocumentUpload.php
 class SpatieDocumentUpload
+<<<<<<< HEAD
 <<<<<<< HEAD
 {
 <<<<<<< HEAD
@@ -435,6 +555,8 @@ class SpatieDocumentUpload
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
     public static function make(string $name, string $collection): SpatieMediaLibraryFileUpload
     {
         return SpatieMediaLibraryFileUpload::make($name)
@@ -453,10 +575,14 @@ class SpatieDocumentUpload
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
         return static::make('health_card', 'tessere_sanitarie')
             ->imagePreviewHeight('150')
             ->maxSize(5120); // 5MB per documenti leggeri
     public static function forCertifications(): SpatieMediaLibraryFileUpload
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -465,10 +591,14 @@ class SpatieDocumentUpload
     {
 =======
 >>>>>>> dc14e10 (.)
+=======
+    {
+>>>>>>> laraxot/develop
         return static::make('health_card', 'tessere_sanitarie')
             ->imagePreviewHeight('150')
             ->maxSize(5120); // 5MB per documenti leggeri
     public static function forCertifications(): SpatieMediaLibraryFileUpload
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
 <<<<<<< HEAD
@@ -480,6 +610,8 @@ class SpatieDocumentUpload
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
         return static::make('certifications', 'certificazioni_professionali')
             ->multiple()
             ->enableReordering()
@@ -489,27 +621,37 @@ class SpatieDocumentUpload
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 #### 2.2 Helper per Immagini UI
 // Modules/UI/app/Filament/Components/SpatieImageUpload.php  
 class SpatieImageUpload
     public static function forLogo(string $collection = 'logos'): SpatieMediaLibraryFileUpload
         return SpatieMediaLibraryFileUpload::make('logo')
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
     }
 }
 ```
 
+<<<<<<< HEAD
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 #### 2.2 Helper per Immagini UI
 // Modules/UI/app/Filament/Components/SpatieImageUpload.php  
 class SpatieImageUpload
     public static function forLogo(string $collection = 'logos'): SpatieMediaLibraryFileUpload
         return SpatieMediaLibraryFileUpload::make('logo')
+<<<<<<< HEAD
 <<<<<<< HEAD
             ->collection($collection)
 <<<<<<< HEAD
@@ -521,6 +663,8 @@ class SpatieImageUpload
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
             ->image()
             ->disk('public')
             ->imagePreviewHeight('100')
@@ -530,12 +674,16 @@ class SpatieImageUpload
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
     public static function forBackground(string $collection = 'backgrounds'): SpatieMediaLibraryFileUpload
         return SpatieMediaLibraryFileUpload::make('background')
             ->imagePreviewHeight('200')
             ->maxSize(5120) // 5MB
 ### **Fase 3: Implementazione Progressiva**
 #### 3.1 PatientResource - Priorità MASSIMA (Documenti Sensibili)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ```php
@@ -565,12 +713,21 @@ class SpatieImageUpload
     
 =======
 >>>>>>> dc14e10 (.)
+=======
+// Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
+// Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
+// Modules/SaluteOra/app/Filament/Resources/PatientResource.php - getFormSchema()
+
+    }
+    
+>>>>>>> laraxot/develop
     public static function forBackground(string $collection = 'backgrounds'): SpatieMediaLibraryFileUpload
         return SpatieMediaLibraryFileUpload::make('background')
             ->imagePreviewHeight('200')
             ->maxSize(5120) // 5MB
 ### **Fase 3: Implementazione Progressiva**
 #### 3.1 PatientResource - Priorità MASSIMA (Documenti Sensibili)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ```php
@@ -597,12 +754,22 @@ class SpatieImageUpload
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+// Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
+// Modules/SaluteOra/app/Filament/Resources/PatientResource.php - getFormSchema()
+
+// Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
+
+// Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
+// Modules/SaluteOra/app/Filament/Resources/PatientResource.php - getFormSchema()
+>>>>>>> laraxot/develop
 // PRIMA (FileUpload standard)
 'health_card' => Forms\Components\FileUpload::make('health_card')
     ->disk('private')
     ->directory('patient-documents/health-cards')
     ->acceptedFileTypes(['image/jpeg', 'image/png', 'application/pdf'])
     ->maxSize(5120),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -615,6 +782,10 @@ class SpatieImageUpload
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+>>>>>>> laraxot/develop
 // DOPO (SpatieMediaLibraryFileUpload)  
 'health_card' => \Modules\UI\Filament\Components\SpatieDocumentUpload::forHealthCard()
     ->label(trans('<nome progetto>::patients.fields.health_card.label'))
@@ -623,18 +794,25 @@ class SpatieImageUpload
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
     ->label(trans('saluteora::patients.fields.health_card.label'))
     ->helperText(trans('saluteora::patients.fields.health_card.help')),
 #### 3.2 UI Blocks - Standardizzazione Architettura
 // Modules/UI/app/Filament/Blocks/Image.php - Refactoring Completo
 // PRIMA
 FileUpload::make('image'),
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/develop
 
 // DOPO (SpatieMediaLibraryFileUpload)  
 'health_card' => \Modules\UI\Filament\Components\SpatieDocumentUpload::forHealthCard()
     ->label(trans('saluteora::patients.fields.health_card.label'))
     ->helperText(trans('saluteora::patients.fields.health_card.help')),
+<<<<<<< HEAD
 =======
 >>>>>>> 8ee2a17 (.)
 =======
@@ -651,10 +829,19 @@ FileUpload::make('image'),
     ->label(trans('saluteora::patients.fields.health_card.label'))
     ->helperText(trans('saluteora::patients.fields.health_card.help')),
 >>>>>>> dc14e10 (.)
+=======
+    ->label(trans('saluteora::patients.fields.health_card.label'))
+    ->helperText(trans('saluteora::patients.fields.health_card.help')),
+```
+
+    ->label(trans('saluteora::patients.fields.health_card.label'))
+    ->helperText(trans('saluteora::patients.fields.health_card.help')),
+>>>>>>> laraxot/develop
 #### 3.2 UI Blocks - Standardizzazione Architettura
 // Modules/UI/app/Filament/Blocks/Image.php - Refactoring Completo
 // PRIMA
 FileUpload::make('image'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -666,6 +853,8 @@ FileUpload::make('image'),
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 // DOPO  
 \Modules\UI\Filament\Components\SpatieImageUpload::make('image', 'content_images')
     ->imagePreviewHeight('250')
@@ -674,12 +863,16 @@ FileUpload::make('image'),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 ### **Fase 4: Migrazione Database e Conversioni**
 #### 4.1 Migrazione Dati Esistenti
 // Database/Migrations/migrate_file_uploads_to_media_library.php
 public function up(): void
     // Migrazione automatica dei file esistenti
     $patients = Patient::whereNotNull('health_card')->get();
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -689,12 +882,17 @@ public function up(): void
 
 =======
 >>>>>>> dc14e10 (.)
+=======
+```
+
+>>>>>>> laraxot/develop
 ### **Fase 4: Migrazione Database e Conversioni**
 #### 4.1 Migrazione Dati Esistenti
 // Database/Migrations/migrate_file_uploads_to_media_library.php
 public function up(): void
     // Migrazione automatica dei file esistenti
     $patients = Patient::whereNotNull('health_card')->get();
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 <<<<<<< HEAD
@@ -706,11 +904,14 @@ public function up(): void
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
     foreach($patients as $patient) {
         if($patient->health_card && Storage::exists($patient->health_card)) {
             $patient->addMediaFromUrl(Storage::url($patient->health_card))
                 ->toMediaCollection('tessere_sanitarie');
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -721,6 +922,8 @@ public function up(): void
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
     }
 }
 ```
@@ -728,6 +931,7 @@ public function up(): void
 #### 4.2 Rimozione Campi Database Obsoleti
 
 ```php
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 1f9515b (.)
@@ -738,6 +942,10 @@ public function up(): void
 =======
 #### 4.2 Rimozione Campi Database Obsoleti
 >>>>>>> dc14e10 (.)
+=======
+#### 4.2 Rimozione Campi Database Obsoleti
+#### 4.2 Rimozione Campi Database Obsoleti
+>>>>>>> laraxot/develop
 // Dopo migrazione completa - rimuovere colonne file paths
 Schema::table('users', function (Blueprint $table) {
     $table->dropColumn([
@@ -748,6 +956,7 @@ Schema::table('users', function (Blueprint $table) {
         'certifications'
     ]);
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -776,21 +985,37 @@ public function registerMediaCollections(): void
 {
 =======
 >>>>>>> 4d64b9a (.)
+=======
+// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
+// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
+// Modules/SaluteOra/app/Models/User.php - Aggiunta registerMediaCollections
+
+public function registerMediaCollections(): void
+{
+## 🔧 Implementazione Tecnica Dettagliata
+### **Media Collections Configuration**
+// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
+// Modules/SaluteOra/app/Models/User.php - Aggiunta registerMediaCollections
+>>>>>>> laraxot/develop
     // Documenti paziente
         ->singleFile()
         ->useDisk('private');
     // Certificazioni dottore (multiple)
     $this->addMediaCollection('certificazioni_professionali')
 public function registerMediaConversions(Media $media = null): void
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 ```
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> dc14e10 (.)
 ## 🔧 Implementazione Tecnica Dettagliata
@@ -821,12 +1046,24 @@ public function registerMediaCollections(): void
 {
 =======
 >>>>>>> dc14e10 (.)
+=======
+## 🔧 Implementazione Tecnica Dettagliata
+### **Media Collections Configuration**
+// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
+// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
+// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
+// Modules/SaluteOra/app/Models/User.php - Aggiunta registerMediaCollections
+
+public function registerMediaCollections(): void
+{
+>>>>>>> laraxot/develop
     // Documenti paziente
         ->singleFile()
         ->useDisk('private');
     // Certificazioni dottore (multiple)
     $this->addMediaCollection('certificazioni_professionali')
 public function registerMediaConversions(Media $media = null): void
+<<<<<<< HEAD
 <<<<<<< HEAD
 {
 <<<<<<< HEAD
@@ -838,6 +1075,8 @@ public function registerMediaConversions(Media $media = null): void
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
     $this->addMediaConversion('thumbnail')
         ->width(300)
         ->height(300)
@@ -847,10 +1086,14 @@ public function registerMediaConversions(Media $media = null): void
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
     $this->addMediaConversion('preview')
         ->width(600)
         ->height(400)
 ### **Accessors per Backward Compatibility**
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ```php
@@ -879,10 +1122,18 @@ public function registerMediaConversions(Media $media = null): void
         
 =======
 >>>>>>> dc14e10 (.)
+=======
+// Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
+// Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
+// Modules/SaluteOra/app/Models/User.php - Accessors di transizione
+
+        
+>>>>>>> laraxot/develop
     $this->addMediaConversion('preview')
         ->width(600)
         ->height(400)
 ### **Accessors per Backward Compatibility**
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ```php
@@ -909,6 +1160,15 @@ public function registerMediaConversions(Media $media = null): void
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+// Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
+// Modules/SaluteOra/app/Models/User.php - Accessors di transizione
+
+// Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
+
+// Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
+// Modules/SaluteOra/app/Models/User.php - Accessors di transizione
+>>>>>>> laraxot/develop
 /**
  * Accessor per compatibilità con codice esistente.
  * Restituisce URL del primo media nella collection health_card.
@@ -918,6 +1178,9 @@ public function getHealthCardAttribute(): ?string
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
     return $this->getFirstMediaUrl('tessere_sanitarie');
  * Accessor per array di certificazioni (dottori).
 public function getCertificationsAttribute(): array
@@ -925,6 +1188,7 @@ public function getCertificationsAttribute(): array
         ->map(fn($media) => $media->getUrl())
         ->toArray();
 ### **View Components Integration**
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -933,6 +1197,9 @@ public function getCertificationsAttribute(): array
 {
 =======
 >>>>>>> dc14e10 (.)
+=======
+{
+>>>>>>> laraxot/develop
     return $this->getFirstMediaUrl('tessere_sanitarie');
  * Accessor per array di certificazioni (dottori).
 public function getCertificationsAttribute(): array
@@ -940,6 +1207,7 @@ public function getCertificationsAttribute(): array
         ->map(fn($media) => $media->getUrl())
         ->toArray();
 ### **View Components Integration**
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -951,11 +1219,14 @@ public function getCertificationsAttribute(): array
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 ```blade
 {{-- resources/views/components/patient-documents.blade.php --}}
 <div class="grid grid-cols-2 gap-4">
     @if($patient->hasMedia('tessere_sanitarie'))
         <div class="document-preview">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -981,6 +1252,15 @@ public function getCertificationsAttribute(): array
 >>>>>>> a63dc48 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+            <h4>{{ __('saluteora::patients.health_card') }}</h4>
+            <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
+            <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
+            <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
+            <h4>{{ __('saluteora::patients.health_card') }}</h4>
+            <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
+            <h4>{{ __('saluteora::patients.health_card') }}</h4>
+>>>>>>> laraxot/develop
             <img src="{{ $patient->getFirstMediaUrl('tessere_sanitarie', 'thumbnail') }}" 
                  alt="Tessera Sanitaria"
                  class="w-full h-32 object-cover rounded">
@@ -992,13 +1272,17 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {{ __('<nome progetto>::common.view_document') }}
 =======
 >>>>>>> 1f9515b (.)
+=======
+>>>>>>> laraxot/develop
                 {{ __('saluteora::common.view_document') }}
             </a>
         </div>
     @endif
+<<<<<<< HEAD
 <<<<<<< HEAD
     @if($patient->hasMedia('certificazioni_isee'))
             <h4>{{ __('<nome progetto>::patients.isee_certificate') }}</h4>
@@ -1015,6 +1299,12 @@ public function getCertificationsAttribute(): array
 >>>>>>> a63dc48 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+    
+    @if($patient->hasMedia('certificazioni_isee'))
+        <div class="document-preview">
+            <h4>{{ __('saluteora::patients.isee_certificate') }}</h4>
+>>>>>>> laraxot/develop
                 {{ __('<nome progetto>::common.view_document') }}
                 {{ __('saluteora::common.view_document') }}
             </a>
@@ -1025,6 +1315,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
@@ -1036,6 +1327,11 @@ public function getCertificationsAttribute(): array
 =======
             <h4>{{ __('saluteora::patients.isee_certificate') }}</h4>
 >>>>>>> dc14e10 (.)
+=======
+            <h4>{{ __('saluteora::patients.isee_certificate') }}</h4>
+            <h4>{{ __('saluteora::patients.isee_certificate') }}</h4>
+            <h4>{{ __('saluteora::patients.isee_certificate') }}</h4>
+>>>>>>> laraxot/develop
             <div class="bg-red-100 h-32 flex items-center justify-center rounded">
                 <i class="fas fa-file-pdf text-red-600 text-3xl"></i>
             </div>
@@ -1045,10 +1341,14 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
                 {{ __('<nome progetto>::common.download_pdf') }}
                 {{ __('saluteora::common.download_pdf') }}
 </div>
 ## 🚀 Vantaggi della Migrazione
+<<<<<<< HEAD
 =======
                class="text-blue-600 text-sm">
                 {{ __('saluteora::common.download_pdf') }}
@@ -1087,6 +1387,21 @@ public function getCertificationsAttribute(): array
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+               class="text-blue-600 text-sm">
+                {{ __('saluteora::common.download_pdf') }}
+               class="text-blue-600 text-sm">
+               class="text-blue-600 text-sm">
+                {{ __('<nome progetto>::common.download_pdf') }}
+                {{ __('saluteora::common.download_pdf') }}
+            </a>
+        </div>
+    @endif
+                {{ __('<nome progetto>::common.download_pdf') }}
+                {{ __('saluteora::common.download_pdf') }}
+</div>
+## 🚀 Vantaggi della Migrazione
+>>>>>>> laraxot/develop
 ### **Tecnici**
 - ✅ **Conversioni Automatiche**: Thumbnail, preview, optimized images
 - ✅ **Storage Flessibile**: Multiple disks, cloud storage ready
@@ -1097,6 +1412,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1108,6 +1424,11 @@ public function getCertificationsAttribute(): array
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### **Business Logic**
 - ✅ **Audit Trail**: Chi ha caricato cosa e quando
 - ✅ **Versioning**: Storia completa delle modifiche documenti
@@ -1117,6 +1438,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1128,6 +1450,11 @@ public function getCertificationsAttribute(): array
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### **Developer Experience**
 - ✅ **Type Safety**: Interface HasMedia garantisce contratti
 - ✅ **IDE Support**: Autocompletamento metodi media
@@ -1137,6 +1464,7 @@ public function getCertificationsAttribute(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1148,11 +1476,17 @@ public function getCertificationsAttribute(): array
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### **User Experience**
 - ✅ **Drag & Drop**: Upload intuitivo
 - ✅ **Preview**: Anteprima immediata documenti
 - ✅ **Progress**: Indicatori di upload avanzati
 - ✅ **Error Handling**: Gestione errori professionale
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1182,6 +1516,15 @@ public function getCertificationsAttribute(): array
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+---
+
+## 🛡️ Sicurezza e Privacy
+### **GDPR Compliance**
+## 🛡️ Sicurezza e Privacy
+### **GDPR Compliance**
+>>>>>>> laraxot/develop
 // Auto-deletion per privacy compliance
 $this->addMediaCollection('documenti_temporanei')
     ->acceptsMimeTypes(['application/pdf'])
@@ -1191,6 +1534,9 @@ $this->addMediaCollection('documenti_temporanei')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 // Retention policies
 public function scopeExpiredDocuments($query)
     return $query->whereHas('media', function($q) {
@@ -1200,6 +1546,7 @@ public function scopeExpiredDocuments($query)
 // Policy-based access
 public function downloadDocument(Media $media): Response
     $this->authorize('download', $media);
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -1208,6 +1555,9 @@ public function downloadDocument(Media $media): Response
 
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+>>>>>>> laraxot/develop
 // Retention policies
 public function scopeExpiredDocuments($query)
     return $query->whereHas('media', function($q) {
@@ -1217,6 +1567,7 @@ public function scopeExpiredDocuments($query)
 // Policy-based access
 public function downloadDocument(Media $media): Response
     $this->authorize('download', $media);
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 <<<<<<< HEAD
@@ -1228,11 +1579,14 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
     if($media->collection_name === 'tessere_sanitarie') {
         // Log accesso a documento sensibile
         activity()
             ->performedOn($media)
             ->log('downloaded_health_card');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1261,6 +1615,14 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+    }
+    
+    return response()->download($media->getPath());
+## 📋 Checklist Migrazione
+    return response()->download($media->getPath());
+## 📋 Checklist Migrazione
+>>>>>>> laraxot/develop
 ### **Pre-Migrazione**
 - [ ] Backup completo database e files
 - [ ] Analisi spazio disco necessario (conversioni)
@@ -1270,6 +1632,7 @@ public function downloadDocument(Media $media): Response
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1281,6 +1644,11 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### **Durante Migrazione**
 - [ ] Implementazione per feature (non tutto insieme)
 - [ ] Test regression dopo ogni batch
@@ -1290,6 +1658,7 @@ public function downloadDocument(Media $media): Response
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1301,11 +1670,17 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### **Post-Migrazione**  
 - [ ] Cleanup file obsoleti
 - [ ] Performance comparison
 - [ ] User training su nuove features
 - [ ] Documentation update completa
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1344,10 +1719,20 @@ public function downloadDocument(Media $media): Response
 >>>>>>> a63dc48 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+---
+
+## 🔗 Collegamenti e Riferimenti
+### **Documentazione Correlata**
+## 🔗 Collegamenti e Riferimenti
+### **Documentazione Correlata**
+>>>>>>> laraxot/develop
 - [Spatie Media Library Official Docs](https://spatie.be/project_docs/laravel-medialibrary)
 - [Filament Plugin Documentation](https://filamentphp.com/plugins/filament-spatie-media-library)
 - [UI Components Docs](./filament-components-rules.md)
 - [Modulo Generico Models Architecture](../<nome modulo>/docs/models-architecture.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1367,17 +1752,28 @@ public function downloadDocument(Media $media): Response
 
 =======
 >>>>>>> 4d64b9a (.)
+=======
+- [Spatie Media Library Official Docs](https://spatie.be/docs/laravel-medialibrary)
+- [SaluteOra Models Architecture](../SaluteOra/docs/models-architecture.md)
+
+- [Spatie Media Library Official Docs](https://spatie.be/docs/laravel-medialibrary)
+- [SaluteOra Models Architecture](../SaluteOra/docs/models-architecture.md)
+>>>>>>> laraxot/develop
 ### **Repository e Risorse**
 - [GitHub Filament Plugin](https://github.com/filamentphp/spatie-laravel-media-library-plugin)
 - [Spatie Media Library](https://github.com/spatie/laravel-medialibrary)
 ## 📝 Note di Implementazione
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/develop
 
 ---
 
 ## 🔗 Collegamenti e Riferimenti
 
 ### **Documentazione Correlata**
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a63dc48 (.)
@@ -1397,10 +1793,16 @@ public function downloadDocument(Media $media): Response
 
 =======
 >>>>>>> dc14e10 (.)
+=======
+- [Spatie Media Library Official Docs](https://spatie.be/docs/laravel-medialibrary)
+- [SaluteOra Models Architecture](../SaluteOra/docs/models-architecture.md)
+
+>>>>>>> laraxot/develop
 ### **Repository e Risorse**
 - [GitHub Filament Plugin](https://github.com/filamentphp/spatie-laravel-media-library-plugin)
 - [Spatie Media Library](https://github.com/spatie/laravel-medialibrary)
 ## 📝 Note di Implementazione
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1412,6 +1814,8 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 ### **Ordine di Priorità**
 1. **CRITICO**: PatientResource (documenti sensibili)
 2. **ALTO**: DoctorResource (certificazioni professionali)  
@@ -1421,6 +1825,7 @@ public function downloadDocument(Media $media): Response
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1432,6 +1837,11 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### **Rollback Strategy**
 - Mantenere FileUpload come fallback per 30 giorni
 - Feature flags per switch graduale
@@ -1441,6 +1851,7 @@ public function downloadDocument(Media $media): Response
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -1452,11 +1863,17 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### **Performance Considerations**
 - Conversions su queue per files grandi
 - CDN configuration per immagini pubbliche
 - Database indexing su media collections
 - Cleanup automatico temporary uploads
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1487,11 +1904,17 @@ public function downloadDocument(Media $media): Response
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
+*Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 3.x* 
+>>>>>>> laraxot/develop
 
 ---
 
 *Ultimo aggiornamento: Dicembre 2024*  
 *Versione: 1.0*  
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1523,3 +1946,16 @@ public function downloadDocument(Media $media): Response
 >>>>>>> a63dc48 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+*Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 3.x* 
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
+*Ultimo aggiornamento: Dicembre 2024*  
+*Versione: 1.0*  
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
+*Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 3.x* 
+*Ultimo aggiornamento: Dicembre 2024*  
+*Versione: 1.0*  
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
+*Compatibilità: Laraxot SaluteOra, Spatie Media Library 11.x, Filament 3.x* 
+>>>>>>> laraxot/develop

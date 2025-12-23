@@ -16,6 +16,7 @@ class Simple extends ViewComponent
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct() {}
 =======
     public function __construct()
@@ -37,6 +38,11 @@ class Simple extends ViewComponent
     {
     }
 >>>>>>> 61831e43 (.)
+=======
+    public function __construct()
+    {
+    }
+>>>>>>> laraxot/develop
 
     public function render(): View
     {

@@ -1,8 +1,32 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 @php
     $gridDirection = $getGridDirection() ?? 'column';
     $id = $getId();
@@ -12,17 +36,79 @@ declare(strict_types=1);
 @endphp
 
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
+<<<<<<< HEAD
     <div
         {{
+=======
+<<<<<<< HEAD
+    <div
+        {{
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div
+        {{
+=======
+=======
+>>>>>>> origin/develop
+    <x-filament::grid
+        :default="$getColumns('default')"
+        :sm="$getColumns('sm')"
+        :md="$getColumns('md')"
+        :lg="$getColumns('lg')"
+        :xl="$getColumns('xl')"
+        :two-xl="$getColumns('2xl')"
+        :is-grid="! $isInline"
+        :direction="$gridDirection"
+        :attributes="
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+    <div
+        {{
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
             \Filament\Support\prepare_inherited_attributes($attributes)
                 ->merge($getExtraAttributes(), escape: false)
                 ->class([
                     'fi-fo-radio gap-4',
                     '-mt-4' => (! $isInline) && ($gridDirection === 'column'),
                     'flex flex-wrap' => $isInline,
+<<<<<<< HEAD
                     'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6' => ! $isInline,
                 ])
         }}
+=======
+<<<<<<< HEAD
+                    'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6' => ! $isInline,
+                ])
+        }}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6' => ! $isInline,
+                ])
+        }}
+=======
+                ])
+        "
+>>>>>>> a12f125f4a (.)
+=======
+                    'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6' => ! $isInline,
+                ])
+        }}
+>>>>>>> b93ef594b4 (.)
+=======
+                ])
+        "
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
     >
         @foreach ($getOptions() as $value => $label)
             <div
@@ -66,5 +152,25 @@ declare(strict_types=1);
                 </label>
             </div>
         @endforeach
+<<<<<<< HEAD
     </div>
+=======
+<<<<<<< HEAD
+    </div>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </div>
+=======
+    </x-filament::grid>
+>>>>>>> a12f125f4a (.)
+=======
+    </div>
+>>>>>>> b93ef594b4 (.)
+=======
+    </x-filament::grid>
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 </x-dynamic-component>

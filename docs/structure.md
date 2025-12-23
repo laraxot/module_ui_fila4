@@ -1,7 +1,13 @@
 # Modulo UI
 
 Data: 2025-04-23 19:09:56
+<<<<<<< HEAD
 ## Informazioni generali
+=======
+
+## Informazioni generali
+
+>>>>>>> laraxot/develop
 - **Namespace principale**: Modules\\UI
 Modules\\UI\\Database\\Factories
 Modules\\UI\\Database\\Seeders
@@ -10,8 +16,16 @@ Marco Sottana
 - **Dipendenze**: owenvoke/blade-fontawesome * repositories type path url ../User type path url ../Tenant type path url ../Xot scripts post-autoload-dump1 @php vendor/bin/testbench package:discover --ansi 
 - **Totale file PHP**: 330
 - **Totale classi/interfacce**: 56
+<<<<<<< HEAD
 ## Struttura delle directory
 ```
+=======
+
+## Struttura delle directory
+
+```
+
+>>>>>>> laraxot/develop
 .git
 .git/branches
 .git/hooks
@@ -436,7 +450,14 @@ tests
 tests/Feature
 tests/Unit
 tests_old
+<<<<<<< HEAD
 ## Namespace e autoload
+=======
+```
+
+## Namespace e autoload
+
+>>>>>>> laraxot/develop
 ```json
     "autoload": {
         "psr-4": {
@@ -447,6 +468,10 @@ tests_old
     },
     "require": {
         "owenvoke/blade-fontawesome": "*"
+<<<<<<< HEAD
+=======
+    },
+>>>>>>> laraxot/develop
     "require-dev": {},
     "repositories": [
         {
@@ -459,16 +484,31 @@ tests_old
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+<<<<<<< HEAD
+=======
+        ],
+>>>>>>> laraxot/develop
         "analyse": "vendor/bin/phpstan analyse",
         "test": "./vendor/bin/pest --no-coverage",
         "test-coverage": "vendor/bin/pest --coverage-html coverage",
         "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+<<<<<<< HEAD
+=======
+    },
+>>>>>>> laraxot/develop
     "config": {
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
+<<<<<<< HEAD
 ## Dipendenze da altri moduli
+=======
+```
+
+## Dipendenze da altri moduli
+
+>>>>>>> laraxot/develop
 -       8 Modules\Xot\Actions\GetViewAction;
 -       5 Modules\Xot\View\Components\XotBaseComponent;
 -       4 Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
@@ -479,9 +519,19 @@ tests_old
 -       1 Modules\Xot\Filament\Widgets\XotBaseWidget;
 -       1 Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 -       1 Modules\Xot\Filament\Blocks\XotBaseBlock;
+<<<<<<< HEAD
 ## Collegamenti alla documentazione generale
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
+=======
+
+## Collegamenti alla documentazione generale
+
+- [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
+- [Report PHPStan](/docs/phpstan/)
+
+
+>>>>>>> laraxot/develop
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
 * [structure.md](../../../Gdpr/docs/structure.md)
@@ -499,6 +549,7 @@ tests_old
 * [structure.md](../../../Cms/docs/structure.md)
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
+<<<<<<< HEAD
 - [Analisi strutturale complessiva](/project_docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/project_docs/phpstan/)
 * [structure.md](bashscripts/project_docs/structure.md)
@@ -517,3 +568,6 @@ tests_old
 * [structure.md](../../../Cms/project_docs/structure.md)
 * [structure.md](../../../Cms/project_docs/themes/structure.md)
 * [structure.md](../../../Cms/project_docs/components/structure.md)
+=======
+
+>>>>>>> laraxot/develop

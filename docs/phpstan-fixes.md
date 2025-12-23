@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # PHPStan Fixes - Gennaio 2025
 
 ## Modulo UI - Correzioni Completate
@@ -57,6 +58,22 @@
 
 =======
 # Correzioni PHPStan - Modulo UI
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 41f976e (.)
+# Correzioni PHPStan Livello 7 - Modulo UI
+=======
+# Correzioni PHPStan - Modulo UI
+>>>>>>> f89ff0a (.)
+=======
+# Correzioni PHPStan - Modulo UI
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 
 Questo documento traccia gli errori PHPStan identificati nel modulo UI e le relative soluzioni implementate.
 
@@ -85,6 +102,45 @@ Cannot access property $id on Illuminate\Database\Eloquent\Model|null.
 ->body('Record ID: ' . ($record?->id ?? 'N/A'))
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+2. Aggiunti controlli `method_exists` e `isset` prima di chiamare metodi o accedere a proprietà sull'oggetto `$livewire`:
+
+```php
+if ($livewire) {
+    // Use isset to safely check if the property exists (for magic properties)
+    if (isset($livewire->layoutView)) {
+        $livewire->layoutView = $newLayout;
+    }
+    
+    // These methods should be available on Filament components
+    if (method_exists($livewire, 'dispatch')) {
+        $livewire->dispatch('$refresh');
+        $livewire->dispatch('refreshTable');
+    }
+    
+    if (method_exists($livewire, 'resetTable')) {
+        $livewire->resetTable();
+    }
+}
+```
+
+Questo approccio è più robusto e previene errori a runtime quando l'oggetto `$livewire` non ha i metodi o le proprietà previste.
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 8a76661 (.)
+=======
+>>>>>>> 64e34f5 (.)
+>>>>>>> 41f976e (.)
+# UI Module - PHPStan Level 7 Fixes - Gennaio 2025
+=======
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 ### 2. Mixed Type Casting - RadioCollection
 
 **Problema**: Errori di casting da `mixed` a `string` nel componente RadioCollection.
@@ -106,6 +162,13 @@ $stringValue = is_string($value) ? $value : (string) $value;
 ```
 
 ## Componenti Filament Personalizzati
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f89ff0a (.)
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 
 ### RadioCollection Component
 
@@ -164,6 +227,27 @@ if ($record !== null && property_exists($record, 'id')) {
 
 ## Note per Sviluppatori
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+---
+*Ultimo aggiornamento: Gennaio 2025*
+*Stato: 🔄 In Corso - ~2 errori PHPStan rimanenti*
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7da17b2 (.)
+=======
+>>>>>>> 8a76661 (.)
+=======
+>>>>>>> 64e34f5 (.)
+>>>>>>> 41f976e (.)
+=======
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 ### Componenti Filament Personalizzati
 
 1. **Null Safety**: Sempre utilizzare null-safe operators quando si accede a proprietà di modelli
@@ -201,4 +285,11 @@ if ($record !== null && property_exists($record, 'id')) {
 1. **Error States**: Gestire gracefully gli stati di errore
 2. **Loading States**: Implementare stati di caricamento appropriati
 3. **Accessibility**: Assicurare accessibilità per tutti i componenti
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+<<<<<<< HEAD
+>>>>>>> f89ff0a (.)
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop

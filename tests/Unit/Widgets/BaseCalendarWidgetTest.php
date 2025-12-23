@@ -7,6 +7,7 @@ namespace Modules\UI\Tests\Unit\Widgets;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
 <<<<<<< HEAD
 use Modules\UI\Filament\Widgets\FullCalendarWidget;
@@ -83,10 +84,13 @@ class MockEventModel extends Model
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
 use Modules\UI\Filament\Widgets\UserCalendarWidget;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
@@ -94,10 +98,13 @@ use Modules\UI\Filament\Widgets\UserCalendarWidget;
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
 
 beforeEach(function () {
     $this->widget = new class extends UserCalendarWidget {
         public function getActionName(string $function): string
+<<<<<<< HEAD
 <<<<<<< HEAD
         {
             unset($function);
@@ -238,6 +245,12 @@ describe('BaseCalendarWidget Event Management', function () {
 =======
             return 'Modules\\UI\\Tests\\Unit\\Widgets\\NonExistingAction';
 >>>>>>> 24eb066 (Lint)
+=======
+        {
+            unset($function);
+
+            return 'Modules\\UI\\Tests\\Unit\\Widgets\\NonExistingAction';
+>>>>>>> laraxot/develop
         }
     };
 
@@ -250,6 +263,7 @@ describe('UserCalendarWidget Basics', function () {
     });
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     it('handles empty event list', static function () {
@@ -285,6 +299,10 @@ describe('UserCalendarWidget Basics', function () {
 describe('UserCalendarWidget Event Management', function () {
     it('returns empty events if action class does not exist', function () {
 >>>>>>> 61831e43 (.)
+=======
+describe('UserCalendarWidget Event Management', function () {
+    it('returns empty events if action class does not exist', function () {
+>>>>>>> laraxot/develop
         $fetchInfo = [
             'start' => '2025-01-01T00:00:00',
             'end' => '2025-01-31T23:59:59',
@@ -295,6 +313,7 @@ describe('UserCalendarWidget Event Management', function () {
         expect($events)->toBeArray();
         expect($events)->toHaveCount(0);
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -345,6 +364,8 @@ describe('UserCalendarWidget Event Management', function () {
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
 });
 
 describe('UserCalendarWidget Form Schema', function () {
@@ -373,6 +394,7 @@ describe('UserCalendarWidget Form Schema', function () {
         expect($gridSchema[0])->toBeInstanceOf(DateTimePicker::class);
         expect($gridSchema[1])->toBeInstanceOf(DateTimePicker::class);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -703,5 +725,9 @@ describe('BaseCalendarWidget Integration', static function () {
         expect($gridSchema[0]->getName())->toBe('starts_at');
         expect($gridSchema[1]->getName())->toBe('ends_at');
 >>>>>>> 61831e43 (.)
+=======
+        expect($gridSchema[0]->getName())->toBe('starts_at');
+        expect($gridSchema[1]->getName())->toBe('ends_at');
+>>>>>>> laraxot/develop
     });
 });

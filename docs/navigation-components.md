@@ -29,6 +29,7 @@ Il componente `user-dropdown` è progettato per gestire automaticamente la visua
     'width' => '48',
     'contentClasses' => 'py-1 bg-white dark:bg-gray-800',
 <<<<<<< HEAD
+<<<<<<< HEAD
 ])
 
 @php
@@ -263,3 +264,5 @@ return [
 - [Layout](./layout-components.md)
 - [Accessibilità](./standards/accessibility.md) 
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop

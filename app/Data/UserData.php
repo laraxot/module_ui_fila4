@@ -20,6 +20,7 @@ final class UserData extends Data
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
@@ -37,4 +38,8 @@ final class UserData extends Data
     ) {
     }
 >>>>>>> 61831e43 (.)
+=======
+    ) {
+    }
+>>>>>>> laraxot/develop
 }

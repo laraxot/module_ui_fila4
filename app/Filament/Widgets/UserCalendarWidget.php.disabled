@@ -9,6 +9,7 @@ namespace Modules\UI\Filament\Widgets;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +20,8 @@ namespace Modules\UI\Filament\Widgets;
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
 
 use Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
 use Filament\Schemas\Components\Grid;
@@ -54,6 +57,7 @@ class UserCalendarWidget extends FullCalendarWidget
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -65,6 +69,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
 use App\Filament\Resources\EventResource;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Grid;
@@ -101,6 +107,7 @@ class UserCalendarWidget extends FullCalendarWidget
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,6 +125,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
 
 use Saade\FilamentFullCalendar\Widgets\Concerns\InteractsWithEvents;
 use Filament\Schemas\Components\Grid;
@@ -153,6 +162,7 @@ class UserCalendarWidget extends FullCalendarWidget
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -170,12 +180,15 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
         return app($action)->execute($fetchInfo);
     }
 
     public function getFormSchema(): array
     {
         $action = $this->getActionName(__FUNCTION__);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +203,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
         
         if (class_exists($action)) {
             return app($action)->execute();
@@ -229,6 +244,7 @@ class UserCalendarWidget extends FullCalendarWidget
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -240,6 +256,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
 
         if (class_exists($action)) {
             return app($action)->execute();
@@ -279,6 +297,7 @@ class UserCalendarWidget extends FullCalendarWidget
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -296,6 +315,8 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
         
         if (class_exists($action)) {
             return app($action)->execute();
@@ -335,6 +356,7 @@ class UserCalendarWidget extends FullCalendarWidget
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 }
@@ -358,8 +380,13 @@ class UserCalendarWidget extends FullCalendarWidget
 >>>>>>> b55470f (.)
 >>>>>>> 161e28f (Lint)
 =======
+=======
+>>>>>>> laraxot/develop
 }
 }
 }
 }
+<<<<<<< HEAD
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop

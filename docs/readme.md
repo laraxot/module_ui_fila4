@@ -3,10 +3,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c79fdcd (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 # 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -15,9 +18,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![PHPStan level 10](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 =======
 =======
+=======
+>>>>>>> laraxot/develop
 [![PHPStan level 10](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 # 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
 
@@ -25,6 +31,7 @@
 [![Filament 4.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
+<<<<<<< HEAD
 >>>>>>> 61831e43 (.)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 >>>>>>> 161e28f (Lint)
@@ -43,6 +50,9 @@
 =======
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 >>>>>>> 7eb1087 (.)
+=======
+[![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
+>>>>>>> laraxot/develop
 [![Translation Ready](https://img.shields.io/badge/Translation-IT%20%7C%20EN%20%7C%20DE-green.svg)](https://laravel.com/docs/localization)
 [![Blade Components](https://img.shields.io/badge/Blade-Components%20Ready-orange.svg)](https://laravel.com/docs/blade)
 [![Design System](https://img.shields.io/badge/Design-System%20Ready-purple.svg)](https://designsystem.digital.gov/)
@@ -107,12 +117,15 @@ class UserCalendarWidget extends XotBaseWidget
 // Sistema layout tabelle responsive
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1899c5f (.)
 =======
 >>>>>>> c79fdcd (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 # Modulo UI - Documentazione
 
 ## Panoramica
@@ -127,6 +140,7 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
 <<<<<<< HEAD
 =======
@@ -141,6 +155,11 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 - **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
 - **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
 >>>>>>> 61831e43 (.)
+=======
+- **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
+- **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
+- **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
+>>>>>>> laraxot/develop
 
 ## File di Traduzione
 
@@ -152,6 +171,7 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
 <<<<<<< HEAD
 =======
@@ -166,6 +186,11 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 - `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
 - `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
 >>>>>>> 61831e43 (.)
+=======
+- `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
+- `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
+- `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
+>>>>>>> laraxot/develop
 
 ### Fix Implementati
 - [Fix Traduzioni Opening Hours Field](opening_hours_translation_fix.md) - **REGOLA CRITICA**: Sincronizzazione obbligatoria tra lingue IT/EN
@@ -173,10 +198,13 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c79fdcd (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 - [Analisi TableLayoutEnum](table_layout_enum_analysis.md) - **NUOVO**: Documentazione completa enum layout tabelle
 
 ## Regole Critiche
@@ -230,16 +258,20 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### ✅ **PHPStan level 10 Compliance**
 - **File Core Certificati**: 12/12 file core raggiungono level 10
 =======
 =======
+=======
+>>>>>>> laraxot/develop
 ### ✅ **PHPStan level 10 Compliance**
 - **File Core Certificati**: 12/12 file core raggiungono level 10
 ### ✅ **PHPStan Level 9 Compliance**
 - **File Core Certificati**: 12/12 file core raggiungono Level 9
 ### ✅ **PHPStan Level 9 Compliance**
 - **File Core Certificati**: 12/12 file core raggiungono Level 9
+<<<<<<< HEAD
 >>>>>>> 61831e43 (.)
 ### ✅ **PHPStan Level 9 Compliance**
 - **File Core Certificati**: 12/12 file core raggiungono Level 9
@@ -256,6 +288,10 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 ### ✅ **PHPStan Level 9 Compliance**
 - **File Core Certificati**: 12/12 file core raggiungono Level 9
 >>>>>>> 7eb1087 (.)
+=======
+### ✅ **PHPStan Level 9 Compliance**
+- **File Core Certificati**: 12/12 file core raggiungono Level 9
+>>>>>>> laraxot/develop
 - **Type Safety**: 100% sui componenti principali
 - **Runtime Safety**: 100% con error handling robusto
 - **Template Types**: Risolti tutti i problemi Collection generics
@@ -579,6 +615,7 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [ ] Codice passa PHPStan level 10
 =======
 =======
@@ -597,6 +634,12 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 =======
 - [ ] Codice passa PHPStan Level 9
 >>>>>>> 7eb1087 (.)
+=======
+- [ ] Codice passa PHPStan level 10
+- [ ] Codice passa PHPStan Level 9
+- [ ] Codice passa PHPStan Level 9
+- [ ] Codice passa PHPStan Level 9
+>>>>>>> laraxot/develop
 - [ ] Test unitari aggiunti
 - [ ] Documentazione aggiornata
 - [ ] Traduzioni complete (IT/EN/DE)
@@ -643,6 +686,7 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **🏅 PHPStan level 10**: File core certificati ✅
 =======
 =======
@@ -661,6 +705,12 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 =======
 - **🏅 PHPStan Level 9**: File core certificati ✅
 >>>>>>> 7eb1087 (.)
+=======
+- **🏅 PHPStan level 10**: File core certificati ✅
+- **🏅 PHPStan Level 9**: File core certificati ✅
+- **🏅 PHPStan Level 9**: File core certificati ✅
+- **🏅 PHPStan Level 9**: File core certificati ✅
+>>>>>>> laraxot/develop
 - **🏅 Translation Standards**: File traduzione certificati ✅
 - **🏅 Blade Components**: 50+ componenti riutilizzabili ✅
 - **🏅 Filament Widgets**: 20+ widget personalizzati ✅
@@ -685,6 +735,7 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **🐛 PHPStan level 10**: File core certificati ✅  
 =======
 =======
@@ -703,6 +754,12 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 =======
 **🐛 PHPStan Level 9**: File core certificati ✅  
 >>>>>>> 7eb1087 (.)
+=======
+**🐛 PHPStan level 10**: File core certificati ✅  
+**🐛 PHPStan Level 9**: File core certificati ✅  
+**🐛 PHPStan Level 9**: File core certificati ✅  
+**🐛 PHPStan Level 9**: File core certificati ✅  
+>>>>>>> laraxot/develop
 **🌐 Translation Standards**: File traduzione certificati ✅  
 **🚀 Performance**: 97/100 score 
 ## Collegamenti
@@ -716,6 +773,7 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 - **[REGOLA CRITICA: MAI usare ->label()](never_use_label_rule.md)**
 - **[REGOLA CRITICA: SEMPRE usa transClass()](transclass_rule.md)**
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -737,3 +795,8 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 *Ultimo aggiornamento: gennaio 2025* 
 *Ultimo aggiornamento: gennaio 2025* 
 >>>>>>> 61831e43 (.)
+=======
+*Ultimo aggiornamento: gennaio 2025* 
+*Ultimo aggiornamento: gennaio 2025* 
+*Ultimo aggiornamento: gennaio 2025* 
+>>>>>>> laraxot/develop

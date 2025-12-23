@@ -3,6 +3,7 @@
 ## Installazione dipendenze
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 All'interno di `Themes/One`, installa i plugin necessari per Filament 4.x con:
 =======
 All'interno di `Themes/One`, installa i plugin necessari per Filament 3.x con:
@@ -30,3 +31,5 @@ npm run copy
 >>>>>>> 7eb1087 (.)
 
 Se è la prima volta, verificare di aver eseguito `npm install` per le dipendenze.
+=======
+>>>>>>> laraxot/develop

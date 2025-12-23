@@ -2,21 +2,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 # IconStateSplitColumn Implementation
 
 ## Overview
 The `IconStateSplitColumn` is a custom Filament table column component designed to display state transition icons in a compact, responsive grid layout. It extends Filament's `Column` component to provide an optimized user experience for state management in tables.
 ## Key Features
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 # IconStateSplitColumn Implementation
 
 ## Overview
 The `IconStateSplitColumn` is a custom Filament table column component designed to display state transition icons in a compact, responsive grid layout. It extends Filament's `Column` component to provide an optimized user experience for state management in tables.
 ## Key Features
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -28,6 +35,8 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 ### 🎯 **Space Optimization**
 - **Compact Design**: Minimizes table space usage while maintaining full functionality
 - **Responsive Grid**: Adapts column count based on screen size
@@ -36,6 +45,7 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -47,6 +57,11 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### 📱 **Responsive Design**
 - **Mobile**: 2 columns for touch-friendly interaction
 - **Small screens**: 3 columns for better visibility
@@ -57,6 +72,7 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -68,6 +84,11 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### 🎨 **Enhanced UX/UI**
 - **Hover Effects**: Smooth scale animation and color transitions
 - **Visual Feedback**: Clear indication of interactive elements
@@ -77,6 +98,7 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -88,6 +110,11 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### 🔧 **Technical Features**
 - **Error Handling**: Comprehensive error catching and user-friendly notifications
 - **Modal Integration**: Enhanced modal dialogs with state-specific styling
@@ -97,10 +124,14 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 ## Implementation
 ### Basic Usage
 ```php
 use Modules\UI\Filament\Tables\Columns\IconStateSplitColumn;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -113,10 +144,15 @@ use Modules\<nome modulo>\Models\Appointment;
 =======
 =======
 >>>>>>> 4d64b9a (.)
+=======
+use Modules\<nome modulo>\States\Appointment\AppointmentState;
+use Modules\<nome modulo>\Models\Appointment;
+>>>>>>> laraxot/develop
 use Modules\<nome modulo>\States\Appointment\AppointmentState;
 use Modules\<nome modulo>\Models\Appointment;
 use Modules\SaluteOra\States\Appointment\AppointmentState;
 use Modules\SaluteOra\Models\Appointment;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 727968c (.)
 >>>>>>> ef5ce98 (.)
@@ -131,10 +167,15 @@ use Modules\SaluteOra\Models\Appointment;
 
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+>>>>>>> laraxot/develop
 ## Implementation
 ### Basic Usage
 ```php
 use Modules\UI\Filament\Tables\Columns\IconStateSplitColumn;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,10 +189,13 @@ use Modules\SaluteOra\Models\Appointment;
 >>>>>>> a63dc48 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 use Modules\<nome modulo>\States\Appointment\AppointmentState;
 use Modules\<nome modulo>\Models\Appointment;
 use Modules\SaluteOra\States\Appointment\AppointmentState;
 use Modules\SaluteOra\Models\Appointment;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 727968c (.)
 
@@ -163,10 +207,17 @@ use Modules\<nome modulo>\Models\Appointment;
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+use Modules\<nome modulo>\States\Appointment\AppointmentState;
+use Modules\<nome modulo>\Models\Appointment;
+
+>>>>>>> laraxot/develop
 // In your Filament resource table configuration
 'states' => IconStateSplitColumn::make()
     ->stateClass(AppointmentState::class, Appointment::class),
 ```
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -194,11 +245,19 @@ use Modules\<nome modulo>\Models\Appointment;
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+### Advanced Configuration
+// Custom configuration
+### Advanced Configuration
+// Custom configuration
+>>>>>>> laraxot/develop
     ->stateClass(AppointmentState::class, Appointment::class)
     ->label('Azioni Stato')
     ->extraAttributes([
         'class' => 'custom-state-grid gap-2 p-2',
     ]),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,6 +287,14 @@ use Modules\<nome modulo>\Models\Appointment;
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+```
+
+## Architecture
+### Class Structure
+## Architecture
+### Class Structure
+>>>>>>> laraxot/develop
 class IconStateSplitColumn extends Column
 {
     protected string $view = 'ui::filament.tables.columns.icon-state-split';
@@ -243,6 +310,9 @@ class IconStateSplitColumn extends Column
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
     public function stateClass(string $stateClass, string $modelClass): static
         // Configure states and model
     public function getRecordStates(): array
@@ -252,6 +322,7 @@ class IconStateSplitColumn extends Column
 }
 ### State Integration
 The component integrates with Spatie's Laravel State package:
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -260,6 +331,9 @@ The component integrates with Spatie's Laravel State package:
     
 =======
 >>>>>>> dc14e10 (.)
+=======
+    
+>>>>>>> laraxot/develop
     public function stateClass(string $stateClass, string $modelClass): static
         // Configure states and model
     public function getRecordStates(): array
@@ -270,6 +344,7 @@ The component integrates with Spatie's Laravel State package:
 ### State Integration
 The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -280,6 +355,8 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 1. **State Mapping**: Uses `getStateMapping()` to retrieve available states
 2. **State Validation**: Checks current state for transition possibilities
 3. **Error Handling**: Comprehensive error catching with logging
@@ -288,6 +365,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Visual Design
 =======
 
@@ -307,6 +385,19 @@ The component integrates with Spatie's Laravel State package:
 =======
 ## Visual Design
 >>>>>>> dc14e10 (.)
+=======
+
+## Visual Design
+
+
+## Visual Design
+
+
+## Visual Design
+
+## Visual Design
+## Visual Design
+>>>>>>> laraxot/develop
 ### Grid Layout
 - **Responsive Breakpoints**: Automatically adjusts column count based on screen size
 - **Gap Management**: Consistent spacing between icons (gap-1)
@@ -315,6 +406,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -326,6 +418,11 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### Icon Design
 - **Size**: 32px (2rem) for optimal touch targets
 - **Shape**: Circular buttons with rounded-full class
@@ -335,6 +432,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -346,6 +444,11 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### Interactive Elements
 - **Hover Effects**: Scale up to 110% on hover
 - **Focus States**: Ring focus indicators for accessibility
@@ -355,6 +458,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Template Structure
 =======
 
@@ -374,6 +478,19 @@ The component integrates with Spatie's Laravel State package:
 =======
 ## Template Structure
 >>>>>>> dc14e10 (.)
+=======
+
+## Template Structure
+
+
+## Template Structure
+
+
+## Template Structure
+
+## Template Structure
+## Template Structure
+>>>>>>> laraxot/develop
 ### Blade Template Features
 - **Responsive Grid**: CSS Grid with responsive breakpoints
 - **State Validation**: Checks for record existence and state transitions
@@ -384,6 +501,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -395,12 +513,18 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### CSS Classes
 ```css
 .state-icon-button {
     min-width: 2rem;
     min-height: 2rem;
     transition: all 0.2s ease;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -431,6 +555,16 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+}
+
+.state-icon-button:hover {
+    transform: scale(1.1);
+## Best Practices
+.state-icon-button:hover {
+    transform: scale(1.1);
+## Best Practices
+>>>>>>> laraxot/develop
 ### DRY (Don't Repeat Yourself)
 - **Reusable State Logic**: Centralized state transition validation
 - **Consistent Styling**: Shared CSS classes and design patterns
@@ -439,6 +573,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -450,6 +585,11 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### KISS (Keep It Simple, Stupid)
 - **Simple API**: Single method `stateClass()` for configuration
 - **Clear Logic**: Straightforward state validation and rendering
@@ -458,6 +598,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -469,6 +610,11 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### UI/UX Focus
 - **Touch-Friendly**: 32px minimum touch targets
 - **Visual Feedback**: Clear hover and focus states
@@ -478,6 +624,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Error Handling
 =======
 
@@ -497,6 +644,19 @@ The component integrates with Spatie's Laravel State package:
 =======
 ## Error Handling
 >>>>>>> dc14e10 (.)
+=======
+
+## Error Handling
+
+
+## Error Handling
+
+
+## Error Handling
+
+## Error Handling
+## Error Handling
+>>>>>>> laraxot/develop
 ### Graceful Degradation
 - **Missing States**: Handles empty state mappings gracefully
 - **Invalid Records**: Validates record existence before processing
@@ -505,6 +665,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -516,6 +677,11 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### User Feedback
 - **Success Notifications**: Confirms successful state transitions
 - **Error Notifications**: Displays detailed error information
@@ -524,6 +690,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Performance Considerations
 =======
 
@@ -543,6 +710,19 @@ The component integrates with Spatie's Laravel State package:
 =======
 ## Performance Considerations
 >>>>>>> dc14e10 (.)
+=======
+
+## Performance Considerations
+
+
+## Performance Considerations
+
+
+## Performance Considerations
+
+## Performance Considerations
+## Performance Considerations
+>>>>>>> laraxot/develop
 ### Efficient Rendering
 - **Lazy Loading**: Only renders visible state transitions
 - **Caching**: State mappings are cached appropriately
@@ -551,10 +731,14 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 ### Memory Management
 - **Clean References**: Proper cleanup of event listeners
 - **Efficient Queries**: Optimized database queries for state checks
 ## Accessibility Features
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -563,10 +747,14 @@ The component integrates with Spatie's Laravel State package:
 
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+>>>>>>> laraxot/develop
 ### Memory Management
 - **Clean References**: Proper cleanup of event listeners
 - **Efficient Queries**: Optimized database queries for state checks
 ## Accessibility Features
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -578,6 +766,8 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 ### Keyboard Navigation
 - **Tab Order**: Logical tab sequence through state buttons
 - **Focus Indicators**: Clear visual focus indicators
@@ -586,6 +776,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -597,6 +788,11 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### Screen Reader Support
 - **ARIA Labels**: Proper labeling for screen readers
 - **Role Attributes**: Correct semantic roles
@@ -605,6 +801,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Mobile Optimization
 =======
 
@@ -624,6 +821,19 @@ The component integrates with Spatie's Laravel State package:
 =======
 ## Mobile Optimization
 >>>>>>> dc14e10 (.)
+=======
+
+## Mobile Optimization
+
+
+## Mobile Optimization
+
+
+## Mobile Optimization
+
+## Mobile Optimization
+## Mobile Optimization
+>>>>>>> laraxot/develop
 ### Touch Interface
 - **Touch Targets**: 32px minimum for reliable touch interaction
 - **Gesture Support**: Swipe and tap gesture recognition
@@ -632,6 +842,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -643,6 +854,11 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 ### Performance
 - **Reduced Animations**: Optimized animations for mobile devices
 - **Efficient Rendering**: Minimal reflows and repaints
@@ -651,12 +867,16 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 ## Integration Examples
 ### Appointment Management
 // In AppointmentResource
 'state_actions' => IconStateSplitColumn::make()
     ->label('Azioni'),
 ### Patient Records
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -665,12 +885,16 @@ The component integrates with Spatie's Laravel State package:
 
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+>>>>>>> laraxot/develop
 ## Integration Examples
 ### Appointment Management
 // In AppointmentResource
 'state_actions' => IconStateSplitColumn::make()
     ->label('Azioni'),
 ### Patient Records
+<<<<<<< HEAD
 <<<<<<< HEAD
 ```php
 <<<<<<< HEAD
@@ -682,10 +906,13 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 // In PatientResource
 'status_actions' => IconStateSplitColumn::make()
     ->stateClass(PatientState::class, Patient::class)
     ->label('Stato Paziente'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -714,6 +941,14 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+```
+
+## Troubleshooting
+### Common Issues
+## Troubleshooting
+### Common Issues
+>>>>>>> laraxot/develop
 1. **Icons Not Showing**
    - Check state class configuration
    - Verify state mapping exists
@@ -722,6 +957,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 2. **Actions Not Working**
    - Verify modal action setup
    - Check state transition logic
@@ -730,6 +966,8 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 8ee2a17 (.)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 
 2. **Actions Not Working**
    - Verify modal action setup
@@ -738,6 +976,7 @@ The component integrates with Spatie's Laravel State package:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1f9515b (.)
 =======
 >>>>>>> 8ee2a17 (.)
@@ -748,6 +987,14 @@ The component integrates with Spatie's Laravel State package:
    - Verify modal action setup
    - Check state transition logic
 >>>>>>> dc14e10 (.)
+=======
+2. **Actions Not Working**
+   - Verify modal action setup
+   - Check state transition logic
+2. **Actions Not Working**
+   - Verify modal action setup
+   - Check state transition logic
+>>>>>>> laraxot/develop
 3. **Styling Issues**
    - Check CSS class conflicts
    - Verify responsive breakpoints
@@ -756,6 +1003,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Debug Tips
 =======
 
@@ -775,6 +1023,19 @@ The component integrates with Spatie's Laravel State package:
 =======
 ### Debug Tips
 >>>>>>> dc14e10 (.)
+=======
+
+### Debug Tips
+
+
+### Debug Tips
+
+
+### Debug Tips
+
+### Debug Tips
+### Debug Tips
+>>>>>>> laraxot/develop
 1. **Enable Debug Mode**: Check browser console for errors
 2. **State Inspection**: Verify state instances are created correctly
 3. **Modal Testing**: Test modal forms independently
@@ -783,6 +1044,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Recent Fixes (June 2025)
 =======
 
@@ -802,6 +1064,19 @@ The component integrates with Spatie's Laravel State package:
 =======
 ## Recent Fixes (June 2025)
 >>>>>>> dc14e10 (.)
+=======
+
+## Recent Fixes (June 2025)
+
+
+## Recent Fixes (June 2025)
+
+
+## Recent Fixes (June 2025)
+
+## Recent Fixes (June 2025)
+## Recent Fixes (June 2025)
+>>>>>>> laraxot/develop
 ### Critical Bug Fixes
 1. **State Initialization Error**: Fixed issue with `$field` property not being initialized
    - **Problem**: Creating State instance with model class instead of model instance
@@ -811,6 +1086,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -822,6 +1098,11 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 2. **Action Integration**: Fixed wire:click not working in table columns
    - **Problem**: wire:click doesn't work in Filament table columns
    - **Solution**: Implemented custom JavaScript event system with Livewire integration
@@ -830,6 +1111,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -841,6 +1123,11 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 3. **Error Handling**: Added comprehensive error handling with logging
    - **Problem**: Unhandled exceptions causing application crashes
    - **Solution**: Try-catch blocks with proper error handling
@@ -849,6 +1136,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1f9515b (.)
@@ -860,6 +1148,11 @@ The component integrates with Spatie's Laravel State package:
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+
+
+>>>>>>> laraxot/develop
 4. **Template Simplification**: Streamlined Blade template for better performance
    - **Problem**: Complex template logic causing rendering issues
    - **Solution**: Simplified template with proper error handling
@@ -868,6 +1161,7 @@ The component integrates with Spatie's Laravel State package:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Action System Implementation
 #### Problem Analysis
 The main issue was that `wire:click` doesn't work directly in Filament table columns because they are not Livewire components. The solution implements a custom event system:
@@ -893,6 +1187,15 @@ The main issue was that `wire:click` doesn't work directly in Filament table col
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+### Action System Implementation
+#### Problem Analysis
+The main issue was that `wire:click` doesn't work directly in Filament table columns because they are not Livewire components. The solution implements a custom event system:
+### Action System Implementation
+#### Problem Analysis
+The main issue was that `wire:click` doesn't work directly in Filament table columns because they are not Livewire components. The solution implements a custom event system:
+>>>>>>> laraxot/develop
 #### Solution Architecture
 ```javascript
 // Custom event dispatch
@@ -907,6 +1210,9 @@ onclick="window.dispatchEvent(new CustomEvent('state-transition', {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 // Event listener for Livewire integration
 document.addEventListener('state-transition', function(event) {
     const { recordId, stateClass, action } = event.detail;
@@ -914,6 +1220,7 @@ document.addEventListener('state-transition', function(event) {
         window.Livewire.find(document.querySelector('[wire\\:id]').getAttribute('wire:id'))
             .call(action, recordId, stateClass);
 });
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8ee2a17 (.)
@@ -922,6 +1229,9 @@ document.addEventListener('state-transition', function(event) {
 
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+>>>>>>> laraxot/develop
 // Event listener for Livewire integration
 document.addEventListener('state-transition', function(event) {
     const { recordId, stateClass, action } = event.detail;
@@ -929,6 +1239,7 @@ document.addEventListener('state-transition', function(event) {
         window.Livewire.find(document.querySelector('[wire\\:id]').getAttribute('wire:id'))
             .call(action, recordId, stateClass);
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 ```
 
@@ -941,11 +1252,14 @@ document.addEventListener('state-transition', function(event) {
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+>>>>>>> laraxot/develop
 #### Key Features
 1. **Custom Event System**: Uses JavaScript CustomEvent for action dispatching
 2. **Livewire Integration**: Connects to parent Livewire component for server communication
 3. **Error Handling**: Graceful fallback for missing Livewire context
 4. **State Validation**: Checks transition possibility before showing actions
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -975,11 +1289,19 @@ document.addEventListener('state-transition', function(event) {
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+
+#### Usage Example
+// In your Filament resource
+#### Usage Example
+// In your Filament resource
+>>>>>>> laraxot/develop
 // The component automatically handles:
 // - State validation
 // - Action dispatching
 // - Error handling
 // - UI feedback
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -998,12 +1320,21 @@ document.addEventListener('state-transition', function(event) {
 >>>>>>> 7eb1087 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+```
+
+```
+
+```
+
+>>>>>>> laraxot/develop
 ### Code Quality Improvements
 1. **DRY Principle**: Removed duplicate code and centralized logic
 2. **KISS Principle**: Simplified API and reduced complexity
 3. **Error Handling**: Added proper error handling without logging
 4. **Type Safety**: Improved type checking and validation
 5. **Action System**: Implemented proper action handling for table columns
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1055,3 +1386,19 @@ document.addEventListener('state-transition', function(event) {
 =======
 **Compatibility**: Filament 3.x, Laravel 10.x 
 >>>>>>> dc14e10 (.)
+=======
+**Compatibility**: Filament 3.x, Laravel 10.x 
+**Compatibility**: Filament 3.x, Laravel 10.x 
+
+---
+**Last Updated**: June 2025
+**Version**: 2.1
+**Compatibility**: Filament 3.x, Laravel 10.x 
+**Compatibility**: Filament 3.x, Laravel 10.x 
+**Compatibility**: Filament 3.x, Laravel 10.x 
+**Compatibility**: Filament 3.x, Laravel 10.x 
+---
+**Last Updated**: June 2025
+**Version**: 2.1
+**Compatibility**: Filament 3.x, Laravel 10.x 
+>>>>>>> laraxot/develop

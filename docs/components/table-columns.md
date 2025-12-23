@@ -172,6 +172,7 @@ use Modules\UI\Filament\Tables\Columns\SelectStateColumn;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Compatibility**: Filament 3.x, Laravel 10.x
 =======
 **Compatibility**: Filament 4.x, Laravel 11.x
@@ -186,3 +187,10 @@ use Modules\UI\Filament\Tables\Columns\SelectStateColumn;
 >>>>>>> a63dc48 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+**Compatibility**: Filament 4.x, Laravel 11.x
+**Compatibility**: Filament 4.x, Laravel 11.x
+**Compatibility**: Filament 3.x, Laravel 10.x
+**Compatibility**: Filament 4.x, Laravel 11.x
+**Compatibility**: Filament 3.x, Laravel 10.x
+>>>>>>> laraxot/develop

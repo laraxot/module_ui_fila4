@@ -59,6 +59,7 @@ class GetAllIconsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a8fbb3e (.)
@@ -69,11 +70,16 @@ class GetAllIconsAction
             }
 
 =======
+=======
+>>>>>>> laraxot/develop
 
                 continue;
             }
 
+<<<<<<< HEAD
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             foreach ($paths as $path) {
                 if (! is_string($path)) {
                     continue;

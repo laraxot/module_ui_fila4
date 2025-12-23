@@ -3,10 +3,14 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Notify\Filament\Forms\Components;
 =======
 namespace Modules\UI\Filament\Forms\Components;
 >>>>>>> 24eb066 (Lint)
+=======
+namespace Modules\UI\Filament\Forms\Components;
+>>>>>>> laraxot/develop
 
 use Filament\Forms\Components\Select;
 use Illuminate\Database\Eloquent\Model;
@@ -35,6 +39,7 @@ class SelectState extends Select
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             if (!is_array($statesRaw)) {
 =======
                             if (! is_array($statesRaw)) {
@@ -51,10 +56,14 @@ class SelectState extends Select
 =======
                             if (! is_array($statesRaw)) {
 >>>>>>> 61831e43 (.)
+=======
+                            if (! is_array($statesRaw)) {
+>>>>>>> laraxot/develop
                                 $statesRaw = Arr::wrap($statesRaw);
                             }
                             /** @var array<int|string, mixed> $statesRaw */
                             $states = $statesRaw;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,12 +84,15 @@ class SelectState extends Select
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
                             $statesKeys = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
                             $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
 
                             $combined = array_combine($statesKeys, $statesValues);
                             /** @var array<int|string, int|string> $combinedTyped */
                             $combinedTyped = $combined ?: [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,6 +119,8 @@ class SelectState extends Select
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
                             $statesKeys = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
                             $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
 
@@ -121,11 +135,14 @@ class SelectState extends Select
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
                 return [];
             }
 
@@ -135,6 +152,7 @@ class SelectState extends Select
             $statesRaw = $statesCollection->toArray();
             /** @var array<int|string, mixed> $states */
             $states = $statesRaw;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,6 +173,8 @@ class SelectState extends Select
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             $statesKeys = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
             $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
 
@@ -162,6 +182,7 @@ class SelectState extends Select
             /** @var array<int|string, int|string> $combinedTyped */
             $combinedTyped = $combined ?: [];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -175,6 +196,8 @@ class SelectState extends Select
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             return $combinedTyped;
         });
         $this->required();

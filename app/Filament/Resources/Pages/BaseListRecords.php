@@ -10,6 +10,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 abstract class BaseListRecords extends XotBaseListRecords {}
 =======
 abstract class BaseListRecords extends XotBaseListRecords
@@ -31,3 +32,8 @@ abstract class BaseListRecords extends XotBaseListRecords
 {
 }
 >>>>>>> 61831e43 (.)
+=======
+abstract class BaseListRecords extends XotBaseListRecords
+{
+}
+>>>>>>> laraxot/develop

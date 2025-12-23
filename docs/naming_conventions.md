@@ -8,5 +8,9 @@
 * [naming-conventions.md](../../../../project_docs/naming-conventions.md)
 * [naming-conventions.md](../../Xot/project_docs/naming-conventions.md)
 * [naming-conventions.md](../../Patient/project_docs/naming-conventions.md)
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 

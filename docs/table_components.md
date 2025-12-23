@@ -140,7 +140,12 @@ class UserTable extends Component
 - [Componenti Chart](./chart-components.md)
 - [Componenti Layout](./layout-components.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Frontend](../Cms/docs/frontend-architecture.md) 
 =======
 - [Documentazione Frontend](../Cms/project_docs/frontend-architecture.md) 
 >>>>>>> 7eb1087 (.)
+=======
+- [Documentazione Frontend](../Cms/project_docs/frontend-architecture.md) 
+- [Documentazione Frontend](../Cms/project_docs/frontend-architecture.md) 
+>>>>>>> laraxot/develop

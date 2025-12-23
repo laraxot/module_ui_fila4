@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 # PHPStan Fixes - Gennaio 2025
 
 ## Modulo UI - Correzioni Completate
@@ -54,6 +57,7 @@
 - **Errori PHPStan**: 0
 - **File corretti**: 9
 - **Pattern applicati**: Type narrowing, Array safety, Closure hints
+<<<<<<< HEAD
 =======
 # Correzioni PHPStan - Gennaio 2025
 
@@ -113,4 +117,6 @@ public function canTransitionTo(int|string $recordId, string $stateClass): bool
 - [Filament Tables](./filament-tables.md)
 - [Icon State Split Column](./icon-state-split-column.md)
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
 

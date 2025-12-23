@@ -18,6 +18,7 @@ final class SliderDataCollection extends Data
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct() {}
 =======
     public function __construct()
@@ -39,4 +40,9 @@ final class SliderDataCollection extends Data
     {
     }
 >>>>>>> 61831e43 (.)
+=======
+    public function __construct()
+    {
+    }
+>>>>>>> laraxot/develop
 }

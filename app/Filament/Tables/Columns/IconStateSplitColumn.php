@@ -28,6 +28,7 @@ class IconStateSplitColumn extends Column
     protected string $view = 'ui::filament.tables.columns.icon-state-split';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a8fbb3e (.)
@@ -37,6 +38,11 @@ class IconStateSplitColumn extends Column
     protected string $stateClass = '';
 
 >>>>>>> 24eb066 (Lint)
+=======
+
+    protected string $stateClass = '';
+
+>>>>>>> laraxot/develop
     protected string $modelClass = '';
 
     /**
@@ -70,6 +76,7 @@ class IconStateSplitColumn extends Column
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
@@ -86,6 +93,9 @@ class IconStateSplitColumn extends Column
 =======
 
 >>>>>>> 61831e43 (.)
+=======
+
+>>>>>>> laraxot/develop
         /** @var array<string, string> $states */
         $states = $statesRaw;
         $record = $this->getRecord();
@@ -93,6 +103,7 @@ class IconStateSplitColumn extends Column
         $result = [];
         foreach ($states as $stateKey => $stateClassItem) {
             try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,6 +123,8 @@ class IconStateSplitColumn extends Column
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
                 if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
                     continue;
                 }
@@ -119,6 +132,7 @@ class IconStateSplitColumn extends Column
                 $stateInstance = new $stateClassItem($record);
                 Assert::isInstanceOf($stateInstance, StateContract::class);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,6 +152,8 @@ class IconStateSplitColumn extends Column
                 Assert::isInstanceOf($stateInstance, StateContract::class);
 
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
                 // StateContract provides icon(), label(), color()
                 $icon = $stateInstance->icon();
                 $label = $stateInstance->label();
@@ -147,6 +163,7 @@ class IconStateSplitColumn extends Column
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
 =======
 
@@ -163,6 +180,9 @@ class IconStateSplitColumn extends Column
 =======
 
 >>>>>>> 61831e43 (.)
+=======
+
+>>>>>>> laraxot/develop
                 // Type narrowing: questi metodi restituiscono string
                 $iconString = (string) $icon;
                 $labelString = (string) $label;
@@ -172,6 +192,7 @@ class IconStateSplitColumn extends Column
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
                 // $stateKey è già string dalla chiave dell'array
                 
@@ -200,6 +221,11 @@ class IconStateSplitColumn extends Column
                 // $stateKey è già string dalla chiave dell'array
 
 >>>>>>> 61831e43 (.)
+=======
+
+                // $stateKey è già string dalla chiave dell'array
+
+>>>>>>> laraxot/develop
                 $result[$stateKey] = [
                     'class' => $stateInstance,
                     'icon' => $iconString,
@@ -218,6 +244,7 @@ class IconStateSplitColumn extends Column
 
     public function canTransitionTo(int|string $recordId, string $stateClass): bool
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -313,6 +340,8 @@ class IconStateSplitColumn extends Column
 
 >>>>>>> 24eb066 (Lint)
 =======
+=======
+>>>>>>> laraxot/develop
         if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
             return false;
         }
@@ -337,7 +366,10 @@ class IconStateSplitColumn extends Column
         /** @var State $state */
         $state = $record->state;
 
+<<<<<<< HEAD
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
         return $state->canTransitionTo($stateClass);
     }
 
@@ -382,6 +414,7 @@ class IconStateSplitColumn extends Column
 
         // Aggiungi azioni per gli stati
         foreach ($states as $stateKey => $state) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -450,6 +483,8 @@ class IconStateSplitColumn extends Column
             }
 
 =======
+=======
+>>>>>>> laraxot/develop
             if (! is_array($state) || ! isset($state['class']) || ! isset($state['icon']) || ! isset($state['color']) || ! isset($state['label'])) {
                 continue;
             }
@@ -463,7 +498,10 @@ class IconStateSplitColumn extends Column
                 continue;
             }
 
+<<<<<<< HEAD
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
             if (null === $recordIdRaw || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
                 continue;
@@ -479,6 +517,7 @@ class IconStateSplitColumn extends Column
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
@@ -488,10 +527,13 @@ class IconStateSplitColumn extends Column
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             // Type narrowing: questi sono già string dalla struttura array
             $iconString = (string) $stateIcon;
             $colorString = (string) $stateColor;
             $labelString = (string) $stateLabel;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -513,6 +555,9 @@ class IconStateSplitColumn extends Column
 =======
 
 >>>>>>> 61831e43 (.)
+=======
+
+>>>>>>> laraxot/develop
             $actions["transition_to_{$stateKey}"] = Action::make(
                 "transition_to_{$stateKey}",
             )
@@ -550,6 +595,7 @@ class IconStateSplitColumn extends Column
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!class_exists($this->modelClass) || !method_exists($this->modelClass, 'find')) {
                 throw new Exception('Model class not found or invalid');
             }
@@ -567,6 +613,8 @@ class IconStateSplitColumn extends Column
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
                 throw new \Exception('Model class not found or invalid');
             }
@@ -586,6 +634,7 @@ class IconStateSplitColumn extends Column
 
             if (! ($record->state instanceof State)) {
                 throw new \Exception('State is not a valid State instance');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -610,6 +659,8 @@ class IconStateSplitColumn extends Column
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             }
 
             // Esegui la transizione

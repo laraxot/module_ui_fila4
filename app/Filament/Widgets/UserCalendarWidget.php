@@ -10,6 +10,7 @@ use Filament\Schemas\Components\Grid;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
 =======
 >>>>>>> a8fbb3e (.)
@@ -17,12 +18,15 @@ use Filament\Schemas\Components\Grid;
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
 use Filament\Widgets\Widget;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\XotData;
 
 class UserCalendarWidget extends Widget
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +37,8 @@ class UserCalendarWidget extends Widget
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
     protected string $view = 'ui::filament.widgets.user-calendar';
 
     public string $type;
@@ -44,6 +50,7 @@ class UserCalendarWidget extends Widget
         $model = $resource::getModel();
         $modelString = is_string($model) ? $model : (string) $model;
         $action = Str::of($modelString)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +68,10 @@ class UserCalendarWidget extends Widget
             ->replace('\Models\\', '\\Actions\\')
             ->append('\\Calendar\\'.$action_suffix)
 >>>>>>> 61831e43 (.)
+=======
+            ->replace('\Models\\', '\\Actions\\')
+            ->append('\\Calendar\\'.$action_suffix)
+>>>>>>> laraxot/develop
             ->toString();
 
         return $action;
@@ -68,6 +79,7 @@ class UserCalendarWidget extends Widget
 
     /**
      * @param array<string, mixed> $fetchInfo
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,12 +100,16 @@ class UserCalendarWidget extends Widget
 =======
      *
 >>>>>>> 61831e43 (.)
+=======
+     *
+>>>>>>> laraxot/develop
      * @return array<int, array<string, mixed>>
      */
     public function fetchEvents(array $fetchInfo): array
     {
         $action = $this->getActionName(__FUNCTION__);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,10 +131,14 @@ class UserCalendarWidget extends Widget
 =======
         if (! class_exists($action)) {
 >>>>>>> 61831e43 (.)
+=======
+        if (! class_exists($action)) {
+>>>>>>> laraxot/develop
             return [];
         }
 
         $actionInstance = app($action);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,6 +178,8 @@ class UserCalendarWidget extends Widget
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
         if (! is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
             return [];
         }
@@ -173,15 +195,19 @@ class UserCalendarWidget extends Widget
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
         return $result;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -199,6 +225,8 @@ class UserCalendarWidget extends Widget
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
      * Validate that the given value is an array of events with string keys.
      */
     private static function isValidEventsArray(mixed $value): bool
@@ -226,11 +254,14 @@ class UserCalendarWidget extends Widget
      * @return array<int, TextInput|Grid>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
      */
     public function getFormSchema(): array
     {
@@ -241,6 +272,7 @@ class UserCalendarWidget extends Widget
             if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
                 if (is_array($resultRaw)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -273,12 +305,18 @@ class UserCalendarWidget extends Widget
                     $result = $resultRaw;
 
 >>>>>>> 61831e43 (.)
+=======
+                    /** @var array<int, TextInput|Grid> $result */
+                    $result = $resultRaw;
+
+>>>>>>> laraxot/develop
                     return $result;
                 }
             }
         }
 
         // Fallback schema
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $schema = [
@@ -294,6 +332,10 @@ class UserCalendarWidget extends Widget
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+        return [
+            TextInput::make('title'),
+>>>>>>> laraxot/develop
             Grid::make()
                 ->schema([
                     DateTimePicker::make('starts_at'),
@@ -301,13 +343,17 @@ class UserCalendarWidget extends Widget
                 ]),
         ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         return $schema;
+=======
+>>>>>>> laraxot/develop
     }
 
     public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void
     {
         // TODO: Implementare la logica per la selezione della data
+<<<<<<< HEAD
 <<<<<<< HEAD
         // dd('test');
 =======
@@ -319,5 +365,7 @@ class UserCalendarWidget extends Widget
         // TODO: Implementare la logica per la selezione della data
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
     }
 }

@@ -1,8 +1,32 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 @props([
     'background' => 'bg-blue-600',
     'color' => 'text-white'
@@ -10,4 +34,24 @@ declare(strict_types=1);
 
 <span class="{{ $background }} {{ $color }} relative flex items-center text-xs font-semibold pl-2 pr-2.5 py-1 rounded-full">
     {{ $slot }}
+<<<<<<< HEAD
 </span>
+=======
+<<<<<<< HEAD
+</span>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+</span>
+=======
+</span>
+>>>>>>> a12f125f4a (.)
+=======
+</span>
+>>>>>>> b93ef594b4 (.)
+=======
+</span>
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop

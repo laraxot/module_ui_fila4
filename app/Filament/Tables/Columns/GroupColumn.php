@@ -37,6 +37,7 @@ class GroupColumn extends Column
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
@@ -53,6 +54,9 @@ class GroupColumn extends Column
 =======
 
 >>>>>>> 61831e43 (.)
+=======
+
+>>>>>>> laraxot/develop
         /** @var array<int|string, Column> $filtered */
         /** @var array<int, Column> $filteredValues */
         $filteredValues = array_values($filtered);

@@ -90,6 +90,7 @@ return [
 
 ## Collegamenti
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Translation System](../../Lang/docs/translation-system.md)
 - [Form Components](../../Patient/docs/filament-form-components.md)
 - [Best Practices](../../Xot/docs/filament-best-practices.md)
@@ -98,6 +99,8 @@ return [
 - [Filament File Upload](https://filamentphp.com/docs/forms/fields/file-upload)
 - [Laravel File Storage](https://laravel.com/docs/filesystem) 
 =======
+=======
+>>>>>>> laraxot/develop
 - [Translation System](../../Lang/project_docs/translation-system.md)
 - [Form Components](../../Patient/project_docs/filament-form-components.md)
 - [Best Practices](../../Xot/project_docs/filament-best-practices.md)
@@ -105,4 +108,7 @@ return [
 ## Vedi Anche
 - [Filament File Upload](https://filamentphp.com/project_docs/forms/fields/file-upload)
 - [Laravel File Storage](https://laravel.com/project_docs/filesystem) 
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop

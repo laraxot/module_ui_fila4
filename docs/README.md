@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # UI Module - Componenti e Design System
 
 ## Panoramica
@@ -115,6 +116,16 @@ if (property_exists($model, 'email')) {
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
 [![Filament 4.x](https://img.shields.io/badge/Filament-4.x-blue.svg)](https://filamentphp.com/)
+=======
+# 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
+
+[![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
+<<<<<<< HEAD
+[![Filament 4.x](https://img.shields.io/badge/Filament-4.x-blue.svg)](https://filamentphp.com/)
+=======
+[![Filament 3.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
+>>>>>>> 727968c (.)
+>>>>>>> laraxot/develop
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 [![Translation Ready](https://img.shields.io/badge/Translation-IT%20%7C%20EN%20%7C%20DE-green.svg)](https://laravel.com/docs/localization)
 [![Blade Components](https://img.shields.io/badge/Blade-Components%20Ready-orange.svg)](https://laravel.com/docs/blade)
@@ -134,6 +145,10 @@ Il modulo **UI** è il cuore dell'interfaccia utente dell'applicazione, fornendo
 - 🎯 **Design System** - Sistema design coerente
 - ⚡ **Performance Ottimizzata** - Componenti ottimizzati per velocità
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/develop
 ## 🚀 **Aggiornamento Filament 4.x**
 
 **Data**: 2025-01-27
@@ -155,6 +170,11 @@ Il modulo UI è stato aggiornato con successo a Filament 4.x. Tutti i componenti
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 727968c (.)
+>>>>>>> laraxot/develop
 ## ⚡ **Funzionalità Core**
 
 ### 🧩 **Blade Components**
@@ -301,11 +321,20 @@ php artisan ui:test-components
 - [Architecture Rules](architecture_rules.md) - Regole architetturali
 - [Best Practices](best-practices.md) - Linee guida sviluppo
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/develop
 ### 🔗 **Collegamenti Moduli**
 - **[Xot Module](../Xot/docs/README.md)** - Framework core e convenzioni
 - **[User Module](../User/docs/README.md)** - Gestione utenti e autenticazione
 - **[Lang Module](../Lang/docs/README.md)** - Gestione traduzioni
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 727968c (.)
+>>>>>>> laraxot/develop
 ### 🧩 **Componenti**
 - [Blade Components](blade-components.md) - Componenti Blade riutilizzabili
 - [Form Components](form-components.md) - Componenti form avanzati
@@ -544,4 +573,7 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 **🐛 PHPStan Level 9**: File core certificati ✅  
 **🌐 Translation Standards**: File traduzione certificati ✅  
 **🚀 Performance**: 97/100 score 
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop

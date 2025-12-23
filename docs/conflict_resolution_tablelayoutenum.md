@@ -66,6 +66,7 @@ Il file `Modules/UI/app/Enums/TableLayoutEnum.php` presenta un conflitto Git nel
 
 - [UI Components](../components/volt.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [PHPStan Level 10 Fixes](../../Xot/docs/phpstan-level10-fixes.md)
 - [Translation Standards](../../Lang/docs/translation-standards.md)
 - [Best Practices](../../Xot/docs/translation-keys-best-practices.md)
@@ -74,6 +75,14 @@ Il file `Modules/UI/app/Enums/TableLayoutEnum.php` presenta un conflitto Git nel
 - [Translation Standards](../../Lang/project_docs/translation-standards.md)
 - [Best Practices](../../Xot/project_docs/translation-keys-best-practices.md)
 >>>>>>> 7eb1087 (.)
+=======
+- [PHPStan Level 10 Fixes](../../Xot/project_docs/phpstan-level10-fixes.md)
+- [Translation Standards](../../Lang/project_docs/translation-standards.md)
+- [Best Practices](../../Xot/project_docs/translation-keys-best-practices.md)
+- [PHPStan Level 10 Fixes](../../Xot/project_docs/phpstan-level10-fixes.md)
+- [Translation Standards](../../Lang/project_docs/translation-standards.md)
+- [Best Practices](../../Xot/project_docs/translation-keys-best-practices.md)
+>>>>>>> laraxot/develop
 
 ## Note per Sviluppatori Futuri
 
@@ -89,6 +98,11 @@ Il file `Modules/UI/app/Enums/TableLayoutEnum.php` presenta un conflitto Git nel
 - **File**: `app/Enums/TableLayoutEnum.php`
 - **Tipo Conflitto**: Sintassi PHPStan
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - **Scelta**: Versione Branch 988693e (sintassi moderna) 
 >>>>>>> 7eb1087 (.)
+=======
+- **Scelta**: Versione Branch 988693e (sintassi moderna) 
+- **Scelta**: Versione Branch 988693e (sintassi moderna) 
+>>>>>>> laraxot/develop

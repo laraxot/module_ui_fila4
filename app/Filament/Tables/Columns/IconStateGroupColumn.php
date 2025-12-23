@@ -8,6 +8,7 @@ use Filament\Actions\Action;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Tables\Columns\ColumnGroup;
 use Filament\Tables\Columns\IconColumn;
@@ -26,6 +27,11 @@ use Filament\Tables\Columns\ColumnGroup;
 use Filament\Tables\Columns\IconColumn;
 use Illuminate\Database\Eloquent\Model;
 >>>>>>> 61831e43 (.)
+=======
+use Filament\Tables\Columns\ColumnGroup;
+use Filament\Tables\Columns\IconColumn;
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> laraxot/develop
 use Modules\Xot\Contracts\StateContract;
 use Webmozart\Assert\Assert;
 
@@ -33,12 +39,18 @@ class IconStateGroupColumn extends ColumnGroup
 {
     public string $stateClass = '';
 <<<<<<< HEAD
+<<<<<<< HEAD
     public string $modelClass = '';
 =======
 
     public string $modelClass = '';
 
 >>>>>>> 24eb066 (Lint)
+=======
+
+    public string $modelClass = '';
+
+>>>>>>> laraxot/develop
     public array $data = [];
 
     protected function setUp(): void
@@ -56,6 +68,7 @@ class IconStateGroupColumn extends ColumnGroup
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
@@ -72,6 +85,9 @@ class IconStateGroupColumn extends ColumnGroup
 =======
 
 >>>>>>> 61831e43 (.)
+=======
+
+>>>>>>> laraxot/develop
         if (class_exists($stateClass) && method_exists($stateClass, 'getStateMapping')) {
             $stateMapping = $stateClass::getStateMapping();
             if (is_object($stateMapping) && method_exists($stateMapping, 'toArray')) {
@@ -84,6 +100,7 @@ class IconStateGroupColumn extends ColumnGroup
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 
@@ -100,11 +117,15 @@ class IconStateGroupColumn extends ColumnGroup
 =======
 
 >>>>>>> 61831e43 (.)
+=======
+
+>>>>>>> laraxot/develop
         /** @var array<string, string> $states */
         $states = $statesRaw;
         $columns = [];
 
         foreach ($states as $stateKey => $stateClassItem) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,16 +152,21 @@ class IconStateGroupColumn extends ColumnGroup
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
             if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
                 continue;
             }
 
+<<<<<<< HEAD
 =======
             if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
                 continue;
             }
 
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             if (! is_string($stateKey)) {
                 continue;
             }
@@ -155,6 +181,7 @@ class IconStateGroupColumn extends ColumnGroup
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 359d970 (.)
 =======
 >>>>>>> 161e28f (Lint)
@@ -164,6 +191,8 @@ class IconStateGroupColumn extends ColumnGroup
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
                 ->icon($stateInstance->icon(...))
                 ->color($stateInstance->color(...))
                 ->tooltip($stateInstance->label(...))
@@ -173,6 +202,7 @@ class IconStateGroupColumn extends ColumnGroup
                 ])
                 ->extraCellAttributes(['class' => 'px-1 py-1'])
                 ->label('')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -202,6 +232,8 @@ class IconStateGroupColumn extends ColumnGroup
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
                 ->default(function (Model $record) use ($stateClassItem, $stateKey): ?bool {
                     if (isset($record->state) && is_object($record->state) && method_exists($record->state, 'canTransitionTo')) {
                         $canTransition = $record->state->canTransitionTo($stateClassItem);
@@ -214,16 +246,20 @@ class IconStateGroupColumn extends ColumnGroup
                     if (! $res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
                         return null;
                     }
 
                     return true;
                 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -287,6 +323,8 @@ class IconStateGroupColumn extends ColumnGroup
 =======
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
 
             $column->action(
                 Action::make($stateKey.'-action')
@@ -309,6 +347,7 @@ class IconStateGroupColumn extends ColumnGroup
                         /** @var array<string, mixed> $typedData */
                         $typedData = $data;
 
+<<<<<<< HEAD
 =======
 
             $column->action(
@@ -333,6 +372,8 @@ class IconStateGroupColumn extends ColumnGroup
                         $typedData = $data;
 
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
                         $stateInstance->modalActionByRecord($record, $typedData);
                     })
             );
@@ -341,11 +382,14 @@ class IconStateGroupColumn extends ColumnGroup
             $column->visible($visibleValue);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             $columns[] = $column;
         }
 

@@ -12,6 +12,7 @@ use Modules\Xot\Models\XotBaseModel;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 abstract class BaseModel extends XotBaseModel {}
 =======
 abstract class BaseModel extends XotBaseModel
@@ -28,3 +29,8 @@ abstract class BaseModel extends XotBaseModel
 {
 }
 >>>>>>> 24eb066 (Lint)
+=======
+abstract class BaseModel extends XotBaseModel
+{
+}
+>>>>>>> laraxot/develop

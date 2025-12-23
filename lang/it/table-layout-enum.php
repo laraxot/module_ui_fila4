@@ -13,7 +13,27 @@ return [
     ],
     'grid' => [
         'label' => 'Griglia',
+<<<<<<< HEAD
         'color' => 'secondary',
+=======
+<<<<<<< HEAD
+        'color' => 'secondary',
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        'color' => 'secondary',
+=======
+        'color' => 'secondary', 
+>>>>>>> a12f125f4a (.)
+=======
+        'color' => 'secondary',
+>>>>>>> b93ef594b4 (.)
+=======
+        'color' => 'secondary', 
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
         'icon' => 'heroicon-o-squares-2x2',
         'description' => 'Layout a griglia responsive con card',
         'tooltip' => 'Visualizza i dati in formato card responsive',

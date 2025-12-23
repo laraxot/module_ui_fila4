@@ -70,10 +70,15 @@ return [
 ## Audit Immediato Richiesto
 ```bash
 # Cerca tutti i ->label() nel modulo UI
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/develop
 grep -r "->label(" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
 
 # Cerca in tutti i file Filament
 find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/ -name "*.php" -exec grep -l "->label(" {} \;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,11 +104,18 @@ find /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/ -name "*.php"
 >>>>>>> 499f479 (.)
 =======
 >>>>>>> dc14e10 (.)
+=======
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 grep -r "->label(" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/
 
 # Cerca in tutti i file Filament
 find /var/www/html/_bases/base_saluteora/laravel/Modules/UI/ -name "*.php" -exec grep -l "->label(" {} \;
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop
 ```
 
 ## Processo di Correzione per il Modulo UI

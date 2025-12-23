@@ -3,10 +3,14 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\Notify\Filament\Forms\Components;
 =======
 namespace Modules\UI\Filament\Forms\Components;
 >>>>>>> 24eb066 (Lint)
+=======
+namespace Modules\UI\Filament\Forms\Components;
+>>>>>>> laraxot/develop
 
 use Filament\Actions\Action;
 use Filament\Forms\Components\Select;
@@ -47,6 +51,7 @@ class IconPicker extends TextInput
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 359d970 (.)
@@ -62,16 +67,23 @@ class IconPicker extends TextInput
 =======
 
 >>>>>>> 61831e43 (.)
+=======
+
+>>>>>>> laraxot/develop
                             return $packsOptions;
                         })
                         ->reactive()
                         ->live(),
                     RadioIcon::make('newstate')
 <<<<<<< HEAD
+<<<<<<< HEAD
                         ->options(function (\Filament\Schemas\Components\Utilities\Get $get) use ($icons): array {
 =======
                         ->options(function (Get $get) use ($icons): array {
 >>>>>>> 24eb066 (Lint)
+=======
+                        ->options(function (Get $get) use ($icons): array {
+>>>>>>> laraxot/develop
                             $pack = $get('pack');
                             if (! is_string($pack)) {
                                 return [];
@@ -83,6 +95,7 @@ class IconPicker extends TextInput
                                 '['.__LINE__.']['.class_basename($this).']',
                             );
                             /** @var array<int|string, mixed> $optsRaw */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +119,8 @@ class IconPicker extends TextInput
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
                             $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
                             /** @var array<int|string> $optsKeys */
                             $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
@@ -121,6 +136,7 @@ class IconPicker extends TextInput
                             $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
                             /** @var array<int|string> $optsKeys */
                             $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
@@ -128,6 +144,8 @@ class IconPicker extends TextInput
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
                             $optsCombined = array_combine($optsKeys, $optsValues);
 
                             return $optsCombined ?: [];
@@ -135,6 +153,7 @@ class IconPicker extends TextInput
                         ->inline()
                         ->inlineLabel(false),
                 ])
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,6 +167,9 @@ class IconPicker extends TextInput
 =======
                 ->action(function (array $data, Set $set) {
 >>>>>>> 61831e43 (.)
+=======
+                ->action(function (array $data, Set $set) {
+>>>>>>> laraxot/develop
                     $set('icon', $data['newstate']);
                 }),
         );

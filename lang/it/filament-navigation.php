@@ -13,10 +13,44 @@ return [
         'created_at' => 'Data di creazione',
         'updated_at' => 'Data di aggiornamento',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
     'select-options' => [
         'same-tab' => 'Stessa scheda',
         'new-tab' => 'Nuova scheda',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
     'items' => [
         'empty' => 'Nessuna voce di menù.',
         'add-item' => 'Aggiungi voce di menù',
@@ -28,6 +62,23 @@ return [
         'remove' => 'Rimuovi',
         'sorted' => 'Ordinato',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
     'items-modal' => [
         'title' => 'Voce di menù',
         'label' => 'Etichetta',

@@ -210,7 +210,10 @@ If the component doesn't look right, make sure you have the required Tailwind CS
 Contributions are welcome! Please feel free to submit a Pull Request.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/develop
 
 
 ## ♻️ Manutenzione 2025-11
@@ -220,6 +223,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - Chiusure di dehydratazione rese statiche con gestione esplicita del parametro inutilizzato.
 - Verifiche qualità: PHPStan L10 ✅, PHPMD ✅, PHPInsights ✅ (avvisi legacy su proprietà pubbliche già tracciati).
 
+<<<<<<< HEAD
 >>>>>>> 161e28f (Lint)
 =======
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> laraxot/develop

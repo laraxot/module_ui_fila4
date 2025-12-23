@@ -1,8 +1,32 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 @props([
     'crumbs' => [], 
     'page' => 'About'
@@ -35,4 +59,24 @@ Example Usage:
             @endif
         @endforeach
     </ol>
+<<<<<<< HEAD
 </nav>
+=======
+<<<<<<< HEAD
+</nav>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+</nav>
+=======
+</nav>
+>>>>>>> a12f125f4a (.)
+=======
+</nav>
+>>>>>>> b93ef594b4 (.)
+=======
+</nav>
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop

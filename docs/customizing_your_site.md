@@ -73,16 +73,20 @@ class Foo extends bar
 ```
 
 </div>
+<<<<<<< HEAD
 ### Versione HEAD
 
 
 ## Collegamenti tra versioni di customizing-your-site.md
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/develop
 * [customizing-your-site.md](../../../Gdpr/docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../Xot/docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../UI/docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../Tenant/docs/it/customizing-your-site.md)
 * [customizing-your-site.md](../../../Cms/docs/customizing-your-site.md)
+<<<<<<< HEAD
 =======
 * [customizing-your-site.md](../../../Gdpr/project_docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../Xot/project_docs/customizing-your-site.md)
@@ -96,4 +100,6 @@ class Foo extends bar
 
 
 ---
+=======
+>>>>>>> laraxot/develop
 

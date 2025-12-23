@@ -17,7 +17,19 @@ abstract class RowWidget extends XotBaseWidget
 
     public array $widgets = [];
 
+<<<<<<< HEAD
     protected string $view = 'ui::filament.widgets.row';
+=======
+<<<<<<< HEAD
+    protected string $view = 'ui::filament.widgets.row';
+=======
+<<<<<<< HEAD
+    protected string $view = 'ui::filament.widgets.row';
+=======
+    protected static string $view = 'ui::filament.widgets.row';
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 
     protected int|string|array $columnSpan = 'full';
 
@@ -34,6 +46,7 @@ abstract class RowWidget extends XotBaseWidget
         return 3;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function getFormSchema(): array
     {
@@ -41,4 +54,6 @@ abstract class RowWidget extends XotBaseWidget
     }
 =======
 >>>>>>> 24eb066 (Lint)
+=======
+>>>>>>> laraxot/develop
 }

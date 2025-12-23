@@ -32,11 +32,24 @@
     },
     "require": {
         "owenvoke/blade-fontawesome": "*"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/develop
         
     },
     "require_comment": {
         "coolsam/flatpickr": "*",
         "saade/filament-fullcalendar": "^3.2"
+<<<<<<< HEAD
+=======
+=======
+    },
+    "require_comment": {
+        "coolsam/flatpickr": "*",
+        "saade/filament-fullcalendar": "^3.0"
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
     },
     "repositories": [
         {

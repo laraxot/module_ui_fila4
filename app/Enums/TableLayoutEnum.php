@@ -77,6 +77,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this === self::GRID;
 =======
         return self::GRID === $this;
@@ -90,10 +91,14 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 =======
         return self::GRID === $this;
 >>>>>>> 61831e43 (.)
+=======
+        return self::GRID === $this;
+>>>>>>> laraxot/develop
     }
 
     public function isListLayout(): bool
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,6 +116,9 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 =======
         return self::LIST === $this;
 >>>>>>> 61831e43 (.)
+=======
+        return self::LIST === $this;
+>>>>>>> laraxot/develop
     }
 
     /**
@@ -144,6 +152,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<Column|ColumnGroup|Component>  $listColumns  Columns for list layout
      * @param  array<Column|ColumnGroup|Component>  $gridColumns  Columns for grid layout
 =======
@@ -156,6 +165,8 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
      * @param array<Column|ColumnGroup|Component> $listColumns Columns for list layout
      * @param array<Column|ColumnGroup|Component> $gridColumns Columns for grid layout
      * @param array<Column|ColumnGroup|Component> $listColumns Columns for list layout
@@ -163,11 +174,14 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
      *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
      * @return array<Column|ColumnGroup|Component>
      */
     public function getTableColumns(array $listColumns, array $gridColumns): array

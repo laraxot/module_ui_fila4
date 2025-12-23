@@ -30,6 +30,7 @@ class TableLayoutToggleHeaderAction extends Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             /**
 =======
             /*
@@ -42,6 +43,8 @@ class TableLayoutToggleHeaderAction extends Action
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             /*
              * /*
              * /*
@@ -49,11 +52,14 @@ class TableLayoutToggleHeaderAction extends Action
              * /*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
              * @param object{layoutView?: string|null} $livewire
              */
             ->icon(function (object $livewire): string {
@@ -72,6 +78,7 @@ class TableLayoutToggleHeaderAction extends Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             /**
 =======
             /*
@@ -84,6 +91,8 @@ class TableLayoutToggleHeaderAction extends Action
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
             /*
              * /*
              * /*
@@ -91,11 +100,14 @@ class TableLayoutToggleHeaderAction extends Action
              * /*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a8fbb3e (.)
 =======
 >>>>>>> 24eb066 (Lint)
 =======
 >>>>>>> 61831e43 (.)
+=======
+>>>>>>> laraxot/develop
              * @param object{layoutView?: string|null} $livewire
              */
             ->action(function (object $livewire): void {

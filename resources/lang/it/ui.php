@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/develop
 return [
     'actions' => [
         'table_layout_toggle' => [

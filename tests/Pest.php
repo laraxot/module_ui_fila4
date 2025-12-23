@@ -10,6 +10,16 @@ use Modules\UI\Models\Component;
 use Modules\UI\Models\Theme;
 
 /*
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
  * |--------------------------------------------------------------------------
  * | Test Case
  * |--------------------------------------------------------------------------
@@ -18,6 +28,13 @@ use Modules\UI\Models\Theme;
  * | Estende il TestCase specifico del modulo che fornisce il setup necessario.
  * |
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 
 uses(TestCase::class)->uses(DatabaseTransactions::class)->in('Feature', 'Unit');
 
@@ -47,6 +64,64 @@ expect()->extend('toBeAsset', fn () => $this->toBeInstanceOf(Asset::class));
  * | Queste funzioni saranno disponibili in tutti i test.
  * |
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+|--------------------------------------------------------------------------
+| Test Case
+|--------------------------------------------------------------------------
+|
+| Il TestCase di default per tutti i test del modulo UI.
+| Estende il TestCase specifico del modulo che fornisce il setup necessario.
+|
+*/
+=======
+>>>>>>> b93ef594b4 (.)
+
+uses(TestCase::class)->uses(DatabaseTransactions::class)->in('Feature', 'Unit');
+
+/*
+ * |--------------------------------------------------------------------------
+ * | Expectations
+ * |--------------------------------------------------------------------------
+ * |
+ * | Aspettative globali per il modulo UI.
+ * | Quando definisci expectation globali, saranno disponibili
+ * | in tutti i test del modulo.
+ * |
+ */
+
+expect()->extend('toBeComponent', fn() => $this->toBeInstanceOf(Component::class));
+
+expect()->extend('toBeTheme', fn() => $this->toBeInstanceOf(Theme::class));
+
+expect()->extend('toBeAsset', fn() => $this->toBeInstanceOf(Asset::class));
+
+/*
+<<<<<<< HEAD
+|--------------------------------------------------------------------------
+| Functions
+|--------------------------------------------------------------------------
+|
+| Funzioni helper globali per i test del modulo UI.
+| Queste funzioni saranno disponibili in tutti i test.
+|
+*/
+>>>>>>> a12f125f4a (.)
+=======
+ * |--------------------------------------------------------------------------
+ * | Functions
+ * |--------------------------------------------------------------------------
+ * |
+ * | Funzioni helper globali per i test del modulo UI.
+ * | Queste funzioni saranno disponibili in tutti i test.
+ * |
+ */
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 
 function createTheme(array $attributes = []): Theme
 {

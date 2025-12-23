@@ -22,6 +22,7 @@ class GetUserDataAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$user instanceof User) {
 =======
         if (! $user instanceof User) {
@@ -38,6 +39,9 @@ class GetUserDataAction
 =======
         if (! $user instanceof User) {
 >>>>>>> 61831e43 (.)
+=======
+        if (! $user instanceof User) {
+>>>>>>> laraxot/develop
             return null;
         }
 
@@ -45,6 +49,7 @@ class GetUserDataAction
         $avatarValue = null;
         if (isset($user->profile_photo_path) && is_string($user->profile_photo_path)) {
             $avatarValue = $user->profile_photo_path;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +71,9 @@ class GetUserDataAction
 =======
         } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
 >>>>>>> 61831e43 (.)
+=======
+        } elseif ($user->relationLoaded('profile') && null !== $user->profile) {
+>>>>>>> laraxot/develop
             $profile = $user->profile;
             if (is_object($profile) && method_exists($profile, 'getAvatarUrl')) {
                 $avatarValue = $profile->getAvatarUrl();
@@ -87,6 +95,7 @@ class GetUserDataAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($user->relationLoaded('profile') && $user->profile !== null) {
 =======
         if ($user->relationLoaded('profile') && null !== $user->profile) {
@@ -103,6 +112,9 @@ class GetUserDataAction
 =======
         if ($user->relationLoaded('profile') && null !== $user->profile) {
 >>>>>>> 61831e43 (.)
+=======
+        if ($user->relationLoaded('profile') && null !== $user->profile) {
+>>>>>>> laraxot/develop
             $profile = $user->profile;
             if (is_object($profile) && isset($profile->extra)) {
                 $extra = $profile->extra;
@@ -131,6 +143,7 @@ class GetUserDataAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             avatar: $avatarValue !== null ? (string) $avatarValue : null,
             role: $roleValue !== null ? (string) $roleValue : null,
 =======
@@ -153,6 +166,10 @@ class GetUserDataAction
             avatar: null !== $avatarValue ? (string) $avatarValue : null,
             role: null !== $roleValue ? (string) $roleValue : null,
 >>>>>>> 61831e43 (.)
+=======
+            avatar: null !== $avatarValue ? (string) $avatarValue : null,
+            role: null !== $roleValue ? (string) $roleValue : null,
+>>>>>>> laraxot/develop
             permissions: $permissionsArray,
             settings: $settingsArray,
         );

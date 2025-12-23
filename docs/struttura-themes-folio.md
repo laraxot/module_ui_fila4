@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Struttura Themes e Folio in <nome progetto>
 =======
 # Struttura Themes e Folio in 
 # Struttura Themes e Folio in SaluteOra
 >>>>>>> 7eb1087 (.)
+=======
+# Struttura Themes e Folio in 
+# Struttura Themes e Folio in SaluteOra
+# Struttura Themes e Folio in 
+# Struttura Themes e Folio in SaluteOra
+>>>>>>> laraxot/develop
 
 ## ⚠️ ATTENZIONE CRITICA
 
@@ -14,11 +21,18 @@
 ## Struttura del Progetto
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Il progetto <nome progetto> utilizza un sistema di **Themes** che modifica la struttura standard di Laravel Folio:
 =======
 Il progetto  utilizza un sistema di **Themes** che modifica la struttura standard di Laravel Folio:
 Il progetto SaluteOra utilizza un sistema di **Themes** che modifica la struttura standard di Laravel Folio:
 >>>>>>> 7eb1087 (.)
+=======
+Il progetto  utilizza un sistema di **Themes** che modifica la struttura standard di Laravel Folio:
+Il progetto SaluteOra utilizza un sistema di **Themes** che modifica la struttura standard di Laravel Folio:
+Il progetto  utilizza un sistema di **Themes** che modifica la struttura standard di Laravel Folio:
+Il progetto SaluteOra utilizza un sistema di **Themes** che modifica la struttura standard di Laravel Folio:
+>>>>>>> laraxot/develop
 
 ```
 /laravel/

@@ -1,8 +1,32 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 @props(['title' => 'Verifica Idoneità'])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -158,4 +182,24 @@ declare(strict_types=1);
             </div>
         @endif
     </div>
+<<<<<<< HEAD
 @endif
+=======
+<<<<<<< HEAD
+@endif
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+@endif
+=======
+@endif 
+>>>>>>> a12f125f4a (.)
+=======
+@endif
+>>>>>>> b93ef594b4 (.)
+=======
+@endif 
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop

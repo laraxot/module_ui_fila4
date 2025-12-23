@@ -4,6 +4,7 @@
 **Status**: 85% COMPLETATO  
 **Priority**: HIGH  
 <<<<<<< HEAD
+<<<<<<< HEAD
 **PHPStan**: ✅ level 10 (0 errori)  
 =======
 **PHPStan**: ✅ Level 9 (0 errori)  
@@ -309,3 +310,5 @@ UI Module
 ---
 
 *Questa roadmap è specifica per il modulo UI e viene aggiornata regolarmente in base ai progressi e alle nuove esigenze.*
+=======
+>>>>>>> laraxot/develop

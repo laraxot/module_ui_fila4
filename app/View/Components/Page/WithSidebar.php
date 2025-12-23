@@ -19,6 +19,7 @@ final class WithSidebar extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
@@ -36,6 +37,10 @@ final class WithSidebar extends Component
     ) {
     }
 >>>>>>> 61831e43 (.)
+=======
+    ) {
+    }
+>>>>>>> laraxot/develop
 
     public function render(): Renderable
     {

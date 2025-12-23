@@ -2,7 +2,13 @@
 
 ## Introduzione
 I componenti table forniscono una gestione efficiente e personalizzabile dei dati tabulari, con funzionalità avanzate di ordinamento, filtro e paginazione.
+<<<<<<< HEAD
 ## Componenti Disponibili
+=======
+
+## Componenti Disponibili
+
+>>>>>>> laraxot/develop
 ### DataTable
 ```blade
 <x-ui::datatable 
@@ -20,14 +26,29 @@ I componenti table forniscono una gestione efficiente e personalizzabile dei dat
     :exportable="true"
 />
 ```
+<<<<<<< HEAD
 ### StatusBadge
+=======
+
+### StatusBadge
+```blade
+>>>>>>> laraxot/develop
 <x-ui::status-badge 
     :status="$user->status"
     :options="[
         'active' => ['label' => 'Attivo', 'color' => 'success'],
         'inactive' => ['label' => 'Inattivo', 'color' => 'danger'],
         'pending' => ['label' => 'In attesa', 'color' => 'warning'],
+<<<<<<< HEAD
 ### ActionButtons
+=======
+    ]"
+/>
+```
+
+### ActionButtons
+```blade
+>>>>>>> laraxot/develop
 <x-ui::action-buttons 
     :actions="[
         [
@@ -36,27 +57,50 @@ I componenti table forniscono una gestione efficiente e personalizzabile dei dat
             'icon' => 'eye',
             'label' => 'Visualizza'
         ],
+<<<<<<< HEAD
+=======
+        [
+>>>>>>> laraxot/develop
             'type' => 'edit',
             'url' => route('users.edit', $user),
             'icon' => 'pencil',
             'label' => 'Modifica'
+<<<<<<< HEAD
+=======
+        ],
+        [
+>>>>>>> laraxot/develop
             'type' => 'delete',
             'url' => route('users.destroy', $user),
             'icon' => 'trash',
             'label' => 'Elimina',
             'confirm' => true
         ]
+<<<<<<< HEAD
 ## Funzionalità
+=======
+    ]"
+/>
+```
+
+## Funzionalità
+
+>>>>>>> laraxot/develop
 ### Ordinamento
 - Multi-colonna
 - Direzione (asc/desc)
 - Personalizzazione
 - Cache risultati
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/develop
 ### Filtri
 - Testo libero
 - Select multipli
 - Date range
 - Custom filters
+<<<<<<< HEAD
 ### Paginazione
 - Server-side
 - Client-side
@@ -65,6 +109,21 @@ I componenti table forniscono una gestione efficiente e personalizzabile dei dat
 ### Livewire
 ```php
 use Livewire\Component;
+=======
+
+### Paginazione
+- Server-side
+- Client-side
+- Personalizzazione
+- Cache pagine
+
+## Integrazione
+
+### Livewire
+```php
+use Livewire\Component;
+
+>>>>>>> laraxot/develop
 class UserTable extends Component
 {
     public $sortField = 'name';
@@ -81,7 +140,13 @@ class UserTable extends Component
             $this->sortDirection = 'asc';
         }
     }
+<<<<<<< HEAD
     public function render()
+=======
+    
+    public function render()
+    {
+>>>>>>> laraxot/develop
         $users = User::query()
             ->when($this->search, function ($query) {
                 $query->where('name', 'like', '%'.$this->search.'%')
@@ -91,21 +156,44 @@ class UserTable extends Component
             ->paginate($this->perPage);
             
         return view('livewire.user-table', compact('users'));
+<<<<<<< HEAD
 }
 ## Best Practices
 ### Utilizzo
 - Ottimizzazione query
 - Lazy loading
 - Responsive design
+=======
+    }
+}
+```
+
+## Best Practices
+
+### Utilizzo
+- Ottimizzazione query
+- Cache risultati
+- Lazy loading
+- Responsive design
+
+>>>>>>> laraxot/develop
 ### Performance
 - Indici database
 - Query ottimizzate
 - Cache paginazione
 - Lazy loading colonne
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/develop
 ## Collegamenti
 - [Componenti Base](./base-components.md)
 - [Componenti Form](./form-components.md)
 - [Componenti Chart](./chart-components.md)
 - [Componenti Layout](./layout-components.md)
+<<<<<<< HEAD
 - [Documentazione Frontend](../Cms/project_docs/frontend-architecture.md) 
 - [Documentazione Frontend](../Cms/docs/frontend-architecture.md) 
+=======
+- [Documentazione Frontend](../Cms/docs/frontend-architecture.md) 
+>>>>>>> laraxot/develop

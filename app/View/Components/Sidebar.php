@@ -16,6 +16,7 @@ class Sidebar extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct() {}
 =======
 =======
@@ -34,6 +35,11 @@ class Sidebar extends Component
     {
     }
 >>>>>>> 24eb066 (Lint)
+=======
+    public function __construct()
+    {
+    }
+>>>>>>> laraxot/develop
 
     public function render(): View
     {

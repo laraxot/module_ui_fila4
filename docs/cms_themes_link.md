@@ -21,7 +21,11 @@ Secondo le regole di organizzazione della documentazione:
 - [Processo di Build del Tema](../../Cms/project_docs/theme-build-process.md) - Dettagli sul processo di build
 - [Struttura dei Temi](../../Cms/project_docs/themes/structure.md) - Organizzazione dei file nei temi
 - [Frontoffice](../../Cms/project_docs/frontoffice.md) - Documentazione completa sul frontend
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 
 ## Implementazione dei Temi
 
@@ -47,6 +51,10 @@ Questo documento è collegato bidirezionalmente con [themes-ui-link.md](../../Cm
 ## Collegamento Bidirezionale
 
 Questo documento è collegato bidirezionalmente con [themes-ui-link.md](../../Cms/project_docs/themes-ui-link.md) nel modulo Cms.
+<<<<<<< HEAD
 >>>>>>> 7eb1087 (.)
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 
 > Aggiorna entrambi i riferimenti se modifichi la documentazione dei temi o aggiungi nuove sezioni.
