@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Unit\Widgets;
 
-use Filament\Schemas\Components\Component;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
 
 /**

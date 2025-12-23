@@ -4,14 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\UI\Actions\Icon;
 
-use ReflectionClass;
-use Exception;
-use SplFileInfo;
 use BladeUI\Icons\Factory as IconFactory;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
+use SplFileInfo;
 
 class GetAllIconsAction
 {
@@ -26,11 +24,11 @@ class GetAllIconsAction
 
         // Uso reflection per accedere alle icone in modo sicuro
         try {
-            $reflection = new ReflectionClass($iconsFactory);
+            $reflection = new \ReflectionClass($iconsFactory);
             $property = $reflection->getProperty('iconSets');
             $property->setAccessible(true);
             $icons = $property->getValue($iconsFactory);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             // Fallback: restituisci array vuoto se non riesci ad accedere
             return [];
         }
@@ -75,7 +73,7 @@ class GetAllIconsAction
 
                 foreach ($files as $file) {
                     // Type narrowing per SplFileInfo
-                    if (! ($file instanceof SplFileInfo)) {
+                    if (! ($file instanceof \SplFileInfo)) {
                         continue;
                     }
 

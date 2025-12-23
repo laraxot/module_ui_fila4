@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
-use Exception;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Tables\Columns\Column;
@@ -93,7 +92,7 @@ class IconStateSplitColumn extends Column
                     'color' => $colorString,
                     'tooltip' => $labelString,
                 ];
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 // Skip problematic states
                 continue;
             }
@@ -234,24 +233,24 @@ class IconStateSplitColumn extends Column
     {
         try {
             if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
-                throw new Exception('Model class not found or invalid');
+                throw new \Exception('Model class not found or invalid');
             }
 
             $recordRaw = $this->modelClass::find($recordId);
 
             if (! $recordRaw || ! is_object($recordRaw)) {
-                throw new Exception('Record non trovato');
+                throw new \Exception('Record non trovato');
             }
 
             /** @var Model $record */
             $record = $recordRaw;
 
             if (! isset($record->state) || ! is_object($record->state)) {
-                throw new Exception('State transition method not available');
+                throw new \Exception('State transition method not available');
             }
 
             if (! ($record->state instanceof State)) {
-                throw new Exception('State is not a valid State instance');
+                throw new \Exception('State is not a valid State instance');
             }
 
             // Esegui la transizione
@@ -264,7 +263,7 @@ class IconStateSplitColumn extends Column
                 ->body('Lo stato è stato cambiato con successo.')
                 ->success()
                 ->send();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Notification::make()
                 ->title('Errore Transizione')
                 ->body('Si è verificato un errore: '.$e->getMessage())

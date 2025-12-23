@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
-use Exception;
-use ReflectionClass;
-use ReflectionException;
 use Filament\Tables\Columns\SelectColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -44,7 +41,7 @@ class SelectStateColumn extends SelectColumn
                         $states = is_array($transitionableStates) ? $transitionableStates : iterator_to_array($transitionableStates);
                     }
                 }
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 // Record implements HasStatesContract which provides getStatesFor()
                 $fetchedStates = $record->getStatesFor($name);
                 $statesArray = $fetchedStates->toArray();
@@ -58,12 +55,12 @@ class SelectStateColumn extends SelectColumn
                     $stateNameProperty = null;
                     // ✅ Usa Reflection invece di property_exists per maggiore affidabilità
                     try {
-                        $reflection = new ReflectionClass($stateClass);
+                        $reflection = new \ReflectionClass($stateClass);
                         if ($reflection->hasProperty('name')) {
                             $nameProperty = $reflection->getStaticPropertyValue('name');
                             $stateNameProperty = is_string($nameProperty) ? $nameProperty : null;
                         }
-                    } catch (ReflectionException) {
+                    } catch (\ReflectionException) {
                         // Property non esiste, $stateNameProperty rimane null
                     }
                     if (null !== $stateNameProperty) {

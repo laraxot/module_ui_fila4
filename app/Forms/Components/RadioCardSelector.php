@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Forms\Components;
 
-use Closure;
 use Filament\Forms\Components\Field;
 
 /**
@@ -18,9 +17,9 @@ class RadioCardSelector extends Field
     protected string $view = 'ui::forms.components.radio-card-selector';
 
     /**
-     * @var array<int, array<string, mixed>>|Closure
+     * @var array<int, array<string, mixed>>|\Closure
      */
-    protected array|Closure $cards = [];
+    protected array|\Closure $cards = [];
 
     protected ?string $sectionTitle = null;
 
@@ -35,9 +34,9 @@ class RadioCardSelector extends Field
     /**
      * Imposta le card disponibili per la selezione.
      *
-     * @param array<int, array<string, mixed>>|Closure $cards
+     * @param array<int, array<string, mixed>>|\Closure $cards
      */
-    public function cards(array|Closure $cards): static
+    public function cards(array|\Closure $cards): static
     {
         $this->cards = $cards;
 
