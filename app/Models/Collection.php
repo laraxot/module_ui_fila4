@@ -21,21 +21,19 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|Collection newModelQuery()
  * @method static Builder<static>|Collection newQuery()
  * @method static Builder<static>|Collection query()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+ *                                                                               <<<<<<< HEAD
+ *                                                                               <<<<<<< HEAD
+ *                                                                               <<<<<<< HEAD
+ *                                                                               =======
  *
  * @property ProfileContract|null $deleter
->>>>>>> a8fbb3e (.)
-=======
- *
+ *                                         >>>>>>> a8fbb3e (.)
+ *                                         =======
  * @property ProfileContract|null $deleter
->>>>>>> 24eb066 (Lint)
-=======
- *
+ *                                         >>>>>>> 24eb066 (Lint)
+ *                                         =======
  * @property ProfileContract|null $deleter
->>>>>>> laraxot/develop
+ *                                         >>>>>>> laraxot/develop
  *
  * @mixin \Eloquent
  */
