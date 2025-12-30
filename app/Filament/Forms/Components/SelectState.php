@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use Filament\Forms\Components\Select;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
+use Modules\Xot\Filament\Forms\Components\XotBaseSelect;
 use Spatie\ModelStates\HasStatesContract;
 
-class SelectState extends Select
+class SelectState extends XotBaseSelect
 {
     protected function setUp(): void
     {

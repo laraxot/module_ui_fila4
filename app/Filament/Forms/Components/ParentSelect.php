@@ -3,30 +3,32 @@
 declare(strict_types=1);
 
 /**
- * @see RyanChandler\FilamentNavigation\Filament\Fields\NavigationSelect;
- * @see https://github.com/ryangjchandler/filament-navigation
- */
+        // Inizializzazione con localizzazione Carbon
+        Carbon::setLocale(App::getLocale());
+        $this->currentViewMonth = now()->format('Y-m');
 
-namespace Modules\UI\Filament\Forms\Components;
+        // Hydration/Dehydration del valore
+        $this->afterStateHydrated(static function (self $component, mixed $state): void {
+            if ($state !== null && is_string($state) && $state !== '') {
+                try {
+                    $date = Carbon::parse($state);
+                    $component->currentViewMonth = $date->format('Y-m');
+                } catch (Exception $e) {
+                    // Handle invalid date
+                    $component->currentViewMonth = now()->format('Y-m');
+                }
+            }
+        });
 
-use Filament\Forms\Components\Select;
+        $this->dehydrateStateUsing(static function (mixed $state): ?string {
+            if ($state !== null && is_string($state) && $state !== '') {
+                try {
+                    return Carbon::parse($state)->format('Y-m-d');
+                } catch (Exception $e) {
+                    return null;
+                }
+            }
 
-// use RyanChandler\FilamentNavigation\Models\Navigation;
-
-final class ParentSelect extends Select
-{
-    protected string $optionValueProperty = 'id';
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        // dddx($this->getModel());
-        $this->options(static fn (ParentSelect $_component): array => ['a' => 'a', 'b' => 'b']);
+            return null;
+        });
     }
-
-    public function getOptionValueProperty(): string
-    {
-        return $this->optionValueProperty;
-    }
-}

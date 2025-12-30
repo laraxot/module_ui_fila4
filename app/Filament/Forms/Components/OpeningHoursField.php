@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TimePicker;
 use Modules\UI\Actions\Datetime\GetDaysMappingAction;
 use Modules\UI\Rules\OpeningHoursRule;
+use Modules\Xot\Filament\Forms\Components\XotBaseField;
 
 /**
  * --.
  */
-final class OpeningHoursField extends Field
+final class OpeningHoursField extends XotBaseField
 {
     /**
      * Vista Blade per il rendering del componente.
@@ -80,13 +80,14 @@ final class OpeningHoursField extends Field
 
         $this->schema($form)->columns(5);
 
-        $this->afterStateUpdated(function ($_state): void {
-            // dddx($state);
-        });
-        $this->afterStateHydrated(function (OpeningHoursField $_component, $_state): void {
-            // Qui puoi normalizzare lo stato iniziale se serve
-            // dddx($state);
-        });
+        // $this->afterStateUpdated(function ($_state): void {
+        //    // dddx($state);
+        // });
+        // $this->afterStateHydrated(function (OpeningHoursField $_component, $_state): void {
+        //    // Qui puoi normalizzare lo stato iniziale se serve
+        //    // dddx($state);
+        // });
+
         $this->rules([
             /*
              * function(){
