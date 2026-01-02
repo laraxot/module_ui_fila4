@@ -50,8 +50,19 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|Category whereTitle($value)
  * @method static Builder<static>|Category whereUpdatedAt($value)
  * @method static Builder<static>|Category whereUpdatedBy($value)
+ *                                                                             <<<<<<< HEAD
+ *                                                                             <<<<<<< HEAD
+ *                                                                             <<<<<<< HEAD
+ *                                                                             =======
  *
  * @property ProfileContract|null $deleter
+ *                                         >>>>>>> a8fbb3e (.)
+ *                                         =======
+ * @property ProfileContract|null $deleter
+ *                                         >>>>>>> 24eb066 (Lint)
+ *                                         =======
+ * @property ProfileContract|null $deleter
+ *                                         >>>>>>> laraxot/develop
  *
  * @mixin \Eloquent
  */
