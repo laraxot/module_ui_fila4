@@ -145,7 +145,7 @@ class OpeningHoursRule implements ValidationRule
         return null;
     }
 
-    /**
+    /*
      * Verifica se l'orario è nel formato HH:MM valido.
      */
     /*
