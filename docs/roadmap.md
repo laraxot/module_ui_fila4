@@ -1,365 +1,272 @@
-### Versione HEAD
+# Roadmap Modulo UI - Completamento e Miglioramenti
 
-# Roadmap Modulo UI
+**Data Creazione**: 2026-01-02  
+**Status**: 📋 IN LAVORAZIONE  
+**Versione**: 1.0.0
 
-## Funzionalità Future
+## 🎯 Obiettivo
 
-### Componenti Base
-1. **Core Components**
-   - Component system
-   - State management
-   - Event system
+Completare il modulo UI con tutte le funzionalità mancanti, migliorare qualità e performance, e garantire che tutti i componenti siano riutilizzabili e ben documentati.
 
-2. **Layout System**
-   - Grid system
-   - Responsive design
-   - Theme system
+## 📊 Stato Attuale
 
-3. **Form System**
-   - Form builder
-   - Validation
-   - Error handling
+### Metriche
+- **File PHP**: 539
+- **Test**: 15 (copertura media)
+- **Documentazione**: 515 file
+- **PHPStan Level 10**: ✅ 0 errori
+- **Models**: 5
+- **Filament Resources**: 55
+- **Actions**: 5
 
-### Filament Integration
-1. **Resource Management**
-   - CRUD components
-   - Bulk operations
-   - Search/Filter
+### Componenti Principali
+- **Filament Components**: AddressField, RadioBadge, IconStateColumn, ParentSelect (eliminato)
+- **Filament Widgets**: UserCalendarWidget, RedirectWidget, IconStateColumn
+- **Actions**: GetUserDataAction, GetAllIconsAction
+- **Rules**: OpeningHoursRule
 
-2. **Form Builder**
-   - Custom fields
-   - Validation rules
-   - Custom widgets
+## 🚨 TODO e Miglioramenti Identificati
 
-3. **UI Components**
-   - Data tables
-   - Charts
-   - Maps
+### 1. UserCalendarWidget - Date Selection
+**File**: `app/Filament/Widgets/UserCalendarWidget.php:124`
+**Problema**: Logica selezione data non implementata
+**Priorità**: 🟡 Media
+**Stima**: 3-5 ore
 
-### Livewire + Volt
-1. **Component System**
-   - Real-time updates
-   - State management
-   - Event handling
+### 2. Test Coverage
+**Problema**: Copertura test media, da aumentare
+**Priorità**: 🟡 Media
+**Stima**: 15-20 ore
 
-2. **Form Handling**
-   - Validation
-   - Error handling
-   - Success feedback
+### 3. Componenti UI Mancanti
+**Problema**: Alcuni componenti UI comuni potrebbero essere aggiunti
+**Priorità**: 🟢 Bassa
+**Stima**: 20-30 ore
 
-3. **UI Updates**
-   - Partial updates
-   - Animations
-   - Transitions
+## 📋 Roadmap Dettagliata
 
-## Miglioramenti Pianificati
+### Fase 1: Completamento Funzionalità Core (Settimana 1)
+
+#### 1.1 UserCalendarWidget Date Selection
+**Obiettivo**: Implementare logica selezione data
+
+**Task**:
+- [ ] Analizzare requisiti date selection
+- [ ] Implementare `onDateSelect()` method
+- [ ] Aggiungere validazione date
+- [ ] Gestire eventi calendar
+- [ ] Test funzionale
+- [ ] Documentazione
+
+**Dipendenze**: Nessuna
+**Stima**: 3-5 ore
+
+#### 1.2 Componenti UI Comuni
+**Obiettivo**: Aggiungere componenti UI comuni mancanti
+
+**Task**:
+- [ ] Analizzare componenti UI necessari
+- [ ] Creare componenti mancanti
+- [ ] Test componenti
+- [ ] Documentazione
+
+**Dipendenze**: Nessuna
+**Stima**: 10-15 ore
+
+### Fase 2: Testing e Qualità (Settimana 2-3)
+
+#### 2.1 Aumentare Copertura Test
+**Obiettivo**: Portare copertura test da ~50% a > 80%
+
+**Task**:
+- [ ] Test unitari per tutti i Components
+- [ ] Test feature per Widgets
+- [ ] Test integration per Actions
+- [ ] Test Rules
+- [ ] Test rendering
+
+**Dipendenze**: Fase 1 completata
+**Stima**: 15-20 ore
+
+#### 2.2 Test Business Logic
+**Obiettivo**: Testare comportamento business componenti
+
+**Task**:
+- [ ] Test AddressField validation
+- [ ] Test RadioBadge rendering
+- [ ] Test IconStateColumn states
+- [ ] Test UserCalendarWidget events
+- [ ] Test OpeningHoursRule validation
+
+**Dipendenze**: Fase 1 completata
+**Stima**: 10-15 ore
+
+### Fase 3: Performance e Ottimizzazioni (Settimana 4)
+
+#### 3.1 Component Rendering Optimization
+**Obiettivo**: Ottimizzare rendering componenti
+
+**Task**:
+- [ ] Analizzare performance rendering
+- [ ] Implementare lazy loading
+- [ ] Ottimizzare asset loading
+- [ ] Benchmark performance
+
+**Dipendenze**: Fase 2 completata
+**Stima**: 6-10 ore
+
+#### 3.2 Icon Loading Optimization
+**Obiettivo**: Ottimizzare caricamento icone
+
+**Task**:
+- [ ] Analizzare GetAllIconsAction
+- [ ] Implementare caching icone
+- [ ] Lazy load icone
+- [ ] Benchmark performance
+
+**Dipendenze**: Fase 2 completata
+**Stima**: 4-8 ore
+
+### Fase 4: Features Avanzate (Settimana 5-8)
+
+#### 4.1 Design System Completo
+**Obiettivo**: Creare design system completo
+
+**Task**:
+- [ ] Componenti base completi
+- [ ] Varianti componenti
+- [ ] Theming system
+- [ ] Documentation design system
+- [ ] Test design system
+
+**Dipendenze**: Fase 3 completata
+**Stima**: 30-40 ore
+
+#### 4.2 Advanced Components
+**Obiettivo**: Aggiungere componenti avanzati
+
+**Task**:
+- [ ] DataTable component
+- [ ] FormBuilder component
+- [ ] Chart components
+- [ ] Map components
+- [ ] Test componenti avanzati
+
+**Dipendenze**: Fase 3 completata
+**Stima**: 25-35 ore
+
+#### 4.3 Accessibility Improvements
+**Obiettivo**: Migliorare accessibilità componenti
+
+**Task**:
+- [ ] ARIA labels
+- [ ] Keyboard navigation
+- [ ] Screen reader support
+- [ ] Color contrast
+- [ ] Test accessibilità
+
+**Dipendenze**: Fase 3 completata
+**Stima**: 15-20 ore
+
+## 🎯 Priorità
+
+### Priorità 1 (Urgente - 1 settimana)
+1. ✅ UserCalendarWidget date selection
+2. ✅ Componenti UI comuni base
+
+### Priorità 2 (Importante - 2-4 settimane)
+1. Testing completo
+2. Performance optimization
+3. Component rendering optimization
+
+### Priorità 3 (Miglioramenti - 5-8 settimane)
+1. Design system completo
+2. Advanced components
+3. Accessibility improvements
+
+## 📈 Metriche Target
+
+### Qualità Codice
+- **PHPStan Level 10**: ✅ 0 errori (già raggiunto)
+- **PHPMD Complexity**: < 10 per metodo
+- **Test Coverage**: > 80% (attuale ~50%)
+- **Componenti Riutilizzabili**: 100%
 
 ### Performance
-1. **Asset Management**
-   - JS/CSS minification
-   - CDN integration
-   - Version control
+- **Component Rendering**: < 100ms
+- **Icon Loading**: < 50ms
+- **Asset Loading**: Ottimizzato
+- **Memory Usage**: < 64MB
 
-2. **Component Loading**
-   - Lazy loading
-   - Code splitting
-   - Dynamic imports
+### Architettura
+- **Componenti Riutilizzabili**: 100%
+- **Design System**: Completo
+- **Accessibility**: WCAG 2.1 AA
 
-3. **State Management**
-   - State caching
-   - State persistence
-   - State sync
+## 🔗 Dipendenze Inter-Modulo
 
-### Developer Experience
-1. **Development Tools**
-   - Component generator
-   - Theme builder
-   - Style guide
+### Dipendenze da Altri Moduli
+- **Xot**: Framework base (dipendenza core)
+- **User**: User data (dipendenza opzionale)
+- **Geo**: Address data (dipendenza opzionale)
 
-2. **IDE Support**
-   - Code completion
-   - Type hints
-   - Documentation
+### Dipendenze da UI
+- **Tutti i moduli** - Tutti usano componenti UI
 
-3. **CLI Tools**
-   - Component commands
-   - Theme commands
-   - Build commands
+**REGOLA ASSOLUTA**: UI fornisce componenti riutilizzabili, non business logic!
 
-### Integration
-1. **Third Party**
-   - UI libraries
-   - Icon sets
-   - Animation libraries
+## 📚 Documentazione da Aggiornare
 
-2. **Module System**
-   - Module discovery
-   - Dependency management
-   - Version control
+1. `docs/philosophy.md` - Aggiornare con nuove decisioni
+2. `docs/components.md` - Aggiornare con nuovi componenti
+3. `docs/architecture.md` - Aggiornare architettura
+4. Consolidare 515 file documentazione
+5. Creare `docs/design-system.md` - Design system guide
+6. Creare `docs/testing-guide.md` - Guida testing
 
-3. **Deployment**
-   - CI/CD integration
-   - Environment management
-   - Configuration
+## 🧪 Testing Strategy
 
-## Timeline
+### Unit Tests
+- Test per ogni Component
+- Test per ogni Widget
+- Test per ogni Action
+- Test per ogni Rule
 
-### Q1 2024
-- Component system
-- Layout system
-- Form system
+### Feature Tests
+- Test component rendering
+- Test widget functionality
+- Test form validation
+- Test user interactions
 
-### Q2 2024
-- Resource management
-- Form builder
-- UI components
+### Integration Tests
+- Test component integration
+- Test widget integration
+- Test Filament integration
 
-### Q3 2024
-- Development tools
-- IDE support
-- CLI tools
+## 🚀 Quick Wins (Prima Settimana)
 
-### Q4 2024
-- Third party integration
-- Module system
-- Deployment tools
+1. ✅ Implementare date selection UserCalendarWidget (3-5 ore)
+2. ✅ Aggiungere componenti UI comuni (10-15 ore)
+3. ✅ Test componenti base (5-8 ore)
 
-## Contribuire
+**Totale Quick Wins**: 18-28 ore (3-4 giorni)
 
-### Come Contribuire
-1. Fork repository
-2. Crea branch feature
-3. Commit changes
-4. Push branch
-5. Crea Pull Request
+## 📝 Note
 
-### Standard di Codice
-- PSR-12 compliance
-- PHPDoc comments
-- Unit tests
-- Integration tests
+- UI è modulo BASE - fornisce componenti riutilizzabili
+- Nessuna business logic in componenti UI
+- Tutte le modifiche devono rispettare filosofia DRY + KISS
+- Ogni componente deve essere testato
+- Documentazione sempre aggiornata
+- PHPStan Level 10 sempre mantenuto
+- Accessibility sempre considerata
 
-### Processo di Review
-1. Code review
-2. Test automation
-3. Documentation
-4. Merge approval
+## 🔗 Collegamenti
 
-## Riferimenti
-
-### Documentazione
-- [Laravel Blade](https://laravel.com/docs/12.x/blade)
-- [Filament Documentation](https://filamentphp.com/docs)
-- [Livewire Documentation](https://livewire.laravel.com/docs)
-
-### Collegamenti Interni
-- [Bottlenecks](bottlenecks.md)
-- [Best Practices](BEST-PRACTICES.md)
-- [Testing](testing.md)
-
-### Versione HEAD
-
-
-### Versione Incoming
-
-- [Documentazione Componenti](./components.md) - Guida ai componenti UI
-- [Guida Theming](./theming.md) - Sistema di temi
-- [Best Practices UI](./best-practices.md) - Linee guida per lo sviluppo UI
-
-## Note
-- Priorità alta: Performance e Accessibilità
-- Focus su riusabilità componenti
-- Mantenere coerenza design system
-
-## Collegamenti
-- [Documentazione UI](./README.md)
-- [Guida Sviluppo](./DEVELOPMENT.md)
-- [Best Practices](./BEST-PRACTICES.md)
-- [Architettura](./ARCHITECTURE.md)
-
-## Collegamenti tra versioni di roadmap.md
-* [roadmap.md](bashscripts/docs/roadmap.md)
-* [roadmap.md](docs/roadmap.md)
-* [roadmap.md](../../../Gdpr/docs/roadmap.md)
-* [roadmap.md](../../../Notify/docs/roadmap.md)
-* [roadmap.md](../../../Xot/docs/roadmap.md)
-* [roadmap.md](../../../Dental/docs/roadmap.md)
-* [roadmap.md](../../../User/docs/roadmap.md)
-* [roadmap.md](../../../UI/docs/roadmap.md)
-* [roadmap.md](../../../Lang/docs/roadmap.md)
-* [roadmap.md](../../../Job/docs/roadmap.md)
-* [roadmap.md](../../../Media/docs/roadmap.md)
-* [roadmap.md](../../../Tenant/docs/roadmap.md)
-* [roadmap.md](../../../Activity/docs/roadmap.md)
-* [roadmap.md](../../../Patient/docs/roadmap.md)
-* [roadmap.md](../../../Cms/docs/roadmap.md)
-* [roadmap.md](../../../../Themes/One/docs/roadmap.md)
-
+- [Filosofia UI](./philosophy.md)
+- [Components Guide](./components.md)
+- [Architecture Guide](./architecture.md)
 
 ---
 
-
-### Versione Incoming
-
-# UI Module Roadmap
-
-## Module Progress Overview
-Overall Module Completion: 60%
-- Core Features: 75% complete
-- High Priority Features: 70% complete
-- Medium Priority Features: 50% complete
-- Low Priority Features: 30% complete
-- Technical Debt: 60% complete
-
-## Technical Metrics Overview
-
-### Code Quality
-* Maintainability Index: 85/100
-* Cyclomatic Complexity: Avg 2.5
-* Technical Debt Ratio: 15%
-* PHPStan Level: 5 (target: Level 7)
-* Code Duplication: 5%
-* Clean Code Score: 85/100
-* Type Safety: 80%
-
-### Performance
-* Average Response Time: 200ms
-* 95th Percentile Response: 400ms
-* Database Query Time: 150ms
-* Cache Hit Rate: 85%
-* Memory Peak Usage: 75MB
-* CPU Utilization: 40%
-
-### Security
-* OWASP Compliance: 95%
-* Security Scan Issues: 0 Critical, 3 Medium
-* Authentication Coverage: 100%
-* Authorization Coverage: 95%
-* Input Validation: 98%
-* XSS Protection: 100%
-
-### Testing
-* Overall Test Coverage: 75%
-* Unit Test Pass Rate: 100%
-* Integration Test Pass Rate: 95%
-* E2E Test Pass Rate: 90%
-* Security Test Coverage: 85%
-* Performance Test Coverage: 70%
-
-## Current Sprint Focus
-1. PHPStan Level 7 Compliance
-   - Fix return type declarations
-   - Add missing parameter types
-   - Complete property annotations
-   - Priority: High
-
-2. Code Quality Improvements
-   - Implement missing tests
-   - Reduce code duplication
-   - Priority: High
-
-3. Documentation
-   - Complete API documentation
-   - Update integration guides
-   - Priority: Medium
-
-## Technical Debt
-1. Code Quality
-   - Complete PHPStan fixes
-   - Improve test coverage
-   - Priority: High
-
-2. Documentation
-   - API documentation
-   - Integration guides
-   - Priority: Medium
-
-3. Performance
-   - Query optimization
-   - Cache implementation
-   - Priority: High
-
-# 🗺️ UI Module Roadmap
-
-## 📊 Progress Overview
-
-| Category | Progress |
-|----------|----------|
-| Core Components | 75% |
-| Theming System | 85% |
-| Documentation | 60% |
-| PHPStan Levels | 55% |
-| Test Coverage | 65% |
-| Accessibility | 70% |
-
-## 🎯 Tasks & Progress
-
-### Component System Enhancement [75%]
-- [x] Base Components [docs/roadmap/components_base.md]
-- [x] Form Components [docs/roadmap/form_components.md]
-- [ ] Data Display Components [docs/roadmap/data_display.md]
-- [ ] Navigation Components [docs/roadmap/navigation.md]
-- [x] Layout Components [docs/roadmap/layout.md]
-
-### Theme System [85%]
-- [x] Theme Contract [docs/roadmap/theme_contract.md]
-- [x] Theme Inheritance [docs/roadmap/theme_inheritance.md]
-- [x] CSS Framework Integration [docs/roadmap/css_integration.md]
-- [ ] Dynamic Theme Switching [docs/roadmap/theme_switching.md]
-- [x] Custom Variables [docs/roadmap/theme_variables.md]
-
-### Accessibility Implementation [70%]
-- [x] ARIA Labels [docs/roadmap/aria_labels.md]
-- [x] Keyboard Navigation [docs/roadmap/keyboard_nav.md]
-- [ ] Screen Reader Support [docs/roadmap/screen_readers.md]
-- [ ] Color Contrast [docs/roadmap/color_contrast.md]
-- [x] Focus Management [docs/roadmap/focus_management.md]
-
-### Performance Optimization [80%]
-- [x] Asset Bundling [docs/roadmap/asset_bundling.md]
-- [x] Lazy Loading [docs/roadmap/lazy_loading.md]
-- [x] CSS Optimization [docs/roadmap/css_opt.md]
-- [ ] JavaScript Optimization [docs/roadmap/js_opt.md]
-- [x] Image Optimization [docs/roadmap/image_opt.md]
-
-### Documentation Enhancement [60%]
-- [x] Component API [docs/roadmap/component_api.md]
-- [x] Theme Guide [docs/roadmap/theme_guide.md]
-- [ ] Storybook Integration [docs/roadmap/storybook.md]
-- [ ] Visual Regression Tests [docs/roadmap/visual_tests.md]
-- [x] Usage Examples [docs/roadmap/examples.md]
-
-### Testing Framework [65%]
-- [x] Component Tests [docs/roadmap/component_tests.md]
-- [x] Theme Tests [docs/roadmap/theme_tests.md]
-- [ ] E2E Tests [docs/roadmap/e2e_tests.md]
-- [ ] Accessibility Tests [docs/roadmap/a11y_tests.md]
-- [x] Performance Tests [docs/roadmap/perf_tests.md]
-
-### Mobile Responsiveness [90%]
-- [x] Breakpoint System [docs/roadmap/breakpoints.md]
-- [x] Mobile First Design [docs/roadmap/mobile_first.md]
-- [x] Touch Interactions [docs/roadmap/touch.md]
-- [ ] PWA Support [docs/roadmap/pwa.md]
-- [x] Responsive Images [docs/roadmap/responsive_images.md]
-
-## 🔄 Daily Tasks
-
-### Week 1 - Component System
-1. ✅ Audit existing components
-2. ✅ Standardize component APIs
-3. 🏗️ Implement missing components
-4. 📝 Document component usage
-5. 🧪 Add component tests
-
-### Week 2 - Accessibility
-1. ✅ ARIA implementation
-2. ✅ Keyboard navigation
-3. 🏗️ Screen reader optimization
-4. 📝 Accessibility documentation
-5. 🧪 A11y testing suite
-
-[More details in docs/roadmap/weekly/week2.md] 
-
----
-
+**Filosofia**: UI fornisce componenti riutilizzabili e design system - nessuna business logic, solo presentazione.
