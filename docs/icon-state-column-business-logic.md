@@ -1,123 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# icon state column business logic
-
-## obiettivo
-Garantire che la colonna `IconStateColumn` utilizzi callback sicuri per icona e colore, configuri l'azione di cambio stato durante il `setUp()` ed esponga notifiche localizzate senza utilizzare metodi vietati come `tooltip()`.
-
-## implementazione aggiornata (2025-11-11)
-- aggiunto `setUp()` per registrare `configureIconCallbacks()` e `configureStateAction()`.
-- rimossa la chiamata a `->tooltip()`, eliminando l'uso manuale di label e rispettando il `LangServiceProvider`.
-- le opzioni dello stato continuano a provenire da `getStateOptions()` e `mapStatesToOptions()` con traduzioni `pub_theme::*`.
-- l'azione `change-state` ora emette notifiche usando `ui::notifications.state_transition.success.*` (title + body) al posto di stringhe hard-coded.
-- mantenuta la transizione tramite `handleStateTransition()` con validazione di tipo esplicita e messaggi opzionali.
-
-## motivazioni
-- allineamento alle regole Laraxot: niente `tooltip/label/placeholder` manuali.
-- notifica full-localized per evitare testo italiano hardcoded.
-- prevenzione di errori di sintassi dovuti a trailing comma e catene Fluent non terminate.
-
-## riferimenti
-- codice: `Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php`
-- traduzioni: `Modules/UI/lang/*/notifications.php`
-- regole progetto: `Modules/Xot/docs/never-use-label-rule.md`
-=======
-=======
->>>>>>> laraxot/develop
-# IconStateColumn - Business Logic Analysis
-
-## Overview
-Analisi della business logic per la gestione delle colonne con icone di stato in Filament.
-
-## File Analizzato
-`Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php`
-
-## Business Logic
-
-### Scopo Principale
-La classe `IconStateColumn` estende `IconColumn` di Filament per fornire una gestione avanzata degli stati dei modelli utilizzando il package **Spatie Model States**.
-
-### Funzionalità Core
-
-#### 1. **Visualizzazione Stati**
-```php
-$this->icon(fn($state): ?string => $state?->icon());
-$this->color(fn($state): ?string => $state?->color());
-$this->tooltip(fn($state): ?string => $state?->label());
-```
-
-**Business Logic:**
-- Mostra icone dinamiche basate sullo stato del modello
-- Applica colori specifici per ogni stato
-- Fornisce tooltip descrittivi
-- Integrazione nativa con Spatie Model States
-
-#### 2. **Transizioni di Stato Interactive**
-La colonna permette di cambiare stato direttamente dalla tabella tramite un'azione modale.
-
-**Gestione Opzioni di Transizione:**
-```php
-function (Model&HasStatesContract $record, string $state): array {
-    $name = $this->getName();
-    $state = $record->getAttribute($name);
-
-    if($state == null) {
-        // Stato iniziale: mostra stati di default
-        $states = Arr::wrap($record->getDefaultStateFor($name));
-        return array_combine($states, $states);
-    }
-
-    // Stato esistente: mostra solo transizioni valide
-    $states = $state->transitionableStates();
-}
-```
-
-**Business Logic:**
-- **Stato Nullo**: Se il record non ha ancora uno stato, mostra gli stati di default disponibili
-- **Stato Esistente**: Mostra solo le transizioni valide dal stato corrente
-- **Fallback**: In caso di errore, mostra tutti gli stati possibili del modello
-
-#### 3. **Sistema di Traduzioni Multilingue**
-```php
-$model = Str::of(class_basename($record))->slug()->toString();
-$label = __('pub_theme::'.$model.'_states.'.$state.'.label');
-```
-
-**Business Logic:**
-- Traduzione automatica basata sul nome del modello
-- Pattern: `pub_theme::{model_name}_states.{state_name}.label`
-- Supporto per temi personalizzati
-
-#### 4. **Validazione Messaggi Opzionali**
-```php
-->required(function(Get $get, $record){
-    $newState = $get('state');
-    $newStateInstance = new $newStateClass($record);
-    return method_exists($newStateInstance, 'isMessageRequired')
-        ? $newStateInstance->isMessageRequired()
-        : false;
-})
-```
-
-**Business Logic:**
-- Alcuni stati richiedono un messaggio di giustificazione
-- La validazione è dinamica e dipende dallo stato di destinazione
-- Implementazione flessibile tramite metodo `isMessageRequired()`
-
-#### 5. **Esecuzione Transizione**
-```php
-->action(function($record, $data) {
-    $state = $data['state'];
-    $model = Str::of(class_basename($record))->slug()->toString();
-    $label = __('pub_theme::'.$model.'_states.'.$state.'.label');
-    $record->state->transitionTo($data['state'], $data['message']);
-
-    Notification::make()
-        ->title('Stato aggiornato a '.$label)
-        ->success()
-        ->send();
-})
-```
+ # IconStateColumn business logic
+ 
+ ## Obiettivo
+ 
+ Garantire che la colonna `IconStateColumn`:
+ 
+ - usi callback sicuri per icona/colore
+ - configuri l'azione di cambio stato durante `setUp()`
+ - usi traduzioni (niente stringhe hardcoded e niente `->label()`/`->tooltip()` manuali)
+ 
+ ## Comportamento
+ 
+ - **Render**: icon + color provengono dallo state object (`StateContract`).
+ - **Cambio stato**: azione `change-state` con `form()` (schema Filament Forms) e transizione tramite Spatie Model States.
+ - **Opzioni transizione**:
+   - se lo stato è nullo, usa stati di default (se supportati dal record)
+   - se lo stato esiste, propone solo stati transitionable (con fallback)
+ - **Messaggio**: può essere richiesto in base alla classe dello stato di destinazione.
+ - **Notifica**: usa `Notification::make()` con label tradotta `pub_theme::*_states.*.label`.
+ 
+ ## Riferimenti
+ 
+ - codice: `Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php`
+ - regola: [never-use-label-rule.md](./never-use-label-rule.md)
 
 **Business Logic:**
 - Esegue la transizione utilizzando Spatie Model States
@@ -185,7 +89,7 @@ return [
 ### 3. **Uso nella Tabella**
 ```php
 IconStateColumn::make('state')
-    ->label('Stato Utente'),
+    ->sortable();
 ```
 
 ## Vantaggi Business
@@ -207,7 +111,3 @@ IconStateColumn::make('state')
 ## Conclusioni
 
 Questa implementazione fornisce una soluzione robusta e user-friendly per la gestione degli stati dei modelli in contesti amministrativi, con particolare attenzione all'esperienza utente e alla sicurezza delle transizioni.
-<<<<<<< HEAD
->>>>>>> 7eb1087 (.)
-=======
->>>>>>> laraxot/develop

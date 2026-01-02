@@ -53,7 +53,18 @@ class RadioBadge extends Radio
     {
         $enum = $this->getEnumValue($value);
         if ($enum instanceof HasColor) {
-            return $enum->getColor() ?? $this->selectedColor;
+            $color = $enum->getColor();
+            if ($color === null) {
+                return $this->selectedColor;
+            }
+
+            if (is_array($color)) {
+                $first = reset($color);
+
+                return is_string($first) && $first !== '' ? $first : $this->selectedColor;
+            }
+
+            return is_string($color) && $color !== '' ? $color : $this->selectedColor;
         }
 
         return $this->selectedColor;
@@ -68,7 +79,7 @@ class RadioBadge extends Radio
         $icon = $enum->getIcon();
 
         // getIcon() può restituire Htmlable|string|null, ma dobbiamo restituire solo string|null
-        if (null === $icon) {
+        if ($icon === null) {
             return null;
         }
 
