@@ -10,10 +10,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Webmozart\Assert\Assert;
 
@@ -46,7 +43,7 @@ class AddressField extends Field
             $relationship = $this->getRelationship();
             if ($relationship && $record->relationLoaded($relationship)) {
                 $address = $record->getRelationValue($relationship);
-                if (null !== $address && is_object($address) && method_exists($address, 'toArray')) {
+                if ($address !== null && is_object($address) && method_exists($address, 'toArray')) {
                     $data = $address->toArray();
                 }
             }

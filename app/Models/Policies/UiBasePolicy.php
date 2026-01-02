@@ -17,7 +17,7 @@ abstract class UiBasePolicy
     use HandlesAuthorization;
 
     /**
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     * @SuppressWarnings("PHPMD.UnusedFormalParameter")
      */
     public function before(UserContract $user, string $_ability): ?bool
     {

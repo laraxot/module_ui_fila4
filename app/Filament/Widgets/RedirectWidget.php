@@ -39,7 +39,7 @@ final class RedirectWidget extends XotBaseWidget
     /**
      * Destinazione del redirect.
      *
-     * @SuppressWarnings(PHPMD.ShortVariable)
+     * @SuppressWarnings("PHPMD.ShortVariable")
      */
     public ?string $to = null;
 

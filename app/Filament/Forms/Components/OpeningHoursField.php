@@ -95,7 +95,7 @@ final class OpeningHoursField extends XotBaseField
              * $this->addError(null, 'test');
              * return false;
              * }*/
-            new OpeningHoursRule(),
+            new OpeningHoursRule,
         ]);
     }
 }

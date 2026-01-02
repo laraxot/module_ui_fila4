@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
 use SplFileInfo;
-use SplFileInfo;
 
 class GetAllIconsAction
 {
@@ -79,7 +78,7 @@ class GetAllIconsAction
                     }
 
                     // Simply ignore files that aren't SVGs
-                    if ('svg' !== $file->getExtension()) {
+                    if ($file->getExtension() !== 'svg') {
                         continue;
                     }
 
@@ -97,7 +96,7 @@ class GetAllIconsAction
 
                     $prefix = $set['prefix'] ?? '';
                     $prefixString = is_string($prefix) ? $prefix : '';
-                    $iconFullName = '' !== $prefixString ? $prefixString.'-'.$iconName : $iconName;
+                    $iconFullName = $prefixString !== '' ? $prefixString.'-'.$iconName : $iconName;
                     $iconsList[] = $iconFullName;
                 }
             }

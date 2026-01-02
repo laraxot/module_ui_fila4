@@ -32,8 +32,7 @@ class UserCalendarWidget extends XotBaseWidget
     }
 
     /**
-     * @param array<string, mixed> $fetchInfo
-     *
+     * @param  array<string, mixed>  $fetchInfo
      * @return array<int, array<string, mixed>>
      */
     public function fetchEvents(array $fetchInfo): array
@@ -117,7 +116,7 @@ class UserCalendarWidget extends XotBaseWidget
     }
 
     /**
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     * @SuppressWarnings("PHPMD.UnusedFormalParameter")
      */
     public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void
     {

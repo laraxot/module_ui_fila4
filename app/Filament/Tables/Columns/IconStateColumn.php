@@ -13,7 +13,6 @@ use Filament\Tables\Columns\IconColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Modules\Xot\Contracts\StateContract as XotStateContract;
 use Spatie\ModelStates\HasStatesContract;
@@ -46,7 +45,7 @@ class IconStateColumn extends IconColumn
                         ->options(function (Model&HasStatesContract $record, string $_state): array {
                             $name = $this->getName();
                             $state = $record->getAttribute($name);
-                            if (null === $state) {
+                            if ($state === null) {
                                 $defaultStates = Arr::wrap($record->getDefaultStateFor($name));
 
                                 /** @var array<string, string> $options */

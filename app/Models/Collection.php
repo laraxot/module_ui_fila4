@@ -17,23 +17,12 @@ use Modules\Xot\Models\BaseModel;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
- * @method static CollectionFactory          factory($count = null, $state = [])
+ * @method static CollectionFactory factory($count = null, $state = [])
  * @method static Builder<static>|Collection newModelQuery()
  * @method static Builder<static>|Collection newQuery()
  * @method static Builder<static>|Collection query()
- *                                                                               <<<<<<< HEAD
- *                                                                               <<<<<<< HEAD
- *                                                                               <<<<<<< HEAD
- *                                                                               =======
  *
  * @property ProfileContract|null $deleter
- *                                         >>>>>>> a8fbb3e (.)
- *                                         =======
- * @property ProfileContract|null $deleter
- *                                         >>>>>>> 24eb066 (Lint)
- *                                         =======
- * @property ProfileContract|null $deleter
- *                                         >>>>>>> laraxot/develop
  *
  * @mixin \Eloquent
  */
