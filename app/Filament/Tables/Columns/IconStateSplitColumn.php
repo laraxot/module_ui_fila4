@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
-use Exception;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Tables\Columns\Column;
@@ -13,7 +12,6 @@ use Livewire\Attributes\On;
 use Modules\Xot\Contracts\StateContract;
 use Spatie\ModelStates\HasStatesContract;
 use Spatie\ModelStates\State;
-use Webmozart\Assert\Assert;
 
 /**
  * IconStateSplitColumn - Enhanced state transition column with compact grid layout.
@@ -111,7 +109,7 @@ final class IconStateSplitColumn extends Column
             }
 
             return $stateInstance;
-        } catch (Exception) {
+        } catch (\Exception) {
             return null;
         }
     }
@@ -124,7 +122,7 @@ final class IconStateSplitColumn extends Column
             return $record && isset($record->state) && $record->state instanceof State
                 ? $record->state->canTransitionTo($stateClass)
                 : false;
-        } catch (Exception) {
+        } catch (\Exception) {
             return false;
         }
     }
@@ -199,7 +197,7 @@ final class IconStateSplitColumn extends Column
         $record = $this->getRecord();
         $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
 
-        if ($recordIdRaw === null || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
+        if (null === $recordIdRaw || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
             return null;
         }
 
@@ -225,7 +223,7 @@ final class IconStateSplitColumn extends Column
     #[On('table-action')]
     public function handleTableAction(string $action, int|string $recordId): void
     {
-        if ($action === 'prova') {
+        if ('prova' === $action) {
             $this->prova($recordId);
         }
     }
@@ -239,12 +237,12 @@ final class IconStateSplitColumn extends Column
             $record = $this->getRecordForTransition($recordId);
             $state = $record->getAttribute('state');
             if (! ($state instanceof State)) {
-                throw new Exception(__('ui::icon_state.messages.invalid_state_instance'));
+                throw new \Exception(__('ui::icon_state.messages.invalid_state_instance'));
             }
             $state->transitionTo($stateClass);
 
             $this->notifyTransitionSuccess();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $this->notifyTransitionError($e->getMessage());
         }
     }
@@ -255,17 +253,17 @@ final class IconStateSplitColumn extends Column
     private function getRecordForTransition(int|string $recordId): Model
     {
         if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
-            throw new Exception('Model class not found or invalid');
+            throw new \Exception('Model class not found or invalid');
         }
 
         $recordRaw = $this->modelClass::find($recordId);
 
         if (! is_object($recordRaw) || ! ($recordRaw instanceof HasStatesContract) || ! ($recordRaw instanceof Model)) {
-            throw new Exception(__('ui::icon_state.messages.record_not_found'));
+            throw new \Exception(__('ui::icon_state.messages.record_not_found'));
         }
 
         if (! isset($recordRaw->state) || ! ($recordRaw->state instanceof State)) {
-            throw new Exception(__('ui::icon_state.messages.invalid_state_instance'));
+            throw new \Exception(__('ui::icon_state.messages.invalid_state_instance'));
         }
 
         return $recordRaw;
