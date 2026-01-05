@@ -20,7 +20,11 @@ class RadioBadge extends Radio
     /**
      * Get enum value from string value.
      *
+<<<<<<< HEAD
      * @return \BackedEnum&HasColor&HasIcon|null
+=======
+     * @return (BackedEnum&HasColor&HasIcon)|null
+>>>>>>> 18595121 (.)
      */
     public function getEnumValue(string $value): ?\BackedEnum
     {
