@@ -2,19 +2,12 @@
 
 ## Panoramica
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Questo documento descrive il processo di sincronizzazione delle traduzioni per i temi One e Two del progetto <nome progetto>.
-=======
-Questo documento descrive il processo di sincronizzazione delle traduzioni per i temi One e Two del progetto .
-Questo documento descrive il processo di sincronizzazione delle traduzioni per i temi One e Two del progetto SaluteOra.
->>>>>>> 7eb1087 (.)
-=======
 Questo documento descrive il processo di sincronizzazione delle traduzioni per i temi One e Two del progetto .
 Questo documento descrive il processo di sincronizzazione delle traduzioni per i temi One e Two del progetto SaluteOra.
 Questo documento descrive il processo di sincronizzazione delle traduzioni per i temi One e Two del progetto .
 Questo documento descrive il processo di sincronizzazione delle traduzioni per i temi One e Two del progetto SaluteOra.
->>>>>>> laraxot/develop
+Questo documento descrive il processo di sincronizzazione delle traduzioni per i temi One e Two del progetto .
+Questo documento descrive il processo di sincronizzazione delle traduzioni per i temi One e Two del progetto SaluteOra.
 
 ## Struttura dei Temi
 
@@ -230,26 +223,15 @@ return [
 
 - [Theme Widget Translations](theme-widget-translations.md)
 - [Translation Helper Text Standards](translation-helper-text-standards.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Modules/<nome progetto>/docs/translation_quality_standards.md](../laravel/Modules/<nome progetto>/docs/translation_quality_standards.md)
-=======
-- [Modules/<nome modulo>/docs/translation_quality_standards.md](../laravel/Modules/<nome modulo>/docs/translation_quality_standards.md)
-- [Modules/SaluteOra/docs/translation_quality_standards.md](../laravel/Modules/SaluteOra/docs/translation_quality_standards.md)
->>>>>>> 7eb1087 (.)
-=======
 - [Modules/<nome modulo>/docs/translation_quality_standards.md](../laravel/Modules/<nome modulo>/docs/translation_quality_standards.md)
 - [Modules/SaluteOra/docs/translation_quality_standards.md](../laravel/Modules/SaluteOra/docs/translation_quality_standards.md)
 - [Modules/<nome modulo>/docs/translation_quality_standards.md](../laravel/Modules/<nome modulo>/docs/translation_quality_standards.md)
 - [Modules/SaluteOra/docs/translation_quality_standards.md](../laravel/Modules/SaluteOra/docs/translation_quality_standards.md)
->>>>>>> laraxot/develop
+- [Modules/<nome modulo>/docs/translation_quality_standards.md](../laravel/Modules/<nome modulo>/docs/translation_quality_standards.md)
+- [Modules/SaluteOra/docs/translation_quality_standards.md](../laravel/Modules/SaluteOra/docs/translation_quality_standards.md)
 
 ---
 
 **Ultimo aggiornamento**: 2025-01-06
 **Versione**: 2.2
-<<<<<<< HEAD
 **Autore**: AI Assistant 
-=======
-**Autore**: AI Assistant 
->>>>>>> laraxot/develop

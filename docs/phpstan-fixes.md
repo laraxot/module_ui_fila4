@@ -1,79 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# PHPStan Fixes - Gennaio 2025
-
-## Modulo UI - Correzioni Completate
-
-### File Corretti
-
-1. **Modules/UI/app/Filament/Blocks/Image.php**
-   - Corretto tipo di ritorno per `Select::options()` usando closure con type hint esplicito
-
-2. **Modules/UI/app/Filament/Forms/Components/InlineDatePicker.php**
-   - Aggiunto type narrowing per `collect()` con `iterable<int, mixed>`
-
-3. **Modules/UI/app/Filament/Forms/Components/SelectState.php**
-   - Corretto type narrowing per `$modelInstance` con verifica `HasStatesContract`
-
-4. **Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php**
-   - Corretto type narrowing per closure callbacks
-   - Aggiunto type safety per `handleStateTransition()`
-
-5. **Modules/UI/app/Filament/Tables/Columns/IconStateGroupColumn.php**
-   - Corretto type narrowing per `$state` in `buildColumnsFromStates()`
-   - Aggiunto type safety per `modalActionByRecord()`
-
-6. **Modules/UI/app/Filament/Tables/Columns/IconStateSplitColumn.php**
-   - Aggiunto controllo `is_iterable()` prima di foreach
-   - Corretto type narrowing per `$stateKey` e `$state`
-
-7. **Modules/UI/app/Filament/Tables/Columns/SelectStateColumn.php**
-   - Corretto type narrowing per `$dayLabel` in `OpeningHoursRule`
-
-8. **Modules/UI/app/Filament/Widgets/UserCalendarWidget.php**
-   - Corretto type narrowing per `Str::of()`
-
-9. **Modules/UI/app/Rules/OpeningHoursRule.php**
-   - Corretto type narrowing per `$dayLabel` con cast esplicito
-
-## Pattern Applicati
-
-### Type Narrowing
-- Uso di `is_string()`, `is_array()`, `is_object()` prima dell'uso
-- Cast espliciti con PHPDoc `@var`
-
-### Array Type Safety
-- Verifica `is_iterable()` prima di foreach
-- Uso di `array-key` per chiavi array
-
-### Closure Type Hints
-- Type hints espliciti per parametri closure
-- Return types espliciti per closure
-
-## Risultati
-
-- **Errori PHPStan**: 0
-- **File corretti**: 9
-- **Pattern applicati**: Type narrowing, Array safety, Closure hints
-
-=======
 # Correzioni PHPStan - Modulo UI
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 41f976e (.)
 # Correzioni PHPStan Livello 7 - Modulo UI
-=======
 # Correzioni PHPStan - Modulo UI
->>>>>>> f89ff0a (.)
-=======
 # Correzioni PHPStan - Modulo UI
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 
 Questo documento traccia gli errori PHPStan identificati nel modulo UI e le relative soluzioni implementate.
 
@@ -102,45 +30,7 @@ Cannot access property $id on Illuminate\Database\Eloquent\Model|null.
 ->body('Record ID: ' . ($record?->id ?? 'N/A'))
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-2. Aggiunti controlli `method_exists` e `isset` prima di chiamare metodi o accedere a proprietà sull'oggetto `$livewire`:
-
-```php
-if ($livewire) {
-    // Use isset to safely check if the property exists (for magic properties)
-    if (isset($livewire->layoutView)) {
-        $livewire->layoutView = $newLayout;
-    }
-    
-    // These methods should be available on Filament components
-    if (method_exists($livewire, 'dispatch')) {
-        $livewire->dispatch('$refresh');
-        $livewire->dispatch('refreshTable');
-    }
-    
-    if (method_exists($livewire, 'resetTable')) {
-        $livewire->resetTable();
-    }
-}
-```
-
-Questo approccio è più robusto e previene errori a runtime quando l'oggetto `$livewire` non ha i metodi o le proprietà previste.
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 8a76661 (.)
-=======
->>>>>>> 64e34f5 (.)
->>>>>>> 41f976e (.)
 # UI Module - PHPStan Level 7 Fixes - Gennaio 2025
-=======
-=======
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 ### 2. Mixed Type Casting - RadioCollection
 
 **Problema**: Errori di casting da `mixed` a `string` nel componente RadioCollection.
@@ -162,13 +52,6 @@ $stringValue = is_string($value) ? $value : (string) $value;
 ```
 
 ## Componenti Filament Personalizzati
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f89ff0a (.)
-=======
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 
 ### RadioCollection Component
 
@@ -227,27 +110,6 @@ if ($record !== null && property_exists($record, 'id')) {
 
 ## Note per Sviluppatori
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
----
-*Ultimo aggiornamento: Gennaio 2025*
-*Stato: 🔄 In Corso - ~2 errori PHPStan rimanenti*
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7da17b2 (.)
-=======
->>>>>>> 8a76661 (.)
-=======
->>>>>>> 64e34f5 (.)
->>>>>>> 41f976e (.)
-=======
-=======
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 ### Componenti Filament Personalizzati
 
 1. **Null Safety**: Sempre utilizzare null-safe operators quando si accede a proprietà di modelli
@@ -285,11 +147,3 @@ if ($record !== null && property_exists($record, 'id')) {
 1. **Error States**: Gestire gracefully gli stati di errore
 2. **Loading States**: Implementare stati di caricamento appropriati
 3. **Accessibility**: Assicurare accessibilità per tutti i componenti
-<<<<<<< HEAD
->>>>>>> 7eb1087 (.)
-=======
-<<<<<<< HEAD
->>>>>>> f89ff0a (.)
-=======
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop

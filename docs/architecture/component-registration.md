@@ -1,15 +1,6 @@
 # Registrazione dei Componenti nei Moduli
 
 ## Regola Fondamentale
-<<<<<<< HEAD
-> **IMPORTANTE**: Non registrare manualmente i componenti Blade nei ServiceProvider che estendono XotBaseServiceProvider.
-## Funzionamento Corretto
-XotBaseServiceProvider implementa già un metodo `registerBladeComponents()` che:
-1. Registra automaticamente il namespace dei componenti con `Blade::componentNamespace()`
-2. Utilizza `RegisterBladeComponentsAction` per registrare tutti i componenti nel percorso standard
-## Errore Comune
-Un errore comune è aggiungere manualmente registrazioni di componenti nei ServiceProvider dei moduli:
-=======
 
 > **IMPORTANTE**: Non registrare manualmente i componenti Blade nei ServiceProvider che estendono XotBaseServiceProvider.
 
@@ -24,7 +15,6 @@ XotBaseServiceProvider implementa già un metodo `registerBladeComponents()` che
 
 Un errore comune è aggiungere manualmente registrazioni di componenti nei ServiceProvider dei moduli:
 
->>>>>>> laraxot/develop
 ```php
 // ERRATO ❌
 class UserServiceProvider extends XotBaseServiceProvider 
@@ -38,17 +28,6 @@ class UserServiceProvider extends XotBaseServiceProvider
     }
 }
 ```
-<<<<<<< HEAD
-## Implementazione Corretta
-La registrazione avviene automaticamente se si segue la struttura corretta:
-// CORRETTO ✅
-    public string $name = 'User';
-    
-        parent::boot(); // Questo è sufficiente!
-        // Eventuale codice aggiuntivo specifico...
-## Struttura Corretta dei Componenti
-I componenti devono essere organizzati nel percorso standard del modulo:
-=======
 
 ## Implementazione Corretta
 
@@ -74,23 +53,11 @@ class UserServiceProvider extends XotBaseServiceProvider
 I componenti devono essere organizzati nel percorso standard del modulo:
 
 ```
->>>>>>> laraxot/develop
 Modules/
 └── ModuleName/
     └── View/
         └── Components/
             └── ComponentName.php
-<<<<<<< HEAD
-Il componente sarà registrato automaticamente come `module-name::component-name`.
-## Richiesta di Modifiche Personalizzate
-Se hai bisogno di personalizzazioni nella registrazione dei componenti:
-1. Crea un trait specifico per il tuo modulo
-2. Estendi `RegisterBladeComponentsAction` con una versione specifica per il tuo modulo
-3. Sovrascrivi il metodo `registerBladeComponents()` nel tuo ServiceProvider **solo se assolutamente necessario**
-## Riferimenti
-- [XotBaseServiceProvider](../Xot/app/Providers/XotBaseServiceProvider.php)
-- [RegisterBladeComponentsAction](../Xot/Actions/Blade/RegisterBladeComponentsAction.php)
-=======
 ```
 
 Il componente sarà registrato automaticamente come `module-name::component-name`.
@@ -105,6 +72,5 @@ Se hai bisogno di personalizzazioni nella registrazione dei componenti:
 
 ## Riferimenti
 
->>>>>>> laraxot/develop
 - [XotBaseServiceProvider](/var/www/html/base_saluteora/laravel/Modules/Xot/app/Providers/XotBaseServiceProvider.php)
 - [RegisterBladeComponentsAction](/var/www/html/base_saluteora/laravel/Modules/Xot/Actions/Blade/RegisterBladeComponentsAction.php)

@@ -1,11 +1,6 @@
 # Data Handling in Blade Components
 
 This document outlines best practices for data handling in Blade components, particularly in theme blocks used for content sections.
-<<<<<<< HEAD
-## Core Principles
-### 1. Explicit Props Definition
-All Blade components should explicitly define their expected properties using the `@props` directive:
-=======
 
 ## Core Principles
 
@@ -13,7 +8,6 @@ All Blade components should explicitly define their expected properties using th
 
 All Blade components should explicitly define their expected properties using the `@props` directive:
 
->>>>>>> laraxot/develop
 ```blade
 @props([
     'title' => null,
@@ -23,55 +17,34 @@ All Blade components should explicitly define their expected properties using th
     // Additional props with sensible defaults
 ])
 ```
-<<<<<<< HEAD
-### 2. Data Flow Pattern
-The standard data flow follows this pattern:
-=======
 
 ### 2. Data Flow Pattern
 
 The standard data flow follows this pattern:
 
->>>>>>> laraxot/develop
 1. **Storage**: Data is stored in JSON configuration files (`config/local/{tenant}/database/content/sections/{id}.json`)
 2. **Retrieval**: Section controller loads and processes the JSON data
 3. **Passing**: Data is passed to components via `@include($block->view, $block->data)`
 4. **Reception**: Components receive data through explicitly defined props
 5. **Rendering**: Components render the received data according to their template
-<<<<<<< HEAD
-### 3. No Implicit Variables
-=======
 
 ### 3. No Implicit Variables
 
->>>>>>> laraxot/develop
 Components should never rely on variables that haven't been explicitly defined as props. This prevents:
 - Unexpected behavior
 - Hard-to-trace bugs
 - Tight coupling between components and their parent context
 - Difficulty reusing components in different contexts
-<<<<<<< HEAD
-## Common Patterns
-### Section to Block Data Flow
-=======
 
 ## Common Patterns
 
 ### Section to Block Data Flow
 
->>>>>>> laraxot/develop
 ```php
 // In sections/header.blade.php
 @foreach($componentsBlocks as $block)
     @include($block->view, $block->data)
 @endforeach
-<<<<<<< HEAD
-### Block Component Structure
-// In components/blocks/example.blade.php
-    'prop1' => default1,
-    'prop2' => default2,
-    // All expected properties
-=======
 ```
 
 ### Block Component Structure
@@ -84,7 +57,6 @@ Components should never rely on variables that haven't been explicitly defined a
     // All expected properties
 ])
 
->>>>>>> laraxot/develop
 <div {{ $attributes->merge(['class' => 'example-component']) }}>
     @if($prop1)
         <h2>{{ $prop1 }}</h2>
@@ -92,11 +64,6 @@ Components should never rely on variables that haven't been explicitly defined a
     
     @if($prop2)
         <p>{{ $prop2 }}</p>
-<<<<<<< HEAD
-</div>
-## Common Errors
-### Missing Props Definition
-=======
     @endif
 </div>
 ```
@@ -106,24 +73,11 @@ Components should never rely on variables that haven't been explicitly defined a
 ### Missing Props Definition
 
 ```blade
->>>>>>> laraxot/develop
 <!-- INCORRECT: Missing props definition -->
 <div class="user-menu">
     @foreach($menu_items as $item) <!-- $menu_items undefined! -->
         <a href="{{ $item['url'] }}">{{ $item['label'] }}</a>
     @endforeach
-<<<<<<< HEAD
-<!-- CORRECT: With props definition -->
-@props(['menu_items' => []])
-    @foreach($menu_items as $item)
-### Hard-coded References
-<!-- INCORRECT: Hard-coded project references -->
-<div class="title">Welcome to </div>
-<div class="title">Welcome to SaluteOra</div>
-<!-- CORRECT: Dynamic configuration -->
-<div class="title">Welcome to {{ config('app.name') }}</div>
-### Direct Use of Auth System
-=======
 </div>
 
 <!-- CORRECT: With props definition -->
@@ -149,18 +103,10 @@ Components should never rely on variables that haven't been explicitly defined a
 ### Direct Use of Auth System
 
 ```blade
->>>>>>> laraxot/develop
 <!-- INCORRECT: Direct dependency on auth system -->
 @if(auth()->check())
     <!-- Authenticated UI -->
 @endif
-<<<<<<< HEAD
-<!-- CORRECT: Parameterized authentication state -->
-    'is_authenticated' => false,
-    'user' => null
-@if($is_authenticated)
-## Best Practices
-=======
 
 <!-- CORRECT: Parameterized authentication state -->
 @props([
@@ -175,18 +121,11 @@ Components should never rely on variables that haven't been explicitly defined a
 
 ## Best Practices
 
->>>>>>> laraxot/develop
 1. **Validate Props**: Use type checking and conditional logic to validate props
 2. **Provide Defaults**: Always set sensible default values for all props
 3. **Document Expected Format**: Comment complex data structures expected by the component
 4. **Keep Components Focused**: Each component should have a single responsibility
 5. **Test Edge Cases**: Ensure components handle missing or malformed data gracefully
-<<<<<<< HEAD
-## Related Documentation
-- [Block Components Overview](./blocks/README.md)
-- [Component Architecture](./components/README.md)
-- [Section Architecture](./sections/README.md)
-=======
 
 ## Related Documentation
 
@@ -194,6 +133,5 @@ Components should never rely on variables that haven't been explicitly defined a
 - [Component Architecture](./components/README.md)
 - [Section Architecture](./sections/README.md)
 
->>>>>>> laraxot/develop
 > **Note**: This document is the primary reference for Blade data handling patterns across all modules.
 > All module-specific implementations should link back to this document.

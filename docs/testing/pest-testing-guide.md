@@ -336,18 +336,12 @@ Based on existing UI module tests:
 ### **Testing Resources**
 - [CMS Testing Best Practices](../../Cms/project_docs/tests/pestphp-best-practices.md)
 - [Employee Testing Guide](../../Employee/project_docs/testing/pest-testing-guide.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-- [CMS Testing Best Practices](../../Cms/docs/tests/pestphp-best-practices.md)
-- [Employee Testing Guide](../../Employee/docs/testing/pest-testing-guide.md)
->>>>>>> 7eb1087 (.)
-=======
 - [CMS Testing Best Practices](../../Cms/docs/tests/pestphp-best-practices.md)
 - [Employee Testing Guide](../../Employee/docs/testing/pest-testing-guide.md)
 - [CMS Testing Best Practices](../../Cms/docs/tests/pestphp-best-practices.md)
 - [Employee Testing Guide](../../Employee/docs/testing/pest-testing-guide.md)
->>>>>>> laraxot/develop
+- [CMS Testing Best Practices](../../Cms/docs/tests/pestphp-best-practices.md)
+- [Employee Testing Guide](../../Employee/docs/testing/pest-testing-guide.md)
 
 ### **Implementation Files**
 - [UIBusinessLogicTest.php](../../tests/Feature/UIBusinessLogicTest.php)

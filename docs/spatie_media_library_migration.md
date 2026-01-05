@@ -74,16 +74,9 @@ FileUpload::make('logo_header') // Metatag
 **SCOPERTA CRUCIALE**: I modelli principali implementano già `HasMedia`!
 
 ```php
-<<<<<<< HEAD
-<<<<<<< HEAD
-// BaseModel <nome progetto> - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
-=======
-// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
->>>>>>> 7eb1087 (.)
-=======
 // BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
 // BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
->>>>>>> laraxot/develop
+// BaseModel  - IMPLEMENTA GIÀ HasMedia + InteractsWithMedia
 abstract class BaseModel extends Model implements HasMedia
 {
     use InteractsWithMedia;
@@ -228,16 +221,9 @@ class SpatieImageUpload
 #### 3.1 PatientResource - Priorità MASSIMA (Documenti Sensibili)
 
 ```php
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Modules/<nome progetto>/app/Filament/Resources/PatientResource.php - getFormSchema()
-=======
-// Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
->>>>>>> 7eb1087 (.)
-=======
 // Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
 // Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
->>>>>>> laraxot/develop
+// Modules/<nome modulo>/app/Filament/Resources/PatientResource.php - getFormSchema()
 
 // PRIMA (FileUpload standard)
 'health_card' => Forms\Components\FileUpload::make('health_card')
@@ -308,16 +294,9 @@ Schema::table('users', function (Blueprint $table) {
 ### **Media Collections Configuration**
 
 ```php
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Modules/<nome progetto>/app/Models/User.php - Aggiunta registerMediaCollections
-=======
-// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
->>>>>>> 7eb1087 (.)
-=======
 // Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
 // Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
->>>>>>> laraxot/develop
+// Modules/<nome modulo>/app/Models/User.php - Aggiunta registerMediaCollections
 
 public function registerMediaCollections(): void
 {
@@ -366,16 +345,9 @@ public function registerMediaConversions(Media $media = null): void
 ### **Accessors per Backward Compatibility**
 
 ```php
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Modules/<nome progetto>/app/Models/User.php - Accessors di transizione
-=======
-// Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
->>>>>>> 7eb1087 (.)
-=======
 // Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
 // Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
->>>>>>> laraxot/develop
+// Modules/<nome modulo>/app/Models/User.php - Accessors di transizione
 
 /**
  * Accessor per compatibilità con codice esistente.
@@ -527,23 +499,10 @@ public function downloadDocument(Media $media): Response
 ## 🔗 Collegamenti e Riferimenti
 
 ### **Documentazione Correlata**
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Spatie Media Library Official Docs](https://spatie.be/docs/laravel-medialibrary)
-- [Filament Plugin Documentation](https://filamentphp.com/plugins/filament-spatie-media-library)
-- [UI Components Docs](./filament-components-rules.md)
-- [<nome progetto> Models Architecture](../<nome progetto>/docs/models-architecture.md)
-=======
-=======
->>>>>>> laraxot/develop
 - [Spatie Media Library Official Docs](https://spatie.be/project_docs/laravel-medialibrary)
 - [Filament Plugin Documentation](https://filamentphp.com/plugins/filament-spatie-media-library)
 - [UI Components Docs](./filament-components-rules.md)
 - [Modulo Generico Models Architecture](../<nome modulo>/docs/models-architecture.md)
-<<<<<<< HEAD
->>>>>>> 7eb1087 (.)
-=======
->>>>>>> laraxot/develop
 
 ### **Repository e Risorse**
 - [GitHub Filament Plugin](https://github.com/filamentphp/spatie-laravel-media-library-plugin)
@@ -575,13 +534,6 @@ public function downloadDocument(Media $media): Response
 
 *Ultimo aggiornamento: Dicembre 2024*  
 *Versione: 1.0*  
-<<<<<<< HEAD
-<<<<<<< HEAD
-*Compatibilità: Laraxot <nome progetto>, Spatie Media Library 11.x, Filament 4.x* 
-=======
-*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
->>>>>>> 7eb1087 (.)
-=======
 *Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
 *Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
->>>>>>> laraxot/develop
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
