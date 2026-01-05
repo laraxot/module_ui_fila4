@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use Exception;
 use Filament\Forms\Components\Select;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Utilities\Get;
@@ -241,7 +240,7 @@ class LocationSelector extends XotBaseGroup
                 ->get()
                 ->pluck('regione.nome', 'regione.codice')
                 ->toArray();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             // Log dell'errore per debug
             Log::error('LocationSelector: Errore nel caricamento regioni', [
                 'error' => $e->getMessage(),
@@ -270,7 +269,7 @@ class LocationSelector extends XotBaseGroup
                 ->get()
                 ->pluck('provincia.nome', 'provincia.codice')
                 ->toArray();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Log::error('LocationSelector: Errore nel caricamento province', [
                 'region' => $region,
                 'error' => $e->getMessage(),
@@ -301,7 +300,7 @@ class LocationSelector extends XotBaseGroup
                 ->get()
                 ->pluck('cap.0', 'cap.0')
                 ->toArray();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Log::error('LocationSelector: Errore nel caricamento CAP', [
                 'region' => $region,
                 'province' => $province,
@@ -393,7 +392,7 @@ class LocationSelector extends XotBaseGroup
                 /* @phpstan-ignore-next-line */
                 'city' => $comune->nome ?? null,
             ];
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Log::error('LocationSelector: Errore nel recupero dati geografici', [
                 'state' => $state,
                 'error' => $e->getMessage(),

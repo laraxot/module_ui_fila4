@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Modules\UI\Actions;
 
 use Illuminate\Support\Collection;
-use Spatie\Permission\Contracts\Permission;
 use Illuminate\Support\Facades\Auth;
 use Modules\UI\Datas\UserData;
 use Modules\User\Models\User;
+use Spatie\Permission\Contracts\Permission;
 use Spatie\QueueableAction\QueueableAction;
 
 class GetUserDataAction

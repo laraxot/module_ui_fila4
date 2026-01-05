@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Tables\Columns;
 
-use Exception;
 use Filament\Actions\Action;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -68,7 +67,7 @@ class IconStateColumn extends IconColumn
                             try {
                                 /** @var array<int|string, mixed> $statesArray */
                                 $statesArray = $state->transitionableStates();
-                            } catch (Exception $e) {
+                            } catch (\Exception $e) {
                                 /** @var array<int|string, mixed> $statesArray */
                                 $statesArray = $record->getStatesFor($name)->toArray();
                             }
@@ -135,12 +134,12 @@ class IconStateColumn extends IconColumn
                 ->action(function ($record, $data) {
                     /** @var array<string, mixed> $data */
                     if (! isset($data['state']) || ! is_string($data['state'])) {
-                        throw new Exception('State is required and must be a string');
+                        throw new \Exception('State is required and must be a string');
                     }
                     $state = $data['state'];
                     /** @var Model $record */
                     if (! is_object($record)) {
-                        throw new Exception('Record must be an object');
+                        throw new \Exception('Record must be an object');
                     }
                     $model = Str::of(class_basename($record))->slug()->toString();
                     /** @var string $label */
@@ -149,7 +148,7 @@ class IconStateColumn extends IconColumn
                     /** @var Model&HasStatesContract $record */
                     $currentState = $record->getAttribute($this->getName());
                     if (! ($currentState instanceof State)) {
-                        throw new Exception('Current state is not a valid State instance');
+                        throw new \Exception('Current state is not a valid State instance');
                     }
 
                     /** @var string|null $message */
