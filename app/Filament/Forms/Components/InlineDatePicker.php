@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
+use Closure;
+use Exception;
+use Throwable;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
@@ -25,9 +28,9 @@ class InlineDatePicker extends XotBaseDatePicker
     /**
      * Date abilitate per la selezione.
      *
-     * @var array<string>|\Closure|null
+     * @var array<string>|Closure|null
      */
-    protected array|\Closure|null $enabledDates = null;
+    protected array|Closure|null $enabledDates = null;
 
     /**
      * Mese attualmente visualizzato (formato Y-m).
@@ -56,7 +59,7 @@ class InlineDatePicker extends XotBaseDatePicker
                 try {
                     $date = Carbon::parse($state);
                     $component->currentViewMonth = $date->format('Y-m');
-                } catch (\Exception $e) {
+                } catch (Exception $e) {
                     // Handle invalid date
                     $component->currentViewMonth = now()->format('Y-m');
                 }
@@ -67,7 +70,7 @@ class InlineDatePicker extends XotBaseDatePicker
             if (null !== $state && \is_string($state) && '' !== $state) {
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
-                } catch (\Exception $e) {
+                } catch (Exception $e) {
                     return null;
                 }
             }
@@ -103,9 +106,9 @@ class InlineDatePicker extends XotBaseDatePicker
     /**
      * Imposta le date abilitate.
      *
-     * @param array<string>|\Closure $dates
+     * @param array<string>|Closure $dates
      */
-    public function enabledDates(array|\Closure $dates): static
+    public function enabledDates(array|Closure $dates): static
     {
         $this->enabledDates = $dates;
 
@@ -127,7 +130,7 @@ class InlineDatePicker extends XotBaseDatePicker
             try {
                 Carbon::createFromFormat('Y-m', $month);
                 $this->currentViewMonth = $month;
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 $this->currentViewMonth = now()->format('Y-m');
             }
         }
@@ -158,7 +161,7 @@ class InlineDatePicker extends XotBaseDatePicker
             }
             try {
                 return Carbon::parse($date)->format('Y-m-d');
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 return '';
             }
         })->filter(static fn (string $v): bool => '' !== $v)->values(); // Remove empty strings and reindex
@@ -212,7 +215,7 @@ class InlineDatePicker extends XotBaseDatePicker
                     if ($state && \is_string($state)) {
                         $isSelected = $currentDay->isSameDay(Carbon::parse($state));
                     }
-                } catch (\Throwable $e) {
+                } catch (Throwable $e) {
                     $isSelected = false;
                 }
 

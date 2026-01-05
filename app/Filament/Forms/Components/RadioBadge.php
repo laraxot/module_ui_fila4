@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
+use UnitEnum;
 use BackedEnum;
 use Filament\Forms\Components\Radio;
 use Filament\Support\Contracts\HasColor;
@@ -16,13 +17,12 @@ class RadioBadge extends Radio
     protected string $defaultColor = 'gray-200'; // gray-200
 
     protected string $selectedColor = 'blue-500'; // '#3b82f6'; // blue-500
-
     /**
      * Get enum value from string value.
      *
-     * @return (\BackedEnum&HasColor&HasIcon)|null
+     * @return BackedEnum&HasColor&HasIcon|null
      */
-    public function getEnumValue(string $value): ?\BackedEnum
+    public function getEnumValue(string $value): ?BackedEnum
     {
         if (! \is_string($this->options)) {
             return null;
@@ -30,11 +30,11 @@ class RadioBadge extends Radio
         if (! enum_exists($this->options)) {
             return null;
         }
-        /** @var class-string<\UnitEnum> $enumClass */
+        /** @var class-string<UnitEnum> $enumClass */
         $enumClass = $this->options;
 
         // Verifica che sia un BackedEnum
-        if (! is_subclass_of($enumClass, \BackedEnum::class)) {
+        if (! is_subclass_of($enumClass, BackedEnum::class)) {
             return null;
         }
 
@@ -43,7 +43,7 @@ class RadioBadge extends Radio
             return null;
         }
 
-        /** @var class-string<\BackedEnum&HasColor&HasIcon> $enumClass */
+        /** @var class-string<BackedEnum&HasColor&HasIcon> $enumClass */
         $res = $enumClass::tryFrom($value);
 
         return $res;

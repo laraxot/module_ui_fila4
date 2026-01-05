@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Rules;
 
+use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Modules\UI\Actions\Datetime\GetDaysMappingAction;
 use Modules\Xot\Filament\Traits\TransTrait;
@@ -19,7 +20,7 @@ class OpeningHoursRule implements ValidationRule
     /**
      * @SuppressWarnings("PHPMD.UnusedFormalParameter")
      */
-    public function validate(string $_attribute, mixed $value, \Closure $fail): void
+    public function validate(string $_attribute, mixed $value, Closure $fail): void
     {
         $days = app(GetDaysMappingAction::class)->execute();
         /*
@@ -57,7 +58,7 @@ class OpeningHoursRule implements ValidationRule
     /**
      * Valida la coerenza tra le sessioni dello stesso giorno.
      */
-    private function validateDayLogic(array $dayHours, string $dayLabel, \Closure $fail): void
+    private function validateDayLogic(array $dayHours, string $dayLabel, Closure $fail): void
     {
         $morningTo = $this->cleanTimeValue($dayHours['morning_to'] ?? null);
         $afternoonFrom = $this->cleanTimeValue($dayHours['afternoon_from'] ?? null);
@@ -73,7 +74,7 @@ class OpeningHoursRule implements ValidationRule
     /**
      * Valida una sessione specifica (mattina o pomeriggio).
      */
-    private function validateSession(array $dayHours, string $session, string $dayLabel, \Closure $fail): void
+    private function validateSession(array $dayHours, string $session, string $dayLabel, Closure $fail): void
     {
         $fromKey = "{$session}_from";
         $toKey = "{$session}_to";

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Widgets;
 
+use Override;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 /**
@@ -65,7 +66,7 @@ final class RedirectWidget extends XotBaseWidget
      *
      * @return array<string, mixed>
      */
-    #[\Override]
+    #[Override]
     public function getFormSchema(): array
     {
         return [];

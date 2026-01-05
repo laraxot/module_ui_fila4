@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\UI\Actions;
 
+use Illuminate\Support\Collection;
+use Spatie\Permission\Contracts\Permission;
 use Illuminate\Support\Facades\Auth;
 use Modules\UI\Datas\UserData;
 use Modules\User\Models\User;
@@ -39,7 +41,7 @@ class GetUserDataAction
         }
 
         // PHPStan L10: getRoleNames() restituisce Collection, ma PHPStan non lo riconosce dal trait
-        /** @var \Illuminate\Support\Collection<int, string> $roleNames */
+        /** @var Collection<int, string> $roleNames */
         $roleNames = $user->getRoleNames();
         $firstRole = $roleNames->isNotEmpty() ? $roleNames->first() : null;
         $roleValue = is_string($firstRole) ? $firstRole : null;
@@ -56,7 +58,7 @@ class GetUserDataAction
 
         // PHPStan L10: getAllPermissions() restituisce Collection, ma PHPStan non lo riconosce dal trait
         // method_exists() è sempre true perché User ha HasPermissions trait
-        /** @var \Illuminate\Support\Collection<int, \Spatie\Permission\Contracts\Permission> $allPermissions */
+        /** @var Collection<int, Permission> $allPermissions */
         $allPermissions = $user->getAllPermissions();
         /** @var array<string> $permissions */
         $permissions = $allPermissions->pluck('name')->toArray();
