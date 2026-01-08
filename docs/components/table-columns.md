@@ -169,6 +169,7 @@ use Modules\UI\Filament\Tables\Columns\SelectStateColumn;
 ---
 **Last Updated**: June 2025
 **Version**: 2.0
+<<<<<<< HEAD
 **Compatibility**: Filament 4.x, Laravel 11.x
 **Compatibility**: Filament 4.x, Laravel 11.x
 **Compatibility**: Filament 3.x, Laravel 10.x
@@ -177,3 +178,10 @@ use Modules\UI\Filament\Tables\Columns\SelectStateColumn;
 **Compatibility**: Filament 3.x, Laravel 10.x
 **Compatibility**: Filament 4.x, Laravel 11.x
 **Compatibility**: Filament 3.x, Laravel 10.x
+=======
+<<<<<<< HEAD
+**Compatibility**: Filament 4.x, Laravel 10.x
+=======
+**Compatibility**: Filament 3.x, Laravel 10.x
+>>>>>>> 1899c5f (.)
+>>>>>>> 6c0b3515 (.)

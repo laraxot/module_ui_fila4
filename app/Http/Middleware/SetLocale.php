@@ -19,7 +19,27 @@ final class SetLocale
     {
         // Recupera la lingua dalla sessione o usa quella predefinita
         $locale = Session::get('locale', config('app.locale'));
+<<<<<<< HEAD
         if (! is_string($locale)) {
+=======
+<<<<<<< HEAD
+        if (!is_string($locale)) {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        if (!is_string($locale)) {
+=======
+        if(!is_string($locale)){
+>>>>>>> a12f125f4a (.)
+=======
+        if (!is_string($locale)) {
+>>>>>>> b93ef594b4 (.)
+=======
+        if(!is_string($locale)){
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+>>>>>>> 6c0b3515 (.)
             $locale = Config::string('app.locale');
         }
         // Imposta la lingua

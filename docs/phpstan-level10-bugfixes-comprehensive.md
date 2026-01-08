@@ -153,7 +153,15 @@ cd /var/www/html/_bases/base_saluteora/laravel
 - [S3Test Method Duplication Fix](s3test-method-duplication-bugfix.md)
 - [S3Test Null ErrorCode Handling](s3test-bugfix-null-errorcode.md) 
 - [AwsTest Undefined Variable Fix](awstest-bugfix-undefined-variable.md)
+<<<<<<< HEAD
 - [Media Module PHPStan Fixes](../Media/project_docs/phpstan_level10_fixes.md)
+=======
+<<<<<<< HEAD
+- [Media Module PHPStan Fixes](../Media/docs/phpstan_level10_fixes.md)
+=======
+- [Media Module PHPStan Fixes](../Media/project_docs/phpstan_level10_fixes.md)
+>>>>>>> 1899c5f (.)
+>>>>>>> 6c0b3515 (.)
 
 ## Aggiornamento Continuo
 

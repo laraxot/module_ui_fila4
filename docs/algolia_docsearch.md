@@ -73,11 +73,25 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 
 
 ## Collegamenti tra versioni di algolia-docsearch.md
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+* [algolia-docsearch.md](../../../Chart/docs/algolia-docsearch.md)
+* [algolia-docsearch.md](../../../Gdpr/docs/algolia-docsearch.md)
+* [algolia-docsearch.md](../../../Xot/docs/algolia-docsearch.md)
+* [algolia-docsearch.md](../../../UI/docs/algolia-docsearch.md)
+* [algolia-docsearch.md](../../../Cms/docs/algolia-docsearch.md)
+=======
+>>>>>>> 6c0b3515 (.)
 * [algolia-docsearch.md](../../../Chart/project_docs/algolia-docsearch.md)
 * [algolia-docsearch.md](../../../Gdpr/project_docs/algolia-docsearch.md)
 * [algolia-docsearch.md](../../../Xot/project_docs/algolia-docsearch.md)
 * [algolia-docsearch.md](../../../UI/project_docs/algolia-docsearch.md)
 * [algolia-docsearch.md](../../../Cms/project_docs/algolia-docsearch.md)
+<<<<<<< HEAD
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> 6c0b3515 (.)
 
 
 ### Versione Incoming

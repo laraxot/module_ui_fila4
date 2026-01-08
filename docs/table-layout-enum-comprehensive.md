@@ -408,4 +408,12 @@ Restituisce il testo di aiuto tradotto per il layout.
 
 **Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 2.0.0
+<<<<<<< HEAD
 **Compatibilità**: Filament 3.x, Laravel 10.x, PHP 8.1+ 
+=======
+<<<<<<< HEAD
+**Compatibilità**: Filament 4.x, Laravel 10.x, PHP 8.1+ 
+=======
+**Compatibilità**: Filament 3.x, Laravel 10.x, PHP 8.1+ 
+>>>>>>> 1899c5f (.)
+>>>>>>> 6c0b3515 (.)

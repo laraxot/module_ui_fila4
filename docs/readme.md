@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎨 **UI Module** - Sistema Avanzato Componenti Interfaccia
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -72,6 +73,8 @@ class UserCalendarWidget extends XotBaseWidget
 ### 📱 **TableLayoutEnum System**
 ```php
 // Sistema layout tabelle responsive
+=======
+>>>>>>> 1899c5f (.)
 # Modulo UI - Documentazione
 
 ## Panoramica
@@ -83,9 +86,15 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 - Gestione orari di apertura
 - Componenti calendario
 - Utility di interfaccia
+<<<<<<< HEAD
+- **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
+<<<<<<< HEAD
 - **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
 - **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
-- **TableLayoutEnum**: Sistema di layout per tabelle Filament (lista/griglia)
+=======
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> 6c0b3515 (.)
 
 ## File di Traduzione
 
@@ -94,13 +103,20 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 - `opening_hours_field.php` - **FIX COMPLETATO**: Traduzioni per i campi orari con sincronizzazione lingue
 - `user_calendar.php` - Traduzioni per il calendario utente
 - `components.php` - Traduzioni per i componenti UI
+<<<<<<< HEAD
+- `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
+<<<<<<< HEAD
 - `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
 - `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
-- `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
+=======
+=======
+>>>>>>> 1899c5f (.)
+>>>>>>> 6c0b3515 (.)
 
 ### Fix Implementati
 - [Fix Traduzioni Opening Hours Field](opening_hours_translation_fix.md) - **REGOLA CRITICA**: Sincronizzazione obbligatoria tra lingue IT/EN
 - [Fix Traduzioni Opening Hours](opening_hours_translation_improvement.md) - Miglioramento traduzioni orari
+<<<<<<< HEAD
 - [Analisi TableLayoutEnum](table_layout_enum_analysis.md) - **NUOVO**: Documentazione completa enum layout tabelle
 
 ## Regole Critiche
@@ -560,6 +576,8 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 - **[REGOLA CRITICA: MAI usare ->label()](never_use_label_rule.md)**
 - **[REGOLA CRITICA: SEMPRE usa transClass()](transclass_rule.md)**
 
+=======
+>>>>>>> 1899c5f (.)
 *Ultimo aggiornamento: gennaio 2025* 
 *Ultimo aggiornamento: gennaio 2025* 
 *Ultimo aggiornamento: gennaio 2025* 

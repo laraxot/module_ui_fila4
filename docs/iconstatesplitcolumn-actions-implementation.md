@@ -142,4 +142,12 @@ La soluzione semplice è la migliore perché:
 
 **Last Updated**: June 2025
 **Version**: 2.3
+<<<<<<< HEAD
 **Compatibility**: Filament 3.x, Laravel 10.x 
+=======
+<<<<<<< HEAD
+**Compatibility**: Filament 4.x, Laravel 10.x 
+=======
+**Compatibility**: Filament 3.x, Laravel 10.x 
+>>>>>>> 1899c5f (.)
+>>>>>>> 6c0b3515 (.)
