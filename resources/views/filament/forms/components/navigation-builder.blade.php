@@ -11,11 +11,7 @@ declare(strict_types=1);
     $disableRecordsSorting = $disableRecordsSorting ?? false;
 @endphp
 
-<<<<<<< HEAD
-<x-filament::field-wrapper
-=======
 <x-filament-forms::field-wrapper
->>>>>>> c6fab1a (.)
     :id="$getId()"
     :label="$getLabel()"
     :label-sr-only="$isLabelHidden()"
@@ -62,8 +58,4 @@ declare(strict_types=1);
         </x-filament::button>
     </div>
     @endif
-<<<<<<< HEAD
-</x-filament::field-wrapper>
-=======
 </x-filament-forms::field-wrapper>
->>>>>>> c6fab1a (.)
