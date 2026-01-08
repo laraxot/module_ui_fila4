@@ -1,9 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 declare(strict_types=1);
 
 return [
@@ -22,28 +18,3 @@ return [
         ],
     ],
 ];
-<<<<<<< HEAD
-=======
-return array (
-  'fields' => 
-  array (
-    'method' => 
-    array (
-      'label' => 'method',
-      'description' => 'method',
-      'helper_text' => 'method',
-      'placeholder' => 'method',
-    ),
-    '_tpl' => 
-    array (
-      'label' => '_tpl',
-    ),
-    'view' => 
-    array (
-      'label' => 'view',
-    ),
-  ),
-);
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
