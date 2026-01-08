@@ -8,13 +8,6 @@ return [
         'heading' => 'AWS Configuration Test',
         'description' => 'Page to test S3 and CloudFront configuration',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'fields' => [
         'attachment' => [
             'label' => 'Test File',
@@ -27,13 +20,6 @@ return [
             'helper_text' => 'Detailed output of AWS configuration tests',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'actions' => [
         'testS3Connection' => [
             'label' => '🔍 Test S3 Connection',
@@ -66,13 +52,6 @@ return [
             'error' => 'Error sending email',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'notifications' => [
         's3_test_successful' => '✅ S3 and CloudFront test completed successfully!',
         'test_failed' => '❌ Test failed',
@@ -89,13 +68,6 @@ return [
         'email_sent_successfully' => 'Email Sent Successfully',
         'email_send_failed' => 'Email Send Failed',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
     'debug' => [
         'run_tests_message' => 'Run tests to see results...',
         'configuration_title' => '📋 Configuration',

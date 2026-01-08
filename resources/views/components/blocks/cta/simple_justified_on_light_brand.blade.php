@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
 <div class="bg-indigo-100">
     <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Ready to dive in?<br>Start your free trial today.</h2>
@@ -21,10 +12,3 @@ declare(strict_types=1);
       </div>
     </div>
   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  
->>>>>>> 727968c (.)
-=======
->>>>>>> ef3c5fa (.)
