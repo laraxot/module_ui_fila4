@@ -2,11 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\UI\Filament\Forms\Components;
-=======
-namespace Modules\Notify\Filament\Forms\Components;
->>>>>>> 1ee7e4a (.)
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
