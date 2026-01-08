@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 @props(['title', 'stats'])
 
 <section class="bg-indigo-700">
@@ -25,4 +28,8 @@ declare(strict_types=1);
             @endforeach
         </dl>
     </div>
+<<<<<<< HEAD
 </section>
+=======
+</section> 
+>>>>>>> 727968c (.)

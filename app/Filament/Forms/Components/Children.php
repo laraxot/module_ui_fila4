@@ -17,6 +17,7 @@ final class Children extends XotBaseViewField
     protected string $view = 'ui::filament.forms.components.navigation-builder';
 
     /*
+<<<<<<< HEAD
      * public static function make($livewire): static
      * {
      * $result = app(static::class, ['livewire' => $livewire]);
@@ -24,4 +25,13 @@ final class Children extends XotBaseViewField
      * return $result;
      * }
      */
+=======
+    public static function make($livewire): static
+    {
+        $result = app(static::class, ['livewire' => $livewire]);
+        $result->configure();
+        return $result;
+    }
+    */
+>>>>>>> 727968c (.)
 }
