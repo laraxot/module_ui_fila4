@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Notify\Filament\Forms\Components;
+namespace Modules\UI\Filament\Forms\Components;
 
 use Illuminate\Support\Collection;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
