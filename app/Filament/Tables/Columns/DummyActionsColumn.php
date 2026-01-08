@@ -74,6 +74,7 @@ class DummyActionsColumn extends ColumnGroup
      */
     public function getActions(): array
     {
+        /** @var array<string, mixed> */
         return $this->actions;
     }
 
