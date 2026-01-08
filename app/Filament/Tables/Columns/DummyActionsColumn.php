@@ -69,8 +69,12 @@ class DummyActionsColumn extends ColumnGroup
         return $this;
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getActions(): array
     {
+        /** @var array<string, mixed> */
         return $this->actions;
     }
 
@@ -94,7 +98,7 @@ class DummyActionsColumn extends ColumnGroup
                 ->extraCellAttributes(['class' => 'px-0'])
                 ->action(Action::make('uno-action')
                     ->label('Prova Action')
-                    ->action(function () {
+                    ->action(function (): void {
                         dddx('Azione prova eseguita1!');
                     })),
             IconColumn::make('due')
@@ -104,7 +108,7 @@ class DummyActionsColumn extends ColumnGroup
                 ->extraCellAttributes(['class' => 'px-0'])
                 ->action(Action::make('due-action')
                     ->label('Prova Action')
-                    ->action(function () {
+                    ->action(function (): void {
                         dddx('Azione prova eseguita2!');
                     })),
 <<<<<<< HEAD
