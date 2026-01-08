@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 @props(['title', 'sections'])
 
 <section class="py-12 bg-white">
@@ -29,4 +32,8 @@ declare(strict_types=1);
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 </section>
+=======
+</section> 
+>>>>>>> 727968c (.)
