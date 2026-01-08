@@ -123,7 +123,7 @@ final class ImageSpatie
                         TemporaryUploadedFile $state,
                         Get $get,
                         HasMedia $record,
-                    ): void {
+                    ) {
                         // Call to an undefined method Filament\Forms\Contracts\HasForms::validateOnly().
                         // $livewire->validateOnly($component->getStatePath());
                         Assert::string(

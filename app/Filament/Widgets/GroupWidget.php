@@ -54,9 +54,6 @@ final class GroupWidget extends XotBaseWidget
 >>>>>>> b93ef594b4 (.)
 
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getFormSchema(): array
     {
         return [];
