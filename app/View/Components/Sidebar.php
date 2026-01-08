@@ -14,7 +14,12 @@ class Sidebar extends Component
     public function __construct(
         public Collection $collection,
         // public string $tpl = 'v1'
+<<<<<<< HEAD
     ) {}
+=======
+    ) {
+    }
+>>>>>>> 727968c (.)
 
 >>>>>>> 6c0b3515 (.)
     /**
@@ -44,6 +49,10 @@ class Sidebar extends Component
     //         ->orderByDesc('total')
     //         ->limit(5)
     //         ->get();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 727968c (.)
     //     return view('components.sidebar', ['categories' => $categories]);
     // }
 >>>>>>> 6c0b3515 (.)
