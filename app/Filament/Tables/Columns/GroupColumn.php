@@ -19,7 +19,7 @@ class GroupColumn extends Column
 
     public function getFields(): array
     {
-        /** @var array<string, mixed> */
+        /* @var array<string, mixed> */
         return $this->schema;
     }
 
@@ -32,7 +32,7 @@ class GroupColumn extends Column
         $filtered = array_filter($form, function (mixed $item): bool {
             return $item instanceof Column;
         });
-        
+
         /** @var array<int|string, Column> $filtered */
         /** @var array<int, Column> $filteredValues */
         $filteredValues = array_values($filtered);

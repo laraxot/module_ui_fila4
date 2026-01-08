@@ -9,11 +9,11 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->widget = new StatsOverviewWidget;
+    $this->widget = new StatsOverviewWidget();
 });
 
 test('stats overview widget extends correct base class', function (): void {
-    expect($this->widget)->toBeInstanceOf(\Filament\Widgets\StatsOverviewWidget::class);
+    expect($this->widget)->toBeInstanceOf(Filament\Widgets\StatsOverviewWidget::class);
 });
 
 test('stats overview widget has correct namespace', function (): void {

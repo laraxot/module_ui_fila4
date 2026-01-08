@@ -56,6 +56,7 @@ class GetAllIconsAction
             $paths = $set['paths'] ?? [];
             if (! is_iterable($paths)) {
                 $mappedIcons[$name] = $set;
+
                 continue;
             }
 

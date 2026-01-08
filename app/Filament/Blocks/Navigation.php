@@ -7,11 +7,10 @@ namespace Modules\UI\Filament\Blocks;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
-use Override;
 
 final class Navigation extends XotBaseBlock
 {
-    #[Override]
+    #[\Override]
     public static function getBlockSchema(): array
     {
         return [
@@ -29,10 +28,13 @@ final class Navigation extends XotBaseBlock
         ];
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getFormSchema(): array
     {
         return [
-            Repeater::make('items')
+            'items' => Repeater::make('items')
                 ->label(self::trans('blocks.navigation.fields.items.label'))
                 ->schema([
                     TextInput::make('text')->label(self::trans('blocks.navigation.fields.text.label')),

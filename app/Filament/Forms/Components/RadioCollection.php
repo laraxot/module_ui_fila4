@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use Closure;
 use Filament\Forms\Components\Field;
 use Illuminate\Support\Collection;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
@@ -16,7 +15,7 @@ final class RadioCollection extends Field
     /**
      * Callback per ottenere gli studi.
      */
-    protected Closure|Collection|null $options = null;
+    protected \Closure|Collection|null $options = null;
 
     protected string $itemView;
 
@@ -25,7 +24,7 @@ final class RadioCollection extends Field
     /**
      * Set the options collection for the radio buttons.
      */
-    public function options(Closure|Collection|null $options): static
+    public function options(\Closure|Collection|null $options): static
     {
         $this->options = $options;
 
@@ -60,11 +59,11 @@ final class RadioCollection extends Field
     public function getOptions(): Collection
     {
         $optionsRaw = $this->evaluate($this->options);
-        
+
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
         }
-        
+
         return collect([]);
     }
 

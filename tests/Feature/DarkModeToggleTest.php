@@ -59,8 +59,8 @@ test('category tabs support dark mode', function () {
         $content = file_get_contents($tabsPath);
 
         // Should include dark navigation styling
-        expect($content)->toContain('dark:bg-slate-') or
-            (expect($content)->toContain('dark:border-slate-') or expect($content)->toContain('dark:text-slate-'));
+        expect($content)->toContain('dark:bg-slate-')
+            or (expect($content)->toContain('dark:border-slate-') or expect($content)->toContain('dark:text-slate-'));
     } else {
         expect(true)->toBeTrue(); // Skip if component doesn't exist
     }
@@ -111,8 +111,8 @@ test('proper contrast ratios in dark mode', function () {
 
     // Should use proper text colors for dark backgrounds
     if (str_contains($content, 'dark:bg-slate-900')) {
-        expect($content)->toContain('text-white') or
-            (expect($content)->toContain('text-slate-100') or expect($content)->toContain('dark:text-white'));
+        expect($content)->toContain('text-white')
+            or (expect($content)->toContain('text-slate-100') or expect($content)->toContain('dark:text-white'));
     } else {
         expect(true)->toBeTrue(); // Component doesn't use this pattern
     }
@@ -125,8 +125,8 @@ test('gradient backgrounds work in dark mode', function () {
 
     // Hero gradients should have dark variants
     if (str_contains($content, 'bg-gradient-to-br')) {
-        expect($content)->toContain('dark:from-') or
-            (expect($content)->toContain('dark:via-') or expect($content)->toContain('dark:to-'));
+        expect($content)->toContain('dark:from-')
+            or (expect($content)->toContain('dark:via-') or expect($content)->toContain('dark:to-'));
     }
 });
 
@@ -150,8 +150,8 @@ test('border colors adapt to dark mode', function () {
 
     // Borders should have appropriate colors (may include white/10 for glassmorphism)
     if (str_contains($content, 'border-')) {
-        expect($content)->toContain('border-white/10') or
-            (expect($content)->toContain('dark:border-') or expect($content)->toContain('border-slate-'));
+        expect($content)->toContain('border-white/10')
+            or (expect($content)->toContain('dark:border-') or expect($content)->toContain('border-slate-'));
     } else {
         expect(true)->toBeTrue(); // Component may not use borders
     }
@@ -164,8 +164,8 @@ test('backdrop effects work in dark mode', function () {
 
     // Should have backdrop blur and similar effects
     if (str_contains($content, 'backdrop-blur')) {
-        expect($content)->toContain('bg-white/5') or
-            (expect($content)->toContain('bg-black/') or expect($content)->toContain('backdrop-blur'));
+        expect($content)->toContain('bg-white/5')
+            or (expect($content)->toContain('bg-black/') or expect($content)->toContain('backdrop-blur'));
     } else {
         expect(true)->toBeTrue(); // Component may not use backdrop effects
     }

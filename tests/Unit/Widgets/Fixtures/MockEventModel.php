@@ -15,4 +15,3 @@ class MockEventModel extends Model
         return 'mock_events';
     }
 }
-
