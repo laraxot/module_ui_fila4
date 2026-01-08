@@ -48,7 +48,11 @@ final class VideoSpatie
                         TemporaryUploadedFile $state,
                         Get $get,
                         HasMedia $record,
+<<<<<<< HEAD
                     ): void {
+=======
+                    ) {
+>>>>>>> laraxot/develop
                         // Call to an undefined method Filament\Forms\Contracts\HasForms::validateOnly().
                         // $livewire->validateOnly($component->getStatePath());
                         Assert::string(

@@ -1,7 +1,16 @@
 # PHPStan Level 10 Comprehensive Bugfixes
 
 ## Problema Generale
+<<<<<<< HEAD
 Errori PHPStan level 10+ rilevati durante la scansione multi-modulo: Media, <nome modulo>, <nome progetto>, UI, Xot.
+=======
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, , UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, SaluteOra, UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, , UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, SaluteOra, UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, , UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, SaluteOra, UI, Xot.
+>>>>>>> laraxot/develop
 
 ## Moduli Interessati e Correzioni
 
@@ -57,7 +66,16 @@ $this->debugResults['file_operations'] = $this->getFileOperationsData();
 'private_key' => self::formatPrivateKey((string) env('CLOUDFRONT_PRIVATE_KEY', '')),
 ```
 
+<<<<<<< HEAD
 ### 🟢 **<nome progetto> Module** - Report Model  
+=======
+### 🟢 ** Module** - Report Model  
+### 🟢 **SaluteOra Module** - Report Model  
+### 🟢 ** Module** - Report Model  
+### 🟢 **SaluteOra Module** - Report Model  
+### 🟢 ** Module** - Report Model  
+### 🟢 **SaluteOra Module** - Report Model  
+>>>>>>> laraxot/develop
 **Stato**: ✅ Corretto
 
 #### Report.php
@@ -70,7 +88,13 @@ public function getSpecifyDiseases(): array
 {
 ```
 
+<<<<<<< HEAD
 ### 🟡 **<nome modulo> Module** - ListReports
+=======
+### 🟡 **SaluteMo Module** - ListReports
+### 🟡 **SaluteMo Module** - ListReports
+### 🟡 **SaluteMo Module** - ListReports
+>>>>>>> laraxot/develop
 **Stato**: ⚠️ Da Verificare
 
 #### ListReports.php
@@ -88,19 +112,46 @@ public function getSpecifyDiseases(): array
 | UI         | S3Test.php                    | Method not found           | ✅ Fix |
 | UI         | en/s3test.php                 | Duplicate array key        | ✅ Fix |
 | Xot        | GetCloudFrontSignedUrlAction  | Parameter type mismatch    | ✅ Fix |
+<<<<<<< HEAD
 | <nome progetto>  | Report.php                    | Missing return type        | ✅ Fix |
 | <nome modulo>   | ListReports.php               | Invalid return type        | ⚠️ TBD |
+=======
+|   | Report.php                    | Missing return type        | ✅ Fix |
+| SaluteOra  | Report.php                    | Missing return type        | ✅ Fix |
+| SaluteMo   | ListReports.php               | Invalid return type        | ⚠️ TBD |
+|   | Report.php                    | Missing return type        | ✅ Fix |
+| SaluteOra  | Report.php                    | Missing return type        | ✅ Fix |
+| SaluteMo   | ListReports.php               | Invalid return type        | ⚠️ TBD |
+|   | Report.php                    | Missing return type        | ✅ Fix |
+| SaluteOra  | Report.php                    | Missing return type        | ✅ Fix |
+| SaluteMo   | ListReports.php               | Invalid return type        | ⚠️ TBD |
+>>>>>>> laraxot/develop
 
 ## Verifica Post-Correzione
 
 ### PHPStan Command
 ```bash
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_<nome progetto>/laravel
+=======
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+cd /var/www/html/_bases/base_saluteora/laravel
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+cd /var/www/html/_bases/base_saluteora/laravel
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+cd /var/www/html/_bases/base_saluteora/laravel
+>>>>>>> laraxot/develop
 ./vendor/bin/phpstan analyse --level=9 --memory-limit=2G
 ```
 
 ### Problemi Residui
+<<<<<<< HEAD
 1. **<nome modulo>/ListReports**: Richiede cache clear PHPStan
+=======
+1. **SaluteMo/ListReports**: Richiede cache clear PHPStan
+1. **SaluteMo/ListReports**: Richiede cache clear PHPStan
+1. **SaluteMo/ListReports**: Richiede cache clear PHPStan
+>>>>>>> laraxot/develop
 2. **Media Module**: Verificare se la scansione PHPStan è aggiornata
 
 ## Best Practice Implementate
@@ -127,6 +178,7 @@ cd /var/www/html/_bases/base_<nome progetto>/laravel
 - [S3Test Method Duplication Fix](s3test-method-duplication-bugfix.md)
 - [S3Test Null ErrorCode Handling](s3test-bugfix-null-errorcode.md) 
 - [AwsTest Undefined Variable Fix](awstest-bugfix-undefined-variable.md)
+<<<<<<< HEAD
 - [Media Module PHPStan Fixes](../Media/docs/phpstan_level10_fixes.md)
 
 ## Aggiornamento Continuo
@@ -135,3 +187,22 @@ Questo documento deve essere aggiornato ogni volta che vengono rilevati e corret
 
 **Data Ultimo Aggiornamento**: 2025-01-06  
 **PHPStan Version**: 1.12.x  
+=======
+<<<<<<< HEAD
+- [Media Module PHPStan Fixes](../Media/project_docs/phpstan_level10_fixes.md)
+=======
+<<<<<<< HEAD
+- [Media Module PHPStan Fixes](../Media/docs/phpstan_level10_fixes.md)
+=======
+- [Media Module PHPStan Fixes](../Media/project_docs/phpstan_level10_fixes.md)
+>>>>>>> 1899c5f (.)
+>>>>>>> 6c0b3515 (.)
+
+## Aggiornamento Continuo
+
+Questo documento deve essere aggiornato ogni volta che vengono rilevati e corretti nuovi errori PHPStan level 9+.
+
+**Data Ultimo Aggiornamento**: 2025-01-06  
+**PHPStan Version**: 1.12.x  
+**Laravel Version**: 12.21.0
+>>>>>>> laraxot/develop

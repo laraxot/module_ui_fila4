@@ -5,9 +5,15 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Forms\Components;
 
 use Carbon\Carbon;
+<<<<<<< HEAD
 use Filament\Forms\Components\DatePicker;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
+=======
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\App;
+use Modules\Xot\Filament\Forms\Components\XotBaseDatePicker;
+>>>>>>> laraxot/develop
 
 use function Safe\preg_match;
 
@@ -20,7 +26,11 @@ use function Safe\preg_match;
  * - Carbon First: Localizzazione automatica tramite Carbon
  * - Design One Theme: UI/UX conforme al tema standard
  */
+<<<<<<< HEAD
 class InlineDatePicker extends DatePicker
+=======
+class InlineDatePicker extends XotBaseDatePicker
+>>>>>>> laraxot/develop
 {
     /**
      * Date abilitate per la selezione.
@@ -52,7 +62,11 @@ class InlineDatePicker extends DatePicker
 
         // Hydration/Dehydration del valore
         $this->afterStateHydrated(static function (self $component, mixed $state): void {
+<<<<<<< HEAD
             if (null !== $state && is_string($state) && '' !== $state) {
+=======
+            if (null !== $state && \is_string($state) && '' !== $state) {
+>>>>>>> laraxot/develop
                 try {
                     $date = Carbon::parse($state);
                     $component->currentViewMonth = $date->format('Y-m');
@@ -64,7 +78,11 @@ class InlineDatePicker extends DatePicker
         });
 
         $this->dehydrateStateUsing(static function (self $_component, mixed $state): ?string {
+<<<<<<< HEAD
             if (null !== $state && is_string($state) && '' !== $state) {
+=======
+            if (null !== $state && \is_string($state) && '' !== $state) {
+>>>>>>> laraxot/develop
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
                 } catch (\Exception $e) {
@@ -149,11 +167,19 @@ class InlineDatePicker extends DatePicker
         }
 
         /** @var iterable<int|string, mixed> $datesRaw */
+<<<<<<< HEAD
         $dates = is_array($datesRaw) ? $datesRaw : iterator_to_array($datesRaw);
 
         /** @var Collection<int, non-falsy-string> $result */
         $result = collect($dates)->map(function (mixed $date): string {
             if (! is_string($date) || '' === $date) {
+=======
+        $dates = \is_array($datesRaw) ? $datesRaw : iterator_to_array($datesRaw);
+
+        /** @var Collection<int, non-falsy-string> $result */
+        $result = collect($dates)->map(static function (mixed $date): string {
+            if (! \is_string($date) || '' === $date) {
+>>>>>>> laraxot/develop
                 return '';
             }
             try {
@@ -161,7 +187,11 @@ class InlineDatePicker extends DatePicker
             } catch (\Exception $e) {
                 return '';
             }
+<<<<<<< HEAD
         })->filter(fn (string $v): bool => '' !== $v)->values(); // Remove empty strings and reindex
+=======
+        })->filter(static fn (string $v): bool => '' !== $v)->values(); // Remove empty strings and reindex
+>>>>>>> laraxot/develop
 
         /** @var Collection<int, string> $resultTyped */
         $resultTyped = $result;
@@ -209,7 +239,11 @@ class InlineDatePicker extends DatePicker
                 $isSelected = false;
                 try {
                     $state = $this->getState();
+<<<<<<< HEAD
                     if ($state && is_string($state)) {
+=======
+                    if ($state && \is_string($state)) {
+>>>>>>> laraxot/develop
                         $isSelected = $currentDay->isSameDay(Carbon::parse($state));
                     }
                 } catch (\Throwable $e) {

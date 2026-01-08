@@ -9,6 +9,12 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
+=======
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
+>>>>>>> laraxot/develop
 use Webmozart\Assert\Assert;
 
 // use Squire\Models\Country;
@@ -79,9 +85,15 @@ class AddressField extends Field
         }
 
         $relationship = $record->{$relationshipMethod}();
+<<<<<<< HEAD
         if (! $relationship instanceof \Illuminate\Database\Eloquent\Relations\HasOne
             && ! $relationship instanceof \Illuminate\Database\Eloquent\Relations\MorphOne
             && ! $relationship instanceof \Illuminate\Database\Eloquent\Relations\HasMany) {
+=======
+        if (! $relationship instanceof HasOne
+            && ! $relationship instanceof MorphOne
+            && ! $relationship instanceof HasMany) {
+>>>>>>> laraxot/develop
             return;
         }
 

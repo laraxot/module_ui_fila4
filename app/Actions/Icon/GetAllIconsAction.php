@@ -9,6 +9,10 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
+<<<<<<< HEAD
+=======
+use SplFileInfo;
+>>>>>>> laraxot/develop
 
 class GetAllIconsAction
 {

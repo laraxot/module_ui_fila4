@@ -8,7 +8,10 @@ use BackedEnum;
 use Filament\Forms\Components\Radio;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
+=======
+>>>>>>> laraxot/develop
 
 class RadioBadge extends Radio
 {
@@ -25,7 +28,11 @@ class RadioBadge extends Radio
      */
     public function getEnumValue(string $value): ?\BackedEnum
     {
+<<<<<<< HEAD
         if (! is_string($this->options)) {
+=======
+        if (! \is_string($this->options)) {
+>>>>>>> laraxot/develop
             return null;
         }
         if (! enum_exists($this->options)) {
@@ -52,26 +59,69 @@ class RadioBadge extends Radio
 
     public function getColorForOption(string $value): string
     {
+<<<<<<< HEAD
         Assert::nullOrString($color = $this->getEnumValue($value)?->getColor());
 
         return $color ?? $this->selectedColor;
+=======
+        $enum = $this->getEnumValue($value);
+        if ($enum instanceof HasColor) {
+            $color = $enum->getColor();
+            if (null === $color) {
+                return $this->selectedColor;
+            }
+
+            if (is_array($color)) {
+                $first = reset($color);
+
+                return is_string($first) && '' !== $first ? $first : $this->selectedColor;
+            }
+
+            // PHPStan L10: $color è già verificato come non-array e non-null, quindi è string
+            if ('' !== $color) {
+                return $color;
+            }
+
+            return $this->selectedColor;
+        }
+
+        return $this->selectedColor;
+>>>>>>> laraxot/develop
     }
 
     public function getIconForOption(string $value): ?string
     {
+<<<<<<< HEAD
         $icon = $this->getEnumValue($value)?->getIcon();
+=======
+        $enum = $this->getEnumValue($value);
+        if (! ($enum instanceof HasIcon)) {
+            return null;
+        }
+        $icon = $enum->getIcon();
+>>>>>>> laraxot/develop
 
         // getIcon() può restituire Htmlable|string|null, ma dobbiamo restituire solo string|null
         if (null === $icon) {
             return null;
         }
 
+<<<<<<< HEAD
         if (is_string($icon)) {
             return $icon;
         }
 
         // Se è Htmlable, convertilo a string
         if (is_object($icon) && method_exists($icon, '__toString')) {
+=======
+        if (\is_string($icon)) {
+            return $icon;
+        }
+
+        // PHPStan L10: $icon è BackedEnum|Htmlable dopo is_string(), quindi è sempre object
+        // Se è Htmlable, convertilo a string
+        if (method_exists($icon, '__toString')) {
+>>>>>>> laraxot/develop
             return (string) $icon;
         }
 

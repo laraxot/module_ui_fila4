@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 /**
  * @see RyanChandler\FilamentNavigation\Filament\Fields\NavigationSelect;
  * @see https://github.com/ryangjchandler/filament-navigation
@@ -29,4 +30,12 @@ final class ParentSelect extends Select
     {
         return $this->optionValueProperty;
     }
+=======
+namespace Modules\UI\Filament\Forms\Components;
+
+use Modules\Xot\Filament\Forms\Components\XotBaseSelect;
+
+class ParentSelect extends XotBaseSelect
+{
+>>>>>>> laraxot/develop
 }

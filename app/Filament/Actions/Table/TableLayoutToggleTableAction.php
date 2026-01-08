@@ -17,7 +17,11 @@ final class TableLayoutToggleTableAction extends Action implements HasTableLayou
 
         $current = $this->getCurrentLayout();
 
+<<<<<<< HEAD
         $this->label('Toggle Layout')
+=======
+        $this->label(__('ui::table_layout.actions.toggle.label'))
+>>>>>>> laraxot/develop
             ->tooltip($current->getLabel())
             ->color($current->getColor())
             ->icon($current->getIcon())

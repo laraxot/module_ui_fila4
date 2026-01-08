@@ -7,11 +7,19 @@ namespace Modules\UI\Filament\Widgets;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
+<<<<<<< HEAD
 use Filament\Widgets\Widget;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\XotData;
 
 class UserCalendarWidget extends Widget
+=======
+use Illuminate\Support\Str;
+use Modules\Xot\Datas\XotData;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+
+class UserCalendarWidget extends XotBaseWidget
+>>>>>>> laraxot/develop
 {
     protected string $view = 'ui::filament.widgets.user-calendar';
 
@@ -22,7 +30,11 @@ class UserCalendarWidget extends Widget
         $action_suffix = Str::of($function)->studly()->append('Action')->toString();
         $resource = XotData::make()->getUserResourceClassByType($this->type);
         $model = $resource::getModel();
+<<<<<<< HEAD
         $modelString = is_string($model) ? $model : (string) $model;
+=======
+        $modelString = \is_string($model) ? $model : (string) $model;
+>>>>>>> laraxot/develop
         $action = Str::of($modelString)
             ->replace('\Models\\', '\\Actions\\')
             ->append('\\Calendar\\'.$action_suffix)
@@ -45,7 +57,11 @@ class UserCalendarWidget extends Widget
         }
 
         $actionInstance = app($action);
+<<<<<<< HEAD
         if (! is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
+=======
+        if (! \is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
+>>>>>>> laraxot/develop
             return [];
         }
 
@@ -66,17 +82,29 @@ class UserCalendarWidget extends Widget
      */
     private static function isValidEventsArray(mixed $value): bool
     {
+<<<<<<< HEAD
         if (! is_array($value)) {
+=======
+        if (! \is_array($value)) {
+>>>>>>> laraxot/develop
             return false;
         }
 
         foreach ($value as $event) {
+<<<<<<< HEAD
             if (! is_array($event)) {
+=======
+            if (! \is_array($event)) {
+>>>>>>> laraxot/develop
                 return false;
             }
 
             foreach (array_keys($event) as $key) {
+<<<<<<< HEAD
                 if (! is_string($key)) {
+=======
+                if (! \is_string($key)) {
+>>>>>>> laraxot/develop
                     return false;
                 }
             }
@@ -94,9 +122,15 @@ class UserCalendarWidget extends Widget
 
         if (class_exists($action)) {
             $actionInstance = app($action);
+<<<<<<< HEAD
             if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
                 if (is_array($resultRaw)) {
+=======
+            if (\is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
+                $resultRaw = $actionInstance->execute();
+                if (\is_array($resultRaw)) {
+>>>>>>> laraxot/develop
                     /** @var array<int, TextInput|Grid> $result */
                     $result = $resultRaw;
 
@@ -116,6 +150,12 @@ class UserCalendarWidget extends Widget
         ];
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @SuppressWarnings("PHPMD.UnusedFormalParameter")
+     */
+>>>>>>> laraxot/develop
     public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void
     {
         // TODO: Implementare la logica per la selezione della data

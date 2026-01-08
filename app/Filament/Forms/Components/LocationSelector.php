@@ -6,11 +6,18 @@ namespace Modules\UI\Filament\Forms\Components;
 
 use Filament\Forms\Components\Select;
 use Filament\Schemas\Components\Component;
+<<<<<<< HEAD
 use Filament\Schemas\Components\Group;
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Models\Comune;
+=======
+use Filament\Schemas\Components\Utilities\Get;
+use Filament\Schemas\Components\Utilities\Set;
+use Modules\Geo\Models\Comune;
+use Modules\Xot\Filament\Schemas\Components\XotBaseGroup;
+>>>>>>> laraxot/develop
 
 /**
  * LocationSelector Component - Selezione geografica gerarchica.
@@ -20,7 +27,11 @@ use Modules\Geo\Models\Comune;
  * - Provincia (dipendente da regione)
  * - CAP (dipendente da regione e provincia)
  */
+<<<<<<< HEAD
 class LocationSelector extends Group
+=======
+class LocationSelector extends XotBaseGroup
+>>>>>>> laraxot/develop
 {
     /**
      * Il nome del campo regione.
@@ -63,6 +74,7 @@ class LocationSelector extends Group
     protected function setUp(): void
     {
         parent::setUp();
+<<<<<<< HEAD
 
         // Imposta le label di default se non personalizzate
         $this->labels = array_merge([
@@ -79,6 +91,8 @@ class LocationSelector extends Group
         ], $this->placeholders);
 
         // Configura lo schema dei campi figlio
+=======
+>>>>>>> laraxot/develop
         $this->schema($this->getChildComponentsSchema());
     }
 
@@ -164,6 +178,7 @@ class LocationSelector extends Group
     protected function getChildComponentsSchema(): array
     {
         return [
+<<<<<<< HEAD
             // Campo Regione
             Select::make($this->regionFieldName)
                 ->label(is_string($this->labels['region']) ? $this->labels['region'] : 'Region')
@@ -213,6 +228,60 @@ class LocationSelector extends Group
         ];
     }
 
+=======
+            $this->getRegionComponent(),
+            $this->getProvinceComponent(),
+            $this->getCapComponent(),
+        ];
+    }
+
+    protected function getRegionComponent(): Select
+    {
+        return Select::make($this->regionFieldName)
+            ->options($this->getRegionOptions())
+            ->searchable($this->searchable)
+            ->required($this->required)
+            ->live()
+            ->afterStateUpdated(function (Set $set) {
+                // Reset province e cap quando cambia la regione
+                $set($this->provinceFieldName, null);
+                $set($this->capFieldName, null);
+            });
+    }
+
+    protected function getProvinceComponent(): Select
+    {
+        return Select::make($this->provinceFieldName)
+            ->options(function (Get $get): array {
+                $region = $get($this->regionFieldName);
+
+                return \is_string($region) ? $this->getProvinceOptions($region) : [];
+            })
+            ->searchable($this->searchable)
+            ->required($this->required)
+            ->live()
+            ->disabled(fn (Get $get): bool => ! $get($this->regionFieldName))
+            ->afterStateUpdated(function (Set $set) {
+                // Reset cap quando cambia la provincia
+                $set($this->capFieldName, null);
+            });
+    }
+
+    protected function getCapComponent(): Select
+    {
+        return Select::make($this->capFieldName)
+            ->options(function (Get $get): array {
+                $region = $get($this->regionFieldName);
+                $province = $get($this->provinceFieldName);
+
+                return \is_string($region) && \is_string($province) ? $this->getCapOptions($region, $province) : [];
+            })
+            ->searchable($this->searchable)
+            ->required($this->required)
+            ->disabled(fn (Get $get): bool => ! $get($this->regionFieldName) || ! $get($this->provinceFieldName));
+    }
+
+>>>>>>> laraxot/develop
     /**
      * Ottiene le opzioni per il campo regione.
      *
@@ -230,7 +299,11 @@ class LocationSelector extends Group
                 ->toArray();
         } catch (\Exception $e) {
             // Log dell'errore per debug
+<<<<<<< HEAD
             Log::error('LocationSelector: Errore nel caricamento regioni', [
+=======
+            logger()->error('LocationSelector: Errore nel caricamento regioni', [
+>>>>>>> laraxot/develop
                 'error' => $e->getMessage(),
             ]);
 
@@ -258,7 +331,11 @@ class LocationSelector extends Group
                 ->pluck('provincia.nome', 'provincia.codice')
                 ->toArray();
         } catch (\Exception $e) {
+<<<<<<< HEAD
             Log::error('LocationSelector: Errore nel caricamento province', [
+=======
+            logger()->error('LocationSelector: Errore nel caricamento province', [
+>>>>>>> laraxot/develop
                 'region' => $region,
                 'error' => $e->getMessage(),
             ]);
@@ -289,7 +366,11 @@ class LocationSelector extends Group
                 ->pluck('cap.0', 'cap.0')
                 ->toArray();
         } catch (\Exception $e) {
+<<<<<<< HEAD
             Log::error('LocationSelector: Errore nel caricamento CAP', [
+=======
+            logger()->error('LocationSelector: Errore nel caricamento CAP', [
+>>>>>>> laraxot/develop
                 'region' => $region,
                 'province' => $province,
                 'error' => $e->getMessage(),
@@ -314,7 +395,11 @@ class LocationSelector extends Group
         }
 
         // Verifica che se è selezionato un CAP, siano selezionate regione e provincia
+<<<<<<< HEAD
         if (is_array($state)) {
+=======
+        if (\is_array($state)) {
+>>>>>>> laraxot/develop
             $capValue = $state[$this->capFieldName] ?? null;
             $regionValue = $state[$this->regionFieldName] ?? null;
             $provinceValue = $state[$this->provinceFieldName] ?? null;
@@ -335,6 +420,7 @@ class LocationSelector extends Group
     public function getGeographicData(): ?array
     {
         $state = $this->getState();
+<<<<<<< HEAD
         /* @phpstan-ignore offsetAccess.nonOffsetAccessible */
         if (empty($state[$this->regionFieldName])) {
             return null;
@@ -383,10 +469,73 @@ class LocationSelector extends Group
         } catch (\Exception $e) {
             Log::error('LocationSelector: Errore nel recupero dati geografici', [
                 'state' => $state,
+=======
+        if (! \is_array($state) || empty($state[$this->regionFieldName])) {
+            return null;
+        }
+
+        /** @var array<string, mixed> $validatedState */
+        $validatedState = $state;
+        try {
+            $comune = $this->getComuneFromState($validatedState);
+
+            return $comune ? $this->formatGeographicData($comune, $validatedState) : null;
+        } catch (\Exception $e) {
+            logger()->error('LocationSelector: Errore nel recupero dati geografici', [
+                'state' => $validatedState,
+>>>>>>> laraxot/develop
                 'error' => $e->getMessage(),
             ]);
 
             return null;
         }
     }
+<<<<<<< HEAD
+=======
+
+    protected function getComuneFromState(mixed $state): ?Comune
+    {
+        if (! \is_array($state)) {
+            return null;
+        }
+
+        /** @var array<string, mixed> $state */
+        $query = Comune::query()->where('regione->codice', $state[$this->regionFieldName]);
+
+        if (! empty($state[$this->provinceFieldName])) {
+            $query->where('provincia->codice', $state[$this->provinceFieldName]);
+        }
+
+        if (! empty($state[$this->capFieldName])) {
+            $query->where('cap->0', $state[$this->capFieldName]);
+        }
+
+        /* @phpstan-ignore return.type */
+        return $query->first();
+    }
+
+    /**
+     * @param array<string, mixed> $state
+     *
+     * @return array<string, mixed>
+     */
+    protected function formatGeographicData(Comune $comune, array $state): array
+    {
+        $regione = \is_array($comune->regione) ? $comune->regione : [];
+        $provincia = \is_array($comune->provincia) ? $comune->provincia : [];
+
+        return [
+            'region' => [
+                'code' => $regione['codice'] ?? null,
+                'name' => $regione['nome'] ?? null,
+            ],
+            'province' => [
+                'code' => $provincia['codice'] ?? null,
+                'name' => $provincia['nome'] ?? null,
+            ],
+            'cap' => $state[$this->capFieldName] ?? null,
+            'city' => $comune->nome ?? null,
+        ];
+    }
+>>>>>>> laraxot/develop
 }

@@ -25,7 +25,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function rowWidgetCanRenderCorrectly(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new RowWidget();
+=======
+        $widget = new RowWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -40,7 +44,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function statWithIconWidgetCanDisplayStatistics(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new StatWithIconWidget();
+=======
+        $widget = new StatWithIconWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -56,7 +64,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function overlookWidgetCanProvideOverviewData(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new OverlookWidget();
+=======
+        $widget = new OverlookWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -71,7 +83,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function heroWidgetCanDisplayHeroContent(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new HeroWidget();
+=======
+        $widget = new HeroWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -86,7 +102,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function testChartWidgetCanDisplayChartData(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new TestChartWidget();
+=======
+        $widget = new TestChartWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         static::assertNotNull($widget);
@@ -101,7 +121,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function statsOverviewWidgetCanDisplayMultipleStatistics(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new StatsOverviewWidget();
+=======
+        $widget = new StatsOverviewWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -115,7 +139,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function groupWidgetCanGroupRelatedContent(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new GroupWidget();
+=======
+        $widget = new GroupWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -129,7 +157,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function redirectWidgetCanHandleRedirects(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new RedirectWidget();
+=======
+        $widget = new RedirectWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -144,7 +176,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function userCalendarWidgetCanDisplayCalendar(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new UserCalendarWidget();
+=======
+        $widget = new UserCalendarWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -158,7 +194,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanBeConfiguredWithCustomData(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new StatWithIconWidget();
+=======
+        $widget = new StatWithIconWidget;
+>>>>>>> laraxot/develop
 
         // Act
         $widget->heading = 'Custom Heading';
@@ -175,7 +215,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleEmptyDataGracefully(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new StatsOverviewWidget();
+=======
+        $widget = new StatsOverviewWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -188,7 +232,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanBeRenderedInLivewireContext(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new RowWidget();
+=======
+        $widget = new RowWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -201,7 +249,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleDynamicContent(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new OverlookWidget();
+=======
+        $widget = new OverlookWidget;
+>>>>>>> laraxot/develop
 
         // Act
         $widget->heading = 'Dynamic Heading';
@@ -216,7 +268,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanValidateRequiredProperties(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new HeroWidget();
+=======
+        $widget = new HeroWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget->getHeading());
@@ -231,7 +287,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleCustomStyling(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new StatWithIconWidget();
+=======
+        $widget = new StatWithIconWidget;
+>>>>>>> laraxot/develop
 
         // Act
         $widget->color = 'primary';
@@ -246,7 +306,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleResponsiveBehavior(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new RowWidget();
+=======
+        $widget = new RowWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -259,7 +323,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleInteractiveFeatures(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new TestChartWidget();
+=======
+        $widget = new TestChartWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -272,7 +340,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleErrorStates(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new StatsOverviewWidget();
+=======
+        $widget = new StatsOverviewWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -285,7 +357,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleLoadingStates(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new UserCalendarWidget();
+=======
+        $widget = new UserCalendarWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -298,7 +374,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleEmptyStates(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new GroupWidget();
+=======
+        $widget = new GroupWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -311,7 +391,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleCustomActions(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new RedirectWidget();
+=======
+        $widget = new RedirectWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -324,7 +408,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleDataRefresh(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new TestChartWidget();
+=======
+        $widget = new TestChartWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -337,7 +425,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleCustomEvents(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new OverlookWidget();
+=======
+        $widget = new OverlookWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -350,7 +442,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleAccessibilityFeatures(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new HeroWidget();
+=======
+        $widget = new HeroWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -363,7 +459,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleInternationalization(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new StatWithIconWidget();
+=======
+        $widget = new StatWithIconWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -376,7 +476,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleThemeCustomization(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new RowWidget();
+=======
+        $widget = new RowWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -389,7 +493,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandlePerformanceOptimization(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new StatsOverviewWidget();
+=======
+        $widget = new StatsOverviewWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -402,7 +510,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleSecurityFeatures(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new UserCalendarWidget();
+=======
+        $widget = new UserCalendarWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -415,7 +527,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleLoggingAndMonitoring(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new TestChartWidget();
+=======
+        $widget = new TestChartWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -428,7 +544,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleBackupAndRecovery(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new GroupWidget();
+=======
+        $widget = new GroupWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);
@@ -441,7 +561,11 @@ class WidgetBusinessLogicTest extends TestCase
     public function widgetsCanHandleScalabilityFeatures(): void
     {
         // Arrange
+<<<<<<< HEAD
         $widget = new RedirectWidget();
+=======
+        $widget = new RedirectWidget;
+>>>>>>> laraxot/develop
 
         // Act & Assert
         $this->assertNotNull($widget);

@@ -16,6 +16,12 @@ abstract class UiBasePolicy
 {
     use HandlesAuthorization;
 
+<<<<<<< HEAD
+=======
+    /**
+     * @SuppressWarnings("PHPMD.UnusedFormalParameter")
+     */
+>>>>>>> laraxot/develop
     public function before(UserContract $user, string $_ability): ?bool
     {
         $xotData = XotData::make();

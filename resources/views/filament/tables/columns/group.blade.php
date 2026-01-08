@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 1899c5f (.)
+>>>>>>> laraxot/develop
 <?php
 
 declare(strict_types=1);
@@ -5,6 +16,26 @@ declare(strict_types=1);
     $fields = $getFields();
     $record = $getRecord();
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 1899c5f (.)
+@php
+    $fields=$getFields();
+    $record=$getRecord();
+@endphp
+>>>>>>> 6c0b3515 (.)
+>>>>>>> laraxot/develop
 <div
     {{
         $attributes

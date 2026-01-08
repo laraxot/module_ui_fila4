@@ -5,7 +5,13 @@
 ### ✅ PUNTI DI FORZA ECCELLENTI
 
 #### Qualità del Codice
+<<<<<<< HEAD
 - **PHPStan level 10**: 12/12 file core certificati
+=======
+- **PHPStan Level 9**: 12/12 file core certificati
+- **PHPStan Level 9**: 12/12 file core certificati
+- **PHPStan Level 9**: 12/12 file core certificati
+>>>>>>> laraxot/develop
 - **Translation Standards**: 100% compliance con struttura espansa
 - **Component Architecture**: 50+ componenti Blade riutilizzabili
 - **Filament Integration**: 20+ widget personalizzati perfettamente integrati
@@ -26,6 +32,12 @@
 
 #### 1. Riusabilità Path (IMPORTANTE)
 - **115+ occorrenze hardcoded** di "<nome progetto>" in documentazione
+<<<<<<< HEAD
+=======
+- **115+ occorrenze hardcoded** di "saluteora" in documentazione
+- **115+ occorrenze hardcoded** di "saluteora" in documentazione
+- **115+ occorrenze hardcoded** di "saluteora" in documentazione
+>>>>>>> laraxot/develop
 - **Path assoluti** in esempi e guide
 - **Link interni** con riferimenti specifici al progetto
 
@@ -33,6 +45,12 @@
 - **README.md**: 407 righe (troppo denso)
 - **Informazioni duplicate** tra sezioni
 - **Esempi troppo specifici** per <nome progetto>
+<<<<<<< HEAD
+=======
+- **Esempi troppo specifici** per SaluteOra
+- **Esempi troppo specifici** per SaluteOra
+- **Esempi troppo specifici** per SaluteOra
+>>>>>>> laraxot/develop
 
 ## 🔧 RACCOMANDAZIONI SPECIFICHE
 
@@ -43,6 +61,15 @@
 // ❌ PROBLEMI ATTUALI (in documentazione)
 /var/www/html/<nome progetto>/laravel/Modules/UI/
 https://api.<nome progetto>.com/
+<<<<<<< HEAD
+=======
+/var/www/html/saluteora/laravel/Modules/UI/
+https://api.saluteora.com/
+/var/www/html/saluteora/laravel/Modules/UI/
+https://api.saluteora.com/
+/var/www/html/saluteora/laravel/Modules/UI/
+https://api.saluteora.com/
+>>>>>>> laraxot/develop
 
 // ✅ SOLUZIONI
 {{project_path}}/laravel/Modules/UI/
@@ -69,7 +96,13 @@ Modulo riutilizzabile per componenti Blade, widget Filament e design system.
 - [Widget System](widgets/)
 
 ## 🏆 Quality Achievements
+<<<<<<< HEAD
 - ✅ PHPStan level 10 (12/12 files)
+=======
+- ✅ PHPStan Level 9 (12/12 files)
+- ✅ PHPStan Level 9 (12/12 files)
+- ✅ PHPStan Level 9 (12/12 files)
+>>>>>>> laraxot/develop
 - ✅ Translation Standards 100%
 - ✅ 50+ Blade Components
 - ✅ Accessibility Score 98/100
@@ -181,6 +214,12 @@ class ComponentPerformanceMiddleware
 ```bash
 # Verifica path hardcoded
 grep -r "<nome progetto>" Modules/UI/docs/ --include="*.md" | wc -l
+<<<<<<< HEAD
+=======
+grep -r "saluteora" Modules/UI/docs/ --include="*.md" | wc -l
+grep -r "saluteora" Modules/UI/docs/ --include="*.md" | wc -l
+grep -r "saluteora" Modules/UI/docs/ --include="*.md" | wc -l
+>>>>>>> laraxot/develop
 
 # Verifica lunghezza README
 wc -l Modules/UI/docs/README.md
@@ -208,7 +247,13 @@ php artisan ui:accessibility-check
 ## 💡 RACCOMANDAZIONI SPECIFICHE
 
 ### Mantenere Eccellenze
+<<<<<<< HEAD
 - **NON toccare** l'architettura PHPStan level 10
+=======
+- **NON toccare** l'architettura PHPStan Level 9
+- **NON toccare** l'architettura PHPStan Level 9
+- **NON toccare** l'architettura PHPStan Level 9
+>>>>>>> laraxot/develop
 - **NON modificare** il sistema TableLayoutEnum (perfetto)
 - **NON cambiare** il pattern TransTrait (eccellente)
 - **NON alterare** la struttura componenti (ben organizzata)

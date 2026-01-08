@@ -5,7 +5,16 @@
 La homepage del sito è costruita utilizzando un sistema di componenti modulare basato su blocchi. La configurazione della homepage si trova in:
 
 ```
+<<<<<<< HEAD
 /var/www/html/<nome progetto>/laravel/config/local/<nome progetto>/database/content/pages/1.json
+=======
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/config/local/<nome progetto>/database/content/pages/1.json
+/var/www/html/saluteora/laravel/config/local/saluteora/database/content/pages/1.json
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/config/local/<nome progetto>/database/content/pages/1.json
+/var/www/html/saluteora/laravel/config/local/saluteora/database/content/pages/1.json
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/config/local/<nome progetto>/database/content/pages/1.json
+/var/www/html/saluteora/laravel/config/local/saluteora/database/content/pages/1.json
+>>>>>>> laraxot/develop
 ```
 
 ### Componenti Disponibili
@@ -60,7 +69,16 @@ Il modulo UI fornisce i seguenti blocchi per la costruzione delle pagine:
    - Supporto multilingua con chiavi per ogni lingua
 
 2. **Rendering**
+<<<<<<< HEAD
    - Il tema One (`/var/www/html/<nome progetto>/laravel/Themes/One`) gestisce il rendering
+=======
+   - Il tema One (`../Themes/One`) gestisce il rendering
+   - Il tema One (`../Themes/One`) gestisce il rendering
+   - Il tema One (`../Themes/One`) gestisce il rendering
+   - Il tema One (`../Themes/One`) gestisce il rendering
+   - Il tema One (`../Themes/One`) gestisce il rendering
+   - Il tema One (`../Themes/One`) gestisce il rendering
+>>>>>>> laraxot/develop
    - I componenti sono caricati dinamicamente dal modulo UI
    - Il layout è gestito da `x-layouts.marketing`
 
@@ -125,4 +143,8 @@ Il modulo UI fornisce i seguenti blocchi per la costruzione delle pagine:
 
 1. Verificare i log di Laravel
 2. Controllare la console del browser
+<<<<<<< HEAD
 3. Verificare la struttura JSON 
+=======
+3. Verificare la struttura JSON 
+>>>>>>> laraxot/develop

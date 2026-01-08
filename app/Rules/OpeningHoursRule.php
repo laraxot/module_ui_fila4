@@ -16,6 +16,12 @@ class OpeningHoursRule implements ValidationRule
 {
     use TransTrait;
 
+<<<<<<< HEAD
+=======
+    /**
+     * @SuppressWarnings("PHPMD.UnusedFormalParameter")
+     */
+>>>>>>> laraxot/develop
     public function validate(string $_attribute, mixed $value, \Closure $fail): void
     {
         $days = app(GetDaysMappingAction::class)->execute();
@@ -35,12 +41,20 @@ class OpeningHoursRule implements ValidationRule
             /**@phpstan-ignore-next-line */
             $dayHours = $value[$dayKey] ?? [];
 
+<<<<<<< HEAD
             if (! is_array($dayHours)) {
+=======
+            if (! \is_array($dayHours)) {
+>>>>>>> laraxot/develop
                 continue;
             }
 
             // Type narrowing per dayLabel
+<<<<<<< HEAD
             $dayLabelString = is_string($dayLabel) ? $dayLabel : (string) $dayLabel;
+=======
+            $dayLabelString = \is_string($dayLabel) ? $dayLabel : (string) $dayLabel;
+>>>>>>> laraxot/develop
 
             // Valida ogni sessione (mattina e pomeriggio)
             $this->validateSession($dayHours, 'morning', $dayLabelString, $fail);
@@ -133,7 +147,11 @@ class OpeningHoursRule implements ValidationRule
             return null;
         }
 
+<<<<<<< HEAD
         if (is_string($value)) {
+=======
+        if (\is_string($value)) {
+>>>>>>> laraxot/develop
             $cleaned = trim($value);
 
             return '' === $cleaned ? null : $cleaned;
