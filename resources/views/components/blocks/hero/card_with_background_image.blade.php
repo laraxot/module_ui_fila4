@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 727968c (.)
 <div class="bg-white">
     {{--
     <header>
@@ -245,3 +248,7 @@ declare(strict_types=1);
       <!-- More main page content here... -->
     </main>
   </div>
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 727968c (.)
