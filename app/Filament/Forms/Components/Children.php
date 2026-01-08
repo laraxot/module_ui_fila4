@@ -18,6 +18,9 @@ final class Children extends XotBaseViewField
 
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
      * public static function make($livewire): static
      * {
      * $result = app(static::class, ['livewire' => $livewire]);
@@ -25,6 +28,7 @@ final class Children extends XotBaseViewField
      * return $result;
      * }
      */
+<<<<<<< HEAD
 =======
     public static function make($livewire): static
     {
@@ -34,4 +38,6 @@ final class Children extends XotBaseViewField
     }
     */
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 }
