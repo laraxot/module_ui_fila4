@@ -28,15 +28,11 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new RowWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(RowWidget::class, $widget);
 
         // Verifica che il widget abbia le proprietà necessarie
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsArray($widget->getColumns());
     }
 
@@ -47,17 +43,12 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new StatWithIconWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(StatWithIconWidget::class, $widget);
 
         // Verifica che il widget abbia le proprietà necessarie
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getIcon());
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getColor());
     }
 
@@ -68,15 +59,11 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new OverlookWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(OverlookWidget::class, $widget);
 
         // Verifica che il widget abbia le proprietà necessarie
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getDescription());
     }
 
@@ -87,15 +74,11 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new HeroWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(HeroWidget::class, $widget);
 
         // Verifica che il widget abbia le proprietà necessarie
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getSubheading());
     }
 
@@ -110,9 +93,7 @@ class WidgetBusinessLogicTest extends TestCase
         static::assertInstanceOf(TestChartWidget::class, $widget);
 
         // Verifica che il widget abbia le proprietà necessarie
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertIsString($widget->getHeading());
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertIsString($widget->getDescription());
     }
 
@@ -123,13 +104,10 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new StatsOverviewWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(StatsOverviewWidget::class, $widget);
 
         // Verifica che il widget abbia le proprietà necessarie
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
     }
 
@@ -140,13 +118,10 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new GroupWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(GroupWidget::class, $widget);
 
         // Verifica che il widget abbia le proprietà necessarie
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
     }
 
@@ -157,15 +132,11 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new RedirectWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(RedirectWidget::class, $widget);
 
         // Verifica che il widget abbia le proprietà necessarie
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getDescription());
     }
 
@@ -176,13 +147,10 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new UserCalendarWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertInstanceOf(UserCalendarWidget::class, $widget);
 
         // Verifica che il widget abbia le proprietà necessarie
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
     }
 
@@ -198,11 +166,8 @@ class WidgetBusinessLogicTest extends TestCase
         $widget->color = 'success';
 
         // Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertEquals('Custom Heading', $widget->heading);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertEquals('heroicon-o-chart-bar', $widget->icon);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertEquals('success', $widget->color);
     }
 
@@ -213,11 +178,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new StatsOverviewWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget gestisca dati vuoti senza errori
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsString($widget->getHeading());
     }
 
@@ -228,11 +191,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new RowWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget sia compatibile con Livewire
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -247,9 +208,7 @@ class WidgetBusinessLogicTest extends TestCase
         $widget->description = 'Dynamic Description';
 
         // Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertEquals('Dynamic Heading', $widget->heading);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertEquals('Dynamic Description', $widget->description);
     }
 
@@ -260,15 +219,11 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new HeroWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget->getHeading());
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget->getSubheading());
 
         // Verifica che le proprietà richieste non siano vuote
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotEmpty($widget->getHeading());
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotEmpty($widget->getSubheading());
     }
 
@@ -283,9 +238,7 @@ class WidgetBusinessLogicTest extends TestCase
         $widget->icon = 'heroicon-o-star';
 
         // Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertEquals('primary', $widget->color);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertEquals('heroicon-o-star', $widget->icon);
     }
 
@@ -296,11 +249,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new RowWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti comportamento responsive
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertIsArray($widget->getColumns());
     }
 
@@ -311,11 +262,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new TestChartWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti funzionalità interattive
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'getData'));
     }
 
@@ -326,11 +275,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new StatsOverviewWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget gestisca stati di errore
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -341,11 +288,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new UserCalendarWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget gestisca stati di caricamento
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -356,11 +301,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new GroupWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget gestisca stati vuoti
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -371,11 +314,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new RedirectWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti azioni personalizzate
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -386,11 +327,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new TestChartWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti aggiornamento dati
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'getData'));
     }
 
@@ -401,11 +340,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new OverlookWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti eventi personalizzati
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -416,11 +353,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new HeroWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti funzionalità di accessibilità
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -431,11 +366,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new StatWithIconWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti internazionalizzazione
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -446,11 +379,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new RowWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti personalizzazione tema
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -461,11 +392,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new StatsOverviewWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti ottimizzazioni performance
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -476,11 +405,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new UserCalendarWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti funzionalità di sicurezza
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -491,11 +418,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new TestChartWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti logging e monitoring
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -506,11 +431,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new GroupWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti backup e recovery
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 
@@ -521,11 +444,9 @@ class WidgetBusinessLogicTest extends TestCase
         $widget = new RedirectWidget;
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertNotNull($widget);
 
         // Verifica che il widget supporti funzionalità di scalabilità
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertTrue(method_exists($widget, 'render'));
     }
 }
