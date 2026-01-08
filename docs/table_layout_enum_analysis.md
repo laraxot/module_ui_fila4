@@ -330,17 +330,7 @@ class TableLayoutEnumTest extends TestCase
 
 - [Usage Guide](table-layout-enum-usage.md)
 - [Conflict Resolution](conflict-resolution-tablelayoutenum.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Translation Standards](../../../docs/translation_standards.md)
 - [Filament Best Practices](../../../docs/filament_best_practices.md)
-=======
-- [Translation Standards](../../../project_docs/translation_standards.md)
-- [Filament Best Practices](../../../project_docs/filament_best_practices.md)
->>>>>>> 727968c (.)
-=======
-- [Translation Standards](../../../docs/translation_standards.md)
-- [Filament Best Practices](../../../docs/filament_best_practices.md)
->>>>>>> ef3c5fa (.)
 
 *Ultimo aggiornamento: 2025-01-06* 
