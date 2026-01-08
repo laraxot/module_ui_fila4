@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ef3c5fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 727968c (.)
+=======
+>>>>>>> ef3c5fa (.)
 @php
     $gridDirection = $getGridDirection() ?? 'column';
     $id = $getId();
@@ -15,6 +21,7 @@ declare(strict_types=1);
 @endphp
 
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div
         {{
@@ -30,12 +37,17 @@ declare(strict_types=1);
         :direction="$gridDirection"
         :attributes="
 >>>>>>> 727968c (.)
+=======
+    <div
+        {{
+>>>>>>> ef3c5fa (.)
             \Filament\Support\prepare_inherited_attributes($attributes)
                 ->merge($getExtraAttributes(), escape: false)
                 ->class([
                     'fi-fo-radio gap-4',
                     '-mt-4' => (! $isInline) && ($gridDirection === 'column'),
                     'flex flex-wrap' => $isInline,
+<<<<<<< HEAD
 <<<<<<< HEAD
                     'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6' => ! $isInline,
                 ])
@@ -44,6 +56,11 @@ declare(strict_types=1);
                 ])
         "
 >>>>>>> 727968c (.)
+=======
+                    'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6' => ! $isInline,
+                ])
+        }}
+>>>>>>> ef3c5fa (.)
     >
         @foreach ($getOptions() as $value => $label)
             <div
@@ -88,8 +105,12 @@ declare(strict_types=1);
             </div>
         @endforeach
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
 =======
     </x-filament::grid>
 >>>>>>> 727968c (.)
+=======
+    </div>
+>>>>>>> ef3c5fa (.)
 </x-dynamic-component>
