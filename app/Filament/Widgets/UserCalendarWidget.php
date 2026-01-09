@@ -13,7 +13,6 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 class UserCalendarWidget extends XotBaseWidget
 {
-
     public string $type;
     protected string $view = 'ui::filament.widgets.user-calendar';
 
@@ -23,6 +22,7 @@ class UserCalendarWidget extends XotBaseWidget
         $resource = XotData::make()->getUserResourceClassByType($this->type);
         $model = $resource::getModel();
         $modelString = \is_string($model) ? $model : (string) $model;
+
         return Str::of($modelString)
             ->replace('\Models\\', '\\Actions\\')
             ->append('\\Calendar\\'.$action_suffix)
@@ -53,7 +53,7 @@ class UserCalendarWidget extends XotBaseWidget
             return [];
         }
 
-        /** @var array<int, array<string, mixed>> $result */
+        /* @var array<int, array<string, mixed>> $result */
         return $resultRaw;
     }
 
@@ -69,7 +69,7 @@ class UserCalendarWidget extends XotBaseWidget
             if (\is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
                 if (\is_array($resultRaw)) {
-                    /** @var array<int, TextInput|Grid> $result */
+                    /* @var array<int, TextInput|Grid> $result */
                     return $resultRaw;
                 }
             }

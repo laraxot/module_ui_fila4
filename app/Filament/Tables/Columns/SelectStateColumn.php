@@ -18,7 +18,7 @@ class SelectStateColumn extends SelectColumn
         //  $this->selectablePlaceholder(false);
         $this->options(function (Model&HasStatesContract $record, mixed $state): array {
             $name = $this->getName();
-            if ($state === null) {
+            if (null === $state) {
                 // Record implements HasStatesContract which provides getDefaultStateFor()
                 $defaultStates = $record->getDefaultStateFor($name);
                 $states = Arr::wrap($defaultStates);
@@ -27,7 +27,8 @@ class SelectStateColumn extends SelectColumn
                 $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
                 $statesKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($states));
                 $combined = array_combine($statesKeys, $statesValues);
-                /** @var array<int|string, int|string> $result */
+
+                /* @var array<int|string, int|string> $result */
                 return $combined ? $combined : [];
             }
 
@@ -61,7 +62,7 @@ class SelectStateColumn extends SelectColumn
                     } catch (\ReflectionException) {
                         // Property non esiste, $stateNameProperty rimane null
                     }
-                    if ($stateNameProperty !== null) {
+                    if (null !== $stateNameProperty) {
                         $statesValues = array_values($states);
                         /** @var list<int|string> $statesValuesTyped */
                         $statesValuesTyped = $statesValues;
@@ -88,7 +89,8 @@ class SelectStateColumn extends SelectColumn
             /** @var array<int|string> $statesValues */
             $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($statesFiltered));
             $combined = array_combine($statesKeys, $statesValues);
-            /** @var array<int|string, int|string> $combinedTyped */
+
+            /* @var array<int|string, int|string> $combinedTyped */
             return $combined ? $combined : [];
         });
 
