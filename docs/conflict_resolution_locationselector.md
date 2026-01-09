@@ -6,7 +6,7 @@ Il file `Modules/UI/app/Filament/Forms/Components/LocationSelector.php` presenta
 
 1. **Linea 278**: Metodo getCapOptions con logica di gestione errori
 2. **Linea 312**: Metodo validate con logica di validazione
-3. **Linea 322**: Continuazione metodo validate 
+3. **Linea 322**: Continuazione metodo validate
 4. **Linea 342**: Metodo getGeographicData con gestione dati geografici
 5. **Linea 355**: Continuazione metodo getGeographicData
 6. **Linea 364**: Continuazione metodo getGeographicData
@@ -76,16 +76,8 @@ Il conflitto riguarda la logica di recupero e gestione dei dati geografici.
 
 - [filament-components-location-studio.md](filament-components-location-studio.md)
 - [components.md](components.md)
-<<<<<<< HEAD
 - [Modules/UI/project_docs/](../project_docs/)
 - [Modules/UI/project_docs/](../project_docs/)
 - [Modules/UI/project_docs/](../project_docs/)
-=======
-<<<<<<< HEAD
-- [Modules/UI/docs/](../docs/)
-=======
-- [Modules/UI/project_docs/](../project_docs/)
->>>>>>> 1899c5f (.)
->>>>>>> 6c0b3515 (.)
 
 *Ultimo aggiornamento: 29 luglio 2025*

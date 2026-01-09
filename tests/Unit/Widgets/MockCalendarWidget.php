@@ -6,10 +6,7 @@ namespace Modules\UI\Tests\Unit\Widgets;
 
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
-=======
 use Filament\Schemas\Components\Component;
->>>>>>> laraxot/develop
 use Modules\UI\Filament\Widgets\BaseCalendarWidget;
 
 /**
@@ -21,23 +18,8 @@ class MockCalendarWidget extends BaseCalendarWidget
 
     /**
      * @param array<string, mixed> $fetchInfo
-<<<<<<< HEAD
      *
      * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
-=======
-     * @param array<string, mixed> $fetchInfo
-     *
-     * @return array<int, array<string, string|int>>
-     *                                                                                         =======
-     * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
-     *                                                                                         >>>>>>> a8fbb3e (.)
-     *                                                                                         =======
-     * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
-     *                                                                                         >>>>>>> 24eb066 (Lint)
-     *                                                                                         =======
-     * @return array<int, array{id:int, title:string, start:string, end:string, color:string}>
-     *                                                                                         >>>>>>> laraxot/develop
->>>>>>> laraxot/develop
      */
     public function fetchEvents(array $fetchInfo): array
     {
@@ -62,11 +44,7 @@ class MockCalendarWidget extends BaseCalendarWidget
     }
 
     /**
-<<<<<<< HEAD
-     * @return array<int, \Filament\Forms\Components\Component>
-=======
      * @return array<int, Component>
->>>>>>> laraxot/develop
      */
     public function getFormSchema(): array
     {

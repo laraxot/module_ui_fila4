@@ -2,16 +2,12 @@
 
 ## Panoramica
 
-<<<<<<< HEAD
-Questo documento descrive le regole e le best practice per gestire le traduzioni dei widget Filament nei temi One e Two del progetto <nome progetto>.
-=======
 Questo documento descrive le regole e le best practice per gestire le traduzioni dei widget Filament nei temi One e Two del progetto .
 Questo documento descrive le regole e le best practice per gestire le traduzioni dei widget Filament nei temi One e Two del progetto SaluteOra.
 Questo documento descrive le regole e le best practice per gestire le traduzioni dei widget Filament nei temi One e Two del progetto .
 Questo documento descrive le regole e le best practice per gestire le traduzioni dei widget Filament nei temi One e Two del progetto SaluteOra.
 Questo documento descrive le regole e le best practice per gestire le traduzioni dei widget Filament nei temi One e Two del progetto .
 Questo documento descrive le regole e le best practice per gestire le traduzioni dei widget Filament nei temi One e Two del progetto SaluteOra.
->>>>>>> laraxot/develop
 
 ## Struttura File di Traduzione
 
@@ -68,16 +64,12 @@ Le traduzioni del tema utilizzano il namespace `pub_theme::`:
 
 ### Namespace Alternativi
 - `pub_theme::` - Per traduzioni del tema attivo
-<<<<<<< HEAD
-- `<nome progetto>::` - Per traduzioni del modulo <nome progetto>
-=======
-- `<nome progetto>::` - Per traduzioni del modulo 
+- `<nome progetto>::` - Per traduzioni del modulo
 - `saluteora::` - Per traduzioni del modulo SaluteOra
-- `<nome progetto>::` - Per traduzioni del modulo 
+- `<nome progetto>::` - Per traduzioni del modulo
 - `saluteora::` - Per traduzioni del modulo SaluteOra
-- `<nome progetto>::` - Per traduzioni del modulo 
+- `<nome progetto>::` - Per traduzioni del modulo
 - `saluteora::` - Per traduzioni del modulo SaluteOra
->>>>>>> laraxot/develop
 - `ui::` - Per traduzioni del modulo UI
 
 ## Caso Studio: Profilo Dottore
@@ -181,16 +173,12 @@ Lo script `ThemeTranslationSynchronizer` gestisce automaticamente:
 
 ### Comando Manuale
 ```bash
-<<<<<<< HEAD
-cd /var/www/html/_bases/base_<nome progetto>
-=======
 cd /var/www/html/_bases/base_techplanner_fila3_mono
 cd /var/www/html/_bases/base_saluteora
 cd /var/www/html/_bases/base_techplanner_fila3_mono
 cd /var/www/html/_bases/base_saluteora
 cd /var/www/html/_bases/base_techplanner_fila3_mono
 cd /var/www/html/_bases/base_saluteora
->>>>>>> laraxot/develop
 php bashscripts/translations/sync_theme_translations.php
 ```
 
@@ -226,7 +214,7 @@ Includi sempre esempi pratici:
 <div class="widget">
     <h2>{{ __('pub_theme::widgets.doctor.profile.title') }}</h2>
     <p>{{ __('pub_theme::widgets.doctor.profile.description') }}</p>
-    
+
     @if($items->isEmpty())
         <div class="empty-state">
             <h3>{{ __('pub_theme::widgets.doctor.profile.empty.title') }}</h3>

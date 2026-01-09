@@ -52,26 +52,20 @@ Pagine Resource estendevano direttamente classi Filament invece di XotBase.
 
 #### Soluzione
 
-- **`ViewLocation` (Geo)**: 
+- **`ViewLocation` (Geo)**:
   - Cambiato da `ViewRecord` a `XotBaseViewRecord`
   - Implementato metodo `getInfolistSchema()` richiesto
-- **`EditUser` (User)**: 
+- **`EditUser` (User)**:
   - Cambiato da `EditRecord` a `XotBaseEditRecord`
   - Aggiunto import corretto
-<<<<<<< HEAD
-- **`CreateQuestionChart` (<nome progetto>)**: 
+- **`CreateQuestionChart` (Quaeris)**:
   - Cambiato da `CreateRecord` a `XotBaseCreateRecord`
-- **`EditQuestionChart` (<nome progetto>)**: 
-=======
-- **`CreateQuestionChart` (Quaeris)**: 
+- **`EditQuestionChart` (Quaeris)**:
+- **`CreateQuestionChart` (Quaeris)**:
   - Cambiato da `CreateRecord` a `XotBaseCreateRecord`
-- **`EditQuestionChart` (Quaeris)**: 
-- **`CreateQuestionChart` (Quaeris)**: 
-  - Cambiato da `CreateRecord` a `XotBaseCreateRecord`
-- **`EditQuestionChart` (Quaeris)**: 
->>>>>>> laraxot/develop
+- **`EditQuestionChart` (Quaeris)**:
   - Cambiato da `EditRecord` a `XotBaseEditRecord`
-- **`ViewPageContent` (Cms)**: 
+- **`ViewPageContent` (Cms)**:
   - Cambiato da `ViewRecord` a `XotBaseViewRecord`
   - Implementato metodo `getInfolistSchema()` richiesto
 
@@ -82,7 +76,7 @@ Query dinamiche su modelli non riconosciute correttamente da PHPStan.
 
 #### Soluzione
 
-- **`LocationSelector`**: 
+- **`LocationSelector`**:
   - Aggiunti type assertions per query builder dinamiche
   - Aggiunto controllo `is_array()` prima di usare risultati query
   - Aggiunto PHPDoc `@var \Illuminate\Database\Eloquent\Builder` per query builder
@@ -94,7 +88,7 @@ Chiamate a metodi privati con `static::` invece di `self::`.
 
 #### Soluzione
 
-- **`QuestionChartResource`**: 
+- **`QuestionChartResource`**:
   - Cambiato `static::` in `self::` per chiamate a metodi privati
   - Risolto errore `staticClassAccess.privateMethod`
 
@@ -212,12 +206,8 @@ class ViewLocation extends XotBaseViewRecord
 - `app/Filament/Forms/Components/TreeField.php`
 - `app/Filament/Forms/Components/LocationSelector.php`
 
-<<<<<<< HEAD
-### Modulo <nome progetto>
-=======
 ### Modulo Quaeris
 ### Modulo Quaeris
->>>>>>> laraxot/develop
 - `app/Filament/Resources/QuestionChartResource.php`
 - `app/Filament/Resources/SurveyPdfResource/Resources/QuestionCharts/Pages/CreateQuestionChart.php`
 - `app/Filament/Resources/SurveyPdfResource/Resources/QuestionCharts/Pages/EditQuestionChart.php`
@@ -247,4 +237,3 @@ class ViewLocation extends XotBaseViewRecord
 - [Regole Architetturali Critiche](../../Xot/docs/critical-architecture-rules.md)
 - [PHPStan Patterns](./phpstan-patterns.md)
 - [PHPStan Compliance](./phpstan-compliance.md)
-

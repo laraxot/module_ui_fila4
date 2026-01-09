@@ -15,44 +15,12 @@ use Modules\Xot\Actions\GetViewAction;
  */
 final class Navbar extends Component
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/develop
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
     }
-<<<<<<< HEAD
-=======
-=======
-    public function __construct(
-        // public Post $article,
-        // public bool $showAuthor = false,
-        // public string $tpl = 'v1'
-<<<<<<< HEAD
-    ) {}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ) {}
-=======
-    ) {
-    }
->>>>>>> a12f125f4a (.)
-=======
-    ) {}
->>>>>>> b93ef594b4 (.)
-=======
-    ) {
-    }
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> 6c0b3515 (.)
->>>>>>> laraxot/develop
 
     public function render(): Renderable
     {

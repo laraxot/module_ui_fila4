@@ -21,56 +21,14 @@ use Modules\Xot\Actions\GetViewAction;
 
 final class Blocks extends Component
 {
-<<<<<<< HEAD
     /**
      * @param array<int|string, mixed> $blocks
      */
-=======
-<<<<<<< HEAD
-    /**
-     * @param array<int|string, mixed> $blocks
-     */
-=======
-    public array $blocks = [];
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 1899c5f (.)
->>>>>>> 6c0b3515 (.)
->>>>>>> laraxot/develop
     public function __construct(
         public string $view,
         public array $blocks = [],
         public ?Model $model = null,
     ) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    public function __construct(?array $blocks = [], public ?Model $model = null, public string $tpl = 'v1')
-    {
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-    public function __construct(?array $blocks = [], public ?Model $model = null, public string $tpl = 'v1')
-    {
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
-        if (is_array($blocks)) {
-            $this->blocks = $blocks;
-        }
->>>>>>> 6c0b3515 (.)
->>>>>>> laraxot/develop
     }
 
     public function render(): View

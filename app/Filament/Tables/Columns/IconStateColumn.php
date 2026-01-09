@@ -12,10 +12,7 @@ use Filament\Schemas\Components\Utilities\Get;
 use Filament\Tables\Columns\IconColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Collection;
->>>>>>> laraxot/develop
 use Illuminate\Support\Str;
 use Modules\Xot\Contracts\StateContract as XotStateContract;
 use Spatie\ModelStates\HasStatesContract;
@@ -48,7 +45,7 @@ class IconStateColumn extends IconColumn
                         ->options(function (Model&HasStatesContract $record, string $_state): array {
                             $name = $this->getName();
                             $state = $record->getAttribute($name);
-                            if (null === $state) {
+                            if ($state === null) {
                                 $defaultStates = Arr::wrap($record->getDefaultStateFor($name));
 
                                 /** @var array<string, string> $options */
@@ -76,7 +73,7 @@ class IconStateColumn extends IconColumn
                             }
 
                             /** @var array<int|string, mixed> $states */
-                            $states = Arr::mapWithKeys($statesArray, function ($state) use ($record) {
+                            return Arr::mapWithKeys($statesArray, function ($state) use ($record) {
                                 if (! is_string($state)) {
                                     return [];
                                 }
@@ -86,8 +83,6 @@ class IconStateColumn extends IconColumn
 
                                 return [$state => $label];
                             });
-
-                            return $states;
                         })
                         ->required()
                         ->reactive(),
@@ -99,11 +94,7 @@ class IconStateColumn extends IconColumn
                             return false;
                         }
 
-<<<<<<< HEAD
-                        /** @var \Illuminate\Support\Collection<string, class-string<State>> $states */
-=======
                         /** @var Collection<string, class-string<State>> $states */
->>>>>>> laraxot/develop
                         $states = $state::getStateMapping();
                         /** @var array<string, class-string<State>> $statesArray */
                         $statesArray = $states->toArray();

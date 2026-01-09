@@ -145,12 +145,8 @@ class CustomMiddleware
 }
 
 // Non hardcodare percorsi delle risorse
-<<<<<<< HEAD
-<img src="/var/www/html/<nome progetto>/laravel/public/images/avatar.png">
-=======
 <img src="/var/www/html/_bases/base_techplanner_fila3_mono/laravel/public/images/avatar.png">
 <img src="/var/www/html/saluteora/laravel/public/images/avatar.png">
->>>>>>> laraxot/develop
 
 // Non duplicare la registrazione dei componenti
 Blade::component('ui::components.icon', 'ui.icon');
@@ -284,16 +280,16 @@ class UIServiceProvider extends XotBaseServiceProvider
   @volt('component.name')
   <?php
   use function Livewire\Volt\{state, mount};
-  
+
   state([
       'property' => null,
   ]);
-  
+
   $action = function () {
       // Logica dell'azione
   };
   ?>
-  
+
   <div>
       <!-- Template del componente -->
   </div>
@@ -307,15 +303,15 @@ class UIServiceProvider extends XotBaseServiceProvider
   <?php
   use function Laravel\Folio\{middleware, name};
   use function Livewire\Volt\{state, mount};
-  
+
   middleware(['auth']);
   name('page.name');
-  
+
   state([
       'property' => null,
   ]);
   ?>
-  
+
   <x-layouts.main>
       <!-- Contenuto della pagina -->
   </x-layouts.main>

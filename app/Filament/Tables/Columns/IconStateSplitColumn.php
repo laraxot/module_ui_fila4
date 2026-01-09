@@ -10,13 +10,8 @@ use Filament\Tables\Columns\Column;
 use Illuminate\Database\Eloquent\Model;
 use Livewire\Attributes\On;
 use Modules\Xot\Contracts\StateContract;
-<<<<<<< HEAD
-use Spatie\ModelStates\State;
-use Webmozart\Assert\Assert;
-=======
 use Spatie\ModelStates\HasStatesContract;
 use Spatie\ModelStates\State;
->>>>>>> laraxot/develop
 
 /**
  * IconStateSplitColumn - Enhanced state transition column with compact grid layout.
@@ -28,11 +23,7 @@ use Spatie\ModelStates\State;
  * - Proper error handling and notifications
  * - Mobile-friendly design
  */
-<<<<<<< HEAD
-class IconStateSplitColumn extends Column
-=======
 final class IconStateSplitColumn extends Column
->>>>>>> laraxot/develop
 {
     protected string $view = 'ui::filament.tables.columns.icon-state-split';
 
@@ -59,54 +50,6 @@ final class IconStateSplitColumn extends Column
      */
     public function getRecordStates(): array
     {
-<<<<<<< HEAD
-        $statesRaw = [];
-        if (class_exists($this->stateClass) && method_exists($this->stateClass, 'getStateMapping')) {
-            $stateMapping = $this->stateClass::getStateMapping();
-            if (is_object($stateMapping) && method_exists($stateMapping, 'toArray')) {
-                $statesArray = $stateMapping->toArray();
-                $statesRaw = is_array($statesArray) ? $statesArray : [];
-            }
-        }
-
-        /** @var array<string, string> $states */
-        $states = $statesRaw;
-        $record = $this->getRecord();
-
-        $result = [];
-        foreach ($states as $stateKey => $stateClassItem) {
-            try {
-                if (! is_string($stateClassItem) || ! class_exists($stateClassItem)) {
-                    continue;
-                }
-
-                $stateInstance = new $stateClassItem($record);
-                Assert::isInstanceOf($stateInstance, StateContract::class);
-
-                // StateContract provides icon(), label(), color()
-                $icon = $stateInstance->icon();
-                $label = $stateInstance->label();
-                $color = $stateInstance->color();
-
-                // Type narrowing: questi metodi restituiscono string
-                $iconString = (string) $icon;
-                $labelString = (string) $label;
-                $colorString = (string) $color;
-
-                // $stateKey è già string dalla chiave dell'array
-
-                $result[$stateKey] = [
-                    'class' => $stateInstance,
-                    'icon' => $iconString,
-                    'label' => $labelString,
-                    'color' => $colorString,
-                    'tooltip' => $labelString,
-                ];
-            } catch (\Exception $e) {
-                // Skip problematic states
-                continue;
-            }
-=======
         $stateMapping = $this->getStateMapping();
         $record = $this->getRecord();
         $result = [];
@@ -127,41 +70,88 @@ final class IconStateSplitColumn extends Column
                 'color' => (string) $stateInstance->color(),
                 'tooltip' => $labelString,
             ];
->>>>>>> laraxot/develop
         }
 
         return $result;
     }
 
-<<<<<<< HEAD
     public function canTransitionTo(int|string $recordId, string $stateClass): bool
     {
-        if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
+        try {
+            $record = $this->getCachedRecord($recordId);
+
+            return $record && isset($record->state) && $record->state instanceof State
+                ? $record->state->canTransitionTo($stateClass)
+                : false;
+        } catch (\Exception) {
             return false;
         }
+    }
 
-        $recordRaw = $this->modelClass::find($recordId);
+    /**
+     * Metodo per testare le azioni.
+     */
+    public function prova(int|string $recordId): void
+    {
+        Notification::make()
+            ->title(__('ui::actions.test_action.title'))
+            ->body(__('ui::actions.test_action.body', ['id' => $recordId]))
+            ->success()
+            ->send();
+    }
 
-        if (! $recordRaw || ! is_object($recordRaw)) {
-            return false;
+    /**
+     * Restituisce le azioni per gli stati.
+     *
+     * @return array<string, Action>
+     */
+    public function getStateActions(): array
+    {
+        $actions = [];
+        $actions['prova'] = $this->getProvaAction();
+
+        $states = $this->getRecordStates();
+        foreach ($states as $stateKey => $stateData) {
+            $transitionAction = $this->getTransitionAction($stateKey, $stateData);
+
+            if ($transitionAction) {
+                $actions["transition_to_{$stateKey}"] = $transitionAction;
+            }
         }
 
-        /** @var Model $record */
-        $record = $recordRaw;
+        return $actions;
+    }
 
-        if (! isset($record->state) || ! is_object($record->state)) {
-            return false;
+    /**
+     * Listener per l'evento table-action.
+     */
+    #[On('table-action')]
+    public function handleTableAction(string $action, int|string $recordId): void
+    {
+        if ($action === 'prova') {
+            $this->prova($recordId);
         }
+    }
 
-        if (! ($record->state instanceof State)) {
-            return false;
+    /**
+     * Metodo per eseguire la transizione di stato.
+     */
+    public function transitionState(int|string $recordId, string $stateClass): void
+    {
+        try {
+            $record = $this->getRecordForTransition($recordId);
+            $state = $record->getAttribute('state');
+            if (! ($state instanceof State)) {
+                throw new \Exception(__('ui::icon_state.messages.invalid_state_instance'));
+            }
+            $state->transitionTo($stateClass);
+
+            $this->notifyTransitionSuccess();
+        } catch (\Exception $e) {
+            $this->notifyTransitionError($e->getMessage());
         }
+    }
 
-        /** @var State $state */
-        $state = $record->state;
-
-        return $state->canTransitionTo($stateClass);
-=======
     /**
      * @return array<string, string>
      */
@@ -201,19 +191,6 @@ final class IconStateSplitColumn extends Column
         }
     }
 
-    public function canTransitionTo(int|string $recordId, string $stateClass): bool
-    {
-        try {
-            $record = $this->getCachedRecord($recordId);
-
-            return $record && isset($record->state) && $record->state instanceof State
-                ? $record->state->canTransitionTo($stateClass)
-                : false;
-        } catch (\Exception) {
-            return false;
-        }
-    }
-
     private function getCachedRecord(int|string $recordId): ?Model
     {
         if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
@@ -223,115 +200,8 @@ final class IconStateSplitColumn extends Column
         $record = $this->modelClass::find($recordId);
 
         return is_object($record) && $record instanceof Model ? $record : null;
->>>>>>> laraxot/develop
     }
 
-    /**
-     * Metodo per testare le azioni.
-     */
-    public function prova(int|string $recordId): void
-    {
-<<<<<<< HEAD
-        // Logica per testare l'azione
-        Notification::make()
-            ->title('Test Azione')
-            ->body("Record ID: {$recordId}")
-=======
-        Notification::make()
-            ->title(__('ui::actions.test_action.title'))
-            ->body(__('ui::actions.test_action.body', ['id' => $recordId]))
->>>>>>> laraxot/develop
-            ->success()
-            ->send();
-    }
-
-    /**
-     * Restituisce le azioni per gli stati.
-     *
-     * @return array<string, Action>
-     */
-    public function getStateActions(): array
-    {
-<<<<<<< HEAD
-        $record = $this->getRecord();
-        $states = $this->getRecordStates();
-
-        $actions = [];
-
-        // Aggiungi azione di test
-        $actions['prova'] = Action::make('prova')
-            ->icon('heroicon-m-plus')
-            ->color('primary')
-            ->tooltip('Test Prova')
-            ->action(function () use ($record) {
-                $recordId = $record && isset($record->id) ? ((string) $record->id) : 'N/A';
-                Notification::make()
-                    ->title('Prova funziona!')
-                    ->body('Record ID: '.$recordId)
-                    ->success()
-                    ->send();
-            });
-
-        // Aggiungi azioni per gli stati
-        foreach ($states as $stateKey => $state) {
-            if (! is_array($state) || ! isset($state['class']) || ! isset($state['icon']) || ! isset($state['color']) || ! isset($state['label'])) {
-                continue;
-            }
-
-            $stateClass = $state['class'];
-            $stateIcon = $state['icon'];
-            $stateColor = $state['color'];
-            $stateLabel = $state['label'];
-
-            if (! is_object($stateClass) || ! ($stateClass instanceof StateContract)) {
-                continue;
-            }
-
-            $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
-            if (null === $recordIdRaw || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
-                continue;
-            }
-
-            $recordId = is_int($recordIdRaw) ? $recordIdRaw : (string) $recordIdRaw;
-            $stateClassName = $stateClass::class;
-            if (! $this->canTransitionTo($recordId, $stateClassName)) {
-                continue;
-            }
-
-            // Type narrowing: questi sono già string dalla struttura array
-            $iconString = (string) $stateIcon;
-            $colorString = (string) $stateColor;
-            $labelString = (string) $stateLabel;
-
-            $actions["transition_to_{$stateKey}"] = Action::make(
-                "transition_to_{$stateKey}",
-            )
-                ->icon($iconString)
-                ->color($colorString)
-                ->label($labelString)
-                ->action(function () use ($recordId, $stateClassName): void {
-                    // $recordId è già stato verificato come int|string sopra
-                    $this->transitionState($recordId, $stateClassName);
-                });
-=======
-        $actions = [];
-        $actions['prova'] = $this->getProvaAction();
-
-        $states = $this->getRecordStates();
-        foreach ($states as $stateKey => $stateData) {
-            $transitionAction = $this->getTransitionAction($stateKey, $stateData);
-
-            if ($transitionAction) {
-                $actions["transition_to_{$stateKey}"] = $transitionAction;
-            }
->>>>>>> laraxot/develop
-        }
-
-        return $actions;
-    }
-
-<<<<<<< HEAD
-=======
     private function getProvaAction(): Action
     {
         $record = $this->getRecord();
@@ -357,7 +227,7 @@ final class IconStateSplitColumn extends Column
         $record = $this->getRecord();
         $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
 
-        if (null === $recordIdRaw || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
+        if ($recordIdRaw === null || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
             return null;
         }
 
@@ -375,78 +245,6 @@ final class IconStateSplitColumn extends Column
             ->action(function () use ($recordId, $stateClassName): void {
                 $this->transitionState($recordId, $stateClassName);
             });
-    }
-
->>>>>>> laraxot/develop
-    /**
-     * Listener per l'evento table-action.
-     */
-    #[On('table-action')]
-    public function handleTableAction(string $action, int|string $recordId): void
-    {
-        if ('prova' === $action) {
-            $this->prova($recordId);
-        }
-    }
-
-    /**
-     * Metodo per eseguire la transizione di stato.
-     */
-    public function transitionState(int|string $recordId, string $stateClass): void
-    {
-        try {
-<<<<<<< HEAD
-            if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
-                throw new \Exception('Model class not found or invalid');
-            }
-
-            $recordRaw = $this->modelClass::find($recordId);
-
-            if (! $recordRaw || ! is_object($recordRaw)) {
-                throw new \Exception('Record non trovato');
-            }
-
-            /** @var Model $record */
-            $record = $recordRaw;
-
-            if (! isset($record->state) || ! is_object($record->state)) {
-                throw new \Exception('State transition method not available');
-            }
-
-            if (! ($record->state instanceof State)) {
-                throw new \Exception('State is not a valid State instance');
-            }
-
-            // Esegui la transizione
-            /** @var State $state */
-            $state = $record->state;
-            $state->transitionTo($stateClass);
-
-            Notification::make()
-                ->title('Transizione Completata')
-                ->body('Lo stato è stato cambiato con successo.')
-                ->success()
-                ->send();
-        } catch (\Exception $e) {
-            Notification::make()
-                ->title('Errore Transizione')
-                ->body('Si è verificato un errore: '.$e->getMessage())
-                ->danger()
-                ->send();
-        }
-    }
-=======
-            $record = $this->getRecordForTransition($recordId);
-            $state = $record->getAttribute('state');
-            if (! ($state instanceof State)) {
-                throw new \Exception(__('ui::icon_state.messages.invalid_state_instance'));
-            }
-            $state->transitionTo($stateClass);
-
-            $this->notifyTransitionSuccess();
-        } catch (\Exception $e) {
-            $this->notifyTransitionError($e->getMessage());
-        }
     }
 
     /**
@@ -488,5 +286,4 @@ final class IconStateSplitColumn extends Column
             ->danger()
             ->send();
     }
->>>>>>> laraxot/develop
 }

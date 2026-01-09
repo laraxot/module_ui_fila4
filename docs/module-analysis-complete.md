@@ -2,16 +2,12 @@
 
 ## 📊 Panoramica Generale
 
-<<<<<<< HEAD
-Il modulo UI è il sistema di componenti e interfacce utente condivisi di <nome progetto>, fornendo widget, componenti Filament, form e layout riutilizzabili per tutti gli altri moduli. Questo documento fornisce un'analisi completa dello stato attuale di factory, seeder e test, con focus sulla business logic.
-=======
 Il modulo UI è il sistema di componenti e interfacce utente condivisi di , fornendo widget, componenti Filament, form e layout riutilizzabili per tutti gli altri moduli. Questo documento fornisce un'analisi completa dello stato attuale di factory, seeder e test, con focus sulla business logic.
 Il modulo UI è il sistema di componenti e interfacce utente condivisi di SaluteOra, fornendo widget, componenti Filament, form e layout riutilizzabili per tutti gli altri moduli. Questo documento fornisce un'analisi completa dello stato attuale di factory, seeder e test, con focus sulla business logic.
 Il modulo UI è il sistema di componenti e interfacce utente condivisi di , fornendo widget, componenti Filament, form e layout riutilizzabili per tutti gli altri moduli. Questo documento fornisce un'analisi completa dello stato attuale di factory, seeder e test, con focus sulla business logic.
 Il modulo UI è il sistema di componenti e interfacce utente condivisi di SaluteOra, fornendo widget, componenti Filament, form e layout riutilizzabili per tutti gli altri moduli. Questo documento fornisce un'analisi completa dello stato attuale di factory, seeder e test, con focus sulla business logic.
 Il modulo UI è il sistema di componenti e interfacce utente condivisi di , fornendo widget, componenti Filament, form e layout riutilizzabili per tutti gli altri moduli. Questo documento fornisce un'analisi completa dello stato attuale di factory, seeder e test, con focus sulla business logic.
 Il modulo UI è il sistema di componenti e interfacce utente condivisi di SaluteOra, fornendo widget, componenti Filament, form e layout riutilizzabili per tutti gli altri moduli. Questo documento fornisce un'analisi completa dello stato attuale di factory, seeder e test, con focus sulla business logic.
->>>>>>> laraxot/develop
 
 ## 🏗️ Struttura Modelli e Componenti
 
@@ -59,7 +55,7 @@ Il modulo UI è il sistema di componenti e interfacce utente condivisi di Salute
 
 ### 1. **Widget System - Gestione Widget Filament**
 - **Responsabilità**: Fornire widget riutilizzabili per dashboard
-- **Business Logic**: 
+- **Business Logic**:
   - Gestione stato widget
   - Gestione configurazione widget
   - Gestione dati widget
@@ -238,15 +234,10 @@ Il modulo UI è il sistema di componenti e interfacce utente condivisi di Salute
 **Ultimo aggiornamento**: Dicembre 2024
 **Versione**: 1.0
 **Stato**: In Progress
-<<<<<<< HEAD
-**Responsabile**: Team Sviluppo <nome progetto>
-=======
-**Responsabile**: Team Sviluppo 
+**Responsabile**: Team Sviluppo
 **Responsabile**: Team Sviluppo SaluteOra
-**Responsabile**: Team Sviluppo 
+**Responsabile**: Team Sviluppo
 **Responsabile**: Team Sviluppo SaluteOra
-**Responsabile**: Team Sviluppo 
+**Responsabile**: Team Sviluppo
 **Responsabile**: Team Sviluppo SaluteOra
->>>>>>> laraxot/develop
 **Prossima Revisione**: Gennaio 2025
-

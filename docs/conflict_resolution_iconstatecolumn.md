@@ -68,16 +68,8 @@ Il file `Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php` presenta co
 
 - [selectstatecolumn.md](selectstatecolumn.md)
 - [table-components.md](table-components.md)
-<<<<<<< HEAD
 - [Modules/UI/project_docs/](../project_docs/)
 - [Modules/UI/project_docs/](../project_docs/)
 - [Modules/UI/project_docs/](../project_docs/)
-=======
-<<<<<<< HEAD
-- [Modules/UI/docs/](../docs/)
-=======
-- [Modules/UI/project_docs/](../project_docs/)
->>>>>>> 1899c5f (.)
->>>>>>> 6c0b3515 (.)
 
 *Ultimo aggiornamento: 29 luglio 2025*

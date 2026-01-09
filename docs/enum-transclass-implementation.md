@@ -66,7 +66,7 @@ return [
     ],
     'grid' => [
         'label' => 'Griglia',
-        'color' => 'secondary', 
+        'color' => 'secondary',
         'icon' => 'heroicon-o-squares-2x2',
         'description' => 'Layout a griglia responsive con card',
         'tooltip' => 'Visualizza i dati in formato card responsive',
@@ -105,12 +105,6 @@ return [
 # Cercare enum con metodi di traduzione hardcoded
 grep -r "return match" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
-<<<<<<< HEAD
-grep -r "return match" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
-grep -r "__(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
-grep -r "return match" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
-grep -r "__(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
-=======
 grep -r "return match" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
 grep -r "return match" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
@@ -121,7 +115,6 @@ grep -r "return match" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/ap
 grep -r "__(" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
 grep -r "return match" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
->>>>>>> laraxot/develop
 ```
 
 ## Filosofia del Modulo UI

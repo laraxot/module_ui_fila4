@@ -48,11 +48,7 @@ final class VideoSpatie
                         TemporaryUploadedFile $state,
                         Get $get,
                         HasMedia $record,
-<<<<<<< HEAD
                     ): void {
-=======
-                    ) {
->>>>>>> laraxot/develop
                         // Call to an undefined method Filament\Forms\Contracts\HasForms::validateOnly().
                         // $livewire->validateOnly($component->getStatePath());
                         Assert::string(
@@ -76,7 +72,7 @@ final class VideoSpatie
                 // ->customProperties(fn(Forms\Get $get) => ['gallery_id' => $get('gallery_id')]),
                 // Forms\Components\SpatieMediaLibraryFileUpload::make('media_id')
             ])
-            ->columns('form' === $context ? 2 : 1);
+            ->columns($context === 'form' ? 2 : 1);
     }
 
     public static function getRatios(): array

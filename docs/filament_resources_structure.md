@@ -51,22 +51,12 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 ```
 
 ## Documentazione Correlata
-<<<<<<< HEAD
 - [Documentazione CMS Module](../laravel/Modules/Cms/project_docs/filament-resources.md)
 - [Documentazione Xot Module](../laravel/Modules/Xot/project_docs/filament-resources.md)
 - [Documentazione CMS Module](../laravel/Modules/Cms/project_docs/filament-resources.md)
 - [Documentazione Xot Module](../laravel/Modules/Xot/project_docs/filament-resources.md)
 - [Documentazione CMS Module](../laravel/Modules/Cms/project_docs/filament-resources.md)
 - [Documentazione Xot Module](../laravel/Modules/Xot/project_docs/filament-resources.md)
-=======
-<<<<<<< HEAD
-- [Documentazione CMS Module](../laravel/Modules/Cms/docs/filament-resources.md)
-- [Documentazione Xot Module](../laravel/Modules/Xot/docs/filament-resources.md)
-=======
-- [Documentazione CMS Module](../laravel/Modules/Cms/project_docs/filament-resources.md)
-- [Documentazione Xot Module](../laravel/Modules/Xot/project_docs/filament-resources.md)
->>>>>>> 1899c5f (.)
->>>>>>> 6c0b3515 (.)
 
 ## Best Practices
 1. **Namespace**
@@ -95,4 +85,4 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 - [Best Practices](best-practices.md)
 
 ## Note
-Questa documentazione è collegata bidirezionalmente con la documentazione specifica dei moduli. Per dettagli su resources specifiche, consultare la documentazione del modulo corrispondente. 
+Questa documentazione è collegata bidirezionalmente con la documentazione specifica dei moduli. Per dettagli su resources specifiche, consultare la documentazione del modulo corrispondente.

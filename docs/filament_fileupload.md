@@ -89,30 +89,10 @@ return [
    - Segui le convenzioni di naming
 
 ## Collegamenti
-<<<<<<< HEAD
 - [Translation System](../../Lang/project_docs/translation-system.md)
 - [Form Components](../../Patient/project_docs/filament-form-components.md)
 - [Best Practices](../../Xot/project_docs/filament-best-practices.md)
 
 ## Vedi Anche
 - [Filament File Upload](https://filamentphp.com/project_docs/forms/fields/file-upload)
-- [Laravel File Storage](https://laravel.com/project_docs/filesystem) 
-=======
-<<<<<<< HEAD
-- [Translation System](../../Lang/docs/translation-system.md)
-- [Form Components](../../Patient/docs/filament-form-components.md)
-- [Best Practices](../../Xot/docs/filament-best-practices.md)
-
-## Vedi Anche
-- [Filament File Upload](https://filamentphp.com/docs/forms/fields/file-upload)
-- [Laravel File Storage](https://laravel.com/docs/filesystem) 
-=======
-- [Translation System](../../Lang/project_docs/translation-system.md)
-- [Form Components](../../Patient/project_docs/filament-form-components.md)
-- [Best Practices](../../Xot/project_docs/filament-best-practices.md)
-
-## Vedi Anche
-- [Filament File Upload](https://filamentphp.com/project_docs/forms/fields/file-upload)
-- [Laravel File Storage](https://laravel.com/project_docs/filesystem) 
->>>>>>> 1899c5f (.)
->>>>>>> 6c0b3515 (.)
+- [Laravel File Storage](https://laravel.com/project_docs/filesystem)

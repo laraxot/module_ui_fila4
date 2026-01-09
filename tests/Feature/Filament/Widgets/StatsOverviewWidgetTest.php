@@ -2,46 +2,11 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-use Tests\TestCase;
->>>>>>> 6c0b3515 (.)
->>>>>>> laraxot/develop
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Modules\UI\Filament\Widgets\StatsOverviewWidget;
 use Tests\TestCase;
 
 uses(TestCase::class);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-use Tests\TestCase;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Widgets\StatsOverviewWidget\Stat;
-use Modules\UI\Filament\Widgets\StatsOverviewWidget;
-=======
-use Modules\UI\Filament\Widgets\StatsOverviewWidget;
-use Filament\Widgets\StatsOverviewWidget\Stat;
->>>>>>> a12f125f4a (.)
-=======
-use Filament\Widgets\StatsOverviewWidget\Stat;
-use Modules\UI\Filament\Widgets\StatsOverviewWidget;
->>>>>>> b93ef594b4 (.)
-
-uses(TestCase::class);
-=======
-use Modules\UI\Filament\Widgets\StatsOverviewWidget;
-use Filament\Widgets\StatsOverviewWidget\Stat;
-
-uses(Tests\TestCase::class);
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 
 beforeEach(function (): void {
     $this->widget = new StatsOverviewWidget();
@@ -61,63 +26,20 @@ test('stats overview widget has getStats method', function (): void {
 
 test('stats overview widget returns correct stats', function (): void {
     $stats = $this->widget->getStats();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 
     expect($stats)->toBeArray();
     expect($stats)->toHaveCount(3);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-    
-    expect($stats)->toBeArray();
-    expect($stats)->toHaveCount(3);
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     // Check first stat
     expect($stats[0])->toBeInstanceOf(Stat::class);
     expect($stats[0]->getLabel())->toBe('Unique views');
     expect($stats[0]->getValue())->toBe('192.1k');
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     // Check second stat
     expect($stats[1])->toBeInstanceOf(Stat::class);
     expect($stats[1]->getLabel())->toBe('Bounce rate');
     expect($stats[1]->getValue())->toBe('21%');
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     // Check third stat
     expect($stats[2])->toBeInstanceOf(Stat::class);
     expect($stats[2]->getLabel())->toBe('Average time on page');
@@ -126,19 +48,7 @@ test('stats overview widget returns correct stats', function (): void {
 
 test('stats overview widget stats are instances of Stat class', function (): void {
     $stats = $this->widget->getStats();
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     foreach ($stats as $stat) {
         expect($stat)->toBeInstanceOf(Stat::class);
     }
@@ -151,19 +61,7 @@ test('stats overview widget can be instantiated', function (): void {
 test('stats overview widget has correct strict types declaration', function (): void {
     $reflection = new ReflectionClass(StatsOverviewWidget::class);
     $filename = $reflection->getFileName();
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     if ($filename) {
         $content = file_get_contents($filename);
         expect($content)->toContain('declare(strict_types=1);');
@@ -173,57 +71,21 @@ test('stats overview widget has correct strict types declaration', function (): 
 test('stats overview widget getStats method is protected', function (): void {
     $reflection = new ReflectionClass(StatsOverviewWidget::class);
     $getStatsMethod = $reflection->getMethod('getStats');
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     expect($getStatsMethod->isProtected())->toBeTrue();
 });
 
 test('stats overview widget getStats method has correct return type', function (): void {
     $reflection = new ReflectionClass(StatsOverviewWidget::class);
     $getStatsMethod = $reflection->getMethod('getStats');
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     expect($getStatsMethod->getReturnType()->getName())->toBe('array');
 });
 
 test('stats overview widget has correct use statements', function (): void {
     $reflection = new ReflectionClass(StatsOverviewWidget::class);
     $filename = $reflection->getFileName();
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/develop
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     if ($filename) {
         $content = file_get_contents($filename);
         expect($content)->toContain('use Filament\Widgets\StatsOverviewWidget as BaseWidget;');

@@ -1,14 +1,10 @@
 # 🎨 UI MODULE - ROADMAP 2025
 
-**Modulo**: UI (User Interface Components & Design System)  
-**Status**: 85% COMPLETATO  
-**Priority**: HIGH  
-<<<<<<< HEAD
-**PHPStan**: ✅ level 10 (0 errori)  
-=======
-**PHPStan**: ✅ Level 9 (0 errori)  
->>>>>>> laraxot/develop
-**Filament**: ✅ 4.x Compatibile  
+**Modulo**: UI (User Interface Components & Design System)
+**Status**: 85% COMPLETATO
+**Priority**: HIGH
+**PHPStan**: ✅ Level 9 (0 errori)
+**Filament**: ✅ 4.x Compatibile
 
 ---
 
@@ -79,11 +75,7 @@ UI Module
 - [x] **Orientation Handling**: Gestione orientamento dispositivo
 
 ### 🛠️ Technical Excellence
-<<<<<<< HEAD
-- [x] **PHPStan level 10**: 0 errori
-=======
 - [x] **PHPStan Level 9**: 0 errori
->>>>>>> laraxot/develop
 - [x] **Filament 4.x**: Compatibilità completa
 - [x] **Type Safety**: Type hints completi
 - [x] **Error Handling**: Gestione errori robusta
@@ -97,7 +89,7 @@ UI Module
 ## 🚧 IN PROGRESS FEATURES
 
 ### ♿ AGID Compliance Completion (Priority: CRITICAL)
-**Status**: 85% COMPLETATO  
+**Status**: 85% COMPLETATO
 **Timeline**: Q1 2025
 
 #### 📋 Tasks
@@ -132,7 +124,7 @@ UI Module
 - [ ] Screen reader compatibility verified
 
 ### 📱 Mobile Optimization (Priority: HIGH)
-**Status**: 70% COMPLETATO  
+**Status**: 70% COMPLETATO
 **Timeline**: Q1 2025
 
 #### 📋 Tasks
@@ -211,11 +203,7 @@ UI Module
 ## 🎯 SUCCESS METRICS
 
 ### 📊 Technical Metrics
-<<<<<<< HEAD
-- [x] **PHPStan level 10**: 0 errori ✅
-=======
 - [x] **PHPStan Level 9**: 0 errori ✅
->>>>>>> laraxot/develop
 - [x] **Filament 4.x**: Compatibile ✅
 - [ ] **Test Coverage**: 80% (target)
 - [ ] **Response Time**: < 200ms
@@ -303,8 +291,8 @@ UI Module
 
 **Last Updated**: 2025-10-01
 **Next Review**: 2025-11-01
-**Status**: 🚧 ACTIVE DEVELOPMENT  
-**Confidence Level**: 90%  
+**Status**: 🚧 ACTIVE DEVELOPMENT
+**Confidence Level**: 90%
 
 ---
 

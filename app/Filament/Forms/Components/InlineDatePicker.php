@@ -5,16 +5,9 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Forms\Components;
 
 use Carbon\Carbon;
-<<<<<<< HEAD
-use Filament\Forms\Components\DatePicker;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\App;
-=======
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use Modules\Xot\Filament\Forms\Components\XotBaseDatePicker;
->>>>>>> laraxot/develop
-
 use function Safe\preg_match;
 
 /**
@@ -26,23 +19,19 @@ use function Safe\preg_match;
  * - Carbon First: Localizzazione automatica tramite Carbon
  * - Design One Theme: UI/UX conforme al tema standard
  */
-<<<<<<< HEAD
-class InlineDatePicker extends DatePicker
-=======
 class InlineDatePicker extends XotBaseDatePicker
->>>>>>> laraxot/develop
 {
+
+    /**
+     * Mese attualmente visualizzato (formato Y-m).
+     */
+    public string $currentViewMonth;
     /**
      * Date abilitate per la selezione.
      *
      * @var array<string>|\Closure|null
      */
     protected array|\Closure|null $enabledDates = null;
-
-    /**
-     * Mese attualmente visualizzato (formato Y-m).
-     */
-    public string $currentViewMonth;
 
     /**
      * Vista Blade per il rendering.
@@ -62,11 +51,7 @@ class InlineDatePicker extends XotBaseDatePicker
 
         // Hydration/Dehydration del valore
         $this->afterStateHydrated(static function (self $component, mixed $state): void {
-<<<<<<< HEAD
-            if (null !== $state && is_string($state) && '' !== $state) {
-=======
-            if (null !== $state && \is_string($state) && '' !== $state) {
->>>>>>> laraxot/develop
+            if ($state !== null && \is_string($state) && $state !== '') {
                 try {
                     $date = Carbon::parse($state);
                     $component->currentViewMonth = $date->format('Y-m');
@@ -78,11 +63,7 @@ class InlineDatePicker extends XotBaseDatePicker
         });
 
         $this->dehydrateStateUsing(static function (self $_component, mixed $state): ?string {
-<<<<<<< HEAD
-            if (null !== $state && is_string($state) && '' !== $state) {
-=======
-            if (null !== $state && \is_string($state) && '' !== $state) {
->>>>>>> laraxot/develop
+            if ($state !== null && \is_string($state) && $state !== '') {
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
                 } catch (\Exception $e) {
@@ -167,19 +148,11 @@ class InlineDatePicker extends XotBaseDatePicker
         }
 
         /** @var iterable<int|string, mixed> $datesRaw */
-<<<<<<< HEAD
-        $dates = is_array($datesRaw) ? $datesRaw : iterator_to_array($datesRaw);
-
-        /** @var Collection<int, non-falsy-string> $result */
-        $result = collect($dates)->map(function (mixed $date): string {
-            if (! is_string($date) || '' === $date) {
-=======
         $dates = \is_array($datesRaw) ? $datesRaw : iterator_to_array($datesRaw);
 
         /** @var Collection<int, non-falsy-string> $result */
         $result = collect($dates)->map(static function (mixed $date): string {
-            if (! \is_string($date) || '' === $date) {
->>>>>>> laraxot/develop
+            if (! \is_string($date) || $date === '') {
                 return '';
             }
             try {
@@ -187,11 +160,7 @@ class InlineDatePicker extends XotBaseDatePicker
             } catch (\Exception $e) {
                 return '';
             }
-<<<<<<< HEAD
-        })->filter(fn (string $v): bool => '' !== $v)->values(); // Remove empty strings and reindex
-=======
-        })->filter(static fn (string $v): bool => '' !== $v)->values(); // Remove empty strings and reindex
->>>>>>> laraxot/develop
+        })->filter(static fn (string $v): bool => $v !== '')->values(); // Remove empty strings and reindex
 
         /** @var Collection<int, string> $resultTyped */
         $resultTyped = $result;
@@ -239,11 +208,7 @@ class InlineDatePicker extends XotBaseDatePicker
                 $isSelected = false;
                 try {
                     $state = $this->getState();
-<<<<<<< HEAD
-                    if ($state && is_string($state)) {
-=======
                     if ($state && \is_string($state)) {
->>>>>>> laraxot/develop
                         $isSelected = $currentDay->isSameDay(Carbon::parse($state));
                     }
                 } catch (\Throwable $e) {
@@ -278,24 +243,6 @@ class InlineDatePicker extends XotBaseDatePicker
     }
 
     /**
-     * Ottiene i giorni della settimana localizzati da Carbon.
-     *
-     * @return array<string>
-     */
-    protected function getLocalizedWeekdays(): array
-    {
-        $weekdays = [];
-        $monday = Carbon::now()->startOfWeek(Carbon::MONDAY);
-
-        for ($i = 0; $i < 7; ++$i) {
-            /* @phpstan-ignore property.nonObject */
-            $weekdays[] = $monday->copy()->addDays($i)->locale(App::getLocale())->shortLocaleDayOfWeek[0];
-        }
-
-        return $weekdays;
-    }
-
-    /**
      * Ottiene i dati per la vista.
      *
      * @return array<string, mixed>
@@ -314,5 +261,23 @@ class InlineDatePicker extends XotBaseDatePicker
             'year' => $calendarData['year'],
             'weekdays' => $calendarData['weekdays'],
         ]);
+    }
+
+    /**
+     * Ottiene i giorni della settimana localizzati da Carbon.
+     *
+     * @return array<string>
+     */
+    protected function getLocalizedWeekdays(): array
+    {
+        $weekdays = [];
+        $monday = Carbon::now()->startOfWeek(Carbon::MONDAY);
+
+        for ($i = 0; $i < 7; ++$i) {
+            /* @phpstan-ignore property.nonObject */
+            $weekdays[] = $monday->copy()->addDays($i)->locale(App::getLocale())->shortLocaleDayOfWeek[0];
+        }
+
+        return $weekdays;
     }
 }

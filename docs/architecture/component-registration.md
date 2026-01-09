@@ -17,12 +17,12 @@ Un errore comune è aggiungere manualmente registrazioni di componenti nei Servi
 
 ```php
 // ERRATO ❌
-class UserServiceProvider extends XotBaseServiceProvider 
+class UserServiceProvider extends XotBaseServiceProvider
 {
-    public function boot(): void 
+    public function boot(): void
     {
         parent::boot(); // Già chiama registerBladeComponents()
-        
+
         // Registrazione ridondante ed errata
         Blade::component('user-profile-dropdown', \Modules\User\View\Components\Profile\Dropdown::class);
     }
@@ -35,14 +35,14 @@ La registrazione avviene automaticamente se si segue la struttura corretta:
 
 ```php
 // CORRETTO ✅
-class UserServiceProvider extends XotBaseServiceProvider 
+class UserServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'User';
-    
-    public function boot(): void 
+
+    public function boot(): void
     {
         parent::boot(); // Questo è sufficiente!
-        
+
         // Eventuale codice aggiuntivo specifico...
     }
 }
@@ -72,5 +72,5 @@ Se hai bisogno di personalizzazioni nella registrazione dei componenti:
 
 ## Riferimenti
 
-- [XotBaseServiceProvider](../Xot/app/Providers/XotBaseServiceProvider.php)
-- [RegisterBladeComponentsAction](../Xot/Actions/Blade/RegisterBladeComponentsAction.php)
+- [XotBaseServiceProvider](/var/www/html/base_saluteora/laravel/Modules/Xot/app/Providers/XotBaseServiceProvider.php)
+- [RegisterBladeComponentsAction](/var/www/html/base_saluteora/laravel/Modules/Xot/Actions/Blade/RegisterBladeComponentsAction.php)

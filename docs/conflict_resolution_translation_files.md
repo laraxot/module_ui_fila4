@@ -28,9 +28,9 @@ return [
 
 // BRANCH (sintassi vecchia)
 return array (
-    'actions' => 
+    'actions' =>
     array (
-        'create' => 
+        'create' =>
         array (
             'label' => 'create',
         ),
@@ -66,9 +66,9 @@ return array (
 declare(strict_types=1);
 
 return array (
-  'actions' => 
+  'actions' =>
   array (
-    'create' => 
+    'create' =>
     array (
       'label' => 'create',
     ),
@@ -132,15 +132,7 @@ Applicare la stessa logica a tutti i file di traduzione con conflitti simili:
 
 ## Collegamenti Correlati
 
-<<<<<<< HEAD
 - [Translation Standards](../../../project_docs/translation-standards.md)
-=======
-<<<<<<< HEAD
-- [Translation Standards](../../../docs/translation-standards.md)
-=======
-- [Translation Standards](../../../project_docs/translation-standards.md)
->>>>>>> 1899c5f (.)
->>>>>>> 6c0b3515 (.)
 - [PHP Strict Types](./strict_types_implementation.md)
 - [UI Module Structure](./structure.md)
 - [Best Practices](./best-practices.md)
