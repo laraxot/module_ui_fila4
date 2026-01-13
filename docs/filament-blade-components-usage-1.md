@@ -191,7 +191,7 @@ I dropdown di Filament hanno una struttura specifica che deve essere rispettata.
    - Folio gestisce automaticamente le rotte del frontend
 
 2. **Per le pagine frontend**:
-   - Creare file Blade in `/var/www/html/<nome progetto>/laravel/Themes/One/resources/views/pages/`
+   - Creare file Blade in `Themes/One/resources/views/pages/`
    - Utilizzare Folio per il routing automatico
    - Esempio: `/profile/index.blade.php` sarà accessibile come `/it/profile`
 

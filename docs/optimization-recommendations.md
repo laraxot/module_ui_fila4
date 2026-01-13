@@ -53,13 +53,13 @@
 #### Pattern di Correzione
 ```php
 // ❌ PROBLEMI ATTUALI (in documentazione)
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
+Modules/UI/
+Modules/UI/
+Modules/UI/
+Modules/UI/
+Modules/UI/
+Modules/UI/
+Modules/UI/
 https://api.<nome progetto>.com/
 
 // ✅ SOLUZIONI
@@ -311,13 +311,13 @@ php artisan ui:accessibility-check
 #### Pattern di Correzione
 ```php
 // ❌ PROBLEMI ATTUALI (in documentazione)
-/var/www/html/<nome progetto>/laravel/Modules/UI/
+Modules/UI/
 https://api.<nome progetto>.com/
-/var/www/html/<nome progetto>/laravel/Modules/UI/
+Modules/UI/
 https://api.<nome progetto>.com/
-/var/www/html/<nome progetto>/laravel/Modules/UI/
+Modules/UI/
 https://api.<nome progetto>.com/
-/var/www/html/<nome progetto>/laravel/Modules/UI/
+Modules/UI/
 https://api.<nome progetto>.com/
 
 // ✅ SOLUZIONI

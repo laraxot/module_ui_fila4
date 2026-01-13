@@ -18,9 +18,9 @@ Il modulo UI di <nome progetto> include una vasta collezione di SVG di bandiere 
 
 I file SVG delle bandiere sono archiviati in:
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/resources/svg/flags/
-/var/www/html/<nome progetto>/laravel/Modules/UI/resources/svg/flags/
-/var/www/html/<nome progetto>/laravel/Modules/UI/resources/svg/flags/
+Modules/UI/resources/svg/flags/
+Modules/UI/resources/svg/flags/
+Modules/UI/resources/svg/flags/
 ```
 
 Ogni bandiera è rappresentata da un file SVG con il codice ISO del paese come nome file (ad esempio, `it.svg` per l'Italia, `gb.svg` per il Regno Unito).
@@ -212,7 +212,7 @@ Il modulo UI di <nome progetto> include una vasta collezione di SVG di bandiere 
 
 I file SVG delle bandiere sono archiviati in:
 ```
-/var/www/html/<nome progetto>/laravel/Modules/UI/resources/svg/flags/
+Modules/UI/resources/svg/flags/
 ```
 
 Ogni bandiera è rappresentata da un file SVG con il codice ISO del paese come nome file (ad esempio, `it.svg` per l'Italia, `gb.svg` per il Regno Unito).

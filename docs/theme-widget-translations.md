@@ -173,12 +173,9 @@ Lo script `ThemeTranslationSynchronizer` gestisce automaticamente:
 
 ### Comando Manuale
 ```bash
-cd /var/www/html/_bases/base_techplanner_fila3_mono
-cd /var/www/html/_bases/base_<nome progetto>
-cd /var/www/html/_bases/base_techplanner_fila3_mono
-cd /var/www/html/_bases/base_<nome progetto>
-cd /var/www/html/_bases/base_techplanner_fila3_mono
-cd /var/www/html/_bases/base_<nome progetto>
+cd var/www/html/_bases/base_<nome progetto>
+cd var/www/html/_bases/base_<nome progetto>
+cd var/www/html/_bases/base_<nome progetto>
 php bashscripts/translations/sync_theme_translations.php
 ```
 
