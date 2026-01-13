@@ -107,14 +107,14 @@ grep -r "return match" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/
 grep -r "__(" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
 grep -r "return match" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
-grep -r "return match" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
-grep -r "__(" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
+grep -r "return match" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
+grep -r "__(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
 grep -r "return match" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
 grep -r "__(" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Enums/
-grep -r "return match" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
-grep -r "__(" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
-grep -r "return match" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
-grep -r "__(" /var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Enums/
+grep -r "return match" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
+grep -r "__(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
+grep -r "return match" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
+grep -r "__(" /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Enums/
 ```
 
 ## Filosofia del Modulo UI

@@ -6,11 +6,11 @@ La homepage del sito è costruita utilizzando un sistema di componenti modulare 
 
 ```
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/config/local/<nome progetto>/database/content/pages/1.json
-/var/www/html/saluteora/laravel/config/local/saluteora/database/content/pages/1.json
+/var/www/html/<nome progetto>/laravel/config/local/<nome progetto>/database/content/pages/1.json
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/config/local/<nome progetto>/database/content/pages/1.json
-/var/www/html/saluteora/laravel/config/local/saluteora/database/content/pages/1.json
+/var/www/html/<nome progetto>/laravel/config/local/<nome progetto>/database/content/pages/1.json
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/config/local/<nome progetto>/database/content/pages/1.json
-/var/www/html/saluteora/laravel/config/local/saluteora/database/content/pages/1.json
+/var/www/html/<nome progetto>/laravel/config/local/<nome progetto>/database/content/pages/1.json
 ```
 
 ### Componenti Disponibili

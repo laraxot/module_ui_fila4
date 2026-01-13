@@ -7,9 +7,9 @@ The S3Test component is a Filament page that provides diagnostic tools for AWS S
 - **Class**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php`
 - **View**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/resources/views/filament/components/test-results.blade.php`
 - **Translations**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/lang/it/s3test.php`
-- **Class**: `/var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php`
-- **View**: `/var/www/html/_bases/base_saluteora/laravel/Modules/UI/resources/views/filament/components/test-results.blade.php`
-- **Translations**: `/var/www/html/_bases/base_saluteora/laravel/Modules/UI/lang/it/s3test.php`
+- **Class**: `/var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php`
+- **View**: `/var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/resources/views/filament/components/test-results.blade.php`
+- **Translations**: `/var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/lang/it/s3test.php`
 
 ## Features
 - S3 connection testing
