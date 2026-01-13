@@ -118,7 +118,7 @@ class LocationSelector extends XotBaseGroup
     /**
      * Imposta label personalizzate.
      *
-     * @param array<string, string> $labels
+     * @param  array<string, string>  $labels
      */
     public function labels(array $labels): static
     {
@@ -130,7 +130,7 @@ class LocationSelector extends XotBaseGroup
     /**
      * Imposta placeholder personalizzati.
      *
-     * @param array<string, string> $placeholders
+     * @param  array<string, string>  $placeholders
      */
     public function placeholders(array $placeholders): static
     {
@@ -143,6 +143,7 @@ class LocationSelector extends XotBaseGroup
      * Validazione custom per verificare la coerenza dei dati.
      */
     public function validate(): array
+<<<<<<< HEAD
     {
         $state = $this->getState();
         $errors = [];
@@ -342,6 +343,227 @@ class LocationSelector extends XotBaseGroup
     }
 
     protected function getComuneFromState(mixed $state): ?Comune
+=======
+>>>>>>> a96f0df5 (.)
+    {
+        if (! \is_array($state)) {
+            return null;
+        }
+
+<<<<<<< HEAD
+        /** @var array<string, mixed> $state */
+        $query = Comune::query()->where('regione->codice', $state[$this->regionFieldName]);
+=======
+        // Verifica che se è selezionato un CAP, siano selezionate regione e provincia
+        if (\is_array($state)) {
+            $capValue = $state[$this->capFieldName] ?? null;
+            $regionValue = $state[$this->regionFieldName] ?? null;
+            $provinceValue = $state[$this->provinceFieldName] ?? null;
+>>>>>>> a96f0df5 (.)
+
+        if (! empty($state[$this->provinceFieldName])) {
+            $query->where('provincia->codice', $state[$this->provinceFieldName]);
+        }
+
+        if (! empty($state[$this->capFieldName])) {
+            $query->where('cap->0', $state[$this->capFieldName]);
+        }
+
+        /* @phpstan-ignore return.type */
+        return $query->first();
+    }
+
+    /**
+     * @param array<string, mixed> $state
+     *
+     * @return array<string, mixed>
+     */
+    protected function formatGeographicData(Comune $comune, array $state): array
+    {
+<<<<<<< HEAD
+        $regione = \is_array($comune->regione) ? $comune->regione : [];
+        $provincia = \is_array($comune->provincia) ? $comune->provincia : [];
+
+        return [
+            'region' => [
+                'code' => $regione['codice'] ?? null,
+                'name' => $regione['nome'] ?? null,
+            ],
+            'province' => [
+                'code' => $provincia['codice'] ?? null,
+                'name' => $provincia['nome'] ?? null,
+            ],
+            'cap' => $state[$this->capFieldName] ?? null,
+            'city' => $comune->nome ?? null,
+        ];
+=======
+        $state = $this->getState();
+        if (! \is_array($state) || empty($state[$this->regionFieldName])) {
+            return null;
+        }
+
+        /** @var array<string, mixed> $validatedState */
+        $validatedState = $state;
+        try {
+            $comune = $this->getComuneFromState($validatedState);
+
+            return $comune ? $this->formatGeographicData($comune, $validatedState) : null;
+        } catch (\Exception $e) {
+            logger()->error('LocationSelector: Errore nel recupero dati geografici', [
+                'state' => $validatedState,
+                'error' => $e->getMessage(),
+            ]);
+
+            return null;
+        }
+>>>>>>> a96f0df5 (.)
+    }
+
+    /**
+     * Genera lo schema dei componenti figlio.
+     *
+     * @return array<Component>
+     */
+    protected function getChildComponentsSchema(): array
+    {
+        return [
+            $this->getRegionComponent(),
+            $this->getProvinceComponent(),
+            $this->getCapComponent(),
+        ];
+    }
+
+    protected function getRegionComponent(): Select
+    {
+        return Select::make($this->regionFieldName)
+            ->options($this->getRegionOptions())
+            ->searchable($this->searchable)
+            ->required($this->required)
+            ->live()
+            ->afterStateUpdated(function (Set $set) {
+                // Reset province e cap quando cambia la regione
+                $set($this->provinceFieldName, null);
+                $set($this->capFieldName, null);
+            });
+    }
+
+    protected function getProvinceComponent(): Select
+    {
+        return Select::make($this->provinceFieldName)
+            ->options(function (Get $get): array {
+                $region = $get($this->regionFieldName);
+
+                return \is_string($region) ? $this->getProvinceOptions($region) : [];
+            })
+            ->searchable($this->searchable)
+            ->required($this->required)
+            ->live()
+            ->disabled(fn (Get $get): bool => ! $get($this->regionFieldName))
+            ->afterStateUpdated(function (Set $set) {
+                // Reset cap quando cambia la provincia
+                $set($this->capFieldName, null);
+            });
+    }
+
+    protected function getCapComponent(): Select
+    {
+        return Select::make($this->capFieldName)
+            ->options(function (Get $get): array {
+                $region = $get($this->regionFieldName);
+                $province = $get($this->provinceFieldName);
+
+                return \is_string($region) && \is_string($province) ? $this->getCapOptions($region, $province) : [];
+            })
+            ->searchable($this->searchable)
+            ->required($this->required)
+            ->disabled(fn (Get $get): bool => ! $get($this->regionFieldName) || ! $get($this->provinceFieldName));
+    }
+
+    /**
+     * Ottiene le opzioni per il campo regione.
+     *
+     * @return array<string, string>
+     */
+    protected function getRegionOptions(): array
+    {
+        try {
+            /* @phpstan-ignore return.type */
+            return Comune::select('regione')
+                ->distinct()
+                ->orderBy('regione->nome')
+                ->get()
+                ->pluck('regione.nome', 'regione.codice')
+                ->toArray();
+        } catch (\Exception $e) {
+            // Log dell'errore per debug
+            logger()->error('LocationSelector: Errore nel caricamento regioni', [
+                'error' => $e->getMessage(),
+            ]);
+
+            return [];
+        }
+    }
+
+    /**
+     * Ottiene le opzioni per il campo provincia basate sulla regione.
+     *
+     * @param  string  $region  Codice regione
+     * @return array<string, string>
+     */
+    protected function getProvinceOptions(string $region): array
+    {
+        try {
+            /* @phpstan-ignore return.type */
+            return Comune::query()
+                ->where('regione->codice', $region)
+                ->select('provincia')
+                ->distinct()
+                ->orderBy('provincia->nome')
+                ->get()
+                ->pluck('provincia.nome', 'provincia.codice')
+                ->toArray();
+        } catch (\Exception $e) {
+            logger()->error('LocationSelector: Errore nel caricamento province', [
+                'region' => $region,
+                'error' => $e->getMessage(),
+            ]);
+
+            return [];
+        }
+    }
+
+    /**
+     * Ottiene le opzioni per il campo CAP basate su regione e provincia.
+     *
+     * @param  string  $region  Codice regione
+     * @param  string  $province  Codice provincia
+     * @return array<string, string>
+     */
+    protected function getCapOptions(string $region, string $province): array
+    {
+        try {
+            /* @phpstan-ignore return.type */
+            return Comune::query()
+                ->where('regione->codice', $region)
+                ->where('provincia->codice', $province)
+                ->select('cap')
+                ->distinct()
+                ->orderBy('cap')
+                ->get()
+                ->pluck('cap.0', 'cap.0')
+                ->toArray();
+        } catch (\Exception $e) {
+            logger()->error('LocationSelector: Errore nel caricamento CAP', [
+                'region' => $region,
+                'province' => $province,
+                'error' => $e->getMessage(),
+            ]);
+
+            return [];
+        }
+    }
+
+    protected function getComuneFromState(mixed $state): ?Comune
     {
         if (! \is_array($state)) {
             return null;
@@ -363,8 +585,7 @@ class LocationSelector extends XotBaseGroup
     }
 
     /**
-     * @param array<string, mixed> $state
-     *
+     * @param  array<string, mixed>  $state
      * @return array<string, mixed>
      */
     protected function formatGeographicData(Comune $comune, array $state): array
