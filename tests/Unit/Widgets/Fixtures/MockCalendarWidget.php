@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+
 namespace Modules\UI\Tests\Unit\Widgets\Fixtures;
 
 use Filament\Forms\Components\DateTimePicker;
