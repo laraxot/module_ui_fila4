@@ -2,26 +2,23 @@
 
 declare(strict_types=1);
 
-uses(\Modules\UI\Tests\TestCase::class);
+uses(Modules\UI\Tests\TestCase::class);
 
 use Filament\Tables\Columns\Layout\Stack;
 use Filament\Tables\Columns\TextColumn;
 use Modules\UI\Enums\TableLayoutEnum;
 
-it('has enum values', function (): void
-{
+it('has enum values', function (): void {
     expect(TableLayoutEnum::LIST->value)->toBe('list');
     expect(TableLayoutEnum::GRID->value)->toBe('grid');
 });
 
-it('has default layout', function (): void
-{
+it('has default layout', function (): void {
     $default = TableLayoutEnum::init();
     expect($default)->toBe(TableLayoutEnum::LIST);
 });
 
-it('toggles between layouts', function (): void
-{
+it('toggles between layouts', function (): void {
     $list = TableLayoutEnum::LIST;
     $grid = TableLayoutEnum::GRID;
 
@@ -29,8 +26,7 @@ it('toggles between layouts', function (): void
     expect($grid->toggle())->toBe($list);
 });
 
-it('checks layout types correctly', function (): void
-{
+it('checks layout types correctly', function (): void {
     $list = TableLayoutEnum::LIST;
     $grid = TableLayoutEnum::GRID;
 
@@ -41,8 +37,7 @@ it('checks layout types correctly', function (): void
     expect($grid->isListLayout())->toBeFalse();
 });
 
-it('has grid configuration', function (): void
-{
+it('has grid configuration', function (): void {
     $grid = TableLayoutEnum::GRID;
     $config = $grid->getTableContentGrid();
 
@@ -54,8 +49,7 @@ it('has grid configuration', function (): void
     expect($config)->toHaveKey('2xl');
 });
 
-it('returns correct table columns based on layout', function (): void
-{
+it('returns correct table columns based on layout', function (): void {
     $list = TableLayoutEnum::LIST;
     $grid = TableLayoutEnum::GRID;
 
@@ -80,8 +74,7 @@ it('returns correct table columns based on layout', function (): void
     expect($result)->toBe($gridColumns);
 });
 
-it('has options', function (): void
-{
+it('has options', function (): void {
     $options = TableLayoutEnum::getOptions();
 
     expect($options)->toBeArray();
@@ -91,8 +84,7 @@ it('has options', function (): void
     expect($options['grid'])->toBe(TableLayoutEnum::GRID);
 });
 
-it('has container classes', function (): void
-{
+it('has container classes', function (): void {
     $list = TableLayoutEnum::LIST;
     $grid = TableLayoutEnum::GRID;
 
@@ -105,8 +97,7 @@ it('has container classes', function (): void
     expect(strlen($gridClasses))->toBeGreaterThan(0);
 });
 
-it('has translation support', function (): void
-{
+it('has translation support', function (): void {
     $list = TableLayoutEnum::LIST;
     $grid = TableLayoutEnum::GRID;
 
@@ -116,8 +107,7 @@ it('has translation support', function (): void
     expect(method_exists($grid, 'getLabel'))->toBeTrue();
 });
 
-it('has color and icon methods', function (): void
-{
+it('has color and icon methods', function (): void {
     $list = TableLayoutEnum::LIST;
     $grid = TableLayoutEnum::GRID;
 

@@ -16,8 +16,7 @@ use Modules\UI\Filament\Widgets\UserCalendarWidget;
 
 uses(Tests\TestCase::class, DatabaseTransactions::class);
 
-it('row widget can render correctly', function (): void
-{
+it('row widget can render correctly', function (): void {
     // Arrange
     $widget = new RowWidget();
 
@@ -30,8 +29,7 @@ it('row widget can render correctly', function (): void
     expect(method_exists($widget, 'getColumns'))->toBeTrue();
 });
 
-it('stat with icon widget can display statistics', function (): void
-{
+it('stat with icon widget can display statistics', function (): void {
     // Arrange
     $widget = new StatWithIconWidget();
 
@@ -43,7 +41,7 @@ it('stat with icon widget can display statistics', function (): void
     if (function_exists('view') && app()->bound('view')) {
         try {
             $widget->render();
-        } catch (\Throwable) {
+        } catch (Throwable) {
             test()->skip('StatWithIconWidget view not available in this install.');
         }
     }
@@ -51,8 +49,7 @@ it('stat with icon widget can display statistics', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('overlook widget can provide overview data', function (): void
-{
+it('overlook widget can provide overview data', function (): void {
     // Arrange
     $widget = new OverlookWidget();
 
@@ -63,8 +60,7 @@ it('overlook widget can provide overview data', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('hero widget can display hero content', function (): void
-{
+it('hero widget can display hero content', function (): void {
     // Arrange
     $widget = new HeroWidget();
 
@@ -75,8 +71,7 @@ it('hero widget can display hero content', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('test chart widget can display chart data', function (): void
-{
+it('test chart widget can display chart data', function (): void {
     // Arrange
     $widget = new TestChartWidget();
 
@@ -88,8 +83,7 @@ it('test chart widget can display chart data', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('stats overview widget can display multiple statistics', function (): void
-{
+it('stats overview widget can display multiple statistics', function (): void {
     // Arrange
     $widget = new StatsOverviewWidget();
 
@@ -100,8 +94,7 @@ it('stats overview widget can display multiple statistics', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('group widget can group related content', function (): void
-{
+it('group widget can group related content', function (): void {
     // Arrange
     $widget = new GroupWidget();
 
@@ -113,8 +106,7 @@ it('group widget can group related content', function (): void
     expect($widget->getHeading())->toBeString();
 });
 
-it('redirect widget can handle redirects', function (): void
-{
+it('redirect widget can handle redirects', function (): void {
     // Arrange
     $widget = new RedirectWidget();
 
@@ -127,8 +119,7 @@ it('redirect widget can handle redirects', function (): void
     expect($widget->getDescription())->toBeString();
 });
 
-it('user calendar widget can display calendar', function (): void
-{
+it('user calendar widget can display calendar', function (): void {
     // Arrange
     $widget = new UserCalendarWidget();
 
@@ -139,8 +130,7 @@ it('user calendar widget can display calendar', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can be configured with custom data', function (): void
-{
+it('widgets can be configured with custom data', function (): void {
     // Arrange
     $widget = new StatWithIconWidget();
 
@@ -155,8 +145,7 @@ it('widgets can be configured with custom data', function (): void
     expect($widget->color)->toBe('success');
 });
 
-it('widgets can handle empty data gracefully', function (): void
-{
+it('widgets can handle empty data gracefully', function (): void {
     // Arrange
     $widget = new StatsOverviewWidget();
 
@@ -166,8 +155,7 @@ it('widgets can handle empty data gracefully', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can be rendered in livewire context', function (): void
-{
+it('widgets can be rendered in livewire context', function (): void {
     // Arrange
     $widget = new RowWidget();
 
@@ -178,8 +166,7 @@ it('widgets can be rendered in livewire context', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle dynamic content', function (): void
-{
+it('widgets can handle dynamic content', function (): void {
     // Arrange
     $widget = new OverlookWidget();
 
@@ -192,8 +179,7 @@ it('widgets can handle dynamic content', function (): void
     expect($widget->description)->toBe('Dynamic Description');
 });
 
-it('widgets can validate required properties', function (): void
-{
+it('widgets can validate required properties', function (): void {
     // Arrange
     $widget = new HeroWidget();
 
@@ -201,8 +187,7 @@ it('widgets can validate required properties', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle custom styling', function (): void
-{
+it('widgets can handle custom styling', function (): void {
     // Arrange
     $widget = new StatWithIconWidget();
 
@@ -215,8 +200,7 @@ it('widgets can handle custom styling', function (): void
     expect($widget->icon)->toBe('heroicon-o-star');
 });
 
-it('widgets can handle responsive behavior', function (): void
-{
+it('widgets can handle responsive behavior', function (): void {
     // Arrange
     $widget = new RowWidget();
 
@@ -227,8 +211,7 @@ it('widgets can handle responsive behavior', function (): void
     expect(method_exists($widget, 'getColumns'))->toBeTrue();
 });
 
-it('widgets can handle interactive features', function (): void
-{
+it('widgets can handle interactive features', function (): void {
     // Arrange
     $widget = new TestChartWidget();
 
@@ -239,8 +222,7 @@ it('widgets can handle interactive features', function (): void
     expect(method_exists($widget, 'getData'))->toBeTrue();
 });
 
-it('widgets can handle error states', function (): void
-{
+it('widgets can handle error states', function (): void {
     // Arrange
     $widget = new StatsOverviewWidget();
 
@@ -251,8 +233,7 @@ it('widgets can handle error states', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle loading states', function (): void
-{
+it('widgets can handle loading states', function (): void {
     // Arrange
     $widget = new UserCalendarWidget();
 
@@ -263,8 +244,7 @@ it('widgets can handle loading states', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle empty states', function (): void
-{
+it('widgets can handle empty states', function (): void {
     // Arrange
     $widget = new GroupWidget();
 
@@ -275,8 +255,7 @@ it('widgets can handle empty states', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle custom actions', function (): void
-{
+it('widgets can handle custom actions', function (): void {
     // Arrange
     $widget = new RedirectWidget();
 
@@ -287,8 +266,7 @@ it('widgets can handle custom actions', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle data refresh', function (): void
-{
+it('widgets can handle data refresh', function (): void {
     // Arrange
     $widget = new TestChartWidget();
 
@@ -299,8 +277,7 @@ it('widgets can handle data refresh', function (): void
     expect(method_exists($widget, 'getData'))->toBeTrue();
 });
 
-it('widgets can handle custom events', function (): void
-{
+it('widgets can handle custom events', function (): void {
     // Arrange
     $widget = new OverlookWidget();
 
@@ -311,8 +288,7 @@ it('widgets can handle custom events', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle accessibility features', function (): void
-{
+it('widgets can handle accessibility features', function (): void {
     // Arrange
     $widget = new HeroWidget();
 
@@ -323,8 +299,7 @@ it('widgets can handle accessibility features', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle internationalization', function (): void
-{
+it('widgets can handle internationalization', function (): void {
     // Arrange
     $widget = new StatWithIconWidget();
 
@@ -335,8 +310,7 @@ it('widgets can handle internationalization', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle theme customization', function (): void
-{
+it('widgets can handle theme customization', function (): void {
     // Arrange
     $widget = new RowWidget();
 
@@ -347,8 +321,7 @@ it('widgets can handle theme customization', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle performance optimization', function (): void
-{
+it('widgets can handle performance optimization', function (): void {
     // Arrange
     $widget = new StatsOverviewWidget();
 
@@ -359,8 +332,7 @@ it('widgets can handle performance optimization', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle security features', function (): void
-{
+it('widgets can handle security features', function (): void {
     // Arrange
     $widget = new UserCalendarWidget();
 
@@ -371,8 +343,7 @@ it('widgets can handle security features', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle logging and monitoring', function (): void
-{
+it('widgets can handle logging and monitoring', function (): void {
     // Arrange
     $widget = new TestChartWidget();
 
@@ -383,8 +354,7 @@ it('widgets can handle logging and monitoring', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle backup and recovery', function (): void
-{
+it('widgets can handle backup and recovery', function (): void {
     // Arrange
     $widget = new GroupWidget();
 
@@ -395,8 +365,7 @@ it('widgets can handle backup and recovery', function (): void
     expect(method_exists($widget, 'render'))->toBeTrue();
 });
 
-it('widgets can handle scalability features', function (): void
-{
+it('widgets can handle scalability features', function (): void {
     // Arrange
     $widget = new RedirectWidget();
 

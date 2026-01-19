@@ -8,5 +8,4 @@ use Modules\Xot\Tests\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
-    //
 }
